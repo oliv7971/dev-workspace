@@ -15,7 +15,7 @@
    ```powershell
    # Télécharger le script d'installation
    Invoke-WebRequest -Uri "URL_DU_SCRIPT" -OutFile "install.ps1"
-   
+
    # Exécuter l'installation sur lecteur D:
    .\install.ps1 -Drive "D" -GitUrl "https://github.com/VotreNom/dev-workspace.git"
    ```

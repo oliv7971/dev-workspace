@@ -39,7 +39,7 @@ cd D:\data\20-DEVELOPPEMENT
    - Se connecter avec le même compte GitHub
    - Choisir de synchroniser :
      - ✅ Settings
-     - ✅ Keyboard Shortcuts  
+     - ✅ Keyboard Shortcuts
      - ✅ Extensions
      - ✅ UI State
      - ✅ Snippets
