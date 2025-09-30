@@ -1,0 +1,411 @@
+﻿:root {
+    --base03: #002b36;
+    --base02: #073642;
+    --base01: #586e75;
+    --base00: #657b83;
+    --base0: #839496;
+    --base1: #93a1a1;
+    --base2: #eee8d5;
+    --base3: #fdf6e3;
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+}
+
+/*.theme-light {
+    --content0: var(--base00);
+    --content1: var(--base01);
+    --content2: var(--base02);
+    --background1: var(--base1);
+    --background2: var(--base2);
+    --background3: var(--base3);
+    --background-image: url("Resources/Dimensions_arc_clair.png");
+    --outputColor: var(--blue);
+    --borderColor: var(--base2);
+    --link-color: var(--blue);
+    --linkoff-color: var(--yellow);
+}
+
+.theme-dark {
+    --content0: var(--base0);
+    --content1: var(--base1);
+    --content2: var(--base2);
+    --background1: var(--base01);
+    --background2: var(--base02);
+    --background3: var(--base03);
+    --background-image: url("Resources/Dimensions_arc_sombre.png");
+    --outputColor: var(--yellow);
+    --borderColor: var(--base01);
+    --link-color: var(--yellow);
+    --linkoff-color: var(--blue);
+}*/
+
+.theme-light {
+    --content0: var(--base00);
+    --content1: var(--base01);
+    --content2: var(--base02);
+    --background1: var(--base1);
+    --background2: var(--base2);
+    --background3: var(--base3);
+    --background-image: url("Resources/Dimensions_arc_clair.png");
+    --outputColor: var(--blue);
+    --borderColor: var(--base2);
+    --link-color: var(--blue);
+    --linkoff-color: var(--yellow);
+    --logo-image: url(Resources/autodesk-expert-elite-logo_1line-rgb-black.png);
+}
+
+.theme-dark {
+    --content0: var(--base0);
+    --content1: var(--base1);
+    --content2: var(--base2);
+    --background1: var(--base01);
+    --background2: var(--base02);
+    --background3: var(--base03);
+    --background-image: url("Resources/Dimensions_arc_sombre.png");
+    --outputColor: var(--yellow);
+    --borderColor: var(--base02);
+    --link-color: var(--yellow);
+    --linkoff-color: var(--blue);
+    --logo-image: url(Resources/autodesk-expert-elite-logo_1line-rgb-white.png);
+}
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, hr, pre, code, form, fieldset, legend, input, textarea, blockquote, table, th, td {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Arial", "Helvetica", "sans-serif";
+    margin: 15px;
+    color: var(--content0);
+    background-color: var(--background3);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+    a:hover {
+        font-weight: bold;
+    }
+
+h1 {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 11pt;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+h5 {
+    font-size: 10pt;
+    font-weight: bold;
+    margin: 15px 5px 5px 30px;
+}
+
+h6 {
+    font-size: 11pt;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+p {
+    font-size: 10pt;
+    line-height: 16px;
+    padding: 0;
+    margin: 10px 0 5px 5px;
+}
+
+pre {
+    font-family: Consolas,monospace;
+    width: 810px;
+    height: 510px;
+    overflow: auto;
+    border-width: medium;
+    background-color: var(--background2);
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+code {
+    font-family: Consolas,monospace;
+    background-color: var(--background2);
+    color: var(--content1);
+}
+
+#titre {
+    font-size: 14pt;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#header {
+    clear: both;
+    background-color: var(--background2);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+#summary {
+    font-size: 14pt;
+    font-weight: 400;
+    background-color: var(--background2);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    float: left;
+    width: 100px;
+    margin: 2px 20px 2px 0;
+    line-height: 30pt;
+}
+
+#content {
+    font-size: 10pt;
+    padding-top: 20px;
+    margin-left: 130px;
+    padding-left: 30px;
+}
+
+#translatelink {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#dimArcImage {
+    background-image: var(--background-image);
+    width: 830px;
+    height: 533px;
+}
+
+.output{
+    height: 20px;
+    width: 60px;
+    border: none;
+    color: var(--outputColor);
+    background: var(--background2);
+    text-align: center;
+}
+
+.input {
+    height: 20px;
+    width: 56px;
+    background: var(--background3);
+    color: var(--content0);
+    border-color: var(--borderColor);
+}
+
+.ddl {
+    width: 100px;
+    background: var(--background3);
+    color: var(--content0);
+    border-color: var(--borderColor);
+}
+
+.lblPrecision {
+    position: absolute;
+    left: 182px;
+    top: 215px;
+}
+
+.ddlPrecision {
+    width: 70px;
+    position: absolute;
+    left: 250px;
+    top: 213px;
+}
+
+.txtArc {
+    position: relative;
+    left: 449px;
+    top: 37px;
+}
+
+.txtCorde {
+    position: relative;
+    left: 382px;
+    top: 244px;
+}
+
+.txtAngle {
+    position: relative;
+    left: 318px;
+    top: 318px;
+}
+
+.txtFleche {
+    position: relative;
+    left: 290px;
+    top: 136px;
+}
+
+.txtRayon {
+    position: relative;
+    left: 358px;
+    top: 354px;
+}
+
+.ddlDim1 {
+    position: absolute;
+    left: 170px;
+    top: 520px;
+}
+
+.ddlDim2 {
+    position: absolute;
+    left: 170px;
+    top: 550px;
+}
+
+.txtDim1 {
+    position: absolute;
+    left: 280px;
+    top: 520px;
+}
+
+.txtDim2 {
+    position: absolute;
+    left: 280px;
+    top: 550px;
+}
+
+.btnCalcul {
+    position: absolute;
+    left: 170px;
+    top: 590px;
+    width: 70px;
+    height: 30px;
+    background: var(--background2);
+    color: var(--content1);
+    border-color: var(--borderColor);
+}
+
+.gilecad {
+    font-size: 32pt;
+    color: var(--blue);
+}
+
+b.blue {
+    color: var(--blue);
+}
+
+.tribute {
+    font-size: 9pt;
+    color: var(--content0);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--background3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .container button {
+        color: var(--content1);
+        background: var(--background2);
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 5px;
+    }
+
+.right {
+    text-align: center;
+}
+
+.pad30 {
+    padding-left: 30px;
+}
+
+.image {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    height: 1px;
+}
+
+.logo {
+    content: var(--logo-image);
+    margin: 5px 5px 5px 5px;
+    float: left;
+    height: 16px;
+    width: 149px;
+}
+
+.bold a {
+    font-weight: bold;
+}
+
+.linkOff {
+    color: var(--linkoff-color);
+}
+
+    .linkOff:hover {
+        font-weight: normal;
+    }
+
+.linkOn {
+    color: var(--link-color);
+}
+
+    .linkOn:hover {
+        font-weight: bold;
+    }
+
+.vecteur {
+    position: relative;
+    display: inline-block;
+}
+
+    .vecteur:after {
+        position: absolute;
+        display: block;
+        content: '→';
+        top: -0.6em;
+        left: -0.1em;
+    }
+
+.coordonnees {
+    height: 70px;
+    background: var(--background3);
+}
+
+::selection {
+    background: var(--background1);
+    color: var(--background3);
+}
+
+::-moz-selection {
+    background: var(--background1);
+    color: var(--background3);
+}

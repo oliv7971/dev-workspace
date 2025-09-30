@@ -1,0 +1,57 @@
+TOPOVB7		Tous droits réservés    Copyright 1997   TOUBIN RICHARD		richardtoubin@live.fr
+
+VB pour Visual Basic
+7 pour Excel 97
+
+Distribuable gratuitement dans son intégralité.
+
+Le but de TOPOVB est de faire une grande quantité de calcul topo sur EXCEL.
+Calculer des points tous les 10 cm sur un axe routier, axe décalé, ...
+Il est donc très pratique en projet routier si l'on dispose de la tabulation de l'axe.
+Par simple recopier les cellules vers le bas.
+Exemple :       =XYG(XS;YS;LC(-2);LC(-1)) ici les cellules XStation et YStation sont nomées.
+		=XYGDX(L24C2;L24C3;LC(-2);LC(-1)) ici les cellules XStation et YStation sont figées.
+		=RCX($B$102;$C$102;$D$102;$E$102;$F$102;$G$102;B117) ici les cellules XStation et YStation sont figées.
+		=XYG(100;500;110;510) ici tout est rempli( résultat = 50 grades).
+
+Liste des fonctions disponibles dans TOPOVB:
+
+= XYG(Xstation, Ystation, Xpoint, Ypoint) Converti des coordonnées rectangulaires en gisement exprimés en Grades.
+= XYD(Xstation, Ystation, Xpoint, Ypoint) Converti des coordonnées rectangulaires en distances.
+= XYGDX(Xstation, Ystation, GISEMENT, DISTANCE) Converti des coordonnées POLAIRES exprimés en grades en coordonnées X.
+= XYGDY(Xstation, Ystation, GISEMENT, DISTANCE) Converti des coordonnées POLAIRES exprimés en grades en coordonnées Y.
+= DROITEABSX(AbsDep, Xdep, Ydep, Xfin, Yfin, AbsPoint) Calcul des points intermédiaires sur une droite, donne X.
+= DROITEABSY(AbsDep, Xdep, Ydep, Xfin, Yfin, AbsPoint) Calcul des points intermédiaires sur une droite, donne Y.
+= IDGX(X_Doite_1, Y_Doite_1, Gisement_Doite_1_Grades, X_Doite_2, Y_Doite_2, Gisement_Doite_2_Grades)
+	Calcul l'intersection de 2 droites en X en donnant les origines des droites en X/Y et leurs gisements.
+= IDGY(X_Doite_1, Y_Doite_1, Gisement_Doite_1_Grades, X_Doite_2, Y_Doite_2, Gisement_Doite_2_Grades)
+	Calcul l'intersection de 2 droites en Y en donnant les origines des droites en X/Y et leurs gisements.
+= ICX(X_Centre_1, Y_Centre_1, R1, X_Centre_2, Y_Centre_2, R2, Solution_D_G)
+	Calcul l'intersection de 2 CERCLES en X en donnant les CENTRES des CERCLES en X/Y et leurs RAYONS.
+= ICY(X_Centre_1, Y_Centre_1, R1, X_Centre_2, Y_Centre_2, R2, Solution_D_G)
+	Calcul l'intersection de 2 CERCLES en Y en donnant les CENTRES des CERCLES en X/Y et leurs RAYONS.
+= RCX(X_Centre, Y_Centre, R_négatif_à_droite, X_Tg_Départ, Y_Tg_Départ, Absisse_Tg_Départ, Absisse_Point)
+	Calcul un raccordement circulaire en X en donnant le centre,la tangente et sont absisse et l'absisse du point a calculer.
+= RCY(X_Centre, Y_Centre, R_négatif_à_droite, X_Tg_Départ, Y_Tg_Départ, Absisse_Tg_Départ, Absisse_Point)
+	Calcul un raccordement circulaire en Y en donnant le centre,la tangente et sont absisse et l'absisse du point a calculer.
+= PIP(Absisse_Tg_A, Z_Tg_A, Pente_en_Tg_A, Absisse_Tg_B, Z_Tg_B, Pente_en_Tg_B, Rayon_négatif_bosse, Absisse_Point)
+	Calcul le Z d'un point sur une parabole.
+= PIPHBX(Absisse_Tg_A, Z_Tg_A, Pente_en_Tg_A, Absisse_Tg_B, Z_Tg_B, Pente_en_Tg_B, Rayon_négatif_bosse)
+	Calcul l'absisse du point Haut ou point Bas sur une parabole.
+= PICX(X_Tg_Droite, Y_Tg_Droite, Abs_Tg_DROITE, X_Début_DROITE, Y_Début_DROITE, Rayon_négatif_DROITE, Longueur_L, Absisse)
+	Calcul des points intermédiaires sur une CLOTHOIDE et renvoi l'X.
+= PICY(X_Tg_Droite, Y_Tg_Droite, Abs_Tg_DROITE, X_Début_DROITE, Y_Début_DROITE, Rayon_négatif_DROITE, Longueur_L, Absisse)
+	Calcul des points intermédiaires sur une CLOTHOIDE et renvoi l'Y.
+= PIC2X(X_Tg_Droite, Y_Tg_Droite, Abs_Tg_DROITE, X_Tg_Cercle, Y_Tg_Cercle, Rayon_négatif_DROITE, Longueur_L, Absisse)
+	Calcul des points intermédiaires sur une CLOTHOIDE et renvoi l'X.
+= PIC2Y(X_Tg_Droite, Y_Tg_Droite, Abs_Tg_DROITE, X_Tg_Cercle, Y_Tg_Cercle, Rayon_négatif_DROITE, Longueur_L, Absisse)
+	Calcul des points intermédiaires sur une CLOTHOIDE et renvoi l'Y.
+= GISAXECLOTH(Gis_droite_Grades, Abs_Tg_DROITE, Abs_Tg_CERCLE, Rayon_négatif_DROITE, Absisse)
+	Calcul le gisement de l'axe sur une clothoide dos à la droite.
+= GISAXECLOTH2(X_Tg_Droite, Y_Tg_Droite, Abs_Tg_DROITE, X_Tg_Cercle, Y_Tg_Cercle, Abs_Tg_CERCLE, Ray_nég_Droite_DàDr, Absisse)
+	Calcul le gisement de l'axe sur une clothoide dos à la droite.
+
+
+
+Mode opératoire sur EXCEL:
+Formules / Insérer une fonction / Catégiries -> Personalisées / Choisir une fonction TOPOVB7 ... / Utiliser la boite de dialogue.

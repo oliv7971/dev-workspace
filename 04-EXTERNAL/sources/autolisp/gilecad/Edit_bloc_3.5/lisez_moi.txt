@@ -1,0 +1,35 @@
+ EDIT_BLOC - Gilles Chanteau - version 3.5 - 04/05/07
+
+ Redéfinit les blocs après modification des propriétés de leurs composants.
+
+ Les modification affectent :
+ - soit tous les blocs de la collection (insérés ou non)
+ - soit tous les blocs insérés
+ - soit une sélection de blocs faite dans le dessin.
+
+ Il est possible de :
+ - modifier l'échelle globale
+ - changer l'unité d'insertion (versions postérieures à 2005)
+ - mettre les objets composant les blocs sur le calque de son choix
+ - changer la couleur, le type de ligne, l'épaisseur de ligne
+   et le style de tracé (STB uniquement) des composants.
+
+ Les blocs composant les blocs imbriqués sont traités.
+ Les blocs insérés dans le dessin sont mis à jour en fonction
+ des modifications effectuées.
+
+ Les paramètres et propriétés des blocs dynamiques n'étant pas pris
+ en compte par les changements d'échelle, une boite de dialogue demande
+ confirmation ou infirmation pour les changements d'échelle du bloc.
+
+ EDIT_BLOC_REP -Gilles Chanteau- 11/06/06
+
+ Pour lancer Edit_bloc sur tout un répertoire de wblocs
+ À utiliser dans un dessin vierge (brouillon)
+ Choisir l'option "Toute la collection"
+
+
+Le ZIP contient un fichier compilé à chargement rapide Edit_bloc.vlx
+ainsi que les fichiers source Edit_bloc.lsp, Edit_bloc_rep.lsp, Edit_bloc.dcl.
+Il est possible, soit de charger uniquement le fichier Edit_bloc.vlx, 
+soit de charger les LISP et de coller le fichier .DCL dans un dossier du chemin de recherche des fichiers de support.

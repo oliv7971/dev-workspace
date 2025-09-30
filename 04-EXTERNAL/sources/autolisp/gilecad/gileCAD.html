@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://gilecad.azurewebsites.net/Lisp.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="theme-light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	gileCAD
+</title><link rel="stylesheet" type="text/css" href="./gileCAD_files/Style.css">
+</head>
+<body>
+    <form method="post" action="https://gilecad.azurewebsites.net/Lisp.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="OUu4RPI7lnRVwbnX+oGw2lo+Cpdi859UMy57IkX366Udjqe2f1PbffL2Qv7MxwpwLaj22ew45VWFBvUHGv7d4hNqMqaDSJ8CQ8d5ZL1fnBA5hKIQPN2CKLlmwWNzs6Pzn+b3TEcTHEirjBqCz9yb2/xqKArPb+C4IuY/6p/qyaGg4PlGAVVCrRu207UZZRF+IcpdvSe+A+keGCwJh0pqiNd8hbXx8J/P+oSIyK9AoSGaO1URv4HoGAeZM71+Z3M/L4C/p5/30PNLynpY54iDAXdwBKgOY1MXm/mUikPieWOKdq2ip/XX7Pjf5hWTKEHU">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="82C4ADEF">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="ipAUBqWxaagBsX9CVPHKb2i6sCO9PtVAyoiZ0ktXX3zKN36j2x7n9V6ipQ55oM/Qn5S/rkmKBoq+WChRe5ixRIlMA/5vMpi0rEJe6ngJVYs3YgjSqYz4pqZqUCFZMb/xi9ghv0qJhlt4zyM1CyDzJGoFCdZ+IvoECXTnQAPgqN7kfRpsE8uHh+bynATv1v/ADme1q2EBbre5NkXIvZ8AWw==">
+</div>
+        <div id="header">
+            <p class="gilecad">gileCAD</p>
+            <br>
+            Développement d'applicatifs pour AutoCAD
+        </div>
+        <div id="summary">
+            <a id="lkDefault" class="linkOn" href="javascript:__doPostBack(&#39;ctl00$lkDefault&#39;,&#39;&#39;)">Accueil</a><br>
+            <a id="lkLisp" class="aspNetDisabled linkOff">AutoLISP</a><br>
+            <a id="lkDotNet" class="linkOn" href="javascript:__doPostBack(&#39;ctl00$lkDotNet&#39;,&#39;&#39;)">.NET</a><br>
+            <a id="lkTutorials" class="linkOn" href="javascript:__doPostBack(&#39;ctl00$lkTutorials&#39;,&#39;&#39;)">Tutoriels</a><br>
+            <a id="lkLinks" class="linkOn" href="javascript:__doPostBack(&#39;ctl00$lkLinks&#39;,&#39;&#39;)">Liens</a><br>
+            <a id="lkContact" class="linkOn" href="javascript:__doPostBack(&#39;ctl00$lkContact&#39;,&#39;&#39;)">Contact</a>
+        </div>
+        <div id="content" class="bold">
+            
+  <h1>Routines LISP</h1>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/3dPolyFillet.lsp" target="_blank">3dPolyFillet</a>
+  : "Raccord" sur les polylignes 3D (arc constitué des segments jointifs).<br>
+  commande : &lt;&gt;3dpolyfillet<br>
+  Également disponible sur <a href="http://apps.exchange.autodesk.com/ACD/fr/Detail/Index?id=appstore.exchange.autodesk.com%3a3dpolyfillet_windows32and64%3afr" target="_blank">Autodesk Exchange Apps</a><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Arc2Seg.LSP" target="_blank">Arc2seg</a>
+  : Transforme des arcs et cercles en polygone et les arcs de polylignes en succession
+    de segments droits. Les Xdatas (ainsi que les données d'objet MAP) sont conservées.<br>
+  commande : <b>ac2seg</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/AddVtx&amp;DelVtx.LSP" target="_blank">AddVtx&amp;DelVtx</a>
+  : Ajoute ou supprime des sommets à une polyligne (lw,
+    2D ou 3D).<br>
+  commandes : <b>addvtx</b> (ajouter) ; <b>delvtx</b> (supprimer)<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Arcedit.lsp" target="_blank">Arcedit</a>
+  : Permet de changer les angle de départ et de fin d'un arc (cercle ou ellipse) ou
+    de transformer un cercle en arc.<br>
+  commande : <b>arcedit</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Bsc_Med_Per_Tan.lsp" target="_blank">Bsc_Med_Per_Tan</a>
+  : Crée une ligne (ou des lignes) suivant une bissectrice, une médiatrice, la perpendiculaire ou la tangente au point spécifié.<br>
+  commandes : <b>bsc</b> (bissectrice aux 2 segments ou aux 3 points) ; <b>med</b> (médiatrice aux 2 points) ; <b>per</b> (perpendiculaires au segment ou aux 2 points) ; <b>tan</b> (tangentes à la courbe aux points spécifiés)<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Cadre&amp;Masque.lsp" target="_blank">Cadre&amp;Masque</a>
+  : Crée un cadre ou un masque sur les textes et mtextes sélectionnés.<br>
+  commandes : <b>ct</b> pour un cadre <b>mt</b> pour un masque<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Clean_poly.lsp" target="_blank">CleanPoly</a>
+  : Supprime les sommets superposé d'une polyligne.<br>
+  commande : <b>clean_poly</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Curve2pipe.lsp" target="_blank">Curve2Pipe</a> :
+    Extrude un anneau sur les chemin spécifés.<br>
+  commande : <b>curve2pipe</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Dist.lsp" target="_blank">Dist</a>
+  : Retourne à la ligne de commande la distance entre 2 points ou celle de l'objet
+    sélectionné (plus la longueur du segment pour les polylignes).<br>
+  commande : <b>dist</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Edit_bloc_3.5.zip">Edit_Bloc</a>
+  : Modifie les propriétes des entités composants les blocs spécifiés.<br>
+  commandes : <b>edit_bloc</b> et <b>edit_bloc_rep</b> (tous les DWG d'un répertoire)<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Fusion.lsp" target="_blank">Fusion</a>
+  : Crée une polyligne sur le contour de chaque gorupe de polylignes fermées et contiguës
+    sélectionnées.<br>
+  commande : <b>fusion</b> ou <b>ulp</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Increment.lsp" target="_blank">Increment</a>
+  : Incrémenter une valeur numérique, alphabétique ou alphanumérique dans une chaîne
+    de caractères (texte ou attribut)<br>
+  commandes : <b>inctxt</b> (insertions multiples d'un texte) ; <b>incatt </b>(insertions
+    multiples d'un bloc avec attribut) ;<b> incsuf</b> (incrémentation de la fin des
+    textes/attributs sélectionnés) ; <b>incsel</b>  (incrémentation d'une valeur
+    dans lestextes/attributs sélectionnés) ; <b>incadd</b> (ajout d'une valeur incrémentée
+    au début ou à la fin des textes/attributs sélectionnés) ; <b>incr</b> (boite
+    de dialogue permettant de choisir parmi ces fonctions)<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/InsEdit.lsp" target="_blank">InsEdit</a>
+  : Redéfinit le point d'insertion du bloc sélectionné et déplace ou non en conséquence toutes les références insérées.<br>
+  commande : <b>insedit</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/InsTopo.lsp" target="_blank">InsTopo</a>
+  : Lit un fichier ascii (txt,csv...) contenant des points topo et insère des points
+    et/ou des blocs avec attributs.<br>
+  commande : <b>instopo</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Join3dPoly.lsp" target="_blank">Join3dpoly</a> :
+    Joint les objets sélectionné en une polyligne 3D.<br>
+  commande : <b>join3dpoly</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/LinkData.lsp" target="_blank">LinkData</a> :
+    Lier et afficher des données textuelles (texte multiligne) à des entités.<br>
+  commandes : <b>idata</b> (lier ou modifer un mtexte aux entités sélectionnées) ; <b>rdata</b> (supprimer le mtexte lié a l'entité) ; <b>ddata</b> (afficher le mtexte lié à l'entité sous le curseur)<br>
+  Également disponible sur <a href="http://apps.exchange.autodesk.com/ACD/fr/Detail/Index?id=appstore.exchange.autodesk.com%3alinkdata_windows32and64%3afr" target="_blank">Autodesk Exchange Apps</a><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Mcopy.lsp" target="_blank">Mcopy</a>
+  : Effectue la copie multiple d'une sélection suivant le décalage spécifié par 2
+    points.<br>
+  commande : <b>mcopy</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Obj2wipeout.lsp" target="_blank">Obj2wipeout</a>
+  : Crée un "Wipeout" à partir de l'objet sélectionné (cercle, ellipse, ou polyligne avec arcs).<br>
+  commande : <b>ob2wo</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/PolySegments.lsp" target="_blank">PolySegments</a>
+  : Permet de copier ou décaler uniquement certains segments d'une polyligne.<br>
+  commandes : <b>copsegs</b> (copier), <b>ofsegs</b> (décaler)<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Res_hel.zip">Res_hel</a> : Crée
+    un réseau hélicoïdal avec les objets sélectionnés.<br>
+  commande : <b>res_hel</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Soustrac.lsp" target="_blank">Soustrac</a>
+  : Effectue une soustraction de solides 3d sans unir les solides<br>
+  commande : <b>soustrac</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Special_selections.lsp" target="_blank">Special_Selections</a> : Plusieurs routines pour faire des jeux de sélection
+    suivant les propriétés d'un objet,suivant une fenêtre parallèle au SCU courant ou
+    ou une fenêtre délimitée par un objet.<br>
+  commandes : <b>ssc</b> (suivant la couleur), <b>ssl</b> (suivant le calque), <b>sse</b>
+  (suivant le type d'entité), <b>sstl</b> (suivant le type de ligne), <b>ssatt </b>
+  (suivant la valeur d'attribut)<b>, sscu</b> (fenêtre parallèle au SCU), <b>ssof</b>
+  (fenêtre définie par un objet), <b>ssoc</b> (capture définie par un objet)
+    <b>inv_sel</b> (inverser la sélection).<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/ssf.zip">Ssfilter</a> : Sélectionne
+    les objets ayant les mêmes propriétés que les entités sélectionnées et qui sont
+    cochées dans la boite dialogue.<br>
+  commandes : <b>ssf</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/SSMatch.zip">Ssmatch</a> : <b>ssm</b>
+  sélectionne les objets ayant les mêmes propriétés que l'entité sélectionnée et qui
+    sont cochées dans la boite dialogue ; <b>ssmm</b> permet à l'utilisateur de faire
+    des sélections multiples.<br>
+  Chacune utilise le filtre créé à partir d'un objet sélectionné et des propriétés
+    cochées dans la boite de dialogue.<br>
+  commande : <b>ssm</b> et <b>ssmm</b><br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/TotalArea.zip" target="_blank">TotalArea</a> :
+    Crée un lien dynamique entre un attribut du bloc "TotalArea" et la somme des
+    aires des objets (polyligne ou mpolygon) qui lui sont liés. Le fichier ZIP contient
+    le fichier LISP (TotalArea.lsp), un exemple de bloc (TotalArea.dwg) et un fichier
+    texte (lisez_moi.txt).<br>
+  commandes : <b>totalarea</b> (insertion et liaison), <b>areaupd</b> (mise à jour
+    de l'attribut), <b>areaedit</b> (lier ou détacher des objets), <b>areashow</b> (mettre
+    en surbrillance les objets liés), <b>areaconv</b> (facteur de conversion).<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/TotalPerim.zip" target="_blank">TotalPerim</a>
+  :  Crée un lien dynamique entre un attribut du bloc "TotalPerimeter" et la
+    somme des aires des objets (polyligne ou mpolygon) qui lui sont liés. Le fichier
+    ZIP contient le fichier LISP (TotalPerim.lsp), un exemple de bloc (TotalPerimeter.dwg)
+    et un fichier texte (lisez_moi.txt).<br>
+  commandes : <b>totalperim</b> (insertion et liaison), <b>perim</b><b>upd</b>
+  (mise à jour de l'attribut), <b>perim</b><b>edit</b> (lier ou détacher des
+    objets), <b>perim</b><b>show</b> (mettre en surbrillance les objets liés), <b>perim</b><b>conv</b>
+  (facteur de conversion).<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Vues_Pav%E9.lsp" target="_blank">Vues_pavé</a>
+  : Les vues prédéfinies avec le pavé numérique<br>
+  commandes :  <b>0</b> (Bas), <b>1</b> (Isométrie sud Ouest), <b>2</b> (Avant),
+    <b>3</b> (Isométrie sud Est), <b>4</b> (Gauche), <b>5</b> (Haut), <b>6</b>
+  (Droite), <b>7</b> (Isométrie Nord Ouest), <b>8</b> (Arrière), <b>9</b> ( Isométrie
+    Nord Est)<br>
+
+  <br>
+  <h2>Le coin des lispeurs</h2>
+  <br>
+  Il ne s'agit plus ici de commandes définies en LISP mais de routines LISP utilisables
+    dans divers programmes AutoLISP.<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/Dialog.lsp" target="_blank">Dialog</a>
+  : Des petites boites de dialogue pour récupérer des données de la part de l'utilisateur
+    (un seul fichier LISP, pas de DCL séparé).<br>
+  Routines :<br>
+  <b>getBlock</b>, retourne le nom du bloc entré, sélectionné à l'écran, dans la liste
+    déroulante ou depuis la boite de dialogue AutoCAD de sélection de fichier (getfiled).<br>
+  <b>getLayer</b>, retourne le nom du calque entré, sélectionné à l'écran ou dans
+    la liste déroulante.<br>
+  <b>getLayers</b>, retourne les noms des calques cochés (possibilité de pré-cocher
+    et/ ou de griser des calques)<br>
+  <b>InputBox</b>, retourne la donnée entrée en réponse au message (chaîne)<br>
+  <b>DoubleInputBox</b>, retourne la liste des données entrées en réponse aux messages
+    (chaîne)<br>
+  <b>GetLayouts</b>, retourne la liste des présentations choisies dans la boite de
+    dialogue<br>
+  <b>ChooseBox</b>, retourne la clé de l'option choisie (chaîne)<br>
+  <br>
+  <a href="https://gilecad.azurewebsites.net/LISP/gc_MathGeom.lsp" target="_blank">MathGeom</a> : une librairie de fonctions pour traîter les nombres, les points, les vecteurs, les matrices.<br>
+  <a href="https://gilecad.azurewebsites.net/LISP/gc_List.lsp" target="_blank">List</a> : une librairie de fonctions pour traîter les listes.<br>
+  <a href="https://gilecad.azurewebsites.net/LISP/gc_String.lsp" target="_blank">String</a> : une librairie de fonctions pour traîter les chaînes de caractère.<br>
+  <a href="https://gilecad.azurewebsites.net/LISP/gc_AutomationHelpers.lsp" target="_blank">AutomationHelpers</a> : une librairie de fonctions pour faciliter l'utilisation des types COM (Visual LISP).<br>
+  <a href="https://gilecad.azurewebsites.net/LISP/gc_Dictionaries.lsp" target="_blank">Dictionaries</a> : une librairie de fonctions pour faciliter l'utilisation des dictionnaires.<br>
+  <a href="https://gilecad.azurewebsites.net/LISP/gc_Sortents.lsp" target="_blank">Sortents</a> : une librairie de fonctions pour faciliter l'utilisation des ordres de tracé.<br>
+  <a href="https://gilecad.azurewebsites.net/LISP/RegExp.lsp" target="_blank">RegExp</a> : une librairie de fonctions pour utiliser en LISP les expressions régulières VBScript.<br>
+  <br>
+
+        </div>
+        <hr class="clear">
+        <p><strong>Gilles Chanteau</strong></p>
+        
+        <p class="logo">
+        </p><div class="container">
+            <button onclick="toggleTheme()">Clair / Sombre</button>
+            <p class="tribute">Solarized Color Scheme by Etan Schoonover</p>
+        </div>
+        <script>
+            // fonction pour attribuer un thème de couleur
+            function setTheme(themeName) {
+                localStorage.setItem('theme', themeName);
+                document.documentElement.className = themeName;
+            }
+
+            // fonction pour basculer entre les thèmes clair et sombre
+            function toggleTheme() {
+                if (localStorage.getItem('theme') === 'theme-dark') {
+                    setTheme('theme-light');
+                } else {
+                    setTheme('theme-dark');
+                }
+            }
+
+            // fonction appelée immédiatement pour attribuer le thème initial
+            (function () {
+                if (localStorage.getItem('theme') === 'theme-dark') {
+                    setTheme('theme-dark');
+                } else {
+                    setTheme('theme-light');
+                }
+            })();
+        </script>
+    </form>
+
+
+</body></html>

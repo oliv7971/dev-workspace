@@ -1,0 +1,10 @@
+Le ZIP contient les fichiers sources res_hel_dlg.lsp et res_hel.dcl ainsi qu'un fichier compilé à chargement rapide res_hel.vlx
+
+Il est possible de ne charger que le fichier .vlx ou de charger le fichier .lsp et dans ce cas de mettre le fichier .dcl dans un dossier du chemin de recherche des fichiers de support.
+ 
+RES_HEL et -RES_HEL Gilles Chanteau -02/01/06-
+
+Crée un réseau hélicoïdal avec les objets sélectionnés (un réseau polaire où chaque occurence est incrémentée sur Z).
+Accepte tous les types d'unités angulaires et des angles supérieurs à 360°.
+Taper res_hel ouvre une boite de dialogue.
+Taper -res_hel permet la saisie à la ligne de commande.

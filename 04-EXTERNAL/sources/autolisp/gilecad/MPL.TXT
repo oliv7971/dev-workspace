@@ -1,0 +1,15 @@
+MPL.LSP
+
+
+ Cette commande permet de mettre sur le même plan une sélection
+ d'entités avec une entité de référence.
+
+ Chargement: 	(LOAD "/LISP/MPL")
+
+ Lancement: 	MPL
+            	Mettre sur le même plan les entités...
+            	choix des objets:
+            	Que l'entité...
+            	choix des objets:
+
+

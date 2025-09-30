@@ -1,0 +1,81 @@
+﻿# ===================================
+# Fichiers IDE et éditeurs
+# .vscode/settings.json  # Commenté pour permettre sync settings
+# .vscode/launch.json    # Commenté pour permettre sync configs
+.idea/
+*.suo
+*.user
+*.cache
+
+# Logs et backups
+*.log
+*.bak
+02-TOOLS/logs/
+backup/
+temp/gnore global pour dÃ©veloppement
+# ===================================
+
+# Dossiers sans versioning
+/03-SANDBOX/
+/10-INSTALL/
+/11-UTILS/
+/05-ARCHIVE/to-classify/
+
+# Fichiers temporaires Windows
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# Fichiers temporaires systÃ¨me
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+*~
+
+# Fichiers d'installation
+*.exe
+*.msi
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Fichiers IDE et Ã©diteurs
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.suo
+*.user
+*.cache
+
+# Dossiers de build gÃ©nÃ©riques
+bin/
+obj/
+build/
+dist/
+out/
+
+# Dossiers de dÃ©pendances
+node_modules/
+vendor/
+packages/
+
+# Fichiers de configuration locaux
+.env
+.env.local
+config.local.*
+
+# Fichiers de cache
+.cache/
+*.cache
+.DS_Store

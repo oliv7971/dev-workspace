@@ -1,0 +1,37 @@
+(Example of Data and Structure)
+**************************************************************
+vistamps
+	Handles
+	Setup
+		Handles
+		ProjectFolder		'C:\...'
+		OrbitType			'Descending'
+	DataDisplay
+		Handles
+		Rows				4200
+		Columns				1640
+		Background			4200x8200
+		Figure				1
+		AspectRatioRows		1
+		AspectRatioColumns	5
+		ValueType			'v'
+		CoherenceThreshold	0
+		Data 				[rows cols v coh lat long] ---> ps_f e ps_final
+
+		Data_				[ph_uw(:,1:master_ix-1) zeros(n_ps,1) ph_uw(:,master_ix:end)] ---> ph_uw e ps_ts_final
+		
+		Source				'LOS velocity'
+		BackgroundType		'Mean Amplitude'
+		DeformationMin		-2.345
+		DeformationMax		2.345
+
+		NumberInterferograms	0, -1
+		ListInterferograms	[]
+		MaxNumberImagesPlotRow	0
+		Colorbar		0, 1, 2
+		SizeDateTextPoints	0, +ve -ve
+		TextColor		[0, 0, 0], [255, 255, 25], [R G B]
+		LongitudeRange		[]
+		LatitudeRange		[]
+	Export
+		Handles

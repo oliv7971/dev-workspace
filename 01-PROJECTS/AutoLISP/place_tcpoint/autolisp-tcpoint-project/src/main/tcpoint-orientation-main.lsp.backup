@@ -1,0 +1,181 @@
+﻿;; TCPOINT-ORIENTATION-MAIN.LSP v1.0
+;; =================(defun c:TCFIXALL ()
+  "Raccourci: Correction de tous les TCPOINT"
+  (if (not (fboundp 'c:TCPOINT-FIX-ALL))
+    (progn
+      (princ "\n[INFO] Systeme non charge ! Chargement en cours...")
+      (load-tcpoint-orientation-system)))
+  (if (fboundp 'c:TCPOINT-FIX-ALL)
+    (c:TCPOINT-FIX-ALL)
+    (princ "\n[ERREUR] Impossible de charger le systeme TCPOINT")))=========================================================
+;; Fichier principal pour charger le système de correction d'orientation TCPOINT
+;; =============================================================================
+
+(defun load-tcpoint-orientation-system (/ base-path main-file)
+  "Charge tous les composants du système"
+  
+  ; Déterminer le chemin de base (répertoire du fichier courant)
+  (setq main-file (findfile "tcpoint-orientation-main.lsp"))
+  (if main-file
+    (setq base-path (vl-filename-directory main-file))
+    ; Fallback: utiliser le répertoire courant
+    (setq base-path "."))
+  
+  ; Charger la configuration
+  (if (findfile (strcat base-path "\\tcpoint-orientation-config.lsp"))
+    (progn
+      (load (strcat base-path "\\tcpoint-orientation-config.lsp"))
+        (princ "\n[OK] Configuration chargee"))
+      (princ "\n[ERREUR] Fichier de configuration non trouve"))  ; Charger le module principal
+  (if (findfile (strcat base-path "\\tcpoint-orientation-fixer.lsp"))
+    (progn
+      (load (strcat base-path "\\tcpoint-orientation-fixer.lsp"))
+        (princ "\n[OK] Module principal charge"))
+      (princ "\n[ERREUR] Module principal non trouve"))  ; Charger les exemples (optionnel)
+  (if (findfile (strcat base-path "\\tcpoint-orientation-examples.lsp"))
+    (progn
+      (load (strcat base-path "\\tcpoint-orientation-examples.lsp"))
+        (princ "\n[OK] Exemples charges"))
+      (princ "\n[INFO] Exemples non trouves (optionnel)"))  (princ "\n=== SYSTÈME TCPOINT-ORIENTATION PRÊT ==="))
+
+; Charger automatiquement le système au démarrage
+(load-tcpoint-orientation-system)
+
+; Message de confirmation de chargement
+(princ "\n\n╔══════════════════════════════════════════════╗")
+(princ "\n║ SYSTÈME TCPOINT-ORIENTATION v1.0 - CHARGÉ   ║")
+(princ "\n╚══════════════════════════════════════════════╝\n")
+
+;; ======================= COMMANDES RAPIDES =======================
+
+(defun c:TCFIX ()
+  "Raccourci: Correction rapide de la sélection"
+  (if (not (fboundp 'c:TCPOINT-FIX-SELECTION))
+    (progn
+      (princ "\n[INFO] Systeme non charge ! Chargement en cours...")
+      (load-tcpoint-orientation-system)))
+  (if (fboundp 'c:TCPOINT-FIX-SELECTION)
+    (c:TCPOINT-FIX-SELECTION)
+    (princ "\n[ERREUR] Impossible de charger le systeme TCPOINT")))
+
+(defun c:TCFIXALL ()
+  "Raccourci: Correction rapide de tous les TCPOINT"
+  (c:TCPOINT-FIX-ALL))
+
+(defun c:TCCHECK ()
+  "Raccourci: Vérification rapide"
+  (if (not (fboundp 'c:TCPOINT-CHECK-ORIENTATION))
+    (progn
+      (princ "\n[INFO] Systeme non charge ! Chargement en cours...")
+      (load-tcpoint-orientation-system)))
+  (if (fboundp 'c:TCPOINT-CHECK-ORIENTATION)
+    (c:TCPOINT-CHECK-ORIENTATION)
+    (princ "\n[ERREUR] Impossible de charger le systeme TCPOINT")))
+
+;; ======================= MENU INTERACTIF =======================
+
+(defun c:TCPOINT-MENU ()
+  "Menu interactif pour le système TCPOINT"
+  (princ "\n╔══════════════════════════════════════════════╗")
+  (princ "\n║         TCPOINT ORIENTATION FIXER            ║") 
+  (princ "\n╠══════════════════════════════════════════════╣")
+  (princ "\n║ 1. Corriger la sélection                     ║")
+  (princ "\n║ 2. Corriger tous les TCPOINT                 ║")
+  (princ "\n║ 3. Corriger un calque                       ║")
+  (princ "\n║ 4. Vérifier sans corriger                   ║")
+  (princ "\n║ 5. Configuration                             ║")
+  (princ "\n║ 6. Diagnostic SCU                           ║")
+  (princ "\n║ 7. Aide                                     ║")
+  (princ "\n║ 0. Quitter                                   ║")
+  (princ "\n╚══════════════════════════════════════════════╝")
+  
+  (let ((choice (getstring "\nVotre choix (0-7): ")))
+    (cond
+      ((= choice "1") (c:TCPOINT-FIX-SELECTION))
+      ((= choice "2") (c:TCPOINT-FIX-ALL))
+      ((= choice "3") (c:TCPOINT-FIX-LAYER))
+      ((= choice "4") (c:TCPOINT-CHECK-ORIENTATION))
+      ((= choice "5") (c:TCP-CONFIG))
+      ((= choice "6") (c:TCP-DIAG-UCS))
+      ((= choice "7") (c:TCP-HELP))
+      ((= choice "0") (princ "\nAu revoir !"))
+      (T (princ "\nChoix invalide. Tapez TCP-MENU pour recommencer."))))
+  (princ))
+
+;; ======================= VERIFICATION DU SYSTEME =======================
+
+(defun c:TCPOINT-SYSTEM-CHECK ()
+  "Vérifie que le système est correctement installé"
+  (princ "\n=== VERIFICATION DU SYSTEME TCPOINT-ORIENTATION ===")
+  
+  ; Vérifier les fonctions principales
+  (let ((functions-ok 0) (functions-total 8))
+    
+    (if (and (boundp 'tcp:is-tcpoint-block?) tcp:is-tcpoint-block?)
+      (progn (setq functions-ok (1+ functions-ok)) (princ "\n[OK] tcp:is-tcpoint-block?"))
+      (princ "\n[ERREUR] tcp:is-tcpoint-block?"))
+    
+    (if (and (boundp 'tcp:block-orientation-ok?) tcp:block-orientation-ok?)
+      (progn (setq functions-ok (1+ functions-ok)) (princ "\n[OK] tcp:block-orientation-ok?"))
+      (princ "\n[ERREUR] tcp:block-orientation-ok?"))
+    
+    (if (and (boundp 'tcp:get-block-properties) tcp:get-block-properties)
+      (progn (setq functions-ok (1+ functions-ok)) (princ "\n[OK] tcp:get-block-properties"))
+      (princ "\n[ERREUR] tcp:get-block-properties"))
+    
+    (if (and (boundp 'tcp:recreate-block) tcp:recreate-block)
+      (progn (setq functions-ok (1+ functions-ok)) (princ "\n[OK] tcp:recreate-block"))
+      (princ "\n[ERREUR] tcp:recreate-block"))
+    
+    (if (and (boundp 'c:TCPOINT-FIX-SELECTION) c:TCPOINT-FIX-SELECTION)
+      (progn (setq functions-ok (1+ functions-ok)) (princ "\n[OK] c:TCPOINT-FIX-SELECTION"))
+      (princ "\n[ERREUR] c:TCPOINT-FIX-SELECTION"))
+    
+    (if (and (boundp 'c:TCPOINT-FIX-ALL) c:TCPOINT-FIX-ALL)
+      (progn (setq functions-ok (1+ functions-ok)) (princ "\n[OK] c:TCPOINT-FIX-ALL"))
+      (princ "\n[ERREUR] c:TCPOINT-FIX-ALL"))
+    
+    (if (and (boundp 'c:TCP-CONFIG) c:TCP-CONFIG)
+      (progn (setq functions-ok (1+ functions-ok)) (princ "\n[OK] c:TCP-CONFIG"))
+      (princ "\n[ERREUR] c:TCP-CONFIG"))
+    
+    (if (and (boundp 'c:TCP-HELP) c:TCP-HELP)
+      (progn (setq functions-ok (1+ functions-ok)) (princ "\n[OK] c:TCP-HELP"))
+      (princ "\n[ERREUR] c:TCP-HELP"))
+    
+    (princ (strcat "\n\nRésultat: " (itoa functions-ok) "/" (itoa functions-total) " fonctions disponibles"))
+    
+    (if (= functions-ok functions-total)
+      (princ "\n[OK] Le système est correctement installé et prêt à l'emploi !")
+      (princ "\n[INFO] Le système n'est pas complètement installé. Rechargez les fichiers.")))
+  
+  ; Vérifier les variables de configuration
+  (princ "\n\n--- Variables de configuration ---")
+  (if (boundp '*TCPOINT_BLOCKS*) 
+    (princ (strcat "\n[OK] Types de blocs: " (vl-string-join *TCPOINT_BLOCKS* ", ")))
+    (princ "\n[ERREUR] *TCPOINT_BLOCKS* non définie"))
+  
+  (if (boundp '*DEBUG_MODE*)
+    (princ (strcat "\n[OK] Mode debug: " (if *DEBUG_MODE* "ACTIF" "INACTIF")))
+    (princ "\n[ERREUR] *DEBUG_MODE* non définie"))
+  
+  (if (boundp '*USE_RECREATION_METHOD*)
+    (princ (strcat "\n[OK] Méthode: " (if *USE_RECREATION_METHOD* "RECREATION" "ROTATION")))
+    (princ "\n[ERREUR] *USE_RECREATION_METHOD* non définie"))
+  
+  (princ "\n=== Vérification terminée ===")
+  (princ))
+
+(princ "\n")
+(princ "\n╔══════════════════════════════════════════════╗")
+(princ "\n║    TCPOINT ORIENTATION FIXER v1.0 READY     ║")
+(princ "\n║                                              ║")
+(princ "\n║ Commandes rapides:                          ║")
+(princ "\n║  • TCFIX     - Corriger sélection           ║")
+(princ "\n║  • TCFIXALL  - Corriger tout                ║")
+(princ "\n║  • TCCHECK   - Vérifier                     ║")
+(princ "\n║  • TCP-MENU  - Menu interactif               ║")
+(princ "\n║                                              ║")
+(princ "\n║ Tapez TCP-HELP pour l'aide complète         ║")
+(princ "\n╚══════════════════════════════════════════════╝")
+(princ)

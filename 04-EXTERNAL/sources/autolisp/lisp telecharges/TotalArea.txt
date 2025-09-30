@@ -1,0 +1,39 @@
+TOTALAREA version 4.1.0 (gile)
+Définit les commandes AREABOX, TOTALAREA, AREAEDIT, AREASHOW et la variable AREACONV
+
+Bloc "Totalarea"
+
+Une définition bloc nommé "TotalArea" doit être présente dans le dessin ou sous forme de fichier "TotalArea.dwg" dans un répertoire du chemin de recherche.
+Ce bloc doit contenir au moins trois attributs ayant pour étiquette "LABEL", "UNIT" et "AREA". Ce dernier sera automatiquement renseigné avec la somme des aires des objets qui lui sont liés (arc, cercle, ellipse, polyligne, hachure, région, mpolygon).
+S'il contient un autre attribut ayant pour étiquette "NOBJ", celui sera aussi automatiquement renseigné avec le nombre d'objets liés au bloc.
+Le bloc peut être dynamique.
+Un exemple de bloc est joint dans le fichier ZIP.
+
+
+Format de l'affichage de l'attribut "AREA"
+
+Le nombre de décimales affichées est géré par la variable AREAPREC
+
+
+Facteur de conversion
+
+Il est possible d'affecter un facteur de conversion à la valeur de l'attribut.
+Cette valeur est gérée avec une variable (AREACONV) qui peut être modifiée avec la commande du même nom.
+
+
+Mise à jour de la valeur des attributs
+
+La mise à jour des blocs "TotalArea" se fait automatiquement parès modifications des objets liés au bloc.
+Cette mise à jour étant liée à un réacteur, le fichier doit être chargé automatiquement à chaque démarrage.
+
+
+AREABOX : Boite de dialogue de lancement des commandes.
+TOTALAREA : Insère le bloc "TotalArea" dont la valeur de l'attribut "AREA" est égale à la somme des aires des objets sélectionnées.
+AREAEDIT : Lie ou détache les objets sélectionnés au bloc "TotalArea"
+AREASHOW : Met en surbrillance les objets liés au bloc sur lequel passe le curseur
+
+AREACONV : Modifier la valeur de la variable AREACONV.
+Cette variable, enregistrée dans la base de registre gère le facteur de conversion pour les unités de longueur.
+Exemple : 10000 pour cm² -> m², 1000000 (ou 1e6) pour m² -> km²
+AREAPREC : Modifier la valeur de la variable AREAPREC.
+Cette variable, enregistrée dans la base de registre gère le nombre de décimales affichées.

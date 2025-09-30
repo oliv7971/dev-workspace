@@ -1,0 +1,44 @@
+ssfilter_box:dialog{
+  label="Propriétés";
+  :toggle{
+    label="Type d'entité";
+    key="ent";
+    value="0";
+    fixed_width=true;
+    allow_accept=true;
+  }
+  spacer;
+  :toggle{
+    label="Calque";
+    key="lay";
+    value="0";
+    fixed_width=true;
+    allow_accept=true;
+  }
+  spacer;
+  :toggle{
+    label="Couleur";
+    key="col";
+    value="0";
+    fixed_width=true;
+    allow_accept=true;
+  }
+  spacer;
+  :toggle{
+    label="Type de ligne";
+    key="typ";
+    value="0";
+    fixed_width=true;
+    allow_accept=true;
+  }
+  spacer;
+  :toggle{
+    label="Epaisseur de ligne";
+    key="wid";
+    value="0";
+    fixed_width=true;
+    allow_accept=true;
+  }
+  spacer;
+  ok_cancel;
+}

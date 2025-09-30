@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ImporterTCPOINT", "CotationBoulonsRadiaux\ImporterTCPOINT.vbproj", "{E6E53E7A-A114-4196-981E-04D2466B74F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6E53E7A-A114-4196-981E-04D2466B74F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6E53E7A-A114-4196-981E-04D2466B74F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6E53E7A-A114-4196-981E-04D2466B74F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6E53E7A-A114-4196-981E-04D2466B74F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E0AE20F-71A5-4FC2-9186-0E9241806C60}
+	EndGlobalSection
+EndGlobal

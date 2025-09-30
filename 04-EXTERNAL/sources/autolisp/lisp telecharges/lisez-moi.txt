@@ -1,0 +1,10 @@
+Le ZIP contient un fichier compilé .VLX ainsi que les fichiers source.
+
+Pour le chargement, il est possible :
+- soit de charger uniquement le fichier .VLX
+- soit de charger le (ou les) fichier(s) .LSP et d'enrgistrer, sous son (ou leurs)  nom(s),
+  le (ou les) fichier(s) .DCL dans un répertoire du chemin de recherche des fichiers de support d'AutoCAD.
+
+Le LISP definit 2 commandes, SSM etSSMM
+- SSM : sélectionne tous les objets ayant les mêmes propriétés que celles de l'entité sélectionnée qui sont cochées dans la boite de dialogue ;
+- SSMM : permet à l'utilisateur de faire de sélections multiples chacune utilisant le filtre créé à partir d'un objet sélectionne et de la boite de dialogue.

@@ -1,0 +1,39 @@
+TOTALPERIM version 4.1.0 (gile)
+Définit les commandes PERIMBOX, TOTALPERIM, PERIMEDIT, PERIMSHOW et les variables PERIMCONV, PERIMPREC
+
+Bloc "TotalPerimeter"
+
+Une définition bloc nommé "TotalPerimeter" doit être présente dans le dessin ou sous forme de fichier "TotalPerimeter.dwg" dans un répertoire du chemin de recherche.
+Ce bloc doit contenir au moins trois attributs ayant pour étiquette "LABEL", "UNIT" et "PERIM". Ce dernier sera automatiquement renseigné avec la somme des périmètres des objets qui lui sont liés (arc cercle ellipse ligne polyligne polyligne2d polyligne3d spline mpolygon region).
+S'il contient un autre attribut ayant pour étiquette "NOBJ", celui sera aussi automatiquement renseigné avec le nombre d'objets liés au bloc.
+Le bloc peut être dynamique.
+Un exemple de bloc est joint dans le fichier ZIP.
+
+
+Format de l'affichage de l'attribut "PERIM"
+
+Le nombre de décimales affichées est géré par la variable PERIMPREC
+
+
+Facteur de conversion
+
+Il est possible d'affecter un facteur de conversion à la valeur de l'attribut.
+Cette valeur est gérée avec une variable (PERIMCONV) qui peut être modifiée avec la commande du même nom.
+
+
+Mise à jour de la valeur des attributs
+
+La mise à jour des blocs "TotalPerimeter" se fait automatiquement lors des modifications des objets liés au bloc.
+Cette mise à jour étant liée à un réacteur, le fichier doit être chargé automatiquement à chaque démarrage
+
+
+PERIMBOX : Boite de dialogue de lancement des commandes.
+TOTALPERIM : Insère le bloc "TotalPerimeter" dont la valeur de l'attribut "PERIM" est égale à la somme des périmètres des objets sélectionnées.
+PERIMEDIT : Lie ou détache les objets sélectionnés au bloc "TotalPerimeter"
+PERIMSHOW : Met en surbrillance les objets liés au bloc sur lequel passe le curseur
+
+PERIMCONV : Modifier la valeur de la variable PERIMCONV.
+Cette variable, enregistrée dans la base de registre gère le facteur de conversion pour les unités de longueur.
+Exemple : 100 pour cm -> m, 1000 pour m -> km
+PERIMPREC : Modifier la valeur de la variable PERIMPREC.
+Cette variable, enregistrée dans la base de registre gère le nombre de décimales affichées.

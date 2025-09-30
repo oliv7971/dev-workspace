@@ -1,0 +1,82 @@
+(defun c:FIX_GAPS (/ ss tol pts i ent1 ent2 p1 p2 found lst_points)
+  (setq tol 0.005) ; Tolérance ajustable (0.005 = 5 mm)
+  (setq ss (ssget '((0 . "LINE,ARC,LWPOLYLINE")))) ; Sélectionner toutes les entités
+  (if ss
+    (progn
+      (setq lst_points '()) ; Liste des extrémités mal connectées
+      (setq i 0)
+      (while (< i (sslength ss))
+        (setq ent1 (ssname ss i)
+              p1 (list) ; Points de début/fin ou sommets de polyligne
+              p2 (list)
+        )
+
+        ;; Extraire les points de début et fin selon le type d'entité
+        (setq type (cdr (assoc 0 (entget ent1))))
+        (cond
+          ((= type "LINE")
+           (setq p1 (cdr (assoc 10 (entget ent1))))
+           (setq p2 (cdr (assoc 11 (entget ent1))))
+          )
+          ((= type "ARC")
+           (setq p1 (cdr (assoc 10 (entget ent1)))) ; Point de départ de l'arc
+           (setq p2 (cdr (assoc 11 (entget ent1)))) ; Point de fin de l'arc
+          )
+          ((= type "LWPOLYLINE")
+           (setq lst (entget ent1))
+           (setq p1 (cdr (assoc 10 lst))) ; Premier sommet
+           (setq p2 (cdr (assoc 10 (last lst)))) ; Dernier sommet
+          )
+        )
+
+        ;; Vérification des connexions
+        (setq found nil)
+        (setq j 0)
+        (while (and (< j (sslength ss)) (not found))
+          (setq ent2 (ssname ss j))
+          (if (not (= ent1 ent2))
+            (progn
+              (setq p_check1 (cdr (assoc 10 (entget ent2))))
+              (setq p_check2 (cdr (assoc 11 (entget ent2))))
+              (if (or (equal p1 p_check1 tol) (equal p1 p_check2 tol))
+                (setq found T))
+            )
+          )
+          (setq j (1+ j))
+        )
+
+        ;; Si aucune connexion trouvée, ajouter le point à la liste
+        (if (not found) (setq lst_points (cons p1 lst_points)))
+
+        (setq found nil)
+        (setq j 0)
+        (while (and (< j (sslength ss)) (not found))
+          (setq ent2 (ssname ss j))
+          (if (not (= ent1 ent2))
+            (progn
+              (setq p_check1 (cdr (assoc 10 (entget ent2))))
+              (setq p_check2 (cdr (assoc 11 (entget ent2))))
+              (if (or (equal p2 p_check1 tol) (equal p2 p_check2 tol))
+                (setq found T))
+            )
+          )
+          (setq j (1+ j))
+        )
+
+        ;; Ajouter le point si aucune connexion n'a été trouvée
+        (if (not found) (setq lst_points (cons p2 lst_points)))
+
+        (setq i (1+ i))
+      )
+
+      ;; Affichage des points aux endroits non connectés
+      (foreach pt lst_points
+        (entmake (list '(0 . "POINT") (cons 10 pt))) ; Création d'un point à l'endroit du problème
+      )
+
+      (princ (strcat "\nNombre de jonctions incorrectes détectées : " (itoa (length lst_points))))
+    )
+    (princ "\nAucune entité trouvée dans le dessin.")
+  )
+  (princ)
+)
