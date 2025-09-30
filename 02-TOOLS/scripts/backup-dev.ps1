@@ -7,11 +7,12 @@ param(
     [string]$Mode = "all"
 )
 
-# Configuration
-$sourceDir = "C:\data\20-DEVELOPPEMENT"
-$backupBase = "C:\data\20-DEVELOPPEMENT\05-ARCHIVE\backup\DEV"
+# Configuration auto-adaptative
+$currentDir = Split-Path -Parent $PSScriptRoot
+$sourceDir = Split-Path -Parent $currentDir  # Remonte au dossier racine du workspace
+$backupBase = Join-Path $sourceDir "05-ARCHIVE\backup\DEV"
 $cloudDir = "$env:OneDrive\DEV-Sync"  # Ajuster selon votre cloud
-$logFile = "$sourceDir\02-TOOLS\logs\backup-$(Get-Date -Format 'yyyyMMdd').log"
+$logFile = Join-Path $sourceDir "02-TOOLS\logs\backup-$(Get-Date -Format 'yyyyMMdd').log"
 
 # Fonction de logging
 function Write-Log {
