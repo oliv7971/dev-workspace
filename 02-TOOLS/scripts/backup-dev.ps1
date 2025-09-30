@@ -9,7 +9,7 @@ param(
 
 # Configuration
 $sourceDir = "C:\data\20-DEVELOPPEMENT"
-$backupBase = "D:\Backup\DEV"
+$backupBase = "C:\data\20-DEVELOPPEMENT\05-ARCHIVE\backup\DEV"
 $cloudDir = "$env:OneDrive\DEV-Sync"  # Ajuster selon votre cloud
 $logFile = "$sourceDir\02-TOOLS\logs\backup-$(Get-Date -Format 'yyyyMMdd').log"
 
