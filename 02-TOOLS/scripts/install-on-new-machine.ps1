@@ -9,7 +9,7 @@ param(
     [string]$WorkspaceName = "20-DEVELOPPEMENT",
 
     [Parameter(Mandatory=$false)]
-    [string]$GitUrl = ""
+    [string]$GitUrl = "https://github.com/olivierboissardggc2-max/dev-workspace.git"
 )
 
 Write-Host "=== Installation workspace sur nouvelle machine ===" -ForegroundColor Green
