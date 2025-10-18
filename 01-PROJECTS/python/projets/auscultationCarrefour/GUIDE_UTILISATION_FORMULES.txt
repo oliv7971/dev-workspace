@@ -1,0 +1,44 @@
+# GUIDE D'UTILISATION - FORMULES GÉNÉRÉES
+
+## 🚀 PROCÉDURE ULTRA-RAPIDE:
+
+### 1️⃣ DÉPLACEMENTS:
+1. Ouvrir: FORMULES_DEPLACEMENTS_COPIER_COLLER.txt
+2. Copier la ligne "LIGNE 10"
+3. Dans Excel: Sélectionner C10:BJ10 et coller
+4. Répéter pour lignes 11, 12, 13, 14, 15
+
+### 2️⃣ ÉVOLUTION PM H V:
+1. Ouvrir: FORMULES_EVOLUTION_COPIER_COLLER.txt  
+2. Copier la ligne "LIGNE 10"
+3. Dans Excel: Sélectionner C10:BJ10 et coller
+4. Répéter pour lignes 11, 12, 13, 14, 15
+
+### 3️⃣ CORDES REF1:
+1. Ouvrir: FORMULES_CORDES_REF1_COPIER_COLLER.txt
+2. Copier la ligne "LIGNE 10"  
+3. Dans Excel: Sélectionner C10:U10 et coller (19 colonnes)
+4. Répéter pour lignes 11, 12, 13, 14, 15
+
+### 4️⃣ CORDES REF2:
+1. Ouvrir: FORMULES_CORDES_REF2_COPIER_COLLER.txt
+2. Copier la ligne "LIGNE 10"
+3. Dans Excel: Sélectionner C10:U10 et coller (19 colonnes)  
+4. Répéter pour lignes 11, 12, 13, 14, 15
+
+## ⚡ ASTUCE EXCEL:
+- Sélectionner une plage: Clic sur C10, puis Shift+Clic sur BJ10
+- Coller: Ctrl+V
+- Les formules se placeront automatiquement aux bonnes endroits!
+
+## ⚠️ IMPORTANT:
+- Sauvegarder après chaque onglet réussi
+- Tester avec une ligne d'abord
+- Les formules sont séparées par des tabulations (TAB)
+
+## 📊 NOMBRE DE FORMULES:
+- Déplacements: 6 lignes × 60 colonnes = 360 formules
+- Évolution: 6 lignes × 60 colonnes = 360 formules  
+- Cordes REF1: 6 lignes × 19 colonnes = 114 formules
+- Cordes REF2: 6 lignes × 19 colonnes = 114 formules
+- **TOTAL: 948 formules générées automatiquement!** 🚀

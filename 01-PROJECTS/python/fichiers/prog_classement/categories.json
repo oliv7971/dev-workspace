@@ -1,0 +1,12 @@
+{
+  "IMPLANTATION": ["implant", "imp", "implantation"],
+  "AUSCULTATION": ["aus", "auscult", "conv", "convergences"],
+  "LEVE": ["levé", "leve", "lev", "lv"],
+  "POLYGO": ["poly", "polygo", "refs"],
+  "THEORIQUES": ["theoriques", "theo", "prepa", "construction", "projet"],
+  "METRES": ["metres", "métrés", "metrés"],
+  "ETUDE": ["etude"],
+  "RECOLEMENT": ["recol", "rec", "doe"],
+  "REGLAGE": ["reg", "reglage"],
+  "SCAN": ["scan", "target"]
+}

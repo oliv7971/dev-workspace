@@ -1,0 +1,30 @@
+
+📐 ONGLET PROJECTION - SYSTÈME DE COORDONNÉES CHANTIER
+
+NOMENCLATURE:
+- PM : Position le long de l'axe (équivalent PK)
+- H  : Déport latéral/transversal (+ = droite, - = gauche)  
+- V  : Déport vertical (par rapport à Z = -123.621 m)
+
+AXE DE RÉFÉRENCE:
+- Origine: PK 0 → X=823216.6581, Y=1091503.0821, Z=-123.621
+- Fin: PK 100 → X=823258.9200, Y=1091412.4514, Z=-123.621
+- Azimut: 172.2222 gr
+- Pente: 0.0%
+
+COLONNES CRÉÉES:
+C: V1_PM    D: V1_H     E: V1_V
+F: V2_PM    G: V2_H     H: V2_V
+I: V3_PM    J: V3_H     K: V3_V
+L: H1_PM    M: H1_H     N: H1_V
+... (jusqu'à REF2)
+
+CALCULS:
+- PM: Projection sur l'axe depuis l'origine
+- H: Distance perpendiculaire à l'axe (signe selon côté)
+- V: Différence avec l'altitude de référence
+
+UTILISATION:
+1. Ajoutez vos mesures XYZ dans l'onglet DATABASE
+2. Les projections PM, H, V apparaissent automatiquement
+3. Analysez les déplacements dans le système d'axe du chantier

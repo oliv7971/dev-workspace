@@ -1,0 +1,15 @@
+convergences:
+  pattern: "convergen|conv.*"
+  description: "Regex pattern to match convergence sheets."
+
+deplacements:
+  pattern: "deplac|dpm|dh|dz"
+  description: "Regex pattern to match displacement sheets."
+
+graphique:
+  pattern: "graph|graphique"
+  description: "Regex pattern to match graphical sheets."
+
+date:
+  pattern: "Date|Jour|Heure|Date/Heure"
+  description: "Regex pattern to match date columns."

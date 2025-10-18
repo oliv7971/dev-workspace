@@ -1,0 +1,24 @@
+# FORMULES EVOLUTIONS CORDES REF2 - COPIER-COLLER DIRECT
+
+Source: Onglet 'cordes ref2'
+Calcul: valeur_actuelle - valeur_initiale (ligne 10)
+Instructions: Sélectionnez la ligne, copiez et collez en C10, C11, etc.
+
+## LIGNE 10:
+='cordes ref2'!C10-'cordes ref2'!C$10	='cordes ref2'!D10-'cordes ref2'!D$10	='cordes ref2'!E10-'cordes ref2'!E$10	='cordes ref2'!F10-'cordes ref2'!F$10	='cordes ref2'!G10-'cordes ref2'!G$10	='cordes ref2'!H10-'cordes ref2'!H$10	='cordes ref2'!I10-'cordes ref2'!I$10	='cordes ref2'!J10-'cordes ref2'!J$10	='cordes ref2'!K10-'cordes ref2'!K$10	='cordes ref2'!L10-'cordes ref2'!L$10	='cordes ref2'!M10-'cordes ref2'!M$10	='cordes ref2'!N10-'cordes ref2'!N$10	='cordes ref2'!O10-'cordes ref2'!O$10	='cordes ref2'!P10-'cordes ref2'!P$10	='cordes ref2'!Q10-'cordes ref2'!Q$10	='cordes ref2'!R10-'cordes ref2'!R$10	='cordes ref2'!S10-'cordes ref2'!S$10	='cordes ref2'!T10-'cordes ref2'!T$10	='cordes ref2'!U10-'cordes ref2'!U$10
+
+## LIGNE 11:
+='cordes ref2'!C11-'cordes ref2'!C$10	='cordes ref2'!D11-'cordes ref2'!D$10	='cordes ref2'!E11-'cordes ref2'!E$10	='cordes ref2'!F11-'cordes ref2'!F$10	='cordes ref2'!G11-'cordes ref2'!G$10	='cordes ref2'!H11-'cordes ref2'!H$10	='cordes ref2'!I11-'cordes ref2'!I$10	='cordes ref2'!J11-'cordes ref2'!J$10	='cordes ref2'!K11-'cordes ref2'!K$10	='cordes ref2'!L11-'cordes ref2'!L$10	='cordes ref2'!M11-'cordes ref2'!M$10	='cordes ref2'!N11-'cordes ref2'!N$10	='cordes ref2'!O11-'cordes ref2'!O$10	='cordes ref2'!P11-'cordes ref2'!P$10	='cordes ref2'!Q11-'cordes ref2'!Q$10	='cordes ref2'!R11-'cordes ref2'!R$10	='cordes ref2'!S11-'cordes ref2'!S$10	='cordes ref2'!T11-'cordes ref2'!T$10	='cordes ref2'!U11-'cordes ref2'!U$10
+
+## LIGNE 12:
+='cordes ref2'!C12-'cordes ref2'!C$10	='cordes ref2'!D12-'cordes ref2'!D$10	='cordes ref2'!E12-'cordes ref2'!E$10	='cordes ref2'!F12-'cordes ref2'!F$10	='cordes ref2'!G12-'cordes ref2'!G$10	='cordes ref2'!H12-'cordes ref2'!H$10	='cordes ref2'!I12-'cordes ref2'!I$10	='cordes ref2'!J12-'cordes ref2'!J$10	='cordes ref2'!K12-'cordes ref2'!K$10	='cordes ref2'!L12-'cordes ref2'!L$10	='cordes ref2'!M12-'cordes ref2'!M$10	='cordes ref2'!N12-'cordes ref2'!N$10	='cordes ref2'!O12-'cordes ref2'!O$10	='cordes ref2'!P12-'cordes ref2'!P$10	='cordes ref2'!Q12-'cordes ref2'!Q$10	='cordes ref2'!R12-'cordes ref2'!R$10	='cordes ref2'!S12-'cordes ref2'!S$10	='cordes ref2'!T12-'cordes ref2'!T$10	='cordes ref2'!U12-'cordes ref2'!U$10
+
+## LIGNE 13:
+='cordes ref2'!C13-'cordes ref2'!C$10	='cordes ref2'!D13-'cordes ref2'!D$10	='cordes ref2'!E13-'cordes ref2'!E$10	='cordes ref2'!F13-'cordes ref2'!F$10	='cordes ref2'!G13-'cordes ref2'!G$10	='cordes ref2'!H13-'cordes ref2'!H$10	='cordes ref2'!I13-'cordes ref2'!I$10	='cordes ref2'!J13-'cordes ref2'!J$10	='cordes ref2'!K13-'cordes ref2'!K$10	='cordes ref2'!L13-'cordes ref2'!L$10	='cordes ref2'!M13-'cordes ref2'!M$10	='cordes ref2'!N13-'cordes ref2'!N$10	='cordes ref2'!O13-'cordes ref2'!O$10	='cordes ref2'!P13-'cordes ref2'!P$10	='cordes ref2'!Q13-'cordes ref2'!Q$10	='cordes ref2'!R13-'cordes ref2'!R$10	='cordes ref2'!S13-'cordes ref2'!S$10	='cordes ref2'!T13-'cordes ref2'!T$10	='cordes ref2'!U13-'cordes ref2'!U$10
+
+## LIGNE 14:
+='cordes ref2'!C14-'cordes ref2'!C$10	='cordes ref2'!D14-'cordes ref2'!D$10	='cordes ref2'!E14-'cordes ref2'!E$10	='cordes ref2'!F14-'cordes ref2'!F$10	='cordes ref2'!G14-'cordes ref2'!G$10	='cordes ref2'!H14-'cordes ref2'!H$10	='cordes ref2'!I14-'cordes ref2'!I$10	='cordes ref2'!J14-'cordes ref2'!J$10	='cordes ref2'!K14-'cordes ref2'!K$10	='cordes ref2'!L14-'cordes ref2'!L$10	='cordes ref2'!M14-'cordes ref2'!M$10	='cordes ref2'!N14-'cordes ref2'!N$10	='cordes ref2'!O14-'cordes ref2'!O$10	='cordes ref2'!P14-'cordes ref2'!P$10	='cordes ref2'!Q14-'cordes ref2'!Q$10	='cordes ref2'!R14-'cordes ref2'!R$10	='cordes ref2'!S14-'cordes ref2'!S$10	='cordes ref2'!T14-'cordes ref2'!T$10	='cordes ref2'!U14-'cordes ref2'!U$10
+
+## LIGNE 15:
+='cordes ref2'!C15-'cordes ref2'!C$10	='cordes ref2'!D15-'cordes ref2'!D$10	='cordes ref2'!E15-'cordes ref2'!E$10	='cordes ref2'!F15-'cordes ref2'!F$10	='cordes ref2'!G15-'cordes ref2'!G$10	='cordes ref2'!H15-'cordes ref2'!H$10	='cordes ref2'!I15-'cordes ref2'!I$10	='cordes ref2'!J15-'cordes ref2'!J$10	='cordes ref2'!K15-'cordes ref2'!K$10	='cordes ref2'!L15-'cordes ref2'!L$10	='cordes ref2'!M15-'cordes ref2'!M$10	='cordes ref2'!N15-'cordes ref2'!N$10	='cordes ref2'!O15-'cordes ref2'!O$10	='cordes ref2'!P15-'cordes ref2'!P$10	='cordes ref2'!Q15-'cordes ref2'!Q$10	='cordes ref2'!R15-'cordes ref2'!R$10	='cordes ref2'!S15-'cordes ref2'!S$10	='cordes ref2'!T15-'cordes ref2'!T$10	='cordes ref2'!U15-'cordes ref2'!U$10
+

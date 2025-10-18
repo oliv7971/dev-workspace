@@ -1,0 +1,22 @@
+{
+  "root": "C:/Temp/1-tableaux/GTB",
+  "out": "C:/Temp/exports_pdf",
+  "recursive": false,
+  "include_chart_sheets": false,
+
+  "strict_grey_borders": true,
+  "fallback_chart_objects": false,
+
+  "min_zone_rows": 6,
+  "min_zone_cols": 6,
+  "min_zone_nonempty": 15,
+
+  "dry_run": false,
+  "allow_cwd_config": false,
+
+  "grid_mode": "axes",
+  "grid_axis_row": 2,
+  "grid_axis_col": 2,
+  "grey_color_tolerance": 0
+
+}

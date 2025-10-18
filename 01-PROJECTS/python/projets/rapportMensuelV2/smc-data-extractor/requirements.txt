@@ -1,0 +1,8 @@
+numpy
+pandas
+openpyxl
+matplotlib
+PyPDF2
+regex
+tkinter
+pytest

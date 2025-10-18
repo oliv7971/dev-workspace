@@ -1,0 +1,12 @@
+{
+  "sigma_dir_mgon": 0.5,
+  "sigma_zen_mgon": 1.0,
+  "edm_a_mm": 1.5,
+  "edm_b_ppm": 2.0,
+  "h_instrument": 1.500,
+  "estimate_mu": false,
+  "estimate_c": false,
+  "angles_unit": "gon",
+  "max_iter": 10,
+  "tol": 1e-10
+}

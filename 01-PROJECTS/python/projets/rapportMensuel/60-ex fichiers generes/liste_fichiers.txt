@@ -1,0 +1,39 @@
+﻿
+FullName                                                                                                                                                              
+--------                                                                                                                                                              
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\listeFichiersAtraiter.ps1                                 
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\liste_fichiers.txt                                        
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GER\01_49-B-GER-HA21_1-PM_123-25-07-08.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GER\01_50-B-GER-HA21_2-PM_129-25-06-02.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GER\01_50-B-GER-HA21_2-PM_129-25-07-08.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GGS\03_105-GGS_SMC_C007_PM005_25_07_29.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GGS\03_106-GGS_SMC_C020_PM005_25_07_29.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GGS\03_106-GGS_SMC_C020_PM016_25_06_30.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GGS\03_107-GGS_SMC_C031_PM024_25_06_30.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GGS\03_107-GGS_SMC_C031_PM024_25_07_29.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GHA\04_301-GVA_SMC_C105_C106_25_07_23.xlsm                
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GHA\04_302-GHA_SMC_C04_C05_25_07_23.xlsm                  
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GHA\04_303-GHA_SMC_T15_25_07_23.xlsm                      
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GHA\04_304-GHA_SMC_T28_25_07-25.xlsm                      
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GHA\04_305-GHA_SMC_T41_25_07_30.xlsm                      
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_200-GTB-GRD-double carrure-XYZ-tableau Jour-25-0...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_201-GT7_SMC_C061_PM57_25_07_08.xlsm                
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_202-GRD_SMC_T48_PM44_25_07_08.xlsm                 
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_203-GRD_SMC_C52_PM47_25_07_08.xlsm                 
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_204-GRD_SMC_C63_PM57_25_07_08.xlsm                 
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_205-GTB_SMC_C004_PM002_25_07_08.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_206-GTB_SMC_C009_PM007_25_07_08.xlsm               
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_207-GTB-SMC1-T16-PM13_25_07_08.xlsm                
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_208-GTB-SMC1-T24-PM19_25-07_08.xlsm                
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\GTB\02_209-GTB-SMC1-T32-PM25_25-07-08.xlsm                
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GCR(raccord)\GVA-GCR-RADIER-RACCORDEMENT-25-07-...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GRE\GRE-S4-RADIER-PLOT1-000-005-NIVELLEMENT-25-...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GRE\GRE-S4-RADIER-PLOT2-006-009-NIVELLEMENT-25-...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GVA3\61-B-GVA-RADIER-PLOT1-093-103-NIVELLEMENT-...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GVA3\62-B-GVA-RADIER-PLOT2-083-093-NIVELLEMENT-...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GVA3\63-B-GVA-RADIER-PLOT3-077-083-NIVELLEMENT-...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GVA3\64-B-GVA-RADIER-PLOT4-069-077-NIVELLEMENT-...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GVA3\65-B-GVA-RADIER-PLOT5-060-069-NIVELLEMENT-...
+C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\20250808-rapport mensuel juillet\1-tableaux\Radiers\GVA3\66-B-GVA-RADIER-PLOT6-052-059-NIVELLEMENT-...
+
+

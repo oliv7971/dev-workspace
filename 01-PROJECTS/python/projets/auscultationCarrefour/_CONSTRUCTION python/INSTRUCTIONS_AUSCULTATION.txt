@@ -1,0 +1,55 @@
+
+🎯 INSTRUCTIONS POUR VOTRE SYSTÈME D'AUSCULTATION 20 CIBLES
+
+PROBLÈME RENCONTRÉ:
+Les fichiers .xlsm générés par Python ne s'ouvrent pas correctement sur votre système.
+
+SOLUTIONS ALTERNATIVES:
+
+=== SOLUTION 1: Fichier .xlsx simple ===
+Fichier créé: AUSCULTATION_PANDAS.xlsx
+- Format .xlsx (plus compatible)
+- Créé avec pandas (plus stable)
+- Structure de base prête
+
+=== SOLUTION 2: Fichiers CSV ===  
+Fichiers créés: 
+- DATABASE_AUSCULTATION.csv (données brutes)
+- OBSERVATIONS_TEMPLATE.csv (template calculs)
+
+Vous pouvez ouvrir ces CSV dans Excel et les convertir en .xlsx
+
+=== SOLUTION 3: Créer manuellement dans Excel ===
+
+1. STRUCTURE DATABASE (Onglet 1):
+   Colonnes: DATE | NO | MATRICULE | X | Y | Z
+   
+2. STRUCTURE OBSERVATIONS (Onglet 2):
+   Colonnes: Date | Jours | V1_X | V1_Y | V1_Z | V2_X | V2_Y | V2_Z | ... 
+   
+   Pour chaque cible: V1,V2,V3,H1,H2,H3,H4,H5,B1,B2,B3,B4,B5,M1,M2,M3,M4,M5,REF1,REF2
+
+3. FORMULES À AJOUTER:
+   Dans chaque cellule de coordonnée (ex: V1_X):
+   =IFERROR(INDEX(DATABASE.X:X,MATCH(1,(DATABASE.DATE:DATE=$A2)*(DATABASE.NO:NO="V1"),0)),"")
+   
+   Remplacez:
+   - "V1" par le code de la cible
+   - DATABASE.X:X par DATABASE.Y:Y ou DATABASE.Z:Z selon la coordonnée
+
+=== VOS 20 CIBLES ===
+V1, V2, V3 (Voûtes)
+H1, H2, H3, H4, H5 (Haut)  
+B1, B2, B3, B4, B5 (Bas)
+M1, M2, M3, M4, M5 (Milieu)
+REF1, REF2 (Références)
+
+UTILISATION:
+1. Ajoutez vos mesures dans DATABASE avec les codes ci-dessus
+2. Les calculs apparaîtront automatiquement dans OBSERVATIONS
+3. Vous aurez vos déports et analyses pour les 20 cibles
+
+Si aucune solution ne fonctionne, le problème peut être:
+- Version d'Excel incompatible avec les fichiers générés
+- Problème de permissions/sécurité  
+- Besoin d'une version plus récente d'openpyxl/pandas

@@ -1,0 +1,27 @@
+﻿Feuille,Cellule,Texte
+Calcul XY,K50,Calcul pour un alignement droit
+Calcul XY,K52,Calcul pour un cercle
+Calcul XY,H54,Calcul pour une clothoïde
+Calcul XY,F48,Devers Calculé
+Calcul XY,G48,Gisement du rayon du cercle au point demandé
+Calcul XY,G1,Longueur = ( Paramètre A )² / Rayon
+Calcul XY,G2,Paramètre A = Racine( Longueur * Rayon )
+Calcul XY,I9,Rayon
+Calcul XY,H48,Xcercle
+Calcul XY,I48,Ycercle
+Calcul XY,L9,devers
+Calcul XY,O54,"je calcule d'abord les coordonnées relatives sur la clotho, puis je fais un changement de repère pour avoir le point sur l'axe."
+Calcul XY,O52,"je calcule le centre du cercle, ainsi que le gisement du rayon au point demandé ; je peux alors tout calculer"
+Calcul XY,O50,"je calcule le point sur l'alignement puisque je connais le point de départ, le gisement et la distance."
+Calcul Z,F45,Calcul pour un cercle
+Calcul Z,F47,Calcul pour une parabole
+Calcul Z,H9,Rayon
+définition axe en plan,E9,PK
+définition axe en plan,D11,alignement droit
+définition axe en plan,D12,alignement droit
+définition axe en plan,D13,alignement droit
+définition axe en plan,I9,rayon
+définition profil en long,E9,PK
+définition profil en long,I39,le sens est +1 si la pente augmente dans le raccordement
+définition profil en long,I40,le sens est -1 si la pente diminue dans le raccordement
+définition profil en long,H9,rayon

@@ -1,0 +1,109 @@
+# INSTRUCTIONS FINALES CORRIGÉES - SYNTAXE EXCEL
+
+## 📏 FORMULES CORDES AVEC SYNTAXE CORRECTE
+
+### ✅ SYNTAXE CORRECTE Excel:
+'Résultats observations'!C10 (avec point d'exclamation !)
+
+### ❌ SYNTAXE INCORRECTE:
+'Résultats observations'.C10 (avec point .)
+
+## 🎯 ONGLET "CORDES REF1" - FORMULES FINALES
+
+### REF1 (C530) - Colonnes: BE, BF, BG
+
+**CORDE V1 vers REF1 (Colonne C):**
+```
+=SQRT(('Résultats observations'!C10-'Résultats observations'!BE10)^2+('Résultats observations'!D10-'Résultats observations'!BF10)^2+('Résultats observations'!E10-'Résultats observations'!BG10)^2)
+```
+
+**CORDE V2 vers REF1 (Colonne D):**
+```  
+=SQRT(('Résultats observations'!F10-'Résultats observations'!BE10)^2+('Résultats observations'!G10-'Résultats observations'!BF10)^2+('Résultats observations'!H10-'Résultats observations'!BG10)^2)
+```
+
+**CORDE V3 vers REF1 (Colonne E):**
+```
+=SQRT(('Résultats observations'!I10-'Résultats observations'!BE10)^2+('Résultats observations'!J10-'Résultats observations'!BF10)^2+('Résultats observations'!K10-'Résultats observations'!BG10)^2)
+```
+
+## 🎯 ONGLET "CORDES REF2" - FORMULES FINALES
+
+### REF2 (C540) - Colonnes: BH, BI, BJ
+
+**CORDE V1 vers REF2 (Colonne C):**
+```
+=SQRT(('Résultats observations'!C10-'Résultats observations'!BH10)^2+('Résultats observations'!D10-'Résultats observations'!BI10)^2+('Résultats observations'!E10-'Résultats observations'!BJ10)^2)
+```
+
+**CORDE V2 vers REF2 (Colonne D):**
+```
+=SQRT(('Résultats observations'!F10-'Résultats observations'!BH10)^2+('Résultats observations'!G10-'Résultats observations'!BI10)^2+('Résultats observations'!H10-'Résultats observations'!BJ10)^2)
+```
+
+## 🎯 ONGLET "DÉPLACEMENTS" - FORMULES FINALES
+
+**Exemple pour colonne C (V1_X):**
+```
+=IFERROR('Résultats observations'!C11-'Résultats observations'!C$10,"")
+```
+
+**Pour les autres colonnes:**
+- Colonne D (V1_Y): `='Résultats observations'!D11-'Résultats observations'!D$10`  
+- Colonne E (V1_Z): `='Résultats observations'!E11-'Résultats observations'!E$10`
+- Colonne F (V2_X): `='Résultats observations'!F11-'Résultats observations'!F$10`
+- etc.
+
+## 🎯 ONGLET "ÉVOLUTION PM H V" - FORMULES FINALES
+
+**Exemple pour colonne C (ΔV1_PM):**
+```
+=IFERROR('Résultats Projection'!C11-'Résultats Projection'!C$10,"")
+```
+
+**Pour les autres colonnes:**
+- Colonne D (ΔV1_H): `='Résultats Projection'!D11-'Résultats Projection'!D$10`
+- Colonne E (ΔV1_V): `='Résultats Projection'!E11-'Résultats Projection'!E$10`
+- etc.
+
+## 🔧 PROCÉDURE FINALE:
+
+1. **TESTER UNE FORMULE SIMPLE D'ABORD:**
+   ```
+   =SQRT(9+16+25)
+   ```
+   Résultat attendu: 7.07...
+
+2. **PUIS TESTER UNE VRAIE FORMULE:**
+   Dans CORDES REF1, cellule C10:
+   ```
+   =SQRT(('Résultats observations'!C10-'Résultats observations'!BE10)^2+('Résultats observations'!D10-'Résultats observations'!BF10)^2+('Résultats observations'!E10-'Résultats observations'!BG10)^2)
+   ```
+
+3. **SI ÇA MARCHE:**
+   - Copier vers les lignes 11, 12, 13...
+   - Adapter pour les autres colonnes (D, E, F...)
+   - Sauvegarder fréquemment
+
+4. **ORDRE RECOMMANDÉ:**
+   - Déplacements (plus simple)
+   - Évolution PM H V (similaire)  
+   - Cordes REF1 (plus complexe)
+   - Cordes REF2 (similaire à REF1)
+
+## ⚠️ POINTS CRITIQUES:
+
+- ✅ Utiliser **!** (point d'exclamation)
+- ❌ Ne pas utiliser **.** (point simple)
+- ✅ Tester UNE formule à la fois
+- ✅ Sauvegarder après chaque succès
+- ✅ Utiliser IFERROR pour éviter les erreurs #DIV/0
+
+## 🎯 PREMIÈRE FORMULE À COPIER-COLLER:
+
+Onglet CORDES REF1, cellule C10:
+```
+=SQRT(('Résultats observations'!C10-'Résultats observations'!BE10)^2+('Résultats observations'!D10-'Résultats observations'!BF10)^2+('Résultats observations'!E10-'Résultats observations'!BG10)^2)
+```
+
+Si cette formule fonctionne, vous pouvez faire confiance aux autres !

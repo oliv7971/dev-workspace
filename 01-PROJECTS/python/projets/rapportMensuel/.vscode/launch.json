@@ -1,0 +1,58 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "SMC Extract - Juillet 2025",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/smc_batch_extract.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--roots",
+        "C:\\data\\11-CHANTIERS\\BURE\\10-ACTIVITES\\Rapports d'activité\\2025\\20250808-rapport mensuel juillet\\1-tableaux",
+        "--modified-month", "2025-07",
+        "--out", "C:\\data\\temp\\export_smc.csv"
+      ],
+      "justMyCode": true
+    },
+    {
+      "name": "SMC Extract - Tous fichiers (pas de filtre date)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/smc_batch_extract.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--roots",
+        "C:\\data\\11-CHANTIERS\\BURE\\10-ACTIVITES\\Rapports d'activité\\2025\\20250808-rapport mensuel juillet\\1-tableaux",
+        "--out", "C:\\data\\temp\\export_smc.csv"
+      ],
+      "justMyCode": true
+    },
+    {
+      "name": "SMC Extract - Choix mois (prompt)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/smc_batch_extract.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--roots",
+        "C:\\data\\11-CHANTIERS\\BURE\\10-ACTIVITES\\Rapports d'activité\\2025\\20250808-rapport mensuel juillet\\1-tableaux",
+        "--modified-month", "${input:mois}",
+        "--out", "C:\\data\\temp\\export_smc.csv"
+      ],
+      "justMyCode": true
+    }
+  ],
+  "inputs": [
+    {
+      "id": "mois",
+      "type": "pickString",
+      "description": "Choisir le mois de modification (YYYY-MM)",
+      "options": [
+        "2025-06",
+        "2025-07",
+        "2025-08"
+      ]
+    }
+  ]
+}

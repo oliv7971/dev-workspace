@@ -1,0 +1,17 @@
+# Requirements for Calculateur d'Axes v1.0
+# Modules essentiels pour calculs topographiques
+numpy>=1.21.0          # Calculs numériques et matrices
+pandas>=1.3.0          # Manipulation données tabulaires
+openpyxl>=3.0.7        # Import/Export Excel
+matplotlib>=3.5.0      # Visualisation et graphiques
+scipy>=1.7.0           # Calculs scientifiques avancés
+
+# Modules optionnels pour fonctionnalités étendues
+pyproj>=3.2.0          # Projections cartographiques (optionnel)
+ezdxf>=0.17.0          # Export/Import DXF (optionnel)
+tkinter                # Interface graphique (inclus avec Python)
+
+# Modules pour développement et tests
+# pytest>=6.0.0         # Framework de tests (décommentez si souhaité)
+# black>=21.0.0          # Formatage automatique du code
+# flake8>=3.8.0          # Vérification qualité code

@@ -1,0 +1,188 @@
+RÉCAPITULATIFS EN LIGNE SMC - 2025-09
+============================================================
+
+CONVERGENCES
+----------------------------------------
+GER T109 (Convergences - périodique)
+  BG:-0.38 | HG:-0.22 | HD:-0.20 | BD:N/A | LH:-0.07 | LB:N/A
+GER T109 (Convergences - cumulé)
+  BG:-38.41 | HG:-26.84 | HD:-34.54 | BD:-42.79 | LH:-25.06 | LB:-25.95
+
+GER T131 (Convergences - périodique)
+  BG:-1.25 | HG:-0.09 | HD:-0.31 | BD:-0.54 | LH:0.06 | LB:-1.20
+GER T131 (Convergences - cumulé)
+  BG:-38.74 | HG:-22.92 | HD:-25.71 | BD:-37.46 | LH:-26.55 | LB:-33.25
+
+GER T163 (Convergences - périodique)
+  BG:-0.96 | HG:-0.40 | HD:-0.70 | BD:-0.77 | LH:-0.64 | LB:-0.87
+GER T163 (Convergences - cumulé)
+  BG:-34.31 | HG:-24.24 | HD:-28.91 | BD:-34.94 | LH:-22.03 | LB:-15.25
+
+GER T92 (Convergences - périodique)
+  BG:-1.53 | HG:N/A | HD:-0.94 | BD:-0.27 | LH:N/A | LB:0.29
+GER T92 (Convergences - cumulé)
+  BG:-61.77 | HG:-33.81 | HD:-25.33 | BD:-54.27 | LH:-24.04 | LB:-34.60
+
+GGS C003 (Convergences - périodique)
+  BG:-1.06 | HG:-0.42 | HD:N/A | BD:-0.35 | LH:N/A | LB:-0.37
+GGS C003 (Convergences - cumulé)
+  BG:-14.24 | HG:-6.64 | HD:-3.96 | BD:-16.70 | LH:-7.94 | LB:-17.58
+
+GGS C007 (Convergences - périodique)
+  BG:-1.12 | HG:0.68 | HD:N/A | BD:-3.33 | LH:N/A | LB:-1.30
+GGS C007 (Convergences - cumulé)
+  BG:-36.15 | HG:-29.76 | HD:-9.72 | BD:-11.28 | LH:-10.64 | LB:-26.46
+
+GGS C020 (Convergences - périodique)
+  BG:N/A | IG:-2.39 | HG:-1.19 | HD:N/A | ID:-4.55 | BD:N/A | LH:N/A | LI:-3.30 | LB:N/A
+GGS C020 (Convergences - cumulé)
+  BG:0.00 | IG:-38.58 | HG:-19.31 | HD:-35.00 | ID:-53.95 | BD:0.00 | LH:-19.88 | LI:-31.55 | LB:0.00
+
+GGS C031 (Convergences - périodique)
+  BG:N/A | IG:-5.80 | HG:-1.56 | HD:-3.99 | ID:-3.07 | BD:N/A | LH:-5.42 | LI:-14.99 | LB:N/A
+GGS C031 (Convergences - cumulé)
+  BG:0.00 | IG:-21.46 | HG:-6.15 | HD:-12.01 | ID:-14.32 | BD:0.00 | LH:-16.85 | LI:-47.75 | LB:0.00
+
+GHA C04 (Convergences - périodique)
+  BG:-0.97 | IG:-1.10 | HG:-1.12 | HD:-0.09 | ID:-0.74 | BD:N/A | LH:-0.31 | LI:0.23 | LB:N/A
+GHA C04 (Convergences - cumulé)
+  BG:-8.97 | IG:-53.69 | HG:-38.58 | HD:-31.99 | ID:-57.45 | BD:0.24 | LH:-29.95 | LI:-36.57 | LB:-2.87
+
+GHA T15 (Convergences - périodique)
+  BG:-1.31 | IG:-1.01 | HG:-0.79 | HD:-0.82 | ID:-0.91 | BD:-1.20 | LH:-0.87 | LI:-0.08 | LB:-0.67
+GHA T15 (Convergences - cumulé)
+  BG:-20.10 | IG:-52.55 | HG:-37.90 | HD:-37.18 | ID:-79.20 | BD:-8.30 | LH:-31.02 | LI:-59.99 | LB:-1.44
+
+GHA T28 (Convergences - périodique)
+  BG:-1.36 | IG:-0.73 | HG:0.19 | HD:-0.52 | ID:-0.85 | BD:-1.39 | LH:0.49 | LI:0.02 | LB:-1.34
+GHA T28 (Convergences - cumulé)
+  BG:-2.93 | IG:-37.86 | HG:-10.20 | HD:-33.14 | ID:-54.33 | BD:-3.42 | LH:-19.81 | LI:-63.08 | LB:-2.75
+
+GHA T41 (Convergences - périodique)
+  BG:N/A | IG:N/A | HG:-0.55 | HD:-1.24 | ID:N/A | BD:N/A | LH:-1.25 | LI:N/A | LB:N/A
+GHA T41 (Convergences - cumulé)
+  BG:0.00 | IG:-22.17 | HG:-11.63 | HD:-7.56 | ID:-18.84 | BD:0.00 | LH:-10.75 | LI:-28.51 | LB:0.00
+
+GRD C105 (Convergences - périodique)
+  BG:3.44 | HG:4.57 | HD:-5.75 | BD:-4.18 | LH:-0.46 | LB:-2.11
+GRD C105 (Convergences - cumulé)
+  BG:-0.01 | HG:5.75 | HD:-10.97 | BD:-10.09 | LH:-4.44 | LB:-6.98
+
+GRD C116 (Convergences - périodique)
+  BG:-0.79 | HG:N/A | HD:-0.31 | BD:-0.27 | LH:N/A | LB:-0.33
+GRD C116 (Convergences - cumulé)
+  BG:-11.76 | HG:-1.41 | HD:1.23 | BD:-5.14 | LH:-4.18 | LB:-7.33
+
+GVA C001 (Convergences - périodique)
+  BG:0.97 | HG:0.74 | HD:-1.60 | BD:-1.98 | LH:-0.78 | LB:-0.72
+GVA C001 (Convergences - cumulé)
+  BG:1.24 | HG:0.57 | HD:-2.54 | BD:-2.93 | LH:-1.67 | LB:-1.52
+
+GVA C105 (Convergences - périodique)
+  BG:-1.28 | HG:-0.98 | HD:-0.45 | BD:-4.29 | LH:-0.28 | LB:-1.04
+GVA C105 (Convergences - cumulé)
+  BG:-12.95 | HG:-45.85 | HD:-46.23 | BD:-15.98 | LH:-24.39 | LB:-7.08
+
+
+DÉPLACEMENTS
+----------------------------------------
+GER T109 (Déplacements - périodique)
+  DPM BG:0.05 | DH BG:0.36 | DZ BG:0.00 | DPM HG:-0.04 | DH HG:0.31 | DZ HG:-0.10 | DPM CH:0.32 | DH CH:0.26 | DZ CH:-0.40 | DPM HD:0.54 | DZ HD:0.00 | DPM BD:N/A | DH BD:0.25 | DZ BD:N/A | DZ CH x2
+(interpolé):-0.80 | VITESSE EVOL DZ:N/A
+GER T109 (Déplacements - cumulé)
+  DPM BG:-2.56 | DH BG:18.69 | DZ BG:-1.49 | DPM HG:-0.82 | DH HG:15.39 | DZ HG:-5.46 | DPM CH:-3.78 | DH CH:9.57 | DZ CH:-43.29 | DPM HD:-1.96 | DZ HD:-5.84 | DPM BD:-3.10 | DH BD:-9.69 | DZ BD:2.33 | DZ CH x2
+(interpolé):-86.57 | VITESSE EVOL DZ:N/A
+
+GER T131 (Déplacements - périodique)
+  DPM BG:-1.00 | DH BG:0.97 | DZ BG:0.30 | DPM HG:-0.14 | DH HG:-0.18 | DZ HG:0.00 | DPM CH:-0.76 | DH CH:-0.02 | DZ CH:-0.50 | DPM HD:-0.50 | DZ HD:-0.10 | DPM BD:-1.21 | DH BD:-0.24 | DZ BD:0.00 | DZ CH x2
+(interpolé):-1.00 | VITESSE EVOL DZ:N/A
+GER T131 (Déplacements - cumulé)
+  DPM BG:2.27 | DH BG:20.29 | DZ BG:3.80 | DPM HG:-0.87 | DH HG:15.12 | DZ HG:-6.33 | DPM CH:-3.94 | DH CH:2.46 | DZ CH:-31.90 | DPM HD:-1.94 | DZ HD:-6.90 | DPM BD:-4.29 | DH BD:-12.96 | DZ BD:2.67 | DZ CH x2
+(interpolé):-63.80 | VITESSE EVOL DZ:N/A
+
+GER T163 (Déplacements - périodique)
+  DPM BG:0.24 | DH BG:0.66 | DZ BG:0.60 | DPM HG:1.30 | DH HG:0.05 | DZ HG:-0.70 | DPM CH:0.76 | DH CH:0.02 | DZ CH:-0.20 | DPM HD:-0.06 | DZ HD:0.10 | DPM BD:0.98 | DH BD:-0.21 | DZ BD:0.60 | DZ CH x2
+(interpolé):-0.40 | VITESSE EVOL DZ:N/A
+GER T163 (Déplacements - cumulé)
+  DPM BG:-0.18 | DH BG:9.85 | DZ BG:2.90 | DPM HG:1.94 | DH HG:11.94 | DZ HG:-7.52 | DPM CH:-3.58 | DH CH:3.41 | DZ CH:-37.50 | DPM HD:-0.72 | DZ HD:-6.10 | DPM BD:-0.17 | DH BD:-9.57 | DZ BD:-0.20 | DZ CH x2
+(interpolé):-75.00 | VITESSE EVOL DZ:N/A
+
+GER T92 (Déplacements - périodique)
+  DPM BG:-2.42 | DH BG:-0.02 | DZ BG:1.10 | DPM HG:N/A | DH HG:N/A | DZ HG:N/A | DPM CH:-2.88 | DH CH:-0.68 | DZ CH:-0.30 | DPM HD:-3.08 | DZ HD:0.30 | DPM BD:-1.78 | DH BD:0.27 | DZ BD:0.70 | DZ CH x2
+(interpolé):-0.60 | VITESSE EVOL DZ:N/A
+GER T92 (Déplacements - cumulé)
+  DPM BG:-2.20 | DH BG:19.39 | DZ BG:5.50 | DPM HG:-1.90 | DH HG:14.01 | DZ HG:-7.80 | DPM CH:-13.54 | DH CH:-2.67 | DZ CH:-53.40 | DPM HD:-4.47 | DZ HD:-11.50 | DPM BD:-4.80 | DH BD:-16.69 | DZ BD:4.10 | DZ CH x2
+(interpolé):-106.80 | VITESSE EVOL DZ:N/A
+
+GGS C003 (Déplacements - périodique)
+  DPM BG:-0.20 | DH BG:0.90 | DZ BG:0.30 | DPM HG:0.01 | DH HG:0.45 | DZ HG:0.20 | DPM CH:0.14 | DH CH:0.18 | DZ CH:-0.50 | DPM HD:N/A | DH HD:N/A | DZ HD:N/A | DPM BD:0.42 | DH BD:0.53 | DZ BD:0.20 | DZ CH x2
+(interpolé):-1.00 | VITESSE EVOL DZ:N/A
+GGS C003 (Déplacements - cumulé)
+  DPM BG:-9.58 | DH BG:9.66 | DZ BG:0.30 | DPM HG:-7.68 | DH HG:7.23 | DZ HG:-8.80 | DPM CH:-4.05 | DH CH:0.65 | DZ CH:-11.00 | DPM HD:-6.26 | DH HD:-3.14 | DZ HD:-7.10 | DPM BD:-7.24 | DH BD:-7.90 | DZ BD:3.60 | DZ CH x2
+(interpolé):-22.00 | VITESSE EVOL DZ:N/A
+
+GGS C007 (Déplacements - périodique)
+  DPM BG:-0.78 | DH BG:0.96 | DZ BG:0.30 | DPM HG:-0.48 | DH HG:0.33 | DZ HG:-0.20 | DPM CH:-1.73 | DH CH:2.06 | DZ CH:-2.00 | DPM HD:N/A | DH HD:N/A | DZ HD:N/A | DPM BD:-0.50 | DH BD:-0.34 | DZ BD:0.40 | DZ CH x2
+(interpolé):-4.00 | VITESSE EVOL DZ:N/A
+GGS C007 (Déplacements - cumulé)
+  DPM BG:-7.08 | DH BG:12.59 | DZ BG:0.80 | DPM HG:-2.53 | DH HG:8.86 | DZ HG:-4.50 | DPM CH:-12.80 | DH CH:-15.02 | DZ CH:-23.85 | DPM HD:-3.13 | DH HD:-5.82 | DZ HD:-7.18 | DPM BD:-3.11 | DH BD:-13.81 | DZ BD:-7.80 | DZ CH x2
+(interpolé):-47.70 | VITESSE EVOL DZ:N/A
+
+GGS C020 (Déplacements - périodique)
+  DPM BG:N/A | DH BG:N/A | DZ BG:N/A | DPM HG:-0.74 | DH HG:0.65 | DZ HG:-0.20 | DPM CH:0.63 | DH CH:0.30 | DZ CH:-3.40 | DPM HD:N/A | DH HD:N/A | DZ HD:N/A | DPM BD:N/A | DH BD:N/A | DZ BD:N/A | DH ID:-2.76 | DH IG:0.59 | DPM ID:-0.48 | DPM IG:-0.16 | DZ CH x2:-6.80 | DZ ID:0.10 | DZ IG:0.50
+GGS C020 (Déplacements - cumulé)
+  DPM BG:0.00 | DH BG:0.00 | DZ BG:0.00 | DPM HG:-1.61 | DH HG:11.50 | DZ HG:-13.50 | DPM CH:16.14 | DH CH:6.31 | DZ CH:-65.60 | DPM HD:0.19 | DH HD:-9.40 | DZ HD:-5.60 | DPM BD:0.00 | DH BD:0.00 | DZ BD:0.00 | DH ID:-15.59 | DH IG:15.80 | DPM ID:-1.01 | DPM IG:-1.85 | DZ CH x2:-131.20 | DZ ID:-6.80 | DZ IG:-10.10
+
+GGS C031 (Déplacements - périodique)
+  DPM BG:N/A | DH BG:N/A | DZ BG:N/A | DPM HG:-0.13 | DH HG:1.70 | DZ HG:-2.70 | DPM CH:-2.05 | DH CH:0.37 | DZ CH:-3.70 | DPM HD:-1.35 | DH HD:-3.72 | DZ HD:-3.30 | DPM BD:N/A | DH BD:N/A | DZ BD:N/A | DH ID:-6.98 | DH IG:8.04 | DPM ID:-3.37 | DPM IG:-0.99 | DZ CH x2:-7.40 | DZ ID:-7.70 | DZ IG:-3.40
+GGS C031 (Déplacements - cumulé)
+  DPM BG:0.00 | DH BG:0.00 | DZ BG:0.00 | DPM HG:-0.46 | DH HG:5.96 | DZ HG:-12.00 | DPM CH:-7.14 | DH CH:0.64 | DZ CH:-15.70 | DPM HD:-2.53 | DH HD:-10.89 | DZ HD:-12.10 | DPM BD:0.00 | DH BD:0.00 | DZ BD:0.00 | DH ID:-21.50 | DH IG:26.29 | DPM ID:-10.39 | DPM IG:-2.55 | DZ CH x2:-31.40 | DZ ID:-19.90 | DZ IG:-11.70
+
+GHA C04 (Déplacements - périodique)
+  DPM BG:1.54 | DH BG:-0.83 | DZ BG:-0.20 | DPM HG:0.59 | DH HG:0.16 | DZ HG:-0.30 | DPM CH:0.48 | DH CH:-0.55 | DZ CH:-1.50 | DPM HD:0.62 | DH HD:-0.15 | DZ HD:-0.10 | DPM BD:N/A | DH BD:N/A | DZ BD:N/A | DH ID:-0.33 | DH IG:-0.55 | DPM ID:0.59 | DPM IG:1.42 | DZ CH x2:-3.00 | DZ ID:-0.05 | DZ IG:0.30
+GHA C04 (Déplacements - cumulé)
+  DPM BG:1.38 | DH BG:1.53 | DZ BG:0.10 | DPM HG:7.17 | DH HG:26.62 | DZ HG:-20.85 | DPM CH:44.67 | DH CH:9.74 | DZ CH:-79.10 | DPM HD:5.50 | DH HD:-5.05 | DZ HD:-31.15 | DPM BD:1.88 | DH BD:-1.44 | DZ BD:-4.30 | DH ID:-19.47 | DH IG:23.16 | DPM ID:5.11 | DPM IG:5.47 | DZ CH x2:-158.20 | DZ ID:-14.10 | DZ IG:-13.33
+
+GHA T15 (Déplacements - périodique)
+  DPM BG:0.99 | DH BG:0.35 | DZ BG:0.10 | DPM HG:0.50 | DH HG:0.23 | DZ HG:0.00 | DPM CH:0.40 | DH CH:-0.15 | DZ CH:-1.10 | DPM HD:0.41 | DH HD:-0.64 | DZ HD:-0.15 | DPM BD:0.26 | DH BD:-0.32 | DZ BD:0.20 | DH ID:-0.11 | DH IG:-0.02 | DPM ID:0.82 | DPM IG:1.61 | DZ CH x2:-2.20 | DZ ID:0.25 | DZ IG:0.25
+GHA T15 (Déplacements - cumulé)
+  DPM BG:0.09 | DH BG:1.70 | DZ BG:0.40 | DPM HG:-7.95 | DH HG:15.16 | DZ HG:-17.30 | DPM CH:-10.77 | DH CH:-1.27 | DZ CH:-72.90 | DPM HD:-0.48 | DH HD:-15.78 | DZ HD:-12.40 | DPM BD:-2.85 | DH BD:-3.18 | DZ BD:1.55 | DH ID:-34.50 | DH IG:25.68 | DPM ID:0.31 | DPM IG:-6.68 | DZ CH x2:-145.80 | DZ ID:7.50 | DZ IG:-24.80
+
+GHA T28 (Déplacements - périodique)
+  DPM BG:-1.03 | DH BG:0.48 | DZ BG:0.23 | DPM HG:0.11 | DH HG:-0.87 | DZ HG:0.40 | DPM CH:0.02 | DH CH:-0.21 | DZ CH:-0.90 | DPM HD:0.65 | DH HD:-0.36 | DZ HD:0.20 | DPM BD:0.11 | DH BD:-0.87 | DZ BD:0.33 | DH ID:-0.25 | DH IG:-0.27 | DPM ID:0.26 | DPM IG:-0.02 | DZ CH x2:-1.80 | DZ ID:0.30 | DZ IG:0.27
+GHA T28 (Déplacements - cumulé)
+  DPM BG:-1.04 | DH BG:1.06 | DZ BG:-0.10 | DPM HG:-0.35 | DH HG:6.90 | DZ HG:-26.00 | DPM CH:-7.83 | DH CH:6.39 | DZ CH:-55.90 | DPM HD:1.07 | DH HD:-13.18 | DZ HD:-14.40 | DPM BD:-1.97 | DH BD:-1.69 | DZ BD:0.30 | DH ID:-30.89 | DH IG:32.15 | DPM ID:-0.93 | DPM IG:2.22 | DZ CH x2:-111.80 | DZ ID:-15.90 | DZ IG:-27.20
+
+GHA T41 (Déplacements - périodique)
+  DPM BG:N/A | DH BG:N/A | DZ BG:N/A | DPM HG:-0.27 | DH HG:-0.13 | DZ HG:-0.40 | DPM CH:-0.06 | DH CH:-0.58 | DZ CH:-0.80 | DPM HD:1.30 | DH HD:-1.38 | DZ HD:0.80 | DPM BD:N/A | DH BD:N/A | DZ BD:N/A | DH ID:N/A | DH IG:N/A | DPM ID:N/A | DPM IG:N/A | DZ CH x2:-1.60 | DZ ID:N/A | DZ IG:N/A
+GHA T41 (Déplacements - cumulé)
+  DPM BG:0.00 | DH BG:0.00 | DZ BG:0.00 | DPM HG:0.72 | DH HG:5.08 | DZ HG:-10.80 | DPM CH:-0.53 | DH CH:-2.89 | DZ CH:-24.00 | DPM HD:0.11 | DH HD:-5.68 | DZ HD:-7.40 | DPM BD:0.00 | DH BD:0.00 | DZ BD:0.00 | DH ID:-13.38 | DH IG:15.93 | DPM ID:-0.05 | DPM IG:3.16 | DZ CH x2:-48.00 | DZ ID:-4.90 | DZ IG:-5.00
+
+GRD C105 (Déplacements - périodique)
+  DZ BG:-0.60 | DZ HG:0.50 | DZ CH:-0.50 | DZ HD:0.90 | DZ BD:0.30 | DGRD4+ BD:-1.15 | DGRD4+ BG:-0.69 | DGRD4+ CH:-0.05 | DGRD4+ HD:0.95 | DGRD4+ HG:0.07 | DGVA+ BD:-1.31 | DGVA+ BG:2.43 | DGVA+ CH:4.61 | DGVA+ HG:-0.63 | DZ CH x2
+(interpolé):-1.00 | VITESSE EVOL DZ:N/A
+GRD C105 (Déplacements - cumulé)
+  DZ BG:-1.20 | DZ HG:-4.40 | DZ CH:-4.30 | DZ HD:-0.50 | DZ BD:-0.80 | DGRD4+ BD:-0.99 | DGRD4+ BG:-5.61 | DGRD4+ CH:0.15 | DGRD4+ HD:2.28 | DGRD4+ HG:-0.42 | DGVA+ BD:-1.67 | DGVA+ BG:5.88 | DGVA+ CH:10.55 | DGVA+ HG:4.44 | DZ CH x2
+(interpolé):-8.60 | VITESSE EVOL DZ:N/A
+
+GRD C116 (Déplacements - périodique)
+  DZ BG:0.40 | DZ HG:N/A | DZ CH:-0.50 | DZ HD:0.10 | DZ BD:0.30 | DGGS+ BD:0.46 | DGGS+ BG:0.80 | DGGS+ CH:0.49 | DGGS+ HG:N/A | DGRD6+ BD:1.22 | DGRD6+ BG:-0.65 | DGRD6+ CH:-1.55 | DGRD6+ HD:0.63 | DGRD6+ HG:N/A | DZ CH x2
+(interpolé):-1.00 | VITESSE EVOL DZ:N/A
+GRD C116 (Déplacements - cumulé)
+  DZ BG:6.40 | DZ HG:-1.80 | DZ CH:-4.30 | DZ HD:-4.20 | DZ BD:0.50 | DGGS+ BD:-6.51 | DGGS+ BG:0.72 | DGGS+ CH:-4.87 | DGGS+ HG:0.15 | DGRD6+ BD:-5.68 | DGRD6+ BG:-2.71 | DGRD6+ CH:-3.35 | DGRD6+ HD:-2.65 | DGRD6+ HG:-2.05 | DZ CH x2
+(interpolé):-8.60 | VITESSE EVOL DZ:N/A
+
+GVA C001 (Déplacements - périodique)
+  DZ BG:-0.40 | DZ HG:0.80 | DZ CH:-0.10 | DZ HD:-0.90 | DZ BD:0.70 | DGGS+ BD:-1.46 | DGGS+ BG:-0.66 | DGGS+ CH:0.69 | DGGS+ HG:-0.74 | DGRD6+ BD:-2.19 | DGRD6+ BG:1.19 | DGRD6+ CH:-0.88 | DGRD6+ HD:-3.30 | DGRD6+ HG:1.01 | DZ CH x2
+(interpolé):-0.20 | VITESSE EVOL DZ:N/A
+GVA C001 (Déplacements - cumulé)
+  DZ BG:-2.00 | DZ HG:-0.40 | DZ CH:-1.40 | DZ HD:-1.70 | DZ BD:-0.10 | DGGS+ BD:-3.52 | DGGS+ BG:-1.86 | DGGS+ CH:-0.47 | DGGS+ HG:-1.79 | DGRD6+ BD:-0.45 | DGRD6+ BG:2.41 | DGRD6+ CH:0.88 | DGRD6+ HD:-2.06 | DGRD6+ HG:1.61 | DZ CH x2
+(interpolé):-2.80 | VITESSE EVOL DZ:N/A
+
+GVA C105 (Déplacements - périodique)
+  DPM BG:0.33 | DH BG:0.48 | DZ BG:0.50 | DPM HG:0.91 | DH HG:0.42 | DZ HG:0.60 | DPM CH:0.68 | DH CH:0.43 | DZ CH:-1.00 | DPM HD:1.03 | DH HD:0.15 | DZ HD:-0.60 | DPM BD:0.83 | DH BD:-0.83 | DZ BD:0.50 | DZ CH x2
+(interpolé):-2.00 | VITESSE EVOL DZ:N/A
+GVA C105 (Déplacements - cumulé)
+  DPM BG:0.37 | DH BG:2.14 | DZ BG:0.91 | DPM HG:-3.74 | DH HG:13.93 | DZ HG:0.40 | DPM CH:-20.96 | DH CH:1.65 | DZ CH:-57.30 | DPM HD:-0.37 | DH HD:-13.41 | DZ HD:1.80 | DPM BD:0.78 | DH BD:-4.92 | DZ BD:2.09 | DZ CH x2
+(interpolé):-114.60 | VITESSE EVOL DZ:N/A
+

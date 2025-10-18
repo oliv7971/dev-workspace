@@ -1,0 +1,60 @@
+# GUIDE D'UTILISATION MIS À JOUR - NOUVEAUX NOMS D'ONGLETS
+
+## 📋 CORRESPONDANCE NOMS D'ONGLETS:
+- OBSERVATIONS (source des coordonnées XYZ)
+- PROJECTION (source des coordonnées PM/H/V) 
+- EVOLUTIONS XYZ (évolutions des XYZ par rapport à la 1ère mesure)
+- EVOLUTIONS PM H V (évolutions des PM/H/V par rapport à la 1ère mesure)
+- cordes ref1 (distances vers REF1)
+- cordes ref2 (distances vers REF2)
+- EVOLUTIONS CORDES REF1 (évolutions des cordes REF1)
+- EVOLUTIONS CORDES REF2 (évolutions des cordes REF2)
+
+## 🚀 PROCÉDURE POUR CHAQUE ONGLET:
+
+### 1️⃣ EVOLUTIONS XYZ:
+1. Fichier: FORMULES_EVOLUTIONS_XYZ_COPIER_COLLER.txt
+2. Copier ligne "LIGNE 10" complète
+3. Dans Excel: Cliquer sur C10 et coller
+4. Répéter pour lignes 11-15
+
+### 2️⃣ EVOLUTIONS PM H V:
+1. Fichier: FORMULES_EVOLUTIONS_PMHV_COPIER_COLLER.txt
+2. Copier ligne "LIGNE 10" complète  
+3. Dans Excel: Cliquer sur C10 et coller
+4. Répéter pour lignes 11-15
+
+### 3️⃣ cordes ref1:
+1. Fichier: FORMULES_CORDES_REF1_COPIER_COLLER.txt
+2. Copier ligne "LIGNE 10" complète
+3. Dans Excel: Cliquer sur C10 et coller (19 colonnes)
+4. Répéter pour lignes 11-15
+
+### 4️⃣ cordes ref2:
+1. Fichier: FORMULES_CORDES_REF2_COPIER_COLLER.txt
+2. Copier ligne "LIGNE 10" complète
+3. Dans Excel: Cliquer sur C10 et coller (19 colonnes)
+4. Répéter pour lignes 11-15
+
+### 5️⃣ EVOLUTIONS CORDES REF1:
+1. Fichier: FORMULES_EVOLUTIONS_CORDES_REF1_COPIER_COLLER.txt
+2. Copier ligne "LIGNE 10" complète
+3. Dans Excel: Cliquer sur C10 et coller (19 colonnes)
+4. Répéter pour lignes 11-15
+
+### 6️⃣ EVOLUTIONS CORDES REF2:
+1. Fichier: FORMULES_EVOLUTIONS_CORDES_REF2_COPIER_COLLER.txt
+2. Copier ligne "LIGNE 10" complète
+3. Dans Excel: Cliquer sur C10 et coller (19 colonnes)
+4. Répéter pour lignes 11-15
+
+## 📊 RÉCAPITULATIF:
+- 6 onglets de calculs
+- 6 fichiers de formules générés
+- 36 copier-coller au total (6 lignes × 6 onglets)
+- Plus de 1400 formules générées automatiquement! 🚀
+
+## ⚠️ ORDRE RECOMMANDÉ:
+1. D'abord: cordes ref1 et cordes ref2
+2. Ensuite: EVOLUTIONS XYZ et EVOLUTIONS PM H V
+3. Enfin: EVOLUTIONS CORDES REF1 et REF2 (qui dépendent des précédents)

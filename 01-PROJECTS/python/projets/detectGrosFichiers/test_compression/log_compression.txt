@@ -1,0 +1,6 @@
+[09/07/2025 09:55:35] === DÉBUT DE LA COMPRESSION ===
+[09/07/2025 09:55:38] dossier2: OK - Simulation réussie (Durée: 00:02)
+[09/07/2025 09:55:40] dossier1: OK - Simulation réussie (Durée: 00:04)
+[09/07/2025 09:55:40] dossier3: OK - Simulation réussie (Durée: 00:04)
+[09/07/2025 09:55:41] === FIN DE LA COMPRESSION ===
+Durée totale: 00:00:05

@@ -1,0 +1,15 @@
+CONFIG = {
+    "root": r"C:/Temp/1-tableaux/GHA",
+    "out": r"C:/Temp/1-tableaux/GHA/exports_pdf",
+    "locale": "fr",
+    "patterns": {
+        # Regex patterns (case/accents ignored) to identify sheets
+        "convergences": [r"^convergences$"],
+        "deplacements": [r"^d[ée]placements$"],
+        "graphiques": [r"^graphiques?$"]
+    },
+    "titles_repeat_rows": "1:9",   # rows to repeat on each page
+    "header_row": 9,                # row containing table headers
+    "merged_hint_row": 5,           # row where a merged cell spans table width
+    "fit_to_one_page_width": True   # FitToPagesWide = 1
+}

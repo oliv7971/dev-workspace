@@ -1,0 +1,21 @@
+# INSTRUCTIONS POUR FORMULES MANUELLES
+
+Le fichier Excel a été nettoyé pour éviter les corruptions.
+Voici les formules à saisir MANUELLEMENT dans Excel :
+
+## ONGLET DÉPLACEMENTS
+Pour chaque colonne (C, D, E, F, etc.) en ligne 11 et suivantes :
+Formule type: ='Résultats observations'!C11-'Résultats observations'!C$10
+
+Exemple pour la colonne C (V1_X):
+- C11: ='Résultats observations'!C11-'Résultats observations'!C$10
+- C12: ='Résultats observations'!C12-'Résultats observations'!C$10
+
+## ONGLET ÉVOLUTION PM H V  
+Pour chaque colonne (C, D, E, F, etc.) en ligne 11 et suivantes :
+Formule type: ='Résultats Projection'!C11-'Résultats Projection'!C$10
+
+## RECOMMANDATION
+1. Commencez par UNE formule de test
+2. Si ça marche, copiez-la vers le bas
+3. Sauvegardez fréquemment !

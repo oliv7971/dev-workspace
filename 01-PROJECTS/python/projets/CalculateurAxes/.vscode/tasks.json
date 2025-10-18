@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Lancer Calculateur d'Axes",
+			"type": "shell",
+			"command": "C:/data/20-DEVELOPPEMENT/Python/projets/CalculateurAxes/.venv/Scripts/python.exe",
+			"args": [
+				"main.py"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

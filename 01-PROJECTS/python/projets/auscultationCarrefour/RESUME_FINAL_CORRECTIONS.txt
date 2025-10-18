@@ -1,0 +1,33 @@
+# RÉSUMÉ FINAL - TOUTES LES CORRECTIONS
+
+## 🔧 CORRECTIONS APPORTÉES:
+
+### 1️⃣ COLONNES DES RÉFÉRENCES:
+- REF1 (C530): BE, BF, BG ✅  
+- REF2 (C540): BH, BI, BJ ✅
+
+### 2️⃣ SYNTAXE EXCEL:
+- CORRECT: 'Résultats observations'!C10 ✅
+- FAUX: 'Résultats observations'.C10 ❌
+
+## 📁 FICHIERS À UTILISER:
+
+✅ **FORMULES_FINALES_EXCEL.txt** - Instructions complètes finales
+✅ **INSTRUCTIONS_FORMULES_MANUELLES_CORRIGEES.txt** - Déplacements & Évolution corrigés
+✅ **RESUME_CORRECTIONS.txt** - Résumé des colonnes
+
+❌ Ignorer les anciens fichiers avec la mauvaise syntaxe
+
+## 🎯 ORDRE DE TRAVAIL RECOMMANDÉ:
+
+1. **Déplacements** (formules simples)
+2. **Évolution PM H V** (similaires)
+3. **Cordes REF1** (plus complexes)
+4. **Cordes REF2** (similaires à REF1)
+
+## ⚡ FORMULE TEST:
+=SQRT(9+16+25) → doit donner 7.07...
+
+## 🚀 PREMIÈRE VRAIE FORMULE:
+CORDES REF1, cellule C10:
+=SQRT(('Résultats observations'!C10-'Résultats observations'!BE10)^2+('Résultats observations'!D10-'Résultats observations'!BF10)^2+('Résultats observations'!E10-'Résultats observations'!BG10)^2)

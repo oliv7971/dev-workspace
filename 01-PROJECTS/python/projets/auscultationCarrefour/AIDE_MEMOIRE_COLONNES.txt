@@ -1,0 +1,20 @@
+# AIDE-MÉMOIRE COLONNES EXCEL
+
+## Correspondance numéro ↔ lettre:
+1=A, 2=B, 3=C, ..., 26=Z, 27=AA, 28=AB, ...
+
+## Colonnes importantes:
+- REF1_X = BG (colonne 59)
+- REF1_Y = BH (colonne 60)  
+- REF1_Z = BI (colonne 61)
+- REF2_X = BJ (colonne 62)
+- REF2_Y = BK (colonne 63)
+- REF2_Z = BL (colonne 64)
+
+## Première cible (V1):
+- V1_X = C (colonne 3)
+- V1_Y = D (colonne 4)
+- V1_Z = E (colonne 5)
+
+## Pour trouver une colonne:
+Dans Excel: Ctrl+G puis saisir par ex. "BG1" pour aller à la colonne BG

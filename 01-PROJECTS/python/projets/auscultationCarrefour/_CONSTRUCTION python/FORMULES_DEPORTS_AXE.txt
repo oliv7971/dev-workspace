@@ -1,0 +1,47 @@
+📐 FORMULES EXCEL POUR CALCULS DE DÉPORTS
+
+PARAMÈTRES DE L'AXE:
+X_DEBUT: 823216.6581
+Y_DEBUT: 1091503.0821
+X_FIN: 823258.92
+Y_FIN: 1091412.4514
+Z_REF: -123.621
+PK_DEBUT: 0.0
+PK_FIN: 100.0
+
+FORMULES:
+
+DX_AXE:
+=823258.92-823216.6581
+
+DY_AXE:
+=1091412.4514-1091503.0821
+
+LONGUEUR_AXE:
+=SQRT(DX_AXE^2+DY_AXE^2)
+
+DEPORT_TRANSVERSAL:
+=LET(
+            dx_mes, X_MESURE-X_DEBUT,
+            dy_mes, Y_MESURE-Y_DEBUT,
+            proj_long, (dx_mes*DX_AXE + dy_mes*DY_AXE)/LONGUEUR_AXE,
+            ratio, proj_long/LONGUEUR_AXE,
+            x_proj, X_DEBUT + ratio*DX_AXE,
+            y_proj, Y_DEBUT + ratio*DY_AXE,
+            dx_trans, X_MESURE-x_proj,
+            dy_trans, Y_MESURE-y_proj,
+            deport_abs, SQRT(dx_trans^2+dy_trans^2),
+            signe, IF((DX_AXE*dy_trans - DY_AXE*dx_trans)<0, -1, 1),
+            deport_abs * signe
+        )
+
+PK_PROJETE:
+=LET(
+            dx_mes, X_MESURE-X_DEBUT,
+            dy_mes, Y_MESURE-Y_DEBUT,
+            proj_long, (dx_mes*DX_AXE + dy_mes*DY_AXE)/LONGUEUR_AXE,
+            PK_DEBUT + proj_long
+        )
+
+DEPORT_VERTICAL:
+=Z_MESURE - -123.621

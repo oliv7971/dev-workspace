@@ -1,0 +1,47 @@
+ystème de Saisie Excel - 3 Méthodes
+🎯 Méthode 1 : Saisie par Éléments Géométriques (Recommandée)
+Utilisez le fichier modele_saisie_elements.xlsx avec 3 feuilles :
+
+Feuille "Elements" - Définition géométrique
+Types d'éléments :
+
+AD (Alignement) : Param1=Gisement(g), Param2=Longueur(m)
+C (Arc) : Param1=Rayon(m), Param2=Déviation(g)
+CL (Clothoïde) : Param1=R_début, Param2=R_fin, Param3=Longueur
+Feuille "Profil" - Altitudes
+Feuille "Parametres" - Point de départ
+🎯 Méthode 2 : Saisie par Sommets
+Utilisez modele_saisie_sommets.xlsx pour définir l'axe par points de passage :
+
+🎯 Méthode 3 : Points à Traiter
+Utilisez modele_points_a_traiter.xlsx pour les points à projeter sur un axe existant :
+
+🔄 Workflow Complet
+Étape 1 : Préparation
+Copier un modèle Excel depuis exemples
+Remplir les données selon votre projet
+Sauvegarder le fichier
+Étape 2 : Import dans le calculateur
+Étape 3 : Traitement automatique
+Détection automatique du format Excel
+Validation des données saisies
+Création de l'axe avec éléments géométriques
+Calculs de projection si points fournis
+Étape 4 : Export des résultats
+Le système génère resultats_calculs.xlsx avec :
+
+🎛️ Avantages du Système Excel
+✅ Flexibilité
+3 méthodes de saisie selon vos besoins
+Détection automatique du format
+Compatible avec vos feuilles Excel existantes
+✅ Professionnel
+Validation automatique des données
+Gestion d'erreurs explicite
+Export professionnel avec tous les résultats
+✅ Intégration
+Standards topographiques respectés
+Compatible avec autres logiciels
+Traçabilité complète des calculs
+🚀 Démonstration Pratique
+Pour voir le système en action :

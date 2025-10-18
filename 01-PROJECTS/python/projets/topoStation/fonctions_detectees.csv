@@ -1,0 +1,24 @@
+﻿Feuille,Fonction,Occurrences
+Calcul XY,IF,456
+Calcul XY,AND,161
+Calcul XY,ROW,54
+Calcul XY,SUM,42
+Calcul XY,COORDX,6
+Calcul XY,COORDY,6
+Calcul XY,ROUND,6
+Calcul XY,PI,2
+Calcul XY,SINGR,2
+Calcul XY,COSGR,2
+Calcul XY,ABS,1
+Calcul Z,IF,175
+Calcul Z,AND,22
+Calcul Z,SUM,11
+Calcul Z,COS,2
+Calcul Z,ATAN,2
+Calcul Z,TAN,1
+Calcul Z,SIN,1
+Calcul Z,ASIN,1
+Calcul Z,ROUND,1
+définition axe en plan,SQRT,2
+définition profil en long,INDIRECT,68
+définition profil en long,ROW,44

@@ -1,0 +1,6 @@
+ray_id,pid,obs_type,value,unit,n_series,h_target
+R1,P1,dir,123.456,gon,2,0.000
+R1,P1,zen,100.200,gon,2,0.000
+R1,P1,dist,52.345,m,2,0.000
+R2,P2,dir,210.000,gon,2,0.000
+...

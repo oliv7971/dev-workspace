@@ -1,0 +1,21 @@
+# RÉSUMÉ DES CORRECTIONS - COLONNES RÉFÉRENCES
+
+## ❌ ERREUR DANS LES PREMIÈRES INSTRUCTIONS:
+- REF1 était indiqué en BG, BH, BI (FAUX)  
+- REF2 était indiqué en BJ, BK, BL (FAUX)
+
+## ✅ COLONNES CORRECTES:
+- **REF1 (C530)**: BE, BF, BG (colonnes 57, 58, 59)
+- **REF2 (C540)**: BH, BI, BJ (colonnes 60, 61, 62)
+
+## 🎯 FORMULES CORRIGÉES:
+
+### CORDE V1 vers REF1:
+=SQRT(('Résultats observations'.C10-'Résultats observations'.BE10)^2+('Résultats observations'.D10-'Résultats observations'.BF10)^2+('Résultats observations'.E10-'Résultats observations'.BG10)^2)
+
+### CORDE V1 vers REF2:  
+=SQRT(('Résultats observations'.C10-'Résultats observations'.BH10)^2+('Résultats observations'.D10-'Résultats observations'.BI10)^2+('Résultats observations'.E10-'Résultats observations'.BJ10)^2)
+
+## 📁 FICHIERS MIS À JOUR:
+- INSTRUCTIONS_CORDES_CORRIGEES.txt (NOUVEAU - À UTILISER)
+- INSTRUCTIONS_CORDES_DETAILLEES.txt (ANCIEN - IGNORER)

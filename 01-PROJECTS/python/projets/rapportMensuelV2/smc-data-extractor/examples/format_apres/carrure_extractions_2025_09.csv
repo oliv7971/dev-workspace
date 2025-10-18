@@ -1,0 +1,21 @@
+﻿sheet_type,table,code_point,type_mesure,description,deplacement_cumule,deplacement_periodique,date_derniere_mesure,date_derniere_avant_mois,nb_mesures_total,nb_mesures_mois,metric_id
+deplacements_carrure,GGS,CAR-GGS-BG,DPM,CARRURE GGS - Bas gauche,-9.782,,2025-06-17,,27,0,CAR-GGS-BG_DPM
+deplacements_carrure,GGS,CAR-GGS-IG,DPM,CARRURE GGS - Inter gauche,-2.349,1.902,2025-09-10,2025-06-17,28,1,CAR-GGS-IG_DPM
+deplacements_carrure,GGS,CAR-GGS-HG,DPM,CARRURE GGS - Haut gauche,-3.273,,2025-06-17,,27,0,CAR-GGS-HG_DPM
+deplacements_carrure,GGS,CAR-GGS-PF,DPM,CARRURE GGS - Poutre faitiere,-2.682,0.81,2025-09-10,2025-06-17,28,1,CAR-GGS-PF_DPM
+deplacements_carrure,GGS,CAR-GGS-HD,DPM,CARRURE GGS - Haut droite,-3.383,,2025-06-17,,24,0,CAR-GGS-HD_DPM
+deplacements_carrure,GGS,CAR-GGS-ID,DPM,CARRURE GGS - Inter droite,-6.375,-0.369,2025-09-10,2025-06-17,28,1,CAR-GGS-ID_DPM
+deplacements_carrure,GGS,CAR-GGS-BD,DPM,CARRURE GGS - Bas droite,-11.564,-3.498,2025-09-10,2025-03-26,27,1,CAR-GGS-BD_DPM
+deplacements_carrure,GVA,CAR-GVA-BG,DPM,CARRURE GVA - Bas gauche,-1.141,-0.41,2025-09-10,2025-06-17,37,1,CAR-GVA-BG_DPM
+deplacements_carrure,GVA,CAR-GVA-IG,DPM,CARRURE GVA - Inter gauche,-1.196,-0.634,2025-09-10,2025-06-17,29,1,CAR-GVA-IG_DPM
+deplacements_carrure,GVA,CAR-GVA-HG,DPM,CARRURE GVA - Haut gauche,1.371,,2025-01-14,,34,0,CAR-GVA-HG_DPM
+deplacements_carrure,GVA,CAR-GVA-PF,DPM,CARRURE GVA - Poutre faitiere,-0.296,0.598,2025-09-10,2025-06-17,33,1,CAR-GVA-PF_DPM
+deplacements_carrure,GVA,CAR-GVA-HD,DPM,CARRURE GVA - Haut droite,1.124,,2025-03-26,,32,0,CAR-GVA-HD_DPM
+deplacements_carrure,GVA,CAR-GVA-ID,DPM,CARRURE GVA - Inter droite,0.708,1.45,2025-09-10,2025-06-17,37,1,CAR-GVA-ID_DPM
+deplacements_carrure,GVA,CAR-GVA-BD,DPM,CARRURE GVA - Bas droite,1.318,2.405,2025-09-10,2025-06-17,36,1,CAR-GVA-BD_DPM
+deplacements_cintres,CINTRES,CIN-GGS-CH,DPM,CINTRE GGS  - Centre haut - axe,0.2,3.183,2025-09-10,2025-06-17,28,1,CIN-GGS-CH_DPM
+deplacements_cintres,CINTRES,CIN-GRD5-CH,DPM,CINTRE GRD5  - Centre haut - axe,-0.665,,2025-01-14,,31,0,CIN-GRD5-CH_DPM
+deplacements_cintres,CINTRES,CIN-GVA-CH,DPM,CINTRE GVA  - Centre haut - axe,0.599,1.976,2025-09-10,2025-06-17,36,1,CIN-GVA-CH_DPM
+deplacements_cintres,CINTRES,CIN-GRD6-CH,DPM,CINTRE GRD6  - Centre haut - axe,-1.401,1.051,2025-09-10,2025-06-17,20,1,CIN-GRD6-CH_DPM
+deplacements_cintres,CINTRES,LON-GGS-G,DPM,LONGERON GGS - gauche,0.157,,2023-11-16,,7,0,LON-GGS-G_DPM
+deplacements_cintres,CINTRES,LON-GGS-D,DPM,LONGERON GGS - droite,0.695,,2023-11-13,,6,0,LON-GGS-D_DPM

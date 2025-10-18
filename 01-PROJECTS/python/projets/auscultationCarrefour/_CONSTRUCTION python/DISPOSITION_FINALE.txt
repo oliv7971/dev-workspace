@@ -1,0 +1,39 @@
+
+📋 DISPOSITION FINALE DU FICHIER CORRIGÉ
+
+ONGLET "Observations":
+
+Ligne 7: "Date point 0" (information)
+Ligne 8: "Date" | "Jours" | (en-têtes des colonnes)
+Ligne 9: "Date" | "Jours" | "V1_X" | "V1_Y" | "V1_Z" | "V2_X" | ... (en-têtes des cibles)
+Ligne 10: 2024-08-28 | 0 | [formule] | [formule] | [formule] | ... (première ligne de données)
+Ligne 11: 2024-09-05 | 8 | [formule] | [formule] | [formule] | ... (deuxième ligne de données)
+...
+
+COLONNES DES CIBLES (à partir de la colonne C):
+C: V1_X    D: V1_Y    E: V1_Z
+F: V2_X    G: V2_Y    H: V2_Z  
+I: V3_X    J: V3_Y    K: V3_Z
+L: H1_X    M: H1_Y    N: H1_Z
+O: H2_X    P: H2_Y    Q: H2_Z
+R: H3_X    S: H3_Y    T: H3_Z
+U: H4_X    V: H4_Y    W: H4_Z
+X: H5_X    Y: H5_Y    Z: H5_Z
+AA: B1_X   AB: B1_Y   AC: B1_Z
+AD: B2_X   AE: B2_Y   AF: B2_Z
+AG: B3_X   AH: B3_Y   AI: B3_Z
+AJ: B4_X   AK: B4_Y   AL: B4_Z
+AM: B5_X   AN: B5_Y   AO: B5_Z
+AP: M1_X   AQ: M1_Y   AR: M1_Z
+AS: M2_X   AT: M2_Y   AU: M2_Z
+AV: M3_X   AW: M3_Y   AX: M3_Z
+AY: M4_X   AZ: M4_Y   BA: M4_Z
+BB: M5_X   BC: M5_Y   BD: M5_Z
+BE: REF1_X BF: REF1_Y BG: REF1_Z
+BH: REF2_X BI: REF2_Y BJ: REF2_Z
+
+FORMULES:
+Chaque cellule de données contient:
+=IFERROR(INDEX(DATABASE.X:X,MATCH(1,(DATABASE.DATE:DATE=$A10)*(DATABASE.NO:NO="V1"),0)),"")
+
+Les références de ligne commencent à A10, A11, A12, etc.

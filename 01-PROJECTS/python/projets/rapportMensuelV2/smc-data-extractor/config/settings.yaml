@@ -1,0 +1,18 @@
+application:
+  name: SMC Data Extractor
+  version: 1.0
+  description: An application for extracting and processing SMC data from Excel files.
+  output_directory: ./output
+  root_directory: ./data
+  month: August
+  log_level: INFO
+  csv_export:
+    include_dates: true
+    include_convergences: true
+    include_displacements: true
+  pdf_export:
+    include_convergences: true
+    include_displacements: true
+    include_graphs: true
+  date_format: YYYY-MM-DD
+  measurement_units: mm
