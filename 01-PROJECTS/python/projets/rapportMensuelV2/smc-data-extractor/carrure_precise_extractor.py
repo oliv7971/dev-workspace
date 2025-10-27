@@ -16,6 +16,13 @@ from datetime import datetime, date, timedelta
 from typing import List, Dict, Any, Optional, Tuple
 import logging
 
+# Import du correcteur de métriques pour les corrections GRD
+try:
+    from metric_name_corrector import MetricNameCorrector
+    CORRECTOR_AVAILABLE = True
+except ImportError:
+    CORRECTOR_AVAILABLE = False
+
 logger = logging.getLogger(__name__)
 
 class CarrurePreciseExtractor:
@@ -38,6 +45,14 @@ class CarrurePreciseExtractor:
 
         # Limite 6 mois pour déplacements périodiques
         self.six_months_ago = self.month_start - timedelta(days=180)
+
+        # Initialiser le correcteur de métriques
+        if CORRECTOR_AVAILABLE:
+            self.corrector = MetricNameCorrector()
+            logger.info("✅ Correcteur de métriques activé (corrections GRD disponibles)")
+        else:
+            self.corrector = None
+            logger.warning("⚠️ Correcteur de métriques non disponible")
 
         logger.info(f"Extracteur Carrure initialisé pour {self.month_start} à {self.month_end}")
         logger.info(f"Limite 6 mois: {self.six_months_ago}")
@@ -102,12 +117,24 @@ class CarrurePreciseExtractor:
             if code_court and type_mesure:
                 # Exclure les colonnes communes (Date, Jours, etc.)
                 if type_mesure not in ['Jours écoulés', 'Date', 'Front']:
-                    metric_id = f"{code_court}_{type_mesure}"
+                    
+                    # Appliquer les corrections de métriques si disponibles
+                    original_desc = desc_long or code_court
+                    corrected_desc = original_desc
+                    corrected_type = type_mesure
+                    
+                    if self.corrector and desc_long:
+                        # Essayer de corriger la description complète
+                        corrected_desc = self.corrector.correct_metric_name(desc_long)
+                        if corrected_desc != desc_long:
+                            logger.info(f"🔧 Correction carrure: '{desc_long}' → '{corrected_desc}'")
+                    
+                    metric_id = f"{code_court}_{corrected_type}"
                     headers[col] = {
                         'metric_id': metric_id,
                         'code_court': code_court,
-                        'type_mesure': type_mesure,
-                        'description': desc_long or code_court,
+                        'type_mesure': corrected_type,
+                        'description': corrected_desc,
                         'column': col
                     }
 
