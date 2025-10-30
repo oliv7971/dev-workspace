@@ -44,6 +44,30 @@ class MetricNameCorrector:
             'DH  haut gauche': 'DH haut gauche',
             'DH\tbas gauche': 'DH bas gauche',  # Tabulation
             'DH\thaut gauche': 'DH haut gauche',
+            
+            # Corrections spécifiques GRD - Section C105 (DGRD4+ et DGVA+)
+            'DGRD4+ bas gauche': 'DPM bas gauche',
+            'DGVA+ bas gauche': 'DH bas gauche',
+            'DGRD4+ haut gauche': 'DPM haut gauche',
+            'DGVA+ haut gauche': 'DH haut gauche',
+            'DGRD4+ centre haut': 'DPM centre haut',
+            'DGVA+ centre haut': 'DH centre haut',
+            'DGRD4+ haut droit': 'DPM haut droit',
+            'DGVA+ haut droit': 'DH haut droit',
+            'DGRD4+ bas droit': 'DPM bas droit',
+            'DGVA+ bas droit': 'DH bas droit',
+            
+            # Corrections spécifiques GRD - Section C116 (DGRD6+ et DGGS+)
+            'DGRD6+ bas gauche': 'DPM bas gauche',
+            'DGGS+ bas gauche': 'DH bas gauche',
+            'DGRD6+ haut gauche': 'DPM haut gauche',
+            'DGGS+ haut gauche': 'DH haut gauche',
+            'DGRD6+ centre haut': 'DPM centre haut',
+            'DGGS+ centre haut': 'DH centre haut',
+            'DGRD6+ haut droit': 'DPM haut droit',
+            'DGGS+ haut droit': 'DH haut droit',
+            'DGRD6+ bas droit': 'DPM bas droit',
+            'DGGS+ bas droit': 'DH bas droit',
         }
         
         # Pattern pour détecter les métriques de type DH/DPM/DZ
