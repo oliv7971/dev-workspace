@@ -29,7 +29,7 @@ else:
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     # Vérification pour debug VS Code (chercher le fichier Excel)
-    if not os.path.exists(os.path.join(script_dir, "analyseGGS.xlsx")):
+    if not os.path.exists(os.path.join(script_dir, "analyseGGS-251031.xlsx")):
         possible_dirs = [
             os.path.dirname(__file__),
             os.getcwd(),
@@ -37,12 +37,12 @@ else:
         ]
 
         for possible_dir in possible_dirs:
-            if os.path.exists(os.path.join(possible_dir, "analyseGGS.xlsx")):
+            if os.path.exists(os.path.join(possible_dir, "analyseGGS-251031.xlsx")):
                 script_dir = possible_dir
                 debug_print(f"Excel trouvé dans: {script_dir}")
                 break
 
-fichier_excel = os.path.join(script_dir, "analyseGGS.xlsx")
+fichier_excel = os.path.join(script_dir, "analyseGGS-251031.xlsx")
 debug_print(f"Répertoire script: {script_dir}")
 debug_print(f"Fichier Excel: {fichier_excel}")
 

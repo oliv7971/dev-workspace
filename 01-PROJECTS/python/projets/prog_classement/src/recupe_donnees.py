@@ -3,12 +3,32 @@ import shutil
 import unicodedata
 import json
 
-# Chemins principaux
-source_base = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES"
-destination_base = r"C:\Temp\activites-par-galerie"
+# Chargement de la configuration principale (config/config.json)
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+CONFIG_PATH = os.path.join(BASE_DIR, 'config', 'config.json')
 
-# Chargement des correspondances depuis le fichier JSON
-with open("correspondances.json", encoding="utf-8") as f:
+def _charger_config():
+    if os.path.exists(CONFIG_PATH):
+        with open(CONFIG_PATH, encoding='utf-8') as f:
+            return json.load(f)
+    # Valeurs par défaut si pas de config
+    return {
+        'chemins': {
+            'source_base': r"C:\\data\\11-CHANTIERS\\BURE\\10-ACTIVITES",
+            'destination_temp': r"C:\\Temp\\activites-par-galerie"
+        }
+    }
+
+cfg = _charger_config()
+source_base = cfg['chemins'].get('source_base')
+destination_base = cfg['chemins'].get('destination_temp')
+
+# Chargement des correspondances depuis config/correspondances.json
+CORRESP_PATH = os.path.join(BASE_DIR, 'config', 'correspondances.json')
+if not os.path.exists(CORRESP_PATH):
+    raise FileNotFoundError(f"Fichier de correspondances introuvable: {CORRESP_PATH}")
+
+with open(CORRESP_PATH, encoding='utf-8') as f:
     correspondances = json.load(f)
 
 def normaliser(txt):

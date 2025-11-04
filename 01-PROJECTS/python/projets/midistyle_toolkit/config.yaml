@@ -1,0 +1,63 @@
+# config.yaml — ajustez à votre PA4X et à vos habitudes
+
+# Noms de marqueurs que le PA4X doit reconnaître lors du "MIDI to Style".
+# Laissez tels quels si vous n'êtes pas sûr ; changez si besoin après un essai.
+section_markers:
+  intro1: "Intro 1"
+  intro2: "Intro 2"
+  intro3: "Intro 3"
+  var1:   "Var 1"
+  var2:   "Var 2"
+  var3:   "Var 3"
+  var4:   "Var 4"
+  fill1:  "Fill 1"
+  fill2:  "Fill 2"
+  fill3:  "Fill 3"
+  fill4:  "Fill 4"
+  break:  "Break"
+  ending1:"Ending 1"
+  ending2:"Ending 2"
+  ending3:"Ending 3"
+
+# Nom des pistes attendu côté Korg pour l’import stylé.
+korg_track_names:
+  drum:  "DRUM"
+  perc:  "PERC"
+  bass:  "BASS"
+  acc1:  "ACC1"
+  acc2:  "ACC2"
+  acc3:  "ACC3"
+  acc4:  "ACC4"
+  acc5:  "ACC5"
+
+# Mapping de canaux (Standard GM conseillé)
+channels:
+  drum: 10
+  perc: 11        # Percus séparées (optionnel)
+  bass: 2
+  acc1: 3
+  acc2: 4
+  acc3: 5
+  acc4: 6
+  acc5: 7
+
+# Nettoyage/normalisation
+prepare:
+  keep_sysex: false
+  keep_aftertouch: false
+  max_cc_events_per_track: 300
+  limit_pitch_bend_semitones: 2     # indique votre intention ; n’insère pas de RPN, limite juste l’amplitude PB
+  quantize_ppq: 480                  # grille interne (PPQ). Le script détecte la PPQ d’origine et applique une quantif douce (1/16 par défaut).
+  quantize_division: 16              # 4=Noire, 8=Croche, 12=Triolet de croche, 16=double croche…
+  humanize_ms: 4                     # remet un léger "swing" après quantif (ms)
+  velocity_minmax: [1, 120]          # clamp des vélocités
+
+# Audit: seuils (vous pouvez durcir/assouplir)
+audit_thresholds:
+  max_tempo_changes: 1
+  allowed_time_sigs: ["4/4", "2/4", "6/8"]
+  max_program_changes_total: 6
+  max_tracks: 12
+  max_unique_channels: 10
+  min_drum_hits: 8
+  max_pitch_bend_range: 4

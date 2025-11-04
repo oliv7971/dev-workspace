@@ -1,0 +1,12 @@
+# Dépendances pour PDF Standardizer
+# Installation : pip install -r requirements_pdf.txt
+
+# Manipulation des PDF
+PyPDF2>=3.0.0
+PyMuPDF>=1.23.0
+
+# Génération de PDF et mise en page
+reportlab>=4.0.0
+
+# Utilitaires
+pathlib2>=2.3.0  # Pour compatibilité Python < 3.4 si nécessaire

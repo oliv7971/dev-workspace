@@ -3,11 +3,22 @@ import shutil
 import unicodedata
 import json
 
-# Chemin de base à adapter
-base_dir = r"C:\Temp\activites-par-galerie"
+# Base project directory and config
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+CONFIG_PATH = os.path.join(BASE_DIR, 'config', 'config.json')
 
-json_path = os.path.join(os.path.dirname(__file__), "categories.json")
+def _charger_config():
+    if os.path.exists(CONFIG_PATH):
+        with open(CONFIG_PATH, encoding='utf-8') as f:
+            return json.load(f)
+    return {}
 
+cfg = _charger_config()
+
+# Chemin de base (peut être défini dans config.json)
+base_dir = cfg.get('chemins', {}).get('destination_temp', r"C:\Temp\activites-par-galerie")
+
+json_path = os.path.join(BASE_DIR, 'config', 'categories.json')
 
 # Chargement du fichier JSON de catégories
 with open(json_path, encoding="utf-8") as f:

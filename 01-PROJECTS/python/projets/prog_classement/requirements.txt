@@ -1,0 +1,19 @@
+# Dépendances pour le système de classement BURE
+# Aucune dépendance externe requise - utilise uniquement la bibliothèque standard Python
+
+# Modules Python standard utilisés :
+# - os (gestion fichiers/dossiers)
+# - shutil (copie/déplacement fichiers)
+# - json (configuration)
+# - logging (logs)
+# - hashlib (vérification intégrité)
+# - zipfile (compression backups)
+# - datetime (horodatage)
+# - unicodedata (normalisation texte)
+# - tempfile (fichiers temporaires)
+
+# Si vous souhaitez ajouter des fonctionnalités avancées :
+# colorama>=0.4.4        # Couleurs dans la console
+# tqdm>=4.64.0          # Barres de progression
+# watchdog>=2.1.0       # Surveillance temps réel des dossiers
+# schedule>=1.2.0       # Planification des tâches

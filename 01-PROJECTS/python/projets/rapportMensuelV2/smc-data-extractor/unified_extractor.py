@@ -618,12 +618,12 @@ def run_unified_extraction(root_folder: str, month: str, output_folder: str, opt
         carrure_files = list(root_path.rglob("*carrure*.xlsx")) + list(root_path.rglob("*carrure*.xlsm"))
 
         if log_callback:
-            log_callback(f"🔍 Fichiers détectés: {len(smc_files)} SMC, {len(carrure_files)} Carrure")
+            log_callback(f"[*] Fichiers detectes: {len(smc_files)} SMC, {len(carrure_files)} Carrure")
 
         # Traiter fichiers SMC
         for smc_file in smc_files:
             if log_callback:
-                log_callback(f"🔧 Traitement SMC: {smc_file.name}")
+                log_callback(f"[>] Traitement SMC: {smc_file.name}")
             smc_results = extractor.extract_smc_data(smc_file)
             extractor.all_results['smc_convergences'].extend(smc_results['convergences'])
             extractor.all_results['smc_deplacements'].extend(smc_results['deplacements'])
@@ -631,7 +631,7 @@ def run_unified_extraction(root_folder: str, month: str, output_folder: str, opt
         # Traiter fichiers Carrure
         for carrure_file in carrure_files:
             if log_callback:
-                log_callback(f"🏗️ Traitement Carrure: {carrure_file.name}")
+                log_callback(f"[>] Traitement Carrure: {carrure_file.name}")
             carrure_results = extractor.extract_carrure_data(carrure_file)
             extractor.all_results['carrure_deplacements'].extend(carrure_results['carrure_deplacements'])
             extractor.all_results['carrure_cintres'].extend(carrure_results['carrure_cintres'])
@@ -644,13 +644,13 @@ def run_unified_extraction(root_folder: str, month: str, output_folder: str, opt
             extractor.generate_graphs_by_zones(output_path)
 
         if log_callback:
-            log_callback("✅ Extraction unifiée terminée avec succès")
+            log_callback("[OK] Extraction unifiee terminee avec succes")
 
         return True
 
     except Exception as e:
         if log_callback:
-            log_callback(f"❌ Erreur extraction unifiée: {e}")
+            log_callback(f"[ERREUR] Extraction unifiee: {e}")
         return False
 
 if __name__ == "__main__":

@@ -1,0 +1,25 @@
+{
+  "chemins": {
+    "source_base": "C:\\data\\11-CHANTIERS\\BURE\\10-ACTIVITES",
+    "destination_temp": "C:\\Temp\\activites-par-galerie",
+    "destination_finale": "C:\\data\\11-CHANTIERS\\BURE\\11-GALERIES",
+    "backup_dir": "C:\\Backup\\classement",
+    "logs_dir": "C:\\Temp\\logs\\classement"
+  },
+  "dossiers": {
+    "a_classer": "_a_classer",
+    "classe": "_classé",
+    "divers": "DIVERS",
+    "non_reconnus": "__NON_RECONNUS"
+  },
+  "options": {
+    "mode_securise": true,
+    "backup_automatique": true,
+    "validation_interactive": false,
+    "niveau_log": "INFO",
+    "max_backups": 10,
+    "seuil_confiance_auto": 0.1
+  },
+  "extensions_autorisees": [".pdf", ".docx", ".xlsx", ".dwg", ".jpg", ".png", ".zip", ".7z"],
+  "exclusions": ["Thumbs.db", ".DS_Store", "desktop.ini"]
+}

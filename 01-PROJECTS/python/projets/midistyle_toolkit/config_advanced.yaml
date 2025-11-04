@@ -1,0 +1,78 @@
+# config_advanced.yaml — Configuration avancée avec nouvelles fonctionnalités
+
+# Noms de marqueurs que le PA4X doit reconnaître lors du "MIDI to Style".
+section_markers:
+  intro1: "Intro 1"
+  intro2: "Intro 2"
+  intro3: "Intro 3"
+  var1:   "Var 1"
+  var2:   "Var 2"
+  var3:   "Var 3"
+  var4:   "Var 4"
+  fill1:  "Fill 1"
+  fill2:  "Fill 2"
+  fill3:  "Fill 3"
+  fill4:  "Fill 4"
+  break:  "Break"
+  ending1:"Ending 1"
+  ending2:"Ending 2"
+  ending3:"Ending 3"
+
+# Nom des pistes attendu côté Korg pour l'import stylé.
+korg_track_names:
+  drum:  "DRUM"
+  perc:  "PERC"
+  bass:  "BASS"
+  acc1:  "ACC1"
+  acc2:  "ACC2"
+  acc3:  "ACC3"
+  acc4:  "ACC4"
+  acc5:  "ACC5"
+
+# Mapping de canaux (Standard GM conseillé)
+channels:
+  drum: 10
+  perc: 11        # Percus séparées (optionnel)
+  bass: 2
+  acc1: 3
+  acc2: 4
+  acc3: 5
+  acc4: 6
+  acc5: 7
+
+# Nettoyage/normalisation avec nouvelles options
+prepare:
+  keep_sysex: false
+  keep_aftertouch: false
+  max_cc_events_per_track: 300
+  limit_pitch_bend_semitones: 2
+  quantize_ppq: 480
+  quantize_division: 16
+  humanize_ms: 4
+  velocity_minmax: [1, 120]
+  
+  # Nouvelles options pour l'amélioration
+  smart_bass_detection: true      # Utilise la nouvelle détection de basse
+  preserve_groove: true           # Quantification plus douce
+  auto_channel_mapping: true      # Mapping intelligent des canaux
+
+# Audit: seuils avec nouvelles métriques
+audit_thresholds:
+  max_tempo_changes: 1
+  allowed_time_sigs: ["4/4", "2/4", "6/8", "3/4"]
+  max_program_changes_total: 8    # Plus permissif
+  max_tracks: 16                  # Plus permissif
+  max_unique_channels: 12         # Plus permissif
+  min_drum_hits: 8
+  max_pitch_bend_range: 4
+  
+  # Nouveaux seuils pour la détection de basse
+  bass_detection_confidence: 3    # Score minimum pour considérer un canal comme basse
+  bass_note_range_max: 24         # Gamme max pour une basse (demi-tons)
+  bass_median_note_max: 55        # Note médiane max pour une basse
+
+# Configuration du logging
+logging:
+  level: "INFO"                   # DEBUG, INFO, WARNING, ERROR
+  show_progress: true             # Affiche le progrès lors du traitement
+  detailed_bass_analysis: false   # Logs détaillés pour la détection de basse

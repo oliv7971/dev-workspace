@@ -108,7 +108,70 @@ def ensure_dir(p: Path, dry_run: bool):
     else:
         p.mkdir(parents=True, exist_ok=True)
 
+def files_are_identical(src: Path, dst: Path) -> bool:
+    """
+    Vérifie si deux fichiers sont identiques (taille et date de modification).
+    """
+    if not dst.exists():
+        return False
+    
+    src_stat = src.stat()
+    dst_stat = dst.stat()
+    
+    # Comparer la taille
+    if src_stat.st_size != dst_stat.st_size:
+        return False
+    
+    # Comparer la date de modification (avec tolérance de 2 secondes)
+    src_mtime = src_stat.st_mtime
+    dst_mtime = dst_stat.st_mtime
+    time_diff = abs(src_mtime - dst_mtime)
+    
+    return time_diff <= 2  # Tolérance de 2 secondes
+
+def smart_copy_file(src: Path, dst_dir: Path, overwrite: bool, dry_run: bool):
+    """
+    Copie intelligente : vérifie si le fichier de destination existe déjà et s'il est identique.
+    """
+    dst = dst_dir / src.name
+    
+    if dst.exists():
+        if files_are_identical(src, dst):
+            if dry_run:
+                logging.info(f"[SIMU] Fichier identique, pas de copie : {src.name}")
+            else:
+                logging.debug(f"Fichier identique, pas de copie : {src.name}")
+            return
+        elif not overwrite:
+            # Le fichier existe mais est différent, et on ne veut pas écraser
+            if dry_run:
+                logging.info(f"[SIMU] Fichier existant différent, copie nécessaire : {src.name}")
+                logging.info(f"[SIMU] Source: {src.stat().st_mtime} | Destination: {dst.stat().st_mtime}")
+            else:
+                src_time = dt.datetime.fromtimestamp(src.stat().st_mtime)
+                dst_time = dt.datetime.fromtimestamp(dst.stat().st_mtime)
+                logging.warning(f"Fichier existant différent : {src.name}")
+                logging.warning(f"  Source: {src_time} | Destination: {dst_time}")
+                logging.warning(f"  Utiliser --overwrite pour remplacer")
+            return
+    
+    # Copier le fichier
+    if dry_run:
+        logging.info(f"[SIMU] Copier fichier : {src}  ->  {dst}")
+    else:
+        logging.info(f"Copier fichier : {src.name}  ->  {dst_dir}")
+        shutil.copy2(src, dst)
+
 def safe_copy_file(src: Path, dst_dir: Path, overwrite: bool, dry_run: bool):
+    """
+    DEPRECATED: Ancienne fonction qui créait des copies numérotées.
+    Utilisez smart_copy_file à la place.
+    """
+def safe_copy_file(src: Path, dst_dir: Path, overwrite: bool, dry_run: bool):
+    """
+    DEPRECATED: Ancienne fonction qui créait des copies numérotées.
+    Utilisez smart_copy_file à la place.
+    """
     dst = dst_dir / src.name
     if dst.exists() and not overwrite:
         stem = dst.stem
@@ -188,7 +251,7 @@ def distribute_from_source(source_dir: Path, dst_day_dirs: Iterable[Path],
         ensure_dir(exp2, dry_run)
 
         for f in files_x:
-            safe_copy_file(f, carnet, overwrite, dry_run)
+            smart_copy_file(f, carnet, overwrite, dry_run)
 
         for sub in subdirs:
             dst_sub = carnet / sub.name
@@ -197,7 +260,7 @@ def distribute_from_source(source_dir: Path, dst_day_dirs: Iterable[Path],
             copy_tree(sub, dst_sub, overwrite, dry_run)
 
         for f in files_2:
-            safe_copy_file(f, exp2, overwrite, dry_run)
+            smart_copy_file(f, exp2, overwrite, dry_run)
 
 def list_source_datasets(root: Path) -> List[Path]:
     """Retourne les sous-dossiers de root qui ressemblent à des datasets Leica."""

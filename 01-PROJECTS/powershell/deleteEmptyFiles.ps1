@@ -33,7 +33,7 @@ foreach ($file in $emptyFiles) {
     
     if (-not $WhatIf) {
         try {
-            Remove-Item -Path $file.FullName -Force
+            Remove-Item -LiteralPath $file.FullName -Force
             $deletedFiles++
             Write-Host "  ✓ Supprimé : $($file.FullName)" -ForegroundColor Red
         }
@@ -51,7 +51,15 @@ foreach ($file in $emptyFiles) {
 Write-Host "`nRecherche des répertoires vides..." -ForegroundColor Green
 do {
     $emptyFolders = Get-ChildItem -Path $BasePath -Recurse -Directory | 
-                    Where-Object { (Get-ChildItem -Path $_.FullName -Force).Count -eq 0 } |
+                    Where-Object { 
+                        try {
+                            (Get-ChildItem -LiteralPath $_.FullName -Force -ErrorAction Stop).Count -eq 0
+                        } 
+                        catch {
+                            # Si erreur d'accès, considérer comme non-vide pour éviter suppression accidentelle
+                            $false
+                        }
+                    } |
                     Sort-Object { $_.FullName.Split('\').Count } -Descending
     
     if ($emptyFolders.Count -eq 0) {
@@ -65,7 +73,7 @@ do {
         
         if (-not $WhatIf) {
             try {
-                Remove-Item -Path $folder.FullName -Force
+                Remove-Item -LiteralPath $folder.FullName -Force
                 $deletedFolders++
                 Write-Host "  ✓ Supprimé : $($folder.FullName)" -ForegroundColor Red
             }

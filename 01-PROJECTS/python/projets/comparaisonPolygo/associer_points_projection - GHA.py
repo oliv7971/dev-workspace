@@ -40,12 +40,12 @@ if __name__ == "__main__":
             ]
 
             for possible_dir in possible_dirs:
-                if os.path.exists(os.path.join(possible_dir, "analyseGHA.xlsx")):
+                if os.path.exists(os.path.join(possible_dir, "analyseGHA-251030.xlsx")):
                     script_dir = possible_dir
                     debug_print(f"Excel trouvé dans: {script_dir}")
                     break
 
-    fichier_excel = os.path.join(script_dir, "analyseGHA.xlsx")
+    fichier_excel = os.path.join(script_dir, "analyseGHA-251030.xlsx")
 debug_print(f"Répertoire script: {script_dir}")
 debug_print(f"Fichier Excel: {fichier_excel}")
 

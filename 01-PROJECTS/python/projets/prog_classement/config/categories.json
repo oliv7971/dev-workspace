@@ -1,12 +1,15 @@
 {
   "IMPLANTATION": ["implant", "imp", "implantation"],
   "AUSCULTATION": ["aus", "auscult", "conv", "convergences"],
-  "LEVE": ["levé", "leve", "lev", "lv"],
-  "POLYGO": ["poly", "polygo", "refs"],
+  "LEVE": ["levé", "leve", "lev", "lv", "topo", "topographique"],
+  "POLYGO": ["poly", "polygo", "refs", "reference"],
   "THEORIQUES": ["theoriques", "theo", "prepa", "construction", "projet"],
   "METRES": ["metres", "métrés", "metrés"],
-  "ETUDE": ["etude"],
+  "ETUDE": ["etude", "etudes"],
   "RECOLEMENT": ["recol", "rec", "doe"],
   "REGLAGE": ["reg", "reglage"],
-  "SCAN": ["scan", "target"]
+  "SCAN": ["scan", "target"],
+  "CONTROLE": ["controle", "control", "excavation", "massif", "verification"],
+  "SURVEILLANCE": ["surveillance", "suivi", "monitoring"],
+  "DIVERS": ["divers", "autre", "temp", "test", "essai"]
 }
