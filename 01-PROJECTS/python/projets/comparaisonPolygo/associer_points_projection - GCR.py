@@ -12,6 +12,76 @@ feuille_resultat = "résultat"
 onglet_non_associes_mes = "non_associés_mesurés"
 onglet_non_associes_ref = "non_associés_references"
 seuil = 0.1  # seuil de tolérance horizontale en mètres
+seuil_coloration = 0.003  # seuil de coloration des écarts en mètres (3mm par défaut)
+
+# ---------------------
+# MODE RÉINITIALISATION
+# ---------------------
+RESET_MODE = False  # Mettre True pour réinitialiser le fichier Excel
+KEEP_REFERENCES = True  # Garder les 4 premières colonnes (références) dans l'onglet "données"
+
+def reset_excel_file():
+    """Réinitialise le fichier Excel en gardant uniquement les en-têtes et l'onglet axe"""
+    print("🔄 MODE RÉINITIALISATION ACTIVÉ")
+    
+    wb = load_workbook(fichier_excel)
+    
+    # Traiter l'onglet "données"
+    if feuille_source in wb.sheetnames:
+        ws = wb[feuille_source]
+        if KEEP_REFERENCES:
+            # Garder les 4 premières colonnes (Nom1, X1, Y1, Z1) et supprimer les colonnes 5-8
+            print(f"  📋 {feuille_source}: Conservation des références (colonnes A-D), suppression des mesures (E-H)")
+            # Supprimer toutes les lignes de données sauf l'en-tête
+            max_row = ws.max_row
+            if max_row > 1:
+                ws.delete_rows(2, max_row - 1)
+            # Effacer les colonnes E à H (mesures)
+            for row in ws.iter_rows(min_row=1, max_row=1, min_col=5, max_col=8):
+                for cell in row:
+                    cell.value = ["Nom2", "X2", "Y2", "Z2"][cell.column - 5]
+        else:
+            # Tout supprimer sauf l'en-tête
+            print(f"  📋 {feuille_source}: Suppression de toutes les données")
+            max_row = ws.max_row
+            if max_row > 1:
+                ws.delete_rows(2, max_row - 1)
+    
+    # Réinitialiser les autres onglets (garder uniquement les en-têtes)
+    for sheet_name in [feuille_resultat, onglet_non_associes_mes, onglet_non_associes_ref]:
+        if sheet_name in wb.sheetnames:
+            ws = wb[sheet_name]
+            max_row = ws.max_row
+            if max_row > 1:
+                ws.delete_rows(2, max_row - 1)
+                print(f"  📋 {sheet_name}: Données effacées, en-têtes conservés")
+        else:
+            # Créer l'onglet avec les en-têtes appropriés
+            ws = wb.create_sheet(sheet_name)
+            if sheet_name == feuille_resultat:
+                headers = ["Nom1", "X1", "Y1", "Z1", "Nom2", "X2", "Y2", "Z2",
+                          "PM1", "HZ1", "DZ1", "PM2", "HZ2", "DZ2",
+                          "diff_PM", "diff_HZ", "diff_DZ", "DH"]
+            elif sheet_name == onglet_non_associes_mes:
+                headers = ["Nom2", "X2", "Y2", "Z2"]
+            else:  # onglet_non_associes_ref
+                headers = ["Nom1", "X1", "Y1", "Z1"]
+            for col, header in enumerate(headers, start=1):
+                ws.cell(row=1, column=col, value=header)
+            print(f"  📋 {sheet_name}: Onglet créé avec en-têtes")
+    
+    # L'onglet "axe" n'est jamais touché
+    if feuille_axe in wb.sheetnames:
+        print(f"  🔒 {feuille_axe}: Préservé intact")
+    
+    wb.save(fichier_excel)
+    print("✅ Réinitialisation terminée !\n")
+    print("ℹ️  Pour désactiver ce mode, mettez RESET_MODE = False")
+    exit(0)
+
+# Exécuter la réinitialisation si demandé
+if RESET_MODE:
+    reset_excel_file()
 
 # --- Lecture des données ---
 df = pd.read_excel(fichier_excel, sheet_name=feuille_source, header=0,
@@ -121,15 +191,15 @@ for sheet_name in format_sheets:
             fill_to_apply = None
             if col_dz:
                 val = row[col_dz - 1].value
-                if isinstance(val, (int, float)) and abs(val) > 0.010:
+                if isinstance(val, (int, float)) and abs(val) > seuil_coloration:
                     fill_to_apply = fill_DZ
             if col_hz:
                 val = row[col_hz - 1].value
-                if isinstance(val, (int, float)) and abs(val) > 0.010:
+                if isinstance(val, (int, float)) and abs(val) > seuil_coloration:
                     fill_to_apply = fill_HZ
             if col_pm:
                 val = row[col_pm - 1].value
-                if isinstance(val, (int, float)) and abs(val) > 0.010:
+                if isinstance(val, (int, float)) and abs(val) > seuil_coloration:
                     fill_to_apply = fill_PM
 
             if fill_to_apply:
