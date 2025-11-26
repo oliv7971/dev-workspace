@@ -11,7 +11,62 @@ Suite d'outils Python pour la projection de nuages de points sur des axes topogr
 
 ## 🎯 Outils développés
 
-### 1. `projection_scan_droite3d.py` - XYZ → H,V,PM
+### 1. `projeter_multi_axes.py` - Projection multi-axes automatique ⭐ NOUVEAU
+
+**Fonction :** Projette automatiquement des points sur différents axes selon un identifiant dans le fichier d'entrée.
+
+**Utilisation :**
+```bash
+python projeter_multi_axes.py points.csv [options]
+```
+
+**Options :**
+- `--config fichier.csv` : Fichier de configuration des axes (défaut : `axes_config.csv`)
+- `--mode vertical|perpendiculaire` : Mode de projection (défaut : `vertical`)
+- `--output|-o fichier` : Fichier de sortie (auto-généré si omis)
+- `--colonne-axe nom` : Nom de la colonne identifiant (défaut : `axe`)
+
+**Format fichier d'entrée (CSV/Excel) :**
+```
+PT,X,Y,Z,axe,description
+REF-001,823245.5,1091505.2,-123.5,GRE,Point de référence
+SCAN-045,823180.0,1091450.0,-122.0,GVA,Point laser
+```
+
+**Format fichier de configuration (`axes_config.csv`) :**
+```
+axe,PM,X,Y,Z
+GRE,0.000,823241.141,1091511.231,-123.794
+GRE,9.721,823245.250,1091502.421,-123.697
+GVA,0.000,823100.000,1091400.000,-120.000
+GVA,50.000,823150.000,1091350.000,-119.500
+```
+*Minimum 2 points par axe requis*
+
+**Exemples :**
+```bash
+# Utilisation simple avec fichier Excel
+python projeter_multi_axes.py points.xlsx
+
+# Avec config personnalisée et mode perpendiculaire
+python projeter_multi_axes.py points.csv --config mes_axes.csv --mode perpendiculaire
+
+# Avec nom de sortie personnalisé
+python projeter_multi_axes.py points.xlsx -o resultats_projections.xlsx
+```
+
+**Sortie :** Fichier original enrichi avec colonnes PM, H, V calculées pour chaque axe
+
+**Avantages :**
+- ✅ Traitement batch de multiples axes en une seule commande
+- ✅ Plus besoin de projeter séparément chaque axe
+- ✅ Idéal pour laboratoires avec nombreux axes de référence
+- ✅ Support CSV et Excel en entrée/sortie
+- ✅ Statistiques détaillées par axe
+
+---
+
+### 2. `projection_scan_droite3d.py` - XYZ → H,V,PM
 
 **Fonction :** Projette un nuage de points XYZ sur une droite 3D pour obtenir des coordonnées d'axe.
 
@@ -51,7 +106,7 @@ python projection_scan_droite3d.py scan.asc resultat.csv perpendiculaire
 
 ---
 
-### 2. `projection_inverse_hvpm_vers_xyz.py` - H,V,PM → XYZ
+### 3. `projection_inverse_hvpm_vers_xyz.py` - H,V,PM → XYZ
 
 **Fonction :** Transformation inverse, reconstitue les coordonnées XYZ à partir des coordonnées d'axe.
 
@@ -72,7 +127,7 @@ python projection_inverse_hvpm_vers_xyz.py hvpm.csv [sortie.csv] [mode] [--axe a
 
 ---
 
-### 3. `tabuler_axe.py` - Génération de points réguliers sur axe
+### 4. `tabuler_axe.py` - Génération de points réguliers sur axe
 
 **Fonction :** Génère des points régulièrement espacés le long d'un axe pour contrôle ou implantation.
 
@@ -335,6 +390,13 @@ CalculateurAxes/
 ---
 
 ## 📝 Changelog
+
+**v1.1 - 26/11/2025**
+- ⭐ Nouvel outil `projeter_multi_axes.py` pour traitement batch multi-axes
+- Configuration centralisée des axes via `axes_config.csv`
+- Projection automatique selon colonne identifiant
+- Support CSV et Excel en entrée/sortie
+- Statistiques détaillées par axe
 
 **v1.0 - 25/11/2025**
 - Projection XYZ → H,V,PM sur droite 3D

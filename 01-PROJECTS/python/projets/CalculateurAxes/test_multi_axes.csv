@@ -1,0 +1,9 @@
+PT,X,Y,Z,axe,description
+REF-001,823245.5,1091505.2,-123.5,GRE,Point de référence galerie Est
+REF-002,823110.3,1091385.7,-120.2,GRE,Repère mural
+REF-003,823250.1,1091500.8,-123.8,GRE,Borne au sol
+SCAN-045,823180.0,1091450.0,-122.0,GVA,Point scan laser
+SCAN-046,823125.0,1091375.0,-119.8,GVA,Point scan laser
+SCAN-047,823200.0,1091425.0,-121.5,GVA,Point scan laser
+TOPO-12,823300.0,1091550.0,-125.0,GNO,Point topographique
+TOPO-13,823350.0,1091600.0,-126.2,GNO,Point topographique
