@@ -30,13 +30,11 @@ def charger_points_axe(fichier_axe=None):
         array (N, 4) avec colonnes [PM, X, Y, Z]
     """
     if fichier_axe is None:
-        # Axe par défaut (BURE GRE)
-        print("   Utilisation de l'axe par défaut (BURE GRE)")
+        # Axe par défaut (GHA)
+        print("   Utilisation de l'axe par défaut (GHA)")
         return np.array([
-            [0.000, 823241.141, 1091511.231, -123.794],
-            [9.721, 823245.250, 1091502.421, -123.697],
-            [56.601, 823265.062, 1091459.933, -123.228],
-            [156.601, 823307.323, 1091369.302, -122.228]
+            [0.000, 823269.050, 1091527.512, -122.769],
+            [100.000, 823359.679, 1091569.777, -121.769]
         ])
     else:
         # Charger depuis fichier
@@ -254,7 +252,7 @@ def traiter_fichier(fichier_entree, fichier_sortie, points_axe, mode='perpendicu
     
     with open(fichier_sortie, 'w') as f_out:
         # En-tête
-        f_out.write("H,V,PM\n")
+        f_out.write("H;V;PM\n")
         
         # Traiter par blocs
         for i, chunk in enumerate(pd.read_csv(fichier_entree, 
@@ -280,7 +278,7 @@ def traiter_fichier(fichier_entree, fichier_sortie, points_axe, mode='perpendicu
             
             # Écrire les résultats
             for j in range(len(pm)):
-                f_out.write(f"{h[j]:.6f},{v[j]:.6f},{pm[j]:.6f}\n")
+                f_out.write(f"{h[j]:.6f};{v[j]:.6f};{pm[j]:.6f}\n")
             
             # Afficher progression
             progress = (i + 1) / nb_blocks * 100
@@ -389,3 +387,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
