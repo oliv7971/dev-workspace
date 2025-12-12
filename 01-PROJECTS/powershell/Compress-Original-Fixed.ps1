@@ -12,8 +12,16 @@ Write-Host "=== COMPRESSION PARALLÈLE ===" -ForegroundColor Cyan
 Write-Host "Répertoire: $basePath" -ForegroundColor White
 Write-Host "Dossiers trouvés: $($folders.Count)" -ForegroundColor White
 
+# LIMITATION : Maximum 4 jobs en parallèle
+$maxJobs = 4
 $jobs = @()
+
 foreach ($folder in $folders) {
+    # Attendre si trop de jobs en cours
+    while ((Get-Job -State Running).Count -ge $maxJobs) {
+        Start-Sleep -Milliseconds 500
+    }
+    
     $archive = "$basePath\$($folder.Name).7z"
     
     # CORRECTION 2: Arguments en tableau

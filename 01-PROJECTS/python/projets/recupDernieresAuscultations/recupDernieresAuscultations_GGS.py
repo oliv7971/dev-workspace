@@ -55,6 +55,7 @@ LOG_FORMAT = "%(levelname)s - %(message)s"
 def trouver_fichier_xlsm(repertoire: Path) -> Optional[Path]:
     """
     Trouve le fichier .xlsm dans le repertoire donne.
+    Selectionne le dernier fichier par ordre alphabetique (le plus recent chronologiquement).
     
     Args:
         repertoire: Chemin vers le repertoire a analyser
@@ -72,10 +73,15 @@ def trouver_fichier_xlsm(repertoire: Path) -> Optional[Path]:
     if not fichiers_xlsm:
         logging.warning(f"Aucun fichier .xlsm trouve dans : {repertoire}")
         return None
-    elif len(fichiers_xlsm) > 1:
-        logging.warning(f"Plusieurs fichiers .xlsm trouves dans {repertoire}, utilisation du premier : {fichiers_xlsm[0].name}")
     
-    return fichiers_xlsm[0]
+    # Trier par ordre alphabetique et prendre le dernier
+    fichiers_xlsm_tries = sorted(fichiers_xlsm, key=lambda x: x.name)
+    fichier_selectionne = fichiers_xlsm_tries[-1]
+    
+    if len(fichiers_xlsm) > 1:
+        logging.warning(f"Plusieurs fichiers .xlsm trouves dans {repertoire}, utilisation du dernier alphabetiquement : {fichier_selectionne.name}")
+    
+    return fichier_selectionne
 
 def lire_dernieres_lignes_excel(fichier_excel: Path, onglet: str, colonnes: List[str], nb_lignes: int) -> Optional[pd.DataFrame]:
     """

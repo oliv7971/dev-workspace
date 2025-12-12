@@ -148,6 +148,16 @@ def extract_fields(full_text: str, filename: str):
         "title_line": find_pm_in_title(lines)[1],
     }
 
+def extract_date_from_path(path: Path) -> str:
+    """Extrait la date au format YYYY-MM-DD depuis le chemin du fichier."""
+    # Cherche un pattern de date dans les dossiers parents
+    date_pattern = re.compile(r'(\d{4}-\d{2}-\d{2})')
+    for part in path.parts:
+        match = date_pattern.search(part)
+        if match:
+            return match.group(1)
+    return ""
+
 def scan_dir(root: Path, out_csv: Path, verbose: bool, keep_without_front: bool):
     rows = []
     scanned = 0
@@ -176,6 +186,7 @@ def scan_dir(root: Path, out_csv: Path, verbose: bool, keep_without_front: bool)
             rows.append({
                 "file": str(pdf_path),
                 "filename": pdf_path.name,
+                "date": extract_date_from_path(pdf_path),
                 "pm_moyen": "",
                 "pm_cintre": "",
                 "pm_in_title": "",
@@ -191,6 +202,7 @@ def scan_dir(root: Path, out_csv: Path, verbose: bool, keep_without_front: bool)
         rows.append({
             "file": str(pdf_path),
             "filename": pdf_path.name,
+            "date": extract_date_from_path(pdf_path),
             "pm_moyen": data["pm_moyen"],
             "pm_cintre": data["pm_cintre"],
             "pm_in_title": data["pm_title"],
@@ -200,7 +212,7 @@ def scan_dir(root: Path, out_csv: Path, verbose: bool, keep_without_front: bool)
         })
 
     out_csv.parent.mkdir(parents=True, exist_ok=True)
-    fieldnames = ["file", "filename", "pm_moyen", "pm_cintre", "pm_in_title", "travee", "title_line", "notes"]
+    fieldnames = ["file", "filename", "date", "pm_moyen", "pm_cintre", "pm_in_title", "travee", "title_line", "notes"]
     with open(out_csv, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
@@ -225,8 +237,8 @@ def main():
     # Valeurs par défaut si lancé sans arguments (évite SystemExit:2 et 'rien ne se passe')
     if not args.root:
         # >>>> ADAPTE ICI TES CHEMINS PAR DÉFAUT <<<<
-        args.root = r"C:\data\11-CHANTIERS\BURE\PDF"
-        args.out  = r"C:\data\11-CHANTIERS\BURE\pm_extraction.csv"
+        args.root = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\2025"
+        args.out  = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\2025\pm_extraction_2025.csv"
         args.verbose = True
         print("[INFO] Aucune racine fournie, utilisation des chemins par défaut.")
         print(f"[INFO] root = {args.root}")

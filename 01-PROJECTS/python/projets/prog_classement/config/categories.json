@@ -1,15 +1,16 @@
 {
   "IMPLANTATION": ["implant", "imp", "implantation"],
-  "AUSCULTATION": ["aus", "auscult", "conv", "convergences"],
-  "LEVE": ["levé", "leve", "lev", "lv", "topo", "topographique"],
-  "POLYGO": ["poly", "polygo", "refs", "reference"],
+  "AUSCULTATION": ["aus", "auscult", "aucultation", "conv", "convergences", "instrumentation", "nivellement", "auscultation", "smc", "instru", "pt0", "point zero"],
+  "LEVE": ["levé", "leve", "lev", "lv", "topo", "topographique", "profil", "profilo", "extrados", "intrados", "front", "boulons", "radiaux", "br", "carrure", "radier", "pm cintre"],
+  "POLYGO": ["poly", "polygo", "refs", "reference", "referentiel", "bouclage", "maj ref", "comparatif coordonnees"],
+  "PLAN": ["plan", "etablissement"],
   "THEORIQUES": ["theoriques", "theo", "prepa", "construction", "projet"],
   "METRES": ["metres", "métrés", "metrés"],
-  "ETUDE": ["etude", "etudes"],
+  "ETUDE": ["etude", "etudes", "synthese", "elements proj", "modifications"],
   "RECOLEMENT": ["recol", "rec", "doe"],
-  "REGLAGE": ["reg", "reglage"],
+  "REGLAGE": ["reg", "reglage", "relg"],
   "SCAN": ["scan", "target"],
-  "CONTROLE": ["controle", "control", "excavation", "massif", "verification"],
+  "CONTROLE": ["controle", "control", "excavation", "massif", "verification", "check"],
   "SURVEILLANCE": ["surveillance", "suivi", "monitoring"],
-  "DIVERS": ["divers", "autre", "temp", "test", "essai"]
+  "DIVERS": ["divers", "autre", "temp", "test", "essai", "probleme", "verif deviation", "determination", "rehabilitation", "tableaux"]
 }

@@ -17,35 +17,43 @@ seuil_coloration = 0.003  # seuil de coloration des écarts en mètres (3mm par 
 # ---------------------
 # MODE RÉINITIALISATION
 # ---------------------
-RESET_MODE = False  # Mettre True pour réinitialiser le fichier Excel
-KEEP_REFERENCES = True  # Garder les 4 premières colonnes (références) dans l'onglet "données"
+# Options: False = pas de reset | "full" = reset complet | "results" = reset seulement les résultats
+RESET_MODE = False  
+KEEP_REFERENCES = True  # Garder les 4 premières colonnes (références) dans l'onglet "données" (mode "full" uniquement)
 
 def reset_excel_file():
-    """Réinitialise le fichier Excel en gardant uniquement les en-têtes et l'onglet axe"""
-    print("🔄 MODE RÉINITIALISATION ACTIVÉ")
+    """Réinitialise le fichier Excel selon le mode choisi"""
+    if RESET_MODE == "full":
+        print("🔄 MODE RÉINITIALISATION COMPLET ACTIVÉ")
+    else:
+        print("🔄 MODE RÉINITIALISATION PARTIEL (résultats seulement)")
     
     wb = load_workbook(fichier_excel)
     
-    # Traiter l'onglet "données"
-    if feuille_source in wb.sheetnames:
-        ws = wb[feuille_source]
-        if KEEP_REFERENCES:
-            # Garder les 4 premières colonnes (Nom1, X1, Y1, Z1) et supprimer les colonnes 5-8
-            print(f"  📋 {feuille_source}: Conservation des références (colonnes A-D), suppression des mesures (E-H)")
-            # Supprimer toutes les lignes de données sauf l'en-tête
-            max_row = ws.max_row
-            if max_row > 1:
-                ws.delete_rows(2, max_row - 1)
-            # Effacer les colonnes E à H (mesures)
-            for row in ws.iter_rows(min_row=1, max_row=1, min_col=5, max_col=8):
-                for cell in row:
-                    cell.value = ["Nom2", "X2", "Y2", "Z2"][cell.column - 5]
-        else:
-            # Tout supprimer sauf l'en-tête
-            print(f"  📋 {feuille_source}: Suppression de toutes les données")
-            max_row = ws.max_row
-            if max_row > 1:
-                ws.delete_rows(2, max_row - 1)
+    # Traiter l'onglet "données" seulement en mode "full"
+    if RESET_MODE == "full":
+        if feuille_source in wb.sheetnames:
+            ws = wb[feuille_source]
+            if KEEP_REFERENCES:
+                # Garder les 4 premières colonnes (Nom1, X1, Y1, Z1) et supprimer les colonnes 5-8
+                print(f"  📋 {feuille_source}: Conservation des références (colonnes A-D), suppression des mesures (E-H)")
+                # Supprimer toutes les lignes de données sauf l'en-tête
+                max_row = ws.max_row
+                if max_row > 1:
+                    ws.delete_rows(2, max_row - 1)
+                # Effacer les colonnes E à H (mesures)
+                for row in ws.iter_rows(min_row=1, max_row=1, min_col=5, max_col=8):
+                    for cell in row:
+                        cell.value = ["Nom2", "X2", "Y2", "Z2"][cell.column - 5]
+            else:
+                # Tout supprimer sauf l'en-tête
+                print(f"  📋 {feuille_source}: Suppression de toutes les données")
+                max_row = ws.max_row
+                if max_row > 1:
+                    ws.delete_rows(2, max_row - 1)
+    else:
+        # Mode "results" : on ne touche pas à l'onglet "données"
+        print(f"  🔒 {feuille_source}: Préservé intact")
     
     # Réinitialiser les autres onglets (garder uniquement les en-têtes)
     for sheet_name in [feuille_resultat, onglet_non_associes_mes, onglet_non_associes_ref]:
@@ -76,7 +84,11 @@ def reset_excel_file():
     
     wb.save(fichier_excel)
     print("✅ Réinitialisation terminée !\n")
-    print("ℹ️  Pour désactiver ce mode, mettez RESET_MODE = False")
+    if RESET_MODE == "full":
+        print("ℹ️  Pour désactiver ce mode, mettez RESET_MODE = False")
+    else:
+        print("ℹ️  Pour reset complet (avec données), utilisez RESET_MODE = \"full\"")
+        print("ℹ️  Pour désactiver ce mode, mettez RESET_MODE = False")
     exit(0)
 
 # Exécuter la réinitialisation si demandé

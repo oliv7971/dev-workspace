@@ -11,8 +11,8 @@ from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
 
 # Chemins
-csv_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251103-rapport mensuel octobre\2-extractions\smc_output\Convergences_Ligne_SMC_2025_10.csv"
-output_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251103-rapport mensuel octobre\2-extractions\smc_output\Convergences_Formatees_Complet.xlsx"
+csv_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251201-rapport mensuel novembre\2-extractions\smc_output\Convergences_Ligne_SMC_2025_11.csv"
+output_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251201-rapport mensuel novembre\2-extractions\smc_output\Convergences_Formatees_Complet.xlsx"
 
 print("="*80)
 print("GÉNÉRATION CONVERGENCES FORMATÉES PAR SECTION")
@@ -143,6 +143,9 @@ def add_convergence_table(ws, section_data, start_row):
                 cell.font = mode_font
             else:
                 cell.font = data_font
+                # Appliquer format numérique à 1 décimale pour les valeurs numériques
+                if isinstance(cell.value, (int, float)):
+                    cell.number_format = '0.0'
             
             cell.alignment = Alignment(horizontal='center', vertical='center')
             cell.border = thin_border

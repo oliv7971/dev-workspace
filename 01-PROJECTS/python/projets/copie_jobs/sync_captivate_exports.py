@@ -49,9 +49,11 @@ EXPORTS_2_EXTS = {".txt", ".gsi", ".xyz"}
 def parse_source_dir_name(name: str) -> Optional[Tuple[dt.date, str]]:
     """
     Extrait (date, lieu) depuis un nom de dossier source Leica.
-    Attendu: 'YYYYMMDD_LIEU_...' (ex. '20250818_GHA_...').
+    Attendu: 'YYYYMMDD_LIEU_...' (ex. '20250818_GHA_...', '20251114_HA211_...').
+    Gère les suffixes numériques (ex. GCR2 -> GCR, GGS3 -> GGS).
+    Les codes avec chiffres intégrés sont préservés (ex. HA211, GRD6).
     """
-    m = re.match(r"^(?P<date>\d{8})_(?P<lieu>[A-Za-z]+)(?:_|$)", name)
+    m = re.match(r"^(?P<date>\d{8})_(?P<lieu>[A-Za-z0-9]+)(?:_|$)", name)
 
     if not m:
         return None
@@ -61,6 +63,16 @@ def parse_source_dir_name(name: str) -> Optional[Tuple[dt.date, str]]:
     except ValueError:
         return None
     lieu = m.group("lieu").upper()
+    
+    # Association GVR → GCR
+    if lieu == "GVR":
+        lieu = "GCR"
+    
+    # Si le lieu se termine par un seul chiffre (GCR2, GGS3, etc.), on le retire
+    # SAUF pour GRD6 et les codes avec chiffres intégrés (HA211, GHA105, etc.)
+    if len(lieu) > 1 and lieu[-1].isdigit() and not lieu[-2].isdigit() and lieu != "GRD6":
+        lieu = lieu[:-1]
+    
     return the_date, lieu
 
 def parse_month(month_str: str) -> Tuple[int, int]:
@@ -86,20 +98,43 @@ def find_day_targets(root: Path, the_date: dt.date, lieu: str) -> List[Path]:
     """
     Cherche les dossiers cibles dans TARGET_ROOT/YYYY/MM
     dont le nom commence par 'YYYY-MM-DD' ET contient le LIEU (mot complet).
+    Gère aussi les cas POLY+lieu (ex: POLYGGS -> cherche aussi GGS+POLY).
     """
     ym_dir = target_month_dir(root, the_date)
     if not ym_dir.exists():
         return []
     date_prefix = the_date.strftime("%Y-%m-%d")
-    token_re = re.compile(rf"(?<!\w){re.escape(lieu)}(?!\w)", re.IGNORECASE)
-
+    
+    # Liste des patterns à chercher
+    search_patterns = [lieu]
+    
+    # Si le lieu commence par POLY, ajouter une recherche pour lieu_base + POLY
+    if lieu.startswith("POLY") and len(lieu) > 4:
+        lieu_base = lieu[4:]  # Enlève "POLY"
+        search_patterns.append(lieu_base)
+    
     candidates: List[Path] = []
     for p in ym_dir.iterdir():
         if not p.is_dir():
             continue
         name = p.name
-        if name.startswith(date_prefix) and token_re.search(name):
-            candidates.append(p)
+        if not name.startswith(date_prefix):
+            continue
+        
+        # Cherche si un des patterns correspond
+        for pattern in search_patterns:
+            token_re = re.compile(rf"(?<!\w){re.escape(pattern)}(?!\w)", re.IGNORECASE)
+            if token_re.search(name):
+                # Pour POLY+lieu, vérifier que "POLY" est aussi présent
+                if pattern != lieu and lieu.startswith("POLY"):
+                    poly_re = re.compile(r"(?<!\w)POLY(?!\w)", re.IGNORECASE)
+                    if poly_re.search(name):
+                        candidates.append(p)
+                        break
+                else:
+                    candidates.append(p)
+                    break
+    
     return candidates
 
 def ensure_dir(p: Path, dry_run: bool):

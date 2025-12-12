@@ -30,8 +30,8 @@ from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
 
 # Chemins
-csv_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251103-rapport mensuel octobre\2-extractions\smc_output\Deplacements_Ligne_SMC_2025_10_avec_nb_cibles.csv"
-output_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251103-rapport mensuel octobre\2-extractions\smc_output\Deplacements_Spatial_Complet.xlsx"
+csv_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251201-rapport mensuel novembre\2-extractions\smc_output\Deplacements_Ligne_SMC_2025_11_avec_nb_cibles.csv"
+output_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251201-rapport mensuel novembre\2-extractions\smc_output\Deplacements_Spatial_Complet.xlsx"
 
 print("="*80)
 print("GÉNÉRATION PRÉSENTATION SPATIALE DES DÉPLACEMENTS")
@@ -64,11 +64,11 @@ thin_border = Border(
 )
 
 def format_value(val):
-    """Formate une valeur numérique"""
+    """Formate une valeur numérique à 1 décimale"""
     if pd.isna(val) or val == '':
         return ''
     try:
-        return round(float(val), 2)
+        return round(float(val), 1)
     except:
         return val
 
@@ -163,6 +163,9 @@ def add_spatial_layout_5_targets(ws, row_data, start_row, mode_label):
                 cell.fill = header_fill
             else:
                 cell.font = data_font
+                # Appliquer format numérique à 1 décimale pour les valeurs numériques
+                if isinstance(cell.value, (int, float)):
+                    cell.number_format = '0.0'
         cell.alignment = Alignment(horizontal='center', vertical='center')
         cell.border = thin_border
     
@@ -283,6 +286,9 @@ def add_spatial_layout_7_targets(ws, row_data, start_row, mode_label):
                 cell.fill = header_fill
             else:
                 cell.font = data_font
+                # Appliquer format numérique à 1 décimale pour les valeurs numériques
+                if isinstance(cell.value, (int, float)):
+                    cell.number_format = '0.0'
         cell.alignment = Alignment(horizontal='center', vertical='center')
         cell.border = thin_border
     

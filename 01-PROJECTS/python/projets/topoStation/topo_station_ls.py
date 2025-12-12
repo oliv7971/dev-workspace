@@ -283,10 +283,16 @@ class FreeStationLS:
 
 def read_controls_csv(path: Path) -> Dict[str, ControlPoint]:
     df = pd.read_csv(path)
+    # Supprimer les lignes avec des valeurs manquantes
+    df = df.dropna()
     controls = {}
     for _, row in df.iterrows():
-        controls[str(row["pid"])] = ControlPoint(
-            pid=str(row["pid"]), X=float(row["X"]), Y=float(row["Y"]), Z=float(row["Z"])
+        pid = str(row["pid"]).strip()
+        # Ignorer les lignes invalides
+        if not pid or pid == 'nan' or pid == '...':
+            continue
+        controls[pid] = ControlPoint(
+            pid=pid, X=float(row["X"]), Y=float(row["Y"]), Z=float(row["Z"])
         )
     return controls
 
@@ -301,11 +307,17 @@ def read_rays_csv(path: Optional[Path]) -> Dict[str, RayMeta]:
 
 def read_observations_csv(path: Path, default_angles_unit="gon") -> List[Observation]:
     df = pd.read_csv(path)
+    # Supprimer les lignes avec des valeurs manquantes
+    df = df.dropna(subset=['ray_id', 'pid', 'obs_type', 'value'])
     obs = []
     for _, row in df.iterrows():
         unit = row.get("unit", default_angles_unit)
+        pid = str(row["pid"]).strip()
+        # Ignorer les lignes invalides
+        if not pid or pid == 'nan' or pid == '...':
+            continue
         obs.append(Observation(
-            ray_id=str(row["ray_id"]), pid=str(row["pid"]),
+            ray_id=str(row["ray_id"]), pid=pid,
             obs_type=str(row["obs_type"]).strip().lower(),
             value=float(row["value"]), unit=str(unit),
             n_series=int(row.get("n_series", 1)),

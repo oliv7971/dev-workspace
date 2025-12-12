@@ -65,19 +65,22 @@ for annee in os.listdir(source_base):
                 os.makedirs(cible_a_classer, exist_ok=True)
 
                 destination = os.path.join(cible_a_classer, dossier)
+                
+                # Mode incrémental : ne copier que si le dossier n'existe pas déjà
                 if os.path.exists(destination):
-                    shutil.rmtree(destination)
-
-                shutil.copytree(chemin_dossier, destination)
-                print(f"[OK] {dossier} → {match}")
+                    print(f"[EXISTE DÉJÀ] {dossier} → {match} (ignoré)")
+                else:
+                    shutil.copytree(chemin_dossier, destination)
+                    print(f"[NOUVEAU] {dossier} → {match}")
 
             # Cas 2 : pas de correspondance → __NON_RECONNUS
             else:
                 dossier_non_reconnu = os.path.join(destination_base, "__NON_RECONNUS", "_a_classer", dossier)
                 os.makedirs(os.path.dirname(dossier_non_reconnu), exist_ok=True)
 
+                # Mode incrémental : ne copier que si le dossier n'existe pas déjà
                 if os.path.exists(dossier_non_reconnu):
-                    shutil.rmtree(dossier_non_reconnu)
-
-                shutil.copytree(chemin_dossier, dossier_non_reconnu)
-                print(f"[NON RECONNU] {dossier} → __NON_RECONNUS")
+                    print(f"[EXISTE DÉJÀ] {dossier} → __NON_RECONNUS (ignoré)")
+                else:
+                    shutil.copytree(chemin_dossier, dossier_non_reconnu)
+                    print(f"[NOUVEAU NON RECONNU] {dossier} → __NON_RECONNUS")

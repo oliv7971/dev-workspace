@@ -76,7 +76,11 @@ def reset_excel_file():
     
     wb.save(fichier_excel)
     print("✅ Réinitialisation terminée !\n")
-    print("ℹ️  Pour désactiver ce mode, mettez RESET_MODE = False")
+    if RESET_MODE == "full":
+        print("ℹ️  Pour désactiver ce mode, mettez RESET_MODE = False")
+    else:
+        print("ℹ️  Pour reset complet (avec données), utilisez RESET_MODE = \"full\"")
+        print("ℹ️  Pour désactiver ce mode, mettez RESET_MODE = False")
     exit(0)
 
 # Exécuter la réinitialisation si demandé

@@ -62,7 +62,15 @@ for galerie in os.listdir(DOSSIER_BASE):
         dossier_cible = os.path.join(destination_base, categorie, nom_dossier)
 
         if not os.path.exists(dossier_cible):
-            shutil.copytree(chemin_dossier, dossier_cible)
-            print(f"   [OK] {nom_dossier} → {categorie}")
+            try:
+                shutil.move(chemin_dossier, dossier_cible)
+                print(f"   [OK] {nom_dossier} → {categorie}")
+            except Exception as e:
+                print(f"   [ERREUR] Impossible de déplacer {nom_dossier} : {e}")
         else:
-            print(f"   [INFO] {nom_dossier} déjà présent → {categorie}")
+            # Le dossier existe déjà, on supprime celui de _a_classer pour éviter les doublons
+            try:
+                shutil.rmtree(chemin_dossier)
+                print(f"   [INFO] {nom_dossier} déjà présent → {categorie} (supprimé de _a_classer)")
+            except Exception as e:
+                print(f"   [ERREUR] Impossible de supprimer {nom_dossier} : {e}")

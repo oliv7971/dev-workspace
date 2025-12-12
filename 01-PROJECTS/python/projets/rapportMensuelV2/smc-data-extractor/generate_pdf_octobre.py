@@ -16,11 +16,11 @@ sys.path.insert(0, os.path.join(os.getcwd(), 'src'))
 
 from excel_to_pdf_native import print_excel_files_native
 
-input_dir = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251103-rapport mensuel octobre\1-tableaux"
-output_dir = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251103-rapport mensuel octobre\3-pdf-annexes"
+input_dir = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251201-rapport mensuel novembre\1-tableaux"
+output_dir = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251201-rapport mensuel novembre\3-pdf-annexes"
 
 print("="*70)
-print("GENERATION DES PDF - OCTOBRE 2025")
+print("GENERATION DES PDF - NOVEMBRE 2025")
 print("="*70)
 print(f"Source : {input_dir}")
 print(f"Sortie : {output_dir}")

@@ -1,0 +1,24 @@
+_.OPEN c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\batchDWG.dwg
+_.DXFOUT c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\batchDWG.dxf 16 
+_.CLOSE
+N
+_.OPEN c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\batchDWG.dxf.dwg
+_.DXFOUT c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\batchDWG.dxf.dxf 16 
+_.CLOSE
+N
+_.OPEN c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\Chartrain_vecteurs deplacement 2022-05_2014-07 - CC46.dwg
+_.DXFOUT c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\Chartrain_vecteurs deplacement 2022-05_2014-07 - CC46.dxf 16 
+_.CLOSE
+N
+_.OPEN c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\Chartrain_vecteurs deplacement 2022-05_2021-11 - CC46.dwg
+_.DXFOUT c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\Chartrain_vecteurs deplacement 2022-05_2021-11 - CC46.dxf 16 
+_.CLOSE
+N
+_.OPEN c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\Rouchain_vecteurs deplacement 2022-05_2014-07 - CC46.dwg
+_.DXFOUT c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\Rouchain_vecteurs deplacement 2022-05_2014-07 - CC46.dxf 16 
+_.CLOSE
+N
+_.OPEN c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\Rouchain_vecteurs deplacement 2022-05_2021-11 - CC46.dwg
+_.DXFOUT c:\data\20-DEVELOPPEMENT\01-PROJECTS\AutoLISP\vecteursDep\vecteurs\Rouchain_vecteurs deplacement 2022-05_2021-11 - CC46.dxf 16 
+_.CLOSE
+N

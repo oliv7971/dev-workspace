@@ -23,8 +23,8 @@ class SMCGui:
         self.root_folder_entry = ttk.Entry(folder_frame, width=60)
         self.root_folder_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
 
-        # Pré-remplir avec le chemin de base plus générique
-        default_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025"
+        # Pré-remplir avec le chemin de novembre
+        default_path = r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251201-rapport mensuel novembre\1-tableaux"
         self.root_folder_entry.insert(0, default_path)
 
         ttk.Button(folder_frame, text="Parcourir", command=self.browse_root_folder).pack(side=tk.RIGHT)
@@ -33,7 +33,7 @@ class SMCGui:
         ttk.Label(main_frame, text="Mois à traiter (YYYY-MM):", font=("Arial", 10, "bold")).pack(anchor=tk.W, pady=(0, 5))
         self.month_entry = ttk.Entry(main_frame, width=15)
         self.month_entry.pack(anchor=tk.W, pady=(0, 15))
-        self.month_entry.insert(0, "2025-09")  # Mois plus récent
+        self.month_entry.insert(0, "2025-11")  # Novembre 2025
 
         # Dossier de sortie
         ttk.Label(main_frame, text="Dossier de sortie:", font=("Arial", 10, "bold")).pack(anchor=tk.W, pady=(0, 5))
@@ -43,7 +43,7 @@ class SMCGui:
 
         self.output_folder_entry = ttk.Entry(output_frame, width=60)
         self.output_folder_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
-        self.output_folder_entry.insert(0, r"C:\temp\smc_output")
+        self.output_folder_entry.insert(0, r"C:\data\11-CHANTIERS\BURE\10-ACTIVITES\Rapports d'activité\2025\251201-rapport mensuel novembre\2-extractions\smc_output")
 
         ttk.Button(output_frame, text="Parcourir", command=self.browse_output_folder).pack(side=tk.RIGHT)
 
