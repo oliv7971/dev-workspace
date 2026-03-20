@@ -1,0 +1,1165 @@
+======================================================================
+Détection des doublons PA4X - Version 2
+Date: 2026-03-15 20:17:39
+======================================================================
+
+Répertoire local: 2363 répertoires trouvés
+
+Répertoire NAS: 253 répertoires trouvés
+
+======================================================================
+DOUBLONS TROUVÉS
+======================================================================
+
+1. 11-SET DIVERS
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\11-SET DIVERS
+
+2. 98-EN VRAC
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\98-EN VRAC
+
+3. divers
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\divers
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers
+
+4. 20-DIVERS STYLES
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\20-DIVERS STYLES
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\20-DIVERS STYLES
+
+5. 26-Alfonso
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\11-SET DIVERS\26-Alfonso
+
+6. 27-PA songstyles
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS\27-PA songstyles
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\11-SET DIVERS\27-PA songstyles
+
+7. Arjen001
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\Arjen001
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\42-SOUNDS\Arjen001
+
+8. pa4x-Bonus2022
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS\pa4x-Bonus2022
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-Bonus2022
+
+9. WiMeX_600DK
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\WiMeX_600DK
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\11-SET DIVERS\WiMeX_600DK
+
+10. Drzim_ti_miesto@Pa4x.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\Drzim_ti_miesto@Pa4x.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\98-EN VRAC\Drzim_ti_miesto@Pa4x.SET
+
+11. pa4x
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa4x
+
+12. Pa4XM_PaketDezember2020
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\Pa4XM_PaketDezember2020
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\01-KORG\02-STYLES KORG USINE\Pa4XM_PaketDezember2020
+
+13. Stylepaket_Pa1X_pro_elite
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\Stylepaket_Pa1X_pro_elite
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa1X_pro_elite\Stylepaket_Pa1X_pro_elite
+
+14. Y2K Converted Styles for Korg Arrangers and Kronos
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos
+   Local : D:\01-MUSIQUE\02-KORG PA4X\20-Styles seuls\Y2K Converted Styles for Korg Arrangers and Kronos
+
+15. 05-PA SONGSTYLES
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\05-PA SONGSTYLES
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\05-PA SONGSTYLES
+
+16. 09-SONGSTYLES PETE
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\09-SONGSTYLES PETE
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\09-SONGSTYLES PETE
+
+17. 14-createSongStyles
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\14-createSongStyles
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\14-createSongStyles
+
+18. 15-korgForum
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\15-korgForum
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\15-korgForum
+
+19. 16-divers styles 2
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\16-divers styles 2
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\16-divers styles 2
+
+20. 16-home planet
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\16-home planet
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\16-home planet
+
+21. 17-Styles VA
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\17-Styles VA
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA
+
+22. 18-audiokeys
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\18-audiokeys
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys
+
+23. 28-korg_pa_sk
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\28-korg_pa_sk
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\28-korg_pa_sk
+
+24. 29-PARTY SCHLAGER
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\29-PARTY SCHLAGER
+
+25. 29_divers srtyles
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\29_divers srtyles
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\29_divers srtyles
+
+26. 30-PIANYSET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\30-PIANYSET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET
+
+27. BOSENDOR
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\BOSENDOR
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\05-SET DIVERS\BOSENDOR
+
+28. DOJI
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\DOJI
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\05-SET DIVERS\DOJI
+
+29. ROLAND pour KORG
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\ROLAND pour KORG
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\ROLAND pour KORG
+
+30. SOLTON KETRON pour KORG
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\SOLTON KETRON pour KORG
+
+31. STYLES CLAVIERS KORG
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES CLAVIERS KORG
+
+32. STYLES DIVERS
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS
+
+33. STYLES PA80
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PA80\STYLES PA80
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80
+
+34. STYLES PEGASUS
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PEGASUS
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES PEGASUS
+
+35. TECHNICS pour KORG
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\TECHNICS pour KORG
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\TECHNICS pour KORG
+
+36. Boney_M_Pa800.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Boney_M_Pa800.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809\Boney_M_Pa800.SET
+
+37. Korg Style Sets
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Korg Style Sets
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\Korg Style Sets\__MACOSX\Korg Style Sets
+
+38. pa600 for pa3x.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\pa600 for pa3x.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\pa600 for pa3x.SET\__MACOSX\pa600 for pa3x.SET
+
+39. alfonsosynthe  janvier 2011
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe  janvier 2011
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe  janvier 2011
+
+40. alfonsosynthe  novembre 2011
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe  novembre 2011
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe  novembre 2011
+
+41. alfonsosynthe av&amp;#1
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe av&amp;#1
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\11-SET DIVERS\26-Alfonso\alfonsosynthe av&amp;#1
+
+42. alfonsosynthe avril 2011
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe avril 2011
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe avril 2011
+
+43. alfonsosynthe avril 2012
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe avril 2012
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe avril 2012
+
+44. alfonsosynthe décembre 2011
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe décembre 2011
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe décembre 2011
+
+45. alfonsosynthe fevrier 2010
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe fevrier 2010
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe fevrier 2010
+
+46. alfonsosynthe février 2011
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe février 2011
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe février 2011
+
+47. alfonsosynthe février 2012
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe février 2012
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe février 2012
+
+48. alfonsosynthe janvier 2012
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe janvier 2012
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe janvier 2012
+
+49. alfonsosynthe mars 2012
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe mars 2012
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe mars 2012
+
+50. alfonsosynthe novembre 2009
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe novembre 2009
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe novembre 2009
+
+51. alfonsosynthe octobre 2010
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe octobre 2010
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe octobre 2010
+
+52. ALWAYS ALFONSOSYNTHE.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\ALWAYS ALFONSOSYNTHE.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\ALWAYS ALFONSOSYNTHE.SET
+
+53. PAN-FLUTE ALFONSO.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\PAN-FLUTE ALFONSO.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\PAN-FLUTE ALFONSO.SET\PAN-FLUTE ALFONSO.SET
+
+54. PA 4x Song_Styles
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\05-PA SONGSTYLES\PA 4x Song_Styles
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\05-PA SONGSTYLES\PA 4x Song_Styles
+
+55. PA Songstyles-1
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS\27-PA songstyles\PA Songstyles-1
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\PA Songstyles-1\PA Songstyles-1
+
+56. PA Songstyles_good
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\05-PA SONGSTYLES\PA Songstyles_good
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\PA Songstyles_good\__MACOSX\PA Songstyles_good
+
+57. __MACOSX
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS\pa4x-Bonus2022\__MACOSX
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\pa600 for pa3x.SET\__MACOSX
+
+58. Drzim ti miesto@Pa4x.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\Drzim_ti_miesto@Pa4x.SET\Drzim ti miesto@Pa4x.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\98-EN VRAC\Drzim_ti_miesto@Pa4x.SET\Drzim ti miesto@Pa4x.SET
+
+59. 4 x efko sadece ses.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\4 x efko sadece ses.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\98-EN VRAC\pa4x\4 x efko sadece ses.SET
+
+60. BONUSWARE_1-13.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\BONUSWARE_1-13.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\98-EN VRAC\pa4x\BONUSWARE_1-13.SET
+
+61. BONUSWARE_14-32.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\BONUSWARE_14-32.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\pa4x_a_classer\98-EN VRAC\pa4x\BONUSWARE_14-32.SET
+
+62. DON48 STYLES COMPLETE
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\DON48 STYLES COMPLETE
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\DON48 STYLES COMPLETE
+
+63. FABIO!!!.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\FABIO!!!.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\FABIO!!!.SET
+
+64. JOHN SMIES COMPLETE BACKUP
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\JOHN SMIES COMPLETE BACKUP
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\JOHN SMIES COMPLETE BACKUP
+
+65. John_Smies
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\John_Smies
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\John_Smies
+
+66. M&C Musical - Dan Stanciu
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\M&C Musical - Dan Stanciu
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\M&C Musical - Dan Stanciu
+
+67. OLAVIER.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\OLAVIER.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\OLAVIER.SET
+
+68. OXYGENE4.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\OXYGENE4.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\OXYGENE4.SET
+
+69. Pa4X_MUSIKANT_Paket_Dezember2020.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\Pa4XM_PaketDezember2020\Pa4X_MUSIKANT_Paket_Dezember2020.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\01-KORG\02-STYLES KORG USINE\Pa4XM_PaketDezember2020\Pa4X_MUSIKANT_Paket_Dezember2020.SET
+
+70. eurodance
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\eurodance
+   Local : D:\01-MUSIQUE\02-KORG PA4X\20-Styles seuls\Y2K Converted Styles for Korg Arrangers and Kronos\eurodance
+
+71. Ketron
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Ketron
+   Local : D:\01-MUSIQUE\02-KORG PA4X\20-Styles seuls\Y2K Converted Styles for Korg Arrangers and Kronos\Ketron
+
+72. Roland
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Roland
+   Local : D:\01-MUSIQUE\02-KORG PA4X\20-Styles seuls\Y2K Converted Styles for Korg Arrangers and Kronos\Roland
+
+73. Songs
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Songs
+   Local : D:\01-MUSIQUE\02-KORG PA4X\20-Styles seuls\Y2K Converted Styles for Korg Arrangers and Kronos\Songs
+
+74. Technics
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Technics
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\TECHNICS
+
+75. Wersi
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Wersi
+   Local : D:\01-MUSIQUE\02-KORG PA4X\20-Styles seuls\Y2K Converted Styles for Korg Arrangers and Kronos\Wersi\Wersi
+
+76. Best_i1.set
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\09-SONGSTYLES PETE\Best_i1.set
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\2008-03-02\Best_i1.set
+
+77. Best_i2.set
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\09-SONGSTYLES PETE\Best_i2.set
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\2008-03-02\Best_i2.set
+
+78. 10-KORG BONUSWARE
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\10-KORG BONUSWARE
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\01-KORG\10-KORG BONUSWARE
+
+79. 21-PLANETKEYBOARD
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\21-PLANETKEYBOARD
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\21-PLANETKEYBOARD
+
+80. 22-CAMARO
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\22-CAMARO
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\02-SET PAYANTS\22-CAMARO
+
+81. 23-D-O-O
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\23-D-O-O
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\02-SET PAYANTS\23-D-O-O
+
+82. 24-ADWORLD
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\24-ADWORLD
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\02-SET PAYANTS\24-ADWORLD
+
+83. 31-eklablog
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\31-eklablog
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\31-eklablog
+
+84. AD World Free Sets KORG Pa Series
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\AD World Free Sets KORG Pa Series
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series
+
+85. FAVORITE09
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\FAVORITE09
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(03)KORG FActory\07-Dopamine-PA600-v2.6.SET\Dopamine-PA600-2.6.SET\STYLE\FAVORITE09
+
+86. homeplanet
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\homeplanet
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\01-KORG\04-STYLES AUTRES PA\homeplanet
+
+87. KORG
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\KORG
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\2008-03-02\korg
+
+88. Korg Pa700 Euro Cool.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\Korg Pa700 Euro Cool.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\Korg Pa700 Euro Cool.SET\Korg Pa700 Euro Cool.SET
+
+89. Chart_Hit_9_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_9_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_Sept-09\Chart_Hit_9_Pa285.SET
+
+90. Rock
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\14-createSongStyles\Rock
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\14-createSongStyles\Rock\__MACOSX\Rock
+
+91. Technics Sets
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\14-createSongStyles\Technics Sets
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\14-createSongStyles\Technics Sets\__MACOSX\Technics Sets
+
+92. Pa4x Osimo V1.1.SET(1)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\16-divers styles 2\Pa4x Osimo V1.1.SET(1)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\20-DIVERS STYLES\Pa4x Osimo V1.1.SET(1)
+
+93. (03)KORG FActory
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\17-Styles VA\(03)KORG FActory
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(03)KORG FActory
+
+94. (07) KORG PA
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\17-Styles VA\(07) KORG PA
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA
+
+95. 2_4__POL.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\2_4__POL.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\2_4__POL.SET\2_4__POL.SET
+
+96. 3_4__FOL.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\3_4__FOL.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\Pegasus1_Internal\3_4__FOL.SET
+
+97. 6 styles pa2x pro
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\6 styles pa2x pro
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\6 styles pa2x pro
+
+98. 6_8_BALL.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\6_8_BALL.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\6_8_BALL.SET\6_8_BALL.SET
+
+99. Audya pour Pa600.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG\Audya pour Pa600.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Audya pour Pa600.SET
+
+100. CAR_WASH.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\CAR_WASH.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\CAR_WASH.SET\CAR_WASH.SET
+
+101. Chords! FR 22-09-2009
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Chords! FR 22-09-2009
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Chords! FR 22-09-2009
+
+102. chrisdegset
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\chrisdegset
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\chrisdegset
+
+103. CoverSpaceOpera
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\CoverSpaceOpera
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\CoverSpaceOpera
+
+104. DanyKorg.set
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\DanyKorg.set
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\DanyKorg.set
+
+105. Divers_styles
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Divers_styles
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Divers_styles
+
+106. doo_Pa2x-800-500
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\doo_Pa2x-800-500
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\doo_Pa2x-800-500\doo_Pa2x-800-500
+
+107. e-miel_Korg_PA800_PA2X
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\e-miel_Korg_PA800_PA2X
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\e-miel_Korg_PA800_PA2X
+
+108. Flash in the night
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Flash in the night
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Flash in the night
+
+109. HEAVY_1.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\HEAVY_1.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\HEAVY_1.SET\HEAVY_1.SET
+
+110. Higher
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Higher
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Higher
+
+111. JAZZ_ROC.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\JAZZ_ROC.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\JAZZ_ROC.SET\JAZZ_ROC.SET
+
+112. KORG.de aout-2010
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de aout-2010
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de aout-2010
+
+113. Korg.de juil-10
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de juil-10
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de juil-10
+
+114. KORG.de juin-10
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de juin-10
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de juin-10
+
+115. korg.de nov-09
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\korg.de nov-09
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\korg.de nov-09
+
+116. korg.de oct-09
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\korg.de oct-09
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\korg.de oct-09
+
+117. KORG.de oct-10
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de oct-10
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de oct-10
+
+118. KORG.de sept-2010
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de sept-2010
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de sept-2010
+
+119. Korg.de_avril-10
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_avril-10
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_avril-10
+
+120. KORG.de_Dec-2010
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de_Dec-2010
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de_Dec-2010
+
+121. Korg.de_déc-09
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_déc-09
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_déc-09
+
+122. Korg.de_fÃ©v-10
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_fÃ©v-10
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_fÃ©v-10
+
+123. Korg.de_janv-10
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_janv-10
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_janv-10
+
+124. KORG.de_mai-2010
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de_mai-2010
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de_mai-2010
+
+125. Korg.de_mars-10
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_mars-10
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_mars-10
+
+126. KORG.de_Nov-10
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de_Nov-10
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de_Nov-10
+
+127. Korg.de_Sept-09
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_Sept-09
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_Sept-09
+
+128. LONELY LISA.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\LONELY LISA.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\LONELY LISA.SET\LONELY LISA.SET
+
+129. LOVE IS IN THE HAIR.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\LOVE IS IN THE HAIR.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\LOVE IS IN THE HAIR.SET\LOVE IS IN THE HAIR.SET
+
+130. Moi je veux.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Moi je veux.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Moi je veux.SET\Moi je veux.SET
+
+131. MUESETT3.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\MUESETT3.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\MUESETT3.SET\MUESETT3.SET
+
+132. OrguesEmiel
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\OrguesEmiel
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\OrguesEmiel
+
+133. PA3X 2019 02 06
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\PA3X 2019 02 06
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\PA3X 2019 02 06
+
+134. PA3X 2019 02 06(1)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\PA3X 2019 02 06(1)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\PA3X 2019 02 06(1)
+
+135. Pegasus1_Internal
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PEGASUS\Pegasus1_Internal
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\Pegasus1_Internal
+
+136. Pegasus2_Internal
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PEGASUS\Pegasus2_Internal
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Pegasus2_Internal\Pegasus2_Internal
+
+137. Philzic Vintage organ.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Philzic Vintage organ.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Philzic Vintage organ.SET\Philzic Vintage organ.SET
+
+138. Secretservice
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Secretservice
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Secretservice
+
+139. SET_OLAVIER(3)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\SET_OLAVIER(3)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\SET_OLAVIER(3)
+
+140. Soltonx1fabio.set
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG\Soltonx1fabio.set
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Soltonx1fabio.set\Soltonx1fabio.set
+
+141. STYLE
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\STYLE
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\cvp-styles2\Waltz.SET\Waltz.SET\STYLE
+
+142. style dance 2000
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\style dance 2000
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\style dance 2000\style dance 2000
+
+143. StyleMusePanicStation
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\StyleMusePanicStation
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\StyleMusePanicStation
+
+144. Stylepaket_Pa285_0809
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\Stylepaket_Pa285_0809
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809
+
+145. Stylepaket_Pa500Musikant_0809
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\Stylepaket_Pa500Musikant_0809
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa500Musikant_0809\Stylepaket_Pa500Musikant_0809
+
+146. STYLES PA80 CD1
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PA80\STYLES PA80 CD1
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80 CD1\STYLES PA80 CD1
+
+147. STYLES PA80 CD2
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PA80\STYLES PA80 CD2
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80 CD2\STYLES PA80 CD2
+
+148. styles portuguais
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\styles portuguais
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\styles portuguais
+
+149. TOI_PLUS_MOI.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\TOI_PLUS_MOI.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\TOI_PLUS_MOI.SET
+
+150. VENEZIANO 2010.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\VENEZIANO 2010.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\ALWAYS ALFONSOSYNTHE.SET\alfonsosynthe octobre 2010\VENEZIANO 2010.SET
+
+151. Walking BassRock
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Walking BassRock
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Walking BassRock\Walking BassRock
+
+152. WALTZ_2B.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\WALTZ_2B.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\WALTZ_2B.SET\WALTZ_2B.SET
+
+153. AD.KORG.MC.CMI-Bonus Pa4X.SET(1)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\AD.KORG.MC.CMI-Bonus Pa4X.SET(1)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\AD.KORG.MC.CMI-Bonus Pa4X.SET(1)
+
+154. HOTRSUN.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\HOTRSUN.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\20-DIVERS STYLES\HOTRSUN.SET\HOTRSUN.SET
+
+155. KORG PA DEMO SONGS
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\KORG PA DEMO SONGS
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\20-DIVERS STYLES\KORG PA DEMO SONGS
+
+156. LAMIOS_DEMO.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\LAMIOS_DEMO.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\20-DIVERS STYLES\LAMIOS_DEMO.SET(1)\LAMIOS_DEMO.SET
+
+157. Lotsa_styles
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Lotsa_styles
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\20-DIVERS STYLES\Lotsa_styles
+
+158. MusikantStyle.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\MusikantStyle.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\20-DIVERS STYLES\MusikantStyle.SET
+
+159. MusikantStyle.SET(1)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\MusikantStyle.SET(1)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\20-DIVERS STYLES\MusikantStyle.SET(1)
+
+160. Pa1000_MUSIKANT_v100
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Pa1000_MUSIKANT_v100
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\20-DIVERS STYLES\Pa1000_MUSIKANT_v100
+
+161. pa4x-Song_Styles (2)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\pa4x-Song_Styles (2)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\09-SONGSTYLES PETE\pa4x-Song_Styles (2)
+
+162. Partyhit
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Partyhit
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\29_divers srtyles\Partyhit
+
+163. skerratt_london_piano_pack
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\skerratt_london_piano_pack
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\20-DIVERS STYLES\skerratt_london_piano_pack\skerratt_london_piano_pack
+
+164. Sound-v01
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Sound-v01
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\42-SOUNDS\Sound-v01
+
+165. Styl-v11
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Styl-v11
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\29_divers srtyles\Styl-v11
+
+166. Styl-v12
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Styl-v12
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\Styl-v12
+
+167. upright_steingraeber
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\upright_steingraeber
+   Local : D:\01-MUSIQUE\02-KORG PA4X\09-SET DIVERS\20-DIVERS STYLES\upright_steingraeber
+
+168. korg PASK
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\28-korg_pa_sk\korg PASK
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\05-SET DIVERS\korg PASK
+
+169. Alpenschlager_1_Pa800.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Alpenschlager_1_Pa800.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809\Alpenschlager_1_Pa800.SET
+
+170. Chart_Hit_12_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_12_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_janv-10\Chart_Hit_12_Pa285.SET
+
+171. Chart_Hit_14_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_14_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de_mai-2010\Chart_Hit_14_Pa285.SET
+
+172. Chart_Hit_16_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_16_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de juin-10\Chart_Hit_16_Pa285.SET
+
+173. Chart_Hit_17_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_17_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de juil-10\Chart_Hit_17_Pa285.SET
+
+174. Chart_Hit_20_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_20_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de_Nov-10\Chart_Hit_20_Pa285.SET
+
+175. Chart_Hit_6_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_6_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809\Chart_Hit_6_Pa285.SET
+
+176. Chart_Hit_7_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_7_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809\Chart_Hit_7_Pa285.SET
+
+177. Chart_Pop2_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Pop2_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_mars-10\Chart_Pop2_Pa285\Chart_Pop2_Pa285.SET
+
+178. DeutschPop_2008_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\DeutschPop_2008_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809\DeutschPop_2008_Pa285.SET
+
+179. FetenHit1_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\FetenHit1_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809\FetenHit1_Pa285.SET
+
+180. FetenHit3_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\FetenHit3_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_avril-10\FetenHit3_Pa285.SET
+
+181. FetenHit4_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\FetenHit4_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de juin-10\FetenHit4_Pa285.SET
+
+182. FetenHit6_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\FetenHit6_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\KORG.de oct-10\FetenHit6_Pa285.SET
+
+183. Happy_Beat_2_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Happy_Beat_2_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809\Happy_Beat_2_Pa285.SET
+
+184. NewEveParty2012
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\NewEveParty2012
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\NewEveParty2012
+
+185. NewEveParty2012(1)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\NewEveParty2012(1)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\31-eklablog\NewEveParty2012(1)
+
+186. Partyhit(1)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Partyhit(1)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\31-eklablog\Partyhit(1)
+
+187. Party_Beat_3_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Party_Beat_3_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Stylepaket_Pa285_0809\Stylepaket_Pa285_0809\Party_Beat_3_Pa285.SET
+
+188. Party_Hit_2009_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Party_Hit_2009_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\Party_Hit_2009_Pa285.SET\Party_Hit_2009_Pa285.SET
+
+189. Party_Mix3_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Party_Mix3_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\Party_Mix3_Pa285.SET\Party_Mix3_Pa285.SET
+
+190. Pop_Remember4_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Pop_Remember4_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\Pop_Remember4_Pa285.SET\Pop_Remember4_Pa285.SET
+
+191. Pop_Remember6_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Pop_Remember6_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\17-Styles VA\(07) KORG PA\divers\Pop_Remember6_Pa285.SET\Pop_Remember6_Pa285.SET
+
+192. Rock_Shuffle_Pa285.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Rock_Shuffle_Pa285.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\Korg.de_mars-10\Rock_Shuffle_Pa285\Rock_Shuffle_Pa285.SET
+
+193. Karg PA4x Diaklatianus Sİlver.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\Karg PA4x Diaklatianus Sİlver.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Karg PA4x Diaklatianus Sİlver.SET\Karg PA4x Diaklatianus Sİlver.SET
+
+194. Pa4x efko sadece ses.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\30-PIANYSET\Pa4x efko sadece ses.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x efko sadece ses.SET
+
+195. Pa4x Full Bank Performance Sound (piyanistset.com).SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Full Bank Performance Sound (piyanistset.com).SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Full Bank Performance Sound (piyanistset.com).SET\Pa4x Full Bank Performance Sound (piyanistset.com).SET
+
+196. Pa4x Güzel Karma Mart 2019.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Güzel Karma Mart 2019.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Güzel Karma Mart 2019.SET
+
+197. Pa4x junioraytos Bulgar.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x junioraytos Bulgar.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x junioraytos Bulgar.SET
+
+198. Pa4x Karma APO.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Karma APO.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Karma APO.SET\Pa4x Karma APO.SET
+
+199. Pa4x Karma İyi.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Karma İyi.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Karma İyi.SET\Pa4x Karma İyi.SET
+
+200. pa4x Meti Balkan.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\pa4x Meti Balkan.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\pa4x Meti Balkan.SET
+
+201. Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET
+
+202. PA4X POP & SUPER PADS.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\PA4X POP & SUPER PADS.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\PA4X POP & SUPER PADS.SET\PA4X POP & SUPER PADS.SET
+
+203. Pa4x ses paketi ve ritim Sound&Style.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x ses paketi ve ritim Sound&Style.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x ses paketi ve ritim Sound&Style.SET
+
+204. pa4x ses sound pack ei.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\pa4x ses sound pack ei.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\pa4x ses sound pack ei.SET\pa4x ses sound pack ei.SET
+
+205. Pa4x Super Performance Sound Piyanistset.com .SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Super Performance Sound Piyanistset.com .SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Super Performance Sound Piyanistset.com .SET\Pa4x Super Performance Sound Piyanistset.com .SET
+
+206. Pa4x t-BOM .SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x t-BOM .SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x t-BOM .SET\Pa4x t-BOM .SET
+
+207. 4x.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\31-SET DIVERS\4x.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\20-DIVERS STYLES\4x.SET\4x.SET
+
+208. Pa4x acoustic legend.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\31-SET DIVERS\Pa4x acoustic legend.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\30-SOUNDS\Pa4x acoustic legend.SET
+
+209. Pa4x Osimo V1.1.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\Pa4x Osimo V1.1.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\40-SONGBOOKS\Pa4x Osimo V1.1.SET
+
+210. Dopamine-PA600-v2.6.SET(1)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\Dopamine-PA600-v2.6.SET(1)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\06-DOPAMINE\Dopamine-PA600-v2.6.SET(1)
+
+211. I Love You
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\I Love You
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You
+
+212. BOSENDOR.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\BOSENDOR\BOSENDOR.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\05-SET DIVERS\BOSENDOR\BOSENDOR.SET
+
+213. DOJI.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\DOJI\DOJI.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\05-SET DIVERS\DOJI\DOJI.SET
+
+214. DOJIPLUS.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\DOJI\DOJIPLUS.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\05-SET DIVERS\DOJI\DOJIPLUS.SET
+
+215. 05-Roland BK-G70-G1000.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\ROLAND pour KORG\05-Roland BK-G70-G1000.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\05-Roland BK-G70-G1000.SET
+
+216. 07-Roland EA7-BK9-G1000.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\ROLAND pour KORG\07-Roland EA7-BK9-G1000.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\07-Roland EA7-BK9-G1000.SET
+
+217. 09-Roland divers.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\ROLAND pour KORG\09-Roland divers.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\09-Roland divers.SET
+
+218. 03-SoltonMS & KetronSD1.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG\03-SoltonMS & KetronSD1.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\03-SoltonMS & KetronSD1.SET
+
+219. 04-Ketron Midjay-XD3-X1.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG\04-Ketron Midjay-XD3-X1.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\04-Ketron Midjay-XD3-X1.SET
+
+220. 01-PA4X Musikant bk1àbk13.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\01-PA4X Musikant bk1àbk13.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\01-PA4X Musikant bk1àbk13.SET
+
+221. 02-PA800 Factory styles-1.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\02-PA800 Factory styles-1.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\02-PA800 Factory styles-1.SET
+
+222. 06-Korg-i3-i30.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\06-Korg-i3-i30.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\06-Korg-i3-i30.SET
+
+223. Korg PA4X SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Korg PA4X SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET
+
+224. laGrenade-claraLuciani-Boum!.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\laGrenade-claraLuciani-Boum!.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\laGrenade-claraLuciani-Boum!.SET
+
+225. PA4X_Bonus.SET(1)
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\PA4X_Bonus.SET(1)
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\PA4X_Bonus.SET(1)
+
+226. TECHNOM.D.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\TECHNOM.D.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\TECHNOM.D.SET
+
+227. TRANSFER.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\TRANSFER.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\TRANSFER.SET\TRANSFER.SET
+
+228. Styles - vol. 35
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Styles - vol. 35
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\31-eklablog\Styles-vol.-35\Styles - vol. 35
+
+229. Styles - vol. 36
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Styles - vol. 36
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\01-KORG\03-STYLES KORG BONUSWARE\Styles - vol. 36
+
+230. 10-Divers-PA1000-Tecnics.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\TECHNICS pour KORG\10-Divers-PA1000-Tecnics.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\03-SET AUTRES CLAVIERS\STYLES DIVERS\Korg PA4X SET\10-Divers-PA1000-Tecnics.SET
+
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\11-SET DIVERS
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\98-EN VRAC
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\divers -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\divers
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\20-DIVERS STYLES -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\20-DIVERS STYLES
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\26-Alfonso
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS\27-PA songstyles: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\Arjen001 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Arjen001
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS\pa4x-Bonus2022: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\WiMeX_600DK -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\WiMeX_600DK
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\Drzim_ti_miesto@Pa4x.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\pa4x
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\Pa4XM_PaketDezember2020: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\Stylepaket_Pa1X_pro_elite -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Stylepaket_Pa1X_pro_elite
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Y2K Converted Styles for Korg Arrangers and Kronos
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\05-PA SONGSTYLES -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\05-PA SONGSTYLES
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\09-SONGSTYLES PETE -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\09-SONGSTYLES PETE
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\14-createSongStyles -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\14-createSongStyles
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\15-korgForum -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\15-korgForum
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\16-divers styles 2 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\16-divers styles 2
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\16-home planet -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\16-home planet
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\17-Styles VA -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\17-Styles VA
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\18-audiokeys -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\18-audiokeys
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\28-korg_pa_sk -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\28-korg_pa_sk
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\29-PARTY SCHLAGER
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\29_divers srtyles -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\29_divers srtyles
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\30-PIANYSET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\30-PIANYSET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\BOSENDOR -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\BOSENDOR
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\DOJI -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\DOJI
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\ROLAND pour KORG -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\ROLAND pour KORG
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\SOLTON KETRON pour KORG
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\STYLES CLAVIERS KORG
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\STYLES DIVERS
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PA80\STYLES PA80 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\STYLES PA80
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PEGASUS -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\STYLES PEGASUS
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\TECHNICS pour KORG -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\TECHNICS pour KORG
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Boney_M_Pa800.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Boney_M_Pa800.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Korg Style Sets -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg Style Sets
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\pa600 for pa3x.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\pa600 for pa3x.SET
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe  janvier 2011: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe  novembre 2011: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe av&amp;#1: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe avril 2011: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe avril 2012: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe décembre 2011: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe fevrier 2010: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe février 2011: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe février 2012: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe janvier 2012: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe mars 2012: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe novembre 2009: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\alfonsosynthe octobre 2010: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\ALWAYS ALFONSOSYNTHE.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\26-Alfonso\PAN-FLUTE ALFONSO.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\05-PA SONGSTYLES\PA 4x Song_Styles -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\PA 4x Song_Styles
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS\27-PA songstyles\PA Songstyles-1: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\05-PA SONGSTYLES\PA Songstyles_good -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\PA Songstyles_good
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\11-SET DIVERS\pa4x-Bonus2022\__MACOSX: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\Drzim_ti_miesto@Pa4x.SET\Drzim ti miesto@Pa4x.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\4 x efko sadece ses.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\BONUSWARE_1-13.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\BONUSWARE_14-32.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\DON48 STYLES COMPLETE: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\FABIO!!!.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\JOHN SMIES COMPLETE BACKUP: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\John_Smies: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\M&C Musical - Dan Stanciu: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\OLAVIER.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\pa4x\OXYGENE4.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\98-EN VRAC\Pa4XM_PaketDezember2020\Pa4X_MUSIKANT_Paket_Dezember2020.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\eurodance: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Ketron: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Roland: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Songs: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Technics: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\Y2K Converted Styles for Korg Arrangers and Kronos\Wersi: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\09-SONGSTYLES PETE\Best_i1.set -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Best_i1.set
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\09-SONGSTYLES PETE\Best_i2.set -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Best_i2.set
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\10-KORG BONUSWARE -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\10-KORG BONUSWARE
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\21-PLANETKEYBOARD -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\21-PLANETKEYBOARD
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\22-CAMARO -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\22-CAMARO
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\23-D-O-O -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\23-D-O-O
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\24-ADWORLD -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\24-ADWORLD
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\31-eklablog -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\31-eklablog
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\AD World Free Sets KORG Pa Series -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\AD World Free Sets KORG Pa Series
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\FAVORITE09 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\FAVORITE09
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\homeplanet -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\homeplanet
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\KORG -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\10-AUTRES SET ET STYLES\Korg Pa700 Euro Cool.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg Pa700 Euro Cool.SET
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_9_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\14-createSongStyles\Rock -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Rock
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\14-createSongStyles\Technics Sets -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Technics Sets
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\16-divers styles 2\Pa4x Osimo V1.1.SET(1): [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\17-Styles VA\(03)KORG FActory: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\17-Styles VA\(07) KORG PA: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\2_4__POL.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\2_4__POL.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\3_4__FOL.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\3_4__FOL.SET
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\6 styles pa2x pro: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\6_8_BALL.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\6_8_BALL.SET
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG\Audya pour Pa600.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\CAR_WASH.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\CAR_WASH.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Chords! FR 22-09-2009 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Chords! FR 22-09-2009
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\chrisdegset -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\chrisdegset
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\CoverSpaceOpera -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\CoverSpaceOpera
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\DanyKorg.set -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\DanyKorg.set
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Divers_styles -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Divers_styles
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\doo_Pa2x-800-500 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\doo_Pa2x-800-500
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\e-miel_Korg_PA800_PA2X -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\e-miel_Korg_PA800_PA2X
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Flash in the night -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Flash in the night
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\HEAVY_1.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\HEAVY_1.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Higher -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Higher
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\JAZZ_ROC.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\JAZZ_ROC.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de aout-2010 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG.de aout-2010
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de juil-10 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg.de juil-10
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de juin-10 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG.de juin-10
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\korg.de nov-09 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\korg.de nov-09
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\korg.de oct-09 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\korg.de oct-09
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de oct-10 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG.de oct-10
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de sept-2010 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG.de sept-2010
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_avril-10 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg.de_avril-10
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de_Dec-2010 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG.de_Dec-2010
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_déc-09 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg.de_déc-09
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_fÃ©v-10 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg.de_fÃ©v-10
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_janv-10 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg.de_janv-10
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de_mai-2010 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG.de_mai-2010
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_mars-10 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg.de_mars-10
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\KORG.de_Nov-10 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG.de_Nov-10
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Korg.de_Sept-09 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg.de_Sept-09
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\LONELY LISA.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\LONELY LISA.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\LOVE IS IN THE HAIR.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\LOVE IS IN THE HAIR.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Moi je veux.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Moi je veux.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\MUESETT3.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\MUESETT3.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\OrguesEmiel -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\OrguesEmiel
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\PA3X 2019 02 06 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\PA3X 2019 02 06
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\PA3X 2019 02 06(1) -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\PA3X 2019 02 06(1)
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PEGASUS\Pegasus1_Internal: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PEGASUS\Pegasus2_Internal: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Philzic Vintage organ.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Philzic Vintage organ.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Secretservice -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Secretservice
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\SET_OLAVIER(3) -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\SET_OLAVIER(3)
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG\Soltonx1fabio.set: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\STYLE -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\STYLE
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\style dance 2000 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\style dance 2000
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\StyleMusePanicStation -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\StyleMusePanicStation
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\Stylepaket_Pa285_0809: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\Stylepaket_Pa500Musikant_0809: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PA80\STYLES PA80 CD1 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\STYLES PA80 CD1
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PA80\STYLES PA80 CD2 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\STYLES PA80 CD2
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\styles portuguais -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\styles portuguais
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\TOI_PLUS_MOI.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\TOI_PLUS_MOI.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\VENEZIANO 2010.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\VENEZIANO 2010.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\Walking BassRock -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Walking BassRock
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\18-audiokeys\WALTZ_2B.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\WALTZ_2B.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\AD.KORG.MC.CMI-Bonus Pa4X.SET(1) -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\AD.KORG.MC.CMI-Bonus Pa4X.SET(1)
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\HOTRSUN.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\HOTRSUN.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\KORG PA DEMO SONGS -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\KORG PA DEMO SONGS
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\LAMIOS_DEMO.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\LAMIOS_DEMO.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Lotsa_styles -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Lotsa_styles
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\MusikantStyle.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\MusikantStyle.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\MusikantStyle.SET(1) -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\MusikantStyle.SET(1)
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Pa1000_MUSIKANT_v100 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa1000_MUSIKANT_v100
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\pa4x-Song_Styles (2) -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\pa4x-Song_Styles (2)
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Partyhit -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Partyhit
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\skerratt_london_piano_pack -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\skerratt_london_piano_pack
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Sound-v01 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Sound-v01
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Styl-v11 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Styl-v11
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Styl-v12 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Styl-v12
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\upright_steingraeber -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\upright_steingraeber
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\28-korg_pa_sk\korg PASK -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\korg PASK
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Alpenschlager_1_Pa800.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_12_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_14_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_16_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_17_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_20_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_6_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Hit_7_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Chart_Pop2_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\DeutschPop_2008_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\FetenHit1_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\FetenHit3_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\FetenHit4_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\FetenHit6_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Happy_Beat_2_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\NewEveParty2012: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\NewEveParty2012(1): [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Partyhit(1): [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Party_Beat_3_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Party_Hit_2009_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Party_Mix3_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Pop_Remember4_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Pop_Remember6_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\29-PARTY SCHLAGER\Rock_Shuffle_Pa285.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\Karg PA4x Diaklatianus Sİlver.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Karg PA4x Diaklatianus Sİlver.SET
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\30-PIANYSET\Pa4x efko sadece ses.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Full Bank Performance Sound (piyanistset.com).SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x Full Bank Performance Sound (piyanistset.com).SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Güzel Karma Mart 2019.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x Güzel Karma Mart 2019.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x junioraytos Bulgar.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x junioraytos Bulgar.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Karma APO.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x Karma APO.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Karma İyi.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x Karma İyi.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\pa4x Meti Balkan.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\pa4x Meti Balkan.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\PA4X POP & SUPER PADS.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\PA4X POP & SUPER PADS.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x ses paketi ve ritim Sound&Style.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x ses paketi ve ritim Sound&Style.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\pa4x ses sound pack ei.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\pa4x ses sound pack ei.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x Super Performance Sound Piyanistset.com .SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x Super Performance Sound Piyanistset.com .SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Pa4x t-BOM .SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x t-BOM .SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\31-SET DIVERS\4x.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\4x.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\31-SET DIVERS\Pa4x acoustic legend.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x acoustic legend.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\Pa4x Osimo V1.1.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Pa4x Osimo V1.1.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\Dopamine-PA600-v2.6.SET(1) -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Dopamine-PA600-v2.6.SET(1)
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\60-SET\I Love You -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\I Love You
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\BOSENDOR\BOSENDOR.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\BOSENDOR.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\DOJI\DOJI.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\DOJI.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\DOJI\DOJIPLUS.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\DOJIPLUS.SET
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\ROLAND pour KORG\05-Roland BK-G70-G1000.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\ROLAND pour KORG\07-Roland EA7-BK9-G1000.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\ROLAND pour KORG\09-Roland divers.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG\03-SoltonMS & KetronSD1.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\SOLTON KETRON pour KORG\04-Ketron Midjay-XD3-X1.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\01-PA4X Musikant bk1àbk13.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\02-PA800 Factory styles-1.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES CLAVIERS KORG\06-Korg-i3-i30.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\Korg PA4X SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Korg PA4X SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\laGrenade-claraLuciani-Boum!.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\laGrenade-claraLuciani-Boum!.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\PA4X_Bonus.SET(1) -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\PA4X_Bonus.SET(1)
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\TECHNOM.D.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\TECHNOM.D.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS\TRANSFER.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\TRANSFER.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Styles - vol. 35 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Styles - vol. 35
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES DIVERS 2\Styles - vol. 36 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\Styles - vol. 36
+[ERREUR] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\TECHNICS pour KORG\10-Divers-PA1000-Tecnics.SET: [WinError 3] Le chemin d’accès spécifié est introuvable
+
+Terminé: 146 déplacé(s), 84 erreur(s)

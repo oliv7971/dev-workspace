@@ -1,0 +1,135 @@
+======================================================================
+Détection des doublons PA4X - Version 2
+Date: 2026-03-15 21:21:29
+======================================================================
+
+Répertoire local: 2363 répertoires trouvés
+
+Répertoire NAS: 51 répertoires trouvés
+
+======================================================================
+DOUBLONS TROUVÉS
+======================================================================
+
+1. Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET
+
+2. Pa4x Full Bank Performance Sound (piyanistset.com).SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Full Bank Performance Sound (piyanistset.com).SET\Pa4x Full Bank Performance Sound (piyanistset.com).SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Full Bank Performance Sound (piyanistset.com).SET\Pa4x Full Bank Performance Sound (piyanistset.com).SET
+
+3. Pa4x Super Performance Sound Piyanistset.com .SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Super Performance Sound Piyanistset.com .SET\Pa4x Super Performance Sound Piyanistset.com .SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Super Performance Sound Piyanistset.com .SET\Pa4x Super Performance Sound Piyanistset.com .SET
+
+4. SONGDB.SBD
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\SONGBOOK\SONGDB.SBD
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa900\ADPa900.SET\ADPa900.SET\SONGBOOK\SONGDB.SBD
+
+5. KEYBOARDSET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\KEYBOARDSET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa700\ADWorld.Pa700.V1.0.SET\KEYBOARDSET
+
+6. VOICEPRESET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\VOICEPRESET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa700\ADWorld.Pa700.V1.0.SET\VOICEPRESET
+
+7. MULTISMP
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\MULTISMP
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa900\ADPa900.SET\ADPa900.SET\MULTISMP
+
+8. STYLE
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\STYLE
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80\cvp-styles2\Waltz.SET\Waltz.SET\STYLE
+
+9. SOUND
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\SOUND
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa900\ADPa900.SET\ADPa900.SET\SOUND
+
+10. PAD
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\PAD
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa900\ADPa900.SET\ADPa900.SET\PAD
+
+11. PCM
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\PCM
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa900\ADPa900.SET\ADPa900.SET\PCM
+
+12. 4x ses paketi ve ritim.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x ses paketi ve ritim Sound&Style.SET\4x ses paketi ve ritim.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x ses paketi ve ritim Sound&Style.SET\4x ses paketi ve ritim.SET
+
+13. Karg PA4x Diaklatianus Sİlver.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Karg PA4x Diaklatianus Sİlver.SET(1)\Karg PA4x Diaklatianus Sİlver.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Karg PA4x Diaklatianus Sİlver.SET\Karg PA4x Diaklatianus Sİlver.SET
+
+14. pa4x ses sound pack ei.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\pa4x ses sound pack ei.SET\pa4x ses sound pack ei.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\pa4x ses sound pack ei.SET\pa4x ses sound pack ei.SET
+
+15. PA4X POP & SUPER PADS.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\PA4X POP & SUPER PADS.SET\PA4X POP & SUPER PADS.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\PA4X POP & SUPER PADS.SET\PA4X POP & SUPER PADS.SET
+
+16. Pa4x Güzel Karma.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Güzel Karma Mart 2019.SET\Pa4x Güzel Karma.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Güzel Karma Mart 2019.SET\Pa4x Güzel Karma.SET
+
+17. junioraytos.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x junioraytos Bulgar.SET\junioraytos.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x junioraytos Bulgar.SET\junioraytos.SET
+
+18. GLOBAL
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x t-BOM .SET\Pa4x t-BOM .SET\GLOBAL
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\06-internet\pa4x-I Love You\I Love You\AD World Free Sets KORG Pa Series\Pa900\ADPa900.SET\ADPa900.SET\GLOBAL
+
+19. Pa4x Karma APO.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Karma APO.SET\Pa4x Karma APO.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Karma APO.SET\Pa4x Karma APO.SET
+
+20. Pa4x Karma İyi.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Karma İyi.SET\Pa4x Karma İyi.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\Pa4x Karma İyi.SET\Pa4x Karma İyi.SET
+
+21. Meti Balkan.SET
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\pa4x Meti Balkan.SET\Meti Balkan.SET
+   Local : D:\01-MUSIQUE\02-KORG PA4X\08-SET HIGH LV\30-PIANYSET\pa4x Meti Balkan.SET\Meti Balkan.SET
+
+22. Styles - vol. 35
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Styles - vol. 35\Styles - vol. 35
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\31-eklablog\Styles-vol.-35\Styles - vol. 35
+
+23. Styles - vol. 36
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Styles - vol. 36
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\01-KORG\03-STYLES KORG BONUSWARE\Styles - vol. 36
+
+24. STYLES PA80
+   NAS   : \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PA80
+   Local : D:\01-MUSIQUE\02-KORG PA4X\99-save\cle-64go-260214\04-SET FORUM\18-audiokeys\TOUT\STYLES PA80\STYLES PA80
+
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET\Pa4x Next 720mb Compress Ramazan 2019 piyanistset.com.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Full Bank Performance Sound (piyanistset.com).SET\Pa4x Full Bank Performance Sound (piyanistset.com).SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Full Bank Performance Sound (piyanistset.com).SET\Pa4x Full Bank Performance Sound (piyanistset.com).SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Super Performance Sound Piyanistset.com .SET\Pa4x Super Performance Sound Piyanistset.com .SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Super Performance Sound Piyanistset.com .SET\Pa4x Super Performance Sound Piyanistset.com .SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\SONGBOOK\SONGDB.SBD -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\SONGBOOK\SONGDB.SBD
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\KEYBOARDSET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\KEYBOARDSET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\VOICEPRESET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\VOICEPRESET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\MULTISMP -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\MULTISMP
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\STYLE -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\STYLE
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\SOUND -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\SOUND
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\PAD -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\PAD
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\PCM -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Tornado(Sero-Toni Balkan).SET\Pa4x Tornado(Sero-Toni Balkan).SET\PCM
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x ses paketi ve ritim Sound&Style.SET\4x ses paketi ve ritim.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x ses paketi ve ritim Sound&Style.SET\4x ses paketi ve ritim.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\20-DIVERS STYLES\Karg PA4x Diaklatianus Sİlver.SET(1)\Karg PA4x Diaklatianus Sİlver.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\20-DIVERS STYLES\Karg PA4x Diaklatianus Sİlver.SET(1)\Karg PA4x Diaklatianus Sİlver.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\pa4x ses sound pack ei.SET\pa4x ses sound pack ei.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\pa4x ses sound pack ei.SET\pa4x ses sound pack ei.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\PA4X POP & SUPER PADS.SET\PA4X POP & SUPER PADS.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\PA4X POP & SUPER PADS.SET\PA4X POP & SUPER PADS.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Güzel Karma Mart 2019.SET\Pa4x Güzel Karma.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Güzel Karma Mart 2019.SET\Pa4x Güzel Karma.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x junioraytos Bulgar.SET\junioraytos.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x junioraytos Bulgar.SET\junioraytos.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x t-BOM .SET\Pa4x t-BOM .SET\GLOBAL -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x t-BOM .SET\Pa4x t-BOM .SET\GLOBAL
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Karma APO.SET\Pa4x Karma APO.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Karma APO.SET\Pa4x Karma APO.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Karma İyi.SET\Pa4x Karma İyi.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Pa4x Karma İyi.SET\Pa4x Karma İyi.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\pa4x Meti Balkan.SET\Meti Balkan.SET -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\pa4x Meti Balkan.SET\Meti Balkan.SET
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Styles - vol. 35\Styles - vol. 35 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Styles - vol. 35\Styles - vol. 35
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Styles - vol. 36 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\pa4x 2020\STYLES DIVERS 2\Styles - vol. 36
+[OK] \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\99-SET A CLASSER\STYLES PA80 -> \\Nas_louhans_2\01-ds420-data\20-MUSIQUE STUDIO\01-SYNTHES HW\pa4x_a_classer\_doublons\99-SET A CLASSER\STYLES PA80
+
+Terminé: 24 déplacé(s), 0 erreur(s)

@@ -12,7 +12,9 @@
 *.bak
 02-TOOLS/logs/
 backup/
-temp/gnore global pour dÃ©veloppement
+temp/
+
+# .gitignore global pour developpement
 # ===================================
 
 # Dossiers sans versioning
@@ -78,4 +80,17 @@ config.local.*
 # Fichiers de cache
 .cache/
 *.cache
+
+# Python virtual environments
+**/pyvenv.cfg
+**/Lib/site-packages/
+**/Scripts/activate*
+**/Scripts/deactivate*
+**/Scripts/pydoc*
+__pycache__/
+*.pyc
+
+# Dossiers EXEMPLES (fichiers binaires Korg volumineux)
+**/EXEMPLES/
+*.pyc
 .DS_Store

@@ -1,0 +1,8 @@
+# PA4x Set Merger - Requirements
+# Tkinter est inclus avec Python, pas besoin de l'installer séparément
+
+# Optionnel: pour le drag & drop externe de fichiers
+# tkinterdnd2>=0.3.0
+
+# Optionnel: pour créer un exécutable
+# pyinstaller>=5.0
