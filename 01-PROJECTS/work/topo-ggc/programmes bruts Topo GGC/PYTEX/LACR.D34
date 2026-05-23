@@ -1,0 +1,76 @@
+exemple de leve rattache sur points releves graphiquement sur un plan
+echelle1	# echelle terrain conservee !!!!
+iter 500
+tolz 0.20  # 200 mm / Dz
+told 1.20  # 200 mm / distances, 400 mm sur geodesie et fermeture polygo
+schema 10000 1.8 #ignore par p34, valide pour p44
+gauss	   # sortir le classement des ecarts
+qd2 6.57895  # qd utilis‚ = 6.57895e-8
+#$p57 trilater #passer la main a P57 (passer a 0 sur pts d'appui)
+#		  calcul en mode trilateration
+#zoff
+nverif
+Zmoyen 0000 metres
+projection 0000 mm/km
+# tolpolygo 1 1296 3600 16 16 160
+# tolpolygo 1 3600 400 200 2.0 5
+tolpolygo 1 1600 400  81 0.5 5
+tolangle 0.1000 #fermeture polygo
+cordistance 0.000  metres par portee
+epspoint 0.0003
+epsbloc 0.00000010
+colver 0.0000  # collimation verticale
+#tolerances pour le balancement des stations reprises debut
+tolrah 0.0050  #  5 mgr / ang hor
+tolrav 0.0200  # 20 mgr / ang vert
+tolrdh 0.050   # 50 mm / delta Distance
+tolrdz 0.150   # 50 mm / Delta Z
+#tolerances pour le balancement des stations reprises fin
+tolechel 0.002 #tolerance/echelles locales (0.002 = 20cm a 100m)
+parallaxe 0 #excentrement des axes optique et distancemetre en mm
+ supiter1 # pas d'edition de la premiere iteration
+ supitern # pas d'edition de la derniere iteration
+codification  1  # type du fichier N X Y Z code(s) , 1 ou 2
+# 1 >  N X Y Z c1 c2 c3 c4 c5	(c1=code points, autres = infos)
+# 2 >  N X Y Z 123 4 5 678	(code point … 8 caracteres d‚coup‚ en 4 zones)
+#distpente # les distances sont suivant la pente
+geodesie
+9   757474.5 326100
+20  757502   326092.5
+64  757524.3 326105.5
+143 757579   326106.3
+207 757626.8 326116.4
+298 757681   326127.5
+374 757723.6 326135.3
+999999
+p33v36
+ns   np    dh      ah       av      lm  ht
+1001 1002   38.556  58.957
+   0    9   32.242 315.068
+   0   20    6.881 265.707
+   0   64   19.28   81.187
+1002 1001   38.555  95.387
+   0 1003   54.346 360.509
+   0 1004   38.115 277.088
+1003 1005   49.657 212.454
+   0 1002   54.344  41.917
+   0  143   10.063 389.053
+   0  207   39.334 219.401
+1004 1006   36.785 336.302
+   0 1002   38.128  46.664
+1006 1004   36.771 387.937
+1005 1007   60.053  73.952
+   0 1008   48.153  64.61
+   0 1009   13.564 396.562
+   0 1003   49.646 266.081
+1008 1010   41.652 259.276
+   0 1007   14.282 333.35
+   0 1005   48.148  91.185
+   0  298    7.627  19.771
+1009 1005   13.567 148.907
+1007 1011  252.013 196.191
+   0 1005   60.055  19.943
+   0 1008   14.272  52.754
+   0  374   28.595 213.241
+1010 1008   41.646 202.234
+1011 1007  252.025 106.122

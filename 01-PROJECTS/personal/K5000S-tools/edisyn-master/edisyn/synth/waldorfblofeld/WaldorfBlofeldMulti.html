@@ -1,0 +1,62 @@
+<html><head></head>
+<body>
+
+<h1>Waldorf Blofeld</h1> 
+<h2>Multi Patch Editor</h2>
+
+<p>This editor will work with the <b>Waldorf Blofeld,</b> the <b>Waldorf Blofeld with SL Option,</b> and the <b>Waldorf Blofeld Keyboard</b> (which automatically comes with the SL option).
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Set your Blofeld to send <b>Sysex only</b>, not <b>Ctl</b> nor <b>Ctl+Sysex</b>.    Also make sure that <b>Ctrl Receive</b> is on.
+Set Edisyn's send and receive channels to the Blofeld's MIDI Channel, and set th
+e Synth ID to the Blofeld's Device ID.
+
+
+
+<br><br><h3>The Play Button</h3>
+
+Each Part has a button called <b>Play</b>.  This sets the status to "play" (versus "mute").
+
+<br><br><h3>The Show Button</h3>
+
+Each Part has a button called <b>Show</b>.  This shows the given sound (bank and number) as a separate Blofeld Single editor panel.
+
+<br><br><h3>Gotchas</h3>
+
+Multimode on the Blofeld is a mess.
+
+<ul>
+<li>
+The Blofeld's Multimode sysex is entirely undocumented, and this patch editor is the result of reverse engineering.  There may be errors: please report them.  
+
+<li>Edisyn cannot tell the Blofeld to switch to Multimode or to Single-Mode.  If you press the "Show" button for a part, Edisyn will load the patch but cannot switch to it on the Blofeld.  To switch, you must <i>first</i> put the Blofeld in Single mode, then press Edisyn's "Show" button. 
+
+<p><li>The Blofeld doesn't send or receive sysex for updating individual Multimode parameters, so you won't see changes on the Blofeld (or Edisyn) when tweaking a parameter on the other.
+
+<p><li>
+If you save a multimode patch on the Blofeld, it corrupts the first letter of the name of every patch!  This is not permanent (just reboot your Blofeld), but it's reported to Edisyn when Edisyn tries to load the patch from temporary memory again, so you'll see a corrupted patch name on receiving a patch.
+
+<p><li>(On purpose) you can't mutate or merge the Play, Local, MIDI, or USB options as they turn on or off the ability to test playing a note at all.
+
+<p><li>Effects work strangely in Multimode.  Part 1's Effect 2 settings are applied to <b>all parts</b> regardless of their own settings.  Also, Parts 1 through 4 can have their own independent settings for Effect 1, but Parts 5 through 16 do not have Effect 1 at all (it's just turned off).  In either case, you set the mix level of the Effect in question for each Part in its own program patch, not in the multimode patch.
+</ul>
+
+<br><br><h3>Librarian Support</h3>
+
+<p>Edisyn can request all the patches from the Blofeld at the same time via the menu <b>Request All Patches from Synth</b>.  It's a lot faster than the standard download methods.
+
+<br><br><h3>Thanks</h3>
+
+<p>Thanks to Gareth Whittock (buddhamachine@live.co.uk) for bug reports and clueing me in on an undocumented method for changing patches in multimode.
+
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>June 2017
+</table>
+

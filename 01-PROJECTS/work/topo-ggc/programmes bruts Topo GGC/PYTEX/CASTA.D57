@@ -1,0 +1,40 @@
+DATE 19.07..,DOSSIER      MAISON
+bloc 1000
+trilat
+annule   #poids 1 pour les visees a partir des points anciens
+tolsecondes 50 decimilligrades / 1 visee
+tolcm  20 cm / 1 visee, distance
+ANCIENS
+         1   10000.9250    4998.4590
+         2   10039.7820    5041.4310
+         4    9980.7720    5029.0630
+999999999
+nouveaux
+10
+20
+30
+3
+999999
+station
+    10      1            165.5737 
+    10      2             48.7070
+    20      2            366.2263
+    20      1            263.8509
+    20      3            351.0991
+    30      2            106.7616 
+    30      3            104.4692
+    30      4            213.6327
+999999
+distances
+    10      1      1.797
+    10      2     57.438
+    20      2      1.921
+    20      1     57.831
+    20      3     39.413
+    30      2     39.170
+    30      3      1.622
+    30      4     41.811
+999999999
+****
+stop
+

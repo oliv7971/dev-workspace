@@ -1,0 +1,68 @@
+ramdispo/(octets) ios    10000000           0
+ oto64 10  C:\mcg\MESSAV35.BIN ios=    0 10000000  6
+ oto64 11  C:\mcg\MESS5000.BIN ios=    0 10000000  2
+
+clofic   11    1 10000000
+
+clofic   10    1 10000000
+ oto64 10  C:\mcg\MESS5000.BIN ios=    0 10000000  2
+
+clofic   10    1 10000000
+ oto64 10  C:\mcg\CONFIG.MCG ios=    0 10000000  2
+
+clofic   10    1 10000000
+ oto64 10  R6501.LST ios=    0 10000000  3
+ oto64 11  C:\mcg\CONFIG.MCG ios=    0 10000000  2
+
+clofic   11    1 10000000
+ oto64 11  C:\mcg\FECR.P65 ios=    0 10000000  2
+
+clofic   11    1 10000000
+         640         480           1          16          18           3
+           1          80          30
+    1.00000        11.0000        8.50000       0.000000       0.000000    
+   0.000000       0.000000    
+>Lahey Graphoria LF90 1.1f       03/06/95<
+ oto64 11  C:\mcg\UCLE.P65 ios=    0 10000000  6
+
+clofic   11    1 10000000
+ oto64 11  C:\mcg\P065.MCG ios=    0 10000000  2
+
+clofic   11    1 10000000
+ oto64 11  C:\mcg\P065.MCG ios=    0 10000000  2
+
+clofic   11    1 10000000
+ oto64 11  C:\mcg\TRAITS.MCG ios=    0 10000000  2
+ oto64 12  TRAITS.DEL ios=    0 10000000  9
+
+clofic   11    1 10000000
+ oto64 11  C:\mcg\CONFIG.MCG ios=    0 10000000  2
+
+clofic   11    1 10000000
+ oto64 11  UTIL.P65 ios=    0 10000000  6
+
+clofic   11    1 10000000
+ oto64 11  DEPART.P65 ios=    0 10000000  2
+ oto64 13  C:\mcg\CONSIGNE.P65 ios=    0 10000000  2
+
+clofic   13    1 10000000
+ oto64 13  F001.P65 ios=    0 10000000 10
+
+clofic   13    1 10000000
+
+clofic   11    1 10000000
+ oto64 11  C:\mcg\NOMMENUS.P65 ios=    0 10000000  2
+
+clofic   11    1 10000000
+ oto64 11  C:\mcg\MENUVISU.P65 ios=    0 10000000  2
+
+clofic   11    1 10000000
+
+clofic   12    2 10000000
+ oto64 11  C:\mcg\CONFIG.MCG ios=    0 10000000  2
+
+clofic   11    1 10000000
+
+clofic   10    1 10000000
+>>>netfic
+<<<netfic : nbfic open, ram  4  10000000

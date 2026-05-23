@@ -1,0 +1,91 @@
+##### initialisations
+#logo
+RAZ     	#remise a z‚ro des pointeurs : xyz , pile dessin , ...
+
+CHFT pol1	#charger la police 1
+affinume
+ecri
+ecriz
+UANG		#unit‚ d'angle GRADES
+3
+SIZT 10 10 0 0 1	#hx=hy=10,ang=0,alph=0
+SYMB
+0
+ECAR
+1.05
+PLU
+4
+HZ
+10
+RCER
+0
+ESHA
+5
+ANHA
+50
+ORIG
+0
+NBDE
+2
+COTA
+2.0 2.0 0.
+TYCO
+1
+PLZ
+0
+#
+RAYO 2		# ecran modif
+rseg 1		# ecran new
+raligne 1.	# ecran new
+#
+rayodigit .40	# digit new
+rsegdigit .40   # digit new
+ralidigit .01	# digit new
+tolresol  0.01	#.10	# digit new
+#
+tolsurfaces 5.7 #
+tolsdigit   1.0	#
+tolcourbes 0.06 #
+#
+nbdz
+2
+ARR
+0.001
+MIRE
+256 256 3
+RECH
+1
+RTRG
+2
+HTXM
+2
+LIMCER
+200000
+ BLOC
+ 1
+PLAN inconnu
+ 1
+ TRAI
+ 1
+ trai2
+ 0
+ trai3
+ 0
+ EPT1
+ 0
+ EMAR
+ 50
+ SPLA
+
+ SBLO
+
+menu9 #afficher la page 1 du menu ecran
+mouse		# mouse en fonction apres l'execution des commandes
+#		# de depart.p65
+#$ldeauto	# charger le dernier dessin sauve
+$sdeauto   120	# sauve auto frequence commandes et apres fin  vd=20 minutes
+#$sauvauto	# sauve dans temp%%%% apres fin si pas de $sde avant sortie
+masque -125 -44
+charvue		# dessiner la vue apres charge
+#bplumes	# dessin traceur dans l'ordre des plumes
+endinit	##### fin en tˆte

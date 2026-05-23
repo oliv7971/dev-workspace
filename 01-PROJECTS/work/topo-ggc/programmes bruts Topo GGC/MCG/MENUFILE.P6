@@ -1,0 +1,20 @@
+ 22 sauver dessin ($sde)
+ 23 lire dessin ($lde)
+ 74 detruire dessin ($dde)
+ 21 sauver xyz ($sxy)
+ 33 lire xyz ($lxy)
+ 75 detruire xyz ($dxy)
+ 56 sauver procedure ($spr)
+ 58 lire procedure ($lpr)
+ 57 detruire procedure ($dpr)
+ 54 sauver fonte ($sfo)
+177 changer fonte (chft)
+ 76 detruire fonte ($dfo)
+130 lire cartouche ($lca)
+191 lire proc/dessin (num a -3)($lpd)
+ 83 lire un fichier nxyz (lfxy)
+167 charger fichier de commandes(char)
+ 19 afficher un fichier (type)
+131 sauvedes
+128 sauvedxf
+132 sauvexyz

@@ -1,0 +1,13 @@
+Pour installer les scripts de conversion des fichiers AXE et PL issus de Scooter en fichiers PTC et LON pour Multipiste de Leica :
+
+1 - Copier "Axe-ptc.vbe" et "Pl-lon.vbe" dans un dossier du disque. Attention, ces fichiers ne devront plus être déplacés une fois la procédure effectuée.
+
+2 - Editer le fichier "fusion.reg" (fichier texte) en modifiant le nom du chemin d'accès aux 2 fichiers vbe. Les chemins s'écrivent sous la forme "C:\\dossier\\sous-dossier1\\sous-dossier2\\fichier.vbe"
+
+3 - Exécuter le fichier "fusion.reg" modifié.
+
+Dans tous les cas, pour des soucis de compatibilité, limiter le nom des fichiers Scooter à 8 caractères + l'extension (convention MS-DOS). Les fichiers PTC et LON seront nommés de la même façon que les fichiers Scooter.
+
+Pour convertir un fichier il suffira ensuite de faire un clic droit sur celui-ci dans l'explorateur et de choisir dans le menu contextuel "Transformation AXE -> PTC" ou "Transformation PL -> LON". Un fichier .PTC ou .PL sera créé dans le même dossier et avec le même nom que le fichier Scooter.
+
+En cas de problème à l'installation, à l'utilisation ou suite à la découverte d'un bug, appeler Rudy au 06-77-65-54-54 ou au 05-55-24-52-97.

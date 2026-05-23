@@ -1,0 +1,43 @@
+<html><head></head>
+<body>
+
+
+<h1>E-Mu Proteus 1, 1 XR, 2, 2 XR, 3, 3 XR, and 1+Orchestral</h3>
+<h2>Single Patch Editor</h2>
+
+<p>This editor will work with the <b>E-Mu Proteus 1, 2, 3,</b> and <b>1+Orchestral</b>, and with various <b>XR</b> versions, but you will need to set a switch to indicate which one you are using, as this will affect which patch numbers you can load and what instruments are available.
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Set the MIDI ID to the same you'll be setting in Edisyn (typically 0).
+
+<br><br><h3>Using Different ROMs/soundsets</h3>
+
+This patch editor is designed to work with standard Proteus models, not ones with changed or additional soundsets.  If you have a common configuration that uses different instrument soundsets, send me email (sean@cs.gmu.edu) and we might discuss how the patch editor could be extended to accommodate them.  It's not for the faint of heart, however.
+
+<br><br><h3>Gotchas</h3>
+
+<ul>
+<li>The different Proteus series machines have different instruments and different numbers of instruments.  If you load or receive a patch meant for a different Proteus than you have set, then the instruments will not load properly and will be set to "No Instrument".  (For example, if you have set Edisyn to Proteus 1 and you load a patch meant for a Proteus 3). 
+
+<br><p><li>The Proteus series cannot send to the current patch -- they can only write patches, or send individual parameters.  But sending to the current patch is a critical function.  Instead of (slowly) sending all parameters, Edisyn instead will write to patch 127.  This means that you will overwrite this patch number every time you "send" the current patch.
+
+<br><p><li>While the Proteus 2 and 3 can set the Chorus to OFF or to 1-15, the Proteus 1 can only actually set the Chorus to OFF and ON.
+
+<br><p><li>You cannot request the current patch on the Proteus.
+
+<br><p><li>In order to change patches (to request a new one or to send or write a patch), Edisyn must modify the Proteus's Program Map table: but there is no way to do this with precision.  As such, Edisyn just obliterates the table in the process.  I hope you didn't have anything in there that you wanted to keep.
+
+</ul>
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>January 2020
+</table>
+
+
+

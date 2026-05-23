@@ -1,0 +1,91 @@
+VIADUC DE SYLANS
+iter 500
+tolz 0.20  # 200 mm / Dz
+told 0.20  # 200 mm / distances, 400 mm sur geodesie et fermeture polygo
+schema 10000 1.8 #ignore par p34, valide pour p44
+gauss	   # sortir le classement des ecarts
+qd2 6.57895  # qd utilis‚ = 6.57895e-8
+$p57 trilater #passer la main a P57 (passer a 0 sur pts d'appui)
+#		  calcul en mode trilateration
+#zoff
+#cgcdon si AV > 200 g (cercle a droite), AH=AH+200
+# dans tous les cas si AV > 200, AV=400-AV
+nverif
+Zmoyen 0000 metres
+projection 000 mm/km
+# tolpolygo 1 1296 3600 16 16 160
+# tolpolygo 1 3600 400 200 2.0 5
+tolpolygo 1 1600 400  81 0.5 5
+tolangle 0.1000 #fermeture polygo
+cordistance 0.000  metres par portee
+epspoint 0.0003
+epsbloc 0.00000010
+colver 0.0000  # collimation verticale
+#echelle1	# conserver les distances terrain
+#tolerances pour le balancement des stations reprises debut
+tolrah 0.0100  # 10 mgr / ang hor
+tolrav 0.0200  # 20 mgr / ang vert
+tolrdh 0.050   # 50 mm / delta Distance
+tolrdz 0.100   # 100 mm / Delta Z
+#tolerances pour le balancement des stations reprises fin
+tolechel 0.002 #tolerance/echelles locales (0.002 = 20cm a 100m)
+parallaxe 0 #excentrement des axes optique et distancemetre en mm
+ supiter1 # pas d'edition de la premiere iteration
+ supitern # pas d'edition de la derniere iteration
+codification  1  # type du fichier N X Y Z code(s) , 1 ou 2 ou 3 ....
+# 1 >  N X Y Z cccliiii		(0 a gauche de la zone cccliiii )
+# 2 >  N X Y Z ccc l j iii	(code point avec 0 a gauche)
+# 3 >  N X Y Z ccc l iiii	(code point avec 0 a gauche)
+# 4 >  N X Y Z c1 c2 c3 c4 c5	(c1=code points, autres = infos)
+#	pas de zeros a gauche des zones c1 a c5. Le type 4 est active
+#	si au moins l'une des zones c2 a c5 est differente de 0 .
+#distpente # les distances sont suivant la pente
+geodesie
+999999
+BLOC 20
+GAUSs
+GEODESIE
+408       6667.623  3980.922
+406       6030.217  4428.635
+999999
+P33V36
+        ns        np       dh        ah        av      lm      ht
+       405       406      .00000      .00000
+       409        10   875.30600      .00000
+         0        15   599.34500    11.28900
+         0        18   545.58700    17.31960
+         0      1002     7.84200   191.39450
+        18       409      .00000      .00000
+         0        15    76.30400   146.68150
+         0      1002      .00000   399.64260
+        17        15      .00000      .00000
+         0         1   571.52200   273.90600
+         0        10   580.40800   390.07350
+        16         1  1120.15600      .00000
+         0        10   356.41300    51.45160
+         0        15      .00000   103.72290
+        15        17   864.02400      .00000
+         0        18      .00000   205.73360
+         0       409      .00000   253.02110
+         0      1002      .00000   252.76850
+         0        16   399.60200   353.58760
+        10       408  1142.03900      .00000
+         0         1   911.15000    33.68170
+         0       409      .00000   243.80240
+         0        16      .00000   303.38700
+         0        17      .00000   392.14440
+         0      1001      .00000   399.85240
+         1       408   581.24700      .00000
+         0       406   502.70000   101.76290
+         0        10      .00000   291.79030
+         0        16      .00000   310.04500
+         0        17      .00000   334.08640
+         0      1001      .00000   399.56780
+       406       408      .00000      .00000
+         0       405   697.62500    86.78960
+         0         1      .00000   346.40170
+         0      1001      .00000   399.76930
+       408        10      .00000      .00000
+         0      1001     3.95900    46.48310
+         0       406   778.93100   297.25250
+         0         1      .00000   341.89100

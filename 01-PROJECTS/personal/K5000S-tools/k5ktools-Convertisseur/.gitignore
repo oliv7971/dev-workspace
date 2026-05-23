@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+.mypy_cache/
+
+.DS_Store
+
+*.syx
+*.kaa
+*.ka1
+*.kc1
+*.kca
+*.KAA
+*.KA1
+*.KC1
+*.KCA
+

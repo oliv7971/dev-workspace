@@ -1,0 +1,25 @@
+# Configuration NAS-admin — 38-TUNNEL DE SIAIX
+
+nas:
+  name: "NAS-Travail"
+  path: "\\\\Nas_travail\\01-ds414-data\\31-GGC-DOSSIERS\\38-TUNNEL DE SIAIX"
+
+scan:
+  exclude_dirs:
+    - "@eaDir"
+    - "#recycle"
+    - "@tmp"
+    - ".SynologyWorkingDirectory"
+    - "$RECYCLE.BIN"
+    - "System Volume Information"
+
+  exclude_extensions:
+    - ".tmp"
+    - ".ds_store"
+    - ".thumbs.db"
+
+  min_size_for_duplicates: 1024
+
+output:
+  reports_dir: "./reports"
+  inventory_db: "./reports/inventory_siaix38.db"

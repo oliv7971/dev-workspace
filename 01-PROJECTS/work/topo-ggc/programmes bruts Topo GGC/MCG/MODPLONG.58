@@ -1,0 +1,27 @@
+profil en long / modplong.d58
+PROC,16
+RUBR,46
+NUTN,106018,/Numero/des/profils
+DPTN,106018,/Distance/Partielle/Tn
+DCTN,106018,/Distance/Cumulees/Tn
+ALTN,106018,/Cotes/Terrain/Naturel
+libr,106018
+libr,106018
+libr,106018
+FIN
+nbds,2
+nbdz,2
+nbdn,1
+stitre,,/axe1
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+tn,,exec
+999999
+cmcg
+supc		# SUPprimer Cadre
+ctez,20
+?echx,1000
+?echz,1000
+forx,900
+dplon,16
+****
+stop

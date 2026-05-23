@@ -1,0 +1,21 @@
+"code","NE PAS TOUCHER ","A LA PAGE","type"
+6,,749698879,"lectfic"
+3,"c:\topo\axe\","axta.axe","plan"
+99,"-","-","pl"
+99,"-","-","dev"
+99,,"-","spl"
+99,,"-","sdv"
+6,"C:\TOPO\SCOOTER\","source.csv","source"
+7,"C:\TOPO\SCOOTER\","cible.cib","cible"
+0,,,"sortie"
+1,"dat/deb",,
+,#2013-04-03 11:51:44#,0,4.5
+,0,"non",0
+2,"men",,
+2,"ABS axe","LIBRE",
+,0,"oui","blabla"
+3,"ENTXYZ",,
+,"source",550,"<npts"
+0,,"RETOUR MENU PRINCIPAL",
+7,"oui","sorti",
+"fin",,,

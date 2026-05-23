@@ -1,0 +1,59 @@
+                                EDITEUR  P33 P34
+
+
+        Touches:
+                F1 : Visualiser ce fichier
+                F2 : Visualiser les parametres
+                F3 : Visualiser la geodesie
+                F4 : Visualiser les observations
+                F6 : Modifier les valeurs de la section en cours
+                F7 : Supprimer une valeur de le section en cours
+                F10: Fin
+
+        PGUP et PGDN pour visualiser les differentes pages de la section
+
+                ESC pour revenir a l'etape precedente
+
+
+
+        actuellement : 100   param
+                       1000  pts en geodesie
+                       5000  observations
+
+        A FAIRE :   13.11.92 19:09
+
+        Controles de validite
+        OUVMCG sur fichier doc
+        Test sur ordre ns np dh ah ...
+        Test si fichier NXYZ simple
+        Integrer un autre fichier   ?
+        Traiter les points ou observations qui sont en commentaire
+        (actuellement perte de ces lignes)
+
+        Recuperer le nom de fichier sur la ligne de commande
+        Sauvegarde  O/N : ne pas accepter de reponse par defaut
+        Probleme affichage du fichier DOC
+
+        PARAMETRER :
+
+        Les codes de touches
+        Le nombre de lignes ecran
+
+
+        Problemes si nouveau fichier :
+
+        Le fichier DOC ne defile pas a l'ecran
+        Si on ne sauvegarde pas le fichier est cree taille nulle
+
+
+        Question a YD :
+        Combien de temps faut il pour charger DEA9.D34 sur 486 ?
+        7 sec sur 386/25
+	3 /486/33
+
+
+
+
+
+geodesie
+999999

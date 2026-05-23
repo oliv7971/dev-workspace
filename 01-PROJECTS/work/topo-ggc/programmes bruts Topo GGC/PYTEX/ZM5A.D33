@@ -1,0 +1,43 @@
+For M5|Adr     1|TI  MESURE                     |                      |                      |                      |
+For M5|Adr     3|ti  s5000                      |                      |                      |                      |
+For M5|Adr     2|TI  INTRODUCTION               |s        1.000000     |th         1.5000 m   |ih         1.5320 m   |
+For M5|Adr     3|IP1     1 5000                 |HD         3.7021 m   |Hz       10.25383 gon |h         -0.4061 m   |
+For M5|Adr     4|IP1     2 5000                 |HD         3.7390 m   |Hz       60.97943 gon |h         -0.2763 m   |
+For M5|Adr     5|TI  INTRODUCTION               |s        1.000000     |th         1.3000 m   |ih         1.5320 m   |
+For M5|Adr     6|IP1     3 5000                 |HD         3.7036 m   |Hz      200.08767 gon |h         -0.1927 m   |
+For M5|Adr     7|IP1     4 5004                 |SD         3.7281 m   |Hz      200.08774 gon |V1      107.26813 gon |
+For M5|Adr     8|IP1     4 5040                 |HD         3.7038 m   |Hz      200.08774 gon |h         -0.1927 m   |
+For M5|Adr     9|IP1     5 5005                 |        2000.0000 m   |Hz       10.23901 gon |V1      107.48739 gon |
+For M5|Adr    10|IP1     5 5000                 |HD         3.7020 m   |Hz       10.23901 gon |h         -0.2054 m   |
+For M5|Adr    11|TI  INTRODUCTION               |s        1.000000     |th         1.5000 m   |ih         1.5320 m   |
+For M5|Adr    32|IP1    19 5000                 |Ea         0.4000 m   |                      |                      |
+For M5|Adr    12|IP1     6 5000                 |SD         3.7517 m   |Hz       61.00873 gon |V1      105.24473 gon |
+For M5|Adr    13|IP1     6 5000                 |HD         3.7389 m   |Hz       61.00873 gon |h         -0.2767 m   |
+For M5|Adr    32|IP1    19 5000                 |Er         0.4000 m   |                      |                      |
+For M5|Adr    14|IP1     7 5000                 |SD         3.7519 m   |Hz       61.00877 gon |V1      105.24530 gon |
+For M5|Adr    15|IP1     8 5000                 |SD         3.7278 m   |Hz       10.24261 gon |V1      107.47155 gon |
+For M5|Adr    15|IP1 10008 5000                 |                      |Hz       10.24261 gon |V1      107.47155 gon |
+For M5|Adr    16|IP1     9 5000                 |SD         3.7283 m   |Hz      200.13086 gon |V1      107.26187 gon |
+For M5|Adr    17|TI  MESURE                     |                      |                      |                      |
+For M5|Adr    18|IP1    10 5000                 |SD         3.7282 m   |Hz      200.13094 gon |V1      107.27405 gon |
+For M5|Adr    32|IP1    19 5000                 |Eg         0.4000 m   |                      |                      |
+For M5|Adr    19|IP1    11 5000                 |SD         3.7277 m   |Hz       10.19487 gon |V1      107.49985 gon |
+For M5|Adr    20|TI  INTRODUCTION               |s        1.000000     |th         1.4000 m   |ih         1.5320 m   |
+For M5|Adr    21|IP1    12 5000                 |SD         3.7516 m   |Hz       61.00602 gon |V1      105.22262 gon |
+For M5|Adr    22|IP1    13 5000                 |x          3.0595 m   |y          2.1498 m   |z         -0.1754 m   |
+For M5|Adr    23|IP1    14 5000                 |x          0.5920 m   |y          3.6542 m   |z         -0.3079 m   |
+For M5|Adr    24|TI  INTRODUCTION               |s        1.000000     |th         1.8000 m   |ih         1.5320 m   |
+For M5|Adr    25|IP1    15 5000                 |x         -0.0045 m   |y         -3.7038 m   |z         -0.6924 m   |
+For M5|Adr    26|TI  INTRODUCTION               |s        1.000000     |th         0.1000 m   |ih         1.5320 m   |
+For M5|Adr    27|IP1    16 5000                 |x         -0.0045 m   |y         -3.7039 m   |z          1.0076 m   |
+For M5|Adr    28|IP1    17 5017                 |SD         3.7280 m   |Hz      200.07648 gon |V1      107.26240 gon |
+For M5|Adr    29|IP1    17 5000                 |x         -0.0044 m   |y         -3.7037 m   |z          1.0076 m   |
+For M5|Adr    30|IP1    18 5018                 |SD         3.7276 m   |Hz       10.22056 gon |V1      107.49864 gon |
+For M5|Adr    31|IP1    18 5000                 |x          0.5917 m   |y          3.6541 m   |z          0.9940 m   |
+For M5|Adr    32|IP1    19 5000                 |Ed         0.4000 m   |                      |                      |
+For M5|Adr    33|IP1    19 5019                 |SD         3.7278 m   |Hz       10.22061 gon |V1      107.49885 gon |
+For M5|Adr    34|IP1    20 5020                 |SD         3.7278 m   |Hz       10.22059 gon |V1      107.49894 gon |
+For M5|Adr    35|IP1    21 5000                 |Ed         0.4000 m   |                      |                      |
+For M5|Adr    36|IP1    21 5000                 |HD         3.7234 m   |Hz        3.36815 gon |h          0.9939 m   |
+For M5|Adr    37|IP1    22 5000                 |HD         3.7020 m   |Hz       10.22057 gon |h          0.9939 m   |
+For M5|Adr    38|TI  HAUTEUR OBJET              |                      |                      |                      |

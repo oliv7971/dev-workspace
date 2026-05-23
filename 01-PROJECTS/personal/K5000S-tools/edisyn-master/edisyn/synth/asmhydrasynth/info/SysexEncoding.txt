@@ -1,0 +1,695 @@
+HYDRASYNTH SYSEX ENCODING	
+Sean Luke
+sean@cs.gmu.edu
+May 1, 2023
+
+
+This encoding is entirely reverse engineered and is incomplete 
+(ASM has not been forthcoming).  But it is enough to build a fairly 
+complete patch editor.  The encoding works for both versions 1.5.5
+and 2.0.0.
+
+Once the sysex is decoded, the patch format is described in the
+accompanying text:
+	
+https://github.com/eclab/edisyn/blob/master/edisyn/synth/asmhydrasynth/info/SysexPatchFormat.txt
+
+This reverse engineered encoding was used to build Edisyn's 
+Hydrasynth patch editor.
+
+
+
+
+ENCODING
+
+All Hydrasynth sysex messages have the same basic format:
+
+	F0 00 20 2B 00 6F DATA... F7
+
+00 20 2B are the namespace for Medeli, aka ASM.  00 6F are unknown but
+I presume they're the ID for the Hydrasynth.
+
+The DATA contains a PAYLOAD of 8-bit bytes encoded as Base64.
+
+Each PAYLOAD appears to consist of four CHECKSUM BYTES followed by
+the actual INFO bytes of arbitrary length.  To compute the checksum,
+
+1. Compute the CRC-32 checksum on the INFO bytes
+2. The checksum is of the form AABBCCDD.  Reverse it as DD CC BB AA.
+3. Subtract each value from 0xFF.  That is, 0xFF-DD, 0xFF-CC, 0xFF-BB, 0xFF-AA
+4. The resulting four bytes will be the CHECKSUM
+
+The CRC-32 encoding is Little Endian, using the Reversed 0xEDB88320 
+CRC32 generator polynomial. It seems that java.util.zip.CRC32 will 
+encode into Big Endian (network order) and then you have to reverse it.
+
+An example INFO string is:	04 00 00 7F
+
+I believe this means "Request Dump of Bank A Patch 128".  Following the 
+instructions above, this converts into a PAYLOAD of
+
+	19 DB 63 91 04 00 00 7F
+
+The Base-64 encoded version of this PAYLOAD is 
+	
+	47 64 74 6A 6B 51 51 41 41 48 38 3D
+or 	"GdtjkQQAAH8="
+
+Inserting into the final sysex message, we have:
+
+	F0 00 20 2B 00 6F 47 64 74 6A 6B 51 51 41 41 48 38 3D F7
+
+
+
+ALTERNATIVE INVALID ENCODINGS
+
+The Hydrasynth appears to have an additional sysex encoding scheme emitted
+when you select "Send Patch" or "Send Bank" on the Hydrasynth front panel.
+The message is a single large message rather than a stream of smaller ones.
+They are meant, I think, to dump data from one Hydrasynth to another over
+5-Pin DIN MIDI (not USB) and that's it.  I think it is possible that 
+"Send Patch"  may send to current memory rather than to a patch slot, which 
+would be nice to have, but I'm not certain.  Unfortunately these encoding 
+schemes appear to be illegal.
+
+Specifically, "Send Patch" looks like something this:
+
+	F0 01 03 05 07 DATA... F7
+	
+And "Send Bank" looks like this:
+
+	F0 02 04 06 08 DATA... F7
+	
+These are impermissable because F0 01 is Sequential's sysex namespace,
+and F0 02 is Big Briar's sysex namespace (I believe that this namespace
+is now controlled by Moog but I'm not certain).  I have not investigated
+the DATA... further for these kinds of messages except to say that they do
+not appear to contain the patch string and seem to be an entirely different
+encoding at first glance.
+
+
+
+WHAT CAN BE DONE
+
+The following can definitely be done over sysex:
+
+	- Handshaking
+	- Request and download one or more patches from patch memory
+	- Request and download the names of patches in a bank
+	- Write one or more patches to patch memory
+	- Send a patch to current working memory [kinda]
+	
+It is my understanding that the following CANNOT be done:
+
+	- Request and download patch from current working memory
+
+
+
+
+HANDSHAKING
+
+It appears that the Hydrasynth Manager engages in the following handshake
+with the Hydrasynth when it starts up.
+
+The raw values for these messages are below. You must take each value
+and encode it as described earlier in order to produce the proper
+sysex message.
+
+
+
+->	A Handshake?
+		00 00
+
+<-	Handshake Response Data?
+		01 00 41 3A 42 3A 43 3A 44 3A 45 00
+
+->	Version Request?
+		28 00
+
+<-	Version Response Data?
+		29 00 9B 00 01
+		[Note that 9B is 155: the Hydrasynth is version 1.5.5
+		 in this example]
+
+->  An Unknown Sysex String Not in Hydrasynth Encoding
+		(F0 00 20 2B 00 6F 01 F7)
+
+
+
+
+
+
+REQUESTING A SINGLE PATCH
+
+To request a patch, you send a HEADER, which elicits a HEADER RESPONSE,
+then you send a PATCH REQUEST.  The Hydrasynth will then send you the
+PATCH DATA in 22 CHUNKS.  After each CHUNK you must send a CHUNK 
+ACKNOWLEDGMENT and then you will receive the next CHUNK.  After you
+have sent the last CHUNK ACKNOWLEDGMENT you then send a FOOTER which
+elicits a FOOTER RESPONSE.
+
+The raw values for these messages are below. You must take each value
+and encode it as described earlier in order to produce the proper
+sysex message.
+
+
+->	1. A Header
+		18 00 
+		
+<-	2. A Header Response
+		19 00
+
+->	3. A Patch Request
+		04 00 BANK NUMBER
+
+	4. Then 21 times for CHUNK = 0 ... 20 (hex 0 ... 14)
+
+<-		- A Chunk Dump
+			16 00 CHUNK 16 DATA...
+			Where DATA... is 128 bytes long
+
+->		- A Chunk Acknowledgment 
+			17 00 CHUNK 16
+
+	5. Then 1 time for CHUNK = 21 (hex 15)
+
+<-		- A Chunk Dump
+			16 00 CHUNK 16 DATA...
+			Where DATA... is 102 bytes long		[truncated]
+
+->		- A Chunk Acknowledgment 
+			17 00 CHUNK 16
+		
+->	6. A Footer
+		1A 00
+		
+<-	7. A Footer Response
+		1B 00
+	
+
+The Patch itself appears to be all 22 DATA... parts concatenated
+together.  Note that the first eight bytes are metadata such as
+patch bank number, and possibly Hydrasynth firmware version number.
+See here for patch data:
+
+https://github.com/eclab/edisyn/blob/master/edisyn/synth/asmhydrasynth/info/SysexPatchFormat.txt
+
+I note that if you don't send the Footer, then the Hydrasynth is very 
+sluggish to respond to new changes on the front panel (it doesn't time out and
+release control to the front panel for about 20 seconds).  From this I 
+gather that the Header and Footer are really soft mutex locks, seizing 
+and then releasing control of the machine.  So be sure to send the Footer.
+
+Here is an example for the first patch, "Sawexpressive GD"
+	
+
+18 00			Header
+19 00			Header response
+
+04 00 00 00		Request Bank 0 Patch 0 Chunk 0
+
+16 00 00 16 05 00 00 00 9B 00 00 00 0D 53 61 77 70 72 65 73 73 69 76 65 20 47 44
+00 20 00 20 00 B0 04 00 00 04 00 20 00 00 00 00 00 00 00 00 00 02 00 01 00 73 00
+00 00 00 00 00 00 00 00 00 00 01 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 03 00 00 00 00 00 64 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 03 00 00 00 00 00 64 00 00 00 03 00 00 00 00 00 00 00 
+				Chunk Dump 0
+
+17 00 00 16		Acknowledge Chunk 0
+
+16 00 01 16 00 00 00 00 00 00 00 00 03 00 F4 FF 00 00 64 00 00 00 01 00 40 02 00
+04 00 00 00 00 00 00 02 00 00 00 00 02 00 00 00 00 00 00 00 04 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 01 00 40 02 00 04 00 00 00 00 00 00 02 00 01 00 00 02 00 00 00 00 00 00 00 04
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+				Chunk Dump 1
+
+
+...[many times, then]...
+
+
+17 00 13 16		Acknowledge Chunk 19
+
+16 00 14 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+				Chunk Dump 20
+	
+17 00 14 16		Acknowledge Chunk 20
+
+16 00 15 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+				Chunk Dump 21		[truncated]
+	
+17 00 15 16 	Acknowledge Chunk 21
+
+1A 00			Footer
+1B 00			Footer response
+
+
+
+
+
+REQUESTING A SERIES OF PATCHES
+
+This is just like requesting a single patch, except the header and footer
+are only sent once, as in:
+
+->	1. A Header
+		18 00 
+		
+<-	2. A Header Response
+		19 00
+
+	3.	[Now repeat once for each patch requested:]
+
+->		3a. A Patch Request
+			04 00 BANK NUMBER
+	
+		3b. Then 21 times for CHUNK = 0 ... 20 (hex 0 ... 14)
+	
+<-			- A Chunk Dump
+				16 00 CHUNK 16 DATA...
+				Where DATA... is 128 bytes long
+
+->			- A Chunk Acknowledgment 
+				17 00 CHUNK 16
+
+		3c. Then 1 time for CHUNK = 21 (hex 15)
+
+<-			- A Chunk Dump
+				16 00 CHUNK 16 DATA...
+				Where DATA... is 102 bytes long		[truncated]
+
+->			- A Chunk Acknowledgment 
+				17 00 CHUNK 16
+	
+[Then finally]	
+		
+->	4. A Footer
+		1A 00
+		
+<-	5. A Footer Response
+		1B 00
+
+
+
+
+
+
+
+WRITING A PATCH
+
+To write a patch, you send a HEADER, which elicits a HEADER RESPONSE.
+You then send the patch in 22 CHUNKS.  After each CHUNK you will receive
+a CHUNK ACKNOWLEDGMENT.  Note that the start of the first CHUNK contains
+eight bytes of metadata which includes the bank and patch number to write to.
+Before the final CHUNK ACKNOWLEDGMENT you will first receive a SAVED
+ACKNOWLEDGMENT. 
+
+You the send a WRITE REQUEST which elicits a WRITE REQUEST REPONSE.
+This will cause the Hydrasynth to spend a fair amount of time (3 seconds
+or more) writing to its memory. 
+
+You then send a FOOTER which elicits a FOOTER RESPONSE.
+
+The Hydrasynth Manager then gets the Hydrasynth to issue a BANK CHANGE, 
+PROGRAM CHANGE, for some reason a SUSTAIN PEDAL RELEASE, but I do not
+believe these things are necessary parts of the protocol.
+
+The raw values for these messages are below. You must take each value
+and encode it as described earlier in order to produce the proper
+sysex message.
+
+Again, once the CHUNKS are concatenated to form the actual patch, the
+patch format is documented here:
+
+https://github.com/eclab/edisyn/blob/master/edisyn/synth/asmhydrasynth/info/SysexPatchFormat.txt
+
+NOTE: After performing this operation, you will need to pause for at
+least 3500ms (yes, you heard that right: *3.5 seconds*) before sending
+the Hydrasynth anything else, including notes.
+
+
+
+->	1. A Header
+		18 00 
+		
+<-	2. A Header Response
+		19 00
+
+	3. Then 21 times for CHUNK = 0 ... 20 (hex 0 ... 14)
+
+->		- A Chunk Dump
+			16 00 CHUNK 16 DATA...
+			Where DATA... is 128 bytes long
+
+<-		- A Chunk Acknowledgment 
+			17 00 CHUNK 16
+
+	5. Then 1 time for CHUNK = 21 (hex 15)
+
+->		- A Chunk Dump
+			16 00 CHUNK 16 DATA...
+			Where DATA... is 102 bytes long		[truncated]
+
+<-		- An Patch Saved Acknowledgment 
+			07 00 BANK NUMBER
+			
+<-		- A Chunk Acknowledgment 
+			17 00 CHUNK 16
+		
+[Then finally]	
+
+->	6. A Write Request
+		14 00
+		
+<-	7. A Write Request Response
+		15 00
+
+->	8. A Footer
+		1A 00
+		
+<-	9. A Footer Response
+		1B 00
+	
+	
+It seems that without the Write Request, the patch isn't written to Flash.
+Instead it stays in RAM. See SENDING A PATCH TO CURRENT MEMORY below.
+
+
+For example, writing Sawpressive GD to Bank E Patch 128:
+
+
+->	18 00
+
+<-	19 00
+
+->	16 00 00 16 06 00 04 7F 9B 00 00 00 0D 53 61 77 70 72 65 73 73 69 
+	76 65 20 47 44 00 20 00 20 00 B0 04 00 00 04 00 20 00 00 00 00 00 
+	00 00 00 00 02 00 01 00 73 00 00 00 00 00 00 00 00 00 00 00 01 00 
+	01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 
+	00 00 00 00 64 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 00 00 
+	00 00 00 00 03 00 00 00 00 00 64 00 00 00 03 00 00 00 00 00 00 00
+	|            Sawpressive GD                         s           |
+	|                            d                           d      |
+	|                                                               |
+	[Note: I think the 06 00 04 7F means "Dump to Bank E Patch 128"]
+	
+<-	17 00 00 16
+
+... then eventually ...
+
+<-	17 00 14 16
+
+->	16 00 15 16 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+	00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	|                                                                |
+	|                                                                |
+
+<-	07 00 04 7F
+
+<- 	17 00 15 16                                          
+
+-> 	14 00		
+
+<- 	CC 0  (Bank Change MSB)=0
+
+<- 	CC 32 (Bank Change LSB)=0
+
+<- 	PC 2
+
+<- 	15 00
+
+<- 	CC 64 (Sustain Pedal) = 2 [off, but why 2?]
+
+->	1A 00
+
+<-	1B 00
+
+
+
+
+
+WRITING A SERIES OF PATCHES
+
+This is just like writing a single patch, except the header, footer, 
+and write request are only sent once, as in:
+
+NOTE: After performing this operation, you will need to pause for at
+least 3500ms (yes, you heard that right).
+
+
+->	1. A Header
+		18 00 
+		
+<-	2. A Header Response
+		19 00
+
+	3.	[Now repeat once for each patch requested:]
+
+		3a. Then 21 times for CHUNK = 0 ... 20 (hex 0 ... 14)
+
+->			- A Chunk Dump
+				16 00 CHUNK 16 DATA...
+				Where DATA... is 128 bytes long
+
+<-			- A Chunk Acknowledgment 
+				17 00 CHUNK 16
+	
+		3b. Then 1 time for CHUNK = 21 (hex 15)
+
+->			- A Chunk Dump
+				16 00 CHUNK 16 DATA...
+				Where DATA... is 102 bytes long		[truncated]
+
+<-			- An Patch Saved Acknowledgment 
+				07 00 BANK NUMBER
+			
+<-			- A Chunk Acknowledgment 
+				17 00 CHUNK 16
+
+->		3c. Then Pause for about 100ms
+
+->	4. A Write Request			[This will take some time]
+		14 00
+		
+<-	5. A Write Request Response
+		15 00
+
+->	6. A Footer
+		1A 00
+		
+<-	7. A Footer Response
+		1B 00
+	
+
+
+
+
+REQUESTING BANK PATCH NAMES
+
+To request patch names, the Manager first engages in HANDSHAKE,
+with a HANDSHAKE DATA RESPONSE, then sends a HEADER with a HEADER
+RESPONSE, then sends a PATCH NAMES REQUEST.  The Hydrasynth then
+responds with a PATCH NAMES CHUNK.  After a PATCH NAMES CHUNK
+ACKNOWLEDGMENT, another PATCH NAMES CHUNK is sent and so on. 
+This happens 18 times total.  Finally a FOOTER is sent with a
+FOOTER RESPONSE.
+
+If you concatenate all the DATA, I believe you wind up with the following:
+
+03 00 BANK [NAME... 00 3A]*(127 times) NAME... 00
+Where NAME... is a 16-byte long string.  
+
+The raw values for these messages are below. You must take each value
+and encode it as described earlier in order to produce the proper
+sysex message.
+
+<->	0. HANDSHAKE, consisting of Handshake and Handshake Response
+	[See first two sysex commands in "HANDSHAKING" above]
+	[Optional, but it's what the Manager does]
+
+->	1. A Header
+		18 00 
+		
+<-	2. A Header Response
+		19 00
+
+->	3. A Patch Names Request
+		02 00 BANK
+
+	4. Then 17 times for CHUNK = 0 ... 16 (hex 0 ... 10)
+
+<-		- A Chunk Dump
+			16 00 CHUNK 13 DATA...
+			Where DATA... is 128 bytes long
+
+->		- A Chunk Acknowledgment 
+			17 00 CHUNK 13
+
+	5. Then 1 time for CHUNK = 17 (hex 11)
+
+<-		- A Chunk Dump
+			16 00 CHUNK 16 DATA...
+			Where DATA... is 2 bytes long		[truncated]
+
+->		- A Chunk Acknowledgment 
+			17 00 CHUNK 13
+		
+->	6. A Footer
+		1A 00
+		
+<-	7. A Footer Response
+		1B 00
+
+
+Here is an Example for Bank "A":
+
+->	00 00
+
+<-	01 00 41 3A 42 3A 43 3A 44 3A 45 00
+
+->	18 00
+
+<-	19 00
+
+-> 	02 00 00	
+
+<-	16 00 00 13 03 00 00 53 61 77 70 72 65 73 73 69 76 65 20 47 44 00 
+	20 00 3A 47 58 20 55 6C 74 72 61 50 61 64 20 50 53 00 20 00 3A 56 
+	65 6E 75 73 20 50 6C 75 63 6B 20 45 54 00 20 00 3A 42 6C 61 64 65 
+	54 69 74 6C 65 73 20 50 53 00 20 00 3A 43 68 6F 77 27 73 20 41 72 
+	70 20 47 44 00 20 20 00 3A 44 6F 70 70 6C 65 72 20 42 61 73 73 20 
+	4D 50 00 00 3A 43 6C 65 61 6E 20 46 4D 20 50 61 64 20 4D 50 00 00
+	|       Sawpressive GD   :GX UltraPad PS   :Venus Pluck ET   :Bla|
+	|deTitles PS   :Chow's Arp GD    :Doppler Bass MP  :Clean FM Pad |
+	|MP  |
+
+	Note: 128 bytes beyond the 16 00 00 13
+	Note: I am guessing that the 03 00 00 is metadata for
+	      SENTPATCHNAMES 0x00 BANK
+	Note: It appears that after the 03 00 00 the names start, one at
+	      a time, 16 bytes each, followed by a terminating 00 and then
+	      a separating 3A (":").  There is no final 3A at the end of 
+	      the full sequence.
+
+->	17 00 00 13
+
+<-	16 00 01 13 3A 54 68 65 20 52 65 61 6C 20 4F 77 6C 20 4D 46 00 00 
+	3A 43 6F 72 79 27 73 20 4C 65 61 64 20 47 44 00 20 00 3A 50 6F 6C 
+	79 20 52 69 73 65 72 73 20 4D 50 00 20 00 3A 46 72 61 6E 74 61 73 
+	69 61 20 46 50 00 20 20 20 00 3A 42 65 79 6F 6E 64 20 42 6F 62 20 
+	53 43 44 00 20 00 3A 53 70 69 72 61 6C 42 61 6C 6C 61 64 20 50 53 
+	00 00 3A 46 4D 20 53 69 6D 70 6C 65 20 42 61 73 73 00 20 00 3A 52
+	|    :The Real Owl MF  :Cory's Lead GD   :Poly Risers MP   :Frant|
+	|asia FP     :Beyond Bob SCD   :SpiralBallad PS  :FM Simple Bass |
+	|  :R|
+
+->	17 00 01 13
+
+... and so on 17 times in total, then ...
+
+<-	16 00 11 13 00 20 20 00 3A 43 6F 6D 70 54 68 61 74 46 75 6E 6B 20
+	50 53 00 00 3A 4E 5A 20 46 75 6E 6B 20 42 61 73 73 20 4D 50 00 00 
+	3A 50 6C 61 79 20 77 20 20 4A 65 6E 20 4B 46 50 00 00 3A 46 75 74 
+	75 72 65 20 50 57 4D 20 4D 50 00 20 20 00 3A 42 55 47 53 20 49 4E 
+	20 4C 4F 56 45 20 64 66 00 00 3A 43 61 6C 69 65 73 20 4C 65 61 64 
+	20 47 44 00 20 00 3A 46 4D 20 50 69 61 6E 6F 20 46 50 00 20 20 20
+	|        :CompThatFunk PS  :NZ Funk Bass MP  :Play w  Jen KFP  :F|
+	|uture PWM MP    :BUGS IN LOVE df  :Calies Lead GD   :FM Piano FP|
+	|    |
+
+->	17 00 11 13
+
+<-	16 00 12 13 20 00
+	|  |
+	Note: a space, followed by 0x00
+	
+->	17 00 12 13
+
+->	1A 00
+
+<-	1B 00
+
+
+
+
+
+
+SENDING A PATCH TO CURRENT MEMORY
+
+This is the same as writing a single patch, except that there is no write request.
+The Hydrasynth is strange in that it appears to store an entire bank in current 
+working memory at a time.  This means that you have to specify which patch you 
+want to update (but not save).
+
+It is BELIEVED that this procedure does not burn Flash (unlike writing a patch).
+The evidence for this is (1) it is far faster than writing and (2) the changes
+to the current memory do not surve power cycling.  However ASM will not verify 
+this publicly.
+
+NOTE 0: Because the patch has been updated in the "whole bank current memory", if
+you do a write later on for some other patch in the same bank, it will write this 
+patch as well. If you do a write in a different bank, it won't write this patch 
+(but if you go back to the patch, it'll still be there, changed).  For this reason 
+it would be very confusing for a user to update this patch and then find it's been 
+permanently changed because you wrote another patch to RAM.  Thus your best strategy 
+is probably to use a "scratch patch", like H 127, and update it instead.
+
+NOTE 1: Whereas sending a single parameter update via NRPN causes the patch number 
+to get a little "*" next to it to indicate that it is has been edited, updating the
+whole patch by sending to current memory will NOT cause the "*" to appear. It appears 
+to be a Hydrasynth bug.
+
+NOTE 2: You will not hear the update unless you change to the patch via a PC.  Because 
+of a Hydrasynth bug, if you change to a patch that you're already at, or stay within
+your current bank, the change-patch request is entirely ignored.  Thus in general 
+you'll need to [A] Bank change to a DIFFERENT bank than the one you're updating [B] PC
+to a DIFFERENT patch than the one you're updating [C] Bank change back to the bank you're
+updating [D] PC back to the patch you're updating.  Note that you will need a pause of
+about 150ms between (B) and (C).  Finally, you'll need about a 200ms pause after (D) and
+before you start playing notes or doing other stuff.
+
+->	1. A Header
+		18 00 
+		
+<-	2. A Header Response
+		19 00
+
+	3. Then 21 times for CHUNK = 0 ... 20 (hex 0 ... 14)
+
+->		- A Chunk Dump
+			16 00 CHUNK 16 DATA...
+			Where DATA... is 128 bytes long
+
+<-		- A Chunk Acknowledgment 
+			17 00 CHUNK 16
+
+	5. Then 1 time for CHUNK = 21 (hex 15)
+
+->		- A Chunk Dump
+			16 00 CHUNK 16 DATA...
+			Where DATA... is 102 bytes long		[truncated]
+
+<-		- An Patch Saved Acknowledgment 
+			07 00 BANK NUMBER
+			
+<-		- A Chunk Acknowledgment 
+			17 00 CHUNK 16
+		
+[Then finally]	
+
+->	6. A Footer
+		1A 00
+		
+<-	7. A Footer Response
+		1B 00
+

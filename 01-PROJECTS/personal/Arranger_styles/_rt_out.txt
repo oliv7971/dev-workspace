@@ -1,0 +1,38 @@
+﻿=== Round-trip validation: test_out.STY ===
+
+XRef: [28, 100, 19419]
+TOC entries: 2
+  [0] TOCEntry(Style bank=0 pos=0 v0.0 '8BeatBallad1')
+  [1] TOCEntry(StylePerformances bank=0 pos=0 v0.0 '')
+
+Style object size: 52176 bytes
+parse_style: OK
+
+=== Style content ===
+  Name       : '8BeatBallad1'
+  Enabled    : 0x7fff
+  WithData   : 0x7fff
+  n_midi_tracks (TrackMapping.n_midi_tracks): 158
+  indices len (TrackMapping.indices): 158
+  global tracks (midi_tracks): 158
+  style_elements: 15
+  [OK] n_midi_tracks == len(midi_tracks)  (158 vs 158)
+  [OK] n_midi_tracks == len(indices)  (158 vs 158)
+  [OK] all indices valid (1..n_midi_tracks)
+
+=== StyleElement check ===
+  Elements with MasterMidiTrack: 15
+  Empty elements: 0
+
+=== Comparison with BANK01.STY obj0 ===
+  BANK01 'The Fire': n_tracks=122, indices=191, midi_tracks=122, elements=15
+  test_out track types: {'bass': 158}
+  BANK01   track types: {'drum': 32, 'bass': 17, 'guitar': 37, 'accompaniment': 36}
+
+=== MIDITrackList inner structure (test_out) ===
+  MIDITrackList sub-chunks: TrackMapping=1 Drum=0 Bass=158 Acc=0 Guitar=0
+    total sub-chunks: 159
+  [OK] TrackMapping present (exactly 1)
+  [OK] total tracks match n_midi_tracks  (158 vs 158)
+  [OK] Exactly 1 MIDITrackList
+  [OK] 15 StyleElements  (got 15)

@@ -1,0 +1,37 @@
+/*
+   Copyright (c) 2020 Christof Ruch. All rights reserved.
+
+   Dual licensed: Distributed under Affero GPL license by default, an MIT license is available for purchase
+*/
+
+#pragma once
+
+#include "JuceHeader.h"
+
+#include "GenericAdaptation.h"
+#include "InfoText.h"
+
+#include "LambdaButtonStrip.h"
+
+namespace knobkraft {
+
+	class AdaptationView : public Component {
+	public:
+		AdaptationView();
+
+		void setupForAdaptation(std::shared_ptr<GenericAdaptation> const& adaptationSynth);
+
+		virtual void resized() override;
+
+	private:
+		std::shared_ptr<GenericAdaptation> adaptation_;
+
+		InfoText setupHelp_;
+		InfoText adaptationInfo_;
+		HyperlinkButton knobkraftWiki_;
+
+		LambdaButtonStrip extraFunctions_;
+	};
+
+}
+

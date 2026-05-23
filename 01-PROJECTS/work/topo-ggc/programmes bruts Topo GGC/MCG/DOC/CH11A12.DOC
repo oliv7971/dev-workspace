@@ -1,0 +1,510 @@
+                         Pytha-Graph R910801 Page 11.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		     M A N U E L    D E    R E F E R E N C E
+
+
+
+		                 CHAPITRE    11
+
+
+		                  INTRODUCTION
+
+                         Pytha-Graph R910801 Page 11.2
+
+
+
+        G‚n‚ralit‚s:
+        ------------
+
+
+		  PYTHA-GRAPH	est   un   outil de  Dessin  Assist‚ par
+        Ordinateur, con‡u pour ˆtre utilis‚ soit en mode interactif soit
+        en mode automatique.
+
+                  En  mode  interactif,les  commandes  sont  fournies au
+        clavier ou … l'aide d'un digitaliseur.
+
+                  En mode automatique,  elles se trouvent sur un fichier
+        construit  …  l'aide de l'‚diteur du systŠme,  ou g‚n‚r‚  par un
+        programme sp‚cifique de conception.Si vous proc‚dez de la sorte,
+	les  deux programmes (sp‚cifique + PYTHA-GRAPH ) constituent un
+        outil de Conception Assist‚e par Ordinateur (CAO).
+
+                  Il  est … noter que ces outils ne sont pas  nouveaux :
+        depuis  1960,   beaucoup  d'ing‚nieurs  et  de  bureaux d'‚tudes
+        pratiquent le calcul et le dessin automatiques, autrement dit la
+        CAO et le DAO sans le savoir...
+
+		  PYTHA-GRAPH  dessine	des objets sans en connaŒtre  la
+        finalit‚; ainsi le symbole num‚ro i peut ˆtre une r‚sistance, ou
+        une baignoire, une vanne, un trappon PTT, etc...
+        Il ne vous fournira pas les ‚quipotentielles,  ou une coupe,  ou
+        une perspective avec les ombres, ou des courbes de niveau,...
+
+                Il comporte cependant quelques commandes d‚di‚es dans le
+	domaine de la topographie telles que :
+
+                - calculs num‚riques : g‚om‚trie droites/cercles
+
+                - distances, surfaces
+
+                - permutations des axes ( pour lev‚s de plans verticaux)
+
+                - perspectives axonom‚triques
+
+                - cotations p‚rimŠtriques
+
+                - lissages
+
+	        - manipulation des cotes Z ayant une taille fixe et ind‚
+		  -pendante du zoom
+
+	        - traits simples  et  complexes pour  symbolique ‚volu‚e
+		  avec masque pour les traits complexes
+
+	        - possibilit‚ de digitalisation  avec fonctions utilisa-
+		  teur en vue du transfert dans les bases de donn‚es
+
+		- l'ensemble (N X Y Z) forme  un tout
+                         Pytha-Graph R910801 Page 11.3
+
+
+
+		  PYTHA-GRAPH  peut  travailler  de  fa‡on  autonome  et
+        ind‚pendante du systŠme d'exploitation : les fichiers sont g‚r‚s
+        par le programme ( vous ne les retrouverez pas dans la table des
+        matiŠres de votre disque ).
+
+                  Deux ‚crans logiques sont utilis‚s.
+
+                  - un pour le graphique
+
+                  - un pour le dialogue utilisateur/programme
+                    (‚cran systŠme)
+
+                  Ces  deux  ‚crans logiques peuvent  ˆtre r‚unis sur un
+        seul ‚cran physique (cas le plus fr‚quent actuellement).
+        Un  troisiŠme  ‚cran  logique peut  ˆtre  connect‚  au programme
+        pendant la phase de sortie sur table tra‡ante.
+
+                  Les  ordres de dessin ‚l‚mentaires sont la  droite, le
+        cercle (et arcs), le lissage, les parallŠles, les symboles.
+        Le  programme comporte environ 250 commandes : dessin, attributs
+	graphiques, gestion d'‚cran, gestion des fichiers, etc..., ainsi
+	qu'une cinquantaine de fonctions d‚di‚es … la saisie d'objets.
+
+                  Toutes  sont  accessibles sans menu structur‚ (arbre),
+        sauf cas particulier pour les fonctions utilis‚es ‚pisodiquement
+        (fichiers,  pr‚parer  un  graphique pour la machine …  dessiner,
+        op‚rations    sur   les   mots   cl‚s,...).Afin   de   faciliter
+        l'apprentissage, des messages sont affich‚s en bas de l'‚cran:il
+        suffit normalement de fournir les r‚ponses aux questions pos‚es.
+
+                  L'‚cran systŠme permet un affichage de 10 menus de  25
+        fonctions accessibles avec MOUSE et/ou la tablette.
+	Si vous disposez d'un digitaliseur,  vous pouvez affecter toutes
+	les cases  … une fonction . Cette  structure  horizontale  a ‚t‚
+	choisie  pour  les  raisons suivantes:
+
+                  - accŠs  imm‚diat … n'importe quelle commande  (pas  de
+                    descente dans un menu puis … un sous menu etc...)
+
+                  - obligation de r‚duire les accŠs disque: en dehors des
+                    op‚rations normales concernant  les  fichiers, et les
+		    paramŠtres  …  sauvegarder,  le programme  utilise le
+		    disque au minimum.
+
+                  - temps de r‚ponse rapide.
+
+                  - l'utilisateur doit apprendre … se servir de l'outil.
+
+                  - obligation d'avoir des mn‚moniques naturels.
+
+        Ces  choix  vous  expliquent  pourquoi  PYTHA-GRAPH ne travaille
+	pas en dessous de 540 K de RAM.
+                         Pytha-Graph R910801 Page 11.4
+
+
+
+                  Pour  terminer ces g‚n‚ralit‚s, nous vous sugg‚rons de
+        travailler de la fa‡on suivante:
+
+                 - comment organiser le dessin: choix des Blocs et Plans
+                   par thŠme:  traits, ‚critures, symboles.Commencer par
+                   des dessins simples, monter quelques exemples,...
+
+                 - d‚finir    des   paramŠtres   g‚n‚raux   pour   votre
+                   application
+
+                 - bien r‚fl‚chir … la symbolique,  cela ne  s'improvise
+                   pas (taille dans la fonte, coefficients,...).
+
+                 - changer les habitudes.
+
+                 - lire la documentation au moins une fois.
+
+
+        Equipement
+        ----------
+
+                  - Micro-Ordinateur 8,16,32 bits sous MSDOS.
+
+		    PYTHA-GRAPH  a  besoin de la configuration	minimale
+                    suivante :
+                    m‚moire centrale (RAM) 640 K  , coprocesseur 87
+                    le programme demande  540 K, un disque dur et un
+		    moniteur EGA ou VGA 640 x 480 points.
+		    SystŠme minimum conseill‚ : 386SX, avec MOUSE et
+		    tablette … digitaliser ou digitaliseur.
+
+		  - A terme pr‚voir un systŠme 386 , ou 486  …  25 ou 33
+		    Mhz avec 8 M‚ga ram, disque dur 80 M‚ga  et  support
+		    pour coprocesseur Weitek . Pour les applications im-
+		    portantes, une station graphique  avec  un  ecran de
+		    19/20  pouces  ayant  une  r‚solution de 1024*768 ou
+		    1280*900 ou plus.
+
+
+
+        Concepts g‚n‚raux
+        -----------------
+
+		- Unit‚s, dimension, ‚chelle
+
+                  Supposons  que  vous ayez dessin‚ un carr‚ … l'‚cran …
+        l'aide des points de coordonn‚es (0,0/50,0/50,50/0,50).
+        A l'‚chelle 1000,  une unit‚ utilisateur est repr‚sent‚e par 1mm
+	‚cran. Un carr‚ de 50x50 a donc l'aspect d'un carr‚ de 50x50 mm.
+	Ce carr‚ peut ˆtre rectangulaire si les dimensions de l'‚cran ne
+	sont  pas les dimensions r‚elles.Ceci n'a aucune importance,  le
+	graphique ‚tant stock‚ en m‚moire en coordonn‚es utilisateur.Les
+	dimensions du dessin peuvent ˆtre quelconques, l'‚cran ‚tant une
+                         Pytha-Graph R910801 Page 11.5
+
+
+
+
+	fenˆtre  qui  se d‚place dans  l'espace  utilisateur. Echelle et
+	dimension papier n'ont pas de signification pour PYTHA-GRAPH sauf
+	si  vous  demandez une 	sortie sur la machine … dessiner : c'est
+	seulement   …   ce  moment  que  vous   pr‚ciserez  l'‚chelle de
+	repr‚sentation et la dimension de votre dessin (tout ou partie).
+
+		- Zoom
+
+                  La commande ZOOM vous permet d'agrandir ou de diminuer
+        la  taille du graphique affich‚.Le ZOOM peut ˆtre diff‚rent en X
+        et Y  il s'agit d'une modification des ‚chelles en X et Y.Il n'y
+        a  aucune  diff‚rence  fonctionnelle  entre le  ZOOM  d'‚cran et
+        l'‚chelle pour la machine … dessiner.
+
+
+
+		- R‚solution, pr‚cision
+
+                 La r‚solution graphique correspond au plus petit d‚tail
+        qu'il est possible de repr‚senter. Par exemple,  un ‚cran de 640
+	x 200 points (moniteur classique)  a une r‚solution  de	0,3mm en
+	X et 0,6mm en Y. Pour avoir une  plus grande  pr‚cision  il faut
+	agrandir  l'image  ( fonction ZOOM ) .  Les digitaliseurs ont en
+	g‚n‚ral  une  r‚solution  de  0,1mm,  et les traceurs 0,050mm ou
+	0,025mm. La pr‚cision de votre dessin sur le papier d‚pend de la
+	machine … dessiner et non de l'‚cran. Toutefois, si vous avez un
+	bon ‚cran ( 640x480 ou plus ) cela vous facilitera le travail.
+
+                  La pr‚cision des coordonn‚es contenues dans la base de
+        donn‚es du programme est ind‚pendante des appareils p‚riph‚riques
+        la pr‚cision interne est de 7 chiffres significatifs, les entr‚es
+        sorties pouvant ˆtres faites avec 14 chiffres.
+
+
+
+		- Fichiers
+
+                Les graphiques peuvent se manipuler de plusieurs fa‡ons.
+        Lorsque  vous  d‚marrez le programme,  il n'y a aucun  dessin en
+	m‚moire,   seuls  sont  initialis‚s  les   attributs  graphiques
+	(type de trait, taille des caractŠres, ‚paisseurs des traits,..)
+	et les commandes d'assistance (arrondi de  saisie = r‚solution =
+	pas de la trame, mode ORTHO en ou hors fonction, rayon de recher
+	-che,..) Vous pouvez dessiner directement le carr‚ pr‚c‚dent par
+	exemple.  La sauvegarde des ‚l‚ments en m‚moire peut s'effectuer
+	… tout instant avec des noms diff‚rents. Le carr‚ pr‚c‚dent peut
+	ˆtre sauv‚ comme un dessin  (DES) .
+
+                  ex: $SDE CARRE
+
+                  et/ou comme proc‚dure (PRC)
+
+                         Pytha-Graph R910801 Page 11.6
+
+
+
+
+		  ex: $SPR CARRE
+
+                  et/ou comme fichier coordonn‚es (XYZ)
+
+                  ex: $SXY CARRE
+
+                  Vous   pouvez  charger  en  m‚moire  un  dessin   et/ou
+        plusieurs proc‚dures.
+
+                  ex. $LDE CARRE
+                      $LPR CARRE
+                      $LPR CARRE
+
+
+
+
+		  La  premiŠre  commande efface le dessin en  m‚moire et
+        charge le fichier CARRE (DES), puis on ajoute les fichiers CARRE
+        (PRC).
+        Si  vous  ex‚cutez  le dessin en pas … pas (commande  DEBG) vous
+        verrez apparaitre trois carr‚s (confondus).
+        Les  trois  fichiers  repr‚sentent  le  mˆme  objet,   mais sont
+	logiquement  differents.Si  vous  avez  pris  soin  avant chaque
+        sauvegarde de sp‚cifier un nø de Bloc (et/ou Plan) differents  a
+        chaque fois, vous pouvez s‚lectionner l'un des trois carr‚s.
+
+                  Si  vous  listez la table des fichiers (commande FUTI)
+        vous verrez un autre type de fichier :
+
+                  nom suivi de FTE.
+
+                  Ce  (ou  ces) fichier est une FONTE :  il  contient la
+        symbolique (alphabet,  symboles).
+	On peut avoir plusieurs fichiers de type fonte.
+
+        Les fichiers de type XYZ peuvent etre utilises par d'autres pro-
+        grammes. De meme il est possible de recuperer un fichier  (NXYZ)
+        dans le systeme ainsi qu'un fichier de commandes (mode automati-
+        que ).
+
+
+		- Blocs et plans
+
+                  Un bloc  est un  dessin  compos‚ de plans ( calques ).
+	Chaque ordre  de  dessin  peut  ˆtre  affect‚ … un bloc  ou … un
+	plan particulier.Il est ainsi possible d'effectuer une s‚lection
+	th‚matique lors de la restitution d'un  graphique sur la machine
+	… dessiner.  Les blocs et plans peuvent ˆtre copi‚s, d‚plac‚s et
+	subir des transformations lin‚aires .
+
+
+		- Parametres generaux
+                         Pytha-Graph R910801 Page 11.7
+
+
+
+
+		  Les  paramŠtres  g‚n‚raux peuvent ˆtre ajust‚s … votre
+        application  (voir  configuration),   de  fa‡on  …  d‚marrer  le
+        programme avec les consignes les plus courantes.
+
+
+                  Parmi ces paramŠtres citons :
+
+                  - Arrondi de saisie
+                  - Mode orthogonal ou non
+                  - Taille des textes
+                  - Type de trait
+                  - Couleur de la plume, couleur de la mire
+                  - Unit‚ d'angle
+                  - Nombre de d‚cimales pour les r‚sultats de calculs
+                  - Type de cotation
+                  - Etc...
+
+                 Les fonctions rappelables par la touche Return (clavier
+        ou  digitaliseur ) peuvent  ˆtre d‚finies par l'utilisateur.
+                         Pytha-Graph R910801 Page 11.8
+                         Pytha-Graph R910701 Page 12.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		     M A N U E L    D E    R E F E R E N C E
+
+
+
+		                 CHAPITRE    12
+
+
+		                  INTRODUCTION
+                         Pytha-Graph R910701 Page 12.2
+
+
+
+                         ECRANS et DIGITALISEURS
+                         -----------------------
+
+
+        Ecrans
+        ------
+		  PYTHA-GRAPH peut g‚rer trois ‚crans logiques
+
+                  ‚cran 1 : ‚cran systŠme
+                  ‚cran 2 : ‚cran graphique
+                  ‚cran 3 : ‚cran graphique pouvant ˆtre utilis‚ pendant
+                            la   g‚n‚ration  du  code  de  la  machine …
+                            dessiner,  pour afficher la fenˆtre en cours
+                            de restitution.
+
+                  Sur  la  plupart des systŠmes,  ces trois  ‚crans sont
+        associ‚s  … un seul ‚cran physique :  le moniteur vid‚o de votre
+        Micro Ordinateur.
+                  Deux   unit‚s  physiques  peuvent  ˆtre  raccord‚es  …
+	PYTHA-GRAPH :
+                  ‚cran 1 et ‚cran 2
+                  L'‚cran 3 sera d‚fini comme ‚cran 1 ou ‚cran 2.
+                  Les trois ‚crans logiques doivent toujours ˆtre d‚finis
+        (fichiers  systŠme pr‚sents sur la m‚moire de masse),  mˆme s'il
+        n'y a qu'un ‚cran raccord‚ … votre mat‚riel (l'‚cran systŠme).
+
+                  Les ‚crans sont d‚finis par le nombre de  points  en X
+        et en Y et par la dimension de la zone d'affichage (fenˆtre). Si
+	les dimensions sont exactes (240mm  x 180mm par ex.)  une  unit‚
+	utilisateur  sera  repr‚sent‚e par 1mm … l'‚cran.Si  vous donnez
+	d'autres  dimensions soit (360 x 270) une unit‚ utilisateur sera
+	repr‚sent‚e par 0,6mm. Si les  dimensions ne sont pas coh‚rentes
+	en  X  et  Y  les carr‚s  auront  l'aspect  de rectangles et les
+	cercercles d'ellipses.  Cette possibilit‚ vous permettra si vous
+	le d‚sirez  de dessiner  sur une surface plus 	importante, donc
+	d'avoir moins de deplacements de la fenˆtre … effectuer si votre
+	plan est grand.  Si  vous d‚clarez  votre ‚cran  …  la dimension
+	d'un digitaliseur par ex. 280 x 280,  vous pouvez digitaliser un
+	plan existant de 28cm x 28cm  sur un  ‚cran de  20cm x 20cm soit
+	deux fois la surface de l'‚cran.
+
+                  L'‚cran  1 sert au dialogue avec le  programme.Il peut
+        afficher 25 lignes (1ere en haut 25eme en bas) de 80 colonnes.
+        Sur la ligne 1 sont port‚s les renseignements suivants :
+                  - ‚chelles X et Y
+                  - arrondi de saisie (ARR)
+                  - rayon de recherche (RAYO)
+                  - nø du Bloc et du Plan dans lequel on dessine
+                  - nom du dessin (ou dernier fichier manipul‚)
+		  - etc...
+		  La  ligne  25  est  la  ligne  de  dialogue , les "::"
+	signifient "… vous" ( c'est le prompt du programme ).  La partie
+	droite  (col. 72  …  80 et  ligne 1 … 24) correspond … 	24 cases
+	pouvant servir  de zone de menu . Le dessin  peut  occuper  tout
+	l'‚cran.
+                         Pytha-Graph R910701 Page 12.3
+
+
+
+                  La  case  0 (zero) couvre les colonnes 1 …  71  et les
+        lignes 1 … 25 . La case 0 ‚cran est associ‚e … la case 0 du digi
+	-taliseur , l'‚cran est la  r‚duction ou l'agrandissement  de la
+	zone visible du dessin sur le digitaliseur.
+
+                  ex. digitaliseur 280 x 280
+
+                      zone utile 240 x 240 (case 0)
+
+                      ‚cran 200 x 200 (associ‚ au digitaliseur)
+
+                      dessin 3000 x 1200
+
+                  A l'‚chelle 1, l'‚cran repr‚sente 240 x 240 de dessin.
+
+        Digitaliseurs
+        -------------
+
+		  Le  digitaliseur  connect‚  …  PYTHA-GRAPH  doit  ˆtre
+        capable d'effectuer les op‚rations suivantes :
+
+                  - envoyer des points en continu (XY) (Stream)
+                  - envoyer  un code (CB=control byte) correspondant aux
+                    trois ‚tats suivants :
+
+                      - nul (la mire suit le d‚placement du curseur)
+                      - validation du point‚ (rouge)
+                      - fin des point‚s (blanc)
+
+                  La n‚cessit‚ d'avoir trois ‚tats  implique un appareil
+        ‚quip‚ d'un curseur avec au moins 2 boutons. Les crayons   n'ont
+	que deux ‚tats, ce qui n‚cessite  une  manipulation  du  clavier
+	de la console pour avoir le 3Šme ‚tat.
+                  La logique est la mˆme avec les modes digit/clavier et
+        clavier.
+
+                  Les trois ‚tats sont utilis‚s de la fa‡on suivante :
+
+                  ‚tat      digit          digit/clavier       clavier
+
+                  nul       d‚placer le    flŠches             nø point
+                            curseur
+
+                  Valider   Rouge          RC                  RC
+                  un point‚
+
+                  fin des   Blanc          signe -             RC
+                  point‚s
+
+                  Valider   Rouge          RC                  RC
+                  la liste
+
+                  Annuler   Blanc          signe -             N
+                  la liste
+
+                         Pytha-Graph R910701 Page 12.4
+
+
+
+
+		  (RC = Enter ou Return = Retour chariot)
+
+
+                  La zone en haut … droite du digitaliseur est associ‚ …
+        la fenˆtre ‚cran (case 0)
+                  Toute la surface est d‚coup‚e en n cases de x y mm.
+                  ex: 280 x 280 avec cases de 20mm = 196 cases
+
+
+
+                  Les  bandes  …  gauche  et en  bas  sont  not‚es cases
+        diff‚rentes  de  0,  ce  sont les cases invisibles  … l'‚cran.Un
+        point‚ dans la case 0 signifie oui, un point‚ en dehors de cette
+        case  signifie  non;  on  peut utiliser  cette  possibilit‚ pour
+        terminer  (case  dif.  de 0) des point‚s,  valider (case  0) une
+        liste,  annuler  (case  dif.  de 0) une liste (…  rapprocher des
+        consignes concernant les 3 ‚tats cit‚s plus haut).
+                  La   d‚finition   du   digitaliseur   et   des   codes
+        digit/clavier sont paramŠtrables .
+                         Pytha-Graph R910701 Page 12.5

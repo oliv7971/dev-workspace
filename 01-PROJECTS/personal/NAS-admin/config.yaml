@@ -1,0 +1,34 @@
+# Configuration NAS-admin
+# Adapter les chemins selon ton installation
+
+nas:
+  name: "NAS-Travail"
+  # Chemin d'accès au NAS (lecteur mappé ou UNC)
+  # Racine complète : "\\\\Nas_travail\\01-ds414-data"
+  path: "\\\\Nas_travail\\01-ds414-data\\31-GGC-DOSSIERS\\37-TUNNEL GRAND CHAMBON"
+
+scan:
+  # Dossiers à exclure du scan (chemins relatifs depuis la racine du NAS)
+  exclude_dirs:
+    - "@eaDir"           # Métadonnées Synology
+    - "#recycle"         # Corbeille Synology
+    - "@tmp"             # Fichiers temporaires Synology
+    - ".SynologyWorkingDirectory"
+    - "$RECYCLE.BIN"
+    - "System Volume Information"
+
+  # Extensions à ignorer
+  exclude_extensions:
+    - ".tmp"
+    - ".ds_store"
+    - ".thumbs.db"
+
+  # Taille min pour la détection de doublons (en octets)
+  # Ignorer les fichiers < 1 Ko pour éviter le bruit
+  min_size_for_duplicates: 1024
+
+output:
+  # Dossier de sortie pour les rapports (local, pas sur le NAS)
+  reports_dir: "./reports"
+  # Format de la base de données d'inventaire
+  inventory_db: "./reports/inventory_chambon37.db"

@@ -1,0 +1,39 @@
+<html><head></head>
+<body>
+
+<h1>Roland JV-80 / JV-880</h1> 
+<h2>Single Patch Editor</h2>
+
+<p>This patch editor ought to work properly with both the JV-80 and the JV-880.  However it has only been tested with the JV-880. Please let me know of any discrepancies you discover.
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Be sure to have the patch/perform button on your JV-80/880 set to "patch".  When you set up MIDI in the patch editor, you can specify the MIDI channel and the Synth ID.  Set your synthesizer's Patch Receive channel ("Rx channel", which appears under the System menu ONLY when in Patch Mode, and not to be confused with the Control Channel) to the same as Edisyn's channel (perhaps Channel 1), and its "Unit number" to the same as Edisyn's Synth ID (perhaps 17).  Set Program Change, Bank Select, and Exclusive to ON.  Make sure write protect is off if you want to write changes.  Finally, make sure the Edit button is OFF or your JV won't respond properly. 
+
+<br><br><h3>Gotchas</h3>
+
+<ul>
+<li>Changing patches on the Roland JV880 is SLOW: perhaps 2 seconds, because each step (changing to "Patch" from "Perform", setting the bank, and finally doing a Program Change) requires about 700ms of wait time afterwards or else the machine will get confused.  Thus uploading and downloading patches will be very slow.
+ 
+<p><li>You can't edit, and sometimes can't play notes, unless the Patch/Perform button is set to "Patch".  Edisyn tries to set this button programmatically when it can, but sometimes it won't get set -- for example, when you just change windows from the Multi editor to the Single Editor.  So if you're having difficulty, make sure the button is properly set.
+</ul>
+
+<br><br><h3>Librarian Support</h3>
+
+In order to download one patch, Edisyn must (1) change the patch/performance button to "patch" (2) send a change-bank request (3) send a program-change request (4) load the patch. The problem is that each of these tasks requires about a 700ms break afterwards or the JV-880 can get confused. As a result, loading patches into the Librarian at present is very, very slow: about 2-3 seconds per patch.  I'm sorry about that.  
+
+<p>Also note that if the JV-880 has failed to do any of these tasks, when Edisyn loads the patch proper, it'll load the previous patch. That's why, when you try to load all patches, the "Card" bank gets loaded with dummy patches equivalent to the last patch in the Internal bank: because they've all failed (there's no card).  
+
+<br><br><h3>Thanks</h3>
+Thanks to Keith (llamamusic@hotmail.com) for his extraordinary service in loaning a machine in a pinch, providing materials, and debugging.  If you are a JV-880 owner, <a href="llamamusic.com">llamamusic.com</a> is a fantastic resource.  Thanks also to Phillip Smith (p@phillip.cc) for assistance in debugging with the 1.0 firmware.
+
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>April 2019
+</table>
+

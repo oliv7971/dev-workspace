@@ -1,0 +1,50 @@
+ ramdispo/(octets)      65532
+ oto64 10  MESSAV35.MCG ios=    0    65532
+
+clofic   10    1    65532
+ oto64 10  MESSAV35.MCG ios=    0    65532
+ oto64 11  MESSAV35.BIN ios=    0    65532
+ oto64 12  MESS5000.BIN ios=    0    65532
+
+clofic   10    1    65532
+
+clofic   12    1    65532
+
+clofic   11    1    65532
+ oto64 10  MESSAV35.BIN ios=    0    65532
+ oto64 11  MESS5000.BIN ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  PARAM.MCG ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  MESS5000.BIN ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  CONFIG.MCG ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  P033P034.MCG ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  P033.MCG ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  P033P034.MCG ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  P033.MCG ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  P033.MCG ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  P033.MCG ios=    0    65532
+
+clofic   11    1    65532
+ oto64 11  CONFIG.MCG ios=    0    65532
+
+clofic   11    1    65532
+ >>>netfic
+ close file  10 MESSAV35.BIN
+<<<netfic : nbfic open, ram  3   65532

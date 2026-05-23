@@ -92,5 +92,17 @@ __pycache__/
 
 # Dossiers EXEMPLES (fichiers binaires Korg volumineux)
 **/EXEMPLES/
+
+# Fichiers binaires audio/sample Korg (volumineux)
+*.PCM
+*.pcm
+
+# NAS-admin : bases de données générées (inventaires, reports)
+01-PROJECTS/personal/NAS-admin/inventaires/
+01-PROJECTS/personal/NAS-admin/reports/
+01-PROJECTS/personal/NAS-admin/missing_hashes.csv
+01-PROJECTS/personal/NAS-admin/__pycache__/
+01-PROJECTS/personal/NAS-admin/nas_admin/__pycache__/
+
 *.pyc
 .DS_Store

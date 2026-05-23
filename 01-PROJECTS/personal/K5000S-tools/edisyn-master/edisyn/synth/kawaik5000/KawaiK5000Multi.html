@@ -1,0 +1,72 @@
+<html><head></head>
+<body>
+
+
+<h1>Kawai K5000</h1> 
+<h2>Multimode Patch Editor</h2>
+
+<p>This editor will work with the <b>Kawai K5000S, KawaiK5000R</b>, and <Kawai K5000W</b>, but it does not support banks B or G on the K5000W.
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Turn OFF Protect.  Make sure that Receive Program and Receive Exclusive are both turned on.  Set Program Receive to NORMAL.  Set the Unit Channel (System Channel) of your K5000 to the same channel as you've set up Edisyn (perhaps channel 1?).
+
+
+<br><br><br><h3>How K5000 Memory Works and its Implications</h3>
+
+The K5000 memory structure is weird, and how it presents itself to you on the K5000 screen is quite different from how it presents itself to you using an editor.  So it's very important to understand how it works with an editor.
+
+<p>In a traditional synthesizer, you have a permanent storage of patches, from which you call forth a single patch to play and/or edit.  To do this, the patch is copied to current working memory; and it may be written back to the permanent storage later.
+
+<p>In the K5000 you also have a permanent storage of patches, but when you boot up the machine, it copies <b><i>every single patch in every bank</i></b> from the permanent storage to the current working memory.  If you edit a patch manually on the synthesizer, then before you exit and switch to a new patch you are required to either <i><b>write</b></i> the patch back to permanent storage, or to <i><b>reload</b></i> from permanent storage, erasing your changes.  Thus either of these operations (in different ways) bring the current working memory in sync with the permanent storage.
+
+<p>But if you edit a patch over Sysex from an editor like Edisyn, the Kawai K5000 behaves very differently.  You can modify any patch you like in current working memory, or multiple ones, and you're not required to write any of them to permanent storage until you feel like it, if at all.  If you reboot the K5000 without writing them, your changes are gone.  
+
+<p>This poses some major opportunities for confusion.  Edisyn deals with this by doing some things to maintain consistency:
+
+<ul>
+<li>Edisyn always resets (reloads from FLASH) whenever you request a new patch.
+<p><li>When you select "Write to Patch...", Edisyn resets (reloads from FLASH), then writes the patch to current working memory, then backs up (writes all patches to FLASH).  This is a slow process, and the machine will hang for perhaps 15 seconds!
+<p><li>When you write one or more patches in the Librarian, or write a whole bank, Edisyn will likewise reset (load from FLASH), write all the patches (slow), and then back up (write all patches to FLASH, again taking 15 more seconds).
+<p><li>When Edisyn updates the current patch (such as after undo, redo, randomization, etc., or when you select "Send to Current Patch", in some situations it doesn't know what the patch number and bank are, so it will switch to and temporarily use A001 as a "scratch patch slot" to send the data to.  Don't pay that any mind.
+</ul>
+
+<p>Which leads us to...
+
+<br><br><h3>About the Menu</h3>
+
+The Kawai K5000 menu has the following options:
+
+<ul>
+<li><b>Reset (Reload from Flash)</b> will replace all patches in current working memory with fresh copies from the permanent store.  Any edits you have made will be lost.
+<p><li><b>Backup (Write to Flash)</b> will copy all patches in current working memory to the permanent store.  You might do this after clearing the bank (see above), or in certain situations if you have unchecked <b><i>Always Backup after Write to Patch/Bank</i></b> (see below).
+<p><li><b>Perform Backup and/or Reset after Writes and Requests</b> is checked by default.  When checked, then when Edisyn writes a patch (via Write to Patch... or the various Librarian's Write Selected Patches to Synth or Write Bank to Synth) it first does a RESET, then writes the patch(es) or Bank, then does a BACKUP.  Additionally, when you request a patch, a RESET is done first.  This all guarantees that Edisyn's "write" behavior actually writes to FLASH.  However there are situations when you don't want this.  
+
+<br><br><p>For example, imagine you want to load a bank from disk, then use Edisyn to write a patch or two to select slots, replacing them, then save back out to disk. What would happen is: you load the bank from disk into current working memory.  Then in the process of writing one or two patches, Edisyn replaces the current working memory with the permanent (Flash) store, then writes those patches out the permanent store.  If you saved back out to disk, you'd have erased your bank: and the new would have been written to permanent memory where you didn't want them!  Instead, temporarily uncheck this menu, then load from disk, perform a write with Edisyn (which now will just put the patches in permanent store), write to disk, and check the menu again.  You could perform a RESET for good measure to restore the patches from permanent store if you cared.
+
+<br><br><p>Another situation is if you want to load a few patches from your hard drive to write to permanent store without using the Librarian, but you don't want to burn Flash RAM too much.  Uncheck the menu, then load each patch into the slot you want, update each patch separately into current working memory with "Write to Patch...", then at the end, perform a BACKUP to write everything to permanent store.  Then recheck the menu again.
+
+<br><br><p>If you uncheck this menu, Edisyn will do three things.  First, Edisyn's "Write to Patch..." and various Librarian "Write" menu options will just write the patch to current working memory.  It won't RESET first, and it won't BACKUP afterwards.  Second, Edisyn's "Request Patch" commands will not perform a RESET first.  Third, all operations which send to current memory will be disabled: this includes the Send to Current Patch menu option, as well as updating current memory whenever you perform an undo/redo/randomize/hill-climb/morph/etc.  Unchecking this menu isn't for performing edits, it's for writing to the disk from Edisyn.  So you probably shouldn't change parameters -- they'll still modify the current patch.
+</ul>
+
+<br><br><h3>Display Updates</h3>
+
+Some parameter changes will update the display on the K5000 so you'll see them change.  Others will not.  It's fairly arbitrary.  If you update a patch (send to current patch, undo/redo, randomize, etc.), it the result will be displayed until you manually edit.  Notably, the patch name won't change on the screen: you can see the change by switching to a different patch, then going back.
+
+
+<h3>Gotchas</h3>
+
+<ul>
+<li>If you press the <b>Show</b> button on a Section, it will switch to that patch and display it.  However there is no way to go <i>back</i> to the multimode patch.  You will need to manually change to Multi mode and navigate to the patch.
+</ul>
+
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>February 2026
+</table>
+

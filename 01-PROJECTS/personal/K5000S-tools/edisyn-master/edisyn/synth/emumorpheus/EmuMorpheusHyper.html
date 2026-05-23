@@ -1,0 +1,43 @@
+<html><head></head>
+<body>
+
+
+<h1>E-Mu Morpheus and Ultra Proteus</h1>
+<h2>Hyperpreset Patch Editor</h2>
+
+<p>This editor will work with the <b>E-Mu Morpheus</b> and the <b>E-Mu Ultra Proteus</b>.
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Set the MIDI ID to the same you'll be setting in Edisyn (typically 0).  In your default MIDI Map, turn OFF Program Change Map, and turn ON Bank Select and Program Change.  Feel free to reduce the Sysex packet delay to 0.  <b>Make certain that the Hyperpreset button is pressed</b>. 
+
+<br><br><h3>Uploading a Proteus Patch</h3>
+
+It's easy: just use Edisyn's E-Mu Proteus editor.  Be sure to first turn ON the "Proteus Sysex" option in your unit.
+
+<br><br><h3>Gotchas</h3>
+
+<ul>
+<li>Neither the Morpheus nor the Ultra Proteus can send to the current patch -- they can only write patches, or send individual parameters.  But sending to the current patch is a critical function.  Earlier versions of Edisyn used to write to patch 126, but as of Version 31, Edisyn just (slowly) sends individual parameters to the Morpheus/Ultra Proteus.  This change is because it is unclear if the Morpheus/Ultra Proteus uses Flash RAM, and frequently writing to patch 126 will gradually burn it out.
+<!--<li>Neither the Morpheus nor the Ultra Proteus can send to the current patch -- they can only write patches, or send individual parameters.  But sending to the current patch is a critical function.  Instead of (slowly) sending all parameters, Edisyn instead will write to patch 126 of the HyperPreset RAM bank.  This means that you will overwrite this patch number every time you "send" the current patch.  (It's 126 because 127 is the default init patch -- well, actually everything from 120...127 is the init patch, but I'm being consistent with Edisyn's Single Patch editor).
+-->
+
+<p><li>You cannot request the current patch on the Morpheus or Ultra Proteus.
+
+</ul>
+
+<br><br><h3>Thanks</h3>
+
+Thanks to Mike Perkowitz (mike@perkowitz.net) and MatrixSynth (matrixsynth@gmail.com) for their crucial help in developing and debugging this patch editor.
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>October 2018
+</table>
+
+
+

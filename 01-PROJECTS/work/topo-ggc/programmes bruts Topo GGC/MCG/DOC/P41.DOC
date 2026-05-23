@@ -1,0 +1,476 @@
+                         Pytha-Topo R911001 Page 41.1
+
+
+
+	                     NIVELLEMENT GEODESIQUE
+			     ----------------------
+
+        Le programme est destin‚ au calcul des Altitudes  d'un r‚seau de
+	nivellement indirect. Il  peut  ˆtre  utilis‚  pour  les canevas
+	de type triangulation et polygonation. Il faut au moins un point
+	connu en Z.
+        Le calcul  est  effectu‚  en bloc par  la  m‚thode  des moindres
+	carr‚s (dZ sur les vis‚es).
+        Toutes les observations ont le mˆme poids.
+
+
+        Notas:  1/ Les fichiers d'entr‚e/sortie sont compatibles  en
+                tout ou partie avec les sections 36 et 42.
+
+                2/  Ce  module  est appel‚ par le programme  P34  si
+                le calage sur les Z a ‚t‚ demand‚ : voir section 34.
+                P34 g‚nŠre un fichier D41.P34 qui peut servir d'entr‚e
+		… P41.
+
+
+        1 - DONNEES
+        -----------
+
+            Les  donn‚es  doivent ˆtre pr‚par‚es avec  l'‚diteur  du
+            systŠme : format libre (s‚parateur : espace ou virgule).
+
+            Unit‚s : mŠtres, grades
+
+            Cercle vertical … droite ou … gauche, origine au z‚nith.
+
+            Ordre des donn‚es
+
+                  Titre
+                  paramŠtres
+                  g‚od‚sie
+                  observations (group‚es par station)
+                  ****
+                  Titre
+                   --
+                   --
+                   --
+                  ****
+                  STOP
+
+
+
+        1-1 PARAMETRES facultatifs valeurs par d‚faut (VD)
+        --------------------------
+
+        TOLD    told    (0.10)  metres
+            Le programme calcule  la  moyenne  des  distances observ‚es.
+	    S'il y a des  ‚carts > told  le calcul est abandonn‚.
+
+
+        TOL     tolz    (0.20)  metres
+            toute  vis‚e  ayant  un  dZ sup a  tolz  est ‚limin‚e.
+                         Pytha-Topo R911001 Page 41.2
+
+
+
+        ITER     max      (200)
+            Nombre d'it‚rations … ne pas d‚passer pour le calcul du bloc.
+            Pendant le calcul du bloc, le programme affiche … l'‚cran le
+	    num‚ro  d'it‚ration iter et une valeur v qui doit diminuer …
+            chaque  it‚ration :  systŠme convergent.
+
+        BLOC    max   idem ITER
+
+	EPSB    epsb     ( 0.00000001 )
+
+	Le calcul est arrˆt‚ si iter > max  ou  S(dZ*dZ) < epsb .
+
+        CANEVAS ‚diter 1 point par page
+
+        DETAIL  ‚diter plusieurs points par page (VD)
+
+	GAUSS	‚diter la table des fr‚quences des ‚carts
+		liste des ‚carts par vis‚e dans le fichier R41??.ECA
+
+	QD2	valeur par defaut 6.57895 ( 6.57895/10E7 pour les
+	       	calculs)
+
+
+        1-2 GEODESIE
+        ------------
+
+            1‚re forme
+
+               GEODESIE       1       (facultatif)
+               N  X  Y  Z  Hi  HB  VZ
+               ...
+               ...
+               999999
+
+            2Šme forme
+
+               GEODESIE       2
+               N  Z  Hi  HB  VZ
+               ...
+               ...
+               999999
+
+            3Šme forme
+
+               GEODESIE       3
+               N  X  Y  Vo  Z  Hi  HB  VZ
+               ...
+               ...
+               999999
+
+
+            N     no du point (de 1 … 999999998, sauf 999999)
+            XY    coordonn‚es
+            Vo    constante pour la planim‚trie
+            Z     Zsol (points … calculer Z = 0)
+            Hi    hauteur tourillons
+            HB    hauteur balise
+            VZ    correction de collimation verticale
+                         Pytha-Topo R911001 Page 41.3
+
+
+
+
+        1-3 OBSERVATIONS
+        ----------------
+
+            1Šre forme
+
+              (OBSE)            (facultatif)
+               NS  NV  AV  HB
+               ...
+               ...
+               999999
+
+            2Šme forme
+
+               OBSE    iredui P42
+               NS  NV  AH  DIST  AV  HB
+               ...
+               ...
+               999999
+
+            3Šme forme
+
+               OBSE    iredui P41
+               NS  NV  DIST  AV  HB
+               ...
+               ...
+               999999
+
+
+            NS    nø de la station (de 1 … 999999999, sauf 999999)
+	    NV    nø du point vis‚ (de 1 … 999999999, sauf 999999)
+            AV    angle vertical (calcul : AV=AV+VZ) *
+		  si AV nul, la vis‚e est ignor‚e
+            HB    hauteur de la balise au point NV , si omise ou 0,  on
+                  prend la valeur de g‚od‚sie. Pour avoir 0  mettre
+                  0.0001
+            AH    angle horizontal
+            DIST  distance  (Si nul,  AV doit  ˆtre  100G  :  Vis‚e
+                             horizontale, dZ = 0)
+            Si OBSE = 1Šre forme, on doit avoir GEODESIE 1 ou 3
+
+            * si VZ non nul, v‚rifier soigneusement quelques vis‚es.
+
+
+            Si DIST = 0 on doit avoir GEODESIE 1 ou 3, sauf si
+            AV = 100 grades
+            (distance DH calcul‚e … partir des XY)
+
+            Si DIST dif de 0  alors Distance Horizontale (DH) est
+               iredui = 0   DIST
+                      = 1   DIST * SIN (AV)
+                      = 2   DIST * SIN (AV) * SIN (AV)
+
+
+            Si iredui = 1 ou 2,  DH est recalcul‚e en tenant  compte
+            du coefficient QD2 (correction du niveau apparent)
+
+            Nota : le fichier r‚sultats a le format
+
+                   GEODESIE 3
+
+                   OBSERVATIONS 0 P42
+                         Pytha-Topo R911001 Page 41.4
+
+
+
+
+        2 - EXEMPLE  fichier EX44.D41
+        -----------------------------
+
+
+	DATE 210586. DOSSIER       1
+	DETAIL
+	TOLD  .20
+	TOL  .20
+	GEODESIE 2
+    	5005      .000  1.725 0 0
+    	5032    99.180  1.655 0 0
+    	5033      .000  1.710 0 0
+    	5034      .000  1.715 0 0
+    	5035      .000  1.775 0 0
+    	5010      .000  1.745 0 0
+    	5036      .000  1.680 0 0
+    	5037      .000  1.710 0 0
+    	5031      .000  1.690 0 0
+    	5038      .000  1.700 0 0
+    	5017    98.650   .000 0 0
+    	5039      .000   .000 0 0
+    	2000   102.650   .000 0 0
+      	  76   101.200   .000 0 0
+	999999
+	OBSE 0 P41
+      	5005      5031    8.8663  102.7830    1.6000
+      	5005      5032   28.7493  102.1415    1.6000
+      	5005      5017   58.8108  101.6420    1.6000
+      	5032      5005   28.7493   98.2935    1.6100
+      	5032      5017   30.0660  101.2970    1.6100
+      	5032      5033   43.0200   97.0490    1.6100
+      	5033      5032   43.0200  103.2215    1.5900
+      	5033      5034   18.7822   98.5725    1.5900
+      	5033      5035   39.6546   98.2100    1.5900
+      	5034      5033   18.7822  102.2670    1.6000
+      	5034      5035   21.4299   98.3110    1.6000
+      	5034      5010   25.1909   98.3190    1.6000
+      	5035      5034   21.4299  102.6240    1.6100
+      	5035      5010    4.5595  101.3100    1.6100
+      	5035      5036   26.5331   96.0715    1.6100
+      	5035      2000     .0000  100.0000    1.6100
+      	5010      5034   25.1909  102.3955    1.6000
+      	5010      5035    4.5595  103.5410    1.6000
+      	5036      5035   26.5331  104.5990    1.5900
+      	5036      5037   20.8045   80.8940    1.5900
+      	5037      5036   20.8045  119.6730    1.6000
+      	5031      5017   50.1911  101.5620    1.6100
+      	5031      5005    8.8663   98.9255    1.6100
+      	5031      5039   39.7849   97.2505    1.6100
+      	5031      5038   16.7450   96.0750    1.6100
+      	5038      5031   16.7450  104.7325    1.6000
+      	5038      5039   23.0399   98.4080    1.6000
+      	5038        76   12.3120   98.7070    1.6000
+	999999
+	****
+	STOP
+                         Pytha-Topo R911001 Page 41.5
+
+
+
+
+                   exemple EX44.D41 - liste r‚sultats -
+
+	                                                       PAGE    1
+	 DATE 210586. DOSSIER       1
+
+
+
+        **POINT**      5005    Z POINT       100.0187               5005
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+	 Visees de relevement
+	  8.866   102.7830     .263    .000    100.033   -.015      5031
+    	 28.749   102.1415     .842    .000    100.022   -.004      5032
+    	 58.811   101.6420    1.392    .000    100.042   -.023      5017
+
+ 	Visees d'intersection
+    	 28.749    98.2935     .816    .000     99.996    .023      5032
+     	  8.866    98.9255     .230    .000    100.000    .019      5031
+
+
+ 	**POINT**      5032    Z POINT        99.1800    *APPUI*    5032
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+    	 28.749    98.2935    -.816    .000     99.203   -.023      5005
+    	 30.066   101.2970     .568    .000     99.218   -.038      5017
+    	 43.020    97.0490   -2.041    .000     99.192   -.012      5033
+
+ 	Visees d'intersection
+    	 28.749   102.1415    -.842    .000     99.176    .004      5005
+    	 43.020   103.2215   -2.059    .000     99.174    .006      5033
+
+
+ 	**POINT**      5033    Z POINT       101.2329               5033
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+    	 43.020   103.2215    2.059    .000    101.239   -.006      5032
+    	 18.782    98.5725    -.541    .000    101.237   -.004      5034
+    	 39.655    98.2100   -1.235    .000    101.243   -.010      5035
+
+ 	Visees d'intersection
+    	 43.020    97.0490    2.041    .000    101.221    .012      5032
+    	 18.782   102.2670    -.554    .000    101.224    .008      5034
+
+
+ 	**POINT**      5034    Z POINT       101.7785               5034
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+    	 18.782   102.2670     .554    .000    101.787   -.008      5033
+    	 21.430    98.3110    -.684    .000    101.795   -.016      5035
+    	 25.191    98.3190    -.780    .000    101.789   -.011      5010
+
+ 	Visees d'intersection
+    	 18.782    98.5725     .541    .000    101.774    .004      5033
+    	 21.430   102.6240    -.719    .000    101.760    .019      5035
+    	 25.191   102.3955    -.803    .000    101.766    .012      5010
+                         Pytha-Topo R911001 Page 41.6
+
+
+                                                               PAGE    2
+ 	DATE 210586. DOSSIER       1
+
+
+
+	 **POINT**      5035    Z POINT       102.4786              5035
+
+        Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+    	 21.430   102.6240     .719    .000    102.497   -.019      5034
+     	  4.560   101.3100    -.071    .000    102.498   -.020      5010
+    	 26.533    96.0715   -1.804    .000    102.491   -.013      5036
+      	   .000   100.0000    -.165    .000    102.485   -.006      2000
+
+ 	Visees d'intersection
+    	 39.655    98.2100    1.235    .000    102.468    .010      5033
+    	 21.430    98.3110     .684    .000    102.462    .016      5034
+     	  4.560   103.5410    -.109    .000    102.461    .018      5010
+    	 26.533   104.5990   -1.830    .000    102.466    .013      5036
+
+	 **POINT**      5010    Z POINT       102.5695              5010
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+    	 25.191   102.3955     .803    .000    102.582   -.012      5034
+     	  4.560   103.5410     .109    .000    102.587   -.018      5035
+
+	 Visees d'intersection
+    	 25.191    98.3190     .780    .000    102.559    .011      5034
+     	  4.560   101.3100     .071    .000    102.550    .020      5035
+
+
+	 **POINT**      5036    Z POINT       104.2958              5036
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+    	 26.533   104.5990    1.830    .000    104.309   -.013      5035
+    	 20.805    80.8940   -6.528    .000    104.298   -.002      5037
+
+	 Visees d'intersection
+    	 26.533    96.0715    1.804    .000    104.283    .013      5035
+    	 20.805   119.6730   -6.532    .000    104.294    .002      5037
+
+
+	 **POINT**      5037    Z POINT       110.8259              5037
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+    	 20.805   119.6730    6.532    .000    110.828   -.002      5036
+
+	 Visees d'intersection
+    	 20.805    80.8940    6.528    .000    110.824    .002      5036
+                         Pytha-Topo R911001 Page 41.7
+
+
+                                                               PAGE    3
+ 	DATE 210586. DOSSIER       1
+
+
+
+	 **POINT**      5031    Z POINT        99.7704              5031
+
+	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+         50.191   101.5620    1.152    .000     99.802   -.031      5017
+     	  8.866    98.9255    -.230    .000     99.789   -.019      5005
+    	 39.785    97.2505   -1.799    .000     99.766    .004      5039
+    	 16.745    96.0750   -1.114    .000     99.771   -.001      5038
+
+ 	Visees d'intersection
+     	  8.866   102.7830    -.263    .000     99.756    .015      5005
+    	 16.745   104.7325   -1.147    .000     99.738    .032      5038
+
+
+	 **POINT**      5038    Z POINT       100.8852              5038
+
+	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+ 	Visees de relevement
+    	 16.745   104.7325    1.147    .000    100.917   -.032      5031
+    	 23.040    98.4080    -.676    .000    100.889   -.004      5039
+    	 12.312    98.7070    -.350    .000    100.850    .035        76
+
+	 Visees d'intersection
+    	 16.745    96.0750    1.114    .000    100.884    .001      5031
+
+
+	 **POINT**      5017    Z POINT        98.6500    *APPUI*   5017
+
+	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+
+ 	Visees d'intersection
+    	 58.811   101.6420   -1.392    .000     98.627    .023      5005
+    	 30.066   101.2970    -.568    .000     98.612    .038      5032
+    	 50.191   101.5620   -1.152    .000     98.619    .031      5031
+
+
+	 **POINT**      5039    Z POINT       101.5657              5039
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+
+ 	Visees d'intersection
+    	 39.785    97.2505    1.799    .000    101.570   -.004      5031
+    	 23.040    98.4080     .676    .000    101.562    .004      5038
+
+
+ 	 **POINT**      2000    Z POINT       102.6500    *APPUI*   2000
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+
+ 	Visees d'intersection
+      	   .000   100.0000     .165    .000    102.644    .006      5035
+                         Pytha-Topo R911001 Page 41.8
+
+
+                                                               PAGE    4
+ 	DATE 210586. DOSSIER       1
+
+
+
+ 	**POINT**        76    Z POINT       101.2000    *APPUI*     76
+
+  	Distance    angle       DZ      QD2 Z Partiels  Ecarts     Appui
+
+ 	Visees d'intersection
+    	 12.312    98.7070     .350    .000    101.235   -.035      5038
+
+
+
+
+
+
+ 	Resultats statisques
+
+	 Distribution des ecarts , emq=  17.935 mm pour    28 ecarts
+
+   	ecart       n
+
+     	  -38       1 !*
+     	  -32       1 !*
+     	  -31       1 !*
+     	  -23       2 !**
+     	  -20       1 !*
+     	  -19       2 !**
+     	  -18       1 !*
+     	  -16       1 !*
+     	  -15       1 !*
+     	  -13       2 !**
+     	  -12 m     2 !**
+     	  -11       1 !*
+     	  -10       1 !*
+      	   -8       1 !*
+      	   -6       2 !**
+      	   -4       3 !***
+      	   -2       2 !**
+      	   -1       1 !*
+       	    4       1 !*
+      	   35       1 !*
+ 	Moyenne -12 pour 28 observations, 26 ecarts -, 2 ecarts +
+ 	Table des frequences de -100 a 100
+ 	Ecarts > 100 dans +/- 101

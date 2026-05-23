@@ -1,0 +1,41 @@
+DATE  60389. DOSSIER    1111.   
+iter 500
+tolz 0.20  # 200 mm / Dz
+told 0.10  # 100 mm / distances, 200 mm sur geodesie
+$p57   #passer la main a P57 (passage a 0 sur les points d'appui)
+Zmoyen 0000 metres
+projection 000 mm/km
+cordistance 0.000  metres par portee
+epspoint 0.0003
+epsbloc 0.00000010
+tolrah 0.005  #balancement des stations  5 mgr / ang hor
+tolrdh 0.050  #balancement des stations  50 mm  / distances
+tolrdz 0.050  #balancement des stations  50 mm  / Dz
+tolrav 0.020  #balancement des stations  20 mgr / ang vert
+tolechel 0.002 #tolerance/echelles locales (0.002 > 20cm a 100m)
+parallaxe 0 #excentrement des axes optique et distancemetre en mm
+geodesie
+999999
+P33
+      ns      np       dh      ah       av      lm
+      61    1045      .000    .0000  75.9270   1.700   1.724
+       0    9000      .000 361.3890  94.4900   1.700
+       0      62   341.924  58.1610  99.8510   1.700
+       0     100    15.777 208.3350 100.6060   1.700
+       0     101    24.300 226.7930  99.4200   1.690
+       0     102    23.028 236.1750 100.0380   1.690
+       0     103    21.839 245.8230  99.8390   -.001
+       0     104    21.355 255.6810 100.0850   1.690
+       0     105    21.443 260.0980  99.6010   2.690
+       0     106    50.000 283.6610 101.1430   -.001
+       0     188    22.382 379.8960 101.5700   1.690
+       0     189    22.527 378.4520 101.6060   1.710
+      62      61   341.918    .0000 100.1550   1.722   1.695
+       0      55    78.360 221.7970 100.6210   1.722
+       0    1000   170.106 397.4900 100.2240   1.722
+       0    1000   171.130 398.4880 100.2260   1.722
+       0      61      .000    .0000 100.1550   1.722
+      55    1045      .000    .0000  74.1420   1.300   1.640
+       0      56    39.103 173.0400 102.3090   1.300
+       0      58    53.308 255.4960 100.4010   1.250
+       0      62    78.343 288.7340  99.6360   1.300

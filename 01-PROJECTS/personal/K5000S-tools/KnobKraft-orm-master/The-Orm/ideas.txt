@@ -1,0 +1,419 @@
+﻿Completely unprioritised list of things to do
+=============================================
+
+Datenbank Design Probleme
+
+PatchNumbers
+Altes System: Patch Daten von Program Platz trennen. Programm Platz speichern in der Tabelle, Nutzdaten sind egal ob Edit Buffer oder Program Dump
+Neues System: (python) immer die Originalmessage speichern. Daraus ergibt sich evtl der Speicherplatz
+
+Vorteil Alt: Unterstützt auch Synths ohne ProgramNumberStorage, da beim Import eine Nummer generiert wird. Das fehlt beim neuen System
+Vorteil Neu: Keine Redundanz der Daten zwischen Patch, Datenbank, ImportInfo. Was gewinnt denn dann?
+
+
+Data Migration 1.x -> 2.0
+
+Migration: Wo file source oder bulk source mit file source ist und keine BankNumber + ProgramNumber sind, diese erzeugen
+SourceInfo sollte vor der Datenbank Info stehen
+MidiBankNumber null sollte sich eigentlich immer aus der import source füllen lassen?
+From Synth source hat keine Program Number! Das ist ein Problem!
+Matrix - lassen sich program number und bank aus dem Default Name extrahieren!
+
+2.0 Beta 2 - Select Handler
+
+* Could display per patch if it is in Synth or not
+* Need global mode whether a Click on a button would not send to edit buffer, but just a bank select/program change message. 
+* Could allow for single patch retrieval instead of whole bank synth (if mode is available)
+UX - Library does not show what is loaded (e.g. all patches DW8000, or "import .. of OB-6")
+BUG - Kawai shows Wave as #51, but that cannot be assigned. Should be a different bank!
+* Librarian Bank send for MKS80, K3M. -> K3 though also has program dump, so it doesn't actually need bank upload.
+
+2.0 Release
+
+BUG - Hidden state wird in Bank nicht angezeigt ohne Neustart, need ValueTree backing
+BUG  info Overriding built-in import category rules with file C - comes too often now
+BUG - lists are ordered incorrectly in the Library, no longer with order_num. This actually never worked, and should be implemented together with general sorting!
+BUG - Duplicate name search sorts wrong I think. And is utterly slow (try on Reface DX)
+BUG - import einer Bank kann eventuell den Namen eines Patches wieder ändern!
+BUG - Progress dialog geht nicht beim sent der UserBank
+BUG - After import, the new bank is not selected in the tree. Shows warning: Did not find item in tree:
+BUG - Runninng autocategorize does not refresh the bank view
+BUG - The patch list buttons do not subscribe and react on changes to "their" patch. if you add a category, the color doesn't change. Need to somehow refresh better
+BUG - Bulk deleting patches that are in a bank will fail because of foreign key constaint - should rather hide them
+BUG - Single click on already selected item in user list does not load again into current patch (onSelectionChanged vs onClick)
+
+UX -  SynthBank Buttons sollten auch die ButtonInfo benutzen
+UX - can make revert changes for dirty synth bank panel
+UX - Should have a clear/init bank function? (e.g. drop target to drag a patch on a button as "init patch" and multiply?)
+UX - What is the point of the normal download menu item. Should it go away? But then have no download all banks. It certainly needs to be synced somehow
+UX - Don't auto import from tree, just show the window. Then no synth connected warning can also be removed.
+UX - Trashcan should light up when drag target works
+UX - Double click rename should also work for user banks and user lists
+UX - adding new list or bank could use in place editing and put cursor right there instead of the dialog window
+
+UX - Single click handler in user list does not send anymore/actually never sent. Should it?
+
+
+2.1 Release
+
+IMPROV - should have save bank as sysex menu item, Export into file wäre nice.
+DOCS - Adaptation tests need documenting
+LISTS IMPROVEMENT Imports sind auch lists, und sollten immer alle patches enthalten (auch mit anderen Namen etc.). In der Library ist de Patch natürlich nur einmal. Macht das Sinn?
+LISTS IMPROVEMENT Import als Liste auch draggen können
+IDEA - History stack!
+* Need pretty display name for Synth, to fix initial errors where the synthname is displayed without manufacturer (Matrix 6/R, Matrix 1000)
+* Need easy clear filter button
+* SINGLE SYNTH SETUP MODE
+	* Single Synth Setup could ditch synth selector row and instead but the active indicator above the current patch!
+	* Half done: The synth button row could be hidden if only a single Synth is enabled (and the Window Title changed as well?)
+	* The synth configured should be stored in the database, not the settings. Then you can open multiple windows and have one for each synth !!!
+
+
+Later
+
+UX - clicking a bank of a different than the current synth needs to switch the current synth. What is loaded into the library? last search.
+IDEA - XV 3080 could somehow supply preset list from manual and invent some build in preset type that cannot be requested but only "sent", with the send command just being a bank switch/program change Could simulate an ingest with the predefined names (lol)
+IMPROV - Could do better layer switch
+IMPROV - Tree could show count of items
+IMPROV - Concrete Layer switching with implentation of layer play mode e.g. stack/split/select one of two. Could be used by Rev2 and MKS80
+
+
+Sollte irgendwo anzeigen können, für welche Synths in der Datenbank Patches sind, auch wenn sie ausgeschaltet sind. Vielleicht eine Database statistik Seite mit Anzahl der Patches pro Synth, Listen, ?
+
+Layer logic
+- need pretty layer names!
+
+Retry logic - the OB-6 and Rev2 seem to be pretty unstable now?
+
+More ideas
+* migrate imports into lists
+* migrate categories into a m:n relationship
+
+Inspiration:
+	Surf! Auto-Surf! Dive!
+
+	AutoPlay The function that sends a test note to the MIDI device whenever an entry is selected
+	AutoAudition Automatically sends a selected entry to the device’s appropriate →edit buffer (see also →Audition
+
+Better marketing
+* Should setup github project page
+* Should have direct download link to latest release
+* Should have patreon/paypal link for donations?
+
+Open since 1.11
+* Test and document PatchInterchangeFormat export
+* Global Settings don't work for Matrix
+* DataFileLoad takes precedence over editbuffer, but shouldn'T
+* How to load unknowns sysex data without creating duplicates?
+* Do I need to distinguish between loadFromDataFileType and loadFromDataStreamType()?
+* Should be called Stream Load instead of DataFile
+
+Roland Synths
+* Should display Metadata item "size in bytes"
+* Could display "Type" which is calculated by adaptation
+* Sysex dissector with more color highlighting in hex display
+* Need still implement calcFingerprint, friendlyProgramName, renamePatch()
+* Need to figure out how to work with the backward compatible synths
+
+
+Code signing bundling
+https://cmake.org/cmake/help/latest/prop_tgt/XCODE_EMBED_type.html
+https://cmake.org/cmake/help/latest/prop_tgt/XCODE_EMBED_type_CODE_SIGN_ON_COPY.html#prop_tgt:XCODE_EMBED_%3Ctype%3E_CODE_SIGN_ON_COPY
+https://stackoverflow.com/questions/60329646/xcode-how-to-embed-a-framework-with-code-sign-on-copy-using-cmake#60421039
+Remember these are also for dylibs
+
+JD-800
+
+
+Before 2.0
+
+LISTS upgrades:
+* Reorder patches in a list - needs dragging within the grid! With insert position indicator...
+* Add lists to PIF export
+* Openness and selection state could be persisted in the database
+* Bulk imports should have children... but can I filter for them? Not until I convert imports to lists!
+* Could allow stored filters (stored searches), which are "smart lists" in Lightroom. Should also store last used search
+	 Stored filters could be single or multi-synth
+* How to send a whole list into the edit buffer? Do I need a "current list" window? If yes, where? Load the list into the bank window?
+* Create a list of the currently loaded patches in all synths (store in list)
+* List folders / lists of lists?
+
+Historical 
+https://www.mossgrabers.de/Software/ChangeIt/ChangeIt.html
+
+Idea: 
+Adaptation can define a custom getMetadata(). E.g. to indicate the original synth the patch was for
+
+BUGS
+* Global settings needs to change MIDI channel internally when using the settings editor to change it
++ When hiding the (last?) patch on a page, the page is advanced without necessity
+
+User questions
+* Where are the files? 
+* How to sync two computers?
+* How to edit the categories? The automatic_categories.json can be edited when clicking on the Categories menu item Edit auto-categories. On my machine, it is located at C:\Users\Christof\AppData\Roaming\knobkraft. I think I realize there is a problem when no editor is associated with the .jsonc extension. I think it should reveal the file in explorer then?
+* Backup behavior!?	
+
+NETWORK SYNC
+Hook up Firebase - what to sync? always?
+Public folders where people can publish patches?
+
+UI/UX
+* Different log levels with error colors
+* Selected button is not really visible in PatchButtonGrid, need something else besides color
+* The current patch per synth could be hidable
+* The tags for a patch should only be displayed when assigned, and an add button could allow for tags assignment. This is a one click more, but the display is less cluttered?
+
+STARTED FEATURES TO BE FINISHED AND ANNOUNCED
+* Audio prehear
+* Behringer RD-8
+* Scripted Query
+* Editor
+* Clock Mode Setup
+* Masterkeyboard Screen
+* Finish Rev2 Layer functionality
+
+Patch display
+* Allow "show patch" button as the simplified version of the patch diff dialog
+* Allow side panel window to show always current patch paramters (like the diff dialog, just without the coloring. Also with hex dump option)
+* Should show waveform/oscillator/FFT of preview
+* The diff dialog needs access to the blank out sections. Could colour code
+
+
+Generic Editor
++ Could allow any mapping, to use e.g. the Rev2 to setup the OB6
++ Could "learn"?
++ Could allow any other layout - that would make the current one rather the BCR2000 cheat sheet
++ Could allow vector display and editor
++ Could allow envelope display and editor (instead of knobs for the env)
++ Split view? Left patches, right editor
+
+
+KawaiK3 - supported by BCR2000
++ need Program Change handler to react on a program change initiated by the Kawai K3 (which should query the new patch, and set the current patch as the new patch)
++ warning, that would make any of the other patches to be the fake edit buffer. I have to think about that.
+
+OB-6
++ Implement parameter set of OB-6 for patch diff
+
+
+RefaceDX
+* Parameter set missing
+* C++ had set Input Channel, set Output Channel, set Local Control. Wasn't used by the Orm though.
+
+Virus
+* Patch renaming has to be implemented
+* Parameter set missing
+
+Rev2
+* Support custom layering by allowing to combine layers to new patches, and by promoting B layers to A layers
+* Sanitize tuning name before putting it into the database column (otherwise displays as "BLOB")
+* Noteoff on send patch (or send mute patch first? Then I could also just ramp down program volume?)
+* Could sport virtual file type "Layer"? Then you could select an active layer, and send only individual layers to the synth (with either tons of NRPNs or by querying the edit buffer first?) 
+  * Problem - Sending one full layer only with NRPNs takes 187 parameters per layer, 12 bytes as NRPN per parameter = 2244 bytes (without sequencers), or 0.75 seconds per layer.
+* Softswitch of Patch
+	* Noteoff on send patch (or send mute patch first?), or don't send patches, but rather NRPN storms?
+
+K3
+* Drawbar Organ Waveform Generator - could use BCR2000!
+* BCR2000 template for editing the wave
+* Could render wave as Thumbnail
+* Default name handling shaky
+* Generic Oscillator shape optimizer? Actually, this could be calculated via FFT
+
+MKS80
+* how to deal with tones and patches
+
+Yamaha DX7II
+* I think this should already work, but only uses the original voice data and not the supplement data. Would be interested in getting feedback!
+
+BCR2000
+* Should allow to load BCL files. I think it works but the BCR and BCL extensions are not added to the open dialog
+* "Send to" is currently not send to edit buffer, as it will use whatever store command is in the BCL
+* Send to should block UI, as you really shouldn't click again while it is still sending
+* Need "canonical setup" for BCR2000 so it does not need to be reprogrammed when switching synths
+* Could use bank list as preset list by querying bank names
+* DIN MIDI will be slow now, need second strategy to send
+
+Adaptation Tab
++ Could watch files and hot reload module when changed on disk (for easier development) https://github.com/FigBug/Gin
++ Could add python editor with hot reload function -> RATHER, launch editor. And if internal, ask if to break out
++ Doesn't show which of the patch capabilities are implemented, because it cannot create a generic patch for an adaptatation to query...
+
+Generic Module/Adaptations
++ Add missing capabilities: StreamLoadCapability (RefaceDX, Matrix1000, BCR2000), DataFileLoadCapability, HandshakeLoadingCapability (MKS80)  
++ Could add table of all adaptations which implements what, auto generated.
++ Another solution would be to split the EditBufferCapability into a "ReceiveEditBufferCapability" and a "SendEditBufferCapability"
++ Could create FlowChart to select which methods to implement!
++ Problem with K3 implementation -> it needs hand shaking on sending to edit buffer, waiting for write confirmation message before continuing
++ LegacyLoad mechanism
++ Global Settings editor
++ Parameter information!
+
+Macro page
+* Could make a macro that opens and closes the manual dump window
+* Somehow better feedback that a macro has been fired. Speech output? Amazon Polly? A Toast?
+* Show on global level if macros on/off 
+* Also allow macros to work despite other keys being down (to switch while holding)
+* Also allow sequences, not just chords
+* Could make the keyboard playable via mouse and keyboard, but then I need to change the routing of the MIDI events (just react on state changes)
+* What about up/down Octave shifts? - that kills the macro setup?
+
+Librarian
+* Allow recursive directory traversal during import
+* Could accept synth-initiated dumps at any time!
+* Could sniff synth out of sysex file opened
+* Better text search https://community.esri.com/groups/appstudio/blog/2018/11/29/optimizing-sqlite-like https://www.sqlitetutorial.net/sqlite-full-text-search/
+* Could have patch name autogenerator like LaserMammoth
+
+Patch Diff
+* Could be trimmed down to show only the delta parameters (doesn't make sense in Hex mode)
+* Could show different but ignored bytes in a third color
+
+Advanced Queries
+* Needs better operators for comparing a PyTschirp attribute with int, bool so you don't have to type the get()
+* Could hide the "p[]" by automatically adding it, could also automatically add the get()
+* Should display syntax error in red under line
+* Should fill page (fetching more pages until the page is full) - but how to do second page? This is always the problem with client side filtering. Simplest solution - fetch all from database and only then filter.
+* Could add autocomplete? With drop down?
+* Could use advanced query builder, where you select properties and enter them (that was called QBE at some point)
+* could use SQL queries instead of the python hack, needs to explode patches into parameters table, and then construct dynamic SQL
+
+Alternate Tunings
+* https://forum.sequential.com/index.php/topic,3468.0.html
+* have you managed to change the slot number -> this could be implemented with the MultiSendStrategy now
+
+Database schema
+* Should have foreign key constraint imports.id == patches.sourceID
+* Current unique constraint is on md5, but should be on (synth name, md5)
+* Should have unique constraing imports.id (should edit buffer import contain synth name? could be scrambled by MD5?)
+* Should have non-null everywhere
+* Should think about naming convention
+* Should create indexes where needed 
+* Could use FTS3 or FTS4 for the full-text search
+
+Autosampler (the lazy synthesist)
+* Need preview mode that will play it to synth (when synth is not turned on?)
+* Should have autosample dialog in front of patch grid so you can see where it is
+* Cancel should send all notes off!
+* Could offer to sample only patches which have no thumbnail yet
+* Could allow to record "played" previews with typical midi file per patch type (e.g. bassline/leadline)
+* Could add different preview - "oscilloscope" to show only one cycle
+* Could add FFT preview as well
+* How to decide this is a drone and will not stop (endless release?)
+
+Synth profiling
+https://www.deepsonic.ch/deep/htm/deepsonic_analytics_envelope_lfo_speed.php
+
+MIDI setup
+* Echo test - send a sysex, and see if this comes back (e.g. K3 or MKS80 repeating them). If yes, down prioritize those echos [Got Echo test now]
+* MIDI log needs a "turn off" function [Why?]
+
+Global Parameter Editing
+* Debounce is currently disabled - can I reenable it?
+
+Better fonts with Freetype. This is old.
+  + http://vinniefalco.github.io/VFLib/class_free_type_faces.html#details
+
+
+ Epics on Github
+    * VST build of Orm for Daws
+    * Masterkeyboard setup screen to select which keyboard plays which synth
+		* MIDI routing (first only to and forth, then remapping channels, ...)
+	* Clock setup screen to determine which device is master clock, can be combined with MIDI routing
+		* Clock routing screen
+	* could sort by patch similarity
+	* The automatic patch clusterer!
+
+Big things
+	* Adding spectrogram display, this needs to keep the current patch above the tab row!
+	* Follow program change on synth so we know which patch is playing. This seems to be quite hard on the Rev2, as it does not send program change when set to NRPN transmit.
+	  * Record notes played (duration) a specific patch
+	  * Allow to sort by playing time
+	* Editor for the synth using the JUCE property editor/Dials. Could do custom layouts for editors (non-skeuomorphic)
+	* Adding PyTschirp - for matters like Rev2 Sequencer Features, but also patch randomization, genetic algorithms. Could expose database queries to PyTschirp
+	  * Could do targeted randomize - take only the search result as the base set, determine histograms/probability functions for each parameter
+		* Patch randomizer	
+		* Automatic patch optimizer
+	* Adding full BCR2000 support
+	* Full custom Window Management?
+	* Could add page for Synth "SuperPowers", i.e. features or UI that is Synth specific. 
+	* Refactoring: Synth_v2 class/interface more following the generic adaptation design than the original Synth class. Maybe drop C++ Synths alltogether at some point in the future?
+	* Implement PatchBook Visualization
+	* Interface into LaserMammoth devices? Can I execute Javascript?
+	* Integrate with CTRLR? Can I host their panels? If yes, for what?
+	* Can I synchronize multiple devices via the LaserMammoth Backend?
+	* Could have voice input for naming patches? General voice control?
+	* Should I use Amazon DynamoDB to synchronize multiple installations? Encryption?
+
+More synthesizers
+
+	+ Moog Source Encore - can only do bank uploads (?), not single uploads https://www.encoreelectronics.com/smkmanual.pdf. This is a problem until KnobKraft 2.0, I guess. Unless I encode the whole bank dump as a single patch?
+	+ Jupiter 8 Encore - https://www.encoreelectronics.com/jp8mk.pdf can do edit buffer, patch and presets (different types?)
+
+Not possible:
+	Kenton kits do not seem to implement sysex
+	Tubbutec does not seem to implement sysex
+	CHD does not seem to implement sysex sending (it does receive sysex for the Juno 60)
+
+Requested on Reddit
+
+	* Yamaha TX802
+	* Yamaha AN1X
+
+Librarian for other stuff (should rather do with adaptation?)
+
+	+ Meris pedal
+
+List of other tools
+	http://www.hitsquad.com/smm/freeware/PATCH_EDITORS_LIBRARIANS/
+
+MacOS X installer
+  + The Python problem: https://stackoverflow.com/questions/59415784/cmake-macos-bundleutilities-adds-python-interpreter-to-app-and-doesnt-do-fi
+  + Helpful: https://github.com/ionyshch/cmake-bundle-macos/blob/master/CMakeLists.txt https://gitlab.kitware.com/cmake/community/-/wikis/doc/cpack/PackageGenerators https://gitlab.kitware.com/cmake/community/-/wikis/doc/cpack/Configuration
+  + or should i go the pkg route: https://medium.com/swlh/the-easiest-way-to-build-macos-installer-for-your-application-34a11dd08744
+
+Other crash reporting tools not considered:
++ Crash reporting? https://partner.microsoft.com/en-us/dashboard/desktop/overview https://docs.microsoft.com/en-us/windows/win32/appxpkg/windows-desktop-application-program
+  - https://support.backtrace.io/hc/en-us/articles/360040516131-Crashpad-Integration-Guide
+  - https://partner.microsoft.com/en-US/dashboard/Account/CertificateUpload?accountprogram=win32&callbackUri=/en-US/dashboard/desktop/overview
+  - https://drdump.com/crash-reporting-system
+  - https://appcenter.ms/apps/create
+
+  Stability
++ Code signing (well, if you don't use MS, you can spare the money)
+  - https://shop.globalsign.com/de-de/code-signing
+  - https://secure.ssl.com/orders/new
+
+Good links for CMake
+
+  + https://dominikberner.ch/cmake-find-library/
+
+Morphing etc
+
+  + https://github.com/delfrrr/delaunator-cpp
+  + http://tapkee.lisitsyn.me/
+
+
+Patreon setup
+
+  + https://www.patreon.com/join/nintoracaudio
+  + https://github.com/stefan-niedermann/paypal-donate-button/blob/master/README.md
+  + https://www.paypal.com/paypalme/AbdennourT/10
+  + https://www.geekwire.com/2019/github-introduces-sponsors-button-allowing-users-donate-money-open-source-contributors/
+  + https://adrienjoly.medium.com/getting-paid-directly-by-users-to-craft-software-for-them-1a8ef5e1a73 !
+  + https://github.com/uraimo/awesome-software-patreons
+  + https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5
+  + https://www.heise.de/news/YouTuber-muessen-Teil-ihrer-Einnahmen-in-den-USA-versteuern-5076741.html
+  + https://guides.github.com/features/pages/
+  + https://pages.github.com/
+
+Design einkaufen?
+  + https://www.fiverr.com/designer_nk_/do-modern-minimalist-logo-and-full-brand-identity-design?context_referrer=gig_page&source=similar_gigs&ref_ctx_id=ade40f21-92f0-4460-9351-8e494e1cc0d4&context=recommendation&pckg_id=1&pos=1&is_pro=false&context_alg=t2g_dfm
+  + https://www.fiverr.com/majesticwork/do-modern-creative-professional-logo-in-2-hour?context_referrer=subcategory_listing&source=gallery-listing&ref_ctx_id=17ac78a4-3342-4b94-9329-35669457cd8b&pckg_id=1&pos=30&context_type=rating&funnel=5417af16-0483-46d0-8ae8-e1f3bc93df4e&seller_online=true
+  + https://www.fiverr.com/pathum_tzoo1/design-awesome-web-ui?context_referrer=subcategory_listing&ref_ctx_id=7ea901d5-9919-4174-90e6-d8240d57d489&pckg_id=1&pos=15&filtered_factors=commercial_use%2Cresponsive_design&filtered_price=0.00%2C57.78&context_type=rating&funnel=618b5e87-8cfd-4f4e-a0e2-237175a0d629&ref=gig_price_range%3A0%2C50%7Cmain_type%3Amobile_apps%7Cimage_file_format%3Asvg%7Cpackage_includes%3Acommercial_use%2Cresponsive_design
+  https://www.fiverr.com/categories/graphics-design/web-plus-mobile-design/graphic-ui?ref=gig_price_range%3A0%2C50%7Cmain_type%3Amobile_apps%7Cimage_file_format%3Asvg%7Cpackage_includes%3Acommercial_use%2Cresponsive_design
+
+Audio Routing (JammerNetz)
+   + https://github.com/eiz/SynchronousAudioRouter/releases
+   + https://alternativeto.net/software/virtual-audio-cable/

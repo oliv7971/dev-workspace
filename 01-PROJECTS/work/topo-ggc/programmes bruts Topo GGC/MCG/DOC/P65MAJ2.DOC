@@ -1,0 +1,836 @@
+
+	ACAD
+	Pour sortir le dessin au format dxf pour Autocad. Suivre les
+	consignes ecran. Ne sort que les calques selectionnes .Faire
+	une vue totale avant de lancer la commande.
+	Pour plus de details voir en fin de fichier.
+
+	ACN	z
+	afficher la courbe z. ex: acn 585
+
+
+	ALIGP toler n1 n2 n3 n4 n5 ...
+
+	aligner les points sur les segments n1 n2, n2 n3, ....
+	(n1 n2 n3 ... sont les tetes d'alignement)
+
+	si les points alignes ont des z significatifs, le fichier
+	imprimante defini au demarrage contient les profils en long au
+	format tn,,exec pour p58 (idem dans tnexec.dat).
+	si ni est negatif, l'abscisse de depart est remise a zero
+
+
+	Format de la commande dans un fichier (lance avec char ...)
+	Le dessin en cours doit correspondre a la commande !!!
+
+	  aligp
+	  nom du modele pour p58( ligne vierge si pas de modele )
+	  toler abscisse origine (0 par defaut)
+	  n1 n2 n3 ...........
+	  ni ni .....
+
+	-si pas de nom du modele
+	Les resultats sont dans le fichier tnexec.dat
+
+	ni si -10 zi 10 zi
+	...........
+	............
+
+	-si nom du modele, et si reponse Oui a la demande pl a dessiner
+	Les resultats sont dans le fichier R65??.D58  et p65.d58
+	R65??.D58 est construit a partir de modele.ext
+
+	-Si P58 est lance, il prend les donnees dans p65.d58 si celui-ci
+	existe.
+
+
+	exemple 1 ALIGP<<<<<<
+
+	placez-vous dans le repertoire ex65 (c:\topo\ex65)
+	fichiers utilises
+
+	a1.xyz	leve
+	m1p58	modele pour le dessin du pl (lister ce fichier et
+		consulter p58.doc)
+	d58	fichier a lancer avec char
+		aligp
+		m1p58	# nom du modele de donnes pour p58
+		1 0	# prendre les pts a 1 m des alignements, S0=0
+		149 28 29 30 31	# tetes d'alignements
+
+	p65l
+	lfxy a1.xyz
+	dvue
+	poin
+	char d58
+	....
+	demander le dessin du pl
+	....
+	char r58??.dao  (nom donne par p58)
+
+
+	exemple 2 ALIGP<<<<<<
+
+	Le fichier A1D58 dessine les pl avec un espace de 50 mm entre
+	les tetes d'alignememt : consigne ctex,...mm
+	Le 2eme aligement demarre a 262.02 soit
+	ctex = 262.02m/2500+50 = 154.8 = 155 mm
+	3eme alignement
+	ctex = 556.78m/2500+100 = 323 mm
+	3eme alignement
+	ctex = 757.98/2500+150 = 453 mm
+	4 fichiers *.dao sont sortis en meme temps que le code *.des
+
+	Pour assembler les 4 pl
+
+	char r5801.dao
+	$sde p1
+	char r5802.dao
+	$lpd p1
+	$sde p1
+	char r5803.dao
+	$lpd p1
+	$sde p1
+	char r5803.dao
+	$lpd p1
+	dvue
+	$sde p1
+	.....
+
+
+	BLOC
+
+        Les blocs 91 a 99 sont ignores par la commande DESS .
+       	pour faire un report des points a partir d'un dessin, sans
+        avoir de dessin:
+        avant  la  commande  DESS,  faire  sblo  et spla en selectant un
+        bloc/plan inexistants, il n'y aura  pas de dessin ( sauf  cadres
+        et croix ), seuls les points seront restitues sur la planche.
+        Le module p64 n'est donc plus indispensable pour les reports de
+        points.
+
+
+	BPLUMES
+
+	avant commande dessin, pour balayer le dessin dans
+	l'ordre des plumes.
+	Remettre la bascule OFF avant sauvedes, sinon la sortie du
+	fichier ASCII est perturbee
+
+	CALQUES
+	Definition des bloc/plan par nom (comme dans acad), une seule
+	hierarchie possible.
+
+	Pour creer un calque taper la commande BLOC
+
+	Selection par nom ou bloc/plan (hierarchie a 2 niveaux).
+	Les calques peuvent etre on (actifs) off (inactifs) ou supp
+	(detruits).
+	Les noms peuvent etre modifies.
+	L'operation supp efface les commandes de dessin : segm, liss,
+	cerd, etc... Les attributs ne sont pas supprimes : sizt, plu,
+	trai, ept1, etc...
+	Lors du chargement du dessin ($lde nomdess), la table des
+	calques est mise a jour : les attributs affectes aux calques
+	supprimes generent le calque correspondant.
+
+	Mettez la commande CALQUES dans menuvisu.p65 (acces avec mouse)
+
+	Vous pouvez crer des macros pour changer de calque, avec une
+	couleur par calque
+
+	fa1.mac ( fa1 = designation dde pour bati ou ??? )
+		bloc
+		1
+		plan fa1
+		1
+		plu
+		13
+
+	fbs.mac ( fbs = designation dde pour signalisation )
+		bloc
+		1
+		plan fbs
+		1
+		plu
+		13
+
+	Au lieu de FBS vous pouvez utiliser un mnemonique du type
+	SIGNALIS ( 8 caracteres maxi ) pour la macro et si votre
+	adjoint technique vous le permet, completer la designation fbs
+
+	signalis.mac ( signalis = designation arpenteur pour fbs )
+		bloc
+		1
+		plan fbs-signalisation
+		1
+		plu
+		13
+
+
+	CHAR
+
+        ANG et ALPH nuls dans un fichier ASCII : prend la valeur
+        precedente non nulle
+
+        les valeurs nulles sont prises en compte.
+        Il est plus efficace de sauver avec $sde.
+
+	Les points doubles sont elimines : dx,dy,dz < 0.001 ( 1 mm )
+	Derriere l'entete,il doit y avoir une commande xyz avec 2
+	points 9000001 et 9000002 positionnes derriere xyz.
+
+	##### initialisations
+	RAZ
+
+	CHFT pol1
+	 numauto
+	numauto
+	affinume
+
+	.....
+	charvue		# dessiner la vue apres charge
+	#bplumes	# dessin traceur dans l'ordre des plumes
+	endinit	##### fin en tˆte
+	 xyz
+	9000001    5705.2209    1350.6087 0 0 0 0 0
+	9000002    5864.6967    1242.5803 0 0 0 0 0
+
+	cfte # start symboles
+	dsym all
+	cfte dxfsymb
+
+	CHDIRZ  angz (en grades)
+	orientation de l'ecriture des Z par rapport a Ox ecran (papier)
+	sens trigo
+
+	chdirz  sans angz = chdirz 0
+
+
+       	CHFT
+        changement de fontes (CHFT) et symboles apres modification de
+        symboles par CFTE ok
+        ex : POL2 en cours, symb 66 , ok
+        cfte, dsym 66, faire un symbole , csym 66, cfte avec nom pol2a
+        dessin symb 66 inchange, chft pol2a, dessin symb 66 est celui
+        de pol2a. exec ok, 66 de pol2, puis 66 de pol2a.
+
+
+	CNIV 
+
+	recuperation des courbes de niveau a partir du fichier genere 
+	par VOLTERR . Les points surabondants sont elimines ( tolerance
+	d'alignement)
+
+	donnees
+	propose le fichier cniv.crb s'il existe (ou nom.crb, ou...)
+	tolerances : points alignes et tolcourbes (pour lissage)
+	les points sont numerotes a partir d'une origine donnee
+	( voir supcniv )
+	stockage dans le calque volterr (bloc/plan)
+
+	il est possible 
+	-de lisser les courbes : la tolerance d'alignement est 
+	appliquee a un point sur 2.
+	-ou de les dessiner sous forme de segment, la tolerance 
+	d'alignement est utilisee pour tous les points
+	Les ordres de dessin sortis sont limites a 50 points maxi par
+	liste.
+	Valeur mini des tolerances 0.0001 (0mm1)
+	Le code dao est sorti dans le fichier cniv.dao (ou nom.dao)
+
+	Si le lissage est demande, les pointes des talus sont 
+	restituees au mieux : generation de points pour forcer les 
+	courbes avec une tolerance TOLCOURBES 0.0001
+
+	Valeurs par defaut, bloc 51, plan 1, tolerances 0.01
+	Suivre les consignes...
+
+
+
+	CORTEXTE car
+
+	permet de corriger les textes contenant le caractere car
+	utilisation dans un cartouche
+	exemple :
+	textes saisis 1 !numero du dossier!
+		      2 !nom du client  !!!!!!!!!!!!!!
+		      3 azerty!0123456789!
+	cortexte !
+	affiche les textes comportant le caractere ! et demande le
+	nouveau texte : dossier, client,....
+	texte 3 : azerty est conserve
+
+	si reponse = entree, le texte est efface
+
+
+	CORTEXTE
+
+	permet de corriger les textes
+	les points de calage sont affiches (marques TX)
+	pointer une marque, le texte correspondant est affiche
+	avec demande du nouveau texte
+
+	si reponse = entree, le texte est efface
+
+
+	COURBES
+	lissage de droites et cercles, au moins 3 points, ou 5 si la
+	courbe es fermee
+
+
+	CUBE
+	calcul des cubes a partir des profils tn ( p17/pie )
+
+
+	DEPLATEX
+	deplacer des textes en modifiant hx, hy, ang et en les mettant
+	dans le calque courant. Voir Macros commandes
+
+	DVUE    detruire la vue du dessin en cours, et activer VUE
+
+
+	EFFARECT , SELETECT
+
+	Effacer, selecter les objets d'un rectangle
+	Les objets coupes par les cotes du rectangle sont conserves.
+	Les calques off ne sont pas concernes.
+
+
+	FILE
+	La commande  FILE utilise  le fichier  MENUFILE.P65 s'il existe,
+        et la souris pour pointer les commandes/fichiers.
+
+
+	FOTO
+	photographier le modele de terrain
+
+
+	GD (Gisements/distances)
+	possibilite de donner une correction aux distances
+		-(correction lambert + niveau zero) par exemple
+
+
+	HX hx  la valeur hx est affectee a HY
+	pour avoir HX=HY, la commande HY peut etre omise
+
+
+        INUTZ   supprimer les points inutilises, avec Z=0 ou Z dif 0
+                rappel : INUT supprime les points inutilises, sauf
+                s'ils ont une cote Z non nulle.
+                SUPP supprime les points demandes, quel que soit le Z.
+
+
+
+	LFXY nom x1 x2 y1 y2
+	nouvelle syntaxe
+	si x1 a y2 sont presents, les points charges en memoire sont
+	ceux du rectangle defini par (x1,y1) et (x2,y2) : bas gauche et
+	haut droite. Donner les x puis les y (pas d'erreur dans la
+	syntaxe)
+
+
+	LSTXYZ
+	l'algorithme de classement des points a ete ameliore, les temps
+	correspondent pratiquement a l'ecriture du fichier disque
+
+	exemple :
+					52 000 points  7 700 points
+			486/33	          28 sec        4,5 sec
+			486/66
+	Vectra xu 5/90c (pentiun)          6 sec	1   sec
+
+
+        MENUON  menu ecran affiche
+
+
+        MENUOFF menu ecran supprime
+
+
+	MESURE  affiche X Y Z en plus de dx dy g (dx,dy,g a partir
+		du dernier pointe)
+		!!! X Y sont a la resolution pres de l'ecran ou du
+		digit !!!
+
+	MARD espcroix tail croix hy deca		valeurs/defaut
+
+	espcroix    espace entre les croix         		100 mm
+	tailcroix   taille des croix                		10 mm
+	hy	    hauteur caracteres des marques xy    	1mm8
+	deca	    position des marques : hy/2+deca  		1mm8
+
+		    deca = distance au rectangle de l'ecriture
+
+	MARD est equivalent a MARD 100 10 1.8 1.8
+	pour modifier les valeurs, il faut taper la commande au clavier
+	les marqueurs sont constants (mm papier/ecran) quelle que soit
+	l'echelle du dessin ( ecran / papier ), ( idem corz )
+
+		EMAR esp, est devenu inutile ( espace entre les croix
+		en metres terrain ).
+
+
+	MASQUE
+	mettre les masques talus(44), hachures(125) en/hors fonction
+	Cette commande est initialisee dans le fichier DEPART.P65
+		masque -44 -125
+	les barbes et symboles ne sont pas limites au perimetre
+	Les commandes DESS et ACAD activent les fonctions MASQUE : les
+	fichiers code traceur et dxf sont propres.
+	Si les masques sont actives, en particulier talus, le temps de
+	dessin ecran peut etre multiplie par 5 ou plus.
+
+
+
+	MOD30	documents d'arpentage a partir de la digitalisation  des
+		lots  (digit  en  mode   continu).  Les  surfaces   sont
+		ajustees sur la surface totale de la parcelle.
+
+		taper MOD30, et suivre les consignes.
+		echelle : 1000 2000 2500
+		surface : avec aucune, 1 ou  2 decimales. Le nombre de
+		decimales en sortie correspond au nombre de decimales
+		tape en entree.
+
+		ex	entree	sortie
+
+			3586	m2
+			3586.1	0.1 m2
+			3586.22	0.01 m2
+
+	La liste resultats est affichee a la visu, avec demande de
+	validation. S'il y a confirmation, la sortie imprimante est
+	validee : imprimante definie par l'utilisateur au lancement du
+	programme.
+
+	nota : la digitalisation est affichee a l'ecran, a une
+	translation pres par rapport a la position de la mire.
+	Si les dimensions de l'ecran sont egales a celles du digit,
+	il n'y a pas de translation.
+	La valeur d'une unite digit est prise dans le fichier
+	config.mcg sous fdig.mcg , enr2, p20. Si la valeur est 10 fois
+	trop grande, donnez l'echelle 125 pour 1250.
+	Voir annexes.doc .
+
+
+
+        MOUSE
+	si la consigne MOUSE se trouve dans le fichier depart.p65, mouse
+	sera en fonction en fin d'execution des commandes de depart.p65
+	Pour mettre mouse en fonction en interactif taper une fleche
+        de deplacement du clavier.
+
+
+	NBDZ n		nombre de d‚cimales pour afficher les Z
+	ex: nbdz 0	cotes rondes, pas de d‚cimales
+	    corz	afficher les cotes
+
+
+	OPCALQUES
+
+	operations generales sur les calques.
+
+	1/ intersection des listes segment d'un calque avec d'autres
+	calques.
+	les listes segm sont montees avec trai 0, symb 128
+	apres les calculs on a trai 1, symb 0 .
+	les temps de recherche peuvent etre significatifs !!!
+	application : intersecter les emprises avec le parcellaire.
+	Les operations sont independantes de la bascule on/off des
+	calques.
+	La fonction PDOUBLES est executee en fin de calcul.
+	voir TXSF
+
+	2/hachurer un calque et stocker les hachures dans un calque
+	predefini
+	Separer les batis durs des batis legers (calques differents).
+	Definir PLU et ESHA avant le hachurage. ANHA est different pour
+	chaque batiment : multiple de 20 grades. Le 1er cote de la
+	liste segment sert au calcul de ANHA.
+	Utiliser la commande BLOC pour creer le calque hachures.
+
+
+       	PADE
+        confirmation demand‚e pour chaque parallŠle
+
+
+	PDOUBLES eps
+
+	compacter les XYZ en conservant une seule liste XYZ
+	Les points differents ayant les memes xyz a eps pres (VD=0.001)
+	sont ramenes a un seul point.
+	cette commande est lancee d'office par PURG.
+
+	exemple :
+
+	fichier dxf fourni par une DDE, soit a.dxf
+	a.dxf --conversion pytha-> a.dao
+	Taille des fichiers
+	- a.dxf 1 127 257 lignes, 8 600 590 octets
+	- a.dao   117 500 lignes, 3 889 623 octets.
+
+	Le fichier a.dao brut comprend 81822 points, 18592 commandes,
+	et une pile de 117838 unites de stockage.
+
+	Pendant la commande charge, 3611 points xyz sont elimines.
+	La commande PURG (derniere ligne du fichier a.dao) ramene ces
+	chiffres a 54278, 16936, 101336.
+
+	Temps d'execution de la commande char a.dao
+
+	486/33	4mn 16sec	  256 sec   ( exec 20 sec )
+	486/66
+	Vectra xu 5/90c (pentiun)  65 sec   ( exec  6 sec )
+
+	Utiliser pdoubles avec eps = 0.01 par exemple si le fichier dxf
+	(ou autre) est fourni au cm pres.
+
+
+	PERP
+	abaisser des perpendiculaires sur une base (z=0)
+
+
+	PERPZ1
+	idem perp. Z interpole sur la base, si celle-ci a des z valides
+	( dif de 0 )
+
+
+	PERPZ2
+	idem perp. Z= Z des points a projeter
+
+
+	PERS
+	sortie des perspectives
+
+	PLTN  extraire un profil en long du tn
+	idem trtn
+
+		PLTN
+		toleralignement n1 n2 n3 n4 n5 ...
+
+
+	SAISIZ (n)
+	saisie des Z (points avec Z=0) a partir du point n (VD = 1)
+	pour remonter la liste taper / puis cr (enter)
+
+
+	SORTN  genere les profils tn a partir des lignes dessinees et
+	definies en xyz
+
+
+       	SAUVEDES nom et CHAR nom
+
+        utiliser ces commandes pour  une modification du fichier  ascii,
+        impossible par un autre moyen, ou pour monter un dessin dans  la
+        nouvelle version s'il y a incompatibilite.
+
+        $SDE et $LDE sont beaucoup plus rapides (fichiers binaires).
+
+        Le dessin affiche pendant la commande sauvedes peut dans
+        certains cas apparaitre desoriente (ecritures). La commande
+        Char (chargement en memoire d'un fichier de dessin ascii)
+        produit un affichage correct.
+
+       	SF
+
+        ne cree pas de points. Tourner le perimetre avec segment.
+        Appeler SF, repondre return , SF prend la liste precedente.
+
+
+       	SL et SP
+
+        Ces  commandes  sont  destinees  a  fournir des etats renseignes
+        dans  le  cas  de  calculs  de  surface de type lotissements (ou
+        verification  d'une  digitalisation  de  parcelles  cadastrales,
+        ou ...) . Dans ce  cas, il est necessaire d'avoir  des controles
+        de la saisie.  On  'tourne'  une serie   de parcelles, puis   un
+        ilot  reel  ou  fictif  englobant  le tout, le totalisateur doit
+        doubler.   Les  editions   ne   sont   pas  destinees   a   etre
+        consultees en  mode pas   a   pas   pendant   les   calculs.
+	L'edition est envoyee sur la liste definie au demarrage (message
+	edition  visu  ou  ...),  demander  D(isque) ou F(ichier), sinon
+	l'ecran sera perturbe.
+        Voir l'exemple D32EX1.D65  (n x y  dans d32ex1.xyz). Lancer  P65
+        avec  sortie  sur  Disque  ou  Fichier,  puis  CHAR d32ex1.d65 .
+        Lister les fichiers donnees et resultats...
+
+
+       	SBLO et SPLA (selection blocs/plans) : passer par la
+       	commande calques
+
+       		valides pour
+        	DESS
+        	EXE, EXEC, DEBG
+        	SAUVEDES
+
+
+
+
+
+	>SUPCNIV p1 pn  ou SUPCNIV p1
+
+	mettre a zero les cotes Z des points p1 … pn
+	ex: supcniv 10001         supp les z a partir  du point 10001
+	    dess avec altitudes
+	    etc...
+	ne pas sauver,sinon les cotes z sont perdues
+
+
+	SUPF/157
+	supprimer les points inutiles interieurs a la fenetre
+
+
+	TALUS
+	bas talus :
+	il n'est plus necessaire de pointer le 1er point du
+	haut de talus, la liste bas talus est fermee par le 1er point
+	du haut talus.
+	motifs des traits :
+	si trai est a 1 ou plus
+	 haut talus dessine avec trai
+	 bas talus dessine avec le motif trai+1,
+	sinon si trai=0, pas de trai haut et pied de talus
+	Voir (ou revoir) les macros talusN dans le repertoire
+	c:\mcg\macros
+
+
+	TFXYGE	consigne complementaire
+	lfxy fic1	monter les points nxyz en memoire
+	tfxyge fic2
+
+
+	calcule la transformation conforme de fic1 sur fic2 (Helmert) a
+	partir d'au moins 3 points communs
+	affichage ecran et sortie dans le fichier liste si la commande
+	impr a ete donnee avant tfxyge.
+
+
+	TRACE
+	apres FIN sort un fichier TRACE.DBG du dessin en cours en vue
+	d'une aide a la mise au point (bugs entre autres).
+
+
+
+
+
+	>TRTN extraire les profils en travers du tn
+
+	- a partir des listes segm : intersection avec le plan du
+	  profil. Les listes lis? (lissage) sont considerees comme des
+	  listes segment.
+	  Les listes segm sont des courbes de niveau, des lignes
+	  caracteristiques : cretes, thalwegs, ... toutes lignes
+	  ayant des points en Z et definissant le modele du terrain.
+	  !! les lignes planimetriques type lignes electriques, ayant
+	  des cotes Z doivent etre eliminees !!
+	  Les points ayant un Z tel que abs(Z) < 0.001 m ( en principe
+	  0 ) ne sont pas pris en compte.
+
+	- et/ou en projetant les points isoles sur les profils
+	  a concurrence de toler1
+
+	TRTN toler1 toler2 lartn (pastabul n1 n2 n3 ... nn)
+
+	pastabul : pas de la tabulation des pts (metres) : un profil en
+	travers tn tous les pas metres (1er et dernier toujours sortis)
+
+	lartn : bande tn a prendre en compte de part et d'autre de
+	l'axe (metres)
+
+	Genere un fichier P65.D08 : calcul d'un trace droites n1...nn
+	raccordees par des cercles de rayon 0.001 m .
+
+	Si le fichier P65.D08 existe, il suffit de taper la commande
+	trtn toler1 toler2 lartn
+	Le fichier P65.D08 peut etre corrige pour avoir un calcul d'axe
+	droites/cercles.
+
+	si la commande se trouve dans un fichier lance par charge, la
+	forme des donnees est la suivante :
+
+	1ere forme /
+
+	trtn  bi			ligne 1  voir nota
+	toler1 toler2 lartn pastabul	ligne 2
+	n1 n2 ...       		points definissant l'axe
+	ni nj ....
+	..... nn
+			une ligne vierge=fin des donnees
+
+	2eme forme
+
+	trtn  bi			ligne 1  voir nota
+	toler1 toler2 lartn pastabul	ligne 2
+	n1 n2 ...       		points definissant l'axe
+	ni nj ....
+	..... nn
+	tabuler		! commande de tabulation detaillee
+	0 680 20	! s1 sn pas
+	700 920 20
+	934.558 1402.89 20	! s1 sn pas
+     	1402.89 1403.89		! s1 sn (pas par defaut=10m), soit s1,
+	999999			! sn n'est pas tabule (s1+10 > sn)
+	****
+	stop
+
+
+	toler1
+	les points situes a moins de toler1 du profil sont alignes sur
+	le profil. Si toler1<0.001 m, pas de recherche.
+	Si toler1 < 0, recherche des points isoles seuls
+
+	toler2
+	eliminer les points du profil alignes a moins de toler2 en Z
+	si toler2 < 0, pas d'elimination.
+
+	eliminer le point i du profil si le z interpole a partir de i-1
+	et i+1 est identique a toler2 pres
+
+	points elimines si xi-xi+1 < toler1  et  abs(Zi-Zi+1) < toler2,
+	le point i+1 est elimine (x= abscisse dans le plan du profil)
+	nota: si bi est omis les bissectrices ne sont pas tabulees
+	      sinon on a les profils en travers correspondants a toutes
+	      les tetes d'alignement (en plus des profils de la
+	      tabulation).
+
+	TXSF
+
+	calcul de surfaces avec reference a un texte (surfaces
+	d'emprises pour etats parcellaires par exemple)
+
+	l'edition est envoyee a la visu et sur la liste definie au
+	demarrage (message edition visu ou ...), demander D(isque) ou
+	F(ichier), sinon l'ecran sera perturbe.
+	suivre les consignes.
+	validation : bouton gauche de mouse
+	sortie : bouton droit
+	si titre a ete saisi , il est envoye sur la liste.
+	les surfaces sont cumulees dans une colonne separee.
+	application :
+	tourner n parcelles, puis l'ilot, le totalisateur
+	doit doubler a eps pres ( controle )
+	ou
+	1 tourner n parcelles (mouse)
+	2 puis esc (insister) au clavier
+	tourner l'ilot, la surface est affectee du signe -
+	si le totalisateur n' est pas a 0, refaire 2
+
+
+	liste avec erreur ( l'edition ci-dessous peut etre modifiee)
+
+	 , le 31/08/1995 17:00
+	                                    cumulee  commentaires
+	<<<
+
+	 , le 31/08/1995 17:01
+	                                    cumulee
+	    1>34              <    144.56    144.56
+	    2>33              <    113.55    258.10
+	    3>33              <    140.90    399.00
+	    4>????            <   -399.00      0.00  cebon
+	<<<
+
+	 , le 31/08/1995 17:02
+	                                    cumulee
+	    1>290             <     40.88     40.88
+	    2>289             <     61.55    102.43
+	    3>288             <     44.33    146.76
+	    4>287             <     53.53    200.29
+	    5>????            <   -195.52      4.77  1er esc erreur *
+	    6>????            <   -200.29   -195.52  2e  ok, on a
+						     -200.29
+	<<< on est sorti pour repartir avec une cumulee correcte pour
+	la suite
+
+	* points oublies dans la saisie de l'ilot ( classique...)
+
+	!!! attention aux plans parcellaires digitalises sans
+	precaution : pas d'accroche aux points ou sur les segments
+	( tetieres par exemple), parcelles ouvertes....
+	Le calcul correct des surfaces d'emprise devient alors un
+	exploit.
+	Digitalisez avec P65....
+
+
+
+	UCARSYM basecar basesym
+
+	basecar et basesym : taille de la grille de base pour les
+	symboles et caracteres.
+	par defaut le programme adopte 100 100
+	commande a fournir avant CHFT ....
+	permet d'avoir une grille unitaire differente pour les
+	caracteres et les symboles.
+
+
+        VUE     construire une vue  de la totalite  du dessin l'ecran  :
+                l'echelle   est calculee  de telle  sorte que  le dessin
+                complet   soit    represente.      La   commande    $SDE
+                genere  cette  commande.  A  chaque  commande  VUE,   le
+                dessin global est mis a   jour de facon automatique,  si
+                les modifications ne debordent  pas de le fenetre  de la
+                vue totale, sinon  la vue est  redessinee (exec).   Dans
+                certains cas la  mise a jour  de la vue  est incomplete.
+                Si l'on desire une  vue refletant le dessin,  envoyer la
+                commande  DVUE,  puis  sauver  le  dessin,  la  vue sera
+                dessinee correctement.  L'interet d'une vue  strictement
+                a  jour  n'est  pas  evident,  surtout  si le dessin est
+                grand,  l'echelle  de  representation  rendant  certains
+                details illisibles.  La vue  doit etre  consideree comme
+                un tableau d'assemblage a partir duquel on effectue  des
+                ZooMFenetre  pour  dessiner  les  details.  Cette  facon
+                de  proceder  reduit  les   temps  d'attente  de   facon
+                significative.
+                La vue est sauvee dans un fichier Vnnn.P65 ( peut etre
+                detruit avec la commande dos del vnnn.p65 )
+
+
+        ZOOMAR  revenir a l'image precedente apres ZOOM ou DEPECR
+                s'il n'a pas d'image precedente, zoomar est equivalent
+                a vue.
+		Sept images ecran peuvent etre rappelees
+
+
+
+        exemple d'exploitation avec les commandes zmf, zoomar et vue
+        ============================================================
+
+        placez-vous dans le dossier ex65
+        -p65
+        si une image est affichee, taper depart ( = depart.p65, avec le
+        nom depart.mac dans le repertoire \mcg\macros\ ), pour
+        initialiser le systeme , ou la commande $ZER.
+        -lfxy vermo.xyz                 fichier points d'un leve
+        -stat                           753 points (en haut ecran)
+        -vue                            echelle env 4500
+        -poin avec un pas de 1
+        -supp le poin 394 (en bas de l'ecran)
+        -stat                           752 points
+        -dvue : refaire la vue          echelle env 1700
+        -poin avec un pas de 100
+        -$sde vermo , repondre n a la question vue ...
+        -fin
+        -p65 , la vue au 1700 est affichee (points seulement, pas de
+         dessin)
+        -zmf de la zone bas droite par exemple  (bd)
+        -poin (pas 1)
+        dessiner, ecrire, ...
+        -zmf            (bd2)
+        dessiner,...
+        -zoomar : on revient au zoom precedent (bd), le dessin est
+         complete
+        -zoomar : la vue totale est affichee, et mise a jour du dessin
+         fait sous (bd) et (bd2)
+        -poin (pas 100)
+        -zmf d'une zone non dessinee
+        dessiner
+        -zoomar
+        etc..
+
+        -$sde vermo
+        -fin
+
+
+        nota : les dessins utilises pour les comparaisons se trouvent
+        dans le repertoire.
+        Pointer file (zone menu),...

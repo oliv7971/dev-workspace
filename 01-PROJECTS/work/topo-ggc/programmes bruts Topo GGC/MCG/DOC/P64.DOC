@@ -1,0 +1,59 @@
+                  REPORT AUTOMATIQUE      010986     page 64.1
+ 
+ 
+                             REPORT AUTOMATIQUE
+                             ------------------
+ 
+        Le  fichier  d'entree est celui saisi par  le  progamme  P29,  ou
+        genere par le mode automatique de la section 31 .
+        voir la section 29.
+ 
+        le  point decimal de la cote Z indique la position du  point,(cas
+        du report en Z). La plume logique 1 sert a ecrire les nos (bleu) ,
+        la plume logique 2 est utilisee pour les pointz, Z croix, etc...
+ 
+ 
+                       exemple de report nos
+                       ---------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+

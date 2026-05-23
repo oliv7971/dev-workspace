@@ -1,0 +1,185 @@
+                         Pytha-Topo R911001 Page 42.1
+
+
+
+	             CALCULS PLANIMETRIQUES DE POLYGONATION
+		     --------------------------------------
+
+
+
+	Le programme traite les r‚seaux  de polygonation  s'appuyant sur
+	des points connus, … l'exclusion des antennes.
+	L'utilisateur donne  l'ordre de calcul	des  cheminements et des
+	points nodaux.
+	Une option  VERIFication  permet  de verifier  les  donn‚es : un
+	algorithme de recherche  des chemins  les plus courts  entre les
+	points connus est alors activ‚ . Cette  option est  int‚ressante
+	pour la recherche des fautes. Si le nombre de fautes est raison-
+	nable, le cheminement en d‚faut est d‚tect‚ dans la majorit‚ des
+	cas .  L'utilisation  du programme  en mode  VERIF peut  ˆtre le
+	compl‚ment du module g‚n‚ral P34, dans le cas de lev‚s  en  zone
+	urbaine o— les fautes peuvent ˆtre assez fr‚quentes, particuli‚-
+	rement au niveau de l'identification des vis‚es de canevas.
+
+	Les  donn‚es utilis‚es  doivent  avoir un  format  identique  au
+	format P34 : fichier sorti  par le module P33 , ou saisi avec un
+	‚diteur du systŠme, ou sp‚cialis‚.Les ordres de calcul classique
+	sont introduits … la fin du fichier P33 :
+
+	    cheminements, points nodaux.
+
+	La methode de calcul est celle des errements habituels : compen-
+	sation  angulaire  inversement proportionnelle … la longueur des
+	c“t‚s , compensation  en XY  proportionnelle …  la  longueur des
+	c“t‚s .  Point nodal :
+
+	        poids de chaque cheminement =
+	     1/T2 ,T est calcul‚ comme indiqu‚ au JO du 19/3/80, II, 5A.
+
+	        Tolerances pour le calcul du V0 :
+	     1/D * ECV0 <= toldistance
+	     2/ECV0 <= tolangle
+
+
+
+	nota : ce module n'est plus maintenu, utiliser P44  .
+
+
+                         Pytha-Topo R911001 Page 42.2
+
+
+
+	1-1 ORDRE DES DONNEES
+
+		a	titre
+
+		b	param‚tres
+
+		c	geodesie
+			N X Y
+			- - -
+			- - -
+
+			999999
+
+		d  d1	P33   (observations)
+		   d2	ns nv ah dh av   lm  (ou autre pr‚sentation)
+			NS NV AH DIST (AV)
+			-  -  -  -   -
+
+
+			999999
+
+		e	n1 --- -1  n1 ------ -1    (nodal)
+			n1 --- 999999              (fin du nodal)
+			n1 ----- 999999 n1 -------- 999999
+			999999                     (fin des calculs)
+
+		f	****
+
+
+			a … f
+			a … f
+			etc...
+
+			STOP   ( fin des calculs )
+
+
+	1-2 PARAMETRES , valeurs par d‚faut (vd)
+
+	VERIF
+	NVERIF   valeur par d‚faut
+
+	nota / d‚limiteur des donn‚es est 999999, les num‚ros  possibles
+	sont compris entre  1 et 999998 .
+                         Pytha-Topo R911001 Page 42.3
+
+
+
+	1-3 EXEMPLE
+
+	    fichier ex3.d42
+
+
+		ESSAI POLYGO
+		VERIF
+		geodesie
+     		1  1000 1000.
+     		7  2000 1000.
+     		8  1500 500.
+		21 1500 1500
+		20 2000 1500
+		22 1400 1400
+		999999
+  		p33
+		ns nv    ah       dh   av  lm
+		1   7
+		1   8    50
+		1  21   350
+		1   2   350.  141.42
+		2   1
+		2   3   300.  282.84
+		3   2
+		3   4   100.  282.84
+		4   3
+		4   5   300.  282.84
+		4   9   350.  200.
+		4  13   200
+		4   8   350
+		5   4
+		5   6   100.  282.84
+		6   5
+		6   7   300.  141.42
+		7   6
+		7  21   0
+		7   8   300
+		7   1   350.
+		7  12   300
+		8   1   0.05
+		8   7   100.
+		8  10   100.  282.84
+		8  21   50
+		9   4
+		9  10   150.  282.84
+		10  8
+		10  9   100.
+		10 11   200   141.42
+		11 10   0     141.42
+		11 12   200
+		12 11   0     141.42
+		12 7    200   141.42
+		13 14   0     100
+		13 4    150   141.42
+		14 13
+		14 15   150
+                         Pytha-Topo R911001 Page 42.4
+
+
+
+	    fichier ex3.d42 (suite)
+
+		15 14   0     141.42
+		15 18   50    200
+		15 16   150   100
+		16 17
+		16 15   100
+		17 16   0     100 # mettre 17 16 2 100 (err 2 gr)
+		17 20   150   141.42
+		18 19   0     141.42
+		18 15   150
+		19 22   0     100
+		19 18   250
+		20 7
+		20 17 50
+		22 1
+		22 19 250
+		999999
+		1 2 3 4 -1         # nodal 4
+		7 6 5 4 -1         # nodal 4
+		8 10 9 4 999999    # nodal 4 fin
+		10 11 12 7 999999
+		4 13 14 15 16 17 20 999999
+		15 18 19 22  999999
+		999999
+		****
+		STOP

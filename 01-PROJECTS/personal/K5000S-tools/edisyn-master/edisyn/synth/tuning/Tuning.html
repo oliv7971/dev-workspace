@@ -1,0 +1,60 @@
+<html><head></head>
+<body>
+
+<h1>MIDI Tuning Standard</h1>
+
+<h2>Patch Editor</h2>
+
+<p>This is a tool designed to make create different tunings and scales and to upload them to and request them from synthesizers which support the <b>MIDI Tuning Standard</b> (or MTS).  You can save your tunings as sysex patches.
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Synthesizers which adhere to MTS all have a <b>device number</b>.  You must set the <b>Synth ID</b> in Edisyn's MIDI Devices window (see the "Change MIDI" menu) to be the same as your synth's MTS device number.
+
+<br><br><h3>The Send As Individual Parameters button</h3>
+
+Some synthesizers, such as the Waldorf M, can only receive individual tuning note messages, not bulk dumps.  If you check this box, then Edisyn will send to current patch by sending each of the notes individually; otherwise (by default) it sends as a standard MTS bulk dump.
+
+<br><br><h3>About the Tuning Dials 0 ... 127</h3>
+
+MTS assigns a pitch to every MIDI note value from 0...127. Each of these knob pairs represents the frequency to assign to that value.
+
+<p>You compute the pitch by choosing an original note from the 12-tone-equal-temperment (A4-440hz standard modern western tuning) as well as an offset in cents from 0-99.99 above that note. Your resolution in cents is 100/2<sup style="font-size:small">16</sup>. The editor's dials allow you to manually input these values, but this is not the recommended way to set them. Instead, the <b>Tuning</b> menu option has utilities for calculating these knobs in bulk.
+
+<br><br><h2>Tuning Utilities</h2>
+
+The <b>Tuning</b> menu gives access to various utilities to make it easy to set different common tunings.
+
+<br><br><h3>Load Scala File...</h3>
+
+You can load tunings in the popular <b>Scala</b> format.  These files end in ".scl" or ".SCL".  Scala tunings are relative: you'll also need to specify what the Root MIDI Note and Root Frequency are.
+
+<br><br><h3>EDO</h3>
+
+EDO stands for <i>Equal number of Divisions per Octave</i>, commonly known as Equal Temperament.  You'll also see the acronyms "ET" or "TET".  Standard western tuning is EDO with A4 (MIDI note 69) set to 440hz, and 12 divisions per octave. Other tunings have their advantages and disadvantages: a good summary of the topic can be found <a href="https://en.wikipedia.org/wiki/Equal_temperament">on Wikipedia</a>.  
+
+<p>The calculate button gives the frequency of the selected MIDI number in standard western tuning, but feel free to use any positive number for frequncy for any MIDI note number as your root.  All it is saying is "I want MIDI number X from my controller to correspond to frequency Y and to tune the rest of the notes using equal temperment with Z divisons per octave."
+
+<br><br><h3>Named Scales</h3>
+
+These are scales that are either popular or notable enough to be named. You can find out more about them on Wikipedia.  Many of these scales are standard scales found in the tuning presets on Yamaha 4-operator synthesizers such as the TX81Z.  They are set up much in the same way that you set up EDO above.
+
+<br><br><h3>Requesting from and Sending to the Yamaha DX11/TX81Z</h3>
+
+The DX11 and TX81Z were introduced before the MIDI Tuning Standard, and so have their own (thankfully similar) tuning format.  The TX81Z can store a single user slot for tuning information, and it also has several preset tunings.  Though it does not discuss this in the manual, it is my understanding that the DX11 also has the user tuning slot as well.  You need to make sure you have your MIDI channel set up properly in order to send or request tuning information.
+
+<p>It is possible that other Yamaha 4-op synthesizers provide microtuning options, but we are not aware of them.
+
+<br><br><h2>Gotchas</h2>
+The MIDI Tuning Standard allows writing to and requesting patches.  You cannot write to or request from current memory.  To do this, Edisyn simply writes to or reads from Patch 0.  If you have a synthesizer which saves to Flash RAM, you shouldn't do something like the Morpher or Hill-Climber etc. which would repeatedly write patches over and over and over again -- it'll stress your RAM.  Otherwise it's just fine.
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>V. Hoyle</b>
+<br>With <b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>April 2020
+</table>
+

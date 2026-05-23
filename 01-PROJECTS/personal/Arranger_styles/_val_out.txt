@@ -1,0 +1,49 @@
+﻿Container raw_id=0x01000114  v0.1  (doit etre 0x01000114)
+TOC       raw_id=0x05010018  v1.0  (doit etre 0x05010018)
+XRef[0] doit etre 28: 28
+
+=== test_out.STY : chunk hierarchy ===
+  Outer Container raw_id=0x01050000 size=52168
+  [000000] type=0x01 v0.3 flags=0x08 size=31  raw_id=0x01000308
+    name="8BeatBallad1" enabled=0x7fff with_data=0x7fff
+  000000: 0c 38 42 65 61 74 42 61 6c 6c 61 64 31 00 00 00   .8BeatBallad1...
+  000010: 7f ff 00 00 00 00 00 00 00 00 00 00 00 7f ff      ...............
+  [000027] type=0x02 v0.0 flags=0x00 size=47871  raw_id=0x02000000
+  [00bb2e] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00bc44] type=0x03 v0.0 flags=0x00 size=290  raw_id=0x03000000
+  [00bd6e] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00be84] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00bf9a] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00c0b0] type=0x03 v0.0 flags=0x00 size=290  raw_id=0x03000000
+  [00c1da] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00c2f0] type=0x03 v0.0 flags=0x00 size=290  raw_id=0x03000000
+  [00c41a] type=0x03 v0.0 flags=0x00 size=290  raw_id=0x03000000
+  [00c544] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00c65a] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00c770] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00c886] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00c99c] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+  [00cab2] type=0x03 v0.0 flags=0x00 size=270  raw_id=0x03000000
+
+=== BANK01.STY obj0 : chunk hierarchy ===
+  Outer Container raw_id=0x01050000 size=39267
+  [000000] type=0x01 v0.3 flags=0x08 size=27  raw_id=0x01000308
+    name="The Fire" enabled=0x7fff with_data=0x7fff
+  000000: 08 54 68 65 20 46 69 72 65 59 50 f8 7f ff 01 08   .The FireYP.....
+  000010: 08 03 08 08 08 04 03 00 00 7f ff                  ...........
+  [000023] type=0x02 v0.0 flags=0x00 size=33771  raw_id=0x02000000
+  [008416] type=0x03 v0.0 flags=0x00 size=495  raw_id=0x03000000
+  [00860d] type=0x03 v0.0 flags=0x00 size=465  raw_id=0x03000000
+  [0087e6] type=0x03 v0.0 flags=0x00 size=505  raw_id=0x03000000
+  [0089e7] type=0x03 v0.0 flags=0x00 size=491  raw_id=0x03000000
+  [008bda] type=0x03 v0.0 flags=0x00 size=589  raw_id=0x03000000
+  [008e2f] type=0x03 v0.0 flags=0x00 size=281  raw_id=0x03000000
+  [008f50] type=0x03 v0.0 flags=0x00 size=273  raw_id=0x03000000
+  [009069] type=0x03 v0.0 flags=0x00 size=263  raw_id=0x03000000
+  [009178] type=0x03 v0.0 flags=0x00 size=333  raw_id=0x03000000
+  [0092cd] type=0x03 v0.0 flags=0x00 size=283  raw_id=0x03000000
+  [0093f0] type=0x03 v0.0 flags=0x00 size=283  raw_id=0x03000000
+  [009513] type=0x03 v0.0 flags=0x00 size=243  raw_id=0x03000000
+  [00960e] type=0x03 v0.0 flags=0x00 size=263  raw_id=0x03000000
+  [00971d] type=0x03 v0.0 flags=0x00 size=283  raw_id=0x03000000
+  [009840] type=0x03 v0.0 flags=0x00 size=283  raw_id=0x03000000

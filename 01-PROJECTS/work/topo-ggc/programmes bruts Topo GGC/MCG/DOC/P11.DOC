@@ -1,0 +1,126 @@
+                         Pytha-Topo R920401 Page 11.1
+
+
+
+		           UTILITAIRES DE CONVERSION
+				   ET DIVERS
+
+
+	1-conversion du code traceur HPGL (Hewlett Packard) en BGL (OCE)
+
+	Le fichier HPGL doit etre termine par la sequence suivante
+	  		esc  .  )   ou   esc  .  Z
+	    en decimal   27 46 41         27 46 90
+	qui indique la fin du dessin.
+
+	Les parametres des traceurs doivent etre donnes dans le  fichier
+	P11.MCG :
+
+	enr1	code des plumes BGL sur 2 caracteres
+		la  commande hpgl SPi sert de pointeur vers la table des
+		plumes bgl, i=4 pointe la 4eme valeur de la table
+
+	enr2   -nombre de pas au mm du traceur hpgl, en x
+	       -				     en y
+	       -dimension de la diagonale du format papier pour les
+	        commandes exprimees en % de cette diagonale
+
+	enr3   -nombre de pas en mm du traceur bgl, en x
+	       -				    en y
+	       -validation des arrondis des deplacements bgl :
+	       les deplacements  sont exprimes en  pas traceur , nombres
+	       entiers . Si on passe de  40 pas a 20 pas  par mm ,  on a
+	       pas bgl = pas hpgl/2 , soit une perte de un pas  tous les
+	       2 deplacements ( la division d'un entier par 2 se termine
+	       par  un chiffre  arrondi par  valeu r inferieure pour les
+	       entiers impairs ) .  Cette  perte  n'a aucune  conseqence
+	       pratique si les  deplacements sont absolus .  Par contre,
+	       le cumul des erreurs d'arrondi sur les deplacements rela-
+	       tifs  donne  des  pertes  de  trace  importantes  pouvant
+	       atteindre plusieurs mm en fin de trace.
+	       Le programme effectue les corrections sur les x y . Cette
+	       consigne est validee si le 3eme parametre est a 1 .
+
+	       Pour eviter  les  problemes a ce niveau , definir le meme
+	       nombre de pas pour les 2 traceurs, cela est possible avec
+	       les series 16 et 18 de BENSON ( fonction setup du panneau
+	       de commande ) . Si les pas sont identiques , le parametre
+	       est mis a 0.
+
+	       -taille du buffer a envoyer au traceur BGL , valeur entre
+	       64 et 2048 (256 par defaut) . La taille du buffer utilise
+	       est un multiple de 16.
+	       Les  ordres HPGL   depassant la taille du buffer BGL sont
+	       decoupes en plusieurs buffers BGL .
+	       Le nombre de valeurs par ordre HPGL ne peut depasser 1000
+	       ( 500 deplacements x et y ) .   Au-dela de ces limites le
+	       resultat n'est pas garanti.
+
+	       exemple de fichier P11.MCG	      0 1 2 3 4 5 6 7
+						      40 40 1000
+						      20 20 1 256
+                         Pytha-Topo R970101 Page 11.2
+
+
+
+	1-conversion HPGL/BGL (suite)
+
+	La liste fournit les informations suivantes:
+	-les instructions HPGL  non converties :  sans signification  en
+	 bgl, ou non converties
+	-la position de la plume en fin de dessin
+	-deplacements mini et maxi
+	 attention aux deplacements negatifs generes au demarrage par
+	 certains types de traceurs HP
+	-dimension du papier
+	-plumes utilis‚es
+
+	Instructions HPGL reconnues (consulter le manuel HP pour plus
+	d‚tails)
+
+	PD  pen down
+	PU  pen up
+	PA  plot absolute
+	PR  plot relative
+	SP  select pen
+	SL  slant character
+	SI  absolute character size
+	LT  line type
+	DI  direction absolute
+	CI  circle
+	LB  label
+
+
+
+
+	2-Conversion des fichiers de ou vers PYTHA
+
+		Pytha vers Topojis
+		Topojis vers pytha
+		Pytha vers Geotop
+		Geotop vers Pytha
+	 	tn pytha en tn erica
+	 	tn erica en tn pytha
+	 	n x y z en format rec (wild)
+		donnees de p57 en donnees pour p34/d8r8
+	 	carnet terrain topojis -> aga(geodat)/d4r4
+	 	tn pytha en tn piste
+	 	tn piste en tn pytha
+
+
+	3-Suppression des lignes vides d'un fichier
+
+	4-Moyenner les coordonnees XY(Z) d'un fichier
+
+	Le progamme moyenne les coordonnees des points situes dans un
+	carre de eps de cote.
+
+	5-Pagination et mise en forme d'un fichier
+
+
+	6-Divers
+
+	codification symboles --> .D65
+	conversion azerty en qwerty (accents)
+	aligner nxyz a 2 decimales
+	formater un fichier nxyz(c)

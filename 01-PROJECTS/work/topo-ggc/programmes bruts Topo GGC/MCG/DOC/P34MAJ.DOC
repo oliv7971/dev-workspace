@@ -1,0 +1,180 @@
+ p34maj.doc 1
+
+       >>>>fichier P033P034.MCG
+
+        Nouvelles consignes pour P34 ( sous PARA.P33 )
+
+        S'il y a des  observations Cercle a Droite,  AV est > 200g.  P34
+        ramene AV  entre 0  et 200  ( av=400-av,  = Cercle  a gauche  ).
+        Si l'AH  correspondant doit  etre corrige  de 200g  , fournir la
+        consigne CGCDON . La consigne par defaut est CGCDOFF : AH  n'est
+        pas   modifie   (anciens   fichiers   de  donnees  compatibles).
+        La consigne CGCDON permet de  prendre en compte les mesures  CD,
+        ce qui permet de  corriger les erreurs de  Collimation Verticale
+        CV a partir des observations( pour le canevas par ex.).
+
+        !!! Attention !!!  P34 ne corrige pas les observations de CV sur
+        les points de d‚tails. Cette  correction ne peut se faire  qu'en
+        introduisant la valeur COLVER, valide pour toutes les  stations.
+        Colver peut  se calculer  a l'aide  des statistiques  sorties en
+        fin de calcul des Z :
+
+                CV=m/lmv
+                ou m est la moyenne arithmetique des ecarts
+                statistiques
+                et lmv la Longueur Moyenne des Visees, editee a la fin
+                des calculs planimetriques.
+
+        Ex avec  le fichier  ex4.d34, on  a m=-11  mm, lmv=26  m, ce qui
+        donne colver -0.0270  ( 2.7cg a 26m   = 11  mm ) , a  introduire
+        dans  les  donnees  ex4.d34.  Relancer  le calcul, la moyenne se
+        rapproche de 0 (m=-3), l'emq est plus petite (12), et toutes les
+        observations ayant  ete corrigees  de l'erreur  systematique CV,
+        les resultats en Z sont meilleurs pour les points de details.
+
+        Rappel : 10 mgr a 100 m = 16mm
+                          300 m = 47mm
+ p34maj.doc 2
+
+	>>>>P34======================06.07.94 18:43
+
+	- accepte DI ou DH dans la colonne distance
+
+	Avec la consigne $P57, le programme annonce trop d'erreurs,
+	alors que les ecarts sur les points d'appui sont corrects :
+	le calcul brut sur la geodesie, sans compensation, donne des
+	ecarts dans la tolerance.
+	Remede :
+	modifier les tolerances tolsec et tolcm dans le fichier
+		p033p034.mcg
+	........
+	........
+	PARA.P34	  parametres passes a P57 par p34
+	bloc 5000
+	trilateration
+	slan
+	gauss
+	annule   #poids 1 pour les visees a partir des points anciens
+     *	tolsecondes 1000 decimilligrades / 1 visee
+     *	tolcm  500 cm / 1 visee, distance
+	epsbloc 0.003
+	fin
+	..............
+	..............
+	Le probleme peut se produire
+	 si les observations sont imprecises,
+	 ou si la figure a des cotes courts,
+	 ou si les mises en station sont a eps+eps+...
+	 ou reseau d'appui pas tres bon etc...
+	Voir ex4.d34 : lever type chaine + sanguet
+	Voir lac.d34 : idem , ne passe pas avec tolsec=100(1cgr) et
+	tolcm=50cm
+
+	PDIST57
+
+	Pour passer des poids aux distances = 1/distance, mettre la
+	consigne PDIST57 dans le fichier de donnees ( ou dans
+	P033P034.MCG ). Les distances courtes auront des ecarts plus
+	faibles, pour autant que les observations soient homogenes.
+
+
+
+	PREPRISE (p (tol))
+
+	pour donner un poids plus fort aux visees longues dans le
+	calcul du balancement des stations (AH) : poids = distance.
+	p est le poids par defaut si la visee n'a pas de distance.
+	tol est la tolerance metrique du passage de la visee (d x sec)
+	si l'ecart sec est > tolrah . tol = 0.010 = 10 mm par defaut.
+	La visee est bonne si  ecsec < tolrah  ou  ecsec*d < tol
+
+	ex a inserer dans le fichier de donnees ( ou dans P033P034.MCG)
+
+	preprise 1000 0.015 #  1000 metres 15 mm
+ p34maj.doc 3
+
+	Utiliser les consignes PDIST57 et PREPRISE si le canevas n'est
+	pas homogene : visees courtes et longues.
+
+	Reprises
+	Probleme de calcul des Z.
+	Le  programme  verifie  les  ecarts  entre  les angles verticaux
+	sur  les  points  communs,  sans  tenir  compte de la difference
+	entre   la   hauteur   des   tourillons.   La  tolerance  TOLRAV
+	(0.01  gr  par  defaut)  est  insuffisante  si  les  visees sont
+	courtes. Le  calcul est  bloque, ou  des visees  sont eliminees.
+	Dans  ce  cas  monter  la  tolerance  TOLRAV  a  0.20 gr par ex.
+	Le probleme sera corrige ulterieurement.
+
+	Observations multiples
+	les observations multiples sur un point supportent des hauteurs
+	de mire differentes. Si !AV1-AV2! > tolrav , et
+	!dz1-dz2! < tolrdz , les 2 series d'observations sont moyennees
+	et validees.
+
+        Choisir systematiquement l'option Disque au lancement de P34,
+        afin de pouvoir etudier la liste diagnostique (fichier
+        R34--.LST).
+        Inutile d'essayer de comprendre ce qui s'est passe lors d'un
+        calcul si vous choisissez l'option Visu ...
+
+
+        Fichiers   generes
+              nom.CDI     pour n x y z code(s)
+        nom.CDI est l'entree pour GEOCODE.
+
+        Voir rubrique >>>> p033p034.mcg
+
+        nota : les donnees geodesie peuvent etre au format Pytha ou
+        JSinfo, melange possible.
+
+        P34 calcule maintenant egalement les relevements
+
+        - isole  # mot cl‚ indiquant que l'on souhaite faire le calcul
+                 # en mode isol‚ (voir documentation), cas de plusieurs
+                 # canevas ind‚pendants que l'on souhaite calculer en
+                 # mˆme temps.
+
+        - echelle1 # forcer la valeur du coefficient d'‚chelle … 1 pour
+                   # les observations (cas de points d'appui trŠs
+                   # douteux et d' observations bonnes)
+
+        >>>>statistiques, commande GAUSS
+
+        La courbe observ‚e/calcul‚e n'est pas  ‚dit‚e s'il y a moins  de
+        10 ‚carts, ou  si les ecarts  sont tous inferieurs  a 1 (antenne
+        sans controle, les ecarts sont nuls).
+	L'unite de classement des ecarts angulaires dans la table de 
+	distribution peut etre donnee par les commandes suivantes :
+
+	USTATMGR  pour mgr (valeur par defaut)	
+	ou USRATSEC  pour sec      
+
+	a donner dans le fichier de donnees, ou dans le fichier general
+	P033P034.MCG  ( repertoire c:\mcg ).
+ p34maj.doc 4
+
+
+	>>>>cas 'lucien'	08/04/99 16:23
+
+
+	     1013-----------------------------1011
+					      -
+					     -
+					    -
+					   -
+					  2011
+
+	     1011-1013	ah et distance
+	     1011-2011	ah et distance
+	     1013-2011	ah pas de distance
+	     1013-1011	pas d'observations
+
+	p34 boucle , solution calculer la distance 1013-2011, ou ramener
+	ah 1013-2011 sur 1011...
+
+	>>>>bug corrig‚
+
+	la station 1001 vise les points 1, 2, 3, ... ( ah et dist )
+	la station 1002 se releve sur 1, 2, 3, ... ( ah et dist )
+	les 2 stations sont ind‚pendantes.

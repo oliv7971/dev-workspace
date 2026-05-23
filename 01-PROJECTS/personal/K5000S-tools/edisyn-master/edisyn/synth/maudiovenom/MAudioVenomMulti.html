@@ -1,0 +1,72 @@
+<html><head></head><body>
+
+<h1>M-Audio Venom</h1> 
+<h2>Multimode Patch Editor</h2>
+
+<p><b>Communicating with Edisyn</b><br> 
+Set Edisyn's MIDI channel to the same as your Venom.  
+
+<ul>
+<li>To communicate with your Venom over USB, use "Venom Synth In" as the Receive From device, and "Venom Synth Out" as the Send To device.  Set the Venom up to receive MIDI events over USB by holding the Edit button, then pressing the "MIDI Out" key (the A-flat below Middle C) until the screen changes to "MIDI OUT USB".
+
+<p><li>To communicate with your Venom over standard MIDI ports, just use the appropriate MIDI device for your computer.   Set the Venom up to receive MIDI events over 5-pin DIN MIDI cabling by holding the Edit button, then pressing the "MIDI Out" key (the A-flat below Middle C) until the screen changes to "MIDI OUT KEY". 
+</ul>
+
+<p>The Venom's sysex documentation indicates that you can set the Venom's Synth ID.  But to my knowledge this does not actually exist.  If it does, please let me know.  By default Edisyn is hard-coded to use 127.
+
+<p><b>Warning</b><br>
+
+The Venom's USB MIDI device can and does occasionally hang permanently until you power cycle the machine.  You may still see the
+ device in Edisyn but nothing will happen when Edisyn tries to send stuff to it.  
+
+
+<p><b>Hints</b><br>
+
+<ul><li>When you change the Bank or Pattern of a Part, the title of the voice category will change to reflect the <b>default single patch name</b>, in case that's helpful to you.  This isn't necessarily the <b>current name</b>, since you may have overwritten the single patch.  It's just a helpful hint.
+
+<p><li>Similarly, when you change the Bank or the Pattern of the Arpeggiator, the title of the arpeggiator category will change to reflect the <b>default arpeggio pattern name</b>, in case that's helpful to you.  This isn't necessarily the <b>current name</b>, since you may have overwritten the arpeggio pattern.  It's just a helpful hint.
+
+<p><li>If you set the Arpeggiator Source to Single or Pattern, you can't set any parameters except Enable.  Even the "Show Arp" button disappears.  If you want to see which Arp it is, click the "Show" button in the Part, then click on "Show Arp" in the resulting Single patch editor.
+
+</ul>
+
+<p><b>Gotchas</b><br>
+
+<ul>
+<li> FX, Voices, Channels, and Arpeggiators all have sources.  Even if you set the source to something other than "Multi", you can still set a variety of parameters which presumably would be in fact defined by the underlying source (Single, Pattern, Part 1, Part2, etc.).  It's not clear to me whether these parameters change anything in this case.
+
+<p><li>Changing patches takes quite a long time (about a half second).
+
+<p><li>Also uploading a new patch takes a long time (about 3/4 second).  This will make morphing and hill-climbing painful, as well as loading files and undo/redo.
+
+<p><li>The Venom has a very serious bug in its multimode patches.  Sending patches to the Venom and requesting the current patch work fine: but writing patches and requesting a patch by number cause the data to be mixed up in an unknown way.  Vyzex understands this obscure format but it is not documented anywhere, so Edisyn can't use it.  Thankfully there are workarounds.  However if you somehow receive a patch in this format, and save it as a file, Edisyn will not be able to read it.
+
+<p><li>Usually parts, arpeggios, etc. can be enabled regardless of the source.  But this is not the case for FX in the Multi patch, at least according to Vyzex, which Edisyn follows.  FX can only be enabled manually if you have chosen Multi as the source.  Otherwise whether the FX is enabled or not is determined by the underlying Single patch whose part you have selected.
+
+</ul>
+
+<p><b>Note to Vyzex Users</b><br>
+Edisyn is a general-purpose patch editor tool and so its approach is designed to accommodate a wide range of synthesizers.  Vyzex is designed for a single synthesizer, and so it is highly customized for that purpose in ways Edisyn cannot be.  You may have noticed that Edisyn's Venom editor launches immediately, while Vyzex spends a long time loading every single patch from your Venom.  This is because Vyzex stays in sync with your Venom, while Edisyn does not.  As a result, Vyzex can do several things Edisyn cannot.  For example, Vyzex tells you exactly which multi-patches depend on the single patch you're overwriting, and can display all the patches at once.  Also, because it knows about all your patches together, Vyzex can dive down into single patches or arpeggio headers to allow you to change portions them from a multi-patch.  This is a confusing and very bad idea, so it's good Edisyn can't do that.  Edisyn can load the single patches or arpeggios associated with a multi-patch so you can edit them separately.
+
+<p>So why use Edisyn instead of Vyzex?  Partly because Vyzex will very soon be obsoleted and impossible to run.  And besides fixing some bad Vyzex errors, Edisyn <i>can</i> do one major thing Vyzex (and M-Audio's installed software) cannot: directly edit arpeggios.
+
+<br><br><h3>Librarian Support</h3>
+
+The Venom has very, very slow sysex.  This will manifest itself in very slow librarian uploads and downloads.  I would suggest downloading the entire machine, then saving it to a file and mostly uploading from there.
+
+<p>There is a very serious bug (among many) in the Venom regarding Multimode patches: it does not properly handle commands to write a given patch to permanent memory.  Instead Edisyn must send the patch to curent memory, then instruct the Venom to write the patch from current memory to permanent memory.  The upshot of this is that when reading patches from a file, Edisyn cannot determine what bank or number they are, so it will simply start loading at bank 0 number 0.
+
+<br><br><h3>Thanks</h3>
+
+Thanks to Jan Bote (jan.bote@gmx.de) for his assistance and knowledge.
+
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>November 25, 2020
+</table>
+

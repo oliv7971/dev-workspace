@@ -1,0 +1,136 @@
+
+  si vous demarrez en w95, il faut redemarrer en mode msdos !!!
+	( ? ou demarrer puis executer une commande msdos ?  )
+
+  les exemples ci-dessous peuvent varier d'une machine a une autre  !
+
+  autoexec.bat dos/w95  <<<<<<<<<<<
+
+  SET MGA=C:\MGA\SETUP\
+  @ECHO OFF
+  PATH=c:\windows;c:\windows\command;c:\mcg;c:\edit;c:\lf90\bin
+  mode con codepage prepare=((850) c:\windows\COMMAND\ega.cpi)
+  mode con codepage select=850
+  lh c:\windows\COMMAND\doskey
+  lh keyb fr,,c:\windows\COMMAND\keyboard.sys
+  lh c:\windows\COMMAND\mouse
+  set init=c:\lf90\bin
+
+  config.sys  <<<<<<<<<<<<<
+
+  REM Tip:  Put the real-mode driver for your CD-ROM in here.
+  REM ....
+  REM ....
+  rem mettre en rem la ligne qui suit si p65l (V4/90000 points en 32 bits)
+  rem device=C:\WINDOWS\COMMAND\display.sys con=(ega,,1)
+  device=c:\windows\himem.sys
+  device=c:\windows\emm386.exe noems
+  dos=high,umb
+  Country=033,850,c:\windows\COMMAND\country.sys
+  devicehigh=c:\windows\command\ansi.sys
+  devicehigh=c:\windows\command\setver.exe
+
+   si setver.exe n'existe pas, chercher setver.win et faites
+   copy setver.win c:\windows\command\setver.exe
+
+  !!!!!!!!!!
+  Le programme print.exe a disparu du mode msdos avec windows 95 ?
+  Print est un utilitaire qui permet d'envoyer des fichiers sur des
+  peripheriques en tache de fond : il vous rend la main et vous pouvez
+  continuer a travailler.
+  Pytha utilise print pour les impressions papier, ou pour piloter le
+  traceur.
+  Solution : utiliser la commande COPY du systeme
+  -ou procurez-vous une version de print.exe fonctionnant sous msdos 6.22
+   ( il y a un print622.exe dans c:\mcg, a copier dans print.exe )
+   par exemple, et taper la commande
+   SETVER print.exe 6.22
+   si print.exe est dans c:\mcg. Arreter w95 et red‚marrer !!!!
+   dans c:\mcg vous trouverez print622.exe (6.22) et print500.exe
+  (5.00)
+  -ou basculer sous w95 et lancez les impressions, et pilotage
+   traceur,
+  -ou demandez au vendeur quelle est la solution  .., les
+   applications tournant sous dos doivent tourner sous w95, votre
+   vendeur vous le certifiera : ne le laissez pas partir tant que le
+   systeme ne marche pas !!! ( nous informer de la suite ....)
+   exemples de fichiers systeme sous w95 (client ??)
+
+   autoexec.sav-------------------
+   SET SOUND=C:\PROGRA~1\CREATIVE\CTSND
+   SET MIDI=SYNTH:1 MAP:E
+   SET BLASTER=A220 I5 D1 H1 P330 T6
+   lh keyb fr
+
+   autoexec.bat-------------------<<<<<<<<<<<<<<<
+   path c:\mcg;c:\me;c:\lf90\bin;c:\windows\command;c:\topcon;c:\edit;
+   SET SOUND=C:\PROGRA~1\CREATIVE\CTSND
+   SET MIDI=SYNTH:1 MAP:E
+   SET BLASTER=A220 I5 D1 H5 P330 T6
+   lh keyb fr
+   lh mouse
+   doskey
+   c:\windows\smartdrv /x 16184
+
+   autoexec.dos------------------
+   mode con codepage prepare=((850) C:\WINDOWS\COMMAND\ega.cpi)
+   mode con codepage select=850
+   keyb fr,,C:\WINDOWS\COMMAND\keyboard.sys
+   rem - By Windows Setup - MSCDEX.EXE /D:OEMCD001 /L:D
+   rem - By Windows Setup - C:\mouse.com /r1
+   set blaster=a220 i5 d1
+
+   config.sav---------------------
+   device=c:\windows\himem.sys
+   device=c:\windows\emm386.exe noems
+   dos=high,umb
+   FILES=50
+   Country=033,,C:\WINDOWS\COMMAND\country.sys
+   devicehigh=c:\oakcdrom.sys /d:oemcd001
+
+   config.dos----------------------
+   device=C:\WINDOWS\COMMAND\display.sys con=(ega,,1)
+   Country=033,850,C:\WINDOWS\COMMAND\country.sys
+   device=C:\cddrv.sys /D:OEMCD001
+
+   config.sys-----------------------<<<<<<<<<<
+   device=c:\windows\himem.sys
+   device=c:\windows\emm386.exe noems
+   dos=high,umb
+   FILES=50
+   Country=033,,C:\WINDOWS\COMMAND\country.sys
+   devicehigh=c:\oakcdrom.sys /d:oemcd001
+   devicehigh=c:\windows\command\ansi.sys
+
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	au lieu de redemarrer en dos et de taper mg
+	essai fait sur la machine AM
+
+	apres w95 : demarrer
+		    executer  C:\MCG\MG.BAT
+	pytha s'execute dans une fenetre w95
+	ou  ...
+  windows 98 !!!!!!!!!!! autoexec.bat
+
+
+    PATH=c:\windows;c:\windows\command;c:\mcg;c:\edit;c:\lf90\bin;c:\me
+    SET PATH=%PATH%;C:\PROGRA~1\BORLAND\DELPHI4\BIN
+     mode con codepage prepare=((850) C:\WINDOWS\COMMAND\ega.cpi)
+     mode con codepage select=850
+    lh keyb fr,,C:\WINDOWS\COMMAND\keyboard.sys
+    lh doskey
+    rem c:\windows\smartdrv /x 16184
+    rem TShoot: c:\maestro.com
+
+
+    	windows 98 !!!!!!!!!!! config.sys
+
+
+    device=c:\windows\himem.sys
+    device=c:\windows\emm386.exe noems
+    dos=high,umb
+    rem TShoot: DEVICE=c:\aecu.sys /s:00010000
+    rem device=C:\WINDOWS\COMMAND\display.sys con=(ega,,1)
+    Country=033,850,C:\WINDOWS\COMMAND\country.sys
+    devicehigh=c:\windows\command\ansi.sys
+    devicehigh=c:\windows\setver.exe

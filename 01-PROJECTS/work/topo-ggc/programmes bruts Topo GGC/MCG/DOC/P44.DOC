@@ -1,0 +1,173 @@
+                         Pytha-Topo R920101 Page 44.1
+
+
+
+
+	             CALCULS PLANIMETRIQUES DE POLYGONATION
+		ET TRIANGULATION/TRILATERATION PAR POINTS ISOLES
+		------------------------------------------------
+
+
+
+	1-CALCUL DE POLYGONATION
+	------------------------
+
+	Le programme traite les r‚seaux  de polygonation  s'appuyant sur
+	des points connus, … l'exclusion des antennes.
+	L'utilisateur donne  l'ordre de calcul	des  cheminements et des
+	points nodaux.
+	Une option  VERIFication  permet  de verifier  les  donn‚es : un
+	algorithme de recherche  des chemins  les plus courts  entre les
+	points connus est alors activ‚ . Cette  option est  int‚ressante
+	pour la recherche des fautes. Si le nombre de fautes est raison-
+	nable, le cheminement en d‚faut est d‚tect‚ dans la majorit‚ des
+	cas .  L'utilisation  du programme  en mode  VERIF peut  ˆtre le
+	compl‚ment du module g‚n‚ral P34, dans le cas de lev‚s  en  zone
+	urbaine o— les fautes peuvent ˆtre assez fr‚quentes, particuli‚-
+	rement au niveau de l'identification des vis‚es de canevas.
+
+	Les  donn‚es utilis‚es  doivent  avoir un  format  identique  au
+	format P34 : fichier sorti  par le module P33 , ou saisi avec un
+	‚diteur du systŠme, ou sp‚cialis‚.Les ordres de calcul classique
+	sont introduits … la fin du fichier P33 :
+
+	    cheminements, points nodaux.
+
+	La methode de calcul est celle des errements habituels : compen-
+	sation  angulaire  inversement proportionnelle … la longueur des
+	c“t‚s , compensation  en XY  proportionnelle …  la  longueur des
+	c“t‚s .  Point nodal :
+
+	        poids de chaque cheminement =
+
+	     1/T2 ,T est calcul‚ comme indiqu‚ au JO du 19/3/80, II, 5A.
+
+	        Tolerances pour le calcul du V0 :
+	     1/D * ECV0 <= toldistance
+	     2/ECV0 <= tolangle
+                         Pytha-Topo R970201 Page 44.2
+
+
+
+	1-1 ORDRE DES DONNEES
+
+		a	titre
+
+		b	param‚tres
+
+		c	geodesie
+			N X Y
+			- - -
+			- - -
+
+			999999
+
+		d	P33   (observations)
+			ns np ah dh av   lm  (ou autre pr‚sentation)
+			NS1 NV AH DH (AV)!      !  NS1 NV AH DH (nota)
+			NS1 -  -  -  -   !      !   0  NV AH DH
+			NS1 -  -  -      !  ou  !
+			-   -  -  -      !      !  NS2 NV AH DH
+					 !      !   0  NV AH DH
+					  999999
+
+		e	n1 --- -1  n1 ------ -1    (nodal)
+			n1 --- 999999              (fin du nodal)
+			n1 ----- 999999 n1 -------- 999999
+			999999                     (fin des calculs)
+
+		f	****
+
+			a … f   nota : r‚p‚tition de la station par son
+			a … f          num‚ro ou par 0 . Les 2 formes
+			etc...         sont accept‚es par P44 .
+			 	       !!! voir nota 2
+
+			STOP   ( fin des calculs )
+
+
+
+	nota 1 les num‚ros possibles sont compris  entre  1 et 999999998
+	       sauf 999999
+	nota 2 les fichiers de donn‚es pour P34 sont accept‚s par P44
+	       param‚tres compris. Le module P34 n'accepte pas les r‚p‚-
+	       titions  de la station par le num‚ro , mais par 0 , sinon
+	       les reprises qui se suivent ne sont pas d‚tect‚es.
+	       L'inverse est possible, un fichier issu de P33,  complete
+	       par  des  ordres  de calcul  de  polygonation  peut  etre
+	       utilise par P34 : la fin des donnees est indiquee par  le
+	       delimiteur 999999 apres les donnees sous la commande P33.
+	nota 3 les reprises ( stations multiples sur un seul point) 
+	       sont interdites : p44 plante !!!
+                         Pytha-Topo R970201 Page 44.3
+
+
+	1-2 PARAMETRES , valeurs par d‚faut (vd)
+
+	CORDISTANCE      metres par port‚e  (0)
+	PARALLAXE  mm  excentrement axe optique et distancemetre (0)
+	TOLA ou TOLANGLE     grades  (1.)
+	TOLD ou TOLDISTANCE  m‚tres  (1.)
+	ZMOYEN   metres              (0)
+	PROJECTION +- mm par km      (0)
+	SORNXY     fichier de sortie N X Y  (vd)
+	SORNXYV0 ou SORNXYV   fichier de sortie N X Y V0
+	VERIF    valeur par d‚faut
+	NVERIF
+
+	DISTPENTE les distances sous la colonne dh sont suivant la pente
+
+	GAUSS	‚diter la table des fr‚quences des ‚carts, et les ecarts
+		pour chaque observation, sur la liste courante.
+		cette option est toujors validee.
+
+	SCHEMA echelle hy   (5000  1.8)
+	       pour avoir le fichier R44??.D65 a monter dans Pytha-Graph
+	       hy =taille des ecritures en mm papier .
+	       Le schema comporte les ecarts en distance sur chaque cote.
+	       La zone de travail doit comporter le fichier DEPART.P65
+	       qui  sera  positionne  en tete de  R44??.D65 : initialisa
+	       -tion des constantes pour P65 .
+
+	TOLPOLYGO nf A B C D E F etc...
+	      nf numero de la formule de calcul des tolerances suivi des
+	      coefficients
+
+	      > nf = 1
+	      orientation dmgr = rac( A + B x (N+1) )
+	      planimetrie cm   = rac( C + D x N + E x Som(LixLi) +
+				      F x L ) + G x L
+	      Avec N  = nombre de cotes
+     	           Li = distance rectiligne en kms de chaque sommet a la
+		        fin du cheminement
+		   L  = longueur de la polygonale
+
+                         Pytha-Topo R970201 Page 44.4
+
+
+	1-3 EXEMPLE : fichier ex3.d44  (dossier c:\topo\pytex)
+
+
+	lancer p44
+	option a du menu
+	donnees ex3
+
+	la commande verif a ete validee
+
+	Schema correspondant dans r44??.d65
+	p65l
+	char r44??.d65
+
+	ou $lde ex3d44 ( ou cliquer FILE, puis LIRE UN DESSIN
+
+	nota : ex3.d44 peut etre calcule par p34
+
+
+	2-CALCUL DE TRIANGULATION TRILATERATION PAR POINTS ISOLES
+
+	Les calculs effectu‚s sont strictement identiques  au module P57
+	… l'exception du calcul en bloc , dont la consigne  est  ignor‚e
+	par le module P44
+
+	Vous pouvez donc passer les exemples exi.D57 dans P44 , option b
+	du menu .

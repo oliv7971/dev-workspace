@@ -1,0 +1,274 @@
+                         Pytha-Topo R911001 Page 57.1
+
+
+
+                          TRIANGULATION - TRILATERATION
+                          -----------------------------
+
+
+        Le  programme permet de calculer un reseau comportant des mesu-
+	res angulaires et/ou des distances :
+	- triangulation et/ou trilateration
+	- polygonation.
+
+	Le calcul peut ˆtre trait‚ par points isol‚s ou en bloc
+
+        Les points nouveaux doivent etre centres.
+
+        Deux principes de calcul peuvent etre appliques :
+
+          1 - triangulation (option par defaut)
+
+                  on rend minima   S(vi)**2 + S(vd/D)**2
+
+                       vi = Gc-Go
+                       vd = Dc-Do
+
+                     Gc = gisement calcule
+                     Go = gisement observe
+                     Dc = distance calculee
+                     Do = distance observee
+
+           A une station , on a  S(vi) = 0
+
+          2 - trilateration
+
+                  on rend minima   S(vi*di)**2 + S(vd)**2
+
+           A une station , on a  S(vi*Di) = 0
+           Si les visees ont la meme longueur (reseau bien conforme), on
+           doit avoir S(vi)=0 .
+
+        S'il n'y a pas de distances, le terme comportant vd est nul .
+
+
+        Pour les points anciens et nouveaux, on peut introduire des poids
+        a chaque visee ou distance.
+
+        A  une station ancienne chaque visee sur  un  point   connu  est
+        affectee du poids : P = Distance Km  x Poids de la visee
+        sauf , si option ANNULE , dans ce cas : P = poids fourni ( 1
+	par defaut )
+
+        et l'on a : S(pi*vi) = 0
+
+
+        Pour  l'option Bloc,  les V0S des points anciens sont recalcules
+        (les  inconnues  sont les points nouveaux,et les V0S  des points
+        anciens).
+                         Pytha-Topo R911001 Page 57.2
+
+
+
+        Deroulement du calcul
+        ---------------------
+
+        1. Points anciens
+           --------------
+           Calcul du V0 des stations.
+
+	   Si le V0 est incalculable, le programme essaye de poursuivre
+	   les calculs des points nouveaux. Si des erreurs persistent le
+	   calcul peut etre abandonne.
+	   Pour detecter les anomalies, repasser les calculs en montant
+	   les tolerances, puis en supprimant la consigne bloc : faire
+	   un calcul par points isoles.
+
+
+
+        2. Points nouveaux
+           ---------------
+        2.1 Points isoles
+
+           L'ordre d'entree des points est l'ordre de calcul
+           Les XY approches peuvent etre nuls (sauf NOUVEAUX 1)
+           S'il y a un point incalcule , le calcul est effectue en bloc.
+
+        2.2 Bloc
+
+           La  resolution  du systeme est effectuee par  la  methode  de
+           Gauss   Seidel  :  chaque   descente  de la liste   est   une
+           iteration . La 1ere descente est un calcul par points isoles.
+
+           Les  iterations  sont arretees, (et le bloc  considere  comme
+           stable) , si la Norme de l'iteration en cours est inf Epsb ou
+           si iter sup  maxi.
+           Pour l'iteration i on a Norme = S ((Xi-1-Xi)2 + (Yi-1-Yi)2)
+
+           Nota : s'il y a trop d'erreurs, le calcul est abandonne .
+
+        Pour le calcul en bloc le programme donne
+
+             1.  Le calcul des points anciens
+             2.  La recapitulation des points anciens
+             3.  Le calcul des points anciens
+             3a. La recapitulation des points anciens
+             4.  Le calcul des points nouveaux
+             5.  Le calcul des points anciens
+             6.  La recapitulation des points anciens
+             7.  La recapitulation des points nouveaux
+             8.  Le nombre total d'iteration pour le bloc
+		 Les r‚sultats statistiques
+
+        Par points isoles,on a 1.2.4.7
+                         Pytha-Topo R920101 Page 57.3
+
+
+
+        LES DONNEES
+        -----------
+
+                  titre
+                  parametres du calcul
+                  ANCIENS
+                  N X Y
+                  .....
+                  .....
+                  999999
+                  NOUVEAUX       ou     NOUVEAUX 1 (voir nota 1)
+                  N (XA YA)             N X Y
+                  .....                 ......
+                  .....
+                  999999
+                  STATIONS
+                  NS NV AH POIDS
+                  ..............
+                  ..............
+                  999999
+                  DISTANCES
+                  NS NV DH POIDS
+                  .......
+                  .......
+                  999999
+                  ****                     fin d'un calcul
+                  titre
+                  ....
+                  ....
+                  ****
+                  STOP                     fin des calculs
+
+	N, NS, NV de 1 … 999999998, sauf 999999
+
+	Valeur par d‚faut des poids : 1.0
+
+	Les  donnees  sont  en  format  libre  .   Les   distances  sont
+        facultatives.  Les  observations  peuvent etre  angulaires et/ou
+        lineaires  .  Le regroupement des observations par station n'est
+        pas  necessaire .  Les points nouveaux doivent etre fournis dans
+        l'ordre   d'un  calcul  par  points  isoles  .  Les  coordonnees
+        approchees  (XA  YA) sont  facultatives  ,  l'algorithme utilise
+        accepte  des valeurs quelconques ,  en particulier 0 (valeur par
+        defaut).
+
+	nota  1
+	Si NOUVEAUX 1, les (XA,YA) sont utilis‚s d‚s la premiŠre  it‚ra-
+	tion : ils r‚sultent d'un calcul pr‚alable.
+
+	nota  2
+        La manipulation des poids doit etre effectuee avec  precaution .
+	Il convient d'analyser soigneusement les ecarts, en  particulier
+	si le reseau comporte des distances : les precisions en angle et
+	distances sont-elles homogenes ?
+	Quelques ecarts importants peuvent etre normaux : loi de GAUSS.
+	(rappel : tolerance = 2,5 emq, ou 5 emq ou plus).
+
+	nota 3
+	P34 g‚nŠre un fichier D41.P57 qui peut servir d'entr‚e … P57.
+                         Pytha-Topo R920401 Page 57.4
+
+
+
+        PARAMETRES facultatifs   ( valeur par d‚faut VD )
+        ----------------------
+
+        NEDITE          editions hors fonction
+        EDITE           edition en fonction (VD)
+
+        SLAN            pour supprimer le listing des points anciens
+			   (sauf les r‚capitulations)
+        SLNO            pour supprimer le listing des points nouveaux
+                           (sauf les recapitulations)
+
+	E509   nerr     nombre d'erreurs … ne pas  d‚passer (50) . Si le
+			calcul  en bloc  est demand‚  et s'il y  a  trop
+			d'erreurs  essayer un  calcul par  points isol‚s
+			et/ou augmenter TOLSEC et TOLCM .
+
+        BLOC   maxi     nombre maxi d'iterations … ne pas  depasser pour
+			le calcul en bloc . La consigne  BLOC  doit ˆtre
+			donn‚e : par d‚faut , le calcul  est par  points
+			isol‚s.
+
+        PDIST  poids    pour les distances , par defaut 1000 (=1)
+        PLECT  poids    pour les lectures  ,        idem
+                        (u = 10-3 de la zone Poids sur les donn‚es  sta-
+		        tions ou distances)
+
+        TOLSEC tolang   calcul du V0 (40 d‚cimilligrades)
+        TOLCM  tolcm    ecart  /1  visee pour nouveaux (25  centim‚tres)
+	                points anciens ,la visee est bonne si
+			   ecart cm ou ecart sec < T0Lerance.
+			points nouveaux, la vis‚e est bonne si
+			   ecart < tolcm
+
+        TRILATE         minimiser S (vi*Di)**2 + S (vd)**2
+                        si  trilate n'est pas donne  on  minimise
+                                S(Vi)**2 + S(vd/D)**2
+
+        ANNULE          pour avoir (anciens  seulement)
+                        Poids = Poids donne au lieu de P = P*D
+
+        EPSP epspoint   pour arrˆter les it‚rations d'un point (0.5)
+	EPSB epsbloc    pour arrˆter les it‚rations du bloc (0.001)
+                           le calcul est arrˆt‚
+                        si  Norme inf EPSB ou ITER inf MAX (BLOC,MAX)
+
+        ZMOY Z metres   Altitude moyenne pour correction de niveau 0 (0)
+        PROJ  mm/Km     correction de projection (0 mm) des distances
+
+                        Exemple     ZMOYEN 1250          (1250 m)
+                                    PROJECTION -125      (-125 mm/Km)
+
+	GAUSS umm usec	‚diter la table des fr‚quences des ‚carts .
+			Les unites des ecarts sont umm (1) et usec (1).
+			Valeurs mini = 0.001, soit 0.001 mm et dmgr.
+			pour avoir un classement en 0.1 mm, et en dmgr
+			Gauss 0.1	 u=0.1  mm et 1 dmgr
+			gauss 0.01 0.1   u=0.01 mm et 0.1 dmgr
+                         Pytha-Topo R911001 Page 57.5
+
+
+
+
+        FICHIERS EXEMPLES
+        -----------------
+
+        EX1.D57    Reseau sur 2 points
+
+        EX2.D57    Reseau Triangulation Trilateration (option Trilate)
+
+        EX3.D57      "        "              "        (option Triang)
+
+        EX4.D57    Exemple simple
+
+        EX5.D57    Polygonale
+
+        EX6.D57    Exemple tire du tome 2  de geodesie generale
+                   (JJ LEVALLOIS) pages 348 et suivantes.
+
+        EX7.D57    Surveillance d'ouvrage : canevas
+
+        EX7A.D57        idem              : details
+
+	etc.....
+
+
+	                SCHEMA DU RESEAU DE L'EXEMPLE 6
+                        -------------------------------
+                         Pytha-Topo R911001 Page 57.6
+
+
+
+
+                        SCHEMA DU RESEAU DE L'EXEMPLE 7
+                        -------------------------------

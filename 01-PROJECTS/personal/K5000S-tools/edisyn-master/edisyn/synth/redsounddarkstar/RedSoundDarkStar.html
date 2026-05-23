@@ -1,0 +1,47 @@
+<html><head></head>
+<body>
+
+<h1>Red Sound DarkStar and DarkStar XP2</h1> 
+<h2>Single Patch Editor</h2>
+
+<p>This patch editor works on the DarkStar XP2 and (probably) the original DarkStar.  It is not meant to work with the Vocoda.
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Set Protect to OFF (Utility 3).  Set the Master MIDI Channel (Utility 8) to the same channel as Edisyn is using. 
+
+<br><br><h3>About the Menu</h3>
+
+<ul>
+<li>The <b>Swap Parts...</b> menu lets you, well, swap two parts with one another.  
+<p><li>The <b>Copy Part To...</b> menu lets you copy a part to another part.
+</ul>
+
+<br><h3>Hints</h3>
+
+<ul>
+<li> The DarkStar has the ability to emit a single part as sysex.  Edisyn can receive this data and place it in any part of your choosing.
+</ul>
+
+<br><h3>Gotchas</h3>
+
+<p>The DarkStar's sysex is extremely limited.  
+<ul>
+<li> There is no way for Edisyn to request a patch.  You will need to send a patch manually from the DarkStar via Save Program (Utility 5).  Edisyn also responds to Save Part Voice (Utility 4) and Save All Programs (Utility 6 or 7).
+
+<p><li> Similarly there is no way to request a merge.  To do a merge, request one as usual, then manually send a single patch from the machine.
+
+<p><li>The DarkStar cannot respond to individual patch parameter changes.
+
+<p><li>Weirdly, if you send all patches to Edisyn (Save All Programs, Utility 6 or 7), they're not in order.  Instead, you'll get patches 01, 17, 33, ... etc., then 02, 18, 34, ..., then 03, 19, 35, ..., then 04, 20, 36, ...
+</ul>
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke and V. Hoyle</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>October 2019
+</table>
+

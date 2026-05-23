@@ -1,0 +1,58 @@
+
+                  GEOMETRIE  2D/3D    010986    V3    page 31.3
+ 
+                             2 - EXEMPLE : fichier D31EX1
+                             ----------------------------
+        Pour lancer ces commandes ,  tapez     CHARGE D31EX1
+        (vous pouvez egalement taper toutes les commandes au clavier).
+        donnees du fichier           commentaires
+ 
+        RAZ                 remise a zero de la zone de travail
+        ZOOM                echelle ecran a 10 (1/10000)
+        10
+        ORIG                origine du numerotage a 0
+        0
+        XY                  saisie des points 1 a 6
+        101000  301000
+        102000 301000
+        102000 301500
+        101000 301500
+        101200 301300
+        101400 301300
+                                      RETURN = fin de la saisie
+        CI 5 6 141.42136 141.42136    intersections de cercles
+        CI 6 5 141.42136 141.42136    points 7 et 8
+        ORIG                          origine du numerotage a 1000
+        1000
+        INTE 1 3 2 4             intersection de droites , point 1001
+        IC 4 3 7 141.421    intersection cercle/droite , point 1002
+        TI                       commande TItre
+        DASDSADADSDGGHYUHGHGH    texte du titre
+        IG 1001 100 2 0          intersection de droites avec gisements
+        DI 1001 1003 2 1003      distances entre points
+        DXY 1001                 saisie en dx,dy par rapport a 1001
+        5 5                           point 1004
+        10 10                         point 1005
+                                      RETURN = fin de la saisie
+        PA 1 2 -50 8 7 25   intersection de paralleles , point 1006
+        PE 1006 1 2         abaisser une perpendiculaire , point 1007
+        ST 2 3 100 -50      coordonnees polaires , point 1008
+        SD 4 1 2 100 50     variante de ST , point 1009
+        $SXY    XY1         sauver les resultats
+        ST 1 3              coordonnees polaires : station 1 , Vo sur 3
+        10                  point 1010
+        20                  point 1011
+        30                  point 1012
+                            RETURN = fin de la saisie
+        TF 1 3              nouveau systeme xy , axe 0x = 1-3
+ 
+        LC                  Lister les Coordonnees
+        TF 1 3 101000 301000 102000 301500      retour aux anciens XY
+ 
+        PI 4 1 3 3 2 4      intersection de paralleles , point 1013
+        $SXY XY2            sauver les resultats
+        ZOOM                image a l'echelle 5 (1/5000)
+        5
+        CENT                centrer l'image
+ 
+        VISU   les ''listes'' ulterieures seront envoyees sur la visu

@@ -1,0 +1,430 @@
+ p33maj.doc 1
+
+       >>>>fichier P033.MCG
+
+        nouvelles consignes pour P33 ( sous P33, A 7 du manuel )
+
+        CODPRECEDENT  le geocode sera associe au point qui precede.
+
+        Consignes specifiques carnets Wild (Leica)>>>>>>debut
+        F28AZERO le  code de  changement de  station peut  etre nul.  Si
+        cette consigne  est utilisee,  les parametres  non utilises pour
+        WGRE3 doivent etre  positionnes a -1 .
+
+
+        NUMEROWILD  c1  cn  pour  prelever  le  numero du point dans les
+        blocs mesure  (11) des  colonnes c1  a cn  (8 a  15 par  defaut)
+        Utiliser  cette  consigne  pour  eliminer  les  codes  parasites
+        conduisant   a   avoir   des   numeros   erronnes.  Par  exemple
+        codification des visees de  canevas sur le terrain  utilisee par
+        d'autres logiciels que PYTHA, pour detecter le canevas dans  les
+        observations  (pytha  reconstitue  le  canevas  sans   consignes
+        particulieres dans les observations).
+
+        ZONE44 pour utiliser la zone 44
+        Consignes specifiques carnets Wild (Leica)<<<<<<fin
+
+
+        !!!! nouveau fichier P033.MCG (p33 version 3.73/1/5/93)
+
+        Ce fichier  est la  copie de  P033P034.MCG (tout  ou partie). Le
+        programme P33  cherche ses  parametres dans  P033P034.MCG,  puis
+	dans P033.MCG,  si  P033.MCG  n'existe  pas,  le  programme  P33
+	fonctionne donc comme auparavant.  Il peut cependant etre  utile
+	de regrouper  dans p033.mcg  les donnees  qui ne  sont quasiment
+	jamais  modifiees  :   parametrage  des  carnets  electroniques,
+	ou unites utilisees par exemple.
+
+        Rubriques utilisees par p33 :
+                P33
+                UNITES33
+                FONC33
+                WGRE3
+                GEODAT
+                XYZBASE
+                PARA.P33
+                PA40.P33        ( facultatif )
+ p33maj.doc 2
+
+	>>>>p33
+
+        Nom de fichier des points connus :
+        Points a inserer dans la geodesie
+        Ce fichier peut contenir d'autres points que les points
+        utiles au calcul.
+
+        Le mot cl‚ … utiliser est XYZBASE, suivi du nom de fichier par
+        d‚faut (dans fichier p033p034.mcg).
+
+        Exemple (syntaxe) :
+
+                        XYZBASE
+                        c:\mcg\berlin.xyz     #nom du fichier
+
+
+        Le fichier dans lequel se trouvent les points connus (stations,
+        balises) est recherche de la facon suivante:
+        (les noms sont proposes si les fichiers existent)
+        -1ere proposition  ....<nom.APP>/N
+         si la reponse est N
+        -2eme proposition nom situe derriere la consigne XYZBASE du
+         fichier P033P034.MCG ....<c:\mcg\basegene.xyz>/N
+         si la reponse est N
+        -3eme proposition   points connus O/<N>
+         l'utilisateur peut donner un nom specifique
+        Il est ainsi possible d'utiliser un fichier general valide pour
+        un ensemble de leves situes sur un meme territoire.
+
+        Le carnet pour p34 comporte le code de leve (geocodif) sur 8
+        caracteres.
+        Les autres fichiers generes sont
+        nom.CPT : np suivi de 5 codes de 8 caracteres ( en vue de ...)
+        nom.CAN : donnees pour P34 ne comportant que les donnees du
+                  canevas.  Ce fichier est genere si des points connus
+                  ont ete donnes.
+        nom.NET  :  image  du  carnet  en  clair  comportant  toutes les
+                  donnees. Peut  etre corrige  avec un  editeur et  etre
+                  donne en entree de P33 (reconnaissance auto). Dans  ce
+                  cas,   ne    jamais    modifier   la    1ere    ligne.
+                  Ce fichier est sorti pour les carnets WILD (GRE,  GIF,
+                  etc..).
+
+        Les carnets pour P34 comportent les points d'appui (geodesie).
+        Auparavant, seul nom.CAN integrait les points connus.
+
+        nota : le fichier des points connus peut etre au format Pytha
+        ou JSinfo, melange possible. Exemple
+
+	3001:X=10000.0000,Y=5000.0000,Z=100.0000
+	3009 12000.232 4998.789 102.456
+	3002:X=10061.4672,Y=5048.3137
+	3008:X=10131.9102,Y=5106.5100
+ p33maj.doc 3
+
+        ---Carnets d'observation Wild NA2000/NA3000---
+
+        P33  accepte  les   enregistrements  Wild/Leica   NA2000/NA3000.
+        Demande  y  du  menu  (carnets  wild).  La  reconnaissance   des
+        carnets  de  nivellement  est  automatique. Le fichier resultats
+        sert d'entree  au module  P40 :  calcul en  bloc de  nivellement
+        direct.  Le fichier  des points d'appui est  un fichier N X  Y Z
+        classique.   S'il  existe  on  a  un  fichier  ????????.CAN   et
+        ????????.CAR (ou autre extension, voir plus haut).
+        le fichier P033P034.MCG peut etre complete par les consignes
+        suivantes :
+
+        ......
+        pa40.p33        # parametres passes a p40 par p33
+        bloc 2000
+        gauss           # editer la courbe de gauss
+        tol 0.01 metre
+        nedite          # ne pas editer les observations
+        fin             # fin des parametres
+        ......
+
+        Les   blocs   de   donnees   41   comportant   les  informations
+	date,chantier  sont  pris  en  compte  (en tete des listes). Les
+	autres  informations  generales  sont  ignorees,  et donnent des
+	messages d'erreur.
+
+	Le bloc mesure  11 est traite comme suit :
+
+        word = 331 = coup arriere = changement de station
+        ce code ne doit etre utilise qu'une fois par station
+
+        word = 332 = coup avant
+
+        word = 330,333,334 ....
+        Les numeros des points sont transformes en 9000000+n, 3000000+n,
+        4000000+n ...
+        Le module P40 reconstitue le canevas a partir des numeros de
+        points ( word 331 et 332 : n sans modification).
+
+        word = 83 ignore (altitude)
+
+        word = 32 distance horizontale , doit etre present.
+
+        Les stations (plan de visees) sont numerotees a partir de
+        1000001 (7 chiffres) par P33 .
+
+        Consulter la documentation constructeur pour la signification
+        des blocs de donnees.
+
+        le repertoire \pytex\ contient 2 exemples de carnet : g.ter et
+        na3000.obs . Le fichier des points connus est G.APP .
+
+        S'il y an fichier de points connus, le fichier ?.CAN est
+        genere sans les points des 'word' 330 333 334 ...
+        Le fichier ?.CAR comporte tous les points (canevas et details).
+
+        ---- voir sous P40 ----
+ p33maj.doc 4
+
+	fichier p033.mcg, parametres
+
+	-jsinfo		sortir un carnet au format topojis
+	-dispente	sortir les distances suivant la pente, colonne DI
+			dans le carnet / p34 ou topojis
+	-nocpt		pas de sortie du fichier *.cpt
+	-nocan		pas de sortie du fichier *.can
+	-numorigi n	origine de la numerotation pour les points
+			ayant un numero nul (duplication des
+			mesures/ex)
+	-sous UNITES33	les unites pour les valeurs entieres de
+		f14	# distance horizontale chainee (f14)
+		f15	# distance horizontale chainee, pas de Z (f15)
+
+	nouveaux carnets acceptes
+
+	format topojis : u du menu
+
+	#:S,M=2262,HT=1.570
+	#:v,M=2362,AH=84.9180,AV=104.1030,DI=44.4994,HV=1.300
+	#:v,M=5262,AH=41.6790,AV=52.7120,HV=0
+	#:v,M=5254,AH=399.9990,AV=98.9340
+	#:S,MA=S.30,HT=1.46
+	#:V,MA=S.29,DH=48.458,DZ=-4.313,AH=395.060,HV=1.30
+	#:z,MA=S.33,DH=80.351,DZ=6.312,AH=225.700,HV=1.30
+	#:V,M=S.5371,AH=0.0
+	#:S,MA=S.2350
+	#:V,MA=S.2130,AH=305.450,DH=209.592
+	#:V,MA=S.1001,AH=78.632,DH=50.331
+	#:S,MA=S.1001
+	#:V,MA=S.2361,AH=389.569,DH=63.532
+	#:y,MA=1,AH=368.57,DH=21.70
+	#:y,MA=2,AH=354.71,DH=19.82
+	#:U,M=2362,AH=84.9180,AV=104.1030,DI=44.4994,HV=1.300
+
+	voir fichiers topojis.jsi et topojis.app
+	 (monter tolrdz a 150 mm)
+
+	format odb : i du menu ( carnet psion avec station NIKON )
+
+	0	B:M93056	MAR 05 JAN 1988 15:05:24	3.1
+	1	2262	1.570	-030	0
+	4	2362	84.9180	104.1030	44.4994	1.300
+	4	5262	41.6790	52.7120	44.4994	1.300
+	4	5254	399.9990	98.9340	44.4994	1.300
+	4	1001	281.4380	97.1980	79.0229	1.300
+	1	1001	1.580	-030	0
+	4	5262	.0010	88.0520	.0000	1.300
+	4	2262	9.2940	103.2320	79.0505	1.300
+	4	1002	184.8070	98.7720	80.6724	1.300
+	1	1002	1.550	-030	0
+	4	5262	.0010	93.9240	.0000	1.300
+	4	1003	213.5980	98.4780	152.4676	1.300
+	4	1001	391.5760	101.6330	80.7146	1.300
+	4	1	208.5200	100.2940	18.7835	1.300
+	4	2	229.2880	100.3200	18.2231	1.300
+	4	3	213.2910	99.3480	43.3541	1.300
+	4	4	210.3010	99.0470	67.5601	1.300
+ p33maj.doc 5
+
+	voir fichiers nikon.odb et nikon.app
+
+	nota : il semble que le format ODB varie d'un canton a un autre
+
+	bug : changement de station , ns limite a 6 chiffres au lieu de
+	8, corrige.
+
+	carnets au format g‚odat/aga :
+	informations g‚n‚rales date, numero de chantier : pas de points
+	d‚cimaux dans les donnees
+
+	Carnets Geodat500
+
+	passer avec G122 du menu. Les codes 51,52,53,54 sont traites.
+	Les codes 14,21 et 62 sont ignores.
+
+	-nota 1
+	ces codes sont nouveaux, en particulier 14 (ne sert
+	a rien), est sorti a chaque point (fait a la demande des US,
+	selon nos sources).  Il semble qu'il ne soit pas possible de
+	parametrer les carnets de terrain. Ne connaissant pas
+	l'avenir, ni les enfants a naitre, nous ne pouvons prevoir ce
+	que les constructeurs vont sortir...
+	-nota 2
+	il semble que le format ODB, soit different selon les regions.
+ p33maj.doc 6
+
+	Nouvelles fonctions de base   1998
+
+	98
+	prolonger les 2 points precedents de distance (+ ou -)
+	point origine : 2eme point
+
+	97
+	construire un point perpendiculaire aux points precedents
+	a une distance de + ou - : origine point 2, - a gauche, + a
+	droite
+
+	unites : excenligne
+
+	Divers
+
+	Spectra Precision ( Geotronics, Aga )
+	seuls les codes suivants sont pris en compte
+	0 a 9, 50 a 54
+	autres codes ignores
+	pas d'alpha, codes numeriques uniquement, code 4 en particulier
+	codification du point, est mis a zero si alpha
+
+
+	Wild / Leica
+	les enregistrements se terminant par un point sont acceptes
+	il est possible d'ignorer des codes inutiles pour P34, mais
+	utilises par d'autres logiciels ( annoncer une visee de canevas
+	par ex ).
+
+	ajouter la consigne dans le fichier P033.MCG ( 2 lignes ) :
+
+	WGRE3IGNORE codes (20 max) du carnet a ignorer ici 30
+	30
+ p33maj.doc 7
+		carnets ZEISS elta s10 ... au format M5   14/04/99
+
+
+	voir exemples dans c:\topo\pytex
+
+		zm5a.d33 leve de detail
+		zm5b.d33 tours d'horizon
+		zm5c.d33 leve de detail
+
+	2 possibilites , apres avoir selectionne ZEISS/M5 dans P33 :
+
+	- Extraction normale ( leve de details ) ( a du sous-menu )
+
+	- ou Extraction des tours d horizon ( z du sous-menu )
+	  		zone TOTAL MOYENNE a ECART-TYPE
+
+	Si vous faites une extraction normale avec des observations
+	tours d'horizon, la zone TOTAL MOYENNE est prise en compte.
+
+	Les hauteurs de mire des points vises sont stockees par station
+	et utilisees pour la sortie du carnet.
+
+	le fichier original est converti en donnees neutres :
+	fichier avec extension .NET .  Ce fichier peut etre utilise en
+	entree de p33 ( demander le carnet carnet g122 ).
+
+	corriger p033.mcg comme suit
+
+		 ajouter zeiss/m5 a la fin de la ligne 2
+
+	P33        #parametres pour p33......
+	zeiss/m5 P36nul G122 TOPFC2 G120 REC200 MIC ..... pentax zeiss/m5
+	`!$')+,abcd*	 CODES FC2
+	...........
+
+	zone extension du nom de fichier zeiss, a ajouter dans le fichier
+	config.mcg, ligne p033d1 ( evite de saisir l'extension )
+
+	> verifications de base
+	| (asc 124) en colonnes 7,17,49,72,95,118  sinon erreur
+	118 caracteres sinon erreur
+
+	test des zones  t2 (col 18,19)    consulter le manuel, partie
+			t3 (col 50,51)    data format
+			t4 (col 63,64)
+			t5 (col 96,97)
+
+	les caracteres peuvent etre saisis en majuscule/minuscule
+
+	> t2='TI' et zone 22 a 47 = 'S' suivi d'une valeur valeur
+	numerique (avec ou sans espace), et zones 3,4 et 5 = espaces,
+	on a un changement de station, sinon enregistrement ignore
+
+	For M5|Adr     3|ti   s 5000                    |
+	1                    23 : station 5000, suite ignor‚e
+ p33maj.doc 8
+		carnets ZEISS elta s10 ... au format M5
+
+
+
+	> t3='S ' et t4='TH' et t5='IH'
+		     hmire de 76 a 89
+		     htour de 99 a 112
+
+        |s        1.000000     |th         1.5000 m   |ih         1.5320 m
+
+	> t3='SD' et t4='HZ' et t5='V1' mesure
+	  col 22 a 26 numero du point, 28 a 35 code (8 caracteres)
+				       si 28 a 35 = espaces, pas de code
+				       si code alpha : ignore mis a zero
+
+	IP1     4 5004                 |    point 4, code 5004
+	SD         3.7281 m   | col 53 a 66  distance suivant la pente
+	Hz      200.08774 gon | col 76 a 89  angle horizontal
+	V1      107.26813 gon | col 99 a 112 angle vertical
+
+	si t3='  ', il n'y a pas de distance
+
+	> t2='IP'  corrections d'excentricite : voir p033.mcg
+
+		avec t3='EG' decalage a droite : fonction 26 +
+		avec t3='ED' decalage a gauche            26 -
+		avec t3='EA' decalage avant               25 +
+		avec t3='ER' decalage arriere             25 -
+
+	les autres valeur sont ignor‚es : HD,..., X,..., etc
+
+	nota :
+	-unites metres et grades
+	-les consignes unites33 (p033.mcg) sont appliquees, si les
+	valeurs sont entieres
+
+	passer les exemples et verifier le carnet pour p34, en
+	particulier le resultat des decalages.
+ p33maj.doc 9
+
+	Spectra Precision ( Geotronics, Aga )  20/04/99 21:16
+
+	Le carnet de l'aga 600 peut etre converti au format g122
+	utilisable  par P33 : module aga6.exe .
+
+	2 possibilites :
+	- Les rubriques 0=RESULTAT, 0=REDUCTION, 0=TRIE, sont ignorees.
+	La detection de l'une des rubriques entraine la recherche de la
+	station suivante ( code 2=numsta ) : extraction des
+	observations multiples
+	- Extraction de la zone 0=REDUCTION a 0=TRIE
+
+	Le label 49=... est ignore.
+	Les labels suivants sont convertis
+	17= AH cercle a droite  en 7= AH CD
+	18= AV cercle a droite  en 8= AV CD
+	11= DH en 9=DP
+
+	Les hauteurs de mire des points vises sont stockees par station
+	et utilisees pour les operations CD
+
+	exemple
+
+	fichier original (extension .rec)
+
+	5=5441
+	6=1.453
+	7=251.30328
+	8=100.8163
+	49=0.000
+	11=168.932
+	............
+	5=5441
+	17=51.3034
+	18=299.1818
+
+	fichier pour p33 (extension .d33)
+
+	5=5441
+	6=1.453
+	7=251.30328
+	8=100.8163
+	9= 168.94589
+	..............
+
+	5=5441
+	6=   1.45300
+	 7=51.3034
+	 8=299.1818
+
+	voir fichier  c:\topo\pytex\aga6.rec

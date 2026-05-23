@@ -1,0 +1,461 @@
+For M5|Adr   289|TI   s 396                     |                      |                      |                      |
+For M5|Adr   290|TG  INTRODUCTION               |s        1.000153     |th         1.5460 m   |ih         1.4960 m   |
+For M5|Adr   291|TG  INTRODUCTION               |T_           13.5 C   |P           940.0 hPa |A          0.0000 m   |
+For M5|Adr   292|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   293|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   294|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   295|IP1  8920                      |SD       256.7416 m   |Hz      336.57251 gon |V1       96.48614 gon |
+For M5|Adr   296|IP1  8920                      |HD       256.3893 m   |Hz      336.57251 gon |h         14.1183 m   |
+For M5|Adr   297|TI  INTRODUCTION               |s        1.000153     |th         1.3000 m   |ih         1.4960 m   |
+For M5|Adr   298|IP1   395                      |SD       675.3801 m   |Hz       39.29823 gon |V1      100.68469 gon |
+For M5|Adr   299|IP1   395                      |HD       675.4451 m   |Hz       39.29823 gon |h         -7.0365 m   |
+For M5|Adr   300|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   301|IP1   395                      |SD       675.3797 m   |Hz      239.29812 gon |V1      299.31988 gon |
+For M5|Adr   302|IP1   395                      |HD       675.4452 m   |Hz       39.29812 gon |h         -6.9880 m   |
+For M5|Adr   303|IP1  8920                      |SD       256.7415 m   |Hz      136.57350 gon |V1      303.51803 gon |
+For M5|Adr   304|IP1  8920                      |HD       256.3883 m   |Hz      336.57350 gon |h         14.1351 m   |
+For M5|Adr   305|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   306|IP1  8920                      |SD       256.7416 m   |Hz      336.57301 gon |V1       96.48405 gon |
+For M5|Adr   307|IP1  8920                      |HD       256.3888 m   |Hz      336.57301 gon |h         14.1267 m   |
+For M5|Adr   308|IP1   395                      |SD       675.3799 m   |Hz       39.29818 gon |V1      100.68240 gon |
+For M5|Adr   309|IP1   395                      |HD       675.4452 m   |Hz       39.29818 gon |h         -7.0122 m   |
+For M5|Adr   310|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   311|IP1  8920                      |SD       256.7416 m   |Hz      336.57399 gon |V1       96.48694 gon |
+For M5|Adr   312|IP1  8920                      |HD       256.3895 m   |Hz      336.57399 gon |h         14.1151 m   |
+For M5|Adr   313|IP1   395                      |SD       675.3793 m   |Hz       39.29873 gon |V1      100.68449 gon |
+For M5|Adr   314|IP1   395                      |HD       675.4443 m   |Hz       39.29873 gon |h         -7.0344 m   |
+For M5|Adr   315|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   316|IP1   395                      |SD       675.3795 m   |Hz      239.29812 gon |V1      299.31954 gon |
+For M5|Adr   317|IP1   395                      |HD       675.4450 m   |Hz       39.29812 gon |h         -6.9916 m   |
+For M5|Adr   318|IP1  8920                      |SD       256.7413 m   |Hz      136.57308 gon |V1      303.51781 gon |
+For M5|Adr   319|IP1  8920                      |HD       256.3881 m   |Hz      336.57308 gon |h         14.1342 m   |
+For M5|Adr   320|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   321|IP1  8920                      |SD       256.7414 m   |Hz      336.57353 gon |V1       96.48457 gon |
+For M5|Adr   322|IP1  8920                      |HD       256.3888 m   |Hz      336.57353 gon |h         14.1246 m   |
+For M5|Adr   323|IP1   395                      |SD       675.3794 m   |Hz       39.29843 gon |V1      100.68248 gon |
+For M5|Adr   324|IP1   395                      |HD       675.4447 m   |Hz       39.29843 gon |h         -7.0130 m   |
+For M5|Adr   325|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   326|IP1  8920                      |SD       256.7415 m   |Hz      336.57327 gon |V1       96.48431 gon |
+For M5|Adr   327|IP1  8920                      |HD       256.3888 m   |Hz      336.57327 gon |h         14.1257 m   |
+For M5|Adr   328|IP1   395                      |SD       675.3797 m   |Hz       39.29830 gon |V1      100.68244 gon |
+For M5|Adr   329|IP1   395                      |HD       675.4449 m   |Hz       39.29830 gon |h         -7.0126 m   |
+For M5|Adr   330|TI  ECART-TYPE MOYEN           |SD         0.0002 m   |SH        0.00010 gon |SV        0.00018 gon |
+For M5|Adr   331|TI  ECART-TYPE PT ISOLE        |sD         0.0002 m   |sH        0.00014 gon |sV        0.00026 gon |
+For M5|Adr   332|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   333|IP1  8920                      |vD        -0.0001 m   |vH        0.00007 gon |vV        0.00026 gon |
+For M5|Adr   334|IP1   395                      |vD        -0.0002 m   |vH       -0.00007 gon |vV        0.00004 gon |
+For M5|Adr   335|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   336|IP1  8920                      |vD         0.0001 m   |vH       -0.00007 gon |vV       -0.00026 gon |
+For M5|Adr   337|IP1   395                      |vD         0.0002 m   |vH        0.00007 gon |vV       -0.00004 gon |
+For M5|Adr   338|TI  s8920                      |                      |                      |                      |
+For M5|Adr   339|TG  INTRODUCTION               |s        1.000153     |th         1.3000 m   |ih         1.5460 m   |
+For M5|Adr   340|TG  INTRODUCTION               |T_           11.0 C   |P           940.0 hPa |A          0.0000 m   |
+For M5|Adr   341|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   342|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   343|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   344|IP1  8900                      |SD       166.2415 m   |Hz      153.59047 gon |V1      105.59823 gon |
+For M5|Adr   345|IP1  8900                      |HD       165.6249 m   |Hz      153.59047 gon |h        -14.3520 m   |
+For M5|Adr   346|TI  INTRODUCTION               |s        1.000153     |th         1.4960 m   |ih         1.5460 m   |
+For M5|Adr   347|IP1   396                      |SD       256.7415 m   |Hz      203.65278 gon |V1      103.52081 gon |
+For M5|Adr   348|IP1   396                      |HD       256.3887 m   |Hz      203.65278 gon |h        -14.1373 m   |
+For M5|Adr   349|TI  INTRODUCTION               |s        1.000153     |th         1.5330 m   |ih         1.5460 m   |
+For M5|Adr   350|IP1  8930                      |SD       104.6230 m   |Hz      306.39918 gon |V1      108.01164 gon |
+For M5|Adr   351|IP1  8930                      |HD       103.8117 m   |Hz      306.39918 gon |h        -13.1180 m   |
+For M5|Adr   352|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   353|IP1  8930                      |SD       104.6231 m   |Hz      106.39695 gon |V1      291.99303 gon |
+For M5|Adr   354|IP1  8930                      |HD       103.8128 m   |Hz      306.39695 gon |h        -13.1104 m   |
+For M5|Adr   355|IP1   396                      |SD       256.7415 m   |Hz        3.65074 gon |V1      296.48410 gon |
+For M5|Adr   356|IP1   396                      |HD       256.3898 m   |Hz      203.65074 gon |h        -14.1175 m   |
+For M5|Adr   357|IP1  8900                      |SD       166.2415 m   |Hz      353.58708 gon |V1      294.40663 gon |
+For M5|Adr   358|IP1  8900                      |HD       165.6260 m   |Hz      153.58708 gon |h        -14.3394 m   |
+For M5|Adr   359|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   360|IP1  8900                      |SD       166.2415 m   |Hz      153.58878 gon |V1      105.59580 gon |
+For M5|Adr   361|IP1  8900                      |HD       165.6254 m   |Hz      153.58878 gon |h        -14.3457 m   |
+For M5|Adr   362|IP1   396                      |SD       256.7415 m   |Hz      203.65176 gon |V1      103.51835 gon |
+For M5|Adr   363|IP1   396                      |HD       256.3892 m   |Hz      203.65176 gon |h        -14.1274 m   |
+For M5|Adr   364|IP1  8930                      |SD       104.6231 m   |Hz      306.39807 gon |V1      108.00930 gon |
+For M5|Adr   365|IP1  8930                      |HD       103.8122 m   |Hz      306.39807 gon |h        -13.1142 m   |
+For M5|Adr   366|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   367|IP1  8900                      |SD       166.2416 m   |Hz      153.58955 gon |V1      105.59769 gon |
+For M5|Adr   368|IP1  8900                      |HD       165.6251 m   |Hz      153.58955 gon |h        -14.3506 m   |
+For M5|Adr   369|IP1   396                      |SD       256.7417 m   |Hz      203.65174 gon |V1      103.52075 gon |
+For M5|Adr   370|IP1   396                      |HD       256.3890 m   |Hz      203.65174 gon |h        -14.1371 m   |
+For M5|Adr   371|IP1  8930                      |SD       104.6229 m   |Hz      306.39843 gon |V1      108.01127 gon |
+For M5|Adr   372|IP1  8930                      |HD       103.8117 m   |Hz      306.39843 gon |h        -13.1174 m   |
+For M5|Adr   373|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   374|IP1  8930                      |SD       104.6229 m   |Hz      106.39685 gon |V1      291.99321 gon |
+For M5|Adr   375|IP1  8930                      |HD       103.8126 m   |Hz      306.39685 gon |h        -13.1101 m   |
+For M5|Adr   376|IP1   396                      |SD       256.7417 m   |Hz        3.65129 gon |V1      296.48461 gon |
+For M5|Adr   377|IP1   396                      |HD       256.3901 m   |Hz      203.65129 gon |h        -14.1155 m   |
+For M5|Adr   378|IP1  8900                      |SD       166.2414 m   |Hz      353.58772 gon |V1      294.40667 gon |
+For M5|Adr   379|IP1  8900                      |HD       165.6259 m   |Hz      153.58772 gon |h        -14.3393 m   |
+For M5|Adr   380|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   381|IP1  8900                      |SD       166.2415 m   |Hz      153.58863 gon |V1      105.59551 gon |
+For M5|Adr   382|IP1  8900                      |HD       165.6255 m   |Hz      153.58863 gon |h        -14.3450 m   |
+For M5|Adr   383|IP1   396                      |SD       256.7417 m   |Hz      203.65152 gon |V1      103.51807 gon |
+For M5|Adr   384|IP1   396                      |HD       256.3895 m   |Hz      203.65152 gon |h        -14.1263 m   |
+For M5|Adr   385|IP1  8930                      |SD       104.6229 m   |Hz      306.39764 gon |V1      108.00903 gon |
+For M5|Adr   386|IP1  8930                      |HD       103.8121 m   |Hz      306.39764 gon |h        -13.1137 m   |
+For M5|Adr   387|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   388|IP1  8900                      |SD       166.2415 m   |Hz      153.58870 gon |V1      105.59565 gon |
+For M5|Adr   389|IP1  8900                      |HD       165.6254 m   |Hz      153.58870 gon |h        -14.3453 m   |
+For M5|Adr   390|IP1   396                      |SD       256.7416 m   |Hz      203.65164 gon |V1      103.51821 gon |
+For M5|Adr   391|IP1   396                      |HD       256.3894 m   |Hz      203.65164 gon |h        -14.1268 m   |
+For M5|Adr   392|IP1  8930                      |SD       104.6230 m   |Hz      306.39785 gon |V1      108.00917 gon |
+For M5|Adr   393|IP1  8930                      |HD       103.8122 m   |Hz      306.39785 gon |h        -13.1139 m   |
+For M5|Adr   394|TI  ECART-TYPE MOYEN           |SD         0.0001 m   |SH        0.00007 gon |SV        0.00014 gon |
+For M5|Adr   395|TI  ECART-TYPE PT ISOLE        |sD         0.0001 m   |sH        0.00010 gon |sV        0.00020 gon |
+For M5|Adr   396|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   397|IP1  8900                      |vD         0.0000 m   |vH        0.00006 gon |vV       -0.00014 gon |
+For M5|Adr   398|IP1   396                      |vD         0.0001 m   |vH        0.00001 gon |vV       -0.00014 gon |
+For M5|Adr   399|IP1  8930                      |vD        -0.0001 m   |vH       -0.00008 gon |vV       -0.00013 gon |
+For M5|Adr   400|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   401|IP1  8900                      |vD         0.0000 m   |vH       -0.00006 gon |vV        0.00014 gon |
+For M5|Adr   402|IP1   396                      |vD        -0.0001 m   |vH       -0.00001 gon |vV        0.00014 gon |
+For M5|Adr   403|IP1  8930                      |vD         0.0001 m   |vH        0.00008 gon |vV        0.00013 gon |
+For M5|Adr   404|TI  s8930                      |                      |                      |                      |
+For M5|Adr   405|TG  INTRODUCTION               |s        1.000153     |th         1.5460 m   |ih         1.5330 m   |
+For M5|Adr   406|TG  INTRODUCTION               |T_           11.5 C   |P           940.0 hPa |A          0.0000 m   |
+For M5|Adr   407|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   408|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   409|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   410|IP1  8920                      |SD       104.6226 m   |Hz      297.64504 gon |V1       91.99601 gon |
+For M5|Adr   411|IP1  8920                      |HD       103.8125 m   |Hz      297.64504 gon |h         13.1069 m   |
+For M5|Adr   412|TI  INTRODUCTION               |s        1.000153     |th         1.4870 m   |ih         1.5330 m   |
+For M5|Adr   413|IP1  8940                      |SD       169.1003 m   |Hz      106.68522 gon |V1      104.77867 gon |
+For M5|Adr   414|IP1  8940                      |HD       168.6502 m   |Hz      106.68522 gon |h        -12.6333 m   |
+For M5|Adr   415|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   416|IP1  8940                      |SD       169.0998 m   |Hz      306.68402 gon |V1      295.22520 gon |
+For M5|Adr   417|IP1  8940                      |HD       168.6505 m   |Hz      106.68402 gon |h        -12.6230 m   |
+For M5|Adr   418|IP1  8920                      |SD       104.6226 m   |Hz       97.64292 gon |V1      308.00841 gon |
+For M5|Adr   419|IP1  8920                      |HD       103.8116 m   |Hz      297.64292 gon |h         13.1141 m   |
+For M5|Adr   420|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   421|IP1  8920                      |SD       104.6226 m   |Hz      297.64398 gon |V1       91.99380 gon |
+For M5|Adr   422|IP1  8920                      |HD       103.8120 m   |Hz      297.64398 gon |h         13.1105 m   |
+For M5|Adr   423|IP1  8940                      |SD       169.1000 m   |Hz      106.68462 gon |V1      104.77673 gon |
+For M5|Adr   424|IP1  8940                      |HD       168.6503 m   |Hz      106.68462 gon |h        -12.6282 m   |
+For M5|Adr   425|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   426|IP1  8920                      |SD       104.6227 m   |Hz      297.64399 gon |V1       91.99609 gon |
+For M5|Adr   427|IP1  8920                      |HD       103.8126 m   |Hz      297.64399 gon |h         13.1068 m   |
+For M5|Adr   428|IP1  8940                      |SD       169.0997 m   |Hz      106.68546 gon |V1      104.77859 gon |
+For M5|Adr   429|IP1  8940                      |HD       168.6496 m   |Hz      106.68546 gon |h        -12.6331 m   |
+For M5|Adr   430|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   431|IP1  8940                      |SD       169.0997 m   |Hz      306.68401 gon |V1      295.22577 gon |
+For M5|Adr   432|IP1  8940                      |HD       168.6505 m   |Hz      106.68401 gon |h        -12.6215 m   |
+For M5|Adr   433|IP1  8920                      |SD       104.6230 m   |Hz       97.64282 gon |V1      308.00796 gon |
+For M5|Adr   434|IP1  8920                      |HD       103.8121 m   |Hz      297.64282 gon |h         13.1134 m   |
+For M5|Adr   435|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   436|IP1  8920                      |SD       104.6229 m   |Hz      297.64340 gon |V1       91.99407 gon |
+For M5|Adr   437|IP1  8920                      |HD       103.8123 m   |Hz      297.64340 gon |h         13.1101 m   |
+For M5|Adr   438|IP1  8940                      |SD       169.0997 m   |Hz      106.68474 gon |V1      104.77641 gon |
+For M5|Adr   439|IP1  8940                      |HD       168.6501 m   |Hz      106.68474 gon |h        -12.6273 m   |
+For M5|Adr   440|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   441|IP1  8920                      |SD       104.6227 m   |Hz      297.64369 gon |V1       91.99393 gon |
+For M5|Adr   442|IP1  8920                      |HD       103.8122 m   |Hz      297.64369 gon |h         13.1103 m   |
+For M5|Adr   443|IP1  8940                      |SD       169.0998 m   |Hz      106.68468 gon |V1      104.77657 gon |
+For M5|Adr   444|IP1  8940                      |HD       168.6502 m   |Hz      106.68468 gon |h        -12.6278 m   |
+For M5|Adr   445|TI  ECART-TYPE MOYEN           |SD         0.0001 m   |SH        0.00024 gon |SV        0.00015 gon |
+For M5|Adr   446|TI  ECART-TYPE PT ISOLE        |sD         0.0002 m   |sH        0.00035 gon |sV        0.00021 gon |
+For M5|Adr   447|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   448|IP1  8920                      |vD         0.0001 m   |vH       -0.00017 gon |vV        0.00013 gon |
+For M5|Adr   449|IP1  8940                      |vD        -0.0002 m   |vH        0.00017 gon |vV       -0.00016 gon |
+For M5|Adr   450|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   451|IP1  8920                      |vD        -0.0001 m   |vH        0.00017 gon |vV       -0.00013 gon |
+For M5|Adr   452|IP1  8940                      |vD         0.0002 m   |vH       -0.00017 gon |vV        0.00016 gon |
+For M5|Adr   453|TI  s8940                      |                      |                      |                      |
+For M5|Adr   454|TG  INTRODUCTION               |s        1.000153     |th         1.5330 m   |ih         1.4870 m   |
+For M5|Adr   455|TG  INTRODUCTION               |T_           14.3 C   |P           943.0 hPa |A          0.0000 m   |
+For M5|Adr   456|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   457|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   458|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   459|IP1  8930                      |SD       169.0995 m   |Hz      188.84104 gon |V1       95.22735 gon |
+For M5|Adr   460|IP1  8930                      |HD       168.6500 m   |Hz      188.84104 gon |h         12.6212 m   |
+For M5|Adr   461|TI  INTRODUCTION               |s        1.000153     |th         1.4680 m   |ih         1.4870 m   |
+For M5|Adr   462|IP1  8950                      |SD       142.3668 m   |Hz      339.17313 gon |V1       95.80160 gon |
+For M5|Adr   463|IP1  8950                      |HD       142.0789 m   |Hz      339.17313 gon |h          9.4024 m   |
+For M5|Adr   464|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   465|IP1  8950                      |SD       142.3672 m   |Hz      139.17083 gon |V1      304.20100 gon |
+For M5|Adr   466|IP1  8950                      |HD       142.0789 m   |Hz      339.17083 gon |h          9.4083 m   |
+For M5|Adr   467|IP1  8930                      |SD       169.1001 m   |Hz      388.83980 gon |V1      304.77620 gon |
+For M5|Adr   468|IP1  8930                      |HD       168.6500 m   |Hz      188.83980 gon |h         12.6307 m   |
+For M5|Adr   469|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   470|IP1  8930                      |SD       169.0998 m   |Hz      188.84042 gon |V1       95.22557 gon |
+For M5|Adr   471|IP1  8930                      |HD       168.6500 m   |Hz      188.84042 gon |h         12.6260 m   |
+For M5|Adr   472|IP1  8950                      |SD       142.3670 m   |Hz      339.17198 gon |V1       95.80030 gon |
+For M5|Adr   473|IP1  8950                      |HD       142.0789 m   |Hz      339.17198 gon |h          9.4053 m   |
+For M5|Adr   474|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   475|IP1  8930                      |SD       169.0994 m   |Hz      188.84105 gon |V1       95.22732 gon |
+For M5|Adr   476|IP1  8930                      |HD       168.6500 m   |Hz      188.84105 gon |h         12.6213 m   |
+For M5|Adr   477|IP1  8950                      |SD       142.3667 m   |Hz      339.17261 gon |V1       95.80054 gon |
+For M5|Adr   478|IP1  8950                      |HD       142.0786 m   |Hz      339.17261 gon |h          9.4048 m   |
+For M5|Adr   479|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   480|IP1  8950                      |SD       142.3672 m   |Hz      139.17175 gon |V1      304.20187 gon |
+For M5|Adr   481|IP1  8950                      |HD       142.0788 m   |Hz      339.17175 gon |h          9.4102 m   |
+For M5|Adr   482|IP1  8930                      |SD       169.1008 m   |Hz      388.83988 gon |V1      304.77688 gon |
+For M5|Adr   483|IP1  8930                      |HD       168.6504 m   |Hz      188.83988 gon |h         12.6325 m   |
+For M5|Adr   484|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   485|IP1  8930                      |SD       169.1001 m   |Hz      188.84047 gon |V1       95.22522 gon |
+For M5|Adr   486|IP1  8930                      |HD       168.6502 m   |Hz      188.84047 gon |h         12.6269 m   |
+For M5|Adr   487|IP1  8950                      |SD       142.3670 m   |Hz      339.17218 gon |V1       95.79934 gon |
+For M5|Adr   488|IP1  8950                      |HD       142.0787 m   |Hz      339.17218 gon |h          9.4075 m   |
+For M5|Adr   489|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   490|IP1  8930                      |SD       169.1000 m   |Hz      188.84044 gon |V1       95.22540 gon |
+For M5|Adr   491|IP1  8930                      |HD       168.6501 m   |Hz      188.84044 gon |h         12.6264 m   |
+For M5|Adr   492|IP1  8950                      |SD       142.3670 m   |Hz      339.17208 gon |V1       95.79982 gon |
+For M5|Adr   493|IP1  8950                      |HD       142.0788 m   |Hz      339.17208 gon |h          9.4064 m   |
+For M5|Adr   494|TI  ECART-TYPE MOYEN           |SD         0.0001 m   |SH        0.00005 gon |SV        0.00036 gon |
+For M5|Adr   495|TI  ECART-TYPE PT ISOLE        |sD         0.0002 m   |sH        0.00008 gon |sV        0.00051 gon |
+For M5|Adr   496|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   497|IP1  8930                      |vD         0.0001 m   |vH       -0.00004 gon |vV       -0.00018 gon |
+For M5|Adr   498|IP1  8950                      |vD         0.0000 m   |vH        0.00004 gon |vV       -0.00048 gon |
+For M5|Adr   499|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   500|IP1  8930                      |vD        -0.0001 m   |vH        0.00004 gon |vV        0.00018 gon |
+For M5|Adr   501|IP1  8950                      |vD         0.0000 m   |vH       -0.00004 gon |vV        0.00048 gon |
+For M5|Adr   502|TI  s8950                      |                      |                      |                      |
+For M5|Adr   503|TG  INTRODUCTION               |s        1.000153     |th         1.4870 m   |ih         1.4680 m   |
+For M5|Adr   504|TG  INTRODUCTION               |T_           16.7 C   |P           942.0 hPa |A          0.0000 m   |
+For M5|Adr   505|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   506|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   507|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   508|IP1  8940                      |SD       142.3688 m   |Hz       45.80308 gon |V1      104.20553 gon |
+For M5|Adr   509|IP1  8940                      |HD       142.0802 m   |Hz       45.80308 gon |h         -9.4157 m   |
+For M5|Adr   510|TI  INTRODUCTION               |s        1.000153     |th         1.5470 m   |ih         1.4680 m   |
+For M5|Adr   511|IP1  8970                      |SD       149.6341 m   |Hz      283.53242 gon |V1      103.70418 gon |
+For M5|Adr   512|IP1  8970                      |HD       149.4039 m   |Hz      283.53242 gon |h         -8.7790 m   |
+For M5|Adr   513|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   514|IP1  8970                      |SD       149.6346 m   |Hz       83.52957 gon |V1      296.29817 gon |
+For M5|Adr   515|IP1  8970                      |HD       149.4047 m   |Hz      283.52957 gon |h         -8.7736 m   |
+For M5|Adr   516|IP1  8940                      |SD       142.3670 m   |Hz      245.80193 gon |V1      295.79572 gon |
+For M5|Adr   517|IP1  8940                      |HD       142.0786 m   |Hz       45.80193 gon |h         -9.4128 m   |
+For M5|Adr   518|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   519|IP1  8940                      |SD       142.3679 m   |Hz       45.80250 gon |V1      104.20490 gon |
+For M5|Adr   520|IP1  8940                      |HD       142.0794 m   |Hz       45.80250 gon |h         -9.4143 m   |
+For M5|Adr   521|IP1  8970                      |SD       149.6344 m   |Hz      283.53100 gon |V1      103.70301 gon |
+For M5|Adr   522|IP1  8970                      |HD       149.4043 m   |Hz      283.53100 gon |h         -8.7763 m   |
+For M5|Adr   523|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   524|IP1  8940                      |SD       142.3680 m   |Hz       45.80287 gon |V1      104.20614 gon |
+For M5|Adr   525|IP1  8940                      |HD       142.0793 m   |Hz       45.80287 gon |h         -9.4170 m   |
+For M5|Adr   526|IP1  8970                      |SD       149.6347 m   |Hz      283.53181 gon |V1      103.70418 gon |
+For M5|Adr   527|IP1  8970                      |HD       149.4045 m   |Hz      283.53181 gon |h         -8.7791 m   |
+For M5|Adr   528|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   529|IP1  8970                      |SD       149.6347 m   |Hz       83.52991 gon |V1      296.29991 gon |
+For M5|Adr   530|IP1  8970                      |HD       149.4051 m   |Hz      283.52991 gon |h         -8.7695 m   |
+For M5|Adr   531|IP1  8940                      |SD       142.3668 m   |Hz      245.80173 gon |V1      295.79674 gon |
+For M5|Adr   532|IP1  8940                      |HD       142.0786 m   |Hz       45.80173 gon |h         -9.4105 m   |
+For M5|Adr   533|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   534|IP1  8940                      |SD       142.3674 m   |Hz       45.80230 gon |V1      104.20470 gon |
+For M5|Adr   535|IP1  8940                      |HD       142.0789 m   |Hz       45.80230 gon |h         -9.4138 m   |
+For M5|Adr   536|IP1  8970                      |SD       149.6347 m   |Hz      283.53086 gon |V1      103.70213 gon |
+For M5|Adr   537|IP1  8970                      |HD       149.4048 m   |Hz      283.53086 gon |h         -8.7743 m   |
+For M5|Adr   538|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   539|IP1  8940                      |SD       142.3677 m   |Hz       45.80240 gon |V1      104.20480 gon |
+For M5|Adr   540|IP1  8940                      |HD       142.0792 m   |Hz       45.80240 gon |h         -9.4140 m   |
+For M5|Adr   541|IP1  8970                      |SD       149.6345 m   |Hz      283.53093 gon |V1      103.70257 gon |
+For M5|Adr   542|IP1  8970                      |HD       149.4046 m   |Hz      283.53093 gon |h         -8.7753 m   |
+For M5|Adr   543|TI  ECART-TYPE MOYEN           |SD         0.0002 m   |SH        0.00003 gon |SV        0.00032 gon |
+For M5|Adr   544|TI  ECART-TYPE PT ISOLE        |sD         0.0003 m   |sH        0.00004 gon |sV        0.00045 gon |
+For M5|Adr   545|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   546|IP1  8940                      |vD        -0.0002 m   |vH       -0.00002 gon |vV       -0.00010 gon |
+For M5|Adr   547|IP1  8970                      |vD         0.0002 m   |vH        0.00002 gon |vV       -0.00044 gon |
+For M5|Adr   548|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   549|IP1  8940                      |vD         0.0002 m   |vH        0.00002 gon |vV        0.00010 gon |
+For M5|Adr   550|IP1  8970                      |vD        -0.0002 m   |vH       -0.00002 gon |vV        0.00044 gon |
+For M5|Adr   551|TI  s8970                      |                      |                      |                      |
+For M5|Adr   552|TG  INTRODUCTION               |s        1.000153     |th         1.4680 m   |ih         1.5470 m   |
+For M5|Adr   553|TG  INTRODUCTION               |T_           16.9 C   |P           943.0 hPa |A          0.0000 m   |
+For M5|Adr   554|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   555|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   556|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   557|IP1  8950                      |SD       149.6346 m   |Hz      314.31832 gon |V1       96.30320 gon |
+For M5|Adr   558|IP1  8950                      |HD       149.4050 m   |Hz      314.31832 gon |h          8.7648 m   |
+For M5|Adr   559|TI  INTRODUCTION               |s        1.000153     |th         1.4410 m   |ih         1.5470 m   |
+For M5|Adr   560|IP1  8980                      |SD       150.0328 m   |Hz      148.94286 gon |V1       97.37028 gon |
+For M5|Adr   561|IP1  8980                      |HD       149.9276 m   |Hz      148.94286 gon |h          6.3033 m   |
+For M5|Adr   562|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   563|IP1  8980                      |SD       150.0325 m   |Hz      348.92738 gon |V1      302.63371 gon |
+For M5|Adr   564|IP1  8980                      |HD       149.9269 m   |Hz      148.92738 gon |h          6.3126 m   |
+For M5|Adr   565|IP1  8950                      |SD       149.6351 m   |Hz      114.31755 gon |V1      303.69971 gon |
+For M5|Adr   566|IP1  8950                      |HD       149.4052 m   |Hz      314.31755 gon |h          8.7717 m   |
+For M5|Adr   567|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   568|IP1  8950                      |SD       149.6348 m   |Hz      314.31794 gon |V1       96.30175 gon |
+For M5|Adr   569|IP1  8950                      |HD       149.4051 m   |Hz      314.31794 gon |h          8.7682 m   |
+For M5|Adr   570|IP1  8980                      |SD       150.0326 m   |Hz      148.93512 gon |V1       97.36828 gon |
+For M5|Adr   571|IP1  8980                      |HD       149.9272 m   |Hz      148.93512 gon |h          6.3080 m   |
+For M5|Adr   572|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   573|IP1  8950                      |SD       149.6349 m   |Hz      314.31358 gon |V1       96.30186 gon |
+For M5|Adr   574|IP1  8950                      |HD       149.4052 m   |Hz      314.31358 gon |h          8.7680 m   |
+For M5|Adr   575|IP1  8980                      |SD       150.0329 m   |Hz      148.93834 gon |V1       97.36817 gon |
+For M5|Adr   576|IP1  8980                      |HD       149.9275 m   |Hz      148.93834 gon |h          6.3082 m   |
+For M5|Adr   577|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   578|IP1  8980                      |SD       150.0335 m   |Hz      348.92648 gon |V1      302.63568 gon |
+For M5|Adr   579|IP1  8980                      |HD       149.9278 m   |Hz      148.92648 gon |h          6.3173 m   |
+For M5|Adr   580|IP1  8950                      |SD       149.6350 m   |Hz      114.32685 gon |V1      303.69940 gon |
+For M5|Adr   581|IP1  8950                      |HD       149.4051 m   |Hz      314.32685 gon |h          8.7709 m   |
+For M5|Adr   582|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   583|IP1  8950                      |SD       149.6350 m   |Hz      314.32022 gon |V1       96.30123 gon |
+For M5|Adr   584|IP1  8950                      |HD       149.4051 m   |Hz      314.32022 gon |h          8.7694 m   |
+For M5|Adr   585|IP1  8980                      |SD       150.0332 m   |Hz      148.93241 gon |V1       97.36624 gon |
+For M5|Adr   586|IP1  8980                      |HD       149.9276 m   |Hz      148.93241 gon |h          6.3128 m   |
+For M5|Adr   587|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   588|IP1  8950                      |SD       149.6349 m   |Hz      314.31908 gon |V1       96.30149 gon |
+For M5|Adr   589|IP1  8950                      |HD       149.4051 m   |Hz      314.31908 gon |h          8.7688 m   |
+For M5|Adr   590|IP1  8980                      |SD       150.0329 m   |Hz      148.93377 gon |V1       97.36726 gon |
+For M5|Adr   591|IP1  8980                      |HD       149.9274 m   |Hz      148.93377 gon |h          6.3104 m   |
+For M5|Adr   592|TI  ECART-TYPE MOYEN           |SD         0.0002 m   |SH        0.00176 gon |SV        0.00074 gon |
+For M5|Adr   593|TI  ECART-TYPE PT ISOLE        |sD         0.0003 m   |sH        0.00250 gon |sV        0.00105 gon |
+For M5|Adr   594|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   595|IP1  8950                      |vD         0.0001 m   |vH        0.00125 gon |vV       -0.00026 gon |
+For M5|Adr   596|IP1  8980                      |vD         0.0003 m   |vH       -0.00125 gon |vV       -0.00102 gon |
+For M5|Adr   597|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   598|IP1  8950                      |vD        -0.0001 m   |vH       -0.00125 gon |vV        0.00026 gon |
+For M5|Adr   599|IP1  8980                      |vD        -0.0003 m   |vH        0.00125 gon |vV        0.00102 gon |
+For M5|Adr   600|TI  s8980                      |                      |                      |                      |
+For M5|Adr   601|TG  INTRODUCTION               |s        1.000153     |th         1.5470 m   |ih         1.4410 m   |
+For M5|Adr   602|TG  INTRODUCTION               |T_           16.4 C   |P           943.0 hPa |A          0.0000 m   |
+For M5|Adr   603|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   604|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   605|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   606|IP1  8970                      |SD       150.0328 m   |Hz      327.18233 gon |V1      102.63526 gon |
+For M5|Adr   607|IP1  8970                      |HD       149.9273 m   |Hz      327.18233 gon |h         -6.3132 m   |
+For M5|Adr   608|TI  INTRODUCTION               |s        1.000153     |th         1.3710 m   |ih         1.4410 m   |
+For M5|Adr   609|IP1  9000                      |SD       204.7191 m   |Hz       80.20844 gon |V1       94.73667 gon |
+For M5|Adr   610|IP1  9000                      |HD       204.0506 m   |Hz       80.20844 gon |h         16.9790 m   |
+For M5|Adr   611|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   612|IP1  9000                      |SD       204.7181 m   |Hz      280.20788 gon |V1      305.26691 gon |
+For M5|Adr   613|IP1  9000                      |HD       204.0486 m   |Hz       80.20788 gon |h         16.9904 m   |
+For M5|Adr   614|IP1  8970                      |SD       150.0328 m   |Hz      127.18081 gon |V1      297.36478 gon |
+For M5|Adr   615|IP1  8970                      |HD       149.9273 m   |Hz      327.18081 gon |h         -6.3131 m   |
+For M5|Adr   616|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   617|IP1  8970                      |SD       150.0328 m   |Hz      327.18157 gon |V1      102.63524 gon |
+For M5|Adr   618|IP1  8970                      |HD       149.9273 m   |Hz      327.18157 gon |h         -6.3132 m   |
+For M5|Adr   619|IP1  9000                      |SD       204.7186 m   |Hz       80.20816 gon |V1       94.73488 gon |
+For M5|Adr   620|IP1  9000                      |HD       204.0496 m   |Hz       80.20816 gon |h         16.9847 m   |
+For M5|Adr   621|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   622|IP1  8970                      |SD       150.0326 m   |Hz      327.18229 gon |V1      102.63716 gon |
+For M5|Adr   623|IP1  8970                      |HD       149.9270 m   |Hz      327.18229 gon |h         -6.3177 m   |
+For M5|Adr   624|IP1  9000                      |SD       204.7182 m   |Hz       80.20843 gon |V1       94.73469 gon |
+For M5|Adr   625|IP1  9000                      |HD       204.0492 m   |Hz       80.20843 gon |h         16.9852 m   |
+For M5|Adr   626|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   627|IP1  9000                      |SD       204.7185 m   |Hz      280.20806 gon |V1      305.26662 gon |
+For M5|Adr   628|IP1  9000                      |HD       204.0491 m   |Hz       80.20806 gon |h         16.9895 m   |
+For M5|Adr   629|IP1  8970                      |SD       150.0323 m   |Hz      127.18088 gon |V1      297.36472 gon |
+For M5|Adr   630|IP1  8970                      |HD       149.9269 m   |Hz      327.18088 gon |h         -6.3133 m   |
+For M5|Adr   631|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   632|IP1  8970                      |SD       150.0325 m   |Hz      327.18158 gon |V1      102.63622 gon |
+For M5|Adr   633|IP1  8970                      |HD       149.9269 m   |Hz      327.18158 gon |h         -6.3155 m   |
+For M5|Adr   634|IP1  9000                      |SD       204.7184 m   |Hz       80.20824 gon |V1       94.73403 gon |
+For M5|Adr   635|IP1  9000                      |HD       204.0491 m   |Hz       80.20824 gon |h         16.9874 m   |
+For M5|Adr   636|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   637|IP1  8970                      |SD       150.0326 m   |Hz      327.18157 gon |V1      102.63573 gon |
+For M5|Adr   638|IP1  8970                      |HD       149.9271 m   |Hz      327.18157 gon |h         -6.3143 m   |
+For M5|Adr   639|IP1  9000                      |SD       204.7185 m   |Hz       80.20820 gon |V1       94.73446 gon |
+For M5|Adr   640|IP1  9000                      |HD       204.0494 m   |Hz       80.20820 gon |h         16.9860 m   |
+For M5|Adr   641|TI  ECART-TYPE MOYEN           |SD         0.0001 m   |SH        0.00003 gon |SV        0.00046 gon |
+For M5|Adr   642|TI  ECART-TYPE PT ISOLE        |sD         0.0002 m   |sH        0.00004 gon |sV        0.00065 gon |
+For M5|Adr   643|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   644|IP1  8970                      |vD        -0.0002 m   |vH       -0.00002 gon |vV        0.00049 gon |
+For M5|Adr   645|IP1  9000                      |vD        -0.0001 m   |vH        0.00002 gon |vV       -0.00042 gon |
+For M5|Adr   646|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   647|IP1  8970                      |vD         0.0002 m   |vH        0.00002 gon |vV       -0.00049 gon |
+For M5|Adr   648|IP1  9000                      |vD         0.0001 m   |vH       -0.00002 gon |vV        0.00042 gon |
+For M5|Adr   649|TI  s9000                      |                      |                      |                      |
+For M5|Adr   650|TG  INTRODUCTION               |s        1.000153     |th         1.4410 m   |ih         1.3710 m   |
+For M5|Adr   651|TG  INTRODUCTION               |T_           16.4 C   |P           940.0 hPa |A          0.0000 m   |
+For M5|Adr   652|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   653|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   654|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   655|IP1  8980                      |SD       204.7189 m   |Hz      314.90500 gon |V1      105.27057 gon |
+For M5|Adr   656|IP1  8980                      |HD       204.0494 m   |Hz      314.90500 gon |h        -16.9965 m   |
+For M5|Adr   657|TI  INTRODUCTION               |s        1.000153     |th         1.5510 m   |ih         1.3710 m   |
+For M5|Adr   658|IP1   397                      |SD        99.9181 m   |Hz       18.59641 gon |V1       97.44823 gon |
+For M5|Adr   659|IP1   397                      |HD        99.8530 m   |Hz       18.59641 gon |h          3.8246 m   |
+For M5|Adr   660|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   661|IP1   397                      |SD        99.9180 m   |Hz      218.59487 gon |V1      302.55430 gon |
+For M5|Adr   662|IP1   397                      |HD        99.8528 m   |Hz       18.59487 gon |h          3.8286 m   |
+For M5|Adr   663|IP1  8980                      |SD       204.7191 m   |Hz      114.90505 gon |V1      294.73201 gon |
+For M5|Adr   664|IP1  8980                      |HD       204.0503 m   |Hz      314.90505 gon |h        -16.9882 m   |
+For M5|Adr   665|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   666|IP1  8980                      |SD       204.7190 m   |Hz      314.90502 gon |V1      105.26928 gon |
+For M5|Adr   667|IP1  8980                      |HD       204.0499 m   |Hz      314.90502 gon |h        -16.9923 m   |
+For M5|Adr   668|IP1   397                      |SD        99.9180 m   |Hz       18.59564 gon |V1       97.44696 gon |
+For M5|Adr   669|IP1   397                      |HD        99.8529 m   |Hz       18.59564 gon |h          3.8266 m   |
+For M5|Adr   670|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   671|IP1  8980                      |SD       204.7191 m   |Hz      314.90609 gon |V1      105.26928 gon |
+For M5|Adr   672|IP1  8980                      |HD       204.0500 m   |Hz      314.90609 gon |h        -16.9923 m   |
+For M5|Adr   673|IP1   397                      |SD        99.9181 m   |Hz       18.59698 gon |V1       97.44866 gon |
+For M5|Adr   674|IP1   397                      |HD        99.8531 m   |Hz       18.59698 gon |h          3.8240 m   |
+For M5|Adr   675|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   676|IP1   397                      |SD        99.9181 m   |Hz      218.59540 gon |V1      302.55403 gon |
+For M5|Adr   677|IP1   397                      |HD        99.8529 m   |Hz       18.59540 gon |h          3.8282 m   |
+For M5|Adr   678|IP1  8980                      |SD       204.7204 m   |Hz      114.90510 gon |V1      294.73316 gon |
+For M5|Adr   679|IP1  8980                      |HD       204.0519 m   |Hz      314.90510 gon |h        -16.9846 m   |
+For M5|Adr   680|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   681|IP1  8980                      |SD       204.7198 m   |Hz      314.90559 gon |V1      105.26806 gon |
+For M5|Adr   682|IP1  8980                      |HD       204.0510 m   |Hz      314.90559 gon |h        -16.9885 m   |
+For M5|Adr   683|IP1   397                      |SD        99.9181 m   |Hz       18.59619 gon |V1       97.44732 gon |
+For M5|Adr   684|IP1   397                      |HD        99.8530 m   |Hz       18.59619 gon |h          3.8261 m   |
+For M5|Adr   685|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   686|IP1  8980                      |SD       204.7194 m   |Hz      314.90531 gon |V1      105.26867 gon |
+For M5|Adr   687|IP1  8980                      |HD       204.0504 m   |Hz      314.90531 gon |h        -16.9904 m   |
+For M5|Adr   688|IP1   397                      |SD        99.9181 m   |Hz       18.59591 gon |V1       97.44714 gon |
+For M5|Adr   689|IP1   397                      |HD        99.8530 m   |Hz       18.59591 gon |h          3.8263 m   |
+For M5|Adr   690|TI  ECART-TYPE MOYEN           |SD         0.0003 m   |SH        0.00001 gon |SV        0.00045 gon |
+For M5|Adr   691|TI  ECART-TYPE PT ISOLE        |sD         0.0004 m   |sH        0.00001 gon |sV        0.00064 gon |
+For M5|Adr   692|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   693|IP1  8980                      |vD         0.0004 m   |vH        0.00001 gon |vV       -0.00061 gon |
+For M5|Adr   694|IP1   397                      |vD         0.0000 m   |vH       -0.00001 gon |vV        0.00018 gon |
+For M5|Adr   695|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   696|IP1  8980                      |vD        -0.0004 m   |vH       -0.00001 gon |vV        0.00061 gon |
+For M5|Adr   697|IP1   397                      |vD         0.0000 m   |vH        0.00001 gon |vV       -0.00018 gon |
+For M5|Adr   698|TI   s397                      |                      |                      |                      |
+For M5|Adr   699|TG  INTRODUCTION               |s        1.000153     |th         1.3710 m   |ih         1.5510 m   |
+For M5|Adr   700|TG  INTRODUCTION               |T_           15.9 C   |P           940.0 hPa |A          0.0000 m   |
+For M5|Adr   701|TI  TOURS HORIZONS             |                      |                      |                      |
+For M5|Adr   702|IP1                            |X      82526.7016 m   |Y      51925.0277 m   |                      |
+For M5|Adr   703|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   704|IP1  9000                      |SD        99.9181 m   |Hz      259.05551 gon |V1      102.55750 gon |
+For M5|Adr   705|IP1  9000                      |HD        99.8528 m   |Hz      259.05551 gon |h         -3.8323 m   |
+For M5|Adr   706|TI  INTRODUCTION               |s        1.000153     |th         0.0010 m   |ih         1.5510 m   |
+For M5|Adr   707|IP1     1 combressol (+)       |                      |Hz      241.72600 gon |V1       96.59630 gon |
+For M5|Adr   708|IP1   221 Maussac (+)          |                      |Hz      335.40893 gon |V1       98.25049 gon |
+For M5|Adr   709|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   710|IP1   221 Maussac (+)          |                      |Hz      135.40866 gon |V1      301.74872 gon |
+For M5|Adr   711|IP1     1 combressol (+)       |                      |Hz       41.72750 gon |V1      303.40200 gon |
+For M5|Adr   712|IP1  9000                      |SD        99.9180 m   |Hz       59.05518 gon |V1      297.44559 gon |
+For M5|Adr   713|IP1  9000                      |HD        99.8530 m   |Hz      259.05518 gon |h         -3.8274 m   |
+For M5|Adr   714|TI  MOYENNE TOUR 1             |                      |                      |                      |
+For M5|Adr   715|IP1  9000                      |SD        99.9181 m   |Hz      259.05534 gon |V1      102.55595 gon |
+For M5|Adr   716|IP1  9000                      |HD        99.8529 m   |Hz      259.05534 gon |h         -3.8298 m   |
+For M5|Adr   717|IP1     1 combressol (+)       |                      |Hz      241.72680 gon |V1       96.59710 gon |
+For M5|Adr   718|IP1   221 Maussac (+)          |                      |Hz      335.40880 gon |V1       98.25089 gon |
+For M5|Adr   719|TI  MESURE POS 1               |                      |                      |                      |
+For M5|Adr   720|IP1  9000                      |SD        99.9178 m   |Hz      259.05591 gon |V1      102.55606 gon |
+For M5|Adr   721|IP1  9000                      |HD        99.8526 m   |Hz      259.05591 gon |h         -3.8300 m   |
+For M5|Adr   722|IP1     1 combressol (+)       |                      |Hz      241.72730 gon |V1       96.59740 gon |
+For M5|Adr   723|IP1   221 Maussac (+)          |                      |Hz      335.40925 gon |V1       98.25023 gon |
+For M5|Adr   724|TI  MESURE POS 2               |                      |                      |                      |
+For M5|Adr   725|IP1   221 Maussac (+)          |                      |Hz      135.40790 gon |V1      301.74831 gon |
+For M5|Adr   726|IP1     1 combressol (+)       |                      |Hz       41.72760 gon |V1      303.40050 gon |
+For M5|Adr   727|IP1  9000                      |SD        99.9181 m   |Hz       59.05435 gon |V1      297.44593 gon |
+For M5|Adr   728|IP1  9000                      |HD        99.8530 m   |Hz      259.05435 gon |h         -3.8269 m   |
+For M5|Adr   729|TI  MOYENNE TOUR 2             |                      |                      |                      |
+For M5|Adr   730|IP1  9000                      |SD        99.9179 m   |Hz      259.05513 gon |V1      102.55507 gon |
+For M5|Adr   731|IP1  9000                      |HD        99.8528 m   |Hz      259.05513 gon |h         -3.8284 m   |
+For M5|Adr   732|IP1     1 combressol (+)       |                      |Hz      241.72750 gon |V1       96.59840 gon |
+For M5|Adr   733|IP1   221 Maussac (+)          |                      |Hz      335.40858 gon |V1       98.25096 gon |
+For M5|Adr   734|TI  TOTAL MOYENNE              |                      |                      |                      |
+For M5|Adr   735|IP1  9000                      |SD        99.9180 m   |Hz      259.05524 gon |V1      102.55551 gon |
+For M5|Adr   736|IP1  9000                      |HD        99.8528 m   |Hz      259.05524 gon |h         -3.8291 m   |
+For M5|Adr   737|IP1     1 combressol (+)       |                      |Hz      241.72710 gon |V1       96.59780 gon |
+For M5|Adr   738|IP1   221 Maussac (+)          |                      |Hz      335.40869 gon |V1       98.25092 gon |
+For M5|Adr   739|TI  ECART-TYPE MOYEN           |SD         0.0001 m   |SH        0.00027 gon |SV        0.00045 gon |
+For M5|Adr   740|TI  ECART-TYPE PT ISOLE        |sD         0.0001 m   |sH        0.00038 gon |sV        0.00064 gon |
+For M5|Adr   741|TI  RESIDUS 1                  |                      |                      |                      |
+For M5|Adr   742|IP1  9000                      |vD        -0.0001 m   |vH       -0.00015 gon |vV       -0.00044 gon |
+For M5|Adr   743|IP1     1 combressol (+)       |                      |vH        0.00030 gon |vV        0.00060 gon |
+For M5|Adr   744|IP1   221 Maussac (+)          |                      |vH       -0.00016 gon |vV        0.00004 gon |
+For M5|Adr   745|TI  RESIDUS 2                  |                      |                      |                      |
+For M5|Adr   746|IP1  9000                      |vD         0.0001 m   |vH        0.00015 gon |vV        0.00044 gon |
+For M5|Adr   747|IP1     1 combressol (+)       |                      |vH       -0.00030 gon |vV       -0.00060 gon |
+For M5|Adr   748|IP1   221 Maussac (+)          |                      |vH        0.00016 gon |vV       -0.00004 gon |
+For M5|Adr   749|TI  MESURE                     |                      |                      |                      |

@@ -1,0 +1,53 @@
+<html><head></head>
+<body>
+
+<h1>Roland JV-80 / JV-880</h1> 
+<h2>Multi Patch Editor</h2>
+
+<p>This patch editor ought to work properly with both the JV-80 and the JV-880.  However it has only been tested with the JV-880. Please let me know of any discrepancies you discover.
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Be sure to have the patch/perform button on your JV-80/880 set to "perform". When you set up MIDI in the patch editor, you can specify the MIDI channel and the Synth ID.  Set your synthesizer's Performance Receive channel ("Control channel", under System in Performance Mode, not to be confused with the Rx Channel) to the same as Edisyn's channel (perhaps Channel 16), and its "Unit number" to the same as Edisyn's Synth ID (perhaps 17).  Otherwise the JV-880 won't download the right patch to Edisyn.  Set Program Change, Bank Select, and Exclusive to ON.   Make sure write protect is off if you want to write changes.  Finally, make sure the Edit button is OFF or your JV won't respond properly.
+
+
+<br><br><h3>About the Menu</h3>
+
+Edisyn's MIDI channel is set to the Performance Receive (Control) Channel so Edisyn can change multimode patches.  To play a sound in a given part, yo'll need Edisyn to send note data out the appropriate Part channel.  To do this, just use the menu to set the Part you'd like Edisyn to play, and it will use the Receive Channel of that Part as you have set it in Edisyn.  If you use the menu to set the channel to the "default" channel, it'll use Edisyn's default MIDI output instead.
+
+<br><br><h3>Notes</h3>
+
+<ul>
+<li>The JV-80/880 has individual current working memory for each Part, as well as a <b>separate</b> current working memory for Patch mode.   When you press the "Show" button on a Part, Edisyn will load and display the Single patch from the current working memory of the appropriate part; but thereafter if you try reloading that patch from current memory, it'll come from the Patch Mode current memory (which will be a different part).  This might be confusing.  Additionally, the MIDI channel will be the MIDI channel of the current part.  To edit this part, it might be best to switch to Patch mode.
+
+<p><li>Part 8 is the <b>Rhythm Part</b>.  It can only be set to one of four rhythm sections: preset A, preset B, internal, and card.  The dial is the same as the other parts, but all patches (such as I62) will simply be displayed as I.
+
+<p><li>The <b>Show Button</b> for Part 8 (Rhythm) is special. If you press it, it'll launch a Roland JV880 [Drum] editor rather than a standard JV880 editor, and either the internal or card drumset, or will specially load the Preset A or Preset B drumset.
+</ul>
+
+<br><br><h3>Gotchas</h3>
+
+<ul>
+<li>You can't edit, and sometimes can't play notes, unless the Patch/Perform button is set to "Perform".  Edisyn tries to set this button programmatically when it can, but sometimes it won't get set -- for example, when you just change windows from the Multi editor to the Single Editor.  So if you're having difficulty, make sure the button is properly set.
+</ul>
+
+<br><br><h3>Librarian Support</h3>
+
+In order to download one performance patch, Edisyn must (1) change the patch/performance button to "performance" (2) send a change-bank request (3) send a program-change request (4) load the patch. The problem is that each of these tasks requires about a 700ms break afterwards or the JV-880 can get confused. As a result, loading patches into the Librarian at present is very, very slow: about 2-3 seconds per patch.  I'm sorry about that.  
+
+<p>Also note that if the JV-880 has failed to do any of these tasks, when Edisyn loads the patch proper, it'll load the previous patch. That's why, when you try to load all patches, the "Card" bank gets loaded with dummy patches equivalent to the last patch in the Internal bank: because they've all failed (there's no card).  
+
+<br><br><h3>Thanks</h3>
+Thanks to Keith (llamamusic@hotmail.com) for his extraordinary service in loaning a machine in a pinch, providing materials, and debugging.  If you are a JV-880 owner, <a href="llamamusic.com">llamamusic.com</a> is a fantastic resource.  Thanks also to Phillip Smith (p@phillip.cc) for
+assistance in debugging with the 1.0 firmware. 
+
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>April 2019
+</table>
+

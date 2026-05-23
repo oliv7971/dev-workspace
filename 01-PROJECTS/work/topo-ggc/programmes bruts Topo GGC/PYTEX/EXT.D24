@@ -1,0 +1,19 @@
+!MOSS
+!DELE,FTEXTE
+!CREA,FTEXTE
+!GENIO,FTEXTE
+!001,FORMAT(4F11.4/11A4)
+!017,GRAD
+!080,*V,7=15	    #message transmis sans traitement
+t 2  # hauteur des textes qui suivent en mm
+1273  ce le machin  #texte a caler au point 1273
+555  tyty rn 567
+t 3   # changement hauteur textes , angle pr‚c‚dent
+1258  tytut opiopi
+1265  aeza rert ioo hhkhk pipipp
+t 5
+a 123
+1265
+559 point 559
+3456 point 3456
+553 point 553

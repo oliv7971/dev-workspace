@@ -1,0 +1,967 @@
+
+ ** ATS Survey Ver2.00 **
+
+
+Title  :BOUA
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :2001         St.name:
+St.code:             Instr.h:0.0000
+Time   :13.42.31
+
+Temp.  :24
+PPM    :771
+PPM    :5
+Prism  :-30
+
+P.No.  :1            P.name :002
+Prism h:0.0000
+H.angle:288.4330
+V.angle:98.9810
+S.dist.:32.3500
+
+P.No.  :2            P.name :
+Prism h:0.0000
+H.angle:288.4330
+V.angle:98.9810
+S.dist.:0.0000
+
+P.No.  :3            P.name :03
+Prism h:0.0000
+H.angle:289.0520
+V.angle:98.9810
+S.dist.:22.8000
+
+Title  :
+Crew   :BOUAB
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3001         St.name:
+St.code:             Instr.h:0.0000
+Time   :15.56.48
+
+Temp.  :26
+PPM    :770
+PPM    :0
+Prism  :-30
+
+P.No.  :1            P.name :
+Prism h:0.0000
+H.angle:280.6930
+V.angle:100.8120
+S.dist.:37.8200
+
+P.No.  :2            P.name :
+Prism h:0.0000
+H.angle:288.6760
+V.angle:99.0260
+S.dist.:31.8300
+
+P.No.  :3            P.name :
+Prism h:0.0000
+H.angle:289.6190
+V.angle:99.0260
+S.dist.:22.2400
+
+P.No.  :4            P.name :
+Prism h:0.0000
+H.angle:313.0260
+V.angle:109.2740
+S.dist.:2.5000
+
+P.No.  :5            P.name :
+Prism h:0.0000
+H.angle:184.3300
+V.angle:101.9600
+S.dist.:5.1700
+
+P.No.  :6            P.name :
+Prism h:0.0000
+H.angle:70.7570
+V.angle:103.7120
+S.dist.:12.0800
+
+P.No.  :7            P.name :
+Prism h:0.0000
+H.angle:185.9430
+V.angle:99.4550
+S.dist.:14.1400
+
+P.No.  :8            P.name :
+Prism h:0.0000
+H.angle:298.7660
+V.angle:99.8710
+S.dist.:29.3500
+
+P.No.  :9            P.name :
+Prism h:0.0000
+H.angle:306.7170
+V.angle:99.8720
+S.dist.:28.0300
+
+P.No.  :10           P.name :
+Prism h:0.0000
+H.angle:329.2490
+V.angle:100.3210
+S.dist.:27.0400
+
+P.No.  :11           P.name :
+Prism h:0.0000
+H.angle:330.4990
+V.angle:100.5180
+S.dist.:22.1700
+
+P.No.  :12           P.name :
+Prism h:0.0000
+H.angle:331.9100
+V.angle:100.6850
+S.dist.:22.2300
+
+P.No.  :13           P.name :
+Prism h:0.0000
+H.angle:334.8340
+V.angle:101.0800
+S.dist.:17.6400
+
+P.No.  :14           P.name :
+Prism h:0.0000
+H.angle:343.8470
+V.angle:101.2080
+S.dist.:22.9700
+
+P.No.  :15           P.name :
+Prism h:0.0000
+H.angle:356.7230
+V.angle:101.2920
+S.dist.:24.8700
+
+P.No.  :16           P.name :
+Prism h:0.0000
+H.angle:361.1650
+V.angle:101.2320
+S.dist.:25.8500
+
+P.No.  :17           P.name :
+Prism h:0.0000
+H.angle:365.8050
+V.angle:101.4030
+S.dist.:27.1600
+
+P.No.  :18           P.name :
+Prism h:0.0000
+H.angle:375.4720
+V.angle:101.0820
+S.dist.:30.7200
+
+Title  :BOUAC
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3002         St.name:
+St.code:             Instr.h:0.0000
+Time   :16.14.46
+
+Temp.  :26
+PPM    :770
+PPM    :0
+Prism  :-30
+
+P.No.  :20           P.name :
+Prism h:0.0000
+H.angle:325.4600
+V.angle:111.1310
+S.dist.:2.5600
+
+P.No.  :21           P.name :
+Prism h:0.0000
+H.angle:301.4380
+V.angle:102.5090
+S.dist.:6.1500
+
+P.No.  :22           P.name :
+Prism h:0.0000
+H.angle:150.8630
+V.angle:102.1130
+S.dist.:13.3000
+
+P.No.  :23           P.name :
+Prism h:0.0000
+H.angle:74.6830
+V.angle:100.3560
+S.dist.:9.9000
+
+P.No.  :24           P.name :
+Prism h:0.0000
+H.angle:207.7680
+V.angle:102.1810
+S.dist.:11.9100
+
+P.No.  :25           P.name :
+Prism h:0.0000
+H.angle:271.4870
+V.angle:100.5910
+S.dist.:18.1900
+
+P.No.  :26           P.name :
+Prism h:0.0000
+H.angle:286.7350
+V.angle:100.2200
+S.dist.:17.6100
+
+P.No.  :27           P.name :
+Prism h:0.0000
+H.angle:292.0080
+V.angle:100.2200
+S.dist.:17.6900
+
+P.No.  :28           P.name :
+Prism h:0.0000
+H.angle:296.6300
+V.angle:100.8020
+S.dist.:15.7300
+
+Title  :BOUAD
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3003         St.name:
+St.code:             Instr.h:0.0000
+Time   :16.25.47
+
+Temp.  :25
+PPM    :770
+PPM    :0
+Prism  :-30
+
+P.No.  :30           P.name :
+Prism h:0.0000
+H.angle:270.2460
+V.angle:97.3840
+S.dist.:0.0000
+
+P.No.  :31           P.name :
+Prism h:0.0000
+H.angle:255.4030
+V.angle:99.4690
+S.dist.:8.4000
+
+P.No.  :32           P.name :
+Prism h:0.0000
+H.angle:194.9610
+V.angle:108.8530
+S.dist.:1.3900
+
+P.No.  :33           P.name :
+Prism h:0.0000
+H.angle:167.4020
+V.angle:103.6520
+S.dist.:13.0300
+
+P.No.  :34           P.name :
+Prism h:0.0000
+H.angle:152.3720
+V.angle:101.8260
+S.dist.:8.4200
+
+P.No.  :35           P.name :
+Prism h:0.0000
+H.angle:12.2560
+V.angle:111.9370
+S.dist.:2.8900
+
+P.No.  :36           P.name :
+Prism h:0.0000
+H.angle:325.4360
+V.angle:110.4510
+S.dist.:3.0200
+
+P.No.  :37           P.name :
+Prism h:0.0000
+H.angle:340.1870
+V.angle:96.1230
+S.dist.:0.0000
+
+P.No.  :38           P.name :
+Prism h:0.0000
+H.angle:340.1880
+V.angle:96.1260
+S.dist.:4.9000
+
+P.No.  :39           P.name :
+Prism h:0.0000
+H.angle:342.9740
+V.angle:97.4930
+S.dist.:4.7900
+
+P.No.  :40           P.name :
+Prism h:0.0000
+H.angle:311.5380
+V.angle:100.8000
+S.dist.:19.5900
+
+P.No.  :41           P.name :
+Prism h:0.0000
+H.angle:305.7210
+V.angle:100.8810
+S.dist.:22.6000
+
+P.No.  :42           P.name :
+Prism h:0.0000
+H.angle:305.2700
+V.angle:100.7240
+S.dist.:38.6100
+
+Title  :BOUAE
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3004         St.name:
+St.code:             Instr.h:0.0000
+Time   :16.39.04
+
+Temp.  :24
+PPM    :770
+PPM    :0
+Prism  :-30
+
+P.No.  :40           P.name :
+Prism h:0.0000
+H.angle:326.4880
+V.angle:97.3240
+S.dist.:16.3700
+
+P.No.  :41           P.name :
+Prism h:0.0000
+H.angle:334.8810
+V.angle:97.7090
+S.dist.:17.4600
+
+P.No.  :42           P.name :
+Prism h:0.0000
+H.angle:340.8180
+V.angle:97.8520
+S.dist.:20.3600
+
+P.No.  :43           P.name :
+Prism h:0.0000
+H.angle:342.3330
+V.angle:98.3550
+S.dist.:24.5200
+
+P.No.  :44           P.name :
+Prism h:0.0000
+H.angle:345.0740
+V.angle:97.7690
+S.dist.:22.6400
+
+P.No.  :45           P.name :
+Prism h:0.0000
+H.angle:354.2120
+V.angle:99.0200
+S.dist.:18.2200
+
+P.No.  :46           P.name :
+Prism h:0.0000
+H.angle:392.5930
+V.angle:101.0410
+S.dist.:13.0700
+
+P.No.  :47           P.name :
+Prism h:0.0000
+H.angle:25.4700
+V.angle:96.9920
+S.dist.:22.0400
+
+P.No.  :48           P.name :
+Prism h:0.0000
+H.angle:158.1200
+V.angle:100.2810
+S.dist.:11.6100
+
+P.No.  :49           P.name :
+Prism h:0.0000
+H.angle:202.3440
+V.angle:101.8760
+S.dist.:31.8800
+
+P.No.  :50           P.name :
+Prism h:0.0000
+H.angle:228.2970
+V.angle:100.9850
+S.dist.:9.2400
+
+P.No.  :51           P.name :
+Prism h:0.0000
+H.angle:251.0490
+V.angle:99.1290
+S.dist.:13.0800
+
+P.No.  :52           P.name :
+Prism h:0.0000
+H.angle:253.4900
+V.angle:98.9280
+S.dist.:27.3900
+
+P.No.  :53           P.name :
+Prism h:0.0000
+H.angle:252.1300
+V.angle:99.2050
+S.dist.:28.0600
+
+P.No.  :54           P.name :
+Prism h:0.0000
+H.angle:246.0950
+V.angle:99.2810
+S.dist.:31.4400
+
+P.No.  :55           P.name :
+Prism h:0.0000
+H.angle:245.2010
+V.angle:99.4090
+S.dist.:32.0100
+
+P.No.  :56           P.name :
+Prism h:0.0000
+H.angle:243.1230
+V.angle:101.6300
+S.dist.:23.5100
+
+P.No.  :57           P.name :
+Prism h:0.0000
+H.angle:241.2950
+V.angle:99.5610
+S.dist.:23.8400
+
+Title  :BOUAF
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3005         St.name:
+St.code:             Instr.h:0.0000
+Time   :17.00.18
+
+Temp.  :24
+PPM    :770
+PPM    :0
+Prism  :-30
+
+P.No.  :60           P.name :
+Prism h:0.0000
+H.angle:157.0630
+V.angle:96.4300
+S.dist.:15.7500
+
+P.No.  :61           P.name :
+Prism h:0.0000
+H.angle:157.0640
+V.angle:96.4310
+S.dist.:19.6300
+
+P.No.  :62           P.name :
+Prism h:0.0000
+H.angle:163.8500
+V.angle:97.3760
+S.dist.:21.5700
+
+P.No.  :63           P.name :
+Prism h:0.0000
+H.angle:163.8500
+V.angle:97.3770
+S.dist.:0.0000
+
+P.No.  :64           P.name :
+Prism h:0.0000
+H.angle:168.3080
+V.angle:97.6010
+S.dist.:23.2300
+
+P.No.  :65           P.name :
+Prism h:0.0000
+H.angle:169.2810
+V.angle:97.6680
+S.dist.:23.6700
+
+P.No.  :66           P.name :
+Prism h:0.0000
+H.angle:173.2090
+V.angle:97.6680
+S.dist.:26.2200
+
+P.No.  :67           P.name :
+Prism h:0.0000
+H.angle:174.1740
+V.angle:97.6670
+S.dist.:26.8200
+
+Title  :BOUAG
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3006         St.name:
+St.code:             Instr.h:0.0000
+Time   :17.28.10
+
+Temp.  :25
+PPM    :770
+PPM    :0
+Prism  :-30
+
+St.No. :3006         St.name:
+St.code:             Instr.h:0.0000
+Time   :17.28.38
+
+Temp.  :25
+PPM    :770
+PPM    :0
+Prism  :-30
+
+Title  :BOUAG
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3006         St.name:
+St.code:             Instr.h:0.0000
+Time   :17.30.07
+
+Temp.  :24
+PPM    :770
+PPM    :0
+Prism  :-30
+
+Title  :BOUAH
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3007         St.name:
+St.code:             Instr.h:0.0000
+Time   :17.36.31
+
+Temp.  :25
+PPM    :770
+PPM    :6
+Prism  :-30
+
+P.No.  :70           P.name :
+Prism h:0.0000
+H.angle:194.0580
+V.angle:104.5540
+S.dist.:5.9200
+
+P.No.  :71           P.name :
+Prism h:0.0000
+H.angle:142.3230
+V.angle:101.3730
+S.dist.:5.3700
+
+P.No.  :72           P.name :
+Prism h:0.0000
+H.angle:134.5820
+V.angle:101.3740
+S.dist.:8.1500
+
+P.No.  :73           P.name :
+Prism h:0.0000
+H.angle:124.6160
+V.angle:101.3220
+S.dist.:8.8500
+
+P.No.  :74           P.name :
+Prism h:0.0000
+H.angle:86.0970
+V.angle:99.9680
+S.dist.:19.2400
+
+P.No.  :75           P.name :
+Prism h:0.0000
+H.angle:85.0670
+V.angle:99.9680
+S.dist.:20.0500
+
+P.No.  :76           P.name :
+Prism h:0.0000
+H.angle:83.4780
+V.angle:99.9670
+S.dist.:21.4900
+
+P.No.  :77           P.name :
+Prism h:0.0000
+H.angle:57.4320
+V.angle:98.9410
+S.dist.:16.2900
+
+P.No.  :78           P.name :
+Prism h:0.0000
+H.angle:20.2540
+V.angle:99.9990
+S.dist.:19.5900
+
+P.No.  :79           P.name :
+Prism h:0.0000
+H.angle:4.4210
+V.angle:105.3030
+S.dist.:11.2500
+
+P.No.  :80           P.name :
+Prism h:0.0000
+H.angle:8.9330
+V.angle:102.7980
+S.dist.:19.3300
+
+P.No.  :81           P.name :
+Prism h:0.0000
+H.angle:5.3100
+V.angle:100.4080
+S.dist.:59.3600
+
+P.No.  :82           P.name :
+Prism h:0.0000
+H.angle:251.9740
+V.angle:106.7960
+S.dist.:4.7600
+
+P.No.  :83           P.name :
+Prism h:0.0000
+H.angle:198.1270
+V.angle:95.7950
+S.dist.:22.1000
+
+P.No.  :84           P.name :
+Prism h:0.0000
+H.angle:208.0140
+V.angle:102.5020
+S.dist.:25.7600
+
+P.No.  :85           P.name :
+Prism h:0.0000
+H.angle:210.3340
+V.angle:102.4490
+S.dist.:26.9000
+
+P.No.  :86           P.name :
+Prism h:0.0000
+H.angle:213.3820
+V.angle:101.7910
+S.dist.:28.6300
+
+P.No.  :87           P.name :
+Prism h:0.0000
+H.angle:214.3330
+V.angle:100.8210
+S.dist.:29.2200
+
+Title  :BOUAG
+Crew   :
+Date   :1996-06-24   Instr. :ATS05518959
+
+St.No. :3007         St.name:
+St.code:             Instr.h:0.0000
+Time   :18.04.52
+
+Temp.  :26
+PPM    :770
+PPM    :0
+Prism  :-30
+
+P.No.  :80           P.name :
+Prism h:0.0000
+H.angle:256.6360
+V.angle:100.3830
+S.dist.:28.0000
+
+P.No.  :81           P.name :
+Prism h:0.0000
+H.angle:255.4640
+V.angle:103.6340
+S.dist.:14.0300
+
+P.No.  :82           P.name :
+Prism h:0.0000
+H.angle:332.6630
+V.angle:97.2060
+S.dist.:9.5900
+
+P.No.  :83           P.name :
+Prism h:0.0000
+H.angle:219.8120
+V.angle:103.5300
+S.dist.:11.4200
+
+P.No.  :84           P.name :
+Prism h:0.0000
+H.angle:216.4960
+V.angle:106.3260
+S.dist.:11.9700
+
+P.No.  :85           P.name :
+Prism h:0.0000
+H.angle:213.4740
+V.angle:100.6280
+S.dist.:23.1900
+
+P.No.  :86           P.name :
+Prism h:0.0000
+H.angle:208.7890
+V.angle:100.4540
+S.dist.:24.9700
+
+P.No.  :87           P.name :
+Prism h:0.0000
+H.angle:201.2960
+V.angle:100.0420
+S.dist.:24.6900
+
+P.No.  :88           P.name :
+Prism h:0.0000
+H.angle:186.8110
+V.angle:99.5050
+S.dist.:25.2900
+
+P.No.  :89           P.name :
+Prism h:0.0000
+H.angle:190.4010
+V.angle:99.4440
+S.dist.:31.8600
+
+P.No.  :90           P.name :
+Prism h:0.0000
+H.angle:167.6640
+V.angle:95.5450
+S.dist.:20.4300
+
+P.No.  :91           P.name :
+Prism h:0.0000
+H.angle:145.2540
+V.angle:100.0560
+S.dist.:13.9900
+
+P.No.  :92           P.name :
+Prism h:0.0000
+H.angle:139.2840
+V.angle:94.3510
+S.dist.:13.1000
+
+P.No.  :93           P.name :
+Prism h:0.0000
+H.angle:116.4440
+V.angle:99.8620
+S.dist.:0.0000
+
+P.No.  :94           P.name :
+Prism h:0.0000
+H.angle:116.4450
+V.angle:99.8620
+S.dist.:11.3600
+
+P.No.  :95           P.name :
+Prism h:0.0000
+H.angle:102.4390
+V.angle:100.0890
+S.dist.:11.1400
+
+P.No.  :96           P.name :
+Prism h:0.0000
+H.angle:94.3020
+V.angle:99.6740
+S.dist.:11.2400
+
+P.No.  :97           P.name :
+Prism h:0.0000
+H.angle:72.0090
+V.angle:102.6820
+S.dist.:5.2900
+
+P.No.  :98           P.name :
+Prism h:0.0000
+H.angle:0.4170
+V.angle:105.9550
+S.dist.:3.1400
+
+P.No.  :99           P.name :
+Prism h:0.0000
+H.angle:367.1580
+V.angle:104.8860
+S.dist.:4.2000
+
+Title  :COFI
+Crew   :
+Date   :1996-06-25   Instr. :ATS05518959
+
+St.No. :2001         St.name:
+St.code:             Instr.h:1.6700
+Time   :09.10.56
+
+Temp.  :18
+PPM    :763
+PPM    :0
+Prism  :-30
+
+P.No.  :2002         P.name :
+Prism h:1.3000
+H.angle:0.0000
+V.angle:101.0270
+S.dist.:34.0900
+
+P.No.  :1            P.name :
+Prism h:1.3000
+H.angle:371.2940
+V.angle:101.9990
+S.dist.:16.0000
+
+P.No.  :2            P.name :
+Prism h:1.3000
+H.angle:370.7840
+V.angle:101.5930
+S.dist.:20.9900
+
+P.No.  :3            P.name :
+Prism h:1.3000
+H.angle:370.5720
+V.angle:101.3600
+S.dist.:25.9800
+
+P.No.  :4            P.name :
+Prism h:1.3000
+H.angle:363.1020
+V.angle:101.0970
+S.dist.:26.0400
+
+P.No.  :5            P.name :
+Prism h:1.3000
+H.angle:361.6430
+V.angle:101.2530
+S.dist.:21.0700
+
+P.No.  :6            P.name :
+Prism h:1.3000
+H.angle:359.3930
+V.angle:101.4850
+S.dist.:16.1200
+
+P.No.  :7            P.name :
+Prism h:1.3000
+H.angle:345.8590
+V.angle:101.0510
+S.dist.:16.9400
+
+P.No.  :8            P.name :
+Prism h:1.3000
+H.angle:351.1510
+V.angle:100.9400
+S.dist.:21.6900
+
+P.No.  :9            P.name :
+Prism h:1.3000
+H.angle:354.4870
+V.angle:100.8520
+S.dist.:26.5200
+
+P.No.  :10           P.name :
+Prism h:1.3000
+H.angle:320.7840
+V.angle:101.0030
+S.dist.:35.0500
+
+P.No.  :11           P.name :
+Prism h:1.3000
+H.angle:313.8390
+V.angle:101.0530
+S.dist.:31.6100
+
+P.No.  :12           P.name :
+Prism h:1.3000
+H.angle:305.3030
+V.angle:101.0990
+S.dist.:28.6700
+
+P.No.  :13           P.name :
+Prism h:1.3000
+H.angle:308.6050
+V.angle:100.9660
+S.dist.:26.6400
+
+P.No.  :14           P.name :
+Prism h:1.3000
+H.angle:317.3190
+V.angle:100.9230
+S.dist.:29.8000
+
+P.No.  :15           P.name :
+Prism h:1.3000
+H.angle:324.2370
+V.angle:100.8810
+S.dist.:33.4300
+
+P.No.  :16           P.name :
+Prism h:1.3000
+H.angle:330.0270
+V.angle:100.7490
+S.dist.:31.2800
+
+P.No.  :17           P.name :
+Prism h:2.0000
+H.angle:323.2960
+V.angle:99.1430
+S.dist.:27.3300
+
+P.No.  :18           P.name :
+Prism h:1.3000
+H.angle:314.4740
+V.angle:100.8200
+S.dist.:23.8300
+
+St.No. :2002         St.name:
+St.code:             Instr.h:1.6270
+Time   :09.36.55
+
+Temp.  :19
+PPM    :762
+PPM    :0
+Prism  :-30
+
+P.No.  :2001         P.name :
+Prism h:1.3000
+H.angle:0.0000
+V.angle:100.3360
+S.dist.:34.0800
+
+P.No.  :19           P.name :
+Prism h:1.3000
+H.angle:58.2520
+V.angle:100.1240
+S.dist.:25.9500
+
+P.No.  :20           P.name :
+Prism h:1.3000
+H.angle:46.6830
+V.angle:100.0600
+S.dist.:27.2400
+
+P.No.  :21           P.name :
+Prism h:1.3000
+H.angle:36.4520
+V.angle:99.9720
+S.dist.:29.3300
+
+P.No.  :22           P.name :
+Prism h:1.3000
+H.angle:40.7540
+V.angle:100.0130
+S.dist.:33.5400
+
+P.No.  :23           P.name :
+Prism h:1.3000
+H.angle:49.8260
+V.angle:100.0700
+S.dist.:31.7100
+
+P.No.  :24           P.name :
+Prism h:1.3000
+H.angle:59.7670
+V.angle:100.1390
+S.dist.:30.5800
+
+
+
+
+

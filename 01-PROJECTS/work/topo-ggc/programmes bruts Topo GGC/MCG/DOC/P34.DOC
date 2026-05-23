@@ -1,0 +1,1195 @@
+                         Pytha-Topo R920301 Page 34.1
+
+
+
+                  AUTOMATE DE CALCUL DU CANEVAS ET DES DETAILS
+                  --------------------------------------------
+
+
+	1-INTRODUCTION
+	--------------
+
+	       Ce module permet le calcul des leves en XY(Z) d'une fa‡on
+	entierement automatique.
+
+	Les observations comportent des mesures d'angle et de distance.
+	Les points de canevas peuvent etre determines  par une combinai-
+	son relevement et/ou intersection et/ou trilateration.
+	La  notion de canevas d'appui ou de detail n'intervient pas dans
+	le mode de calcul, toutes les observations sont traitees en bloc
+	par la methode des moindres carres. Il n'y a ainsi aucune diffe-
+	rence de traitement entre un reseau triangule et un reseau poly-
+	gonal.
+
+	Des facilites d'utilisation permettent de separer le  calcul des
+	stations et des points  de  details : cas de levers  urbains par
+	exemple , ou des levers  comportant un grand nombre de points de
+	details  et de  stations de canevas  observes au cours des memes
+	operations de terrain.
+
+	Les  capacites de traitement permettent de calculer des dossiers
+	de plusieurs centaines de stations (les limites sont affichees a
+	la console) .
+
+	Les REPRISES sont traitees  s'il y a au moins une visee  commune
+	entre  les stations multiples. Les stations comportant plusieurs
+	TOURS D'HORIZON  sont des reprises , il  n'y  a  en effet aucune
+	difference de traitement entre reprises  et  tours a 0, 100, 50,
+	etc... grades, sauf une remise en station pour les reprises avec
+	en  general  une  hauteur  instrument  differente . Chaque  tour
+	d'horizon sera donc note dans les carnets comme un changement de
+	station , les n  "reprises"  se trouvant dans ce cas  a la suite
+	les unes des autres.
+
+        Aucun ordre de calcul n'est necessaire. Le reseau en XY et Z est
+        reconstitue par le programme :  s'il est calculable le programme
+        doit le calculer . Des qu'un  point apparait  au moins deux fois
+	dans les donnees, a partir de stations differentes, il est inte-
+	gre au canevas . Ceci implique que deux points  geographiquement
+	distincts ne doivent pas porter  le meme numero.
+
+	Suivant le mode choisi par  l'utilisateur , LOCAL ou ISOLE , les
+	observations seront exploitees differemment par le programme.
+
+	En mode LOCAL le reseau doit etre calculable dans un systeme in-
+	dependant : cas des leves rattaches ou non. Si des points connus
+	sont fournis , le reseau sera cale par transformation lineaire
+	(translation,rotation et mise a l'echelle : Helmert) , avec
+	residus	sur les points d'appui, puis sur consigne les residus
+	seront mis a zero.
+                         Pytha-Topo R920301 Page 34.2
+
+
+
+	1-INTRODUCTION (suite)
+
+	L'algorithme de calcul utilise permet la reconstitution logique
+	du canevas a partir des observations et  des points connus . De
+	plus  le  mode local  permet  de  separer  les  residus dus aux
+	erreurs d'observations de ceux dus  a  l'imprecision des points
+	d'appui.
+
+	En mode " ISOLE ", les donnees contiennent des leves non  ratta-
+	ches entre eux, s'appuyant sur des points connus. Cela peut etre
+	le cas  de  leves de  mise a jour  en milieu urbain par  exemple
+	ou l'on a plusieurs operations de faible  etendue  independantes
+	les uns des autres . Ces levers sont rattaches  a  un reseau ge-
+	neral par l'intermediaire de canevas secondaires  ou de  reperes
+	permettant  de se  mettre en station libre  :  terme utilise par
+	plusieurs  constructeurs  de  stations  automatiques  signifiant
+	relevement sur des points situes a faible distance de la station.
+	P34 permet de faire de telles observations et dans certains  cas
+	d'operer plus  simplement  sur le terrain . Les leves sont cales
+	directement  sur  les  points  connus a  partir  d'un algorithme
+	simplifie de reconstitution logique du canevas .
+
+
+
+
+        La methode de calcul est basee sur les remarques suivantes :
+
+           - precisions des levers equivalents en angle et distance avec
+	     les appareils de mesure automatique (1)
+	         a un km, 1 mgr = 1 cm 57
+
+           - Acquisition fiable en saisie automatique
+
+        Au dela du km (reseau a grands et moyens cotes) si la  precision
+        entre les  angles  et les distances  n'est  pas  coherente,  les
+        resultats risquent d'etre errones (2) dans ce cas  utiliser  P57
+        (la methode utilisee est conforme a la theorie).
+        Pour  les levers moyens,  on aura interet a faire des visees  de
+        controle transversales afin d'avoir un reseau controle.
+
+        S'il n'y a aucun controle , les ecarts aux  observations  seront
+        toujours nuls !!!
+
+
+
+
+
+
+
+
+
+
+
+        (1) Les observations ont le meme poids.
+
+        (2)  Resultats  compatibles  avec les  donnees.Si  l'appareil de
+        mesure  angulaire  donne  le cg,  inutile de mesurer le  km  a 1
+        cm, aucun programme de calcul n'ameliorera la precision.
+                         Pytha-Topo R920301 Page 34.3
+
+
+
+        2 - LES DONNEES
+        ---------------
+
+        Les donnees concernant une station  doivent etre groupees.
+        Les numeros des points nuls sont incrementes de 1 par rapport au
+        point precedent (il faut au moins un numero non nul).
+	Les numeros des points doivent etre compris entre 1 et 999999998
+	sauf 999999 .
+
+	Les donnees peuvent etre saisies avec un editeur en format libre
+	separateur espace ou virgule . Le module P33 genere  un  fichier
+	carnet d'observations directement exploitable par P34 et par  le
+	module P44 (polygonation).
+
+		titre
+		parametres ( voir ci-dessous )
+		GEODESIE ( ou ANCIENS )
+                N  X  Y  Z  Point connu en XYZ
+		N  0  0  Z  -----------------Z
+		N  X  Y  0  ----------------XY
+		N  0  Y  0  ----------------XY
+		N  X  0  0  ----------------XY
+		999999 ou 999999999
+		P33   		    ou	 P33V36
+		NS NP DH AH AV LM        NS NP DH AH AV LM HT
+		observations
+		.......
+		.......
+		999999 ou 99999999 (facultatif)
+
+	Pour introduire un Z nul, donner 0.000001 m .
+	Pour avoir X(Y) nul, donner 0.000001 m .
+
+
+	3 - PARAMETRES   valeurs par defaut (vd)
+	--------------
+
+
+        ITER    max      (50)
+            	Nombre d'it‚rations … ne pas d‚passer pour le calcul  du
+		bloc . Pendant le calcul, le programme affiche le num‚ro
+		d'it‚ration iter et une valeur Norme qui doit diminuer …
+		chaque  it‚ration :  systŠme convergent.
+
+	EPSPOINT epspoint   pour arrˆter les it‚rations d'un point
+				(0.0003)
+
+	EPSBLOC  epsbloc    pour arrˆter les it‚rations du bloc
+			    le calcul est arrˆt‚ si  Norme inf EPSB ou
+			    ITER inf MAX (ITER max)  (0.00000010)
+
+	TOLECHEL tolechel tolerance/echelles locales
+			(0.01 = 1metre a 100m)
+
+        TOLD    told    (0.10)  metres
+            	Le programme calcule la moyenne des distances observ‚es.
+	    	S'il y a des  ‚carts > told  le calcul est abandonn‚.
+		La tolerance sur la geodesie est 2*told.
+                         Pytha-Topo R920301 Page 34.4
+
+
+
+	3 - PARAMETRES (suite)   valeurs par defaut (vd)
+
+        TOLZ     tolz    (0.20)  metres
+            		toute vis‚e ayant un dZ sup a tolz est ‚limin‚e.
+
+	ZMOYEN		metres              (0)
+
+	PROJECTION	+- mm par km        (0)
+
+	CORDISTANCE     metres par port‚e   (0)
+
+	PARALLAXE  mm   excentrement axe optique et distancemetre (0)
+
+	COLVER  cv grades  (0.0000) correction de collimation verticale
+
+	tolerances pour le balancement des stations reprises, visees
+	communes aux tours d'horizon
+
+	TOLRAH	ah grades    (0.0050)
+	TOLRAV	av grades    (0.0200)
+	TOLRDH	dh metres    (0.050)
+	TOLRDZ	dz metres    (0.050)
+
+	DISTPENTE les distances sous la colonne dh sont suivant la pente
+		  distances horizontales par defaut
+
+ 	SUPITER1  pas d'edition de la premiere iteration
+
+ 	SUPITERN  pas d'edition de la derniere iteration
+
+	CODIFICATION type   du fichier N X Y Z code(s) , 1 ou 2
+	 		type 1 n x y z code c2 c3 c4 c5
+	 		type 2 n x y z 123 4 5 678    code … 8 carat‚res
+
+	$P57 	passer la main a P57 (passer a 0 sur pts d'appui)
+
+	GAUSS  ‚diter la table des fr‚quences des ‚carts
+
+	ZOFF   ne pas calculer les Z
+
+	QD2    valeur par defaut 6.57895 ( valeur utilis‚e qd2/10E7 )
+
+
+	ISOLE  passer le calcul en mode isole
+
+	Ce mode entraine l'appel a P57 sans passage par le calcul local.
+	Des messages du type "   n  incalculable " peuvent etre ‚mis par
+	P57 , si l'ordre de pr‚sentation des donn‚es ne correspond pas …
+	l'ordre du calcul de la premiere it‚ration . P57 fait  plusieurs
+	essais et interrompt  le  traitement  si  effectivement l'un des
+	ensembles ne peut ˆtre calcul‚ . P34 peut ‚mettre dans  certains
+	cas le message  " Station sans V0  n " .
+
+        Les observations constituent  des  ensembles independants, et ne
+	peuvent etre trait‚es en mode local : pas de  liaisons entre les
+	groupes de mesures .
+	Si toutes les stations sont connues , valider le mode ISOLE . Le
+	module calcule les Vos et les points de d‚tail.
+                         Pytha-Topo R920301 Page 34.5
+
+
+
+	mode ISOLE (suite)
+
+	Exemple d'application
+	Compl‚ments de lev‚ dans une zone ou la densit‚ du  canevas  est
+	suffisante et pr‚cise : reperes en XYZ d‚termin‚s lors des  op‚-
+	rations de canevas .
+	Les stations peuvent etre connues ou inconnues en XY  et/ou  Z .
+	P34 calcule les ‚l‚ments inconnus de  chaque  ensemble . La base
+	des  points connus  ( GEODESIE )  doit  permettre  de  faire les
+	calculs.
+	Le canevas d'un lev‚ est du meme type que le  canevas  g‚n‚ral :
+	triangulation , trilat‚ration , cheminements , combinaison   des
+	m‚thodes pr‚c‚dentes, stations isol‚es.
+
+	S'il y a trop d'erreurs " n incalculable " , le  traitement  est
+	interrompu . Cela peut se produire si le r‚seau est important et
+	calculable en mode "local" : mode "isol‚"  inadapt‚ . Le  calcul
+	en mode "local" doit permettre de r‚soudre le problŠme : passage
+	de la solution approch‚e au module P57 .
+
+
+	exemple d'en-tete de fichier de donnees
+
+	iter 500
+	#zoff
+	schema 	10000 1.8  #ignore par p34, valide pour p44
+	gauss	   # sortir le classement des ecarts
+	qd2 6.57895  # qd utilis‚ = 6.57895e-8
+	tolz 0.20  # 200 mm / Dz
+	told 0.20  # 200 mm / distances, 400 mm sur geodesie
+	$p57 trilater #passer la main a P57 (passer a 0 sur pts d'appui)
+	#		  calcul en mode trilateration
+	Zmoyen 0000 metres
+	projection 000 mm/km
+	cordistance 0.000  metres par portee
+	epspoint 0.0003
+	epsbloc 0.00000010
+	#tolerances pour le balancement des stations reprises debut
+	tolrah 0.0050  #  5 mgr / ang hor
+	tolrav 0.0200  # 20 mgr / ang vert
+	tolrdh 0.050   # 50 mm / delta Distance
+	tolrdz 0.050   # 50 mm / Delta Z
+	#tolerances pour le balancement des stations reprises fin
+	tolechel 0.002 #tolerance/echelles locales (0.002 = 20cm a 100m)
+	parallaxe 0 #excentrement  axes optique et distancemetre en mm
+ 	supiter1 # pas d'edition de la premiere iteration
+ 	supitern # pas d'edition de la derniere iteration
+	codification  2  # type du fichier N X Y Z code(s) , 1 ou 2
+	#distpente # les distances sont suivant la pente
+	geodesie
+	999999
+
+	Cet en-tete est celui utilise par P33  pour  generer  le  carnet
+	passe a P34 . Il se trouve  dans le fichier P033P034.MCG sous la
+	ligne PARA.P33  .
+                         Pytha-Topo R920301 Page 34.6
+
+
+
+        4 - TRAITEMENT
+        --------------
+
+
+	4-1 Mode local
+
+	a/ S'il y a des stations reprises ( reprises et stations compor-
+	tant plusieurs tours d'horizon ) ,  celles-ci  sont balancees et
+	ramenees a la premiere station rencontree . Il faut au moins une
+	visee commune entre les reprises. Le balancement est effectue en
+	planimetrie : angles horizontaux, et en altimetrie : hauteur des
+	tourillons et lectures sur mire. Le traitement est arrete si des
+	reprises sont erronnees.
+	Les  resultats sont sortis dans l'ordre croissant des numeros de
+	station.
+
+	b/ reconstitution logique du canevas a partir des observations.
+	Verifier si le reseau correspond aux previsions , des erreurs de
+	saisie peuvent donner des stations/intersections imprevues . Les
+	erreurs d'identification conduisent a des incoherences dans les
+	calculs . Avec les stations automatiques , les saisies manuelles
+	les plus frequemment entachees de fautes sont les hauteurs de
+	mire, de tourillon, et les changements de point vise.
+
+	c/ verification des distances directe et inverse, moyenne et
+	corrections des mesures ( projection, zmoyen,...).
+
+        d/ choix de deux points fixes du reseau ( base ), critere :
+	  1er   point = station ayant le plus de visees
+	  2eme  point = point de la station precedente ayant la distance
+	  		maxi et etant lui-meme stationne.
+
+        e/ calcul d'une solution approchee du reseau dans le systeme des
+	deux stations precedentes. Le calcul est effectue a l'avancement
+	a partir de la base.
+	A chaque redondance de donnees sur un point, le programme calcule
+	le coefficient d'echelle de la transformation entre les deux jeux
+	de coordonnees integrant les coordonnees precedemment et nouvel-
+	lement calculees du point . La variation d'echelle affichee doit
+	etre proche de 0 . Des variations importantes sont  generalement
+	l'indice d'une faute d'identification . Si une ou plusieurs sta-
+	tions ont un coefficient hors tolerance, le calcul est abandonne.
+	La faute peut etre detectee en tronquant une des branches condui-
+	sant a la station en cause.
+
+        nota : Le coefficient d'echelle indique a chaque station (calcul
+               approche)  est  calcule avec les  visees  disponibles  au
+               moment  du  calcul  du  point ,   l'echelle  moyenne  est
+               ponderee (le poids de chaque station est une fonction des
+               distances qui croit avec la distance).
+
+	f/ compensation du bloc par la methode des moindres carres.
+	Les calculs sont effectues comme pour la section 57, option tri-
+	lateration :  ( S(vi*di)**2 + S(vd)**2 )  minima
+	avec vi=Gc-Go, di=distance, vd=Dc-Do .
+                         Pytha-Topo R920301 Page 34.7
+
+
+
+	4-2 Mise en place sur les points connus
+
+
+	Planimetrie
+
+        S'il y a des points connus en XY,le reseau local est cale sur le
+	reseau general : Helmert. Les coordonnees des points connus sont
+	modifiees, mais l'homogeneite des observations est conservee.
+	Si la consigne $P57 a ete fournie, le calcul de compensation  du
+	bloc est repris ; on passe  a  zero  sur les points d'appui : la
+	geodesie de base est conservee. P34 genere un fichier  R34??.D57
+	ayant la  forme requise par P57. Voir la section 57 pour plus de
+	details.
+
+	Les ecarts par visee se trouvent dans le fichier R34??.ECA .
+
+	Le fichier general P033P034.MCG doit contenir la zone   PARA.P34
+	definissant les parametres a passer a P57 .
+
+
+	Altimetrie
+
+	S'il y a au moins un point connu en Z , les altitudes  du reseau
+	sont calculees par appel du module P41 : donnees dans R34??.D41.
+
+        P34 genere un fichier R34??.D41 ayant la  forme requise par P41.
+	La geodesie a la forme GEODESIE 2,
+	et les observations    OBSE 0 P41 (3eme forme) .
+        Voir la section 41 pour plus de details.
+
+	Les ecarts par visee se trouvent dans le fichier R41??.ECA .
+
+	Le fichier general P033P034.MCG doit contenir la zone   PA41.P34
+	definissant les parametres a passer a P41 .
+
+        Les points connus en Z peuvent etre des points  de details.
+	Les distances utilisees sont calculees a partir des coordonnees.
+	Si le point vise en Z n'est  pas   dans le reseau local, il doit
+	avoir une distance non nulle, sauf si AV = 100 	Grades .
+
+
+	4-3 Calcul des points de detail
+
+	S'il n'y a pas de points  incalculables (canevas), les points de
+	details sont calcules et edites dans le fichier  resultats  sous
+	la forme
+			N X Y Z ( code(s) )
+
+	Si  le  carnet  a  ete genere par le module P33 , les codes sont
+	recuperes dans le fichier " nom.CPT " et inseres dans le fichier
+	" nom.CDI ".
+
+	La  correction QD2 (niveau apparent) est appliquee aux points de
+	details.Les points ayant une lecture mire ( lm ) = -0.001 (-1mm)
+	ne sont	pas calcules en Z (Z = 0) .
+                         Pytha-Topo R920301 Page 34.8
+
+
+
+	5 - REMARQUES
+	-------------
+
+	Parametre EPSBLOC
+	epsbloc est un critere permettant de mener a son terme le calcul
+	numerique . On peut etre amene a diminuer epsbloc pour accelerer
+	le  calcul de blocs importants comportant des incoherences : me-
+	sures de precision  differentes , manque d'homogeneite du reseau
+	(visees de rattachement melangees avec les observations de calcul
+	 etc...)
+
+	Si les observations ont ete conduites de facon a avoir un reseau
+        local  controle,  alors les fautes doivent faire apparaitre  les
+        anomalies suivantes :
+
+             - Le  nombre  d'iteration est grand par rapport a un reseau
+               sans fautes d'observations.
+
+             - Fautes angulaires : ecarts maxi de l'ordre de grandeur de
+               la faute.
+
+             - Fautes de distances ; echelles tres differentes de 1
+
+             - Ecarts anormaux sur les points connus en XY
+
+        Le calcul des Z tient compte des tolerances fournies.
+
+	Les elements du canevas sont edites dans le fichier R34??.CAN .
+
+	S'il y a des  intersections  dans le reseau , celles-ci  doivent
+	etre franches. Si un point mal determine sert  de point d'appui,
+	la mise en place en XY peut etre aberrante. Si l'on veut de bons
+	resultats, le reseau local doit etre bien conforme.
+
+	Les observations incoherentes (precisions differentes) donneront
+	des resultats incoherents . De meme les ecarts de longueur entre
+	les visees de canevas , visees de 1 m a 1 km par exemple. Ne pas
+	utiliser  le  meme  numero pour un point double que vous  voulez
+	controler si celui-ci risque de perturber le canevas : point a 3
+	metres d'une station, vise a partir d'une autre station situee a
+	300 m, sauf a prendre les precautions necessaires pour le ratta-
+	chement a 3 metres. Si les points doubles sont utilises, il faut
+	les determiner avec le meme soin que les stations.
+
+	Les fichiers de saisie (verifies) de la section 30, au format P36
+	utilises en entree de P34 sont incompatibles avec P34 . S'il y a
+	un Vo dif de 0, celui-ci est utilise comme Z. Corriger le fichier
+	au format P36 de fa‡on a avoir N X Y Z et pas N X Y Vo Z, ou sai-
+	sir N X Y Z avec P30 .
+	Les types de station saisies avec P30 et generant un fichier com-
+	patible avec P34 sont STATION 15, 16, 30 et 35 .
+                         Pytha-Topo R920301 Page 34.9
+
+
+
+	Fichiers sortis par P34
+
+	R34??.D57    donn‚es pour P57 . A utiliser en entr‚e de P57
+		     si la taille du r‚seau est importante et n‚cessite
+		     plusieurs calculs avec analyse des r‚sultats :
+		     ‚carts aberrants, poids … introduire (P34 n'a pas
+		     cette possibilit‚).
+
+	R34??.D41    donn‚es pour P41 : … utiliser en entr‚e de P41
+
+	R34??.CAN    carnet des observations de canevas
+
+	R34??.ECA    ecarts par observation planim‚trique
+		     (angles et distances)
+	R41??.ECA    ecarts par observation altimetrique
+
+	   ?? est un numero de 00 a  99 genere par Pytha .
+
+
+
+        6 - EXEMPLES
+        ------------
+
+        fichiers de donnees
+
+
+	ALINCOUR D34    Canevas de remembrement
+	BAUD     D34    Canevas urbain
+	BLANC    D34    Canevas et lever pour Ouvrage d'Art
+	CAN504   D34    Il y a probablement une faute
+	CANEVAS  D34    Canevas en systeme local
+	CASTA    D34    Leve rattache en XYZ
+	EX10     D34    Une station  avec calage en XYZ, mode ISOLE
+	ERREUR1  D34    Faute en altimetrie
+	EX1      D34	Une station avec calage en Z
+	EX2      D34    Polygonale en antenne
+	EX3      D34    Donnees issues de TOPCON - FC2
+	EX4      D34    Polygonale rattachee en XYZ
+	EX5      D34    Reseau
+	EX6      D34    Reseau avec distance et calage XYZ
+	EX7      D34    Surveillance d'ouvrage
+	EX8      D34    Reseau avec 3 visees erronnees
+	EX9      D34    Polygonale  calee  sur  3  points  XY
+	REPRISE1 D34    Reseau avec reprises
+	REPRISE2 D34    idem
+	REPRISE3 D34    idem
+
+	etc...
+
+
+	consulter les exemples fournis .....
+                         Pytha-Topo R920301 Page 34.10
+
+
+
+	EXEMPLE 1  ( donnees dans le fichier  EX4.D34 )
+
+
+         x    Station
+         Z    Appui Z
+         +    Appui XY
+         x+   Appui XY stationne
+	 !    balise connue
+
+
+
+				Z
+				. 5017
+
+
+
+
+
+
+
+                            x+    5032
+			     Z
+
+          5031 x
+
+                                                         x+ 5033
+               x         x
+             5005      5038             .
+                                       5039
+                      Z 76
+                                                5034 x
+
+
+		      5048 !
+					     ! 5026
+
+                      5036 x                    5035
+                                                     x       Z 2000
+                                                  x
+                                                5037      x 5010
+
+
+
+
+
+                                                                  ! 5011
+
+
+
+
+
+
+
+        Pt 2000   DH=0. AV=100
+        Pt  76    DHD dif de 0. AV
+        Pt 5011   Pas de Z (LM=-0.001)
+                         Pytha-Topo R920301 Page 34.11
+							       ex1/suite
+
+
+	Liste resultats
+	---------------
+
+            210586.           1.
+
+        Parametres du calcul
+
+        Mode calcul R‚seau local
+        Classement des ecarts : oui
+        Appel a P57 : oui
+        Calcul des Z : oui
+        Toldistance    .200 metres
+        Tolz           .200 metres
+        Projection     .0 mm/km
+        Zmoyen         .0 mm/km
+        QD2 x 10E7 =   6.5789500
+        Cordist     .000  metres / portee
+        Parallaxe   .000  metres
+        Tolrah      .0050 grades
+        Tolrdh      .050  metres
+        Tolrdz      .050  metres
+        Tolrav      .0200 grades
+        Epsbloc      .00000010
+        Epspoint     .00030000
+        Tolechelle   .00200000
+        Itermaxi   500
+
+        Points de canevas :   10 stations    2 intersections
+
+            N   POINTS  NDET   REL   INT  DIST
+            1    5005     6     3     2     3
+            2    5032     6     3     2     3
+            3    5033     6     3     2     3
+            4    5034     7     3     3     3
+            5    5035     8     3     4     4
+            6    5010     6     2     2     2
+            7    5036     5     2     2     2
+            8    5037     3     1     1     1
+            9    5031     7     4     2     4
+           10    5038     4     2     1     2
+           11    5017     3     0     3     3
+           12    5039     2     0     2     2
+
+
+                           LISTE DES DISTANCES
+
+          Station     Visee   D/directe   D/inverse    Ecart mm
+            -5005     -5031       8.868       8.865       3
+            -5005     -5032      28.751      28.747       4
+            -5005      5017      58.791
+            -5032      5017      30.063
+            -5032     -5033      43.002      43.002       0
+            -5033     -5034      18.776      18.778       2
+            -5033      5035      39.647
+            -5034     -5035      21.426      21.432       6
+            -5034     -5010      25.178      25.192      14
+            -5035     -5010       4.554       4.558       4
+                         Pytha-Topo R920301 Page 34.12
+							       ex1/suite
+
+
+            -5035     -5036      26.535      26.531       4
+            -5036     -5037      20.798      20.811      13
+            -5031      5017      50.183
+            -5031      5039      39.761
+            -5031     -5038      16.741      16.749       8
+            -5038      5039      23.035
+
+        NBDIST   16, NBDIST DIR ET INV   10, EMQ     .008
+
+        distance moyenne     26.
+
+                           CALCULS SUR     5035   -5036
+
+                           CALCUL APPROCHE
+
+        Station     -5034,echelle =     -.018 m/km
+        Station     -5010,echelle =     -.005 m/km
+        Station     -5036,echelle =      .000 m/km
+        Station     -5037,echelle =      .000 m/km
+        Station     -5033,echelle =      .037 m/km
+        Station     -5032,echelle =      .000 m/km
+        Station     -5005,echelle =      .283 m/km
+        Station     -5031,echelle =     -.040 m/km
+        Station     -5038,echelle =     -.499 m/km
+
+        ECHELLE MOYENNE  1.000052 soit   .052 m/km
+
+                           Iterations suivantes...
+
+
+        Calcul sur la Geodesie, residus
+
+        Point  Calcule-Geodesie
+
+          -5032        .002       -.003   11000.000   20500.000
+          -5033       -.001        .004   11043.020   20500.000
+          -5011       -.001       -.001   11085.320   20416.520
+
+        Le reseau est mis a l echelle sur les points d appui.
+         (La Geodesie est modifiee)
+        Echelle =     1.000337 soit   .337 m/km
+
+         Le reseau va etre compense sur la Geodesie
+         (la Geodesie n est pas modifiee)
+
+                                         Point     5005
+                                           X=  10999.1235
+                                           Y=  20471.2691
+                                           Vom=  266.6328
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+          8.8641 122.2205 388.8609  266.6404       77          1.1  5031
+          8.8680                                         -3.9       5031
+         28.7442 135.3060   1.9416  266.6357       29          1.3  5032
+         28.7510                                         -6.8       5032
+         58.7981 136.1115   2.7434  266.6320       -8          -.7  5017
+         58.7910                                          7.1       5017
+                         Pytha-Topo R920301 Page 34.13
+							       ex1/suite
+
+
+                                         Point     5032
+                                           X=  11000.0000
+                                           Y=  20500.0000
+                                           Vom=  201.9443
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         28.7442 399.9995 201.9416  201.9422      -21          -.9  5005
+         28.7470                                         -2.8       5005
+         30.0583 201.5645   3.5102  201.9457       14           .7  5017
+         30.0630                                         -4.7       5017
+         43.0200 298.0549 100.0000  201.9451        8           .5  5033
+         43.0020                                         18.0       5033
+
+                                         Point     5033
+                                           X=  11043.0200
+                                           Y=  20500.0000
+                                           Vom=  299.9862
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         43.0200 399.9995 300.0000  300.0005      143          9.7  5032
+         43.0020                                         18.0       5032
+         18.7819 286.3329 186.2999  299.9669     -193         -5.7  5034
+         18.7760                                          5.9       5034
+         39.6537 274.9644 174.9556  299.9912       49          3.1  5035
+         39.6470                                          6.7       5035
+
+                                         Point     5034
+                                           X=  11047.0308
+                                           Y=  20481.6514
+                                           Vom=  386.2937
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         18.7819    .0000 386.2999  386.2999       62          1.8  5033
+         18.7780                                          3.9       5033
+         21.4294 178.7270 165.0253  386.2983       46          1.6  5035
+         21.4260                                          3.4       5035
+         25.1908 171.6720 157.9590  386.2870      -67         -2.6  5010
+         25.1780                                         12.8       5010
+
+                                         Point     5035
+                                           X=  11058.2204
+                                           Y=  20463.3753
+                                           Vom=  365.0257
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         21.4294 399.9989 365.0252  365.0263        6           .2  5034
+         21.4320                                         -2.6       5034
+          4.5598 157.9835 123.1026  365.1192      934          6.7  5010
+          4.5540                                          5.8       5010
+         26.5341 307.5230 272.5457  365.0227      -31         -1.3  5036
+         26.5350                                          -.9       5036
+                         Pytha-Topo R920301 Page 34.14
+							       ex1/suite
+
+
+                                         Point     5010
+                                           X=  11062.4832
+                                           Y=  20461.7566
+                                           Vom=  357.9602
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         25.1908    .0000 357.9590  357.9590      -12          -.5  5034
+         25.1920                                         -1.2       5034
+         50.6742 212.2775 170.2378  357.9603        2           .1  5011
+         50.6600                                         14.2       5011
+          4.5598 365.1064 323.1027  357.9962      360          2.6  5035
+          4.5580                                          1.8       5035
+
+                                         Point     5036
+                                           X=  11034.1157
+                                           Y=  20452.2838
+                                           Vom=   72.5368
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         26.5341    .0010  72.5456   72.5446       79          3.3  5035
+         26.5310                                          3.1       5035
+         20.8045 399.9989  72.5352   72.5363       -4          -.1  5037
+         20.7980                                          6.5       5037
+         18.0247 385.2614  57.7819   72.5204     -163         -4.6  5026
+
+                                         Point     5037
+                                           X=  11053.0139
+                                           Y=  20460.9834
+                                           Vom=  272.5269
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         20.8045    .0000 272.5352  272.5352       83          2.7  5036
+         20.8110                                         -6.5       5036
+         22.0244    .0675 272.5871  272.5196      -73         -2.5  5048
+
+                                         Point     5031
+                                           X=  10997.5804
+                                           Y=  20479.9979
+                                           Vom=    5.1765
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         50.1806    .0000   5.1769    5.1769        4           .3  5017
+         50.1830                                         -2.4       5017
+          8.8641 183.6935 188.8609    5.1675      -91         -1.3  5005
+          8.8650                                          -.9       5005
+         39.7674  91.1260  96.3008    5.1748      -17         -1.1  5039
+         39.7610                                          6.4       5039
+         16.7387  91.1260  96.3119    5.1859       93          2.5  5038
+         16.7410                                         -2.3       5038
+
+                                         Point     5038
+                                           X=  11014.2910
+                                           Y=  20480.9671
+                                           Vom=  296.3178
+
+        Distance Lect.hor Gisement Vo PartielsGcal-Gobs  Ecarts mm Visee
+         16.7387 399.9995 296.3118  296.3124      -54         -1.4  5031
+         16.7490                                        -10.3       5031
+         23.0287 199.9720  96.2928  296.3208       30          1.1  5039
+         23.0350                                         -6.3       5039
+                         Pytha-Topo R920301 Page 34.15
+							       ex1/suite
+
+
+        Resultats statisques
+        Longueur moyenne des vis‚es     26. m (   29 vis‚es)
+                    Ecarts secondes, emq=  199.0 sec pour    29 ecarts
+          ecart       n
+           -101       2 !**
+            -91       1 !*
+            -73       1 !*
+            -67       1 !*
+            -54       1 !*
+            -31       1 !*
+            -21       1 !*
+            -17       1 !*
+            -12       1 !*
+             -8       1 !*
+             -4       1 !*
+              2       1 !*             nota : voir les ecarts lineaires
+              4       1 !*                    secondes x distances
+              6       1 !*
+              8       1 !*
+             14       1 !*
+             29       1 !*
+             30       1 !*
+             46       1 !*
+             49       1 !*
+             62       1 !*
+             77       1 !*
+             79       1 !*
+             83       1 !*
+             93       1 !*
+            101       3 !***
+        Moyenne 11 pour 29 observations, 12 ecarts -, 17 ecarts +
+        Table des frequences de -100 a 100
+        Ecarts > 100 dans +/- 101
+
+        Ecarts secondes x distances, emq=    3.0 mm pour     29 ecarts
+
+          ecart       n
+
+             -6       1 !*
+             -5       1 !*
+             -3       2 !**
+             -1       6 !******
+              0       5 !*****
+              1 m     5 !*****
+              2       3 !***
+              3       4 !****
+              7       1 !*
+             10       1 !*
+        Moyenne 1 pour 29 observations, 10 ecarts -, 14 ecarts +
+                         Pytha-Topo R920301 Page 34.16
+							       ex1/suite
+
+
+        Ecarts distances, emq=    7.7 mm pour    27 ecarts
+
+          ecart       n
+
+            -10       1 !*
+             -7       2 !**
+             -6       1 !*
+             -5       1 !*
+             -4       1 !*
+             -3       2 !**
+             -2       2 !**
+             -1       3 !***
+              2 m     1 !*
+              3       2 !**
+              4       1 !*
+              6       4 !****
+              7       2 !**
+             13       1 !*
+             14       1 !*
+             18       2 !**
+        Moyenne 2 pour 27 observations, 13 ecarts -, 14 ecarts +
+
+
+        **POINT**      5005    Z POINT     100.0185                 5005
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+            8.864   102.7830     .263  .000    100.033     -14    5031
+           28.744   102.1415     .842  .000    100.022      -3    5032
+           58.798   101.6420    1.392  .000    100.042     -23    5017
+
+        Visees d'intersection
+           28.744    98.2935     .816  .000     99.996      22    5032
+            8.864    98.9255     .230  .000    100.000      18    5031
+
+
+        **POINT**      5032    Z POINT      99.1800    *APPUI*      5032
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           28.744    98.2935    -.816  .000     99.203     -22    5005
+           30.058   101.2970     .567  .000     99.217     -37    5017
+           43.020    97.0490   -2.041  .000     99.192     -12    5033
+
+        Visees d'intersection
+           28.744   102.1415    -.842  .000     99.176       3    5005
+           43.020   103.2215   -2.059  .000     99.174       5    5033
+
+
+        **POINT**      5033    Z POINT     101.2329                 5033
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           43.020   103.2215    2.059  .000    101.239      -5    5032
+           18.782    98.5725    -.541  .000    101.237      -4    5034
+           39.654    98.2100   -1.235  .000    101.243     -10    5035
+
+        Visees d'intersection
+           43.020    97.0490    2.041  .000    101.221      12    5032
+           18.782   102.2670    -.554  .000    101.224       8    5034
+                         Pytha-Topo R920301 Page 34.17
+							       ex1/suite
+
+
+        **POINT**      5034    Z POINT     101.7785                 5034
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           18.782   102.2670     .554  .000    101.787      -8    5033
+           21.429    98.3110    -.684  .000    101.795     -16    5035
+           25.191    98.3190    -.780  .000    101.789     -10    5010
+
+        Visees d'intersection
+           18.782    98.5725     .541  .000    101.774       4    5033
+           21.429   102.6240    -.719  .000    101.760      18    5035
+           25.191   102.3955    -.803  .000    101.766      12    5010
+
+
+        **POINT**      5035    Z POINT     102.4786                 5035
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           21.429   102.6240     .719  .000    102.497     -18    5034
+            4.560   101.3100    -.071  .000    102.498     -19    5010
+           26.534    96.0715   -1.804  .000    102.491     -12    5036
+             .000   100.0000    -.165  .000    102.485      -6    2000
+        Visees d'intersection
+           39.654    98.2100    1.235  .000    102.468      10    5033
+           21.429    98.3110     .684  .000    102.462      16    5034
+            4.560   103.5410    -.109  .000    102.461      18    5010
+           26.534   104.5990   -1.830  .000    102.466      12    5036
+
+
+        **POINT**      5010    Z POINT     102.5695                 5010
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           25.191   102.3955     .803  .000    102.582     -12    5034
+            4.560   103.5410     .109  .000    102.587     -18    5035
+        Visees d'intersection
+           25.191    98.3190     .780  .000    102.559      10    5034
+            4.560   101.3100     .071  .000    102.550      19    5035
+
+
+        **POINT**      5036    Z POINT     104.2959                 5036
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           26.534   104.5990    1.830  .000    104.309     -12    5035
+           20.805    80.8940   -6.528  .000    104.298      -1    5037
+           18.025   102.0805     .499  .000    104.296       0    5026
+        Visees d'intersection
+           26.534    96.0715    1.804  .000    104.283      12    5035
+           20.805   119.6730   -6.532  .000    104.294       1    5037
+
+        **POINT**      5037    Z POINT     110.8259                 5037
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           20.805   119.6730    6.532  .000    110.828      -1    5036
+           22.024   116.1145    5.587  .000    110.826       0    5048
+        Visees d'intersection
+           20.805    80.8940    6.528  .000    110.824       1    5036
+                         Pytha-Topo R920301 Page 34.18
+							       ex1/suite
+
+
+        **POINT**      5031    Z POINT      99.7703                 5031
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           50.181   101.5620    1.151  .000     99.801     -30    5017
+            8.864    98.9255    -.230  .000     99.789     -18    5005
+           39.767    97.2505   -1.799  .000     99.766       4    5039
+           16.739    96.0750   -1.113  .000     99.772      -1    5038
+        Visees d'intersection
+            8.864   102.7830    -.263  .000     99.756      14    5005
+           16.739   104.7325   -1.147  .000     99.738      32    5038
+
+
+        **POINT**      5038    Z POINT     100.8849                 5038
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+           16.739   104.7325    1.147  .000    100.917     -32    5031
+           23.029    98.4080    -.676  .000    100.889      -4    5039
+           12.312    98.7070    -.350  .000    100.850      34      76
+        Visees d'intersection
+           16.739    96.0750    1.113  .000    100.884       1    5031
+
+
+        **POINT**      5017    Z POINT      98.6500    *APPUI*      5017
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees d'intersection
+           58.798   101.6420   -1.392  .000     98.627      23    5005
+           30.058   101.2970    -.567  .000     98.613      37    5032
+           50.181   101.5620   -1.151  .000     98.619      30    5031
+
+
+        **POINT**      5039    Z POINT     101.5650                 5039
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees d'intersection
+           39.767    97.2505    1.799  .000    101.569      -4    5031
+           23.029    98.4080     .676  .000    101.561       4    5038
+
+
+        **POINT**      2000    Z POINT     102.6500    *APPUI*      2000
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees d'intersection
+             .000   100.0000     .165  .000    102.644       6    5035
+
+
+
+        **POINT**      5026    Z POINT     103.7967                 5026
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees d'intersection
+           18.025   102.0805    -.499  .000    103.797       0    5036
+                         Pytha-Topo R920301 Page 34.19
+							       ex1/suite
+
+
+        **POINT**      5048    Z POINT     105.2388                 5048
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees d'intersection
+           22.024   116.1145   -5.587  .000    105.239       0    5037
+
+
+        **POINT**        76    Z POINT     101.2000    *APPUI*        76
+
+         Distance    angle       DZ     QD2 Z Partiels  Ecarts   Appui
+        Visees d'intersection
+           12.312    98.7070     .350  .000    101.235     -34    5038
+
+        Moyenne des Z   102.
+
+        Resultats statisques
+
+        Distribution des ecarts , emq=  17.236 mm pour    30 ecarts
+
+          ecart       n
+
+            -37       1 !*
+            -32       1 !*
+            -31       1 !*
+            -23       2 !**
+            -20       1 !*
+            -19       2 !**
+            -18       1 !*
+            -16       1 !*
+            -15       1 !*
+            -13       2 !**
+            -12       2 !**
+            -11 m     1 !*             nota : il y a de la collimation
+            -10       1 !*		      verticale
+             -8       1 !*
+             -6       2 !**
+             -4       3 !***
+             -2       2 !**
+             -1       1 !*
+              0       2 !**
+              4       1 !*
+             35       1 !*
+        Moyenne -11 pour 30 observations, 26 ecarts -, 2 ecarts +
+
+          Recapitulation des points de canevas
+           (N X Y V0 Z)
+
+             5005   10999.1235   20471.2691  266.6328   100.0185
+             5032   11000.0000   20500.0000  201.9443    99.1800
+             5033   11043.0200   20500.0000  299.9862   101.2328
+             5034   11047.0308   20481.6514  386.2937   101.7785
+             5035   11058.2204   20463.3753  365.0257   102.4786
+             5010   11062.4832   20461.7566  357.9602   102.5695
+             5036   11034.1157   20452.2838   72.5368   104.2959
+             5037   11053.0139   20460.9834  272.5269   110.8259
+             5031   10997.5804   20479.9979    5.1765    99.7703
+             5038   11014.2910   20480.9671  296.3178   100.8848
+             5017   11001.6565   20530.0127              98.6500
+             5039   11037.2806   20482.3074             101.5650
+           76 Points calcules
+                         Pytha-Topo R920301 Page 34.20
+
+
+
+	EXEMPLE 2  , mode ISOLE ( fichier EX10.D34 ) , resultats
+
+
+
+        DATE 300983.,DOSSIER  26971.
+
+        Parametres du calcul
+
+        Mode calcul R‚seau(x) isol‚(s)
+        Classement des ecarts : non
+        Appel a P57 : oui
+        Calcul des Z : oui
+        Toldistance    .100 metres
+        Tolz           .200 metres
+        Projection     .0 mm/km
+        Zmoyen         .0 mm/km
+        QD2 x 10E7 =   6.5789500
+        Cordist     .000  metres / portee
+        Parallaxe   .000  metres
+        Tolrah      .0050 grades
+        Tolrdh      .050  metres
+        Tolrdz      .050  metres
+        Tolrav      .0200 grades
+        Epsbloc      .00000010
+        Epspoint     .00030000
+        Tolechelle   .01000000
+        Itermaxi    50
+        Station sans V0        -12
+                                             Point        12
+                                               X=    2000.0000
+                                               Y=     500.0000
+                                               Vom=   299.9999
+
+        Distance Lect.hor Gisement Vo Partiels Gcal-Gobs Ecarts mm Visee
+       1000.0000    .0000 300.0000  300.0000         1         1.0     1
+
+        **POINT**        12    Z POINT       100.0000    *APPUI*      12
+         Distance    angle       DZ       QD2 Z Partiels  Ecarts   Appui
+        Visees de relevement
+             .000   100.0000    -.247    .000    100.000       0       1
+
+
+
+
+        **POINT**         1    Z POINT       100.2470                  1
+         Distance    angle       DZ       QD2 Z Partiels  Ecarts   Appui
+        Visees d'intersection
+             .000   100.0000     .247    .000    100.247       0      12
+
+        Moyenne des Z   100.
+
+          Recapitulation des points de canevas
+           (N X Y V0 Z)
+
+        12    2000.0000     500.0000  299.9999   100.0000
+        2 Points calcules
+

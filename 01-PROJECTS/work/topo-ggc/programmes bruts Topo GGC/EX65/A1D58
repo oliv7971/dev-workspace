@@ -1,0 +1,171 @@
+ettc 14.09.94 00:49
+proc,16
+plco,063030,!Plan!de!comparaison
+altn,103015,!Altitude!du!terrain
+dctn,093015,!Distances!cumulees
+dptn,093015,!Distances!partielles
+libr,053015,!Distances!entre!piquets
+libr,053020,!Numeros!des!piquets
+libr,123030,!Distances!entre!pylones
+libr,103030,!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FIN
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+COMM        EN FIN D'AFFICHAGE
+CMCG  sortir le code pour pytha-graph
+tn,,exec
+    149      .00 -10   80.07 10   80.07
+    153    14.77 -10   80.06 10   80.06
+    104    15.03 -10   85.08 10   85.08
+    108   230.32 -10   89.61 10   89.61
+    110   256.59 -10   80.90 10   80.90
+     28   262.02 -10   80.69 10   80.69
+999999
+ECHX,2500
+ECHZ,500
+FORZ,594
+FORS,820
+plco,60
+nbdz,2
+nbds,2
+secri
+supc
+#STITRE,,FAVERGE
+MISO,8
+DPLON,16
+****
+ettc 14.09.94 00:49
+proc,16
+plco,063030,!
+altn,103015,!
+dctn,093015,!
+dptn,093015,!
+libr,053015,!
+libr,053020,!
+libr,123030,!
+libr,103030,!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FIN
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+COMM        EN FIN D'AFFICHAGE
+CMCG  sortir le code pour pytha-graph
+tn,,exec
+     28   262.02 -10   80.69 10   80.69
+    111   264.92 -10   80.92 10   80.92
+    118   277.95 -10   86.67 10   86.67
+    121   392.50 -10   89.08 10   89.08
+    198   434.66 -10   86.70 10   86.70
+    199   456.63 -10   84.71 10   84.71
+    200   464.29 -10   84.40 10   84.40
+    201   470.97 -10   87.08 10   87.08
+    202   478.94 -10   87.33 10   87.33
+    213   497.77 -10   87.27 10   87.27
+    317   501.42 -10   87.05 10   87.05
+    318   508.18 -10   85.87 10   85.87
+    319   532.83 -10   85.37 10   85.37
+    320   543.41 -10   82.44 10   82.44
+     29   556.78 -10   82.53 10   82.53
+999999
+ctex,155
+supt
+ECHX,2500
+ECHZ,500
+FORZ,594
+FORS,820
+plco,60
+nbdz,2
+nbds,2
+secri
+supc
+#STITRE,,FAVERGE
+MISO,8
+DPLON,16
+****
+ettc 14.09.94 00:49
+proc,16
+plco,063030,!
+altn,103015,!
+dctn,093015,!
+dptn,093015,!
+libr,053015,!
+libr,053020,!
+libr,123030,!
+libr,103030,!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FIN
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+COMM        EN FIN D'AFFICHAGE
+CMCG  sortir le code pour pytha-graph
+tn,,exec
+     29   556.78 -10   82.53 10   82.53
+    187   566.09 -10   82.48 10   82.48
+    189   572.40 -10   81.65 10   81.65
+    190   576.99 -10   81.81 10   81.81
+    175   604.78 -10   82.46 10   82.46
+    176   616.03 -10   81.68 10   81.68
+    177   622.12 -10   81.88 10   81.88
+    282   684.79 -10   82.10 10   82.10
+    281   689.64 -10   81.67 10   81.67
+    280   699.56 -10   84.07 10   84.07
+    279   728.10 -10   84.07 10   84.07
+     30   757.98 -10   83.93 10   83.93
+999999
+ctex,323
+supt
+ECHX,2500
+ECHZ,500
+FORZ,594
+FORS,820
+plco,60
+nbdz,2
+nbds,2
+secri
+supc
+#STITRE,,FAVERGE
+MISO,8
+DPLON,16
+****
+ettc 14.09.94 00:49
+proc,16
+plco,063030,!
+altn,103015,!
+dctn,093015,!
+dptn,093015,!
+libr,053015,!
+libr,053020,!
+libr,123030,!
+libr,103030,!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FIN
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+COMM        EN FIN D'AFFICHAGE
+CMCG  sortir le code pour pytha-graph
+tn,,exec
+     30   757.98 -10   83.93 10   83.93
+    269   765.52 -10   83.63 10   83.63
+    268   781.28 -10   85.39 10   85.39
+    267   818.39 -10   87.51 10   87.51
+    262   853.97 -10   88.46 10   88.46
+    248   875.61 -10   89.28 10   89.28
+    256   891.08 -10   89.64 10   89.64
+    397   908.04 -10   83.51 10   83.51
+    396   915.16 -10   83.32 10   83.32
+    389   942.51 -10   82.76 10   82.76
+    405   992.37 -10   83.10 10   83.10
+    363  1021.32 -10   87.40 10   87.40
+    370  1068.22 -10   83.32 10   83.32
+    358  1135.79 -10   82.83 10   82.83
+     31  1200.54 -10   82.98 10   82.98
+999999
+ctex,453
+supt
+ECHX,2500
+ECHZ,500
+FORZ,594
+FORS,820
+plco,60
+nbdz,2
+nbds,2
+secri
+supc
+#STITRE,,FAVERGE
+MISO,8
+DPLON,16
+****
+stop

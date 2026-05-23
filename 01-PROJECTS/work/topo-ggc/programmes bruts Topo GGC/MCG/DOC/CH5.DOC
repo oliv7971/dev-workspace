@@ -1,0 +1,1741 @@
+                                                      U850601 PAGE  5.1
+ 
+ 
+ 
+ 
+ 
+		               M A N U E L    U T I L I S A T E U R
+ 
+ 
+ 
+		                   CHAPITRE   5
+ 
+ 
+		                   GUIDE D ' INITIATION
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.2
+ 
+ 
+ 
+                               GUIDE D'INITIATION
+ 
+ 
+ 
+ 
+                                 AVANT - PROPOS
+                                 --------------
+ 
+ 
+ 
+                  Cette partie du manuel n'a pas pour but de vous decrire
+        MICROGRAPHIX  et  ses  commandes,  mais  de  vous  presenter  ses
+        principes generaux en les utilisant .
+ 
+ 
+                  A travers le traitement d'exemples simples,  vous allez
+        pouvoir  aborder  les  concepts  les  plus  importants  de  votre
+        logiciel  de  dessin,  ainsi que quelques  notions  informatiques
+        necessaires a une meilleure utilisation de MICROGRAPHIX .
+ 
+ 
+ 
+ 
+ 
+ 
+                  NB  :  lorsque pendant la lecture de  ce  manuel,  vous
+                         rencontrerez le mot (RC),  cela signifiera qu'il
+                         vous faudra frapper soit la touche ENTER soit la
+                         touche RETOUR CHARIOT,  ces deux dernieres ayant
+                         un role identique sur votre micro-ordinateur .
+ 
+ 
+ 
+ 
+ 
+			ATTENTION :
+ 
+			Ce guide a ete fait a partir d'une configuration
+			qui n'est peut-etre pas rigoureusement identique
+			a la votre.
+			Il est possible que les resultats obtenus soient
+			legerement differents.
+			Meme remarque pour les consignes mentionnees.
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.3
+ 
+ 
+ 
+ 
+        FONCTIONNEMENT
+        --------------
+ 
+                  Inserez  la  disquette MICROGRAPHIX dans le lecteur  de
+        disque puis tapez MG (RC) .  Votre micro-ordinateur est en  train
+        de charger le logiciel en memoire pour l'executer .
+ 
+                  Il vous est alors demande la date du jour sous la forme
+        JOUR MOIS ANNEE .
+ 
+                  Une date par defaut vous est proposee,  elle correspond
+        a la derniere date de memorisation sur disquette .
+ 
+ 
+ 
+                  MICROGRAPHIX envoie le message suivant :
+ 
+                  NOUVELLE DATE ( jour ( mois ( annee )))
+ 
+                  Il  attend  donc  de vous que vous corrigiez  le  jour,
+        eventuellement  le  mois  et eventuellement l'annee  de  la  date
+        proposee  par  defaut,  dans  le cas  ou  ces  derniers  seraient
+        incorrects .
+ 
+                  Si  nous sommes le 25/01/85 et si nous avons  travaille
+        la  veille  avec MICROGRAPHIX,  la date proposee par  defaut  est
+        le  24/01/85 ;  il suffit donc pour retablir la date du jour,  de
+        repondre 25 suivi de (RC) pour valider la donnee entree .
+ 
+                  Une  fois  la  date entree,  l'ecran est efface  et  il
+        s'affiche alors l'ecran de travail MICROGRAPHIX . Il se divise en
+        quatre zones :
+ 
+                     *  sur  la  premiere  ligne,   en  haut  de  l'ecran
+                        figurent certains renseignements sur le dessin en
+                        cours  et  certaines fonctions  activees  .  Nous
+                        reviendrons  plus tard sur la  signification  des
+                        inscriptions  figurant  sur cette  ligne  ,  mais
+                        notons  tout   de meme que nous appelerons  cette
+                        partie de l'ecran, LIGNE DES COMMANDES ACTIVEES .
+ 
+                     *  la  zone centrale de l'ecran est la  zone  propre
+                        au dessin,  que nous appelerons ecran logique qui
+                        est  a distinguer de l'ecran physique . Un dessin
+                        peut  s'etendre sur l'ecran physique entier  mais
+                        seule  la  partie  qui  se  trouve  dans  l'ecran
+                        logique   est   visualisable   dans   de   bonnes
+                        conditions .
+ 
+                     * c'est sur la  derniere ligne en bas de l'ecran que
+                       se fait le dialogue machine - utilisateur, c'est a
+                       dire la communication des ordres, des messages ...
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.4
+ 
+                       Cette ligne est actuellement vierge mais notez que
+                       le  curseur  clignote devant le caractere ":"  que
+                       nous   appelerons  PROMPT  .   Lorsque  le  prompt
+                       apparait  suivi du curseur ,  MICROGRAPHIX  attend
+                       un ordre frappe du clavier .
+ 
+                     * les  colonnes a  droite  de  l'ecran  contiennent
+                       le  menu sur deux colonnes divisees en  48  cases,
+                       affectees a une commande ou non . Nous verrons par
+                       la  suite  que   le  menu  peut  etre  defini  par
+                       l'utilisateur . En  effet , ce menu est la a titre
+                       de pense-bete et ne contient qu'un echantillon des
+                       commandes de MICROGRAPHIX .
+ 
+ 
+                  La philosophie de MICROGRAPHIX est de dessiner a partir
+        de  points .  Il faut d'abord definir des points pour les  relier
+        ensuite  entre  eux de differentes facons  afin  de  realiser  un
+        dessin  .   Pour  saisir  des  points,  trois  possibilites  sont
+        offertes :
+ 
+ 
+                  * le mode clavier
+ 
+                  * le mode clavier -digit
+ 
+                  * le mode digitaliseur
+ 
+ 
+ 
+ 
+ 
+        MODE CLAVIER
+        ------------
+ 
+ 
+                  Pour saisir un point au clavier, il suffit d'entrer ses
+        coordonnees a l'aide de la commande XY .
+ 
+                  Par  exemple,  si  vous frappez XY suivi  de  (RC),  le
+        message suivant apparait alors :
+ 
+                       XY ( numero )
+ 
+                  En repondant 100 100 1 (RC) ,  vous venez de definir le
+        point  numero 1 de coordonnees X=100 et Y=100 exprimees en unites
+        utilisateur  (  une unite utilisateur correspond a un  millimetre
+        ecran ) .
+ 
+                  Le meme message XY ( numero ) reste inscrit a l'ecran ;
+        cela  signifie que MICROGRAPHIX vous demande de definir un  autre
+        point .
+ 
+                  Notons que le numero demande est entre parentheses,  ce
+        qui veut dire qu'il n'est pas necessaire d'attribuer un numero de
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.5
+ 
+        point a des coordonnees .  Dans ce cas, la numerotation est prise
+        en charge automatiquement par le logiciel .
+ 
+                  Repondez  150 100 (RC) pour saisir un  deuxieme  point,
+        puis encore une fois (RC) pour quitter la commande XY,  saisie de
+        points dans un plan au clavier .
+ 
+                  Les  2  points  que vous venez de definir ne  sont  pas
+        encore visualises a l'ecran . Pour obtenir leur affichage dans la
+        zone  dessin,  tapez  la  commande POIN (RC)  .  Il  apparait  le
+        message :
+ 
+                       Valeur du pas d'affichage ?
+ 
+                  Tapez (RC) a ce message afin d'obtenir la visualisation
+        de tous les points .  Une valeur donnee au pas d'affichage permet
+        de visualiser partiellement ces derniers .  Par exemple,  si nous
+        avions  repondu  2,  MICROGRAPHIX aurait affiche  le  numero  des
+        points tout les deux points ;  nous n'aurions obtenu ainsi que le
+        numero 1 .
+ 
+                  Les 2 points saisis sont apparus a l'ecran . Le premier
+        saisi, de coordonnees X=100 et Y=100 est effectivement porteur du
+        numero  1  que nous lui avons attribue .  Par contre le  deuxieme
+        point de coordonnees X=150 et Y=100 a pour numero 1001 .
+ 
+                  Ce numero,  comme nous l'avons dit precedemment , a ete
+        attribue automatiquement par MICROGRAPHIX,  parce que nous ne lui
+        en avions pas donne .
+ 
+                  Si  un  prochain point est saisi a nouveau  au  clavier
+        sans  numerotation explicite donnee par  l'utilisateur,  celui-ci
+        aura pour numero 1002 .
+ 
+ 
+ 
+        DESSINER EN MODE CLAVIER
+        ------------------------
+ 
+ 
+                  Nous  pouvons,  maintenant  a  partir de ces  2  points
+        dessiner et par exemple, les segmenter .
+ 
+ 
+                  Frappez SEGM (RC) .  Le message  suivant apparait :
+ 
+                  SEGM nos ou ptes                               ..
+ 
+                  Le  systeme  vous  demande  le  numero  des  points   a
+        segmenter, en fin de ligne dialogue machine - utilisateur .
+ 
+                  Si vous frappez 1 (RC),  vous indiquez a la machine que
+        le  segment  a  dessiner debute au point numero  1  ,  elle  vous
+        demande alors le numero du point suivant du segment, le numero du
+        point precedent intervenant dans la segmentation,  en l'occurence
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.6
+ 
+        1 s'etant reporte a droite .
+ 
+ 
+                  Repondez  1001 (RC) ,  le segment 1-1001 est maintenant
+        trace et MICROGRAPHIX attend une directive :
+ 
+                 *  celle-ci peut etre un troisieme point a  segmenter  a
+                    partir  du point precedemment  entre ( numero reporte
+                    a  l'extreme droite de la ligne ) ,  ce qui est  dans
+                    notre cas impossible car nous n'avons saisi que  deux
+                    points .
+ 
+                 *  ou  tout   simplement  la declaration de  fin  de  la
+                    commande segmentation obtenue en repondant (RC) .
+ 
+                  Repondez (RC) .  A ce niveau d'execution de la commande
+        SEGM,  il vous est demande de valider,  c'est a dire de confirmer
+        la validite du segment que nous avons defini .
+ 
+                  Si  vous frappez N pour NON,  le segment sera efface  ,
+        cet ordre de dessin etant declare comme nul . Par contre, si vous
+        frappez (RC) ou O pour OUI,  O etant l'option proposee par defaut
+        ( entre ( ) ) , le segment reste inscrit, l'ordre de segmentation
+        etant declare comme juste .
+ 
+                  Dans les deux cas, nous quittons la commande SEGM .
+ 
+                  Repondez  (RC) .  Nous pouvons d'ores et deja remarquer
+        qu'un ordre de segmentation peut etre defini comme une succession
+        de points au nombre maximum de 28 .
+ 
+                  Un  ordre  de  segmentation defini avec  plus  de  deux
+        points est en fait une suite continue de segments de deux points.
+        Pour  chaque  segmentation  de  deux  points,  le  logiciel  nous
+        retourne  la  longueur  du  segment ainsi que  son  gisement  par
+        rapport a l'axe OY . Dans notre cas, la longueur apparue etait 50
+        et le gisement 0 .
+ 
+                  D'une  facon  a peu pres identique  ,  nous  pouvons  a
+        partir de ces deux points tracer un cercle . Frappez CERC (RC) .
+ 
+                  Le  message "Ctre = " apparait demandant le  numero  du
+        point qui sera le centre du cercle ; repondez 1 (RC) .
+ 
+                  Le  message  "pt  1 ="  apparait  alors,  demandant  le
+        numero du point de depart de tracage du cercle,  definit aussi le
+        rayon  du cercle .  En repondant 1001 (RC) ,nous  obtiendrons  un
+        cercle de centre 1 et de rayon distance 1-1001 .
+ 
+                  Frappez  (RC)  au message "pt 2 =" ,  sur  lequel  nous
+        reviendrons au moment de la saisie clavier - digit .
+ 
+                  Le cercle trace dans le sens des aiguilles d'une montre
+        se trouve en partie en dehors de l'ecran .  A la question "OK (O)
+        N"  qui  comme  pour  la segmentation,vous  demande  de  valider,
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.7
+ 
+        confirmez en frappant (RC) .
+ 
+ 
+                  Le  resultat  obtenu n'est pas  satisfaisant,  il  faut
+        centrer le dessin a l'ecran, ce que nous allons faire a l'aide de
+        la commande CENT ( centrage ) .  L'ecran est en quelque sorte une
+        fenetre  que l'on peut deplacer sur un dessin .  Par  consequent,
+        nous ne sommes pas limites par la taille de l'ecran pour realiser
+        un dessin .
+ 
+                  En  frappant  CENT  1 (RC) ,  MICROGRAPHIX  execute  un
+        centrage sur le point numero 1 figurant dans le dessin .
+ 
+                  Nous  allons maintenant ecrire un texte a l'aide de  la
+        commande  TEXG  qui permet d'inserer du texte dans un  dessin  en
+        donnant  sa position par rapport a un point defini en  millimetre
+        ecran  ;  ce point sera le point de depart d'ecriture de la ligne
+        texte  et  donc  situe a la gauche du texte d'ou  le  nom  de  la
+        commande  TEXG(auche) .  Pour definir le point origine d'ecriture
+        du texte, on utilise la commande GRMA .
+ 
+                  Tapez GRMA (RC) .  Il s'affiche alors une grille ou une
+        trame  en  superposition au dessin ,  ainsi que  les  valeurs  en
+        abcisse et en ordonnee des lignes de la trame .
+ 
+                  Tapez  maintenant  TEXG  (RC)  .   Le  message  suivant
+        apparait :
+ 
+                  TEXTE =
+ 
+                  Il vous indique que vous devez taper le texte a inserer
+        dans le dessin ;  tapez par exemple "SEGMENT 1-1001 RAYON" (RC) .
+        Le message suivant apparait :
+ 
+                  Point bas gauche x y mm
+ 
+                  Entrez  les  coordonnees du point origine du  texte  en
+        millimetre  ecran  .  Repondez 130 145 (RC) ,  valeurs  que  vous
+        pouvez deduire du tramage .
+ 
+                  MICROGRAPHIX vous demande de confirmer comme pour  SEGM
+        et CERC, frappez N, le resultat n'etant pas concluant .
+ 
+ 
+                  En effet,  le texte inscrit ne tient pas sur le segment
+        1-1001  .  Pour le corriger  nous allons modifier la taille en  X
+        puis la taille en Y des caracteres .
+ 
+                  Une telle operation est possible car les caracteres qui
+        sont  utilises pour ecrire du texte dans les dessins sont en fait
+        eux   memes  des  dessins  .   Ces  dessins  font  partie   d'une
+        bibliotheque  de caracteres et de symboles appelee FONTE  .  Vous
+        pouvez vous meme definir votre propre fonte si celle actuellement
+        en place ne vous convient pas (  Reportez vous a cet  effet,  une
+        fois  que  vous  aurez  termine les exemples de ce  manuel  a  la
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.8
+ 
+        commande CFTE du manuel de reference ) .
+ 
+ 
+                  Tapez HX (RC) .  Le systeme vous indique que la  taille
+        actuelle  en X des caracteres est 10 millimetres,  frappez 3 (RC)
+        pour la reduire a 3 mm .
+ 
+                  De meme, frappez HY (RC), la taille en Y des caracteres
+        est  aussi de 10 mm par defaut,  tapez 4 (RC) pour la reduire a 4
+        mm .
+ 
+                  Apres ces modifications nous pouvons rappeler a nouveau
+        la  commande TEXG .  Il n'est pas necessaire de retaper TEXG,  le
+        fait  de  frapper  (RC)  vous fait  passer  directement  sous  la
+        commande TEXG .
+ 
+                  TEXG  est donc une fonction rappelable  .  En  frappant
+        (RC) ,  nous passons directement en mode execution de la derniere
+        fonction  rappelable  utilisee,  parmi  elles,  SEGM,  CERC,  les
+        commandes TEX ...
+ 
+                  Tapez sur la touche (RC) . Le message TEXTE apparait de
+        nouveau, mais le dernier texte insere dans le dessin est reste en
+        memoire  et  correspond  exactement  au texte  que  nous  voulons
+        inserer, il nous suffit encore une fois de repondre (RC) .
+ 
+                  Par  contre,  la position en millimetre ecran du  point
+        origine du texte doit absolument etre definie sans quoi le  texte
+        sera  ecrit  exactement la ou se trouve le curseur  actuellement,
+        c'est  a  dire  sur la ligne  dialogue  machine  - utilisateur  .
+        Repondez 130 145 (RC) .
+ 
+                  Cette  fois  le  resultat est tout a  fait  convenable,
+        validez , il ne reste plus qu'a faire disparaitre la trame .
+ 
+                  Frappez  GRMA (RC) .  La grille disparait avec la  meme
+        commande  qui l'a fait apparaitre .  GRMA est une commande dite a
+        bascule, au  1er appel,  elle se met en position "ON" et au  2eme
+        appel, elle se met en position "OFF" .
+ 
+                  Il  est  possible  que l'effacement  de  la  trame  ait
+        entraine  une legere alteration du dessin a l'ecran ,  ceci n'est
+        pas  grave,  frappez  EXEC (RC) .  Cette commande  a  pour  effet
+        d'effacer  l'ecran  et d'executer toutes les commandes de  dessin
+        memorisees  pour  ce  dessin  .   Un  dessin  est  en  fait  pour
+        MICROGRAPHIX , un empilement de commandes de dessin .
+ 
+ 
+ 
+        SAISIE CLAVIER DIGIT
+        --------------------
+ 
+ 
+                  Le deuxieme mode de saisie propose par MICROGRAPHIX est
+        celui  appele  clavier digit .  Il fait appel a une  petite  mire
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.9
+ 
+        symbolisee par une petite croix " + " , que l'on deplace a l'aide
+        des touches de direction :  fleche en haut, en bas, a gauche et a
+        droite .
+ 
+                  Nous  allons voir comment proceder avec cette mire pour
+        tracer des segments, des cercles et ecrire du texte .
+ 
+                  Pour  obtenir  la  mire,  frappez une  des  touches  de
+        direction,  elle apparait dans la partie droite de la zone dessin
+        de l'ecran ou ecran logique .
+ 
+                  Le principe general est :
+ 
+                       * obtenir la mire
+ 
+                       * pointer  une commande en placant la mire  dessus
+                         et la valider par un (RC).
+ 
+                       * executer   cette  commande  en  definissant  les
+                         points avec lesquels elle sera realisee a partir
+                         de la position de la mire
+ 
+                  Pour  tracer  un segment perpendiculaire au segment  1-
+        1001,  il  faut positionner la mire sur la commande SEGM dans  la
+        zone  menu de l'ecran,  pointer ensuite le point 1 et le  valider
+        pour le reconnaitre, puis descendre la mire et valider encore une
+        fois afin de definir un deuxieme point pour tracer le segment .
+ 
+                  Il  nous faudra donc  placer la mire exactement sur  le
+        point  1  pour pouvoir tracer un segment a partir de ce  point  .
+        Cette  operation  n'est a priori pas evidente compte tenu  de  la
+        precision de la mire .  Pour ce faire, nous allons nous faciliter
+        la tache en redefinissant le rayon de recherche de la mire .
+ 
+                  Frappez  la barre d'espacement pour retourner  en  mode
+        clavier  puis  frappez  RAYO (RC) .  La commande RAYO  permet  de
+        definir le rayon de la zone de recherche pour la saisie de  point
+        a  l'aide de la mire .  Celui-ci est actuellement egal a 1  comme
+        l'indique  la  ligne des commandes activees .  Ceci signifie  que
+        MICROGRAPHIX  recherche dans un rayon de 1 millimetre  ecran  par
+        rapport  a  la position de la mire l'existence d'un  point  avant
+        d'en saisir un nouveau .
+ 
+ 
+                  Au message "ENVOYER VALEUR(S)" , repondez 5 (RC) . Nous
+        detecterons  ainsi beaucoup plus facilement l'exitence du point 1
+ 
+                  Positionnez  la mire sur la commande SEGM dans la  zone
+        menu  de  l'ecran  .  Notez que tout en bas de  cette  zone  menu
+        apparait  le  nombre 15,  qui signifie  que la commande  SEGM  se
+        trouve  dans  la 15eme case de la zone menu qui ,  nous  vous  le
+        rappelons est divisee en 2 colonnes de 24 cases chacunes .
+ 
+                  En  frappant  (RC) ,  un message sur la ligne  dialogue
+        machine - utilisateur nous indique que nous sommes passes sur  la
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.10
+ 
+        commande SEGM .
+ 
+ 
+                  Placez  la  mire  sur le point numero 1  au  centre  de
+        l'ecran  .  La mire se deplace avec une certaine lenteur  .  Nous
+        pouvons  regler sa vitesse a l'aide des touches 1 a 9 du  clavier
+        numerique .
+ 
+                  En  frappant  sur la touche 9 par exemple,  la mire  se
+        deplacera  de  9  points ecran a chaque frappe  d'une  touche  de
+        direction .
+ 
+                  Une  fois  la mire positionnee sur le point  numero  1,
+        frappez (RC) ,  le numero 1 apparait dans le coin inferieur droit
+        de l'ecran . Vous venez de pointer le numero 1 .
+ 
+                  Descendez ensuite la mire jusqu'a ce qu'elle se  trouve
+        sur le cercle puis tapez sur la touche (RC) .
+ 
+                  Cette  fois  s'inscrit dans le coin inferieur droit  de
+        l'ecran,  la valeur -3 ,  ce qui indique que vous venez de saisir
+        un point inexistant jusqu'a maintenant  . Le segment est trace .
+ 
+                  Frappez  sur la touche - ( moins ) ,  pour  signaler  a
+        MICROGRAPHIX que votre definition de segment est terminee, ce qui
+        correspondait  a  la  premiere frappe de la touche (RC)  en  mode
+        clavier .
+ 
+                  Frappez  ensuite (RC) pour confirmer sa validite  ,  le
+        segment reste trace . Attention , si nous avions voulu effacer ce
+        segment  (  c'est a dire declarer comme nulle sa  validite ) , il
+        aurait  fallu  taper sur la touche - et non pas N comme  en  mode
+        clavier .
+ 
+                  Pour  tracer  un  arc de cercle,  que ce soit  en  mode
+        clavier ou en mode clavier digit,  il faut definir comme pour  le
+        cercle,  le  centre,  le  point de depart qui donne le  rayon  du
+        cercle ( egal a la distance centre - point de depart) et le point
+        d'arrivee . De cette facon, l'arc sera trace a partir du point de
+        depart  jusqu'a l'intersection du cercle et de la droite centre -
+        point d'arrivee .
+ 
+ 
+                  Nous vous proposons de tracer un arc de cercle en  mode
+        clavier  digit ,  a l'interieur de l'arc de cercle que nous avons
+        trace .
+ 
+                  Nous vous rappelons que les cercles sont traces dans le
+        sens  des  aiguilles d'une montre .
+ 
+                  Placez la mire sur la commande CERC et validez ((RC)) .
+        Placez ensuite la mire sur le point numero 1 centre du cercle que
+        nous avons trace precedemment et frappez (RC) .
+ 
+                  MICROGRAPHIX  reconnait  le  point  numero  1  et  nous
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.11
+ 
+        renvoie le message :
+ 
+                  CERC ctre 1  pt 1 =
+ 
+                  Placez  la mire approximativement au milieu du  segment
+        1-1001 et frappez (RC) .
+ 
+                  Le systeme vous indique que le point de depart ou point
+        1  a  ete  saisi et qu'il n'existait pas  auparavant  ,  et  vous
+        demande  de frapper (RC) pour tracer un cercle entier ou d'entrer
+        un troisieme point pour un arc de cercle .
+ 
+                  Entrons  un  point d'arrivee ou point 2 en  placant  la
+        mire sur le segment perpendiculaire a la droite 1-1001,  que nous
+        avons trace auparavant .
+ 
+                  La  position de la mire sur ce segment est indifferente
+        du moment qu'elle est en dessous du point numero 1 .
+ 
+                  La mire une fois positionnee ,  frappez (RC) . L'arc de
+        cercle est trace .
+ 
+                  Comme pour la segmentation ,  MICROGRAPHIX vous demande
+        de confirmer la validite de l'arc de cercle, il faut frapper (RC)
+        pour le conserver ou - pour l'effacer .
+ 
+                  Repondez (RC) .  Pour retourner en mode clavier,  tapez
+        n'importe  quelle touche du clavier .  Appelez la commande  POIN,
+        visualisation des points du dessin en frappant POIN (RC) (RC) .
+ 
+                  Il  n'apparait comme numero de point que les numeros  1
+        et 1001 que nous avions saisi en mode  clavier .  Par contre, les
+        numeros  des points saisis en mode clavier  digit  n'apparaissent
+        pas .
+ 
+                  Ces  points sont sans numero et sont  visualises,  mais
+        comme ils sont l'aboutissement des ordres de dessin,  ils ne sont
+        pas apparents .
+ 
+ 
+ 
+                  Pour  mieux  s'en rendre compte,  frappez  CLS  (RC)  .
+        L'ecran  est  efface mais le dessin reste neanmoins en memoire  .
+        Par  consequent,  ce que nous avons fait jusqu'a maintenant n'est
+        pas perdu .
+ 
+                  Frappez  POIN (RC) (RC) ,  cette fois tout  les  points
+        sont visualises . Vous pouvez vous rendre compte que MICROGRAPHIX
+        n'attribue  pas de numero aux points saisis en mode clavier digit
+ 
+                  Pour mieux constater cet etat de fait,  tapez LC (RC) .
+        Vous  obtenez alors la liste des points actuellement  en  memoire
+        avec  leurs coordonnees .  Les points 1 et 1001 apparaissent  les
+        premiers  puis  sont  suivis par des points  references  par  les
+        valeurs  -3  et -1 .  La valeur -3 vous indique qu'il  s'agit  de
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.12
+ 
+        points  saisis  en mode clavier digit ,  -1 indique qu'il  s'agit
+        d'un point de calage ou positionnement de texte .
+ 
+                  Vous ne pouvez donc pas immediatement utiliser en  mode
+        clavier   les  points  saisis  en  mode  clavier  digit   clavier
+        puisqu'ils ne portent aucun numero .
+ 
+                  Pour corriger ce defaut,  frappez RENU (RC) ,  puis  LC
+        (RC)  .  Vous  constatez  que  les  points  ont  ete  renumerotes
+        automatiquement et sont cette fois tous accessibles du clavier .
+ 
+                  Pour le verifier,  frappez POIN (RC) (RC) .  Cependant,
+        le  point de calage de texte reference par -1 ,  n'a pas ete  lui
+        renumerote  .  Ceci  implique que nous ne pourrons en  aucun  cas
+        utiliser les points origine de textes dans les ordres de dessin .
+ 
+                  Frappez  EXEC  (RC) ,  execution du dessin  en  memoire
+        apres effacement de l'ecran, puis POIN (RC) (RC) .
+ 
+                  Nous  allons maintenant ecrire du texte en mode clavier
+        digit . Nous vous proposons d'ecrire une ligne le long du segment
+        3-5 .  Il faut donc prealablement modifier l'angle d'ecriture  du
+        texte .
+ 
+                  Frappez a cet effet ANG (RC) . La machine vous retourne
+        le message :
+ 
+                  ANG .00  2 nos ou angle par rapport a OX ?
+ 
+                  Ceci  signifie  qu'elle  attend de nous de  definir  un
+        angle soit a partir de 2 numeros de points ,  soit en entrant  la
+        valeur de cet angle en grade .
+ 
+                  Vous avez donc la possibilite de repondre 3 5  ou 100 .
+        Veuillez  noter que .00 nous indique que l'angle par rapport a OX
+        est actuellement nul .
+ 
+                  Frappez 100 (RC) .
+ 
+                  frappez une touche de direction afin d'obtenir la mire,
+        placez la sur la commande TEXC, puis validez .
+ 
+                  De la meme facon que pour TEXG,  entrez par exemple  le
+        texte : POINT D'ARRIVEE puis frappez (RC) .
+ 
+                  Vous  devez  maintenant indiquer le point de calage  du
+        texte sur le dessin a l'aide de la mire . La commande TEXC centre
+        le  point  par  rapport au point designe  .  Placez  vous  devant
+        l'intersection  du segment 3-5 et de l'arc de cercle puis frappez
+        (RC) .
+ 
+                  Le  texte est ecrit verticalement .  Frappez (RC)  pour
+        confirmer, il aurait fallu frapper - pour l'effacer .
+ 
+                  Lorsque   nous  avons  entre  la  valeur   de   l'angle
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.13
+ 
+        d'ecriture,  celle-ci  etait exprimee en grade ;  nous aurions pu
+        l'exprimer dans une autre unite,  a savoir en degre ou en radians
+        si nous avions auparavant utilise la commande UANG .
+ 
+                  UANG  permet  de  choisir l'unite  dans  laquelle  sont
+        exprimes les angles . Frappez la barre d'espace pour retourner en
+        mode clavier puis UANG (RC) .
+ 
+                  La  machine  indique qu'elle travaille actuellement  en
+        grade ( 3 ) ,  et qu'il faut frapper 1 pour les radians et 2 pour
+        les degres . Restons en grade, frappez (RC) .
+ 
+                  Nous  allons  nous arreter la pour ce  premier  exemple
+        pour passer, maintenant que nous avons vu les commandes de base a
+        un exemple plus complexe .
+ 
+                  Bien  que ce premier dessin ne presente en soi que  peu
+        d'interet,  nous allons tout de meme le memoriser sur  disquette,
+        afin d'aborder les commandes de sauvegarde,  chargement de dessin
+        ou fichier dessin .
+ 
+                  Nous qualifierons ces commandes, commandes systeme . Si
+        vous  tapez  FUTI  (RC) ,  il apparait a  l'ecran  la  liste  des
+        fichiers elabores par MICROGRAPHIX , presents sur la disquette .
+ 
+                  Les   noms   de   ces  fichiers   se   composent   d'un
+        identificateur   attribue   par  l'utilisateur  sur  au  plus   8
+        caracteres   ,   d'une   extension   sur   3   caracteres   geree
+        automatiquement par le systeme et utilisee pour reconnaitre leurs
+        types  .  Cette extension peut etre DES dans le cas d'un  fichier
+        dessin  ,  XYZ dans le cas d'un fichier de coordonnees de  point,
+        FTE  dans  le cas d'un fichier fonte ,  et PRC dans le  cas  d'un
+        fichier procedure .
+ 
+                  Un  fichier procedure contient un dessin realise de  la
+        meme facon qu'un fichier dessin mais qui peut etre superpose a un
+        fichier  dessin  .  Un  fichier fonte nous le  rappelons  est  en
+        quelque sorte une bibliotheque de symboles et de caracteres .  Un
+        fichier  de coordonnees de point ne contient que les  coordonnees
+        de point sans aucun ordre de dessin .
+ 
+                  A  droite  des  noms de fichier se  trouve  la  date  a
+        laquelle  ils  ont ete memorises sur disquette,  leur  taille  en
+        caractere et leur numero d'ordre dans la commande FUTI .
+ 
+                  Notre  dessin  est actuellement a moitie efface par  la
+        liste des fichiers, mais si vous frappez EXEC (RC) , celui-ci est
+        entierement restitue .
+ 
+ 
+                  Frappez  FILE (RC) ,  la machine vous donne  alors  les
+        noms  des fichiers actuellement presents sur le disque sans autre
+        indication et vous propose 4 options :
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.14
+ 
+ 
+ 
+ 
+                 1/ RANGER,  c'est  a dire memoriser  ou  enregistrer  un
+                    dessin sur le disque .
+ 
+                 2/ APPELER   donc  charger   en   memoire   un   fichier
+                    MICROGRAPHIX  dessin  ou  autre se  trouvant  sur  le
+                    disque et donc dans la liste affichee a l'ecran .
+ 
+                 3/ SUPPRIMER un fichier MICROGRAPHIX
+ 
+                 4/ LISTER  un fichier code en ASCII .  Par  exemple,  si
+                    vous  avez  elabore  un guide de projet a  l'aide  de
+                    l'editeur  du systeme d'exploitation de votre  micro-
+                    ordinateur  ,  il vous est offert de le lister a tout
+                    moment de sa realisation avec MICROGRAPHIX .
+ 
+ 
+                  Frappez 1 (RC) pour memoriser le dessin sur disquette .
+        Le message suivant s'inscrit :
+ 
+                  NOM DU FICHIER
+ 
+                  Il  vous indique que vous devez entrer le nom que  vous
+        voulez donner a votre dessin .
+ 
+                  Frappez  par exemple ESSAI (RC) .  Attention,  si  vous
+        aviez tape un nom de fichier existant deja sur le disque, c'est a
+        dire enonce dans la liste affichee a l'ecran, votre dessin aurait
+        pris sa place et donc l'ancien dessin aurait ete perdu .
+ 
+                  Il  faut  donc appliquer une  certaine  prudence,  dans
+        l'utilisation  des  commandes de traitement  de  fichiers,  dites
+        commandes systemes .
+ 
+                  Un  disque  ou une disquette est en  quelque  sorte  un
+        classeur  dans lequel on range des feuilles ,  des fichiers .  Le
+        nombre  de pages que peut recevoir le classeur  correspond  a  la
+        capacite  du disque ou de la disquette .  Un fichier peut occuper
+        autant de feuilles que le classeur peut en recevoir . La commande
+        FUTI  nous  donne  ,  pour continuer l'analogie  le  sommaire  du
+        classeur .  Memoriser un dessin ,  c'est l'ecrire sur une feuille
+        et  ranger cette feuille dans le classeur .  A cette feuille  est
+        attribue un nom . Charger en memoire un fichier consiste a sortir
+        la feuille correspondante du classeur afin de travailler dessus .
+        Supprimer  un  fichier  revient  a jeter  au  panier  la  feuille
+        correspondante  et  a la remplacer par une vierge .  De  la  meme
+        facon,  memoriser  un fichier qui existe deja consiste a jeter la
+        feuille  correpondant a l'ancienne version et a la remplacer  par
+        une autre contenant la nouvelle .
+ 
+                  Donc  si vous travaillez par la suite sur un  dessin  (
+        apport  de  modification  ) ,  il faudra si vous  ne  voulez  pas
+        perdre  la  version de base ,  sauver les dessins  modifies  sous
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.15
+ 
+        d'autres noms que le nom du fichier dessin de base .
+ 
+ 
+                  Apres avoir repondu ESSAI au nom de fichier requis,  le
+        logiciel  vous demande sous quelle forme vous voulez  sauvegarder
+        votre dessin, repondez 1 (RC) , correspondant au type dessin .
+ 
+                  Votre dessin est a ce moment en cours d'ecriture sur le
+        disque . Une fois termine, le curseur clignote derriere le prompt
+        sur la ligne dialogue machine utilisateur .
+ 
+                  Le  systeme vous a donc rendu la main et attend de vous
+        une  directive  .  Frappez  EXEC (RC) .  Le  dessin  s'execute  a
+        l'ecran, il est donc present sur le disque et present en memoire.
+        Par  consequent  on peut modifier a l'ecran sans pour  autant  le
+        modifier sur le disque .
+ 
+                  Nous  vous  proposons par  exemple,  de  supprimer  les
+        textes .  Nous allons utiliser la commande DEBG (DEBUG en langage
+        informatique voulant dire corriger ) .
+ 
+                  Celle-ci  execute  pas a pas le dessin actuellement  en
+        memoire,  c'est a dire instruction par instruction de dessin dans
+        le meme ordre que vous les avez rentrees , en vous proposant pour
+        chacune d'elle de la garder ou de l'effacer .
+ 
+                  Frappez DEBG (RC) ,  MICROGRAPHIX dessine le segment 1-
+        1001 et apparait alors la question "OK ?  (O) N" ,  comme pour la
+        confirmation  en  fin  d'ordre de segmentation ou  de  dessin  de
+        cercle  ,  il faut frappez O ou (RC) pour le garder ou N pour  le
+        supprimer donc l'effacer .
+ 
+                  Dans  notre  exemple,  frappez  (RC)  pour  le  premier
+        segment,  O  pour  le cercle,  N pour le texte,  O pour  le  2eme
+        segment  ,  ainsi que pour le quart de cercle et enfin N pour  le
+        deuxieme texte .  L'execution de la commande DEBG est terminee  .
+        Notre  exemple  de  dessin est actuellement a  l'ecran  sans  les
+        textes .
+ 
+                  Nous allons maintenant charger en memoire notre exemple
+        que nous avons sauvegarde .
+ 
+                  Frappez FILE (RC) ,  puis 2 (RC) . A la question nom de
+        fichier, repondez ESSAI (RC) , puis 1 (RC) pour declarer son type
+        dessin : DES .
+ 
+                  Frappez  EXEC  (RC) ,  le dessin apparait complete  des
+        lignes textes a l'ecran .  Nous avons donc bien charge en memoire
+        le  fichier dessin ESSAI,  residant sur le disque .  Vous  pouvez
+        noter  que  la  position du dessin a  change  ;  MICROGRAPHIX  ne
+        memorise pas la position d'un dessin lors de sa sauvegarde ce qui
+        entraine quelquefois des modifications de position . Pour obtenir
+        la position initiale, frappez CENT 1 (RC) .
+ 
+                  Nous pouvons verifier que nous travaillons actuellement
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.16
+ 
+        sur  le fichier dessin ESSAI en consultant la ligne des commandes
+        activees .
+ 
+                  Vous  remarquez  que le fait de modifier  son  etat  en
+        memoire n'a en rien modifie son etat sur le disque .
+ 
+                  Les   trois   autres  options  de  la  commande   FILE
+        s'utilisent de la meme facon .
+                  Nous allons maintenant traiter un autre exemple .  Pour
+        ceux qui n'auraient pas envie de le faire tout de suite,  il vous
+        suffit de taper FIN (RC) ,  puis de tapez O pour confirmer , pour
+        quitter MICROGRAPHIX .
+ 
+                  Attention, notez bien que si nous n'avions pas memorise
+        sur disque notre dessin, en quittant MICROGRAPHIX, nous l'aurions
+        perdu . Pendant le fonctionnement du logiciel, le dessin en cours
+        n'est conserve qu'en memoire volatile,  par consequent,  si  vous
+        craignez  des  incidents comme des coupures  secteur,  prenez  la
+        precaution d'enregistrer frequemment vos dessins sur disque .
+ 
+                  Dans le cas de fin de traitement MICROGRAPHIX,  l'ecran
+        s'efface  et le message :  Program terminated apparait,  c'est  a
+        dire programme termine .
+ 
+                  Par  contre,  pour  continuer,  il  faut  tout  d'abord
+        reinitialiser  la memoire qui contient actuellement le dessin  de
+        notre 1er exemple .
+ 
+ 
+                  Pour cela,  il faut taper $ZER (RC) ,  remise a zero et
+        frappez la touche O ou (RC) pour confirmer .  Il vous est demande
+        la date, frappez (RC) .
+ 
+ 
+                  Nous allons remettre l'origine de numerotation a zero .
+        Nous  avons pu constater que les numeros generes  automatiquement
+        par  MICROGRAPHIX debutaient a 1000 .  Pour modifier ceci,  tapez
+        ORIG (RC) .
+ 
+                  Le message suivant apparait :
+ 
+                  Origine de numerotage 1000 nouvelle valeur ?
+ 
+                  Il  vous  indique  que l'origine actuelle  est  1000  .
+        Frappez  0 (RC) .  Ainsi les prochains points crees et  numerotes
+        automatiquement par le systeme auront pour numero : ORIGINE + 1 ,
+        c'est  a dire 1 pour le premier,  2 pour le deuxieme et ainsi  de
+        suite .
+ 
+ 
+                  Attention,  si l'origine est a 0 et que vous avez saisi
+        un  point en lui affectant le numero 1 et si par la  suite,  pour
+        saisir  un  autre  point vous frappez ses  coordonnees  sans  lui
+        attribuer un numero , celui-ci sera pris en charge par le systeme
+        et  sera  donc egal a ORIGINE + 1 soit 0 + 1 = 1 .  Or  le  point
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.17
+ 
+        numero  1 existe deja .  Dans ce cas,  MICROGRAPHIX  refusera  la
+        saisie  de  ce nouveau point,  jusqu'a ce que  vous  retablissiez
+        l'origine de numerotation .
+ 
+ 
+                  Il  faudra  donc  dans  notre  deuxieme  exemple,  etre
+        prudent  et  eviter  les chevauchements ou double  definition  de
+        numero de points .
+ 
+ 
+                  Nous  allons  pour  ce second dessin  aborder  la  3eme
+        methode de travail offerte par MICROGRAPHIX,  l'utilisation de la
+        table a digitaliser .
+ 
+ 
+ 
+ 
+ 
+ 
+        MODE DIGITALISEUR
+        -----------------
+ 
+ 
+                  Nous avons dessine avec la mire en mode clavier  digit,
+        nous  allons l'utiliser maintenant avec une plus grande souplesse
+ 
+ 
+                  Vous  avez  devant  vous  votre  digitaliseur,  pret  a
+        fonctionner  .  Le curseur clignote devant le prompt sur  l'ecran
+        vide .
+ 
+                  Le systeme est actuellement en attente d'une  directive
+        entree  a partir du clavier .  Si vous deplacez la souris sur  la
+        table, et appuyez sur les touches, il ne se passe rien .
+ 
+                  Il  faut pour utiliser le digitaliseur,  passer en mode
+        digitaliseur  en  tapant  DIG (RC) .  La mire  apparait  alors  a
+        l'ecran et suit les deplacements de votre souris sur la table .
+ 
+                  Pour  retourner en mode clavier,  il suffit de  frapper
+        directement  la  commande desiree .  Cette operation  differe  du
+        passage  mode clavier digit,  mode clavier puisqu'il fallait tout
+        d'abord frapper une touche, puis taper la commande desiree .
+ 
+                  Frappez CLS (RC) , l'effacement d'ecran est directement
+        execute .
+ 
+                  Nous  vous  proposons de digitaliser l'exemple  qui  se
+        trouve sur feuille calque dans le manuel . Fixez le calque sur la
+        table .
+ 
+                  Avant de proceder a la saisie,  nous allons nous placer
+        dans de bonnes conditions pour digitaliser notre dessin .
+ 
+                  Si vous disposez d'un ecran couleur, vous avez constate
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.18
+ 
+        que  la mire est par defaut de couleur bleue foncee et qu'il  est
+        peu aise de la distinguer sur le fond noir.
+ 
+                  Nous  vous proposons de modifier sa couleur .  Tapez  a
+        cet  effet  MIRE  (RC) . La commande MIRE vous permet d'une  part  
+        de definir  la  taille  de la mire a l'ecran  et  d'autre  part,
+        sa couleur . Le message inscrit est :
+ 
+                  MIRE (points/x (points/y (code couleur : 2/8))) 4 2 2
+ 
+                  Cela signifie que la taille de la mire est actuellement
+        de 4 points selon l'axe des X et de 2 points selon l'axe des Y .
+ 
+                  cette  taille est a priori tout a fait convenable .  Ce
+        message nous indique aussi que la mire est celle correspondant au
+        code  2,  a savoir le bleu fonce .
+ 
+                  Frappez  4  2 7 (RC) ,  de sorte que la  mire  devienne
+        jaune tout en conservant sa taille .
+ 
+                  Notez   que  nous  sommes  contraints  de  rentrer  les
+        mensurations de la mire bien que nous ne les modifions pas  .  En
+        effet,  si  nous n'avions repondu que 7 (RC) pour rendre la  mire
+        jaune,  MICROGRAPHIX aurait interprete cette entree comme suit  :
+        taille de la mire 7 points selon l'axe des X, 0 selon l'axe des Y
+        et couleur incorrecte .  La couleur n'aurait pas ete modifiee car
+        le code couleur 0 n'existe pas . Vous avez donc pu comprendre que
+        MICROGRAPHIX aurait traite l'entree comme 7 0 0 (RC) .
+ 
+                  Les   couleurs   sont  repertoriees  selon  les   codes
+        suivants :
+ 
+                  1/ Noir ( pas selectionnable )
+ 
+                  2/ Bleu fonce
+ 
+                  3/ Rouge
+ 
+                  4/ Violet
+ 
+                  5/ Vert
+ 
+                  6/ Bleu clair
+ 
+                  7/ Jaune
+ 
+                  8/ Blanc
+ 
+ 
+                  La couleur noire, de code 1, ne doit pas etre utilisee.
+        Si vous entrez 1 pour definir la couleur de la mire, MICROGRAPHIX
+        refusera  cette  entree  et  conservera la  couleur  de  la  mire
+        inchangee .
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.19
+ 
+                  Nous  allons,   maintenant,  definir  une  plus  grande
+        precision de saisie au digitaliseur .
+ 
+ 
+ 
+                  Frappez  RAYO  (RC) .  La commande RAYO nous permet  de
+        definir  le  rayon  de la zone de recherche  pour  la  saisie  au
+        digitaliseur . Celui-ci est actuellement egal a 1 comme l'indique
+        la ligne des commandes activees .  Ceci signifie que MICROGRAPHIX
+        recherche l'existence d'un point dans un rayon de 1 mm ecran  par
+        rapport a la position de la mire , avant d'en saisir un nouveau.
+ 
+                  Au message "ENVOYER VALEUR(S)" ,  repondez 0.001 (RC) .
+        Nous  obtiendrons ainsi une plus grande precision de saisie .  Il
+        ne  nous  reste plus qu'a supprimer ou tout  au  moins  minimiser
+        l'arrondi de saisie des coordonnees en mode digitaliseur .
+ 
+                  Actuellement egal a 2.5 , en se referant a la ligne des
+        commandes activees,  nous le reduisons en tapant ARR (RC) ,  puis
+        0.005 (RC) au message :
+ 
+              ARRONDI saisie (unites utilisateur) 2.500 nouvelle valeur
+ 
+                  Reportez vous a la ligne des commandes activees, celle-
+        ci  indique que l'arrondi et le rayon sont nuls .  Notez  qu'elle
+        indique   aussi que nous travaillons sur ESSAI,  ce qui est  faux
+        puisque nous avons reinitialise le systeme . Le nom ESSAI restera
+        present jusqu'a ce que nous rechargions un autre fichier dessin .
+ 
+                  Une derniere verification consiste a consulter la ligne
+        des  commandes  activees  pour  savoir si  nous  sommes  en  mode
+        ORTHogonal, auquel cas le mot ORTH figure dans la ligne .
+ 
+                  ORTH est une commande a bascule, tout comme GRMA, qui a
+        pour effet de tracer des segments toujours paralleles aux axes du
+        systeme  utilisateur  ( ou a 45 degres ) en mode digitaliseur  ou
+        clavier digit uniquement .
+ 
+                  Par exemple, placez vous en mode ORTH si vous ne l'etes
+        pas  en frappant ORTH (RC) puis frappez une touche  de  direction
+        afin d'obtenir la mire .  Frappez ensuite la touche 9 pour regler
+        sa vitesse a 9 points-ecran par deplacement . Pointez la commande
+        SEGM,  frappez (RC) ,  vous etes en mode execution de la commande
+        SEGM  .  Positionnez la mire au centre de l'ecran et frappez (RC)
+        pour  saisir un point .  Deplacez ensuite la mire en  appuyant  5
+        fois  sur  la touche fleche a gauche,  puis 3 fois sur la  touche
+        fleche en bas . Frappez (RC) .
+ 
+                  Vous venez de saisir le deuxieme point du  segment,  et
+        MICROGRAPHIX en trace la premiere partie parallele a l'axe des X,
+        frappez a nouveau (RC) , la deuxieme partie parallele a l'axe des
+        Y est tracee . Declarez la fin de liste des points a segmenter en
+        frappant la touche - , puis frappez (RC) pour confirmer .
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.20
+ 
+                  Vous remarquez donc qu'en mode orthogonal, les segments
+        sont  traces en deux temps,  MICROGRAPHIX commence par tracer  le
+        plus long, puis le plus court .
+ 
+ 
+ 
+                  Frappez  la barre d'espacement pour retourner  en  mode
+        clavier puis RAZ (RC) (RC) et (RC) , pour reinitialiser a nouveau
+        le systeme . Frappez ORTH (RC) pour quitter le mode orthogonal .
+ 
+                  Nous  allons  maintenant  pouvoir saisir  le  dessin  a
+        l'aide  du  digitaliseur .  Derniere chose toutefois,  nous  vous
+        proposons  d'utiliser  les couleurs pour dessiner  l'esquisse  de
+        l'exemple .  Nous utiliserons par exemple, le bleu clair pour les
+        murs et le rouge pour le toit .
+ 
+                  Frappez PLU (RC) . La commande PLU va nous permettre de
+        selectionner  la  couleur  de la plume a dessiner  .  Le  message
+        inscrit a l'ecran est le suivant :
+ 
+                  PLU couleur 1/8 (traceur 2/8 valides) 4
+ 
+                  Il nous indique qu'actuellement la couleur de la  plume
+        est celle correspondant au code 4, a savoir le violet . Frappez 6
+        (RC) car nous allons commencer par dessiner les murs .
+ 
+                  Une fois les murs saisis,  il faudra retourner en  mode
+        clavier  pour selectionner la couleur rouge pour dessiner le toit
+ 
+ 
+                  Frappez  DIG (RC) .  La mire apparait a l'endroit ou se
+        trouve votre souris sur la table a digitaliser .  Placez la  mire
+        sur  la  commande  SEGM  en deplacant votre  souris  .  Une  fois
+        la commande pointee, appuyez sur la touche rouge .
+ 
+                  Le  message "SEGM nos ou ptes" s'inscrit sur  la  ligne
+        dialogue  machine  utilisateur .  Vous venez donc de  valider  la
+        commande SEGM en frappant sur le bouton rouge qui correspond a la
+        touche (RC) du clavier .
+ 
+                  Placez  vous  ensuite sur  le  point  inferieur  gauche
+        du dessin.
+ 
+                  Appuyez  sur  le bouton rouge,  la machine retourne  la
+        valeur  -3  comme  pour  la  saisie  en  mode  clavier  digit   .
+        Positionnez  vous ensuite sur le point suivant a droite du  point
+        saisi,  appuyez  sur  le  bouton rouge,  le segment est  trace  .
+        MICROGRAPHIX  vous  retourne a nouveau la valeur -3  en  bout  de
+        ligne dialogue machine utilisateur .
+ 
+                  Frappez  la touche blanche qui correspond a la touche -
+        en mode clavier digit, pour declarer la fin de liste des points a
+        segmenter .
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.21
+ 
+                  Le message (case 0 ou rouge) s'inscrit .  Il vous  faut
+        appuyer  soit  sur le bouton rouge pour confirmer la validite  du
+        segment  trace ,  soit sur le bouton blanc designe ici par case 0
+        pour l'effacer .
+ 
+                  Appuyez  sur  le bouton rouge .  Vous venez  de  tracer
+        votre premier segment en mode digitaliseur .
+ 
+                  Vous avez pu remarquer, en utilisant votre digitaliseur
+        qu'un  indice apparait a l'extremite de la ligne dialogue machine
+        utilisateur .
+ 
+                  Cet  indice  varie  en fonction du  deplacement  de  la
+        souris sur la table .  L'ecran ,  en mode digitaliseur est divise
+        en  196  cases ,  la case inferieure gauche de l'ecran  etant  la
+        premiere et la case superieure droite, la 196 eme .
+ 
+                  Notez  qu'il  faut bien attendre que  MICROGRAPHIX  ait
+        enregistre  la saisie d'un point avant de deplacer la souris sans
+        quoi , vous risquez d'avoir des problemes de precision .
+ 
+ 
+                  En  effet,  le  systeme  va enregistrer a  l'avance  la
+        saisie  d'un point et entrera donc comme point la position de  la
+        souris  et  non  pas  le  point  pointe  si  vous  deplacez  trop
+        rapidement cette derniere .
+ 
+                  Finissez de saisir le dessin selon le meme principe  en
+        n'oubliant pas d'une part de changer la couleur pour le dessin du
+        toit et d'autre part qu'un ordre de segmentation peut contenir au
+        plus 29 points .
+ 
+                  Nous  vous conseillons d'ailleurs de definir de  petits
+        segments,  c'est  a  dire un petit nombre de points par ordre  de
+        dessin et de les valider successivement afin de ne  pas  avoir  a
+        recommencer  plusieurs  fois un long segment dans le cas  ou  une
+        anomalie se presenterait .
+ 
+                  Vous  avez  termine  de saisir l'esquisse  proposee  en
+        exemple . Frappez EXEC (RC) . L'ecran s'efface puis le dessin est
+        entierement execute .
+ 
+                  Vous pouvez vous rendre compte que certaines parties de
+        l'esquisse  presentent des imperfections ( les fenetres sont  par
+        exemple un peu tordues ...  ) .  Le resultat n'est quand meme pas
+        si  mal  pour un debutant,  surtout si l'on considere  la  petite
+        taille des fenetres .
+ 
+                  Nous  vous  proposons maintenant  de  travailler  cette
+        esquisse afin d'obtenir un meilleur rendu .
+ 
+                  Nous  allons utiliser pour cela les blocs et les  plans
+        que nous propose MICROGRAPHIX .
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.22
+ 
+                  Pour  nous faciliter la tache,  MICROGRAPHIX nous offre
+        la  possibilite de travailler sur 98 blocs composes eux memes  de
+        98 plans .
+ 
+                  Ainsi, pour realiser des dessins importants, aussi bien
+        par leurs tailles que par leurs densites,  nous pourrons proceder
+        par etape en utilisant les blocs et les plans .
+ 
+                  En  procedant  de  cette  facon,   nous   travaillerons
+        toujours  sur des dessins alleges,  quelle que soit la taille  du
+        dessin  final  a  realiser,  et nous  pourrons  ainsi  beneficier
+        d'elements de plans deja realises .
+ 
+                  Un bloc est de facon imagee, un dossier constitue de au
+        plus  98  documents ( plans ) ,  sachant que l'on dispose  de  98
+        dossiers ( blocs ) pour un dessin .
+ 
+                  D'une  certaine  maniere,  les plans sont des piles  de
+        feuilles  calques  que l'on superpose pour  obtenir  un  resultat
+        final .
+ 
+                  Vous  allez  pouvoir  mieux comprendre ces  notions  de
+        blocs et de plans en les manipulant .
+                  Notez  tout  d'abord,   en  consultant  la  ligne   des
+        commandes  activees,  que  nous travaillons actuellement dans  le
+        plan  1  du bloc 1 .  C'est a dire que toutes  les  commandes  de
+        dessin entrees au digitaliseur,  ont ete affectees dans le plan 1
+        du bloc 1 .
+ 
+                  Par consequent,  tout les autres plans des autres blocs
+        sont actuellement vides .
+ 
+                  Pour le verifier, nous allons selectionner le plan 2 du
+        bloc  1  sur  l'ecran de visualisation .  Tapez SPLA  (RC)  .  Il
+        apparait le message suivant :
+ 
+                  SPLA Taper le(s) numero(s) (RETURN = tous )
+ 
+                  Donc  si  vous voulez visualiser les dessins de  un  ou
+        plusieurs  plans,   il  faut  taper  les  numeros  correspondants
+        (separes  par des espaces ) puis valider .  Par contre ,  si vous
+        voulez visualiser tous les plans,  il faut frapper  immediatement
+        (RC) .
+ 
+                  Frappez  2 (RC) afin de selectionner le plan 2 .  Tapez
+        EXEC (RC) , l'ecran s'efface et reste vide .
+ 
+                  Pour  visualiser le plan 1,  frappez SPLA (RC)  puis  1
+        (RC) .
+ 
+                  Nous  allons  maintenant reprendre  notre  dessin  pour
+        l'ameliorer  .  Nous allons affecter les commandes de dessin dans
+        le plan 2 tout en visualisant le plan 1 .
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.23
+ 
+                  Tapez PLAN (RC) et repondez 2 (RC) au message :
+ 
+                  PLAN numero du PLAN  ?
+ 
+                  Toutes  les  commandes de dessin qui seront rentrees  a
+        partir de maintenant seront affectees dans le plan 2 .
+ 
+ 
+ 
+                  Frappez EXEC (RC) . Le dessin visualise reste le dessin
+        du plan 1 .  Vous pouvez ainsi vous rendre compte que le fait  de
+        dessiner  dans un plan donne,  n'implique pas la visualisation de
+        ce  meme  plan a l'ecran .  Le dessin visualise  reste  celui  du
+        dernier  plan  selectionne auquel s'ajoute les ordres  de  dessin
+        entres depuis la selection .
+ 
+                  Frappez RENU (RC) , renumerotation des points y compris
+        ceux  saisis  en  mode  digitaliseur,   puis  POIN  (RC)  (RC)  ,
+        visualisation des numeros de points .
+ 
+                  Il  est  possible  que pendant la saisie du  dessin  au
+        digitaliseur,  vous  ayez  saisis des points inutiles  .  Si  par
+        exemple,  vous avez saisi un segment sans confirmer sa  validite,
+        les points crees pour ce segment sont inutiles pour le dessin. De
+        plus, ils sont genants puisqu'ils sont superposes sur les numeros
+        des points utilises dans le dessin .
+ 
+                  Pour supprimer ces points inutiles, frappez INUT (RC) .
+        Tapez  ensuite  EXEC (RC) puis a nouveau RENU (RC) et  POIN  (RC)
+        (RC) .
+ 
+                  Les points inutiles ont ete supprimes .
+ 
+                  A  partir  d'une  esquisse,  nous  sommes  capables  de
+        recuperer  automatiquement toutes les coordonnees des  points  et
+        donc d'aller tres rapidement jusqu'aux cotations .  Nous  pouvons
+        obtenir la distance entre deux points .
+ 
+                  Par exemple, si vous voulez connaitre la distance qu'il
+        existe  entre le point numero 10 et le point numero 20,  tapez DI
+        10 20 (RC) . MICROGRAPHIX vous retourne d'une part la distance en
+        unite  utilisateur  separant ces deux points et d'autre  part  le
+        gisement de la droite passant par ces deux points .
+ 
+                  Etant  donne que nous n'avons,a priori,  pas les  memes
+        numeros  de  points et donc pas les memes  coordonnees,  nous  ne
+        pourrons  travailler l'esquisse qu'a partir de la mire  et non  a
+        partir des coordonnees, ce qui aurait ete plus correct .
+ 
+                  Vous  allez donc redessiner l'ebauche dans le plan 2  a
+        l'aide  la  mire  .  Les commandes de dessin  sont  effectivement
+        affectees  dans le plan 2 comme l'indique la ligne des  commandes
+        activees .
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.24
+ 
+                  Nous commencons par agrandir le dessin .  Frappez  ZOOM
+        (RC) .
+ 
+                  La  fonction ZOOM permet aussi bien d'agrandir  l'image
+        que de la reduire . Le message suivant apparait :
+ 
+                  ZOOM Echelle(s) X (Y)
+ 
+ 
+ 
+                  Ceci signifie que vous devez entrer le coefficient en X
+        et  eventuellement en Y pour effectuer le ZOOM .  Si vous  voulez
+        reduire  une image,  il faut entrer une valeur superieure a 1  et
+        pour agrandir, une valeur positive inferieure a 1 .
+ 
+                  Si un seul coefficient est entre,  il est applique en X
+        et  en  Y .  Frappez 0.7 (RC) .  L'image s'est agrandie  mais  le
+        dessin est mal centre .
+ 
+                  Nous  allons  centrer le dessin sur la maison gauche  a
+        partir d'un point inexistant defini en millimetre ecran .
+ 
+                  Tapez  GRMA  (RC) ,  visualisation d'une trame  et  des
+        marques  correspondantes .  Tapez ensuite CENT (RC) .  Le message
+        suivant apparait :
+ 
+                  CENT Return ou numero ou x y (mm/ecran)
+ 
+                  Il  vous  indique  que  vous disposez  de  3  modes  de
+        centrage. Le premier obtenu en frappant (RC) , option par defaut ,
+        opere  a  partir du calcul suivant :  centrage sur  le  point  de
+        coordonnees  X = ( Xmin + Xmax ) divise par 2
+                     Y = ( Ymin + Ymax ) divise par 2
+ 
+                  Le  deuxieme mode de centrage est celui que nous  avons
+        deja utilise ;  il s'effectue a partir d'un point dont nous avons
+        le numero .
+ 
+                  Le   troisieme,   celui   que  nous   allons   utiliser
+        maintenant,  opere a partir d'une adresse en mm ecran . Tapez une
+        valeur  en  X et une valeur en Y qui correspondent,  si  l'on  se
+        reporte au dessin,  au point se trouvant au centre de la maison .
+        Vous pouvez lire ces valeurs sur les marques de la trame .
+ 
+                  Nous  avons maintenant la maison de gauche agrandie  au
+        centre  de l'ecran .  Redessinez la integralement a l'aide de  la
+        mire en mode clavier digit .
+ 
+                  Une  fois la partie gauche de l'esquisse traitee,  nous
+        allons passer a la partie droite en translatant notre ecran  vers
+        la droite en frappant DR (RC) .
+ 
+                  La  fenetre  ecran s'est deplacee vers la droite  .  La
+        partie droite du dessin est donc maintenant visualisee,  avec une
+        surface de recouvrement de 10 % de la partie gauche .
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.25
+ 
+                  Redessinez  a  son tour et de la meme facon  la  maison
+        droite .
+ 
+                  Vous  avez termine de travailler votre esquisse .  Nous
+        allons  voir  ce  que donne le resultat en  visualisant  le  plan
+        numero 2,  dans lequel nous venons d'affecter tous les ordres  de
+        dessin rentres en mode clavier digit .
+ 
+ 
+                  Frappez SPLA (RC) ,  puis 2 (RC) pour ne visualiser que
+        le  plan  numero  2 .  Frappez EXEC (RC)  .  Le  dessin  ameliore
+        apparait alors .
+ 
+                  Frappez  ZOOM (RC) ,  et entrez 1 (RC) a la requete  du
+        coefficient afin de restituer au dessin sa taille initiale .
+ 
+                  Effectuons  un centrage par defaut en tapant CENT  (RC)
+        (RC) . Nous obtenons ainsi le dessin entier a l'ecran .
+ 
+                  Nous vous proposons de copier le plan 2 dans un plan  3
+        tout  en le deplacant .  Ainsi,  en selectionnant le plan 1 et le
+        plan  3,  nous  aurons a l'ecran l'esquisse saisie et  le  dessin
+        ameliore sans qu'ils se superposent .
+ 
+ 
+                  Frappez CPLA (RC) ,  copie de plan . Repondez 2 (RC) au
+        message  "Bloc  ou  plan a copier",  puis 3  (RC)  a  la  requete
+        "destination"  .  Nous avons donc defini une copie du plan 2 dans
+        le  plan  3  .  Le systeme vous envoie le  message  suivant  "1er
+        point"  .  Il  attend  que vous lui  definissiez  un  vecteur  de
+        translations a partir de 2 points pointes a la mire pour deplacer
+        le plan copie .
+ 
+                  Positionnez la mire sur la ligne de sol d'une maison et
+        frappez (RC) .  MICROGRAPHIX vous demande alors le deuxieme point
+        frappez (RC) . Le vecteur de translation est alors trace .
+ 
+                  Nous   allons   visualiser  le  resultat   obtenu,   en
+        selectionnant les plans 1 et 3 . Frappez SPLA (RC) puis 1 3 (RC).
+        Frappez EXEC (RC) , les deux plans sont dessines .
+ 
+                  Vous   pouvez  ainsi  constater  qu'une   autre   facon
+        d'utiliser  les plans et les blocs peut consister a les  recopier
+        et les deplacer pour l'assemblage de diverses figures .
+ 
+                  L'image  est  cependant  mal centree . Nous  allons  la
+        centrer  par rapport a une adresse en millimetre ecran .  Frappez
+        GRMA (RC) afin d'obtenir la grille, puis effectuez le centrage en
+        appelant la commande CENT .
+ 
+                  Pour  obtenir  a l'ecran la visualisation de  tous  les
+        plans, frappez SPLA (RC) (RC) , puis EXE  (RC) . La commande  EXE
+        execute le dessin a l'ecran sans l'effacer prealablement .
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.26
+ 
+                  Pour terminer cet exemple, nous allons reunir tous  les
+        plans  dans un meme plan .  Frappez AFPL (RC) .  La commande AFPL
+        affecte  tous les plans dans un plan donne .  Apres execution  de
+        cette commande, les differents plans n'existent plus, il ne reste
+        plus  que  le plan recepteur de la reunion de tous  les  plans  .
+        Cette fonction est donc a utiliser en fin de travail pour obtenir
+        un resultat final .
+ 
+                  Repondez 1 (RC) au message "Numero du plan" . Les plans
+        1 ,  2 et 3 sont regroupes dans le plan 1 .  Si vous selectionnez
+        le plan 3 en frappant SPLA (RC) , 3 (RC) puis EXEC (RC) , l'ecran
+        s'efface et reste vide .  Par contre si vous selectionnez le plan
+        1  en  frappant SPLA (RC) ,  1 (RC) puis EXEC (RC)  ,  le  dessin
+        s'execute a l'ecran .
+ 
+                  Memorisez  ce dessin sur disquette en tapant FILE (RC),
+        puis 1 (RC) ; entrez MAISON (RC) comme nom de fichier dessin puis
+        tapez 1 (RC) .  Le dessin est enregistre . Frappez FUTI (RC) , le
+        nom  MAISON  apparait effectivement dans la  liste  des  fichiers
+        dessin .
+ 
+                  Nous   terminerons  notre  serie  d'exemples   par   la
+        realisation  d'une figure en 3 dimensions qui vous  revelera  les
+        possibilites   de   perspectives  axonometriques  proposees   par
+        MICROGRAPHIX .
+ 
+                  Reinitialisons  tout d'abord la memoire  .  Tapez  $ZER
+        (RC) . Frappez (RC) pour la date .
+ 
+                  Nous  allons  tout d'abord saisir un carre .  Tapez  XY
+        (RC)  pour  saisir un point en mode clavier .  Tapez 50  50  (RC)
+        (RC) . Tapez ensuite POIN (RC) , le point numero 1 de coordonnees
+        X=50 et Y=50 est visualise .
+ 
+                  Tapez  DX  1 (RC) pour creer un point  resultant  d'une
+        translation du point 1001 .  Repondez 50 0 (RC) a la question "dx
+        dy  (dz)"  .  Le  point numero 1002 s'inscrit  a  l'ecran  .  Ses
+        coordonnees sont egales a :
+ 
+                                      X = 50 + 50 = 100
+                                      Y = 50 +  0 =  50
+ 
+                  De  meme,  translatons ce point 1002 en frappant  0  50
+        (RC) puis -50 0 (RC) . Appuyez encore une fois sur la touche (RC)
+        pour quitter la fonction DX .
+ 
+                  Tapez LC (RC) , vous obtenez la liste des coordonnees .
+        La coordonnee en Z est nulle .  Nous allons maintenant saisir des
+        points de meme coordonnees en X et Y mais avec un Z = 50 .
+ 
+                  Les fonctions de calcul de point comme DX par  exemple,
+        ne travaillent a priori que dans le plan XY, or nous voulons avec
+        cette  fonction creer des points de profondeur Z = 50 .  Il  nous
+        faut  alors  attribuer  aux points pour lesquels  aucun  Z  n'est
+        defini un Z par defaut egal a 50 .
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.27
+ 
+                  Frappez  PLZ  50 (RC) .  Si vous saisissez a partir  de
+        maintenant   un   point  sans  lui   attribuer   une   coordonnee
+        particuliere en Z, MICROGRAPHIX lui affecte la valeur definie par
+        PLZ a savoir 50 .  Par contre, si vous definissez une valeur en Z
+        avec  la  fonction  XYZ,  qui permet de saisir des  points  en  3
+        dimensions,  alors  PLZ  est  ignore et le  point  possede  comme
+        profondeur la valeur que vous lui avez donnee .
+ 
+ 
+                  Nous  allons creer  des points qui formeront  un  petit
+        carre a l'interieur du carre existant forme par les points 1001 ,
+        1002 , 1003 et 1004 .
+ 
+                  Frappez DX 1 (RC) puis :
+ 
+                                           10 10 (RC)
+ 
+                                           30  0 (RC)
+ 
+                                           0  30 (RC)
+ 
+                                          -30  0 (RC)
+ 
+                  Frappez RENU (RC) afin d'obtenir des numeros de  points
+        moins longs, puis CLS (RC) et POIN (RC) (RC) .
+ 
+                  Il   ne  reste  plus  qu'a  segmenter  les aretes  afin
+        d'obtenir un cube .
+ 
+                  Tapez SEGM (RC) puis 1 (RC) ,  2 (RC) , 3 (RC) , 4 (RC)
+        et  1 (RC) (RC) (RC) ,  le cote face a nous est segmente  .  Nous
+        allons  maintenant trace le cote se trouvant derriere celui-ci  .
+        Tapez (RC) ,  5 (RC) ,  6 (RC) ,  7 (RC) ,  8 (RC) et 5 (RC) (RC)
+        (RC) .  Il ne reste plus qu'a tracer les quatres aretes de chaque
+        cote reliant les deux carres existant . Tapez :
+ 
+                  (RC) , 1 (RC) , 5 (RC) (RC) (RC)
+ 
+                  (RC) , 2 (RC) , 6 (RC) (RC) (RC)
+ 
+                  (RC) , 3 (RC) , 7 (RC) (RC) (RC)
+ 
+                  (RC) , 4 (RC) , 8 (RC) (RC) (RC)
+ 
+                  Le  cube est dessine et apparait en projection  .  Nous
+        allons le visualiser en perspective .
+ 
+                  Frappez  AXON (RC) .  Le dessin apparait en perspective
+        axonometrique a 45 degres .  La commande AXON est une commande  a
+        bascule   comme   GRMA  ou  encore  ORTH  que  nous   avons   vus
+        precedemment .
+ 
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.28
+ 
+                  Par  consequent,  en  tapant a nouveau  AXON  (RC),  le
+        dessin   initial  est  restitue  .   Nous  pouvons  appliquer  un
+        coefficient a la commande AXON afin d'obtenir un angle autre  que
+        45  degres .  Par exemple,  Frappez AXON .2 (RC) ,  le dessin est
+        execute en perspective mais avec un angle moindre .
+ 
+                  Vous pouvez remarquer que nous avons dessine le  volume
+        en  systeme  d'axe XYZ et qu'il est represente en perspective  en
+        systeme XZY .  Il faut donc effectuer une permutation des axes  Y
+        et Z pour le visualiser en perspective en systeme XYZ .
+ 
+                  Frappez  a cet effet AXON (RC) pour retrouver le dessin
+        initial  puis  PERM 2 3 (RC) afin de permuter les axes Y et  Z  .
+        Frappez EXEC (RC) , le dessin apparait effectivement permute .
+ 
+                  Frappez AXON (RC) ,  la perspective desiree apparait  a
+        l'ecran .
+ 
+                  Nous  vous  proposons pour terminer de dessiner sur  la
+        table tracante la figure actuellement a l'ecran .
+ 
+ 
+ 
+ 
+ 
+        SORTIE DESSIN SUR TABLE TRACANTE
+        --------------------------------
+ 
+ 
+ 
+                  Il est possible de faire dessiner par la table tracante
+        n'importe  quelle  partie d'un dessin dans la mesure ou  celle-ci
+        est visible a l'ecran .
+ 
+                  En effet, pour definir un dessin sur table tracante, il
+        faut  tout d'abord englober la zone a  dessiner,  quelle  qu'elle
+        soit  dans  une fenetre .  Pour executer un dessin,  il est  donc
+        necessaire de l'avoir tout entier a l'ecran .  Si ce n'est pas le
+        cas,  il faut utiliser les fonctions de centrage de fenetre ecran
+        ( CENT ) , de translations de fenetre ecran ( BA , HA , DR ... ),
+        de ZOOM pour l'amener dans la zone ecran .
+ 
+                  Frappez DESS (RC) ,  commande qui va nous permettre  de
+        definir le dessin a executer sur la table tracante .
+ 
+                  MICROGRAPHIX  vous demande alors a quelle echelle  vous
+        voulez que votre dessin soit execute .  Entrez la valeur que vous
+        desirez  en  fonction de la taille de votre table  tracante  .  A
+        titre indicatif, nous vous rappelons que la valeur du ZOOM actuel
+        est affiche dans la ligne des commandes activees .
+ 
+                  Il  vous  est demande ensuite de definir la  fenetre  a
+        l'aide de la mire qui apparait en bas a gauche de l'ecran . Cette
+        fenetre representera en quelque sorte le cadre a dessiner .
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.29
+ 
+                  Vous devez donc definir ce cadre a partir d'un point en
+        bas a gauche puis d'un point en haut a droite . Placez la mire un
+        peu en dessous du dessin et legerement a gauche .  Frappez  alors
+        (RC)  pour  valider ce point puis,  deplacez la mire  jusqu'a  un
+        point en haut a droite du dessin . Frappez a nouveau (RC) .
+ 
+                  Le  cadre  s'execute,  et  il vous est  demande  de  le
+        confirmer .  Frappez (RC) si vous etes d'accord sur sa definition
+        sinon  N .  Dans ce dernier cas,  vous quittez la commande  DESS,
+        vous devez donc recommencer depuis le debut .
+ 
+                  Il  vous est ensuite demande si vous desirez obtenir le
+        dessin  a  l'endroit ou a l'envers dans le cas  d'utilisation  de
+        feuilles calques . Frappez (RC) pour le dessin a l'endroit .
+ 
+                  MICROGRAPHIX vous propose alors 5 mm de marge autour du
+        dessin .  Repondez (RC) pour valider .  Si nous avions repondu  N
+        c'est a dire non, nous aurions du donner une nouvelle valeur pour
+        la  marge  .  Les parametres entres jusqu'a maintenant vous  sont
+        alors presentes dans une ligne recapitulative, frappez (RC) .
+ 
+                  Repondez  (RC) pour obtenir un cadre autour du  dessin,
+        sinon N .
+ 
+                  Il  vous est ensuite demande si vous voulez  superposer
+        un dessin, repondez (RC) .
+ 
+                  Vous avez la possibilite de completer le dessin par les
+        numeros  des points ou eventuellement de leurs coordonnees en  Z,
+        tapez (RC) . De meme, repondez (RC) a la question suivante .
+ 
+                  Il vous est alors demande de confirmer tout ce que vous
+        venez  de definir . Frappez (RC) .  Si nous avions repondu par N,
+        nous  aurions  quitte  la commande DESS et nous aurions  donc  du
+        tout recommencer .
+ 
+                  MICROGRAPHIX  vous demande quelle table  tracante  vous
+        allez  utiliser  .  Un  type de table vous  est  propose,  si  il
+        correspond a la votre,  frappez O sinon frappez N .  Si vous avez
+        repondu par N, MICROGRAPHIX vous demande le numero de traceur que
+        vous voulez utiliser,  consultez les differents types a partir du
+        numero 1 jusqu'a ce que vous trouviez un type de traceur qui vous
+        convienne .
+ 
+                  Il vous est alors demande le nom du fichier . Vous avez
+        deux possibilites, soit de donner un nom de fichier comme MAD par
+        exemple  ( Machine A Dessiner ) et dans ce cas les codes destines
+        a  conduire  la table tracante seront memorises dans  ce  fichier
+        MAD,  soit  de donner le nom du port sur lequel est  connecte  la
+        table tracante, le dessin etant effectue directement .
+ 
+
+                                                      U850601 PAGE  5.30
+ 
+                  Si  les codes ont ete memorises dans un fichier  dessin
+        MAD,   pour  le  sortir  sur  table  tracante,  il  faut  quitter
+        MICROGRAPHIX  et donc frapper FIN (RC) puis O pour confimer .  Il
+        ne  vous reste plus qu'a frapper PRINT MAD (RC) pour executer  le
+        dessin  sur  table  tracante  (  si  vous  disposez  d'un  micro-
+        ordinateur a deux disquettes,  il faut prealablement inserer  une
+        disquette  systeme MS-DOS dans le drive A,  inserer la  disquette
+        fichiers dessin dans le lecteur B et taper PRINT B:MAD (RC) ) .
+ 
+ 
+ 
+                  Nous  avons  vu ensemble les principes fondamentaux  de
+        votre  logiciel  de  dessin  MICROGRAPHIX  .  Vous  etes  a  meme
+        maintenant  de  comprendre la description des  commandes  qui  se
+        trouvent dans le manuel de reference .
+ 
+ 
+ 
+ 
+ 
+
+                                                      U850601 PAGE  5.31
+ 
+ 
+			                     N O T E S
+ 
+ 
+ 
+ 
+
+

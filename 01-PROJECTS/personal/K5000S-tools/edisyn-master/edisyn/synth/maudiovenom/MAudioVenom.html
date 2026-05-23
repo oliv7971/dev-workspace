@@ -1,0 +1,141 @@
+<html><head></head><body>
+
+<h1>M-Audio Venom</h1> 
+<h2>Single Patch Editor</h2>
+
+<p><b>Communicating with Edisyn</b><br> 
+
+Set Edisyn's MIDI channel to the same as your Venom.  
+
+<ul>
+<li>To communicate with your Venom over USB, use "Venom Synth In" as the Receive From device, and "Venom Synth Out" as the Send To device.  Set the Venom up to receive MIDI events over USB by holding the Edit button, then pressing the "MIDI Out" key (the A-flat below Middle C) until the screen changes to "MIDI OUT USB".
+
+<p><li>To communicate with your Venom over standard MIDI ports, just use the appropriate MIDI device for your computer.   Set the Venom up to receive MIDI events over 5-pin DIN MIDI cabling by holding the Edit button, then pressing the "MIDI Out" key (the A-flat below Middle C) until the screen changes to "MIDI OUT KEY". 
+</ul>
+
+<p><b>Warning</b><br>
+
+The Venom's USB MIDI device can and does occasionally hang permanently until you power cycle the machine.  You may still see the device in Edisyn but nothing will happen when Edisyn tries to send stuff to it.  
+
+<p><b>Patches</b><br>
+
+Vyzex saves patches to disk using an unnecessarily proprietary and stupid format. I have taken the liberty of converting some publicly available patches to standard sysex files, which Edisyn can read.  Look for <b>resources/VenomPatches.zip</b> in <a href="https://github.com/eclab/edisyn">Edisyn's Distribution</a>.
+
+<p><b>Hints</b><br>
+
+<ul><li>Edisyn responds to changing the parameter knobs directly on the Venom.
+
+<p><li>When you change the Bank or the Pattern of the Arpeggiator, the title of the arpeggiator category will change to reflect the <b>default arpeggio pattern name</b>, in case that's helpful to you.  This isn't necessarily the <b>current name</b>, since you may have overwritten the arpeggio pattern.  It's just a helpful hint.
+
+<p><li>The LFOs, A-Mod LFO, and Aux 1 FX have Rates.  Most of the numbers are speeds 0...110.  But 
+above 110 the Rates turn into MIDI Synced rates in the form of notes.  An explanation:
+
+<ul>
+<li><b>1/32 N</b>&nbsp;&nbsp;&nbsp;Thirty-Second Note
+<li><b>1/16 T</b>&nbsp;&nbsp;&nbsp;Sixteenth Note Triplet
+<li><b>1/16 N</b>&nbsp;&nbsp;&nbsp;Sixteenth Note
+<li><b>1/8 T</b>&nbsp;&nbsp;&nbsp;Eighth Note Triplet
+<li><b>1/8 N</b>&nbsp;&nbsp;&nbsp;Eighth Note
+<li><b>1/4 T</b>&nbsp;&nbsp;&nbsp;Quarter Note Triplet
+<li><b>1/8 .</b>&nbsp;&nbsp;&nbsp;Dotted Eighth Note
+<li><b>1/4 N</b>&nbsp;&nbsp;&nbsp;Quarter Note
+<li><b>1/2 T</b>&nbsp;&nbsp;&nbsp;Half Note Triplet
+<li><b>1/4 .</b>&nbsp;&nbsp;&nbsp;Dotted Quarter Note
+<li><b>1/2 N</b>&nbsp;&nbsp;&nbsp;Half Note
+<li><b>1 N</b>&nbsp;&nbsp;&nbsp;Whole Note (1 Bar)
+<li><b>1 .</b>&nbsp;&nbsp;&nbsp;Dotted Whole Note (1.5 Bars)
+<li><b>2 B</b>&nbsp;&nbsp;&nbsp;2 Bars
+<li><b>3 B</b>&nbsp;&nbsp;&nbsp;3 Bars
+<li><b>4 B</b>&nbsp;&nbsp;&nbsp;4 Bars
+</ul>
+
+<p><li>Though you can set Modulation 1 and 2 to whatever you like, they're so closely associated with Env2 -> Filter Cutoff and Keytrack -> Filter Cutoff respectively that there are knob settings on the front panel labelled "Filter Env Amt" and "Filter Keytrack" which just modify the Modulation 1 and 2 amounts respectively.  Likely for that same reason, Modulation 1 and 2 have limited Destination options.  So it might be wise to keep Modulation 1 and 2 set to their defaults.
+
+</ul>
+
+
+
+<p><b>Gotchas</b><br>
+
+<ul>
+
+<li>Changing patches takes quite a long time (about a half second).
+
+<p><li>Also uploading a new patch takes a long time (about 3/4 second).  This will make morphing and hill-climbing painful, as well as loading bulk files and undo/redo.
+
+<p><li>The final four LFO waveforms (Log Square, Exp Square, Log Up Saw, Exp Up Saw) cannot be changed in real-time: you have to send or write the entire patch for them to take effect.
+
+<p><li>There appear to be some unwritten rules about using Mod1Amount ... Mod16Amount as destinations in your modulation matrix.  
+<ol>
+<li>A slot cannot have itself as a destination (so slot 5 can't have Mod5Amount as its destination).
+<p><li>If a slot is presently serving as a destination of another slot, it cannot use Mod1Amount ... Mod16Amount as destinations.  For example, if slot 5 has Mod6Amount as its destination, then slot 6 cannot itself use any of Mod1Amount ... Mod16Amount as its destinations.
+<p><li>Slots 1 and 2 can't use Mod1Amount ... Mod16Amount as destinations at all.
+</ol>
+
+Edisyn does not enforce these, though it tries to not violate them on mutation/recombination and randomization.  It's up to you to not manually break these rules.
+
+<p><li>It appears you can't change arpeggiator parameters in real time unless you have first done a Send to Current Patch (or maybe Write To Patch...) once first.
+
+<p><li>If you set the Arpeggiator Source Pattern, you can't set any parameters except Enable (and the Bank and Pattern Number).  If you want to see the underlying pattern, just click "Show Arp".
+
+<p><li>It's possible that Edisyn has swapped the EQ's (not Master EQ) Low Freq and Low Gain, and similarly the High Freq and High Gain, such that if you change one, actually the other is changed.  If this appears to be the case, please contact me.
+
+<p><li>Vyzex does not support it, but the Venom's Sysex permits LFO 3 to have an Attack, Decay, and Phase.  These may or may not be implemented in the Venom, but Edisyn includes them just in case.
+
+<p><li>Vyzex lists many waveforms for the Venom's LFOs, but it is possible that only the first 8 actually have any effect (that is, up through Logarithmic Sample and Hold).  Edisyn includes them just in case.
+
+<p><li>The Venom's sysex documentation indicates that you can set the Venom's Synth ID.  But to my knowledge this does not actually exist.  If it does, please let me know.  By default Edisyn is hard-coded to use 127.
+
+
+
+</ul>
+
+
+<p><b>Note to Vyzex Users</b><br>
+Edisyn is a general-purpose patch editor tool and so its approach is designed to accommodate a wide range of synthesizers.  Vyzex is designed for a single synthesizer, and so it is highly customized for that purpose in ways Edisyn cannot be.  You may have noticed that Edisyn's Venom editor launches immediately, while Vyzex spends a long time loading every single patch from your Venom.  This is because Vyzex stays in sync with your Venom, while Edisyn does not.  As a result, Vyzex can do several things Edisyn cannot.  For example, Vyzex tells you exactly which multi-patches depend on the single patch you're overwriting, and can display all the patches at once.  Also, because it knows about all your patches together, Vyzex can dive down into single patches or arpeggio headers to allow you to change portions them from a multi-patch.  This is a confusing and very bad idea, so it's good Edisyn can't do that.  Edisyn can load the single patches or arpeggios associated with a multi-patch so you can edit them separately.
+
+<p>So why use Edisyn instead of Vyzex?  Partly because Vyzex will very soon be obsoleted and impossible to run.  And besides fixing some bad Vyzex errors, Edisyn <i>can</i> do one major thing Vyzex (and M-Audio's installed software) cannot: directly edit arpeggios.
+
+<p><b>Interesting Facts</b><br>
+
+The Venom's waveforms come from certain sources as indicated by initials at the beginning of them.  Here are the ones I know of:
+
+<ul>
+    
+<li>    HP = HP 200CD 1952 Valve Oscillator
+<li>    PB = Plan B Model 15     [Eurorack module]
+<li>    RP = ARP 2600 Gray Meanie
+<li>    MS = MS-20 
+<li>    SH = Roland SH-5
+<li>    OB = Oberheim SEM
+<li>    MG = Minimoog Model D
+<li>    AL = Alesis Fusion
+<li>    DR = Presumably some kind of Drums ?
+<li>    FM = Presumably something FM ?
+<li>    08 = Roland TR-808
+<li>    09 = Roland TR-909 
+<li>    TB = Roland TB-303
+<li>    JX = Roland JX-8P
+<li>    DP = Doepfer A-137	[Eurorack module]
+<li>	Bit = Harvestman Zorlon Cannon [Eurorack module]
+</ul>
+
+
+<br><br><h3>Librarian Support</h3>
+
+The Venom has very, very slow sysex.  This will manifest itself in very slow librarian uploads and downloads.  I would suggest downloading the entire machine, then saving it to a file and mostly uploading from there.
+
+
+<br><br><h3>Thanks</h3>
+
+Thanks to Jan Bote (jan.bote@gmx.de) for his assistance and knowledge.
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>November 25, 2020
+</table>
+

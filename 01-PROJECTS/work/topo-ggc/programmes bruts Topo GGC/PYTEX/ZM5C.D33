@@ -1,0 +1,18 @@
+For M5|Adr     1|TI  s5000                      |                      |                      |                      |
+For M5|Adr     2|TG  INTRODUCTION               |s        1.000000     |th         1.3000 m   |ih         1.5140 m   |
+For M5|Adr     3|TG  INTRODUCTION               |T_           16.2 C   |P           999.0 hPa |A          0.0000 m   |
+For M5|Adr     4|TI  MESURE                     |                      |                      |                      |
+For M5|Adr     5|IP1     1                      |SD         6.9462 m   |Hz      227.72636 gon |V1      102.03077 gon |
+For M5|Adr     6|IP1     2                      |SD         6.7684 m   |Hz      239.72336 gon |V1      101.92378 gon |
+For M5|Adr     7|IP1     3                      |SD         6.8122 m   |Hz      252.66175 gon |V1      101.85144 gon |
+For M5|Adr     8|IP1     4                      |SD         5.7803 m   |Hz      247.49396 gon |V1      101.94717 gon |
+For M5|Adr     9|TI  INTRODUCTION               |s        1.000000     |th         1.4500 m   |ih         1.5140 m   |
+For M5|Adr    10|IP1     5                      |SD         5.0516 m   |Hz      236.93425 gon |V1      102.60139 gon |
+For M5|Adr    11|IP1     6                      |SD         4.2811 m   |Hz      222.13370 gon |V1      103.60721 gon |
+For M5|Adr    12|IP1     7                      |SD         3.2851 m   |Hz      206.42065 gon |V1      105.28257 gon |
+For M5|Adr    13|TI  INTRODUCTION               |s        1.000000     |th         1.3000 m   |ih         1.5140 m   |
+For M5|Adr    14|IP1     8                      |SD         3.2853 m   |Hz      206.42061 gon |V1      105.28296 gon |
+For M5|Adr    15|IP1     9                      |SD         3.1033 m   |Hz      187.78706 gon |V1      107.14540 gon |
+For M5|Adr    16|IP1    10                      |Ed         0.3000 m   |                      |                      |
+For M5|Adr    17|IP1    10                      |SD         3.1173 m   |Hz      193.97179 gon |V1      106.60018 gon |
+

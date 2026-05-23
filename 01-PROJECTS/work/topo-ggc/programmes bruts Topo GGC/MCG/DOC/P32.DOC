@@ -1,0 +1,484 @@
+                  CALCULS DE SURFACES   V2  011086    page 32.1
+ 
+ 
+ 
+ 
+ 
+                            CALCULS DE SURFACES
+                            -------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                       1 - LES DONNEES
+ 
+ 
+                       2 - COMMANDES
+ 
+ 
+                       3 - EXEMPLE
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                  CALCULS DE SURFACES   V2  011086    page 32.2
+ 
+                                1 - LES DONNEES
+                                ---------------
+ 
+ 
+                 Fichiers d'entr‚e
+ 
+                       F1  fichier n0 X Y
+                       F2  fichier de commandes eventuellement
+ 
+                 F1 peut ˆtre genere avec LOTI (section 31) ou autres.
+ 
+                 Les  commandes  peuvent ˆtre saisies avec  l'editeur  du
+                 systeme ou en interactif.
+ 
+                 Les numeros des points sont compris entre 1 et 32000.
+ 
+                 Le premier point rentre sert de constante de translation
+                 XY memoire = XY-XY1, soit 7 chiffres significatifs.
+ 
+ 
+ 
+                 Les donnees sont en format libre (separateur = espace
+                 ou virgule).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                  CALCULS DE SURFACES   V2  011086    page 32.3
+ 
+                                2 - LES COMMANDES
+                                -----------------
+ 
+                 Mots cles reconnus
+ 
+                       LC  SF  SP  TI  CN  GE  FI  IM  VI
+ 
+                       $L  $F  $S  $Z
+ 
+ 
+                 Il n'y a pas de mot cle invalide au niveau programme :
+                 les commandes inconnues sont ignorees.
+ 
+                 (NOTA : CR dans le texte signifie : touche RETURN)
+ 
+ 
+ 
+                                   COMMANDES GENERALES
+ 
+ 
+                 $L        Les commandes se trouvent sur un fichier
+                           separe. $L demande le nom du fichier;
+                           le  controle  est  rendu  au  clavier  si  $F
+                           est rencontre avant FI
+                                 ou
+                           au systeme si FI est rencontre avant $F
+ 
+                 $F        Se trouve … la fin du fichier demand‚ par  $L,
+                           le fichier est ferme, le controle est passe au
+                           clavier.
+ 
+                 $Z         Initialisation de SLOT
+                            Compteur de points,  compteur de page,
+                            tolalisateurs … 0.
+ 
+                 $S       Pour sauver les points "en passant" sans rendre
+                            le controle au systeme.
+ 
+                 FI (ou F)  Pour sortir de SLOT
+ 
+ 
+                 Variante : $L nom de fichier
+                            $S nom de fichier
+ 
+                 GE (ou G)  Pour appeler le fichier n0 X Y
+                            S'il y a plusieurs fichiers appeles,  SLOT
+                            elimine les points avec n0 X Y ‚gaux.
+                            Cette   commande  peut  ˆtre  utilis‚e   pour
+                            constituer   un  fichier unique …  partir  de
+                            plusieurs fichiers.
+                            (lotissement  traite en 2 parties  avec  zone
+                            commune).
+                            Variante : GE nom de fichier
+ 
+ 
+ 
+ 
+ 
+
+                  CALCULS DE SURFACES   V2  011086    page 32.4
+ 
+ 
+                 IM         Mettre l'imprimante en fonction (1)
+ 
+                 VI         Mettre la visu en fonction (‚cran)
+ 
+                 TI         En tˆte pour les sorties, envoyer la commande
+                 titre      sur 2 lignes
+                                  TI  CR
+                                  en tˆte  CR
+ 
+ 
+                 CN n       Pour ajouter une constante aux num‚ros
+                            Ignore sur la VISU
+                            Valid‚  si IM en fonction  et pour la commande
+                            LC seulement.
+ 
+                 LC       Lister les points en ordre croissant de num‚ro
+                          (sur la VISU ou l'Imprimante) : tous les points.
+                          La liste est envoy‚e sur l'"imprimante" d‚finie
+                          par l'utilisateur. Si celle-ci est la visu,
+                          la bascule IM correspond … la visu.
+ 
+ 
+ 
+                 (1)    Les  sorties  sont  envoy‚es  sur  "l'imprimante"
+                        d‚finie au d‚marrage du programme : Imprimante ou
+                        fichier disque, ou visu.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                  CALCULS DE SURFACES   V2  011086    page 32.5
+ 
+                              CALCUL DES SURFACES
+ 
+ 
+                 2 commandes sont disponibles
+ 
+                       SF et SP
+ 
+                 SF fournit une liste simplifi‚e des r‚sultats
+                 SP  donne une liste complŠte  :  n0,  X,  Y,  distances,
+                 gisements, en plus des superficies.
+ 
+ 
+ 
+        ======   1Šre Forme
+ 
+                 SF n0 du lot  (LIMC)
+                       ni ni ...
+                       ni ni ...           (30 points maxi par ligne)
+                       CR
+ 
+                 Les ni tournent … droite ou … gauche
+                 LIMC  =  2000 par d‚faut (valid‚ pour  les  calculs  qui
+                 suivront sauf … changer LIMC).
+
+ 
+                 Si  ni inf  LIMC  ni est un point courant,  sinon ni
+                 est le centre d'un cercle, soit nc
+ 
+                 Pour ajouter le secteur sc          nc est positif
+                 Pour retrancher le secteur sc       nc est n‚gatif
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                  CALCULS DE SURFACES   V2  011086    page 32.6
+ 
+ 
+ 
+                                                     9
+ 
+                            8
+                                      S1                      22
+ 
+                                                    3
+                7                           SC                4
+ 
+                                   2
+ 
+                                                2002
+                       1
+                                      S2                  5
+ 
+                            6
+ 
+ 
+ 
+ 
+                 Pour S1              1 2 -2002 3 4 22 9 8 7
+                 Pour S2              1 2  2002 3 4 5 6
+ 
+ 
+ 
+                 Les  ouvertures  des cercles doivent ˆtre inf‚rieures  …
+                 200  grades  :   calculer  un  point  interm‚diaire   si
+                 n‚cessaire (avec LOTI-section 31 par ex.).
+ 
+        ======   2Šme Forme
+ 
+                 SP (LIMC)
+                 d‚signation du lot (texte alphanum‚rique ou num‚ro)
+                 ni ......
+                 ni ......
+                 CR
+                 d‚signation du lot
+                 ni ......
+                 ni ......
+                 CR
+                 CR
+ 
+                 Le  deuxiŠme  CR permet de sortir de la commande  SP  et
+                 d'avoir le total des surfaces.
+ 
+                 Pour   v‚rifier  les  calculs,   calculer  une   surface
+                 suppl‚mentaire englobant les lots : le totalisateur doit
+                 doubler.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+                  CALCULS DE SURFACES   V2  011086    page 32.7
+ 
+                            3 - EXEMPLE
+                            -----------
+ 
+                             FICHIER D32EX1
+                             --------------
+
+
+             donnees du fichier                 commentaires
+ 
+        $Z                               initialisation 
+        GE D32XY1                        charger les XY en memoire   
+        TI                               commande TItre
+        LES HAMEAUX DE POMMAREL - VILLA SOLEIL      texte du TITRE
+        SP                               commande surface         	
+        1                                     nom du lot
+        131 130 2019 129 501 133              liste des points
+                                           fin de la liste (RETURN)
+        2                                     nom du lot     
+        835 836 837 838                       liste des points
+        839                                   ..............
+                                           fin de la liste 
+                                         fin de la commande SP
+        SP                               nouvelle commande SP
+        3                                     nom du lot
+        838 839 846 847                       liste des points
+                                           fin de la liste
+                                         fin de la commande SP
+        $F                rendre la main au clavier
+ 
+ 
+                       FICHIER D32XY1
+                       --------------
+ 
+ 
+          129.   2901.900   8394.910
+          130.   2913.560   8402.810
+          131.   2916.135   8429.787
+          133.   2922.324   8433.206
+          501.   2892.806   8395.813
+          834.   3378.532   8384.227
+          835.   3335.739   8366.386
+          836.   3325.497   8363.351
+          837.   3316.702   8394.711
+          838.   3314.489   8363.487
+          839.   3316.065   8385.733
+          846.   3371.493   8402.861
+          847.   3343.272   8415.892
+         2019.   2902.990   8405.860
+ 
+ 
+ 
+
+                  CALCULS DE SURFACES   V2  011086    page 32.8
+ 
+ 
+                       LISTE AVEC LA COMMANDE SP
+                       -------------------------
+ 
+        LES HAMEAUX DE POMMAREL - VILLA SOLEIL
+         ***LOT         1
+         SOMMETS       X            Y             R   GISEMENTS   DISTANCE
+ 
+              131.     2916.135    8429.787
+                                                         206.058    27.100
+              130.     2913.560    8402.810
+                                                11.003   262.090    14.084
+              129.     2901.900    8394.910
+                                                         306.301     9.139
+              501.     2892.806    8395.813
+                                                          42.542    47.640
+              133.     2922.324    8433.206
+                                                         267.869     7.071
+              131.     2916.135    8429.787
+                  Superficie =       271.4 m2, Sous total =       271.4 m2
+ 
+         ***LOT         2
+         SOMMETS       X            Y             R  GISEMENTS   DISTANCES
+              835.     3335.739    8366.386
+                                                         281.660    10.682
+              836.     3325.497    8363.351
+                                                         382.593    32.570
+              837.     3316.702    8394.711
+                                                         204.505    31.302
+              838.     3314.489    8363.487
+                                                           4.503    22.302
+              839.     3316.065    8385.733
+                                                         149.467    27.593
+              835.     3335.739    8366.386
+                  Superficie =        79.5 m2, Sous total =       350.9 m2
+ 
+                    SOMME DES SUPERFICIES =       350.9 M2
+             2 LOTS    10 POINTS
+ 
+         LES HAMEAUX DE POMMAREL - VILLA SOLEIL
+           ***LOT         3
+         SOMMETS       X            Y             R  GISEMENTS   DISTANCES
+              838.     3314.489    8363.487
+                                                           4.503    22.302
+              839.     3316.065    8385.733
+                                                          80.920    58.014
+              846.     3371.493    8402.861
+                                                         327.539    31.084
+              847.     3343.272    8415.892
+                                                         231.975    59.789
+              838.     3314.489    8363.487
+                   Superficie =       324.0 m2, Sous total =       324.0 m2
+ 
+                    SOMME DES SUPERFICIES =       674.9 M2
+             3 LOTS    14 POINTS
+ 
+ 
+ 
+
+

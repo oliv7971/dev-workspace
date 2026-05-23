@@ -1,0 +1,78 @@
+ramdispo/(octets) ios     4194304           0
+ oto64 10  PARAM.MCG ios=    0  4194304  2
+
+clofic   10    1  4194304
+ oto64 10  C:\mcg\MESSAV35.BIN ios=    0  4194304  6
+ oto64 11  C:\mcg\MESS5000.BIN ios=    0  4194304  2
+
+clofic   11    1  4194304
+
+clofic   10    1  4194304
+ oto64 10  C:\mcg\MESS5000.BIN ios=    0  4194304  2
+
+clofic   10    1  4194304
+ oto64 10  CONFIG.MCG ios=    0  4194304  2
+
+clofic   10    1  4194304
+ oto64 10  R34126.LST ios=    0  4194304  3
+ oto64 11  CONFIG.MCG ios=    0  4194304  2
+
+clofic   11    1  4194304
+ oto64 11  CONFIG.MCG ios=    0  4194304  2
+
+clofic   11    1  4194304
+ oto64 11  p ios=    0  4194304  2
+ oto64 12  CONFIG.MCG ios=    0  4194304  2
+
+clofic   12    1  4194304
+ oto64 12  p.RES ios=    0  4194304  5
+
+clofic   12    2  4194304
+ oto64 12  CODIF.BIN ios=    0  4194304  9
+
+clofic   12    1  4194304
+
+clofic   11    1  4194304
+ oto64 11  D57OBS.TMP ios=    0  4194304  9
+
+clofic   11    2  4194304
+ oto64 11  R34108.D57 ios=    0  4194304  3
+ oto64 12  D57OBS.TMP ios=    0  4194304 16
+ oto64 13  p.RES ios=    0  4194304  5
+ oto64 14  C:\mcg\P033P034.MCG ios=    0  4194304  2
+
+clofic   14    1  4194304
+ oto64 14  R34104.CAN ios=    0  4194304  3
+
+clofic   14    1  4194304
+
+clofic   12    2  4194304
+ oto64 12  R57.P34 ios=    0  4194304  5
+
+clofic   11    1  4194304
+
+clofic   12    1  4194304
+ oto64 11  R57.P34 ios=    0  4194304  2
+
+clofic   11    2  4194304
+ oto64 11  R3486.D41 ios=    0  4194304  3
+ oto64 12  C:\mcg\P033P034.MCG ios=    0  4194304  2
+
+clofic   12    1  4194304
+ oto64 12  R41P34.TMP ios=    0  4194304 16
+
+clofic   11    1  4194304
+
+clofic   12    2  4194304
+
+clofic   13    1  4194304
+ oto64 11  CODIF.BIN ios=    0  4194304  2
+
+clofic   11    2  4194304
+ oto64 11  CONFIG.MCG ios=    0  4194304  2
+
+clofic   11    1  4194304
+
+clofic   10    1  4194304
+>>>netfic
+<<<netfic : nbfic open, ram  5   4194304

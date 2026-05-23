@@ -1,0 +1,296 @@
+                         Pytha-Topo R911001 Page 40.1
+
+
+
+                               NIVELLEMENT DIRECT
+			       ------------------
+
+        Le  programme est destine au calcul des altitudes d'un reseau de
+        nivellement direct.
+        Il faut au moins un point connu en Z.
+        Le calcul est effectue en bloc par la methode des moindres carres
+        (  dZ  sur  les visees ) .  Toutes les observations ont  le meme
+        poids.
+        L ' algorithme utilise dispense l'utilisateur de fournir l'ordre
+        dans  lequel  il faut effectuer les calculs :  pas de  notion de
+        cheminement comme par la methode classique.
+
+
+        1-LES DONNEES
+        -------------
+
+        Les  donnees  doivent etre saisies avec un editeur ,  en  format
+        libre : separateur = espace ou virgule .
+
+
+             titre
+	     parametres
+             GEODESIE 4
+             no Z  no Z no Z ......
+             no Z ............
+             etc ....
+             999999
+             NDIR coef
+             station,  pt/vise ,  lect/mire ,  pt vise , lect/mire , etc
+             station , ...................
+             999999
+
+             Sous la ligne geodesie sont donnes les points connus en Z
+                        (Z dif de 0.)
+
+             coef definit l'unite utilisee pour la lecture sur la mire,
+             tel que  Lm en metres = Lect/coef .
+             Si vous lisez en mm , coef = 1000  (valeur par defaut)
+             SI vous lisez en cm , coef =  100
+                  etc...
+
+        Les nos (station, point vise)peuvent avoir 9 chiffres significa-
+	tifs, … l'exclusion des valeurs 999999, et 999999999 .
+        Si  une ligne ne suffit pas pour la station ,  passer a la ligne
+        suivante   en   repetant  le  numero  de  la  station   en  tete
+        d'enregistrement .Les observations sont group‚es par station .
+                         Pytha-Topo R911001 Page 40.2
+
+
+
+	2-PARAMETRES   valeurs par d‚faut (VD)
+	------------
+
+        TOL tolz      tolerance en Z  (0.020 m)
+	ITER max      iterations maxi (200)
+	BLOC max      idem ITER
+	CANEVAS       edition 1 point par page
+	DETAIL        edition plusieurs points par page (VD)
+	EPSB epsb     pour arrˆter les it‚rations du bloc (0.00000001)
+
+	GAUSS	‚diter la table des fr‚quences des ‚carts
+		liste des ‚carts par vis‚e dans le fichier R41??.ECA
+
+
+	Le calcul est arrˆt‚ si S(dZ*dZ) < epsb, ou iter > max .
+
+
+        3-EXEMPLES
+        ----------
+
+        Fichiers de donnees  :
+
+        EX1.D40    exemple simple ( un point d'appui )
+        EX2.D40    reseau complet
+
+	Passer les autres exemples *.D40
+
+
+                        Exemple EX1.D40  liste r‚sultats
+                        --------------------------------
+
+
+ 	NIVELLEMENT DIRECT EXEMPLE SIMPLE
+
+                             NIVELLEMENT     DIRECT
+
+	gauss
+ 	GEODESIE 4
+ 	5120 68.026
+ 	999999
+ 	NDIR 1000
+ 	1 5120 3548 24001 1765 6501 1821 25001 3011 25002 3107
+ 	1 24801 1974 24802 1201 24601 1723 24602 1178 24401 1453
+	1 5119 584 24402 2044
+ 	2 5120 3531 24001 1748 24401 1436 24601 1704 24801 1958
+ 	2 5119 567 25001 2992
+ 	2 6501 1803 24402 2027 24602 1159
+ 	2 24802 1181
+ 	2 25002 3089
+ 	3 24001 3091 6501 3148 22902 567 23802 2088 23602 1703
+ 	3 23302 1312 23102 1038 6502 625 23801 2944 23601 2585
+ 	3 23301 1324 23101 1066 23502 1633 23501 1898
+ 	4 24001 3075 6501 3132 22902 551 23102 1022 23302 1297
+ 	4 23602 1688 23802 2073 6502 610 23101 1051 23301 1309
+ 	4 23601 2570 23801 2929 23502 1618 23501 1881
+ 	999999
+                         Pytha-Topo R911001 Page 40.3
+
+
+
+                                                               PAGE    1
+ 	NIVELLEMENT DIRECT EXEMPLE SIMPLE
+
+
+
+ 	**STATION**         1    Z Plan de visee       71.57439
+
+ 	Points vises    Lectures      Z Partiels    Ecarts  Points vises
+     	-5120            3.54800        71.57400       .39     -5120
+     	24001            1.76500        71.57434       .05     24001
+      	 6501            1.82100        71.57409       .30      6501
+     	25001            3.01100        71.57497      -.58     25001
+     	25002            3.10700        71.57447      -.08     25002
+     	24801            1.97400        71.57347       .92     24801
+     	24802            1.20100        71.57547     -1.08     24802
+     	24601            1.72300        71.57497      -.58     24601
+     	24602            1.17800        71.57497      -.58     24602
+     	24401            1.45300        71.57397       .42     24401
+      	 5119             .58400        71.57397       .42      5119
+     	24402            2.04400        71.57397       .42     24402
+
+
+ 	**STATION**         2    Z Plan de visee       71.55655
+
+ 	Points vises    Lectures      Z Partiels    Ecarts  Points vises
+    	-5120            3.53100        71.55700      -.45     -5120
+     	24001            1.74800        71.55734      -.78     24001
+     	24401            1.43600        71.55697      -.42     24401
+     	24601            1.70400        71.55597       .58     24601
+     	24801            1.95800        71.55747      -.92     24801
+      	 5119             .56700        71.55697      -.42      5119
+     	25001            2.99200        71.55597       .58     25001
+      	 6501            1.80300        71.55609       .47      6501
+     	24402            2.02700        71.55697      -.42     24402
+     	24602            1.15900        71.55597       .58     24602
+     	24802            1.18100        71.55547      1.08     24802
+     	25002            3.08900        71.55647       .08     25002
+
+
+ 	**STATION**         3    Z Plan de visee       72.90042
+
+ 	Points vises    Lectures      Z Partiels    Ecarts  Points vises
+     	24001            3.09100        72.90034       .08     24001
+      	 6501            3.14800        72.90109      -.67      6501
+     	22902             .56700        72.90070      -.29     22902
+     	23802            2.08800        72.90020       .21     23802
+     	23602            1.70300        72.90020       .21     23602
+     	23302            1.31200        72.90020       .21     23302
+     	23102            1.03800        72.90070      -.29     23102
+      	 6502             .62500        72.90020       .21      6502
+     	23801            2.94400        72.90020       .21     23801
+     	23601            2.58500        72.90020       .21     23601
+     	23301            1.32400        72.90020       .21     23301
+     	23101            1.06600        72.90020       .21     23101
+     	23502            1.63300        72.90020       .21     23502
+     	23501            1.89800        72.90120      -.79     23501
+                         Pytha-Topo R911001 Page 40.4
+
+
+
+                                                               PAGE    2
+ 	NIVELLEMENT DIRECT EXEMPLE SIMPLE
+
+
+
+	 **STATION**         4    Z Plan de visee       72.88499
+
+ 	Points vises    Lectures      Z Partiels    Ecarts  Points vises
+     	24001            3.07500        72.88434       .65     24001
+         6501            3.13200        72.88509      -.10      6501
+        22902             .55100        72.88470       .29     22902
+     	23102            1.02200        72.88470       .29     23102
+     	23302            1.29700        72.88520      -.21     23302
+     	23602            1.68800        72.88520      -.21     23602
+     	23802            2.07300        72.88520      -.21     23802
+      	 6502             .61000        72.88520      -.21      6502
+     	23101            1.05100        72.88520      -.21     23101
+     	23301            1.30900        72.88520      -.21     23301
+     	23601            2.57000        72.88520      -.21     23601
+     	23801            2.92900        72.88520      -.21     23801
+     	23502            1.61800        72.88520      -.21     23502
+     	23501            1.88100        72.88420       .79     23501
+
+
+                                                               PAGE    3
+ 	NIVELLEMENT DIRECT EXEMPLE SIMPLE
+
+
+ 	Resultats statisques
+
+ 	Distribution des ecarts , emq=    .478 mm pour    52 ecarts
+
+   	ecart       n
+
+      	   -1       8 !********
+       	    0 m    37 !*************************************
+            1       7 !*******
+ 	Moyenne 0 pour 52 observations, 8 ecarts -, 7 ecarts +
+ 	Table des frequences de -100 a 100
+ 	Ecarts > 100 dans +/- 101
+                                                               PAGE    4
+ 	NIVELLEMENT DIRECT EXEMPLE SIMPLE
+
+                         REPERTOIRE    DES    ALTITUDES
+
+    	 5119  70.98997  5120  68.02600   6501   69.75309  6502 72.27521
+	22902  72.33370 23101  71.83421  23102   71.86270 23301 71.57621
+	23302  71.58821 23501  71.00320  23502   71.26720 23601 70.31520
+	23602  71.19721 23801  69.95621  23802   70.81220 24001 69.80934
+	24401  70.12097 24402  69.52997  24601   69.85197 24602	70.39697
+	24801  69.59947 24802  70.37447  25001   68.56397 25002 68.46747
+                         Pytha-Topo R911001 Page 40.5
+
+
+
+                      Exemple de reseau (fichier EX2.D40)
+                      -----------------------------------
+	NIVELLEMENT DIRECT
+	GEODESIE 4
+	5119 70.989 5117 78.422 5120 68.026 7014 77.413
+	999999
+	NDIR 1000
+	1 5120 3548 24001 1765 6501 1821 25001 3011 25002 3107
+	1 24801 1974 24802 1201 24601 1723 24602 1178 24401 1453
+	1 5119 584 24402 2044
+	2 5120 3531 24001 1748 24401 1436 24601 1704 24801 1958
+	2 5119 567 25001 2992
+	2 6501 1803 24402 2027 24602 1159
+	2 24802 1181
+	2 25002 3089
+	3 24001 3091 6501 3148 22902 567 23802 2088 23602 1703
+	3 23302 1312 23102 1038 6502 625 23801 2944 23601 2585
+	3 23301 1324 23101 1066 23502 1633 23501 1898
+	4 24001 3075 6501 3132 22902 551 23102 1022 23302 1297
+	4 23602 1688 23802 2073 6502 610 23101 1051 23301 1309
+	4 23601 2570 23801 2929 23502 1618 23501 1881
+	5 22902 3287 6502 3347 6503 259 6504 278 22702 2558 22701 1447
+	5 22502 1857 24302 1037
+	6 22902 3270 6502 3331 6503 243 22302 1020 22502 1842 22702 2541
+	6 6504 261 22701 1429
+	7 6503 3703 6504 3722 5117 628
+	8 6503 3602 6504 3622 5117 528
+	9 5119 723 2902 1818 6506 1817 2202 2025 2201 2266 2502 1973
+	9 2501 1844 2901 680
+	10 5119 701 2902 1799 2502 1953 2202 2006 6506 1799 2901 660
+	10 2501 1823 2201 2243
+	11 2902 2642 6506 2641 24001 2733 6505 2785 3102 2477 3101 1490
+	11 3302 1852 3301 1424
+	11 3502 1991 3501 579
+	12 2902 2613 6506 2612 24001 2703 6505 2757 3502 1962 3501 550
+	12 3302 1823 3301 1394 3102 2448 3101 1462
+	13 24001 1972 6505 2025 5119 788
+	14 24001 1949 6505 2001 5119 763
+	15 6503 1950 6504 1968 61401 365 6507 506
+	16 61401 1404 6507 1545 7014 927
+	17 61401 1364 6507 1505 7014 887
+	999999
+
+        Passer ce calcul : le bloc est stabilise apres 35 iterations.
+ 	Resultats statisques
+ 	Distribution des ecarts , emq=   1.046 mm pour   126 ecarts
+	ecart       n
+      	   -3       1 !*
+           -2       9 !********
+      	   -1      23 !*********************
+       	    0 m    65 !***********************************************
+	    1      17 !***************
+	    2	    9 !********
+	    3       2 !*
+        Moyenne 0 pour 126 observations, 33 ecarts -, 28 ecarts +
+	Table des frequences de -100 a 100
+	Ecarts > 100 dans +/- 101
+                         Pytha-Topo R911001 Page 40.6
+
+
+
+                           Schema des exemples 1 et 2
+                           --------------------------
+             EX1.D40 comporte les stations 1 a 4
+             EX2.D40 comporte toutes les stations
+

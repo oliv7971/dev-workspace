@@ -1,0 +1,91 @@
+                         Pytha-Topo R990401 Page 43.1
+
+
+
+	   	    	       REDUCTIONS LAMBERT/ZREF
+			       -----------------------
+		    -a la projection Lambert ( pour les 4 zones )
+		    -au niveau de reference ( peut etre different de 0 )
+
+	Selectionner le r‚pertoire c:\topo\pp43
+		(p43 n'est pas accessible par la commande mg)
+
+	appeler p34
+		c:\topo\pp43\p34
+		demander edition sur D
+		liste dans r3401.lst
+
+		donnees : reduc2.d34
+		resultats : reduc2.res
+
+	les mesures ont ete faites avec un LEICA TC 2002
+	le chantier comporte 7 stations dont 3 multiples (reprises) :
+	1208, 1034, 1209, et 5 intersections
+	les observations sur les points de canevas sont doublees, en
+	plus des observations CG/CD
+	Voir plan au 1/2000 .
+	Examiner les resultats (liste r3401.lst) : ecarts entre les
+	visees multiples et dans le balancement des stations reprises.
+
+	les emq sont
+	emq	dispersion	n
+	reseau independant : pas de contrainte sur les points d'appui
+		en XY
+	1.7 sec -3/+3		22
+	0.3 mm	-1/+1		22	ecart sec X distance
+	0.3 mm	-1/+1 		22      ecart sur les distances
+		en Z
+	0.7mm	-1+1		22
+
+	reseau avec contrainte en XYZ sur les points d'appui
+	1.7 sec -4/+3		22
+	0.3 mm	-1/+1		22	ecart sec X distance
+	0.8 mm	-2/+1 		22      ecart sur les distances
+		en Z
+	0.8 mm	-2/+1		22
+
+		appeler p43
+		c:\topo\pp43\p43
+                         Pytha-Topo R990401 Page 43.2
+
+
+
+	affichage ecran <<<---
+	>>>Reduction des distances au niveau ZREF)
+	 (si NIVEAUZE dans le carnet pour P34) ou zero
+	, a partir des Z de chaque point
+	Le ZMOYEN du nouveau carnet pour P34 est
+	mis a zero
+	>>>Correction de projection Lambert a
+	partir des X Y de chaque point
+	PROJECTION du nouveau carnet pour P34 est
+	mis a zero
+	LIMITES : .... points n x y z
+	donner : fichier carnet pour p34
+	donner : fichier resultat (n x y z) de p34
+
+
+	 les donnees sont reduc2.d34 et reduc2.res
+
+	affichage ecran <<<---
+	nouveau carnet pour p34 avec distances corrigees
+	 (niveau ZREF/lambert) 
+	 dans reduc2.r43
+
+	affichage ecran <<<---
+	 niveau 0 <1> lambert (2) les deux (3) ? 
+
+	reponse : 1 ou ENTREE pour niveau 0 ou zref (donne dans 
+	reduc2.d34 , consigne NIVEAUZERO )
+	ou 2 ou 3
+
+	affichage ecran <<<---
+	zone lambert <0=(moyenne 1 2 3)> 1 2 3 4 ? 
+
+	reponse : 0 ou ENTREE pour moyenne des 3 zones lambert
+	ou 1 a 4 pour la zone concernee
+
+	Le fichier reduc2.res (n x y z) est la solution approchee pour 
+	calculer le carnet reduc2.r43 avec distances corriges.
+
+	Il faut relancer P34 avec reduc2.r43 en entree.

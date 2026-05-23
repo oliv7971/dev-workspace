@@ -1,0 +1,130 @@
+﻿
+======================================================================
+  DIAGNOSTIC ECRAN NOIR / FREEZE - 21/03/2026 23:42
+======================================================================
+PÃ©riode analysÃ©e : derniÃ¨res 48 heures (depuis 19/03/2026 23:42)
+
+======================================================================
+  1. ARRETS INATTENDUS / REDEMARRAGES BRUTAUX
+======================================================================
+>> 2 arrÃªt(s) inattendu(s) dÃ©tectÃ©(s) !
+[2026-03-21 23:36:34] ID:6008 Source:EventLog
+  L’arrêt système précédant à 22:11:23 le ‎21/‎03/‎2026 n’était pas prévu.
+[2026-03-21 20:51:29] ID:6008 Source:EventLog
+  L’arrêt système précédant à 20:47:22 le ‎20/‎03/‎2026 n’était pas prévu.
+
+======================================================================
+  2. KERNEL-POWER (coupures brutales)
+======================================================================
+>> 2 Ã©vÃ©nement(s) Kernel-Power 41 (= le systÃ¨me a redÃ©marrÃ© sans arrÃªt propre)
+[2026-03-21 23:36:24] ID:41 Source:Microsoft-Windows-Kernel-Power
+  Le système a redémarré sans s’arrêter correctement au préalable. Cette erreur peut survenir si le système ne répond plus, s’est bloqué ou n’est plus alimenté de façon inattendue.
+[2026-03-21 20:51:10] ID:41 Source:Microsoft-Windows-Kernel-Power
+  Le système a redémarré sans s’arrêter correctement au préalable. Cette erreur peut survenir si le système ne répond plus, s’est bloqué ou n’est plus alimenté de façon inattendue.
+
+======================================================================
+  3. BUGCHECK / ECRAN BLEU (BSOD)
+======================================================================
+Aucun BugCheck/BSOD enregistrÃ©.
+
+======================================================================
+  4. PROBLEMES GPU / PILOTES GRAPHIQUES
+======================================================================
+Aucune erreur GPU/affichage dÃ©tectÃ©e.
+
+======================================================================
+  5. ERREURS DISQUE / STOCKAGE
+======================================================================
+Aucune erreur disque dÃ©tectÃ©e.
+
+======================================================================
+  6. ERREURS MEMOIRE (RAM)
+======================================================================
+>> 1 erreur(s) mÃ©moire dÃ©tectÃ©e(s) !
+[2026-03-21 20:51:32] ID:17 Source:Microsoft-Windows-WHEA-Logger
+  System.Object[]
+
+======================================================================
+  7. ERREURS MATERIELLES (WHEA)
+======================================================================
+>> 1 erreur(s) matÃ©rielle(s) WHEA
+[2026-03-21 20:51:32] ID:17 Source:Microsoft-Windows-WHEA-Logger
+  System.Object[]
+
+======================================================================
+  8. EVENEMENTS ALIMENTATION / VEILLE
+======================================================================
+Aucun Ã©vÃ©nement d'alimentation notable.
+
+======================================================================
+  9. TOUTES LES ERREURS CRITIQUES (System Log)
+======================================================================
+>> 2 Ã©vÃ©nement(s) CRITIQUE(S)
+[2026-03-21 23:36:24] ID:41 Source:Microsoft-Windows-Kernel-Power
+  Le système a redémarré sans s’arrêter correctement au préalable. Cette erreur peut survenir si le système ne répond plus, s’est bloqué ou n’est plus alimenté de façon inattendue.
+[2026-03-21 20:51:10] ID:41 Source:Microsoft-Windows-Kernel-Power
+  Le système a redémarré sans s’arrêter correctement au préalable. Cette erreur peut survenir si le système ne répond plus, s’est bloqué ou n’est plus alimenté de façon inattendue.
+
+======================================================================
+  10. CRASHS APPLICATION
+======================================================================
+4 crash/hang d'application(s)
+[2026-03-21 23:42:10] ID:1000 Source:Microsoft-Windows-LoadPerf
+  Les compteurs de performances pour le service WmiApRpl (WmiApRpl) ont été chargés. Les données d’enregistrement dans la section des données contiennent les nouvelles valeurs d’index assignées à ce service.
+[2026-03-21 23:42:10] ID:1001 Source:Microsoft-Windows-LoadPerf
+  Les compteurs de performances pour le service WmiApRpl (WmiApRpl) ont été supprimés. Les données d’enregistrement contiennent les nouvelles valeurs du dernier compteur système et les dernières entrées du registre d’aide.
+[2026-03-21 20:55:39] ID:1000 Source:Microsoft-Windows-LoadPerf
+  Les compteurs de performances pour le service WmiApRpl (WmiApRpl) ont été chargés. Les données d’enregistrement dans la section des données contiennent les nouvelles valeurs d’index assignées à ce service.
+[2026-03-21 20:55:39] ID:1001 Source:Microsoft-Windows-LoadPerf
+  Les compteurs de performances pour le service WmiApRpl (WmiApRpl) ont été supprimés. Les données d’enregistrement contiennent les nouvelles valeurs du dernier compteur système et les dernières entrées du registre d’aide.
+
+======================================================================
+  11. SURCHAUFFE / THERMAL THROTTLING
+======================================================================
+Aucun Ã©vÃ©nement de surchauffe dÃ©tectÃ© dans les logs.
+
+======================================================================
+  12. PILOTES AYANT GENERE DES ERREURS
+======================================================================
+Aucune erreur de pilote dÃ©tectÃ©e.
+
+======================================================================
+  13. INFORMATIONS SYSTEME
+======================================================================
+Nom PC        : DESKTOP-7RQ0HHK
+Fabricant     : ASUSTeK COMPUTER INC. - GL552VW
+OS            : Microsoft Windows 10 Famille 10.0.19045 (Build 19045)
+BIOS          : GL552VW.218
+CPU           : Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
+RAM totale    : 31.9 Go
+Dernier boot  : 21/03/2026 23:36:22
+Uptime        : 0j 0h 6m
+GPU           : NVIDIA GeForce GTX 960M (VRAM: 2 Go, Driver: 24.21.13.9835, Date: 06/21/2018 02:00:00)
+GPU           : Intel(R) HD Graphics 530 (VRAM: 1 Go, Driver: 21.20.16.4550, Date: 11/11/2016 01:00:00)
+
+======================================================================
+  14. FICHIERS MINIDUMP (crash dumps)
+======================================================================
+Dossier Minidump existe mais aucun fichier .dmp trouvÃ©.
+
+======================================================================
+  15. RESUME ET RECOMMANDATIONS
+======================================================================
+PROBLEMES DETECTES :
+- ARRETS INATTENDUS dÃ©tectÃ©s (2x) : le PC s'est Ã©teint brutalement
+- KERNEL-POWER 41 (2x) : souvent liÃ© Ã  l'alimentation, la surchauffe ou un pilote dÃ©faillant
+- ERREURS MEMOIRE (1x) : RAM potentiellement dÃ©fectueuse
+- ERREURS WHEA (1x) : erreur matÃ©rielle dÃ©tectÃ©e par le processeur
+
+RECOMMANDATIONS GENERALES :
+  1. Mettre Ã  jour les pilotes GPU (site NVIDIA/AMD/Intel, pas Windows Update)
+  2. VÃ©rifier les tempÃ©ratures avec HWMonitor ou HWiNFO
+  3. Tester la RAM avec 'mdsched.exe' (diagnostic mÃ©moire Windows)
+  4. VÃ©rifier le disque avec 'chkdsk /f'
+  5. VÃ©rifier l'alimentation (PSU) si les freezes sont alÃ©atoires
+  6. Si BSOD : analyser les minidumps avec BlueScreenView (gratuit)
+  7. DÃ©sactiver le dÃ©marrage rapide : Panneau de config > Options d'alimentation > Choisir l'action du bouton d'alimentation
+
+======================================================================
+  FIN DU RAPPORT
+======================================================================

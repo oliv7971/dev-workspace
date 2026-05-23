@@ -1,0 +1,29 @@
+m1p58 14.09.94 00:49
+proc,16
+plco,063030,!Plan!de!comparaison
+altn,103015,!Altitude!du!terrain
+dptn,093015,!Distances!partielles
+libr,053015,!Distances!entre!piquets
+libr,053020,!Numeros!des!piquets
+libr,123030,!Distances!entre!pylones
+libr,103030,!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+FIN
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+COMM        EN FIN D'AFFICHAGE
+CMCG  sortir le code pour pytha-graph
+tn,,exec
+999999
+?ECHX,2500	# demander echelle x
+?ECHZ,500	# demander echelle z
+FORZ,594
+FORS,820        # le format est calcule par p65l
+?plco,60	# demander z plan de comparaison
+nbdz,2
+nbds,2
+secri		#
+supc		# supprimer le cadre
+#STITRE,,FAVERGE
+MISO,8
+DPLON,16
+****
+STOP

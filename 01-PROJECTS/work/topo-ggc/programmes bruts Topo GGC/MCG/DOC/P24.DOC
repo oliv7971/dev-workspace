@@ -1,0 +1,155 @@
+			  Pytha-Topo R911001 Page 24.1
+
+
+
+	G‚n‚ration des fichiers MOSS … partir des fichiers (N X Y Z)
+	et des listes de commandes strings TEXTE et 2D/3D.
+	Conversion du code MOSS en code PYTHA-GRAPH (z du menu).
+
+
+	Description des fichiers
+
+        1 - Fichier (NXYZ)
+
+	Ce fichier est au format PYTHA : format libre , Z=0 si pas de
+	cote Z valide , ou N X Y (rien en zone 4) .Le fichier corres-
+	pondant aux exemples ci-dessous s'appelle  XYZ.D24  .
+
+	La g‚n‚ration des fichiers MOSS se fait en 2 temps : les
+	strings TEXTE d'une part et les strings 2D/3D d'autre part.
+
+
+	2 - Fichier de commande pour les strings TEXTE
+
+	4 types de commande sont disponibles
+
+	!message transmis au fichier r‚sultat ( sauf ! )
+	T taille des caracteres en mm des textes qui suivent
+	A angle d'inclinaison des textes qui suivent
+	n texte … passer … moss
+
+	valeurs par d‚faut : 5mm et 100 grades
+	n est le num‚ro du point de calage du texte
+
+
+		fichier exemple EXT.D24
+
+ 	!MOSS
+	!DELE,FTEXTE
+	!CREA,FTEXTE
+	!GENIO,FTEXTE
+	!001,FORMAT(4F12.4/11A4)
+	!017,GRAD
+	!080,*V,7=15	    #message transmis sans traitement
+	t 2  # hauteur des textes qui suivent en mm
+	1273  ce le machin  #texte a caler au point 1273
+	555  tyty rn 567
+	t 3   # changement hauteur textes , angle pr‚c‚dent
+	1258  tytut opiopi
+	1265  aeza rert ioo hhkhk pipipp
+	t 5
+	a 123
+	1265
+	559 point 559
+	3456 point 3456 , erreur , n'existe pas
+	553 point 553
+			  Pytha-Topo R911001 Page 24.2
+
+
+
+	3 - Fichier de commande des strings 2D/3D
+
+	5 types de commande sont disponibles
+
+	1  !message transmis au fichier r‚sultat (sauf !)
+	2  i ident
+        3  codif
+	   n1 n2 n3 .....
+	   ni .... nk .... nn	( 30 points maxi par ligne )
+	4  codif 2
+	   liste des points
+	5  codif 2 Z
+	   liste des points
+	g‚n‚ration des messages
+	 codif     --> ident,codif,7=3    (string 3D)
+	 codif 2   --> ident,codif,4=999,7=2
+	 codif 2 Z --> ident,codif,4=Z,7=2
+
+		fichier exemple EXN.D24
+
+	!DELE,FXYZ
+	!CREA,FXYZ
+	!GENIO,FXYZ
+	!001,FORMAT(6F12.3)
+	i 80
+	t2
+	1273 1270 1264
+ 	t6
+	1272 1271 1264
+	t2
+	1265 1253 559 553 551 406
+	t63
+	1265 1263 1257	    552 405
+	r0
+	1274 1267 1256
+	1255 558 555 557
+	407
+	u0
+	405 408
+	d5 2
+	1272 1271 1264
+	i 123
+	 b2
+	1298 1299 1300	    1298
+	nn 2 030
+	1251 1252 1253 1254 1255 1256
+	1257 1258
+
+	nota : si une liste 3D comprend des points sans Z, les cotes
+	       sont interpol‚es … partir des points encadrant la zone.
+	       Exemple : liste 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+	       connus en Z   1,6,7,8,13,14
+	       interpol‚s entre 1 et 6 : 2 3 4 5
+	       interpol‚s entre 8 et 13 : 9 10 11 12
+	       les interpolations sont lin‚aires : 1 … 6 continu en Z,
+	       8 et 13 continu en Z
+			  Pytha-Topo R930701 Page 24.3
+
+
+
+	4 - Fichier MOSP65.USR
+
+	Ce fichier donne la correspondance entre les noms des symboles
+	de MOSS et les numeros de P65.
+
+
+	#table de correspondance symboles moss/symbole p65
+	u0 55
+	b2 56
+
+	Cette table est utilisee si l'on demande la conversion du
+	fichier MOSS en code Pytha-graph, pour controle. Les fichiers
+	MOSS strings Texte ne peuvent etre controles.
+
+
+
+	Exemple
+
+	lancer P24, return, a du menu
+	puis t avec fichiers
+			XYZ.D24
+			ext.d24
+			tex (r‚sultat moss)
+	puis n avec fichiers
+			xyz.d24
+			exn.d24
+			num (r‚sultat moss)
+
+	Controle avec P65 (pytha-graph)
+	lancer P24
+	puis z avec fichiers
+			xyz.d24
+			num
+			r.d65
+	lancer p65
+			char r.d65

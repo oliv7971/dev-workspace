@@ -1,0 +1,53 @@
+[submodule "third_party/JUCE"]
+	path = third_party/JUCE
+	url = https://github.com/WeAreROLI/JUCE.git
+	ignore = dirty
+[submodule "juce-widgets"]
+	path = juce-widgets
+	url = https://github.com/christofmuc/juce-widgets.git
+	branch = master
+[submodule "juce-utils"]
+	path = juce-utils
+	url = https://github.com/christofmuc/juce-utils.git
+	branch = master
+[submodule "third_party/dtl"]
+	path = third_party/dtl
+	url = https://github.com/cubicdaiya/dtl.git
+[submodule "third_party/SQLiteCpp"]
+	path = third_party/SQLiteCpp
+	url = https://github.com/SRombauts/SQLiteCpp.git
+	ignore = dirty
+[submodule "third_party/pybind11"]
+	path = third_party/pybind11
+	url = https://github.com/pybind/pybind11.git
+	ignore = dirty
+[submodule "pytschirp"]
+	path = pytschirp
+	url = https://github.com/christofmuc/pytschirp.git
+	branch = master
+[submodule "third_party/sentry-native"]
+	path = third_party/sentry-native
+	url = https://github.com/getsentry/sentry-native.git
+	branch = master
+	ignore = dirty
+[submodule "third_party/Gin"]
+	path = third_party/Gin
+	url = https://github.com/FigBug/Gin.git
+[submodule "third_party/json"]
+	path = third_party/json
+	url = https://github.com/nlohmann/json.git
+[submodule "third_party/json-schema-validator"]
+	path = third_party/json-schema-validator
+	url = https://github.com/pboettch/json-schema-validator.git
+[submodule "third_party/fmt"]
+	path = third_party/fmt
+	url = https://github.com/fmtlib/fmt.git
+[submodule "MidiKraft"]
+	path = MidiKraft
+	url = https://github.com/christofmuc/MidiKraft.git
+[submodule "third_party/spdlog"]
+	path = third_party/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "third_party/doctest"]
+	path = third_party/doctest
+	url = https://github.com/doctest/doctest

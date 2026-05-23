@@ -1,0 +1,243 @@
+                         Pytha-Topo R910901 Page 17.1
+
+
+
+	 Le  module  P17 permet  d'effectuer  les op‚rations suivantes :
+
+	 1- calcul des cubatures entre deux surfaces par la m‚thode  des
+	    profils
+	 2- transformation des XYZ en xZ (plan du profil en travers)
+	 3- transformation des XYZ en sZ (profil en long)
+	 4- recalage des x des profils en travers
+	 5- pr‚paration  du dessin  de plusieurs profils  en travers sur
+	    sur le mˆme format papier
+
+
+	 1-CUBATURES
+
+	 Les cubatures sont  calcul‚es par difference entre profils . Le
+	 changement de signe de la diff‚rence des cotes … l'axe entraine
+	 la cr‚ation d'un profil fictif : changement de butte .
+	 Les surfaces  deblai remblai  sont calculees par la methode des
+	 trapezes, avec un pas inf‚rieur ou ‚gal … 0m20 .
+
+         Il  y  a  2  fichiers d'entr‚e : avant et apr‚s travaux .
+
+         format des fichiers d'entree :
+
+              titre
+	      no profil  abscisse(si) x1 Z1 x2 Z2 x3 Z3 ...
+              ......
+              ......
+              ......
+              999999
+
+         Le titre imprime est celui du fichier TN avant travaux.
+
+	 Les profils sont groupes en ordre croissant des abscisses  Si .
+	 Il doit y avoir le meme nombre de profils aux memes Si dans les
+	 2 fichiers.
+
+	 	1.1 EMPRUNTS OU DEPOTS
+
+	 Le programme  calcule	la difference entre la zone  commune des
+	 profils  des  2  fichiers,  ce qui  permet  d'avoir des profils
+	 differents   entre  les 2 situations.	L'integration est  faite
+	 entre le premier et le dernier profil. On choisit une trame des
+	 profils  en   travers permettant de serrer au mieux le TN avant
+	 travaux.  Puis  on  definit les memes profils avec 2 points par
+         profil ex :  a -100m et +100m en x , et un Z constant.
+
+         Le premier calcul donne un cube fictif avant travaux.
+
+	 On applique le meme principe avec le TN apres travaux, avec une
+	 trame	des  profils  en travers  differente  de la  precedente,
+	 serrant au mieux le nouveau TN.
+
+         Le deuxieme calcul donne un cube fictif apres travaux.
+
+         La difference entre les 2 cubes donne le cube realise.
+
+	 Il faut veiller a avoir un perimetre de saisie  identique entre
+         les TN avant et apres travaux.
+                         Pytha-Topo R910901 Page 17.2
+
+
+
+	 Il est  bien entendu  possible d'avoir  le cube avec des trames
+	 des profils  en travers  identiques  pour chaque  situation. Le
+	 problŠme est que  les	surfaces   definies   varient  entre les
+	 diff‚rentes  extractions  ou  depots , et  qu'elles ne sont pas
+	 continues et monotones (lignes de rupture des talus par exemple).
+
+	 L'utilisateur est invite a bien definir ses trames , serrer les
+	 profils pour  avoir une  meilleure  definition  du TN , par  ex
+	 d‚finir une deuxieme trame pour avoir 2 calculs  distincts .
+
+
+	 Les fichiers  fournis illustrent cette methode: lancer P17 avec
+	 en entree EXA1.D17 (avant) et EXA2.D17 (apres), puis avec
+	 EXB1.D17 (avant) et EXB2.D17 (apres).La difference vous donnera
+	 le cube realise.
+
+
+	 exemple de depot / NOTE DE CALCUL
+
+	 Un  perimetre	identique  de calcul a ete defini  sur les plans
+         portant le T.N. avant et apres travaux.
+	 Des profils  en travers ont ete leve sur plans a l'interieur de
+         ces perimetres.
+	 Le  terrain  avant travaux  a ete  projete  sur un  plan fictif
+	 d'altitude egale a 170.00
+	 Ce qui donne le cube A =  7 350 m3
+	 Le terrain apres travaux a ete projete sur le meme  plan fictif
+         d'altitude 170.00
+	 Ce qui donne le cube B = 10 877 m3
+	 Le volume des materiaux de remblai est donc egal a
+			   B-A = 3 527 m3
+	 Pour  eliminer  les fautes de saisie et  de  lecture, les memes
+	 profils ont ete leves a nouveau sur plan,  dans le sens invers‚
+	 par rapport a celui du premier calcul :
+	 Sens SUD-NORD pour le 1er calcul , et NORD-SUD pour le deuxieme
+         Ce qui donne: cube C = 7 344 m3, cube D = 10 873 m3
+         Volume des materiaux de remblai, D-C = 3 529 m3
+         (Voir listings des calculs et plans topographiques.)
+
+		1.2 OUVRAGES LINEAIRES
+
+	La m‚thode de calcul (prise en compte des changements de butte),
+	r‚pond aux besoins des suivis de travaux classiques : lever  des
+	profils en travers des terrassements sur le terrain.
+                         Pytha-Topo R910901 Page 17.3
+                         Pytha-Topo R910901 Page 17.4
+
+
+
+	2-TRANSFORMATION XYZ EN xZ
+
+	Le leve de profils en coordonn‚es g‚n‚rales  XYZ  est transform‚
+	en coordonn‚es locales xZ : profils en travers .
+
+        Il y a deux fichiers d'entree :
+
+	     -la liste des points a prendre en compte pour chaque profil
+	     -la liste des points du leve en XYZ
+
+	     fichier liste des points (extrait)   D77EX1.D17
+
+        1 53 54 55 56 57 58 59 60 61 62 63 64 65 66
+	2 40 41 42 43 -44 45 46 47 48 49 50 51 52
+        3 27 28 29 30 31 32 33 34 35 36 37 38 39
+
+	     fichier points NXYZ (extrait)	  D77XYZ.D17
+
+        01160 801530.78 93067.55 176.47
+            1 801522.08 93039.68 176.67
+            2 801521.99 93039.82 176.61
+            3 801521.99 93039.82 176.10
+            4 801518.81 93044.26 176.07
+            5 801515.65 93048.55 175.94
+               ................
+        999999
+
+        fichier points
+	     30 valeurs par ligne
+	     1ere valeur : no du profil
+	si le num‚ro du profil est n‚gatif, le gisement sera invers‚
+	     suivantes : no des points a prendre pour le profil
+	si une	ligne ne suffit pas continuer sur la ligne  suivante  en
+	repetant le no du profil. Les points a prendre peuvent etre dans
+	le  desordre . Si  le no d'un  point est n‚gatif , ce point sera
+	consid‚r‚ comme point origine ( x=0. ) du profil; par d‚faut, le
+	point le plus … gauche sert d'origine .
+
+	fichier leve : sans commentaires.
+	Le  programme  calcule une  droite moyenne ( moindres carr‚s ) …
+	partir de la liste des points . Les points sont ensuite projet‚s
+	sur cette droite : axe des x .
+
+        fichier resultats
+	profil1 0. x Z	x Z  x Z
+	profil2 0. x Z	x Z  x Z
+	profil2 0. x Z	x Z  x Z
+
+	Il  y  a  3 points par ligne  ,  plusieurs lignes par  profil si
+	necessaire.
+	Ces  resultats	peuvent servir d'entree au dessin de profils  en
+        travers de la section 58 .
+                         Pytha-Topo R910901 Page 17.5
+			  Pytha-Topo R910901 Page 17.6
+
+
+
+	3-TRANSFORMATION XYZ EN sZ
+
+	Le leve de profils en coordonn‚es g‚n‚rales  XYZ  est transform‚
+	en coordonn‚es locales sZ : profil en long . Les  abscisses sont
+	calcul‚es en additionnant les longueurs des segments d‚finis par
+	la liste des points .
+
+        Il y a deux fichiers d'entree :
+
+	     -la liste des points a prendre en compte pour  le calcul du
+	      profil en long
+	     -la liste des points du leve en XYZ
+
+	Passer le calcul avec D78EX1.D17 (liste) et D78XYZ.D17 (NXYZ) .
+	Les  resultats	peuvent servir d'entree au dessin de profils  en
+	long de la section 58 .
+
+
+	4-RECALAGE des x des Profils en Travers
+
+	fichier d'entr‚e
+
+	    titre
+	    DECALXTN coef
+	    S1	dx1
+	    S2	dx2
+	    ..	...
+	    Sn	dxn
+	    999999
+	    TN,,EXEC
+	    P1	S1  xi Zi ....
+	    P2	S2  xj Zj ...
+	    ..........
+	    999999
+	    ****
+	    STOP
+
+	Le programme sort le fichier TN,,exec avec les x transform‚s  de
+	de la fa‡on suivante :
+	x = xi * coef + dxi, avec dxi interpol‚ dans la table DECALXTN …
+	partir de S .
+
+	Applications :
+	- inversion des xi, coef = -1., et table DECALXTN avec dxi = 0.
+	- d‚calage de l'axe du TN dans les zones de variantes
+	- etc..
+			  Pytha-Topo R910901 Page 17.7
+
+
+
+	5-Dessin de plusieurs profils TN sur le mˆme format papier
+
+	Plusieurs fichiers au format 'Terrain Naturel' sont analys‚s par
+	le programme qui fournit les mini/maxi en  x et Z  de l'ensemble
+	des profils. La valeur mini en x permettra d'introduire la cons-
+	tante CALX mm, et la valeur mini en Z la valeur PLCO m	dans les
+	donn‚es du module P58 .
+	Les points doubles dans le mˆme profil sont signal‚s .
+	Demander l'imprimante au d‚part de P17 pour la liste diagnostic.
+
+	Passer le fichier exemple A48.D17 , qui analyse les  3	fichiers
+	    A48TN.D17	 terrain naturel
+	    A48TR.D17	 terrassement
+	    A48CD.D17	 couche de forme
+	Les mini maxi r‚sultant sont les suivants :
+	   -7m +7m en x , 194.15 et 195.96 en Z .
+	Pour un dessin au 100/100 , le fichier A48.D58 comporte  les va-
+	leurs de calage CALX 80 , et PLCO 190 .
+
+	Applications : suivi de travaux .
+			  Pytha-Topo R910901 Page 17.8

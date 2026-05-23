@@ -1,0 +1,118 @@
+A48  dessin  terrain naturel + terrassement + couche de forme 11/89
+# les 3 dessins sont superposes : ne pas deplacer la plume du
+# traceur entre les planches.....
+PROC,16
+plco,103636,/P.C.
+dctn,103618,/DISTANCES/TERRAIN/NATUREL
+altn,103618,/ALTITUDES/TERRAIN/NATUREL
+libr,103618
+libr,103618
+libr,103618
+libr,103618
+FIN
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+COMM        EN FIN D'AFFICHAGE
+#CMCG  sortir le code pour Pytha-Graph
+travers,16
+ECHX,100
+ECHZ,100
+FORZ,210
+forx,297
+STITRE,,A48
+plco,190
+calx,80  #calage du 0 a 80 mm
+nbds,2 # 2 decimales pour les x
+nbdz,2 # 2 decimales pour les Z
+superpose
+# mettre ici  A48tn
+tn,,exec
+  1900.  44306.949   -3.70 194.647   -2.70 194.641
+  1900.  44306.949   -7.00 194.776   -6.00 194.800   -4.70 194.736
+  1900.  44306.950     .80 194.549    2.40 194.662    4.90 194.935
+  1900.  44306.950    6.00 194.930    7.00 194.918
+  1900.  44306.950   -1.70 194.618    -.20 194.514     .30 194.421
+  1901.  44331.949   -3.70 194.681   -2.70 194.656
+  1901.  44331.949   -7.00 194.811   -6.00 194.840   -4.70 194.806
+  1901.  44331.950     .80 194.551    2.40 194.676    4.90 194.984
+  1901.  44331.950    6.00 194.990    7.00 194.983
+  1901.  44331.950   -1.70 194.621    -.20 194.551     .30 194.456
+999999
+****
+A48  dessin terrassement
+PROC,16
+plco,103636,/
+libr,103618
+libr,103618
+dctn,103618,/DISTANCES/TERRASSEMENT///
+altn,103618,/ALTITUDES/TERRASSEMENT
+libr,103618
+libr,103618
+FIN
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+COMM        EN FIN D'AFFICHAGE
+#CMCG  sortir le code pour Pytha-Graph
+travers,16
+ECHX,100
+ECHZ,100
+FORZ,210
+forx,297
+#STITRE,,A48
+plco,190
+calx,80  #calage du 0 a 80 mm
+superpose
+supt #supprimer les traits horizontaux
+secri #supprimer l'ecriture de echx,echz,s,p
+nbds,2 # 2 decimales pour les x
+nbdz,2 # 2 decimales pour les Z
+# mettre ici  A48ter : meme nombre de profils que a48tn
+tn,,exec
+  1900.  44306.949   -3.50 194.219   -1.80 194.185
+  1900.  44306.949   -6.00 194.800   -5.55 194.806   -5.55 194.295
+  1900.  44306.950    5.00 194.935    6.00 194.930
+  1900.  44306.950   -1.10 194.153    1.90 194.284    4.90 194.507
+  1901.  44331.949   -3.50 194.226
+  1901.  44331.949   -6.00 194.840   -5.42 194.849   -5.42 194.345
+  1901.  44331.950    -.70 194.165    1.90 194.311    4.90 194.560
+  1901.  44331.950    5.00 194.986    6.00 194.990
+999999
+****
+A48 dessin couche de forme
+PROC,16
+plco,103636,/
+libr,103618
+libr,103618
+libr,103618
+libr,103618
+dctn,103618,/DISTANCES/COUCHE/DE/FORME
+altn,103618,/ALTITUDES/COUCHE/DE/FORME
+FIN
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+COMM        EN FIN D'AFFICHAGE
+#CMCG  sortir le code pour Pytha-Graph
+travers,16
+ECHX,100
+ECHZ,100
+FORZ,210
+forx,297
+#STITRE,,A48
+plco,190
+calx,80  #calage du 0 a 80 mm
+#superpose
+supt
+secri
+nbds,2 # 2 decimales pour les x
+nbdz,2 # 2 decimales pour les Z
+# mettre ici  A48cf : meme nombre de profils que a48tn
+tn,,exec
+  1900.  44306.950    4.95 194.707    5.00 194.934    6.00 194.930
+  1900.  44306.950   -1.00 194.799     .00 194.785    3.00 194.735
+  1900.  44306.950   -3.00 194.616   -1.00 194.723
+  1900.  44306.950   -6.00 194.800   -5.61 194.806   -5.60 194.560
+  1901.  44331.950    -.90 194.785     .00 194.776    3.00 194.761
+  1901.  44331.950    4.95 194.745    5.00 194.976    6.00 194.980
+  1901.  44331.950   -3.00 194.654   -1.00 194.742
+  1901.  44331.950   -6.00 194.840   -5.46 194.852   -5.45 194.612
+999999
+****
+stop
+

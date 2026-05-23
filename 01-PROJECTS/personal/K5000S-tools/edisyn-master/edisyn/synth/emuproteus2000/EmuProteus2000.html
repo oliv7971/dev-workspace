@@ -1,0 +1,134 @@
+<html><head></head><body>
+
+
+<h1>E-Mu Proteus 2000 Series</h1>
+<h2>Single Patch Editor</h2>
+
+<p>This editor should work with many E-Mu Proteus 1000, 2000, and 2500 series machines, though I have only tested on the latest firmware (2.26).  You ought to update the firmware on your unit if possible: an easy way to do this is to use Ray Bellis's <a href="https://www.emu.tools/e-loader/">emu.tools firmware updater</a>. 
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Set the MIDI ID to the same you'll be setting in Edisyn (typically 0).  Select a MIDI Channel to use on your synthesizer (perhaps channel 1) and set Edisyn's MIDI channel to that value.  Set the MIDI Mode to Omni or to Poly.  Make certain that Receive Program Change is ON for your MIDI channel: you might as well turn them all on (if your MIDI Mode is omni or Poly, I believe Receive Program Change should be on by default).
+
+
+<br><br><h3>Proteus 2000 ROMs</h3>
+
+<p>The Proteus 2000 family includes some 22 models, and the primary difference among them lies in which ROMs they have stored in their SIMM slots.  Edisyn knows about the following ROMS:
+
+<p>
+<table>
+<tr><td><b><i>Screen</i></b><td><b><i>ROM Name</i></b><td><b><i>Standard on these Synthesizers</i></b></tr>
+<tr><td>AUDTY <td>			Audity	                           <td> Audity 2000 (OS 2.0 or higher only)	            </tr>
+<tr><td>CMPSR <td>			Composer	                       <td> Proteus 2000, Proteus 1000  </tr>
+<tr><td>P/123 <td>			Protozoa                           <td> 		</tr>
+<tr><td>B-3   <td>		Definitive B-3                     <td> B-3		</tr>
+<tr><td>XLEAD <td>		X-Lead		                       <td> Xtreme Lead-1, XL-1 Turbo		</tr>
+<tr><td>ZR    <td>		Sounds of the ZR                   <td> 		</tr>
+<tr><td>World <td>		World Expedition                   <td> Planet Earth		</tr>
+<tr><td>ORCH1 <td>		Orchestral Sessions Vol. 1	       <td> Virtuoso 2000		</tr>
+<tr><td>ORCH2 <td>		Orchestral Sessions Vol. 2	       <td> Virtuoso 2000		</tr>
+<tr><td>PHATT <td>		Pure Phatt	                       <td> Mo'Phatt, Turbo Phatt		</tr>
+<tr><td>XL-7  <td>		X-Lead Vol. 2	                   <td> XL-7		</tr>
+<tr><td>MP-7  <td>		Pure Phatt 2	                   <td> MP-7		</tr>
+<tr><td>SONIQ <td>		Ensoniq Project                    <td> 		</tr>
+<tr><td>PROM1 <td>		Proteus Pop Collection	           <td> Proteus 2500, PK-6		</tr>
+<tr><td>VROM  <td>		Vintage Collection	               <td> Vintage Keys, Vintage Pro		</tr>
+<tr><td>DRUM  <td>		Protean Drums	                   <td> PX-7		</tr>
+<tr><td>GRAIL <td>		Holy Grail Piano                   <td> 		</tr>
+<tr><td>TECNO <td>		Techno Synth Contruction Yard	   <td>	Orbit-3			</tr>
+<tr><td>AOrch <td>		Peter Siedlaczek Advanced Orchestra <td> 		</tr>
+<tr><td>BEAT  <td>		Beat Garden	                       <td> Orbit-3		</tr>
+<tr><td>SHOCK <td>              Shock Treatment Sound ROM		<td>			</tr>
+</table>
+
+<p>This editor only works with the Audity 2000 at OS 2.0 or greater, sorry.  There are several ROMs that Edisyn does not support:
+
+<p>
+<table>
+<tr><td><b><i>Screen</i></b><td><b><i>ROM Name</i></b><td><b><i>Standard on these Synthesizers</i></b><td><b><i>Why not supported</i></b></tr>
+<tr><td>XTREM <td>         Audity Extreme                     <td> <td></tr>
+<tr><td>QROM <td>      Sounds of the ZR (variation)              <td> Halo         <td>Same ID as B-3 but different material</tr>
+<tr><td>MROM1 <td>    Pure Phatt (variation)             <td> MK-6          <td>Same ID as MP-7 but different material</tr>
+<tr><td>XROM1 <td>   X-Lead Vol.2 (variation)             <td> XK-6          <td>Same ID as XL-7 but different material</tr>
+<tr><td>CS2500 <td> Composer (variation)		 <td>Proteus 2500 <td>Same ID as PROM1 but different material</tr>
+</table>
+
+<p>Additionally, there are two versions of TECNO with identical IDs.
+
+<br><br><h3>Proteus 2500 Features</h3>
+
+The Proteus 2500 series has four more MIDI Controllers: M through P.  They're labelled "[2500]".  You can select them as soures and set their Initial Controller Amounts.
+
+<br><br><h3>About the Menu</h3>
+
+The menu lets you set the configuration of ROMs in your machine's SIMM sockets; or you can request that configuration from the synthesizer itself.  This is largely to make things more convenient for you.  This configuration is used in four places at present:
+
+<ul>
+<li>If when requesting or writing a patch to/from the synth you uncheck the "Show All ROMs" button, the ROM list will only contain the ROMs from the SIMM sockets.
+
+<p><li>When you pop up a Librarian, the SIMM socket SIMMs will appear first and the others will be grayed out.
+
+<p><li>When you do a batch download, Edisyn will try to skip the non-SIMM ROMs.
+
+<p><li>When you do Save All Patches in the Librarian, the only patches actually saved out will be the User patches and your SIMMs.
+</ul>
+
+<br><br><h3>About Multisetups (Multimode)</h3>
+
+Edisyn doesn't support multisetups at present.  The reason for this is simple: the Proteus 2000 doesn't have any sysex commands to load and save multisetups as patches, unlike many other multitimbral synthesizers.  Instead you can only load and save <i>all</i> of them, and all global parameters, as one dump.  This makes editing them as individual arrangements very difficult.
+
+<br><br><h3>Gotchas</h3>
+
+<ul>
+<li>The fourth character of your patch name <i>must</i> be a colon.
+
+<p><li>The maximum value for each "Fade" parameter (such as Key Low Fade) varies depending on the setting of its corresponding primary parameter (such as Key Low).  I have elected not to attempt to deal with this rat's nest: Edisyn simply lets each value range from 0 to 127.
+
+<p><li>Unfortunately changing individual parameters does not affect the current sound, only future notes played.
+
+<p><li>If Edisyn is selecting the wrong patch, you might check to see if you have modified your synth's Program Map.  If so, you'll need to reset it to its defaults.
+
+<p><li>The Proteus 2000 can't handle a long stream of individual parameters sent to it, even if done so slowly.  You might encounter the error "Error! Code = 000. Sysex too fast".  One place where this often happens is in the Arpeggiator Key Range settings.
+<!--  In practice, this really means: don't use Trickle to change parameters in the Morpher: you'll get a the error "Error! Code = 000. Sysex too fast".
+-->
+
+<p><li>In each layer there is a checkbox called "Loop" (look in the General category).  This corresponds to a parameter called LAYER_LOOP in the sysex documentation (page 60).  But this doesn't seem to correspond to anything available on the unit itself: it may have been deleted.  I'm keeping it in the editor anyway, just in case. 
+
+<p><li>Effects B has a "Delay" parameter.  Some effects algorithms use this parameter, and some do not.  Additionally, the parameter is <i>supposed</i> to permit synced delays like 1/2 eighth note: but it just states "err" on-screen when you set them from Edisyn -- or from the unit itself!  Try it!  Set it to the smallest value you can directly on the unit, for Panning Delay say, and see what happens.
+
+</ul>
+
+<br><br><h3>Hints</h3>
+
+<ul>
+<li>Tired of downloads taking a long time?  Set your Proteus 2000's Midi Sysex Packet delay to 0 milliseconds (the default is for some reason 300).  Edisyn can handle it.  It's in the Master menu.
+<p><li>The Proteus 2000 has two parameters for every filter, called "Freq" and "Q" which each go 0..127 on the unit.  These are sometimes used for cutoff frequency and resonance (of course), but not always: sometimes they're used for other hidden functions.  The Proteus 2000 sysex docs happen to make it clear what the cutoff frequency values are in Hz (they vary from filter to filter) and certain values for Q.  Edisyn tries to be helpful here, describing the actual meaning of the parameters and their values whenever it can.  There are six different classes of filters in this respect.  
+
+<ul><li>The Classic, Smooth, and Steeper filters have cutoff and resonance, with cutoff set to a certain Hz range.  
+<p><li>The Shallow and Deeper filters do as well but with a different Hz range.  
+<p><li>The Band-pass1, Band-pass2, and Contraband filters have yet another Hz range.  
+<p><li>The SweptOct filters have cutoff frequency in Hz, but do not have a resonance: instead they have a <i>Gain</i> in dB.  
+<p><li>The Aah-Ay-Eeh and Ooh-To-Aah filters do not have cutoff nor resonance.  Instead they have <i>Morph</i> and <i>Body Size</i>.  
+<p><li>All the remaining filters have unusual and usually unexplained uses for the Freq and Q parameters which very often are neither cutoff frequency nor resonance.  For these, we simply call them Freq and Q as on the machine, and let them go 0...127.
+</ul>
+</ul>
+
+<br><br><h3>About the Librarian</h3>
+
+<p>Normally the Librarian's grid has patch numbers down the side and banks along the top.  But the Proteus 2000 presents a difficulty: it is three dimensional, with patch numbers, banks, and ROMs.  There are many strategies of coping with this, but the approach Edisyn takes is to have patch numbers AND banks down the side and different ROMs along the top. This jibes with sysex internals (the Proteus 2000 sysex treats ROMs as its "banks" and combines patch numbers and banks into just patch numbers).  It also is a lot easier for Edisyn to manage.  But it means that you'll have lots of ROMs across the top that you don't own.  Edisyn tries to make this easier by moving to the front those ROMs you specified in the Proteus 2000 menu. It will make the other ROMs dark gray in color, though they're still present.
+
+<br><br><h3>Thanks</h3>
+
+<p>Thanks to Jan Mann (rdxesy@yahoo.de), the author of Prodatum, who kindly let me steal his ROM database.  Thanks also to Overviolence (overviolence@gmail.com) for debugging assistance and to Noel Van Damme (novel_vd@mac.com) for bug reports.
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>August 2022
+</table>
+
+
+

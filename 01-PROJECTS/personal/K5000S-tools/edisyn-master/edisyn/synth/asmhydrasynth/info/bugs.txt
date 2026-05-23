@@ -1,0 +1,482 @@
+KNOWN BUGS
+
+These are bugs, errors, and misfeatures that I have identified and 
+reported to ASM as of March, 2023, Hydrasynth firmware version 1.5.5.  
+Some 2.0.0-specific bugs are noted as well.  I am aware of only one
+or two having been fixed at this point, but am not certain.
+
+
+Note that many of these errors concern NRPN, parameter display, and 
+sysex.  This is because I am building a patch editor, so I have triggered 
+these errors.  But not all: see the touch strip functionality missteps 
+below for example.
+
+
+
+0. MISSING SYSEX.  The Hydrasynth was released in 2020 and ASM has still 
+not provided a sysex specification.  As a result, despite being a 
+popular machine, the Hydrasynth has only a (IMHO not great) proprietary 
+librarian and a single third-party editor which can upload and download 
+patches, and prior to Edisyn no open source software whatsoever.  Edisyn
+required reverse engineering the spec.
+
+It is not clear what the Hydrasynth is actually capable of doing.  From
+reverse engineering I believe the sysex can (1) request to download all 
+the names of patches in a bank (2) request to download or upload a 
+single patch from a bank [uploading actually causes the Hydrasynth to 
+rewrite its entire Flash RAM!] (3) request to download or upload an 
+entire bank [again rewriting Flash].  Because of complaints from the 
+Sigabort patch editor documentation, I believe that the Hydrasynth 
+does not have any sysex command to download its current working memory 
+patch.  Furthermore it does not have a way to upload a patch to its 
+current working memory -- rather the Hydrasynth unfortunately keeps 
+*all patches* in current working memory and you are only permitted to 
+(4) upload a patch to a specific slot in current working memory.
+
+#4 is a very, *very* bad design decision. Let's say you want to upload
+a patch to A30 in order to audition it (not write it to Flash).  Okay,
+you can do that.  But then you switch to B15 to edit it for a bit.  Then
+you decide to write B15.  The Hydrasynth does so, but it will ALSO write
+out your temporary audition changes to A30.  This is because the
+Hydrasynth weirdly keeps ALL patches in memory in Flash and writes ALL
+of them out when you ask it to write B15.
+
+This forces editors (Edisyn and Sigabort Midisynth I believe) to reserve
+a patch slot (in this case H128) as a "scratch patch" -- all auditions 
+are sent there, and we don't care if it's overwritten.  That's pretty 
+unfortunate.
+
+Any other capabilities of the machine are secret and proprietary to ASM
+at present as they will not release their sysex spec.
+
+
+1. ILLEGAL SYSEX.  The Hydrasynth has the options to "Send Patch" or 
+"Send Bank" on its front panel.  These emit illegal sysex.  
+Specifically, "Send Patch" emits sysex starting with the bytes F0 01 03 
+05 07 ..., but F0 01 is the private namespace for Sequential.  
+Furthermore, "Send Bank" emits sysex starting with the bytes F0 02 04 06 
+08 ..., but F0 02 is the private namespace for Big Briar.  Additionally, 
+though the manual says that these options will emit to both USB and 
+5-pin DIN MIDI, in fact they will only emit to 5-pin DIN MIDI.
+
+
+2. INVALID NRPN UPDATE ON WAKEUP.  When the Hydrasynth goes to sleep, if 
+you wake it up, certain parameters will be incorrectly displayed as 
+offset from messages sent to them via NRPN.  I have particularly noticed 
+this with Delay Time (BPM Sync OFF).  In order to fix this, you have to 
+force the Delay Time parameter down to zero, which appears to reset it.
+
+
+3. NRPN DOCUMENTATION ERRORS.
+
+	- Delay Time (0x41 0x74) is actually Delay Time (BPM Sync OFF)
+	- Delay Time (BPM Sync ON) (0x43 0x74) is missing from the NRPN 
+	  Documentation
+	- Arpeggiator Tempo (0x3F 0x38) is missing from the NRPN Documentation
+	- Arpeggiator On/Off (0x39 0x03) is missing from the NRPN Documentation
+	- Chord Button Pressed (0x3F 0x16) is missing from the NRPN 
+	  Documentation
+	- The following NRPN message (0x3F 0x38) is occasionally sent when 
+	  the patch select dial is turned.  Its purpose is unknown.  It is 
+	  missing from the NRPN Documentation.
+	- The following NRPN message (0x3F 0x57) is emitted when Tap Trig is 
+	  turned ON but not OFF on the panel.  Its purpose is unknown.  It is 
+	  missing from the NRPN Documentation.
+	- CC 0x0F is just labelled "Delay Time" but it is actually
+	  Delay Time BPM Sync OFF
+	- There are many, MANY more documentation errors.  See here for
+	  a table of proper NRPN messages, ranges, and display values:
+	  https://github.com/eclab/edisyn/tree/master/edisyn/synth/asmhydrasynth/info
+
+4. BROKEN ALL SOUNDS OFF HANDLING.  The Hydrasynth does not properly 
+handle CC 120, All Sounds Off.  To start with, it has reallocated that 
+CC to another function, Arp Octave (!).  Second, it has a proprietary 
+NRPN message, "All notes off and effect silence" (3F 57), which only 
+gets partly there (it doesn't stop envelope releases), but in my testing 
+it is not clear that it works at all.
+
+
+5. MISSING NRPN PATCH PARAMETERS.  The following patch parameters cannot 
+be set by NRPN:
+
+	Patch Category
+	Patch Color
+	Patch Name
+	Macro 1 Name
+	Macro 2 Name
+	Macro 3 Name
+	Macro 4 Name
+	Macro 5 Name
+	Macro 6 Name
+	Macro 7 Name
+	Macro 8 Name
+
+
+6. BROKEN ARP TAP TRIG.  ---- FIXED 2.0.0 ----
+When you send the Arp Tap Trig NRPN, it ALSO 
+turns the arpeggiator on/off.  This does not happen if you turn Arp Tap 
+Trig on/off from the front panel.  This is a *major* error, as it means 
+you can't update a patch via NRPN without accidentally turning the Arp 
+on or off.
+
+
+7. UNDERUSED BUTTONS.  At present, all categorical parameters have to be 
+selected via the encoder -- even boolean ones!  You can't set them by 
+just toggling the button below the encoder.  You have to twist the 
+encoder a fair bit, and remember what direction to turn it.
+
+
+8. TOUCH STRIP MISSING IMPORTANT FUNCTIONALITY.  One would imagine that 
+the Yamaha CS80 served as the inspiration for the ribbon strip and 
+polyphonic aftertouch on the Hydrasynth.  But the ribbon strip on the 
+CS80 has considerable functionality that is missing from the Hydrasynth.  
+All of this functionality could be easily implemented with a software 
+update. See here for a number of examples of important things that the 
+Hydrasynth ribbon strip can't do that are very simple to implement, and 
+which the CS80 did easily:
+
+	https://youtu.be/sV3qDUTVsNo?t=1487
+
+For example:  
+
+[A] On the CS-80, if you bend up with the ribbon, the range is different 
+than if you bend down.  On the Hydrasynth, they are the same.
+
+[B] There is no option to change the ribbon bend range.  You can only 
+change the pitch wheel bend range.  I find the ribbon bend range to be 
+often much too small or much too big.
+
+[C] CS-80's "Sustain Mode II" allows you to play a chord, hold it down 
+with the SUSTAIN PEDAL, then play other notes and only the other notes 
+are affected by the ribbon strip.  This is a very useful playing feature 
+used heavily by Vangelis and others.  It is at present impossible on the 
+Hydrasynth.
+
+[D] Play a chord, hold it down, and press your finger on the ribbon
+strip.  Then drag the finger to another location.  Pitch bend occurs.
+But then if you LET GO of the ribbon strip, the Hydrasynth immediately
+recenters.  This makes it *very* hard to do long Bladerunner-style pitch
+pulls on the Hydrasynth.  If there was *one* feature I'd hope to see on
+the Hydrasynth, it'd be the option that when you let go of the ribbon
+strip, the pitch stays where your finger was last.  And if you again
+press the strip, the pitch bend is again relative to where the finger
+was last (rather than snapping to the new finger location on the strip). 
+The pitch is only reset for new notes played after all existing notes 
+are released.
+
+
+
+9. UNHELPFUL NRPN RESPONSES.  When you set the ribbon mode to THEREMIN 
+on the Hydrasynth via NRPN, it responds by dumping all the theremin 
+values back via NRPN.  As a result, if the musician is using a patch 
+editor to change to theremin mode, the Hydrasynth responds by 
+unhelpfully trying to reset all of the changes he made in his editor.  
+This happens for a number of other parameters as well: changing one 
+parameter causes the Hydrasynth to respond with NRPN messages that serve 
+no function except to unhelpfully reset parameters on one's editor.  The 
+Hydrasynth should *never* respond to an NRPN message with another NRPN 
+message.
+
+
+
+10. BACKWARD ENVELOPE ATTACK CURVE.  The envelope attack curve knob is 
+labeled backwards.  If you turn the knob to +64, the curve is, just like 
+the decay and release curves, exponential.  However the knob is 
+mislabelled "Log 64".  This is wrong.  Similarly, if you turn the knob 
+to -64, the curve is, just like the decay and release curves, 
+logarithmic.  However the knob is mislabelled "Exp -64".
+
+Some people may not be aware of what an exponential attack curve 
+actually looks like.  One might assume that, being "exponential", the 
+curve starts off slowly and then shoots up vertically.  But this is not 
+correct.  On a synthesizer, an exponential curve describes an 
+*exponential decrease in the rate of change*.  That is, the curve starts 
+off rapidly towards its target destination, and then slows down.  For an 
+attack curve, this means that the curve shoots up FIRST, then heads out 
+horizontally to slowly reach the target destination.  Some googling will 
+probably convince you of this.
+
+I do not know if this mislabelling was a mistake on ASM's part or if it 
+was intentional, but in both cases it's an error and should be fixed.
+
+
+
+11. NO DISPLAY UPDATES.  When updating the mod matrix via NRPN, changes 
+in the values are not reflected on screen.  You have to page away and 
+then back to see the values properly updated.  This is also true when 
+updating the macro assignments via NRPN.  You have to page away and then 
+back to see the values properly updated.
+
+
+
+12. POOR NRPN HANDLING.  It appears that the Hydrasynth has difficulty 
+receiving the full complement of NRPN messages for a patch in series at 
+full speed.  However at present in the absence of any sysex spec, the 
+**only way** to update the current working patch memory of the 
+Hydrasynth is to send all the parameters as separate NRPN messages.
+
+It's not entirely clear what's happening, but I believe that the 
+Hydrasynth does not have a large enough buffer to handle incoming 
+messages; some messages (such as mode changes or BPM Sync toggles) might 
+require more time than others to process, and as a result certain NRPN 
+messages are dropped on the floor.  I would describe this as a critical 
+bug.
+
+
+
+13. NRPN PARAMETER-PACKING.  NRPN provides a space of 16384 different 
+parameter numbers.  But even though this is more than enough even for 
+the Hydrasynth Deluxe, the Hydrasynth has ignored this.  Instead many 
+parameters in the Hydrasynth are packed into the same parameter number.  
+These parameters are then distinguished by the MSB of their value, with 
+the LSB of the value being the *actual* value of the parameter.  As far 
+as I know, this unfortunate behavior is unique in the synth world.  This 
+is one of several problems which force editors to highly customize 
+parameter emitting and parsing, rather than just use a simple table as 
+is the case for other synthesizers.  [At least the Hydrasynth doesn't do
+bit-packing -- requiring you to send multiple parameters at the same
+time crammed into the same NRPN message -- for which I am grateful].
+
+
+14. INCONSISTENT WAVE RANGES.  The osc1type parameter is [0-218] 
+reprepsenting all waves from 0=Sine to 218=Harmon23.  Likewise the 
+osc1wavescanwave1 parameter follows this convention.  However the 
+osc1wavescanwave2 through osc1wavescanwave8 parameters are [0-220] 
+representing 0=Off, 1=Silence, 2=Sine, ... to 220=Harmon23.  As a 
+result, the osc1type and osc1wavescanwave1 parameter values don't line 
+up with osc1wavescanwave2 through osc1wavescanwave8. This could have 
+been trivially fixed by defining osc1type and osc1wavescanwave1 ranges 
+to just be [2-220].
+
+
+15. VERY HIGHLY INCONSISTENT AND UNDOCUMENTED NRPN PARAMETER RANGES AND 
+DISPLAYS.  The Hydrasynth's patch parameters are a crazyquilt of 
+inconsistent ranges and displays.  It took nearly a month for me to 
+document all the range/display information because no two parameters are 
+alike.  I am publishing an Excel spreadsheet of all the parameters and 
+how to display each one (see nrpn.xlsx and nrpn.pdf).
+
+Many parameters are implemented as values from 0...1024 (not 0...1023!), 
+but are displayed more coarsely, by dividing the parameter by some 
+(non-power-of-2!) value N and then either *rounding* to the nearest 
+integer with 0.5 rounded towards even, or rounding with 0.5 rounded 
+towards zero, or by taking the *floor*, seemingly at whim.  The displays 
+do not reflect the actual parameter values: there may be several 
+internal parameter values which all display as "0.04" on the machine due 
+to the display coarseness, but they are unique.  Furthermore these 
+parameters are not emitted as NRPN values 0...1024, but rather are 
+emitted as 8...8192 in steps of 8.
+
+The vast majority of signed parameters are in one's complement, that is, 
+-N ... +N are emitted in order as 0...2N.  But for some reason, six 
+parameters are in *two's* complement, that is, 0 ... +N are emitted as 
+0...N, and then -N ... -1 are emitted as N+1 ... 2N.  To make matters 
+worse, three of these parameters are *one byte* two's complement, and 
+three are *two byte* two's complement.
+
+Many parameters (lfo rates, etc.) are displayed with pseudoexponential 
+or other arbitrary values, but the mapping of the underlying parameter 
+values to the displayed values is not based on any function, but rather 
+requires an undocumented table lookup.  These tables are completely 
+different from one another: in some cases they're 127 in length, in 
+other cases, 128, 1024, or 1025.  Only in the case of the 
+lfoXratesyncoff parameters does the mapping appear to follow an
+actual computable function, but its range (1281) is unusually large.
+The others require elaborate and detailed combinations of functions 
+and tables to reproduce faithfully, which are entirely undocumented.  
+The "delay time BPM sync off" parameter is particularly bad. 
+
+Metric NRPN parameter ranges are all over the map.  Some ranges are 
+0...100, others 0...127, others 0...128, others 0...1020, others 
+0...1023, others 0...1024, and still others ranges such as [464...800]
+by 8, [0...2880] by 8, [128...8000] by 8, [0...4800] by 8, [408...8160], 
+[1...400], [5...560], etc.  None of this is documented.
+
+
+16. RIBBON MOD HOLD IS ABSOLUTE
+
+Ribbon Hold should apply to BOTH Pitch Bend and to Mod Wheel.  And it 
+should be *relative*.  That is, if you let go of the ribbon, it 
+should stay where it is (that's happening now), AND if you press AGAIN, 
+it should be changed relative to your new finger position, NOT jump to 
+that position (that's NOT happening now).  
+
+For example, if you have Hold on, and you slide your finger down the 
+strip to the bottom, it should bend down to the bottom.  When you let 
+go, it stays bent down.  When you reapply your finger to (say) the 
+middle of the strip, it should NOT pop up to  the finger position.  
+If you bend down from the middle of the strip, it should continue to 
+bend down FURTHER than from where you had left it (subject to bounds 
+you have defined of course).
+
+
+17. MISSING VOICE PARAMETERS
+
+It appears that Voice Snap is a per-patch parameter, and its NRPN is 
+0x3F 0x35.  But this is not documented.
+
+Additionally, Voice Scale and Voice Key Lock also appear to be per-patch 
+parameters (I think?) but they do not emit an NRPN message that indicates 
+their status: instead they emit a single NRPN message 0x3 0x45, always 
+fixed to 1, and then emit 0x3F 0x52 with an MSB of X and an LSB of Y 
+indicating that note X will be mapped to note Y.  This doesn't help nail 
+down which scale it is, and doesn't help at all for microtuned scales.
+
+
+18. INVALID NRPN PARAMETER
+
+Envelope 2 Trigger Source 1 has an NRPN parameter (0x3A 0x64), even 
+though it cannot be changed per the manual.
+
+
+19. VOWEL ORDER IGNORED
+
+The Hydrasynth emits NRPN for Filter 1 Vowel Order (0x3F 0x2E), but 
+ignores it if it receives it.
+
+
+20. GLOBAL VS PATCH PARAMETERS
+
+Unlike other synthesizers, the Hydrasynth does not distinguish between
+options which set global parameters, options which perform functions,
+and options which set patch parameters.  Thus you cannot at first glance
+determine which of the changes you've made will be saved when you save
+out a patch.  In most synthesizers, global options are sequestered
+in a submenu or area called "Global" or "System" or whatnot.  On the
+Hydrasynth a great many of them are mixed in with patch parameters in
+some kind of unholy bouillabaisse.  It can be very frustrating to set
+a parameter only to discover later that it wasn't saved with your patch.
+There's an easy fix to this: just add some little indication in the
+OLED screens that a given parameter is global, or is some kind of
+function, rather than is a patch parameter proper.
+
+21. MACRO INITIALIZATION
+
+If you attempt to initialize a macro slot which is already initialized and 
+empty, initializing will instead mistakenly try to initialize the entire patch.
+
+22. NO BACKSTOP (2.0.0)
+
+Vibrato amount is supposed to emit NRPN values from 0 to 120: but it only
+emits values from 13 to 120.
+
+23. BROKEN VOICE MODULATION, LFO QUANTIZE, AND ENV QUANTIZE NRPN (2.0.0)
+
+The Hydrasynth multiplies values by 8 when outputting voice modulation NRPN, but
+does not divide them by 8 when inputting them from NRPN.  The exact same
+goes for LFO Quantize and ENV Quantize.
+
+24. BROKEN SUSTAIN NRPN (2.0.0)
+
+Sustain NRPN is has the same problem as #23 above: it's outputted in 
+multiples of 8 but inputted in multiples of 1.
+
+25. ASSORTED NRPN BUGS
+
+Many additional NRPN parameters have errors.  Search for "BUG:" or "Bug:" or
+whatnot here:
+
+https://github.com/eclab/edisyn/blob/master/edisyn/synth/asmhydrasynth/info/nrpn.pdf
+
+26. ARP TEMPO IGNORED
+
+The Hydrasynth will emit NRPN for Arp Temp, but will not accept it.
+
+27. ENV DELAY
+
+Both the delay sync on and delay sync off, when sent over NRPN, update the same
+parameter.  This is not the case for attack, decay, hold, or release.  This was
+a most annoying bug to track down.
+
+28. LFO BPM SYNC
+
+Sort of related to 27 above.  Sending LFO Delay BPM Sync On or LFO Fade In BPM 
+Sync On over NRPN will change the Hydrasynth value regardless of whether BPM 
+Sync is turned On or Off.  The opposite is not the case however (sending LFO 
+Delay BPM Sync Off for example).  This is not the case for LFO Rate Sync On.
+
+29. MATRIX AND MACRO VALUES
+
+Sources, destinations, depths, and even destination categories can be set via 
+NRPN individually of one another even though they are connected.  For example, 
+if a source or destination is set to OFF, the depths and button depths can 
+still be set via NRPN.  This would ordinarily be just fine, except that this 
+isn't the case from the front panel: initializing them to OFF makes it 
+impossible to set the depths etc.  It's not consistent.  Additionally, you 
+can set a destination without setting its category: the category appears 
+to be entirely ornamental.
+
+30. NON-SANITIZED PARAMETER VALUES IN SYSEX
+
+There are many parameters on the Hydrasynth which are not double-checked 
+for bugs prior to dumping. 
+
+Examples:
+
+- When Patch C/011 (Dust Pad VG) is dumped to an editor over sysex, 
+the voice density parameter is sent as 9, which is not valid (it says 4 
+on-screen).  If you modify the parameter back to 4, then save it, and 
+dump again, it comes out as 4. 
+
+- Sometimes I'll get the Hydrasynth to send me 130 (13.0) for Vibrato 
+Amount in the patch sysex even though the maximum value is 120.
+
+31. POOR IMPLEMENTATION OF MIDI TUNING STANDARD (MICROTUNING)
+
+The Hydrasynth has a poor implementation of the dump and dump-request 
+rules for the MIDI Tuning Standard.
+
+The MIDI Tuning standard allows editors to do either of the following:
+
+1. WRITE a scale to any of 128 scale patch slots
+2. REQUEST any of 128 scale patch slots
+
+However the Hydrasynth refuses the first message unless "Receive Scale" 
+has been pressed, and it disregards the specified scale slot.
+Furthermore it entirely refuses the second message in all cases.  You
+can only get the Hydrasynth to dump to you by manually pressing "Send
+Scale".  This makes librarians impossible for Microtuning scales on 
+the Hydrasynth.
+
+Suggestion:
+
+	- If the editor WRITES a scale to slot N (0...128), and the 
+	  Hydrasynth is not in "Receive Scale" mode, it is automatically 
+	  written to slot N mod 4.
+
+	- If the editor WRITES a scale to slot N (0...128), and the 
+	  Hydrasynth IS in "Receive Scale" mode, it is written to the 
+	  slot specified on the Hydrasynth.
+
+	- If the editor REQUESTS scale N (0...128), then the Hydrasynth 
+	  always provides slot N mod 4.
+
+	- The Hydrasynth is free to send a scale when in "Send Scale" mode.
+
+32. PROBLEMATIC PROGRAM CHANGE BEHAVIOR
+
+If you do a PC to a patch on the Hydrasynth, and the Hydrasynth is 
+already at that patch, the PC is entirely ignored.  This is very unusual 
+behavior, and it is bad because it means the only way for a musician to 
+guarantee that he's reloaded a patch from RAM via MIDI is to do a PC on 
+some OTHER patch, and then PC BACK to the patch he wants.  Obviously 
+this won't be supported by a number of tools, and is a significant
+problem for editors.  
+
+33. SENDING TO CURRENT PATCH
+
+If you update a patch via sysex but do not issue a Write (that is, 
+command 14 00), it does not get an asterisk ("*") next to its patch 
+number even though it has been modified in current working memory.
+
+34. [SERIOUS] WINDOWS + JAVA + USB DATA CORRUPTION
+
+When connecting to the ASM Hydrasynth over its USB port from 
+Windows, and using Java (Edisyn runs in Java), the sysex messages 
+sent are corrupted in some cases and lost in others.  It is not 
+yet clear if this is an ASM bug or a Windows bug.  However, 
+using a good USB MIDI interface (I am using a Tascam US 2x2) 
+works just fine, implying that this may be a Hydrasynth issue.  
+Additionally using Linux or MacOS works flawlessly connected 
+over USB to the Hydrasynth or over 5-pin DIN.
+

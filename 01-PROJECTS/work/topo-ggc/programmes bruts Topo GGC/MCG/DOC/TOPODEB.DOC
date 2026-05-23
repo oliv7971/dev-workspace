@@ -1,0 +1,275 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Si   vous  eprouvez quelques difficultes avec PYTHA-TOPO,  ou  si
+        vous detectez des erreurs, il est important de  nous  en informer
+        par ecrit.  Une mise a  jour du systeme vous sera  alors proposee
+        si celui-ci est en defaut.
+
+
+
+        Retournez  votre licence et vos suggestions.
+
+
+
+                DASI/MGI/YDC
+                15 rue Jean BOCQ
+                38600 FONTAINE
+
+
+
+
+
+
+
+        Marques et Copyright
+
+        PYTHA-TOPO
+        PYTHA-PROJET
+        PYTHA-GRAPH
+        PYTHA-LIB
+
+        sont des marques d‚pos‚es de Micros G
+
+
+	(C) 1982,1986,1992,1996 DASI/MGI/YDC
+
+
+
+                             Contrat de licence
+                             ------------------
+
+        Micros G accorde a l'utilisateur final un droit d'utilisation non
+        exclusif et non transferable des logiciels de la chaine PYTHA.
+
+        La  licence  ne  concerne  q'un seul ordinateur  dote  d'un  seul
+        terminal pour les besoins internes de l'utilisateur.
+
+        L'utilisation  des  produits  a des fins de  sous  traitance  est
+        subordonnee  a l'accord de Micros G,  et pourra etre assimilee  a
+        une exploitation sur plusieurs ordinateurs.
+
+        La  reproduction  des programmes et documentations ne  peut  etre
+        faite que pour des besoins de securite.
+
+        Micros  G  reste proprietaire des logiciels et des droits  qui  y
+        sont attaches, ainsi que des algorithmes et techniques de mise en
+        oeuvre. L'utilisateur s'interdit toute modification aux logiciels
+        ainsi qu'a la documentation.
+
+        Tout  utilisateur n'ayant pas acquis regulierement les  logiciels
+        de  PYTHA  risque des poursuites sur les plans civils  et  penals
+        dans le cadre de la loi du 3 juillet 1985 .
+
+        Micros  G  garantit que les logiciels  fonctionnent  correctement
+        conformement  a la documentation et aux exemples  fournis.  Cette
+        garantie  ne couvre pas les defauts et vices caches inherents  au
+        developpement des logiciels, y compris ceux resultants des outils
+        utilises par Micros G :  systeme d'exploitation,  outils systeme,
+        compilateurs, interpreteurs, etc....
+
+        L'utilisateur est seul responsable vis a vis de ses clients et ne
+        peut  invoquer la responsabilite de Micros G si le logiciel donne
+        des  resultats  aberrants  :  il lui appartient  de  verifier  la
+	coherence  des	donn‚es et des resultats,  comme cela se  fait en
+        matiere de calculs techniques et en ingenierie.
+
+        L'assistance  technique  attachee au contrat est assuree  par  le
+	Vendeur agree de Micros G ou par Micros G.
+
+        Les  developpements,  versions  corrigees d'eventuelles  erreurs,
+        versions  a venir sont incluses dans  la  licence.  L'utilisateur
+        pourra les acquerir au prix alors en vigueur.
+
+        Le  present  contrat pourra etre resilie par Micros G au  cas  ou
+        l'utilisateur  n'en  respecterait  pas  les  clauses.   Tous  les
+        documents  en  la possession de l'utilisateur devront alors  etre
+        detruits (originaux et copies ).
+
+
+
+                             Contrat de licence (suite)
+                             --------------------------
+
+
+	     Numero de serie de la cle Microphar	_______________
+
+
+
+
+
+                       Date_______________________________
+
+
+
+             -------------------------     -------------------------
+
+
+                tampon du Vendeur             tampon du client
+
+
+
+                                                signature
+
+
+
+
+             Logiciels acquis    ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+                                 ________________    _______________
+
+
+
+                  Retourner un exemplaire de ce contrat a
+
+                	DASI/MGI/YDC
+                	15 rue Jean BOCQ
+                	38600 FONTAINE
+
+                            Pytha-Topo 911001 TM.1
+
+
+
+                      T A B L E    D E S    M A T I E R E S
+
+
+        SECTIONS  p/projet, s/projet simplifi‚, t/topo
+		   non indic‚/topo
+
+
+            1       Guide utilisateur
+
+	    2  p    Profil en long
+
+	    6  s    Mise en place des profils en travers simplifi‚s
+
+	    7  ps   Dessin des profils en travers
+
+	    8  p    Trace en plan
+
+	   11	    Interfaces  ..., utilitaires
+
+	   12  p    Implantations, calculs divers, dessin
+
+	   14  p    Traitement du terrain naturel (integre … 12)
+
+	   16  p    Mise en place des profils en travers
+
+           17       Cubes simplifies et manipulation du TN (PTN, PL,..)
+
+	   21  p    Dessin des lignes (int‚gr‚ … la section 12)
+
+	   23	    Conversion dxf en code dao pour p65
+
+	   24	    Conversion n x y z vers Moss       
+
+	   30       Saisie manuelle des carnets tacheometriques
+
+           33       Traitement de la  saisie Geodat, Topcon FC2,...
+
+           34       Canevas et details (XYZ)
+
+           36       Calculs tacheometriques (XYZ)
+
+           40       Nivellement direct
+
+           41       Nivellement geodesique (indirect)
+
+	   42       Polygonation  / obsolete
+
+	   44       Polygonation, triangulation, trilat‚ration (points
+	            isol‚s)
+
+	   57       Triangulation, trilateration, points isol‚s et bloc
+
+           58  pst  Dessins des profils en long et en travers
+                    (TN et/ou projet)
+
+	   64	    Report automatique (int‚gr‚ … la section 65)
+
+           65       Dessin assiste 2D/3D  : PYTHA-GRAPH
+                            Pytha-Topo 911001 TM.2
+           66
+
+           67
+
+           68
+
+           69
+
+           70
+
+           71
+
+           72
+
+           73
+
+           74
+
+           75
+
+           76
+
+	   77
+
+	   78
+
+	   79
+
+	   80
+
+	   81
+
+	   82
+
+	   83
+
+	   84
+
+	   85
+
+	   86
+
+	   87
+
+	   88
+
+	   89
+
+	   90
+
+	   91       Interface P65 vers base de donn‚es
+
+           98       Reserve
+
+           99       Message d'erreurs ( projet )
+
+
+            Annexes.doc		A fichiers systeme ECRANS
+                           	B fichiers systeme TRACEURS
+                           	C fichiers systeme DIGITALISEURS

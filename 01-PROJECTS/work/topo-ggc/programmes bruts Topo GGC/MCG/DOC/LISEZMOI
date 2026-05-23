@@ -1,0 +1,124 @@
+
+	1	LISEZMOI	PYTHA	version 4
+		np : non protege
+		protection logicielle, cle microphar inutile
+
+			dao (p65) ! machine 32 bits, 8 mega ram
+	P65MAJ?  DOC	misajour !!!
+	CH1A4    DOC
+	CH5      DOC
+	CH11A12  DOC
+	CH13     DOC    resume des commandes
+	CH13A    DOC
+	CH14     DOC
+        P23      DOC    dxf->p65, np ! machine 32 bits, 8 mega ram
+	P23      DOC	conversion dxf -> p65, np
+
+				topo
+	V3840	 DOC	misajour !!!
+	TOPODEB  DOC
+	P6       DOC
+	P11	 DOC
+	P17	 DOC	np
+	P22      DOC	integre / p65
+	P24      DOC    np
+	P30	 DOC	np
+	P33      DOC
+	P34      DOC              ! machine 32 bits, 8 mega ram
+	P36      DOC	np
+	P40      DOC
+	P41      DOC
+	P42      DOC	obsolete voir p44
+	P44      DOC
+	P57      DOC
+	P58      DOC
+	P64      DOC	integre / p65
+
+			divers
+	ANNEXES  DOC	configuration ecrans, digitaliseurs, traceurs
+
+	MGE      DOC
+
+	PLTN	 DOC
+
+	P31A     DOC	obsolete
+	P32      DOC	obsolete
+
+
+	2	LISEZMOI	PYTHA
+
+        programmes  p/projet, s/projet simplifi‚, t/topo
+		    non indic‚/topo
+	     * livraison standard
+
+	    2  p    Profil en long
+
+	    5*	    Utilitaires de transmissions serie
+
+	    7  ps   Dessin des profils en travers
+
+	    8  p    Trace en plan
+
+	   11*	    Interfaces  ..., utilitaires
+
+	np 12  p    Implantations, calculs divers, dessin
+	   	    Traitement du terrain naturel (old p14)
+	   	    Dessin des lignes (old p21)
+
+	   16  p    Mise en place des profils en travers
+	   16  s    Mise en place des profils en travers simplifi‚s
+
+        np 17*      Cubes simplifies et manipulation du TN (PTN, PL,..)
+
+        np 23*      Conversion dxf en pytha pour p65
+
+        np 24*      Conversion n x y z vers Moss
+
+        np 30*      Saisie manuelle des carnets tacheometriques
+
+           33*      Traitement de la  saisie Geodat, Topcon FC2,...
+		     niveau leica (NA...)
+
+           34*      Canevas et details (XYZ) : automate
+
+        np 36*      Calculs tacheometriques (XYZ)
+
+           40*      Nivellement direct ( calcul en bloc )
+
+           41       Nivellement geodesique (indirect)
+		     integre a P34
+
+	   43	    R‚ductions
+		     a la projection Lambert ( pour les 4 zones )
+		     au niveau de reference ( peut etre different de 0 )
+
+	   44*      Polygonation, triangulation, trilat‚ration (points
+	            isol‚s)
+
+	   57       Triangulation, trilateration, points isol‚s et bloc
+		     integre a P34 ( trilateration )
+
+           58* pst  Dessins des profils en long et en travers
+                    (TN et/ou projet)
+
+
+           65*      Dessin assiste 2D/3D  : PYTHA-GRAPH
+	   	    p64 Report automatique int‚gr‚
+	    	    p8  Trace en plan : integre a p65
+		    p34, p44 (+p57 par points isoles) : integres
+
+
+	3	LISEZMOI	PYTHA
+
+
+	Le module PY est limit‚ aux outils suivants
+
+	gestion des dossiers
+	p33, p34, p43, p44, et p8
+
+
+	utilitaire aga6
+
+	conversion aga600 ( spectra ) en carnet g122 pour p33 :
+	codes 11= dist horiz, 17 et 18 = ah et av cercle a droite
+	convertis en code 9, 7 et 8

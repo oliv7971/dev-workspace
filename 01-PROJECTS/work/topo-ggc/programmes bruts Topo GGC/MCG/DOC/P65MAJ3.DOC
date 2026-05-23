@@ -1,0 +1,765 @@
+
+       >>>>Macros commandes
+
+        Vous pouvez taper le nom de la macro, sans la commande CHAR
+
+        exemple murb100 represente un mur bahut de 1 metre
+
+
+                ept1
+                0
+                trai
+                1
+                trai2
+                0
+                trai3
+                130
+                symb
+                0
+
+        Plusieurs cas sont possibles
+
+        nom de la macro   repertoire      commande possible
+
+        murb100           travail       char murb100
+        murb100.mac       travail       murb100
+        murb100.mac       travail       char murb100.mac
+        murb100.mac     c:\mcg\macros   char c:\mcg\macros\murb100.mac
+        murb100.mac     c:\mcg\macros   murb100
+
+        Si vous  tapez murb100,  et si  murb100 n'est  pas une  commande
+        de  pytha-graph,  pytha  cherche  murb100.mac dans le repertoire
+        dont le  nom se  trouve dans  PARAM.MCG, enregistrement  2, puis
+        dans le  repertoire courant.  La premiere   occurence rencontree
+        est  prise  en  compte.  Si  les  macros  se  trouvent  dans  le
+        repertoire  d:\abcd.123\cdef.456\ghij\789  le  fichier PARAM.MCG
+        doit etre
+
+        ligne 1         c:\mcg\         ( ou autre )
+        ligne 2         d:\abcd.123\cdef.456\ghij\789\  ( ou autre )
+
+        nota 1 : utiliser la commande dos ren *. *.mac pour renommer les
+        macros avec l'extension MAC (voir les manuels du dos)
+
+        nota 2 : les noms de  macro doivent etre differents de noms  des
+        commandes courantes, sauf a monter  la macro en memoire avec  la
+        commande char !!!
+        Une macro ne peut appeler une autre macro.
+
+        nota 3 : les noms de macro peuvent etre dans la zone menu ecran
+        voir le fichier MENUVISU.P65 ( 10 pages possibles ).
+
+        Exemple de macros a mettre dans le repertoire correspondant
+
+        h1.mac
+                hx
+                1
+                hy
+                1
+        h18.mac
+                hx
+                1.8
+                hy
+                1.8
+        h2.mac
+                hx
+                2
+                hy
+                2
+
+        Pour passer les tailles des caracteres/symbole a 1.8 mm, il
+        suffit d'envoyer la commande h18
+
+	Autre exemple de macro, pour deplacer des textes en modifiant
+	hx, hy, ang
+	en les mettant dans un calque autre que le calque origine
+	le calque courant est sauve, puis restaure apres la commande
+
+	DEPLATEX
+
+	deptex.mac
+		hx
+		0.5
+		ang
+		0.001
+		sauvblpl
+		bloc
+		41
+		plan desc reg cedrat
+		1
+		deplatexte
+		restblpl
+
+	Les commandes suivantes sont acceptees dans le type de macro
+	decrite ci-dessus
+	DEPP  DEPT DEPZ SUPZ restz deplatexte rottexte
+	Le mode mouse est mis en fonction
+
+	Commandes TEXTES suivi de ? (demande de pointe a la souris)
+
+	cuisine.mac
+		hx
+		4
+		ang
+		0.001
+		sauvblpl
+		bloc
+		41
+		plan desc reg cedrat
+		1
+		texc ?
+		CUIStot
+		restblpl
+
+
+	>Accroche des points et des segments
+
+	La recherche est faite sur les calques en fonction ( ON )
+	Si un point est aligne sur un segment ( par la commande segm ),
+	la cote z est interpolee si le z de chaque point du segment
+	est valide (dif de 0).
+
+	Tolerance d'accrochage
+
+		 mouse	digit
+
+	point    RAYO	RAYODIGI
+	segment	 RSEG	RSEGDIGI
+
+	On recherche un point, puis un segment, sinon point nouveau.
+
+
+	>Tolerances
+
+	TOLCOURB tolerance d'alignement pour la recherche des droites
+	de la commande COURBES
+
+	TOLRESOL  resolution du digitaliseur
+
+	recherche automatique des alignements (digit cadastre/dgi)
+
+	RALIGNE	et RALIDIGI
+
+	controle de fermeture des ilots somme des surfaces des
+	parcelles = surface ilot a
+	 TOLSURFA (ecran) tolsdigi(digit) pres,
+	sinon erreur.
+
+
+	>sorties ASCII : sauvedxf, sauvedes, lcmd, savdxf
+
+	entete : #commande V4.01, au lieu de #sauvedes V4.00
+
+	savdxf est inutile : commande ACAD
+
+	SAVDXF sauve  10 points  maximum derriere  la commande  XYZ, ces
+	points   servent   a   assurer   la   compatibilite   pour   les
+	verifications   du   fichier   destine   a   P22,  verifications
+	effectuees avec  P65. Les  commandes du  type segm,  hach, cer?,
+	liss, lis? sont suivies des xyz des points au lieu des numeros.
+
+
+
+	TOLCOURBES 0.05 par exemple ( VD = 0.05 par defaut )
+	tolerance pour la recherche des alignements
+	la fonction COURBES prend les suites 1 2 3, et teste si 2 est
+	aligne a tolcourbes pres sur 1 et 2, si oui, 1-2 est un
+	alignement, la tangente en 3 est le gisement de la droite 1-2
+
+	corriger le fichier P065.MCG (repertoire c:\mcg\orig)
+	nouvelles valeurs entre ( )
+
+
+
+    P031P065  parametres PYTHA-GRAPH
+    15 51 53 54 100 251 (290) 1 1 1
+
+    3 14 27 28 46 104 147 149 150 156 165 166 177 159 152 193 192 0 0 0
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    10 10 0 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    1 29 62 107 121 122 81 144 145 146 44 155 168 169 170 125 (293) 0 0 0
+
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    1 29 107 62 81 121 122 144 44 155 125 168 169 170 (293) 0 0 0 0 0
+
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    1 46 14 27 3 28 29 62 107 81 121 122 30 104 147 144 149 150 156 155
+    44 165 166 125 168 169 170 177 159 152 193 192 (293) 0 0 0 0 0 0 0
+
+
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+	Corriger le fichier MESSAV35.MCG (repertoire c:\mcg)
+	lignes 292/293/294/290, comme sur le fichier joint, si vous
+	avez modifie ce fichier, sinon recopier le nouveau fichier.
+	Faire un del *.bin (sous c:\mcg) pour valider les nouveaux
+	messages
+
+	v3.72 du 1/8/93, corrigee des bugs suivants (mise a jour de
+			  v3.71 du 1/5/93)
+
+	fecr.p65
+	enr5/5 couleur des marques correct
+	enr5/9 abc , c mode affichage n et z 0/set/raz, 1 xor correct
+
+	dess avec report des Z deplaces avec depz : les Z sont
+	positionnes correctement
+	zoomar plante le systeme, corrige
+
+	nota: les bugs ont ete introduits lors des developpements de la
+	version 3.7 !!!
+	taille 3.8 : 590 k  en ram
+
+
+
+	COULEUR de la fleche dans la zone menu (mouse)
+
+	fichier fecr.p65, ligne 3 , la 16eme valeur est utilisee pour
+	la couleur de la fleche, ci dessous 1 (bleu, illisible sur fond
+	noir), mettre 15 pour avoir du blanc brillant.
+
+	? COMPATIBLES  IBM PC 2 640*480 VGA COULEUR zenith ftm 1490
+	240 576 180 480 640 480 30 16 0 0   12 15 0 0 3   5 1 2 320 240
+	0 2 3 4 5 6 7   8 9 10 11 12 13 14 15 1<--
+	0 72 80 75 77   13 45 16 8 5
+	0 8 8 18 00   3 40 2 000 0   0 0 0 0 0   0 0 0 0 0
+	0 0 0 0 0   0 0 0 0 32   0 0 0 0 0   0 0 0 0 0
+
+	La COULEUR utilisee pour le dessin apparait sur la ligne d'aide
+	( ligne 29 ) et sur la ligne de commande (ligne 30).
+
+
+	---pour MODIFIER le NOM d'une COMMANDE
+
+	a eviter ??? !!!! risques de problemes avec la version 4. !!!!
+
+	lancer P65
+
+	mocl
+	a du menu (lister les mots cle dans ucle65.lst)
+	q ou CR pour sortir
+	fin
+
+	passer ucle65.lst dans un editeur de texte, et modifier le nom
+	dans la colonne COMMANDE, en respectant le cadrage.
+
+	appli : mettre en fonction les nouvelles commandes
+
+	Les commandes inutilisees sont notees ‚nnn (‚292 par ex)
+	changer ‚292 par le nom SAVDXF remplacer la colonne ver (qui est
+	a 3/ex) par 1 .
+	changer ‚293 en courbes
+	changer ‚294 en tolcourb
+
+	puis p65, mocl, g du menu (generer ucle.p65 ...)
+	q ou CR, fin : il faut sortir de P65 pour validet la table
+	ucle.p65 .
+
+       >Anciens fichiers ( V 3.5 ) <<<<<<<<<<<<<<<<<<<<
+
+        La  commande  CHFT  nom  d'une  fonte,  doit  se trouver dans le
+        fichier  DEPART.P65  .  Si  un  dessin  charge  avec  $lde,   ne
+        comprend  pas  de  commande  chft,  celle-ci est inseree en tete
+        avec la 1ere fonte rencontree.
+
+        Si d'autres  commandes d'initialisation  doivent etre  inserees,
+        sauver les fichiers  avec la commande  LCMD nom, cette  commande
+        insere le fichier  DEPART.P65 en tete de la sauvegarde. Corriger
+        avec  un  editeur  si  necessaire.  Charger  avec  CHARGE,  puis
+        sauver en binaire  avec $SDE .
+
+	avec la version 4, exemple <<<<<<<<<<<<
+
+	$lde rd51... monter l'ancien format
+	exec	dessiner
+	purg	faire le menage
+	purg    plusieurs fois
+	purg    pour reduire l'occupation  memoire ( stat )
+	sauvedes q
+	char q
+	vue
+	tf
+	zmf
+	corz
+	chdirz 0	orienter les z a 0
+	exec
+	corz		ecritures z ok
+	$sde rd51a
+
+	ne pas faire de tf , etc... avant de travailler sous le nouveau
+	p65l. verifier les textes,
+	corriger les textes desorientes (effacer puis reecrire)
+
+	Sinon problemes rencontres:
+	les valeurs correspondant a
+	sizt hx hy ang alph coef, anha
+	des anciens fichiers sont stockes dans un format plus precis
+	, toute operation concernant les angles a partir des anciens
+	fichiers binaires detruit la structure au niveau des parametres
+	enonces ci-dessus.
+
+       >les anciens  fichiers binaires  sont transformes  dans un format
+        compatible  avec   3.7  et   4 : 1ere compression. Lors de la
+        sauvegarde ($sde nom), ils subissent une deuxieme compression :
+        gain de place de 40 a 50 % . Les temps de lecture/ecriture sur
+        le disque sont reduits.
+
+
+        Les   nouveaux  formats   sont incompatibles avec les versions
+        inferieures a 3.7 .
+
+	INCIDENTS
+
+
+	nota 1
+
+	si probleme du type sortie intempestive sans message a l'ecran
+	relancer p65l de la facon suivante :
+	p65l>err1
+	taper return a l'invite curseur clignotant (mode alpha)	2 fois.
+	refaire la manoeuvre ayant produit la sortie du programme
+	l' anomalie ( en principe err programme) est dans le fichier
+	err1.
+
+	ou
+
+	taper 65 (fichier de commande 65.bat = p65l>p65lyd.err)
+	Les messages concernant les erreurs programme seront ecrits
+	dans ce fichier. Il faut avoir 15-20 mega octets disponibles sur
+	le disque, sinon erreur du type 'unable to write on file ...'
+
+	Le fichier lf90.eer doit se trouver dans le repertoire 
+	c:\lf90\bin
+
+	nota 2
+
+	Pour debloquer la mire mouse, taper return plusieurs fois pour
+	reprendre la main au clavier, puis taper un fleche clavier
+	pour repasser la main a mouse.
+	La fleche clavier agit comme une bascule entre le digitaliseur
+	et la souris. Si vous etes en mode digit, vous passez a la
+	souris et vice-versa. Si le digit est off, la mire est en
+	attente sur la com 1 ou 2 du digit.
+
+	Il est necessaire dans certains cas de cliquer 2 fois pour
+	continuer : cas de reponse Oui/Non avec la souris.
+
+
+
+        Problemes/bugs apparus dans les versions precedentes, precisions
+        ----------------------------------------------------------------
+
+       >Les  tiretes  (motifs  en   general),  ne  sont  pas   restitues
+	correctement  sur  le  dessin  papier  .  Le  probleme est lie a
+	l'optimisation du dessin ecran : pas de calcul des motifs  si le
+	trait   apparait  en  continu   (resolution  ecran  =  0.3  mm).
+	corrige dans 4.2
+
+       >TF avec sauvegarde, les xy listes sont corrects (celles du
+        systeme original). La commande sauvedes nom, donne un fichier
+        ASCII dans le systeme original. La commande $SDE nom conserve
+        les matrices de transformation.
+
+
+       >EPT1 avec des hauteurs de 1mm5 ou moins. Il y a des problemes
+        dessin de l'epaisseur pour les rondes. Ex: trait de 0.3 mm avec
+        une plume de 0.2mm.
+        Utiliser HTXM (limite inferieure a partir de laquelle le jeu de
+        caracteres du traceur est utilise).
+        Avec 1.2mm, il y a des caracteres comportant des parties
+        fermees de 0.6mm-0.3mm(epaisseur)=0.3mm !!
+
+       >$LCA les points du cadre n'ont plus de Z
+
+       >Traits complexes (trait3)
+
+        sur 3  points align‚s,  le trait  restitu‚ est  un trait simple.
+        donner les points extremes, pour obtenir le bon dessin.
+
+        La commande ALIGNE ne fonctionne pas avec les traits complexes
+        il  faut  aligner  les  points  avant  de  mettre  le trait 3 en
+        fonction.
+
+	bug : commande poin avec souris suivi d'un caractere (clavier),
+	p65 plante, corrige.
+	!!! la commande MARD est corrigee du bug d‚tect‚ par 88582
+
+	zmf : fenetre limitee a 1 (metre).
+	plus de limite, sauf echelle >= 1., sinon affichage au 1000.
+
+
+	QUESTIONS/REPONSES <<<<<<<<<<<<<<<<<<<
+
+	q-les petits cercles (symboles) n'apparaissent pas a l'ecran
+	r-bug suite a une optimisation de l'affichage ecran
+	  corrige
+
+	q-le tiretes apparaissent en trait plein sur le papier (DESS)
+	r-bug suite a une optimisation de l'affichage ecran
+	  corrige
+
+	q-DESS ne fonctionne pas apres MARD : dimensions papier
+	  erronnee, cadre tronque
+	r-le dessin est plus grand que le traceur ?
+	  voir FMAD.MCG et annexes.doc
+
+	q-commande ACAD
+	  le dessin (dxf) restitue sous acad n'est pas correct
+	  les traits discontinus lisses donnent des traits pleins
+	  les cercles en octogones : bug p65l, corrige
+	  les masques des bornes ne sont pas pris en compte : autocad
+	  ne connait pas les masques sur les symboles
+	r-detailler les traits dans la commande acad
+	  le fichier dxf est dans ce cas volumineux
+	  ex : dessin comportant 1000 points ( 700 commandes de
+		dessin)
+		taille pytha (ascii) 0,08 mega
+		taille dxf   (ascii) 1,50 mega
+
+	q-MARD confusion dans les messages ' mode digit ...'
+	r-corriger c:\mcg\messav35.mcg, message 155
+	  (vous pouvez corriger d'autres messages...)
+	  puis del mess*.bin pour la prise en compte des modifications.
+
+	q-apres le 1er ZMF, le message d'aide n'apparait plus
+	r-bug corrige
+
+	q-effacement de la page lc incomplet
+	r-corriger la page 9 de pagesgr2, config.mcg comme suit
+	  pagesgr2
+    	  9 12  1  2  2 20 64  4  1 0 0 0 0
+	  lire les commentaires definissant les parametres des pages
+	  associees aux commandes
+
+	q-rayon d'arret des traits reliant les bornes (ou autres
+	  symboles) : si hx est modifie, ou si le symbole est supprime
+	  le rayon d'arret subsiste
+	r-le rayon d'arret est associe a chaque point de la liste
+	  vous avez defini le rayon dans le symbole : il est suppose
+	  associe a un hx donne.
+	  pour corriger la valeur associee a un point utiliser la
+	  commande LC n1 n1, repondez non et corriger irs.
+
+
+	QUESTIONS/REPONSES / suite  <<<<<<<<<<<<<<<<<<<
+
+	q-les polices 1 a 6 sont dessinees a l'ecran, mais sont toutes
+	  identiques au dessin
+	r-corriger la variable HTXM dans le fichier DEPART.P65, mettre
+	  2 mm par ex. Les ecritures dont la taille est inferieure a
+	  HTXM sont dessinees avec la police du traceur
+
+	q-macros non chargees
+	r-taper le nom de la macro, sans passer par CHAR
+	  ancienne version : CHAR nommac
+	  nouvelle version : nommac
+
+	q-le fichier sauve en ASCII (commandes sauvedes, ...) est
+	  volumineux
+	r-mettre la bascule BPLUMES OFF
+	  bplumes ne doit etre utilisee que pour les sorties traceur
+
+	q-le balayage des plumes traceur ne fonctionne pas correctement
+	r-le probleme se produit si les plumes ecran au dela de 8 sont
+	  utilisees et si les plumes traceurs valides sont limitees
+	  entre 2 et 8. Corriger le fichier fmad.mcg ( et le fichier
+	  traceurs.mcg ) comme suit
+
+	  ?BENSON  1665  8 plumes (0/7)  13--m
+	  1 5000 930 20 20   2 1 1 2 8   0 78 2 0 0   0 0 0 0 1
+	  PL400 0 0                  ! remplacer 8 par 16
+	  PL-400 0 0                 ! et aligner les plumes
+			  ! 9eme plume traceur est la plume 0
+
+	  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
+	  NP       2PL      PL       0 1 2
+
+	  Voir le manuel annexes.doc pour plus de details.
+
+
+
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	ACAD ACAD ACAD ACAD ACAD ACAD ACAD ACAD ACAD ACAD ACAD ACAD
+
+	ACAD
+	equivalent a FIN, sort un fichier DXF pour AUTOCAD.
+	demande echelle puis 2d/3d, etc..
+	Pour avoir un dessin identique a pytha, valider s'il y a lieu
+	les consignes ''detailler les traits complexes ( rayon d'arret
+	pour un symbole par exemple).
+	Avant ACAD, demander la vue ( commande VUE ou DVUE ).
+
+	Si la sequence suivante apparait dans les ordres de dessin
+
+		chft polv
+		...
+		...
+		symb 29 	pas de reference
+		chft polvv
+		segm 		symb 29 de polvv pour pytha
+		....
+
+	le symbole 29 est suppose appartenir a polv, et donnera le
+	block POLV29 pour acad, alors qu'il n'est pas utilise.
+	Le message d'erreur 	symbole POLVV29 ?  -> symp64
+	apparait a l'ecran, POLVV29 n'est pas defini.
+	Pour forcer la sortie de POLVV29, proceder comme suit :
+	remonter le dessin avec p65l, et completer avec les ordres
+	suivants
+		chft polvv
+		symb 29
+		chft pol1
+		symb 1
+		chft polvv
+		symb 30
+
+	Alterner les chft, ne pas mettre symb 29 et symb 30 a la suite,
+	car pytha elimine les ordres inutiles : 2 chft ou 2 symb qui se
+	suivent, ..., seul la derniere commande est conservee.
+
+	Cette erreur n'apparait pas si le changement de police est
+	donne avant le changement de symbole
+
+
+
+
+	Les traits tirete peuvent ne pas etre restitues correctement si
+	la distance entre les points definissant la ligne ont un
+	espacement inferieur a la longueur des motifs
+	ex trai ------   ------   ------ etc..
+		2mm   1mm , soit motif = 3mm
+		x     x   x     x	pytha ok, acad trait continu
+	ce probleme se produit avec les courbes lissees .
+	Utiliser la commande REGEN pur avoir les motifs.
+
+	en 3D, autocad ne restitue pas correctement les motifs et les
+	epaisseurs des traits (?).
+
+	plans ACAD (layers/calques) predefinis (pas de bloc/plan a
+	donner)
+
+	1 points 		PIQUES
+	2 numeros		NUMEROS
+	3 altitudes		ALTITUDES
+	4 hachures		HACHURES
+	5 talus			TALUS		masque toujours actif
+	6 cartouche ($lca)	CARTOUCHE
+	7 points		POINTACAD	pour acad
+	8 poubelle		POUBELLE
+
+	L'interface P65/ACAD est defini dans le fichier P65ACAD.MCG
+	La correspondance plans/blocs PYTHA avec les layers ACAD est
+	definie sous la ligne DXFPLANS. Les noms ACAD sont ceux donnes
+	par le CETE d'AIX-EN-PROVENCE. Ils devraient etre utilises par
+	les DDE. Voir avec votre DDE si les consignes sont appliquees,
+	et corriger P65ACAD.MCG eventuellement : changer altitudes par
+	FGT-2 par exemple.
+
+	Attention aux changements apportes par votre dde, par exemple
+	dde nom
+	 x  FBS routes, habillage : paves, pietons, ralentisseur
+	 y  FBS routes, feux tricolores
+	 z      ???
+	Les consignes varient suivant les dde ( les noms sont limitees
+	a 8 caracteres, ou 16 ou ...)
+
+	Suggestion : ajouter aux noms dde un mnemonique compresensible
+	ex : FGT-2-altitudes
+	renseignez-vous aupres de votre dde, afin d'avoir
+	l'autorisation de modifier le nom administratif, certains
+	ordinateurs refusant ces ajouts.
+
+
+	Nous ne pouvons prevoir les codes utilises ou qui seront
+	utilises par votre client.
+	Les noms predefinis sont plus parlants.
+	Cependant, il semble preferable d'utiliser les consignes CETE.
+	Tous les utilisateurs comprennent FGT-2, alors qu'altitudes
+	est incomprehensible.
+	Le layer poubelle est utilise si la correspondance (bloc,plan)
+	n'existe pas dans P65ACAD.MCG .
+
+	Les calques pytha peuvent etre restitues dans le fichier dxf.
+	Acad n'acceptant pas le caracteress speciaux tels que . ' < =
+	etc.. dans les noms des layers, ceux-ci sont remplaces par le
+	caractere _ (souligne).
+
+	La taille des fichiers DXF peut etre tres importante.
+
+	exemples : tailles en Mega (1 mega = 1 000 000 d'octets)
+
+	PYTHA vers DXF
+	dessin  pytha	dwg	dxf	pytha ascii	acad/pytha
+	x	0,5	13	26      1 		26  (*)
+	y	0,1	1,2	2,3	0,2		12
+	w	0,13		1,9	0,29            7
+
+	DXF vers PYTHA (plan fait avec acad)
+	z	0,1	0,43	1,06	0,22		5
+	le meme fait avec pytha
+	z	0,03	0,43	1,06	0,08		13
+
+	(*)les temps sous acad sont excessifs, en particulier les zmf,
+	zoomar, depecran. Le plan est inexploitable sous acad...
+
+	temps sur une machine a 66 Mhz ( dessin x )
+	( 12 mega ram disponible )
+
+	acad redes	10 minutes ( 600 sec)
+	     regen	20 minutes (1200 sec)
+	     sauve dwg	20 minutes (1200 sec)
+		  -->	pytha exec   100 sec ( masque talus on )
+				      40 sec ( masque talus off)
+	Ce dessin comporte 15000 points et 15000 commandes.
+
+	Nous avons un fichier comportant 70000 points et 10000
+	parcelles : pytha exec 30 sec env, acad ? .
+
+
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	IMPERATIFS CLIENTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	extrait de cahiers des charges, concernant les plans
+
+	logiciel cible : Autocad
+
+	nom du plan	interpretation	    (couleurs de 2 a 256)
+
+	amorces		rappels des coordonnees
+	cadre		cadre general du dessin
+	carr		carroyage
+
+	murs		sommet et pied des murs (*)
+	murs_h	(1)	hachures des murs
+	murs_b	(2)	tirete du mur-bahut
+
+	tal  	(3)	barbes des talus
+	tal_c		cretes des talus
+	tal_p		pied des talus
+
+	fa1
+	fks
+
+	Derniere minute	:
+	-eclater les rayons des lampadaires dans un plan different du
+	 lampadaire.
+	-l'eclatement en plans ( en moyenne 40 calques ) demande par
+	 les concepteurs et donneurs d'ordre est ramene a un seul par
+	 les utilisateurs dans certains services publics, ou
+	 para-publics.
+
+	(*) les murs n'ont plus d'epaisseur ? : un sommet et un pied
+
+	(1) construire le mur : 2 listes segment
+	    puis hachurer
+	    ne pas oublier de changer de calque
+
+
+	(2) a disparu ? ou mur beton arme ?
+
+
+	(3) modifier les traits complexes trai3
+	    supprimer le trait plein haut de talus
+
+	    au lieu de : 3 commandes
+	    trai3 13
+	    trai 2
+	    talus
+
+	    nouvelles operations : 6 commandes
+	    calque tal_c
+	    trai 1
+	    dessiner le haut talus
+	    calque tal_p
+	    trai 2
+	    dessiner le pied de talus
+	    calque tal
+	    trai3 13
+	    talus
+
+
+
+	symboles : le graphisme des pieds des supports a change , au
+	lieu des cercles pour tous, certains ont des rectangles.
+	les rayons ont disparu des lampadaires.
+
+
+	fichiers en 2D et 3D
+
+	Au commencement, seuls les fichiers 2D etaient autorises. Le Z
+	etant considere comme un texte, un point = XY . De la a
+	conclure que les levers altimetriques ne servaient a rien...
+
+	Depuis un a deux ans, vous pouvez introduire les Z dans vos
+	plans : en plus du texte pour le Z, un point = XYZ. Les levers
+	altimetriques sont autorises.
+	Mais attention le dessin en 3D en vue de la fourniture des
+	fichiers structures selon les consignes client...adjectif...
+	( ndlr : adjectif utilise par un utilisateur et censure).
+
+	DIVERS !!!!!!!!!!!!!!!
+
+
+	la version 4 (32 bits) est disponible en 2 versions
+
+	1/ autonome
+		machine 386/486 ou 8 mega ram
+
+	! avec le nouveau systeme Microsoft ( windows 95 ) annonce
+	  le 24 mai 1993 par Bill Gates ( dispo en sept 95 )
+
+	  ajouter X mega en plus
+
+	   X = 8, 16, 32 ?
+
+	  soit une machine avec 64 mega ( a 100 mghz ? ) si vous avez
+	  des fichiers importants a traiter et assembler.
+	  P65 se contentera de 8 mega, sauf obligation imposee par les
+	  nouveaux outils de developpement pour windows et par les
+	  imperatifs et ordres des clients divers (voir en fin de
+	  fichier).
+
+	 !!!!!!!!!!!!!!!!!!!!!!!!!!
+	avec windows 95, demarrer la machine en mode msdos ( arret puis
+	redemarrage en mode msdos).
+	si vous lancez p65l (ou mg : menu gene pytha) comme une
+	commande dos sous windows, vous risquez d'avoir des problemes
+	avec mouse et les temps d'execution. Si en plus vous etes en
+	reseau sous w95 cela peut donner des temps d'affichage
+	prohibitifs comme suit :
+	machine  33 Mhz en mode msdos      15 sec
+	machine 133 Mhz en reseau sous w95 45 sec !!! au lieu de 4 sec
+	 !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	  Quelques titres releves dans la presse
+
+	  "Comment Microsoft veut ran‡onner la planete''
+	  "L'homme qui veut devorer l'Internet'
+	  "Accoutumance et dependance"
+	  "Maitre du monde"
+				(Liberation 24/8/95)
+
+	  "Info ou intox ?" (Sciences et Avenir sept 95, p54)
+
+	  a propos des reseaux
+
+	  "Internet le reseau qui fait peur aux servives secrets"
+				(Le Point 29/7/95)
+
+	A noter que Windows 3.1 et Windows 95 crashent...
+	Si vous avez un systeme correspondant a vos besoins, conservez
+	le. Les gains en performance sont minimes avec Windows 95.
+	Couts estimes 3000 F environ.
+	La FNAC conseille un 486 avec CD-ROM, disque de 500 mega et
+	16 mega en ram.
+
+
+	Attention, le prochain produit destine a remplacer windows 95
+	est deja prevu. Il s'agira cette fois d'un veritable systeme
+	d'exploitation (!?#% ! !).
+

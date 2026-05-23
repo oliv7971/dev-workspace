@@ -1,0 +1,88 @@
+<html><head></head>
+<body>
+
+<h1>Waldorf Blofeld</h1> 
+<h2>Single Patch Editor</h2>
+
+<p>This editor will work with the <b>Waldorf Blofeld,</b> the <b>Waldorf Blofeld with SL Option,</b> and the <b>Waldorf Blofeld Keyboard</b> (which automatically comes with the SL option).
+
+<br><br><h3>Communicating with Edisyn</h3>
+
+Set your Blofeld to send <b>Sysex only</b>, not <b>Ctl</b> nor <b>Ctl+Sysex</b>.  Also make sure that <b>Ctrl Receive</b> is on. 
+Set Edisyn's send and receive channels to the Blofeld's MIDI Channel, and set the Synth ID to the Blofeld's Device ID.
+
+<br><br><h3>SL Option</h3>
+
+The SL option gives you the option of specifying a <b>sound sample</b> instead of a <b>wave</b> on Oscillators 1 and 2. This is turned on by choosing a <b>Sample Bank</b> in the editor: then the wave menu turns into a sample menu.  You turn it off by choosing <b>None</b> in the Sample Bank.  BTW, if you're wondering why Edisyn's SL Sample Banks end at Bank L, that's the furthest a contributor could get his to go before crashing his Blofeld.  So there you go.  
+
+<br><br><h3>Uploading Wavetables</h3>
+
+Under the Blofeld menu you'll find an option to upload a wavetable.  You can upload wavetables in three different formats:
+
+<ul>
+<li><b>Sysex files in SYX or MID format.</b>  These are groups of one or more wavetables in standard Blofeld sysex.  Some good sources for these are:
+<ul><li>Stromeko's Waldorf downloads page.   <b><a href="http://synth.stromeko.net/Downloads.html">http://synth.stromeko.net/Downloads.html</a></b>
+<P><li>MarsMelons's custom wavetables.  <b><a href="http://www.marsmelons.com/custom-wavetables-waldorf-blofeld/">http://www.marsmelons.com/custom-wavetables-waldorf-blofeld/</a></b>
+<p><li>Big Gnome's VFX wavetables.  <b><a href="https://tinyurl.com/vfxwavetables">https://tinyurl.com/vfxwavetables</a></b> (from <b><a href="https://waldorfmusic.com/en/forum/blofeld-en/76-sharing-custom-set-of-blofeld-wavetables">https://waldorfmusic.com/en/forum/blofeld-en/76-sharing-custom-set-of-blofeld-wavetables</a></b>)
+</ul>
+
+<p><li><b>16-bit signed integer <font color=red><i>mono</i></font> (NOT stereo) PCM WAV files.</b>  Edisyn will not load stereo files correctly.  The WAV file is sliced up into chunks, and each chunk is converted to a wave in the wavetable.  
+
+<br><br><p>WAV files come from two primary sources and correspondingly have two major chunk sizes:
+
+<ul>
+<li>256-sample chunk WAV files from <a href="http://waveeditonline.com">http://waveeditonline.com</a></b>  This is a large collection of WAV files encoding wavetables for other devices.  You can even download all of them as one zip file.  Edisyn will convert them to the Blofeld as best it can (resampling to the Blofeld's lower sampling rate).  These are particularly good because there is a very nice free wavetable editor available, <b><a href="http://synthtech.com/waveedit">http://synthtech.com/waveedit</a></b>
+<p><li>2048-sample chunk WAV files produced for the popular <b>Serum</b> soft-synthesizer.  One very large collection assembled on Reddit can be found <a href="https://www.reddit.com/r/edmproduction/comments/2jhew1/1700_waveforms_for_serums_wavetable_download_link/">here</a>.  Note that Serum wavetable WAV files are normally 32-bit floating point, which Edisyn can't load.  You'll have to convert them to 16-bit signed integer PCM using a program like <b>Audacity</b>.
+</ul>
+</ul>
+
+<b>Important note:</b> You probaby want to turn Limit WT <i>off</i> when using user wavetables.  Otherwise the Blofeld will not work properly with any PWM values greater than 120.  
+
+<p>Why? Limit WT stands for "Limit Wavetable".  Early Waldorf and PPG wavetables reserved the top few waves for sawtooth, square, and triangle waves regardless of the rest of the wavetable; this would make for weird modulation results.  The Blofeld has those wavetables internally, but LimitWT prevents modulation from reaching those waves.  But your own wavetable probably doesn't have that weirdness, so you want to turn Limit WT off.
+
+<br><br><h3>Setting User Wavetable Names</h3>
+
+Edisyn can't query your Blofeld to see what names you have set for your user wavetables (there's no way to do that).  But if you're sick of Edisyn just saying "User 80" and so on in its Wave choosers, you can manually change what Edisyn displays for all 39 of your user wavetable names.  Just select <b>Revise User Wavetable Names...</b>.
+
+<p>Also, when you upload a new user Wavetable, it will automatically update the name that Edisyn displays in its list.  If you don't want that, just uncheck the <b>Update Edisyn</b> checkbox when uploading.
+
+<p>This isn't possible for the Sample names for now (sorry): there are just too many of them.
+
+<br><br><h3>Uploading Pseudo-MPE</h3>
+
+The Blofeld doesn't support MPE.  But we can fake it by setting up one of its multimode patches in a special way, and this can be taken advantage of by instruments such as the Linnstrument. 
+
+<P>You can prepare a multimode patch slot with <b>Write Patch as Psuedo-MPE</b>.  This writes a multimode patch which points to your current single patch, including the current name, bank, and (single patch) number.  Each slot in the multimode patch will refer to this patch but have a unique MIDI channel. You get to choose what multimode patch number to write to. Note that your single-patch must already be written to the synth.
+
+<br><br><h3>Gotchas</h3>
+
+<ul>
+
+<li>When Edisyn writes a patch to the Blofeld, the Blofeld puts up a splash screen that says "Receiving SysEx".  Sometimes the Blofeld then forgets to take down the splash screen, obscuring everything thereafter.  You can force the Blofeld to take the screen down by requesting the Current Patch in Edisyn.
+
+<p><li>Edisyn cannot tell the Blofeld to switch to Multimode or to Single-Mode.  If you are in Multimode, and you request or write a patch, Edisyn will do so but you won't see the results on the Blofeld's screen. 
+
+<p><li>If you randomize or hill-climb a patch, the wavetable will never change to any of the Reserved or User wavetables.  This was done on purpose because often these wavetables are blank.
+
+<p><li>
+If you load the current patch, the Blofeld does not tell Edisyn what bank or number the patch is.
+
+<p><li>
+If you send a patch, or modify its parameters, the Blofeld's patch screen does not indicate that it's been edited (as it usually does with a little inverted "E"), even though it has in fact been edited.
+</ul>
+
+<br><br><h3>Librarian Support</h3>
+
+<p>Edisyn can request all the patches from the Blofeld at the same time via the menu <b>Request All Patches from Synth</b>.  It's a lot faster than the standard download methods.
+
+
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>June 2017 (Last revision October 2019)
+</table>
+

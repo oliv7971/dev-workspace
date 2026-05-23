@@ -1,0 +1,28 @@
+profil en travers / modtrave.d58
+PROC,16
+RUBR,46
+ALTN,106018,/Cotes/Tn
+DPTN,106018,/Dist/Partielle/Tn
+DCTN,106018,/Dist/Cumulees/Tn
+libr,106018
+libr,106018
+libr,106018
+FIN
+nbds,2
+nbdz,2
+nbdn,1
+cmcg
+supc
+ctez,20
+?echx,100
+?echz,100
+forx,297
+forz,210
+bsnx,1100
+travers,16
+stitre,,/axe1
+AFFICHE,1,  AFFICHAGE SUR ECRAN ET REPASSER EN MODE ALPHA
+tn,,exec
+999999
+****
+stop

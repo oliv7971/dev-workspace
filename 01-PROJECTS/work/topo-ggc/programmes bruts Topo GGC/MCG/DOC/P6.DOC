@@ -1,0 +1,538 @@
+
+
+
+
+ Le programme P6 calcule les cubatures du projet, entre chaque ligne,
+ ainsi que les surfaces de talus et d'assiette.
+ Avant d'utiliser P6, il faut d‚finir un profil en travers type,
+ unique pour l'ensemble du projet et ‚crire un fichier de donn‚es
+ pour P6.
+
+ Pour ‚tudier ce fichier nous allons prendre un exemple simple et le
+ comment‚.Il s'agit d'une voirie de lotissement se terminant par une
+ boucle autour d'un terre-plein central.
+
+
+  1. DEFINITION D'UN PROFIL EN TRAVERS TYPE
+      **************************************
+
+       1er principe:  On considŠrera toujours que le profil est
+                      sym‚trique … gauche et … droite, … ce niveau.
+
+       2eme principe: On d‚finit un profil type unique,de telle sorte
+                      qu'il puisse coincider avec tous les profils en
+                      travers du projet.
+
+       3eme principe: On ne d‚finit que la droite du PT, les points
+                      sym‚triques … gauche prendront le mˆme num‚ro
+                      - 1.
+
+
+      Rq1: Bien que la voirie ne comprenne pas de TPC du d‚but … lap
+            fin il faut le d‚finir dans le profil en travers type
+
+       Rq2: Ne pas mettre de num‚ro 11 par exemple qui cr‚erait un 10
+            … gauche ...
+
+
+    2. FICHIERS DE DONNEES
+       *******************
+
+       Il se compose: - d'un titre
+                      - d'une table de largeurs
+                      - d'une table de d‚vers
+                      - du profil type
+                      - du projet
+                      - du terrain naturel
+
+
+       2.1) D‚finition des largeurs
+            =======================
+
+
+
+
+
+
+                                 La table commence par LARGEUR
+                                 suivi des largeurs
+                                 et finie par FIN.
+                                 Il y a 2 d‚finitions possibles des
+                                 largeurs (type a et b) selon que la
+                                 largeur du segment soit constante ou
+                                 non le long du profil en long.
+                                 Les largeurs doivent ˆtre d‚finies
+                                 pour tous les segments "connus".
+
+
+
+
+
+
+
+
+
+
+
+
+
+         2.1.a) D‚finition du type a
+                ____________________
+
+                Lorsque la largeur est constante sur toute la longueur
+                du profil en long elle se note :
+
+                     [nom du segment],[largeur]
+
+                ex : TROTTOIR,150
+                     DECAPAGE,30
+
+                Rq1 : La valeur … introduire est en cm.
+                Rq2 : Si on veut introduire un d‚capage c'est … ce
+                      niveau qu'il faut l'indiquer
+
+
+         2.1.b) Definition du type b
+                ____________________
+
+                Il faut monter une table de largeurs, contenant
+
+                 [abscisse]  [largeur … gauche]  [largeur … droite]
+
+                ex :   0    -.001   .001
+                     232    -.001   .001
+                     ...................
+                     242    -4      4
+
+                Rq1 : La liste se termine par 999999
+                Rq2 : Les valeurs sont en m
+                Rq3 : Les largeurs entre 2 abscisses sont interpol‚es
+                      lin‚airement.Donc pour une cassure brusque
+                      pr‚voir 2 lignes une … l'abscisse exacte, une
+                      autre … l'abscisse + 1 ou 2 mm.
+
+
+
+       2.2) D‚finition des d‚vers
+            =====================
+
+
+
+                                 La table se monte de la mˆme maniŠre
+                                 que celle des largeurs.
+                                 ( Dans notre exemple les d‚vers sont
+                                 constants sur toute la longueur.)
+
+
+
+
+
+         Pour TALUS deux valeurs sont indiqu‚es puisqu'il peut ˆtre,
+         selon les conditions en d‚blai ou en remblai.
+
+         Rq1: Les valeurs sont des les pentes en % *100 000.
+              ex: pour TPC le d‚vers est de 8%
+
+
+       2.3) D‚finition du profil type
+            =========================
+
+
+
+
+
+
+
+                                 Elle commence par PTYPE
+                                 suivi de la d‚finition des lignes
+                                 et finie par FIN.
+
+                                 Le profil type est compos‚ de
+                                 diff‚rents types de lignes.Des lignes
+                                 CALCUL qui ne seront pas ‚dit‚es, et
+                                 des lignes … ‚diter.
+
+
+
+
+
+
+
+
+         2.3.a) Ligne calcul
+                ____________
+
+
+              |  LIGNE,,CALCUL
+              |
+              |  [nature du segment]
+              |
+              |  DEPART,[num‚ro du point de d‚part]
+              |
+              |  ,[num‚ro de l'extr‚mit‚ du segment],[nom du segment]
+              |  ,[................................],[..............]
+              |  ,[................................],[..............]
+              |
+              |  GAUCHE,,DROITE (indique que le profil est sym‚trique)
+              |
+              |  FLIGNE (indique que la d‚finition est termin‚e)
+
+
+             Rq: La ligne calcul n'est pas ‚dit‚e ce qui signifie
+                 que le segment 9,1,10 de notre exemple ne sera pas
+                 trac‚.
+
+
+         2.3.b) Ligne … ‚diter
+                ______________
+
+
+              |  LIGNE,,[nom de la ligne]
+              |
+              |  [nature du segment]
+              |
+              |  DEPART,[numero du point de d‚part]
+              |
+              |  ,[num‚ro de l'extr‚mit‚ du segment],[nom du segment]
+              |  ,[................................],[..............]
+              |  ,[................................],[..............]
+              |
+              |
+     Pour tester les points de d‚part de talus par exemple, on indique
+              |
+              |  ,[................................],[..............]
+              |
+              |  DEBLAI,[num‚ro du point extr‚mit‚ ],[nom du segment]
+              |  REMBLAI,[.........................],[..............]
+              |
+              |  GAUCHE,,DROITE
+              |
+              |  FLIGNE
+
+
+         Le point test‚ est celui dont le num‚ro se situe juste avant
+         la ligne DEBLAI,..,...
+
+         Dans notre exemple le test se fait sur le point 60, mais que
+         nous soyons en d‚blai ou en remblai nous tracerons le segment
+         talus de 60 … 98.Ici le profil type ne change pas mais ce
+         n'est pas toujours le cas.
+
+         Rq: Pour cet exemple nous n'avons qu'une ligne … ‚diter mais
+             nous aurions pu en avoir plus.
+
+
+
+       2.4) Definition du projet
+            ====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         |  PROJET
+         |
+         |  [abscisse PT]  [alti projet]  [d‚vers … G]  [d‚vers … D]
+         |  [...........]  [...........]  [..........]  [..........]
+         |  [...........]  [...........]  [..........]  [..........]
+         |
+         |  999999
+         |
+         |  LALANNE,,[nom du projet]
+
+       Cette derniŠre ligne donne un nom au projet et permet d'envoyer
+       le fichier r‚sultat sur le disque.
+       Il pourra alors ˆtre rappel‚ ult‚rieurement par CHARGE,,[nom]
+       (par exemple dans le fichier de donn‚es pour P7).
+
+
+
+       2.5) D‚finition du T.N.
+            ==================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         |  tn,,exec
+         |
+         |  [No profil]  [x] [Z]  [x] [Z]  [x] [Z]  .........
+         |  [.........]  [.] [.]  [.] [.] ...................
+         |  [.........]  [.] [.]  [.] [.] ...................
+         |
+         |  999999
+
+       Rq1: Les x sont compt‚s positivement … droite / sens du
+            parcours.
+       Rq2: On peut rentrer autant de valeurs que l'on veut, si
+            tout ne tient pas sur une ligne faire une autre ligne
+            avec le mˆme num‚ro de profil.
+       Rq3: Finir la liste par 999999.
+
+
+
+    FICHIER
+    *******
+
+|  le clos de la charmille
+|  LARGEURS
+|  EPTC
+|  236 -.22 .22
+|  242 -.22 .22
+|  999999
+|  TPC
+|  0  -.001 .001
+|  232 -.001 .001
+|  236 -4   4
+|  242 -4   4
+|  246 -.001 .001
+|  999999
+|  T2
+|  0 -0.001 0.001
+|  232 -.001 .001
+|  236 -0.028 0.028
+|  242 -.028 .028
+|  246 -.001 .001
+|  999999
+|  CHAUSSEE
+|  0. -3.0 3.0
+|  230 -3. 3.
+|  231 -4.5 4.5
+|  249 -4.5 4.5
+|  999999
+|  BT2,3
+|  TROTTOIR,150
+|  DECAPAGE,-30
+|  FIN
+|  DEVERS
+|  EPTC,100000000
+|  TPC,-2000
+|  T2,-500000
+|  CHAUSSEE,-2000
+|  BT2,500000
+|  TROTTOIR,2000
+|  TALUS,100000,DEBLAI
+|  TALUS,-100000,REMBLAI
+|  FIN
+|  PTYPE
+|  LIGNE,,CALCUL
+|  DROITE
+|  DEPART,1
+|  ,10,EPTC
+|  GAUCHE,,DROITE
+|  FLIGNE
+|  LIGNE,,SUP
+|  DROITE
+|  DEPART,10
+|  ,20,TPC
+|  ,30,T2
+|  ,40,CHAUSSEE
+|  ,50,BT2
+|  ,60,TROTTOIR
+|  DEBLAI,98,TALUS
+|  REMBLAI,98,TALUS
+|  GAUCHE,,DROITE
+|  FLIGNE
+|  FIN
+|  edite  # met l'‚dition en fonction (par d‚faut n'‚dite pas)
+|  PROJET
+|  0 49.52 2 -2
+|  19.5 49.94 2 -2
+|  40.0 50.37 2 -2
+|  56.0 50.32 2 -2
+|  83.2 49.74 2 -2
+|  113.5 50.0 2 -2
+|  146.0 50.0 2 -2
+|  180.0 49.48 2 -2
+|  201.0 49.47 2 -2
+|  240.3 49.50 2 -2
+|  999999
+|  lalanne,,PROJET1
+|  tn,,exec
+|  1 0. 0 49.52 -10 49.6 10. 49.56
+|  2 19.5 0. 49.74 -10. 49.75 10 49.85
+|  3 40. 0. 50.17 -10. 50.08 10 50.04
+|  4 56. 0. 50.12 -10. 50.15 10. 50.3
+|  5 83.2 0. 49.54 -10. 49.62 10. 50.01
+|  6 113.5 0. 49.8 -10. 49.47 10. 49.92
+|  7 146. 0. 49.8 -10. 49.69 10. 50.05
+|  8 180.0 0. 49.98 -10. 49.8 10. 50.09
+|  9 201.00 0. 49.97 -10 49.83 10. 50.11
+|  10 240.3 0. 49.58 -15. 49.54 15. 49.42
+|  999999
+|  APPLI   # calcule ce que l'on vient d'‚diter
+|  EAPS    # ‚dition des ‚tats r‚capitulatifs
+|  APPLI   # calcule les ‚tats r‚capitulatifs
+|  ****
+|  STOP
+
+
+
+   3. FICHIER RESULTAT
+      ****************
+
+
+
+| le clos de la charmille
+|
+| LIGNES OCCUPEES   80 LIGNES LIBRES 1920
+| PROJET
+| lalanne,,PROJET1
+| tn,,exec
+| APPLI
+| le clos de la charmille				      Page    1
+|
+|
+| ABSCISSE       .00 SOLUTION... REMB REMB   ...PROFIL      1.00
+|                                    Z PROJET    49.52 PROJET-TN      .00
+|
+| LIGNE...SUP             ...
+|      97     -4.61    49.557    100.00    TALUS
+|      59     -4.53    49.634     -2.00    TROTTOIR
+|      49     -3.03    49.604   -500.00    BT2
+|      39     -3.00    49.454      2.00    CHAUSSEE
+|       9       .00    49.519
+|      40      3.00    49.456     -2.00    CHAUSSEE
+|      50      3.03    49.606    500.00    BT2
+|      60      4.53    49.636      2.00    TROTTOIR
+|      98      4.63    49.539   -100.00    TALUS
+|
+| LIGNE...TERRAIN NATUREL...
+|        X       Z       X       Z       X       Z
+|   -10.00   49.60     .00   49.52   10.00   49.56
+|                                        DEBLAI     -.26 M2,REMBLAI      .25 M2
+| le clos de la charmille				      Page    2
+|
+|
+| ABSCISSE     19.50 SOLUTION... REMB REMB   ...PROFIL      2.00
+|                                    Z PROJET    49.94 PROJET-TN      .20
+|
+| LIGNE...SUP             ...
+|      97     -4.84    49.745    100.00    TALUS
+|      59     -4.53    50.054     -2.00    TROTTOIR
+|      49     -3.03    50.024   -500.00    BT2
+|      39     -3.00    49.874      2.00    CHAUSSEE
+|       9       .00    49.939
+|      40      3.00    49.876     -2.00    CHAUSSEE
+|      50      3.03    50.026    500.00    BT2
+|      60      4.53    50.056      2.00    TROTTOIR
+|      98      4.80    49.793   -100.00    TALUS
+|
+| LIGNE...TERRAIN NATUREL...
+|        X       Z       X       Z       X       Z
+|   -10.00   49.75     .00   49.74   10.00   49.85
+|                                        DEBLAI      .00 M2,REMBLAI     1.87 M2
+|
+|
+| ..................................
+| ..................................
+| ..................................
+|
+|
+|
+| le clos de la charmille			      Page   10
+|
+|
+| ABSCISSE    240.30 SOLUTION... REMB REMB   ...PROFIL     10.00
+|                                    Z PROJET    49.50 PROJET-TN     -.08
+|
+| LIGNE...SUP             ...
+|      97    -10.09    49.553    100.00    TALUS
+|      59    -10.06    49.590     -2.00    TROTTOIR
+|      49     -8.56    49.560   -500.00    BT2
+|      39     -8.53    49.410      2.00    CHAUSSEE
+|      29     -4.03    49.500    500.00    T2
+|      19     -4.00    49.640      2.00    TPC
+|       9       .00    49.720
+|      20      4.00    49.640     -2.00    TPC
+|      30      4.03    49.500   -500.00    T2
+|      40      8.53    49.410     -2.00    CHAUSSEE
+|      50      8.56    49.560    500.00    BT2
+|      60     10.06    49.590      2.00    TROTTOIR
+|      98     10.18    49.471   -100.00    TALUS
+|
+| LIGNE...TERRAIN NATUREL...
+|        X       Z       X       Z       X       Z
+|   -15.00   49.54     .00   49.58   15.00   49.42
+|                                        DEBLAI     -.76 M2,REMBLAI     1.08 M2
+|  CUBES ENTRE LES DIFFERENTES LIGNES DU PROFIL TYPE
+|
+|     DEBLAI    REMBLAI
+|      182.53     577.27
+|
+| --->    0 ERREURS<<<<<<
+| EAPS
+| APPLI
+| le clos de la charmille			      Page    1
+|
+|
+|  PROFIL    ABSCISSE  ENTR. EN TERRE Z PJET.  CUBES PARTIELS  CUBES    CUMULES
+|                         X        Z   PJT-TN  DEBLAI REMBLAI  DEBLAI   REMBLAI
+|
+|      1.00       .00   -4.61   49.56   49.52      0      0         0         0
+|                        4.63   49.54     .00
+|      2.00     19.50   -4.84   49.74   49.94     -2     21        -2        21
+|                        4.80   49.79     .20
+|      3.00     40.00   -4.89   50.13   50.37      0     43        -2        63
+|                        4.91   50.11     .20
+|      4.00     56.00   -4.83   50.13   50.32      0     33        -2        96
+|                        4.76   50.21     .20
+|      5.00     83.20   -4.81   49.58   49.74      0     43        -3       139
+|                        4.63   49.76     .20
+|      6.00    113.50   -5.01   49.63   50.00      0     56        -3       195
+|                        4.79   49.86     .20
+|      7.00    146.00   -4.90   49.75   50.00      0     68        -3       263
+|                        4.73   49.92     .20
+|      8.00    180.00   -4.83   49.89   49.48    -55      9       -57       272
+|                        4.97   50.03    -.50
+|      9.00    201.00   -4.85   49.90   49.47    -96      0      -153       272
+|                        4.99   50.04    -.50
+|     10.00    240.30  -10.09   49.55   49.50   -105     21      -258       293
+|                       10.18   49.47    -.08
+| le clos de la charmille			      Page    1
+|
+|
+|    PROFIL  ABSCISSE ABSC/CALC   ASSIETTE    TALUS       DECAPAGE M3
+| CUBES ENTRE LES DIFF. LIGNES :DEBL,REMB,...      (SS DEBLAI,SS REMBLAI)
+|
+|      1.00       .00       .00        0.        0.         0.         0.
+|      2.00     19.50      9.75      184.       16.         0.        56.
+|      3.00     40.00     29.75      383.       42.         0.       117.
+|      4.00     56.00     48.00      538.       61.         0.       163.
+|      5.00     83.20     69.60      797.       86.         0.       240.
+|      6.00    113.50     98.35     1089.      120.         0.       329.
+|      7.00    146.00    129.75     1405.      159.         0.       423.
+|      8.00    180.00    155.71     1653.      191.        73.       425.
+|      9.00    201.00    190.50     1859.      220.       133.       426.
+|     10.00    240.30    220.65     2450.      263.       163.       636.
+|  CUBES ENTRE LES DIFFERENTES LIGNES DU PROFIL TYPE
+|
+|     DEBLAI    REMBLAI
+|      182.53     577.27
+|
+| --->    0 ERREURS<<<<<<
+| ****
+

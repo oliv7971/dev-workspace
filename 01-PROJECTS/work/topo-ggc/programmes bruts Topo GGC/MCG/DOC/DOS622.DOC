@@ -1,0 +1,73 @@
+exemple de fichier AUTOEXEC.BAT-------------
+
+@LH /L:1,16960 C:\DOS\SHARE.EXE /l:500 /f:5100
+rem @loadhigh C:\DOS\SHARE.EXE /l:500 /f:5100
+LH /L:0;1,50448 /S C:\WINDOWS\SMARTDRV.EXE  16384
+path c:\mcg;c:\UTIL;c:\b;C:\DOS;C:\me;c:\lf90\bin;c:\sf90;c:\acad;c:\f500;c:\windows;c:\;c:\edit
+SET TEMP=C:\WINDOWS\TEMP
+c:\dos\KEYB FR,,C:\DOS\KEYBOARD.SYS
+rem svm89 80x43
+color 7 1 1
+verify off
+break on
+prompt $p$g
+c:\dos\doskey.com
+rem setvid scrnsav 15
+mode con codepage prepare((850)c:\dos\ega.cpi)
+rem mode con codepage prepare((437)c:\dos\ega.cpi)
+mode con codepage select=850
+rem	lf90
+set 386link=-lib c:\gr90\graph90 -libp c:\sf90
+rem set 386link=-lib c:\sf90\ls c:\sf90\lg c:\gr90\graph90
+set init=c:\lf90\bin
+set lbdir=c:\lf90\bin
+set lbcfg=c:\lf90\bin\lb.cfg
+set lbkey=c:\lf90\bin\lb.key
+set lbmac=c:\lf90\bin\lb.mac
+set lbpst=c:\lf90\bin\lb.pst
+set lblng=c:\lf90\bin\lb.lng
+rem	lf90 end
+rem set lib=c:\watcom;c:\f500
+set lib=c:\f500
+set include=c:\f500
+set dosx=-novm
+rem mouse/s50
+rem mode com1:96,n,8,1
+mode com2:96,e,7,2
+mode com1:96,e,7,2
+SET ACAD=c:\ACAD\SUPPORT;c:\ACAD\FONTS;c:\acad\ads
+set ACADCFG=c:\ACAD
+set ACADDRV=c:\ACAD\DRV
+
+c:
+chkdsk/f
+set comspec=c:\command.com
+@SET SCSI_DRIVER = C:\IOMEGA
+@SET SCSI_UTILITY = C:\IOMEGA
+
+exemple de fichier AUTOEXEC.BAT-------------
+
+DEVICE=C:\DOS\HIMEM.SYS
+DEVICE=C:\DOS\EMM386.EXE NOEMS
+BUFFERS=15,0
+FILES=40
+dos=UMB
+LASTDRIVE=E
+FCBS=16,8
+rem device=C:\WINDOWS\EMM386.EXE
+dos=HIGH
+shell=command.com /e:768 /p
+DEVICEHIGH /L:1,41776 =C:\STACKER\STACKER.COM C:\STACVOL.000
+DEVICEHIGH /L:1,12368 =C:\DOS\SETVER.EXE
+rem DEVICEhigh=c:\dos\display.sys con=(ega,850,1)
+DEVICEHIGH /L:1,13920 =C:\DOS\MOUSE.SYS
+COUNTRY=033,850,C:\DOS\COUNTRY.SYS
+rem COUNTRY=033,,C:\DOS\COUNTRY.SYS
+rem device=c:\dos\ramdrive.sys 8192 512 512 /e
+DEVICEHIGH /L:1,1824 =C:\UTIL\TANSI.SYS
+rem device=c:\nav\nav&.sys /b
+stacks=9,256
+DEVICE=C:\IOMEGA\ASPIPPM1.SYS FILE=NIBBLE.ILM SPEED=10 COUNTRY=033 QUIET
+DEVICE=C:\IOMEGA\ASPIIDE.SYS Scan Info Country=033 Quiet
+DEVICE=C:\IOMEGA\SCSICFG.EXE /L=033 /V
+DEVICEHIGH /L:1,67472 =C:\IOMEGA\SCSIDRVR.SYS /L=033

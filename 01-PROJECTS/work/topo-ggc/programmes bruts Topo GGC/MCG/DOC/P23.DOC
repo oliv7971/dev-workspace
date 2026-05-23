@@ -1,0 +1,159 @@
+
+
+        P23 - R‚cup‚ration de fichiers DXF.
+
+
+        a - Rapport sur fichier DXF.
+
+        Le programme analyse le fichier DXF et cr‚e un fichier RPT
+        contenant la liste :
+
+                - des traits utilis‚s.
+
+                - des couches utilis‚es.
+
+                - des symboles utilis‚s.
+
+        Le fichier RPT cr‚‚ sert de table de correspondance entre les
+        layers (couches ACAD) et les PLAN-BLOC de P65.
+
+
+        b - Conversion DXF -> PYTHA.
+
+        Le programme demande :
+
+           - un nom de fichier DXF
+             (fichier de donn‚es … transformer)
+
+           - un nom de fichier DAO
+             (fichier r‚sultat … cr‚er)
+
+           - un coefficient de transformation des symboles (VD = 1000).
+           Le programme multiplie les  coordonn‚es des symboles par  ce
+           coefficient pour avoir des  valeurs entiŠres.  Si  la valeur
+           obtenue est  sup‚rieure …  32767, le  programme s'arrˆte  et
+           demande de recommencer avec  un coefficient plus petit.   Si
+           le coefficient donn‚ est trop petit, les symboles  restitu‚s
+           risquent  d'ˆtre  d‚form‚s.   Aucune  rŠgle  pr‚cise n'‚tant
+           appliqu‚e concernant une trame  de base lors de  la cr‚ation
+           de symboles sous  AUTOCAD, il est  impossible de donner  une
+           valeur "passe partout" … ce coefficient.
+
+
+        - Symboles :
+
+        Les symboles du fichier DXF sont transform‚s de maniŠre … cr‚er
+        automatiquement une nouvelle fonte (du nom du fichier DAO) dans
+        P65 lors du chargement du fichier DAO.
+
+        ProblŠmes rencontr‚s :
+
+        Certaines soci‚t‚s insŠrent leur logo dans le fichier DXF sous
+        forme de symbole. Ces logos peuvent ˆtre complexes et
+        peuvent g‚nŠrer plusieurs milliers de points dans la fonte,
+        entrainant le message "Tables pleines" dans P65 et un affichage
+        des symboles et des caractŠres complŠtement d‚form‚s dans P65.
+
+        Solution :
+        Dans la mesure du possible demander au cr‚ateur du fichier de
+        'DECOMPOSER' ce genre de symboles et de 'PURGER' le dessin
+        avant de vous fournir le fichier DXF sinon:
+
+        Editer le fichier
+        DAO, et supprimer la d‚finition du symbole en question:
+
+                           #symbole en question
+
+                             plusieurs centaines ou milliers de lignes
+
+                           #symbole suivant
+
+        Certains utilisateurs d‚finissent les hachures en tant que
+        symboles. Mˆme problŠme que pr‚cedemment, mˆme solution.
+
+                           #symbole HACH1  (ou nom diff‚rent)
+
+                             lignes hachures
+
+                           #symbole HACH2
+
+                             lignes hachures
+
+
+        Les symboles faisant r‚f‚rence … d'autres symboles ou … des
+        hachures ne sont pas r‚cup‚r‚s.
+
+
+        - Traits :
+
+        Les traits du fichier DXF sont transform‚s de maniŠre … cr‚er
+        automatiquement de nouveaux traits dans P65 lors du chargement
+        du fichier DAO.
+
+        Principe :
+        Le fichier TRAITS.MCG est copi‚ dans le dossier courant. Les
+        traits du fichier DXF sont num‚rot‚s … partir de 801 (Traits
+        simples de TRAITS.MCG 1801 … ...).
+        Ainsi les traits standards de 1 … 500 g‚n‚ralement utilis‚s
+        restent accessibles.
+        Attention si vous r‚cup‚rez plusieurs fichier DXF dans un mˆme
+        dossier, les traits 801 802 ... sont red‚finis … chaque
+        r‚cup‚ration. Cr‚ez donc plusieurs dossiers pour recup‚rer
+        plusieurs dessins.
+
+
+        - Correspondance des couches (paragraphe MCGPLANS)
+        dans P23.MCG ou dans le fichier RPT :
+
+        La correspondance entre les layers (couches ACAD) et les
+        PLAN-BLOC de P65 est prise :
+
+                - Dans le fichier RPT s'il existe
+                - Dans le fichier P23.MCG sinon.
+
+        Pour des fichiers utilisant toujours les mˆmes couches
+        (fichiers du type DDE avec couches FA1 FAS FAT ...), utiliser
+        la correspondance ‚tablie dans P23.MCG (effacer le fichier RPT
+        s'il existe). Cela permet de restituer les objets dans les
+        PLAN-BLOC de P65 comme s'ils avaient ‚t‚ cr‚‚s … l'aide des
+        macros FA1 FAS FAT ... et de faciliter une ‚ventuelle
+        reconversion en DXF.
+
+        Pour des fichiers particuliers, utiliser la correspondance
+        ‚tablie dans le fichier RPT. A chaque couche ACAD est attribu‚
+        un BLOC de P65 ( de 1 … n ). Vous pouvez modifier la
+        correspondance avant de lancer la r‚cup‚ration d‚finitive.
+
+        Format du paragraphe MCGPLANS :
+
+        NOM_ACAD        PPBB            TRAI            PLU Ä¿
+           .             .               .               .   ³
+           .             .               .               .   ³  99
+           .             .               .               .   ³ maxi
+           .             .               .               .   ³
+        NOM_ACAD        PPBB            TRAI            PLU ÄÙ
+
+        Nom layer     PlanBloc       No de trait     No de plume
+          ACAD         de P65          de P65          de P65
+        16 carac.
+
+
+        - Chargement dans P65 :
+
+        Utiliser la commande CHAR.
+        Si vous n'avez plus la main sur les commandes P65 en fin de
+        chargement, supprimer la commande PURG en fin de fichier DAO
+        (PURG ne peut s'effectuer correctement en fonction des donn‚es
+        du fichier DXF).
+
+
+        - Taille des fichiers :
+
+        Les fichiers DXF g‚nŠrent beaucoup de points. La commande PURG
+        permet d'‚liminer les points doubles (dx, dy, dz <0.001 m).
+
+        Dans la mesure du possible, les hachures sont transfomrm‚es de
+        maniŠre … conserver uniquement le contour de la zone ( 4 points
+        pour un batiment au lieu des x points d‚finissant les x/2
+        segments de hachures).
+

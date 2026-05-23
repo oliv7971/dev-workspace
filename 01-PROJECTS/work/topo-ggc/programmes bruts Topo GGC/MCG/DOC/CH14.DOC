@@ -1,0 +1,5423 @@
+                         Pytha-Graph R910701 Page 14.1
+
+
+
+
+
+
+
+
+                    M A N U E L    D E    R E F E R E N C E
+
+
+
+                                CHAPITRE   14
+
+
+                    DESCRIPTION DES  FONCTIONS CLASSEES PAR
+
+                              ORDRE ALPHABETIQUE
+
+
+
+                         Pytha-Graph R910701 Page 14.2
+
+
+
+
+
+                                    N O T A
+
+
+        Pour les fonctions … paramŠtre configurable par  l' utilisateur,
+        les valeurs num‚riques  indiqu‚es par d‚faut le sont … titre in-
+        dicatif.
+
+        Les mots cl‚s et les noms des fichiers  peuvent  ˆtre  tap‚s  en
+        majuscules et/ou minuscules.
+
+        Les figures sont num‚rot‚es de 1 … 36.
+
+        Le num‚ro de la fonction est  not‚e sous la forme /fjjj en  tete
+	des pages .
+
+                         Pytha-Graph R910701 Page 14.3
+
+
+           /f119                                                    AFBL
+
+        MNEMONIQUE                                         AFfecter BLoc
+
+        SYNTAXE   AFBL i
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Affecter un num‚ro de bloc au dessin  actuellement  en
+                  m‚moire.
+
+
+        DESCRIPTION  Cette commande a pour effet de  r‚unir dans le mˆme
+                  bloc toutes les  instructions  de  dessin pr‚sentes en
+                  m‚moire  . Si le bloc sur lequel on travaille est dif-
+                  -f‚rent (num‚ro affiche en permanence sur l'‚cran),les
+                  commandes  ulterieures  … AFBL s'appliquent toujours …
+                  ce bloc (et non au bloc d‚fini par AFBL).
+
+                  Les plans des diff‚rents blocs  r‚unis  en un seul par
+                  AFBL sont ‚galement r‚unis sous leur  num‚ro  commun :
+                  tous les plans 1 des diff‚rents  blocs  deviendront le
+                  plan 1 du nouveau bloc, etc...
+
+	FONCTIONS ASSOCIEES  Exemple   BLOC,SBLO,CBLO,DBLO
+
+	Exemple   BLOC 2
+                  B }
+                  C }
+                  . }  Commandes bloc 2
+                  . }
+                  . }
+                  . }
+                  N }
+
+                  AFBL  5  ===================) Les commandes  ci-dessus
+                                                sont affect‚es au bloc 5
+
+                  AA }
+                  BB }
+                  .  }
+                  .  }
+                  .  }         Ces commandes restent affect‚es au bloc 2
+                  NN }
+                  XX }
+                         Pytha-Graph R910701 Page 14.4
+
+
+
+           /f090                                                AFFINUME
+
+        MNEMONIQUE                                       AFFIcher NUMEro
+
+        SYNTAXE   AFFINUME
+
+        ACCES     clavier( ) digitalisateur( )
+
+        FONCTION  Affichage des num‚ros de points
+
+	DESCRIPTION  Commande de type "BASCULE"     premier  appel  = ON
+                                                    deuxiŠme appel = OFF
+
+	FONCTIONS ASSOCIEES  Exemple   NUMAUTO
+
+        REMARQUE  Si NUMAUTO est sur la position ON et AFFINUME sur OFF,
+                  les   num‚ros   des   points  ne  sont  pas   affich‚s
+                  lors de la saisie.
+
+	Exemple
+
+
+
+
+           /f120                                                    AFPL
+
+        MNEMONIQUE                                         AFfecter PLan
+
+        SYNTAXE   AFPL p
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Affecter un num‚ro de plan au dessin  actuellement  en
+                  m‚moire.
+
+        DESCRIPTION  Cette commande permet de r‚unir toutes les instruc-
+                  -tions de dessin pr‚sentes en  m‚moire  dans  le  mˆme
+                  plan.Si le  num‚ro  de  plan  sur  lequel on travaille
+                  est   diff‚rent  ( num‚ro  affich‚  en  permanence sur
+                  l'‚cran ) les  commandes de dessin ult‚rieures restent
+                  affect‚es … ce  plan (et non au plan d‚fini par AFPL).
+
+	FONCTIONS ASSOCIEES  Exemple   PLAN,SPLA,CPLA,DPLA
+
+	Exemple   mˆme logique que AFBL.
+                         Pytha-Graph R910701 Page 14.5
+
+
+
+           /f093                                                    AIDE
+
+        MNEMONIQUE                                                 AIDEr
+
+        SYNTAXE   AIDE
+
+        ACCES     clavier( )
+
+        FONCTION  Aider l'utilisateur
+
+        DESCRIPTION  Commande de  type  "BASCULE"      premier appel OFF
+                                                       deuxiŠme appel ON
+
+                  En position ON , AIDE affiche des messages descriptifs
+                  aprŠs l'entr‚e d'une commande ou une erreur de manipu-
+                  -lation.
+                  En position  OFF , les  messages  ne  s'affichent plus
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUES   Les messages sont	dans  un fichier    MESSAVnn.MCG
+                  o— nn = nøVersion (35 par exemple pour la version 3.5)
+                  Le message d'aide  correspondant  … la  fonction  i se
+                  trouve …la ligne i du fichier  MESSAVnn.MCG. Consulter
+                  ce fichier  (Structure et consignes en fin de fichier)
+                  AIDE est  affich‚e  en  ligne  "l24", la  r‚ponse  est
+                  demand‚e en ligne "l25".
+                  Voir MOCL pour lister les fonctions par ordre alpha,nø
+                  et  version. Les valeurs "l25" et "l24" sont  d‚finies
+                  dans config.MCG sous FECR.MCG.
+
+	Exemple
+                         Pytha-Graph R910701 Page 14.6
+
+
+
+           /f012                                                  ALIGNE
+
+        MNEMONIQUE                                               ALIGNEr
+
+        SYNTAXE   ALIGNE
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Aligner  une  liste  de  points  suivant  une  droite.
+
+        DESCRIPTION  La droite d'alignement est d‚finie par le premier et
+                  le dernier  point  saisis  au  clavier  ou  point‚s  …
+                  l'‚cran.
+
+	FONCTIONS ASSOCIEES  Exemple   DEPP
+
+	Exemple   FIGURE 1
+
+                         Pytha-Graph R910701 Page 14.7
+
+
+           /f042                                                    ALPH
+
+        MNEMONIQUE                                                 ALPHa
+
+        SYNTAXE   ALPH
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir la valeur de la tangente pour  repr‚senter les
+                  caractŠres et les symboles en "ITALIQUE" :
+                  inclinaison   du  symbole  sur  l'axe  oy ( en % ).
+
+        DESCRIPTION   S'applique … tous les caractŠres/symboles utilis‚s
+                  ult‚rieurement.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	SAISIE DIGIT	ALPH = num‚ro case / 10
+
+        REMARQUE  Si la valeur de la tangente est grande , l'inclinaison
+		  est infinie.
+		  ALPHa est valid‚ pour les traceurs Benson et HPGL . Il
+		  est  possible  que  ALPHa  soit  invers‚ sur	certains
+		  traceurs si le dessin demand‚ est restitu‚ … l'envers.
+
+	Exemple    FIGURE 2			  ALPHA 0.5
+                                                  ALPHA 0
+                                                  ALPHA -0.25
+
+
+
+                         Pytha-Graph R910701 Page 14.8
+
+
+           /f040                                                     ANG
+
+        MNEMONIQUE                                                 ANGle
+
+        SYNTAXE   ANG  val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir un angle par rapport a l'axe ox ( ‚cran ).
+
+        DESCRIPTION  S'applique … tous les ordres concernants l'inclinaison
+                  des ‚critures, symboles ...
+
+	FONCTIONS ASSOCIEES  Exemple   UANG
+
+	APPLICATIONS  Par exemple, ‚criture de textes, dessin de symboles...
+
+	SAISIE DIGIT/MOUSE  pointer 2 points N1 ,N2.
+
+        REMARQUE  S'il  y  a  une  op‚ration  TF ( cf TF ), ANG suit TF.
+
+	Exemple   FIGURE 3			  ANG 30
+                                                  ANG 140
+
+                         Pytha-Graph R910701 Page 14.9
+
+
+
+           /f166                                                    ANHA
+
+        MNEMONIQUE                                        ANgle HAchures
+
+        SYNTAXE   ANHA
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  D‚finir l'angle des hachures par rapport … l'axe des x
+                  ‚cran.
+
+	DESCRIPTION  Cette  commande  d‚finit	l'angle   des   hachures
+                  par rapport … l'axe  des  X . Au clavier , on entre la
+                  valeur  de  ANHA ; en  digitalisation , on saisit deux
+                  points  qui  donnent  la   direction   des   hachures.
+
+	FONCTIONS ASSOCIEES  Exemple   ESHA,HACH,EFFHACHU
+
+	Exemple
+
+
+
+
+           /f179                                                  ANNULE
+
+        MNEMONIQUE                                               ANNULEr
+
+        SYNTAXE   ANNULE
+
+        ACCES     clavier( )
+
+        FONCTION  Annuler la derniŠre commande.
+
+        DESCRIPTION  L'‚l‚ment  …  effacer  clignote , valider  ou  non.
+
+        FONCTIONS  ASSOCIEES   EFFA,EFFHACHU,EFFTEXTE,EFFCERCL,EFFLISSA,
+                               DEBG
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.10
+
+
+           /f099                                                     ARR
+
+        MNEMONIQUE                                               ARRondi
+
+        SYNTAXE   ARR  valnum
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir l'arrondi de saisie des  coordonn‚es  en  mode
+                  digitaliseur.
+
+        DESCRIPTION  L'arrondi s'exprime en  unit‚s  utilisateur  (valnum).
+                  S'il  n'est  pas  d‚fini (omis ou nul), il est mis … 1
+                  par d‚faut.
+
+                  La  valeur  ARR  est affich‚e en permanence … l'‚cran.
+                  Si  ARR = 0.001, il n'y a pas d'arrondi.
+
+        FONCTIONS ASSOCIEES  toutes fonctions de saisie au digitaliseur.
+
+	RESTRICTION   la rŠgle ARR n'est pas appliqu‚e … DEPZ,DEPT,DEPP.
+
+	SAISIE DIGIT	ARR = num‚ro case /10
+
+        REMARQUE  ARR  est  appliqu‚e  avant  la  rŠgle  ORTH.
+
+	Exemple   Avec ARR = 2.5 :
+                  num‚ro point            X               Y
+                      1                  10              25
+                      2                  35              17.5
+                      3                  15              20
+                      4                  22.5            10
+                      5                  5               12.5
+                     ...                 ...             ...
+                        Pytha-Graph R910701 Page 14.11
+
+
+           /f101                                                    AXON
+
+        MNEMONIQUE                                           AXONom‚trie
+
+        SYNTAXE   AXON (coef)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Calculer les perspectives  axonom‚triques du dessin en
+                  m‚moire.
+
+        DESCRIPTION  Commande  de type " BASCULE"    premier  appel = ON
+                                                     second appel  = OFF
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE  valide sous CFTE .Revenir au mode normal avant de qui-
+		  tter.
+
+	ATTENTION La perspective est … 50 grades  par  d‚faut ( coef non
+                  pr‚cis‚ = 0.707 par d‚faut ).
+
+	Exemple   FIGURE 4   axonom‚trie  coeff = 0.707
+                             axonom‚trie  coeff = 2
+                             axonom‚trie  coeff = 3
+                        Pytha-Graph R910701 Page 14.12
+
+
+           /f115                                                    BLOC
+
+        MNEMONIQUE                                                  BLOC
+
+        SYNTAXE   BLOC val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Pr‚ciser le num‚ro de bloc auquel  sont  affect‚es les
+                  commandes de dessin ulterieures.
+
+
+        DESCRIPTION  On  dispose  de  98   blocs  au  plus  par  dessin.
+                  Un  bloc  est  un  sur-ensemble  de  plan(s) : il peut
+                  comporter jusqu'… 98 plans (au plus).
+
+
+	FONCTIONS ASSOCIEES  Exemple   AFBL,SBLO,CBLO,DBLO
+
+	Exemple   BLOC 1
+                  PLAN 1
+                  A...
+                  B...
+                  ....
+                  PLAN 2
+                  AA...
+                  BB...
+                  .....
+                  KK...             Le bloc 1 comprend les  plans 1 et 2
+                  BLOC 2
+                  .....
+
+                        Pytha-Graph R910701 Page 14.13
+
+
+
+           /f084                                                CALDIGIT
+
+        MNEMONIQUE                              CALage du DIGITalisateur
+
+        SYNTAXE   CALDIGIT <RC>  nø pt de calage  <RC>  pointer <RC>
+                           <RC>  ...................................
+                                 <RC>             fin de la commande
+
+        ACCES     clavier( ) digitalisateur( ) souris ( )
+
+        FONCTION  Caler le plan … digitaliser par la  digitalisation  de
+                  points connus en coordonn‚es.
+
+        DESCRIPTION  Calcul des coefficients de transformation  des  XY.
+                  Digitalisation de points connus  et  calage  du  plan.
+                  Le calcul  est  effectu‚  sur  n points, et r‚pond aux
+                  conditions suivantes :
+                       Somme(dx*dx+dy*dy) mini, Somme(dx)=0, Somme(dy)=0
+                           ( dx = X - Xcalcul‚, dy = Y - Ycalcul‚ )
+                  La  transformation  est  conforme  (homoth‚tie), et ne
+                  corrige  pas  les  erreurs syst‚matiques de l'ensemble
+                  digitalisateur+support.
+                  La liste est  envoy‚e … la visu et sur l'imprimante au
+		  d‚part du programme.
+                  Pour caler le plan, appeler  CALDIGIT  et  donner  les
+                  num‚ros  des  points  de calage. La digitalisation est
+                  possible  sur  toute  la  surface  active  du   digit,
+                  ind‚pendamment  de  la  fenˆtre ‚cran ( accrochage des
+                  points  compris ). L'appel … CALDIGIT est m‚moris‚ par
+                  $SDE.
+                  AprŠs  $LDE, la  fenˆtre  ‚cran  est  restitu‚e  …  sa
+                  position  au  moment de la derniŠre commande $SDE : la
+                  mire, la  fenˆtre  ‚cran  et  le plan sont en relation
+                  directe; il   est  donc   possible  de   continuer  la
+                  digitalisation  sans  recaler le plan ( nouvel appel …
+                  CALDIGIT ).
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE 1  Les points de calage  doivent  ˆtre  saisis avant la
+                  commande  CALDIGIT ( NøPoint X Y ). Ils font partie du
+                  dessin  et  sont  situ‚s  dans   la  zone   active  du
+                  digitalisateur.
+
+	REMARQUE 2  Les coefficients de transformation s'appliquent … la
+                  saisie qui suit la commande CALDIGIT, ce qui permet de
+                  recaler  le  plan  sur   le   digitalisateur  :  aprŠs
+                  d‚placement du plan sur le digit par exemple.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.14
+
+
+           /f118                                                    CBLO
+
+        MNEMONIQUE                                           Copier BLOc
+
+        SYNTAXE   CBLO i j
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Copier   un   bloc   i   dans   un   autre   bloc   j.
+
+        DESCRIPTION  Le vecteur de translation du premier bloc au second
+                  est d‚fini par son origine  ( premier point )  et  son
+                  extrŠmit‚ (deuxiŠme point). Il est trac‚ sur  l'‚cran.
+
+	FONCTIONS ASSOCIEES  Exemple   SBLO,BLO,DBLO
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.15
+
+
+           /f052                                                    CCAR
+
+        MNEMONIQUE                                       Cr‚er CARactŠre
+
+	SYNTAXE   CCAR code ASCII (coef echx echy echz dx dy dz ra eettp)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Cr‚er   ( dessiner )   un   caractŠre   d'une   fonte.
+
+        DESCRIPTION  CaractŠres = lettres,chiffres,signes de ponctuation
+                  op‚rateurs arithm‚tiques, ...  connus  par  leur  code
+                  ASCII.
+                  Code  ASCII   entre   0  et  127  ( voir  annexe  1 ).
+
+	CREATION D'UN CARACTERE
+
+		  - Dessiner le caractŠre  …  l'aide  des commandes SEGM
+		    et CERcles .
+                  - Pour  le   sauvegarder  dans  la  fonte  ,  ‚crire :
+		    CCAR  a ( coef echx echy echz dx dy dz ra eettp)
+                    avec :
+			a     = code ASCII du caractŠre.
+			coef  = coefficient propre de d‚formation
+			ech x = ‚chelle en X ( HX ).
+			dx    = d‚placement en X du point origine du ca-
+			-ractŠre  par rapport  au point origine des axes
+			echy, dy et ech z, dz : dito ech x, dx.
+			ra rayon de protection pour les symboles.
+			eettp d‚finit les attributs suivants:
+			  ee=EPT1, tt=TRAI, p=PLU
+			  Exemple   02036 correspond … ept1=2, trai=3 ,
+			  plu=6 (violet).
+			  limites ee=00/31, tt=00/99, p=2/9
+
+                  - Valeurs par d‚faut : coef = 1
+                                         ech x = ech y = ech z = 1
+					 dx = dy = dz = 0, eettp=00000
+                  Le caractŠre cr‚e est transf‚r‚ dans la partiton Fonte
+                  (cf CFTE).
+                  Si le code  donn‚ pour la sauvegarde n'est pas  libre,
+                  un message le signale . Les  valeurs  par  d‚faut sont
+                  affich‚es, si elles ne conviennent pas, les ressaisir.
+
+	DETRUIRE UN CARACTERE
+
+                  Pour d‚truire un caractŠre  existant , utiliser  DCAR.
+
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,LCAR,MCAR,CSYM,LSYM,MSYM...
+
+	RESTRICTION  Fonction valid‚e  sous  CFTE  ( cr‚ation de fonte ),
+                  uniquement.
+
+	REMARQUE 1 Pour afficher un caractŠre d‚j… cr‚e, utiliser LCAR i,
+                  puis EXEC ou EXE pour le visualiser.
+                  Plusieurs  LCAR    …    la   suite   sont   autoris‚s.
+
+	REMARQUE 2  Il est possible de remettre … z‚ro la pile de dessin
+                  en m‚moire avec RAZ.
+                        Pytha-Graph R910701 Page 14.16
+
+
+
+
+
+	REMARQUE 3 Il n'y a  pas  de  controle  de  coh‚rence  entre  le
+                  caractŠre cr‚e ( qui n'est en  fait qu'un dessin! ) et
+                  le code ASCII qui  lui est attribu‚ par l'utilisateur.
+                  EXEMPLE  :  si  on   sauvegarde le dessin de la lettre
+                  "E" sous le code  ASCII de la lettre "A", chaque  fois
+                  que l'on saisira au clavier  un  texte … inserer  dans
+                  un dessin , tous les "A" seront remplac‚s par des "E".
+                  Il est donc possible de cr‚er des effets publicitaires
+                  en rempla‡ant un caractŠre par le dessin de  son choix
+                  (personnage pour "I", fruit pour "O"...).
+
+	ATTENTION  Les codes ASCII des	caractŠres  du clavier (lettres,
+                  chiffres, signes divers de ponctuation, d'arithm‚tique
+                  etc...) sont compris entre 32 et 127.
+
+                  L'utilisateur peut se  cr‚er  des  caractŠres  propres
+                  de codes 0 a 31  accessibles  au clavier par la touche
+                  "CTRL" (control)  associ‚e  …  une  lettre  A  … Z , …
+                  l'exeption des codes suivants  qui  sont  r‚serv‚s  au
+                  systŠme:
+                           CTRL G (Bel)
+                           CTRL H (Back space)
+                           CTRL J (LF)
+                           CTRL M (CR)
+                           CTRL Z (Fin de fichier)
+
+
+	REMARQUE  4  EFFETS DES COEFFICIENTS
+                  Aspect  du  caractŠre  :  HX/COEF ( cf fonction COEF )
+                  D‚placement au caractŠre suivant : HX*coef  propre  au
+                  caractŠre.
+                  Espacement  entre  caractŠres  :  HX*ECAR*coef  propre
+
+                  Le  coefficient  propre  est utilis‚ pour l'espacement
+                 "standard" entre caractŠres : pour les lettres "minces"
+                  comme "I" , "L"  coef  sera  inf  1 ; pour les lettres
+                 "larges" , coef sera sup 1.
+                  Avant   calage   sur  le  dessin  et  application  des
+                  paramŠtres HX,HY,... :
+                           x' = (x + dx)*ech x
+                           y' = (y + dy)*ech y
+
+
+	Exemple   FIGURE 5
+                        Pytha-Graph R910701 Page 14.17
+
+
+           /f008                                                    CENT
+
+        MNEMONIQUE                                               CENTrer
+
+        SYNTAXE   CENT (val num n) ou CENT (val nums X Y ) ou CENT
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Op‚rer un centrage de la fenˆtre-‚cran sur  le  dessin
+                  en cours.
+
+        DESCRIPTION  3 types de centrage:
+                    - CENT n : centrer la fenˆtre sur le point num‚ro n.
+                    - CENT X Y : centrer  la  fenˆtre  sur  le  point de
+                                 coordonn‚es   X  ,  Y  en   mm   ‚cran.
+                    - CENT : centrer  la  fenˆtre sur le centre du plan.
+                             Le  centre  du   plan   est   d‚fini  par :
+                                X = ( Xmin + Xmax ) / 2
+                                Y = ( Ymin + Ymax ) / 2
+                                X , Y  exprim‚s  en  unit‚s utilisateur.
+
+	FONCTIONS ASSOCIEES  Exemple  Z100CENT,Z10CENT,ZMF,ZOOM,ZOOM10
+
+        REMARQUE  Il  y  a  possibilit‚   d'interrompre  l'ex‚cution  du
+                  dessin  en   appuyant  sur  n'importe  quelle  touche.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.18
+
+
+           /f062                                                    CERD
+
+        MNEMONIQUE                                       CERCle … droite
+
+        SYNTAXE   CERD  <RC>  n n1 (n2)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Dessiner  un  cercle ou un arc de cercle , en tournant
+                  vers la droite ( sens  des  aiguilles  d'une  montre).
+
+        DESCRIPTION  Donner dans l'ordre :
+                        - le  centre : point  n
+                        - le point de d‚part n1
+                        - le point d'arriv‚e n2 pour un arc , ou RC pour
+                          un cercle complet.
+                  Le rayon est d‚fini par la distance  n   n1 . Le point
+                  d'arriv‚e pour  un  arc  est  situ‚  …  l'intersection
+		  du  cercle  et  de  la  droite n n2.
+		  Les points calcul‚s ont un Z=0 .
+
+	FONCTIONS ASSOCIEES  Exemple   CERG,CER1,CER3
+
+	ATTENTION  Le sens de parcours des cercles se fait de  gauche …
+                  droite . ( sens  des  aiguilles  d'une  montre ).
+
+	Exemple   FIGURE 6 a
+                        Pytha-Graph R910701 Page 14.19
+
+
+           /f144                                                    CERG
+
+        MNEMONIQUE                                       CERcle … Gauche
+
+        SYNTAXE   CERG  <RC>  n n1 (n2)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Dessiner un cercle ou un arc  de  cercle , en tournant
+                  dans le sens trigonom‚trique (de droite … gauche, sens
+		  inverse  des	aiguilles  d'une  montre).
+		  Les points calcul‚s ont un Z=0 .
+
+        DESCRIPTION  Donner dans l'ordre:
+                        - le centre du cercle: point n
+                        - le  point  de  d‚part  :  n1
+                        - le point d'arriv‚e n2 pour un arc , ou RC pour
+                          un cercle complet.
+                  Le  rayon  est   d‚fini   par  la  distance  n , n1.Le
+                  point d'arriv‚e pour un arc est situ‚ … l'intersection
+                  du cercle et de la droite n,n2.
+
+	FONCTIONS ASSOCIEES  Exemple   CERC,CER1,CER3
+
+	Exemple   FIGURE 6 b
+                        Pytha-Graph R910701 Page 14.20
+
+
+           /f145                                                    CER1
+
+        MNEMONIQUE                CERcle d‚fini par 1 point et son rayon
+
+        SYNTAXE   CER1 n R
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Dessiner un cercle en donnant son centre et son rayon.
+
+        DESCRIPTION  Donner dans l'ordre :
+                        - le   centre  :  point   num‚ro  n
+                        - son rayon R en unit‚s utilisateur
+		  Le   cercle  complet	est  trac‚ , valider   ou   non.
+		  Les points calcul‚s ont un Z=0 .
+
+	FONCTIONS ASSOCIEES  Exemple   CERC,CERG,CER3
+
+	Exemple   FIGURE 6 c
+                        Pytha-Graph R910701 Page 14.21
+
+
+           /f146                                                    CER3
+
+        MNEMONIQUE                           CERcle passant par 3 points
+
+        SYNTAXE   CER3 n1 n2 n3
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Dessiner  un  cercle  complet  passant  par  3 points.
+
+        DESCRIPTION  Donner dans l'ordre :
+                        - le 1er  point n1
+                        - le 2Šme point n2
+                        - le 3Šme point n3
+		  Le   cercle  complet	est  trac‚  ,  valider	ou  non.
+		  Les points calcul‚s ont un Z=0 .
+
+	FONCTIONS ASSOCIEES  Exemple   CERC,CERG,CER1
+
+	Exemple   FIGURE 6 d
+                        Pytha-Graph R910701 Page 14.22
+
+
+           /f051                                                    CFTE
+
+        MNEMONIQUE                                        Cr‚ation FonTE
+
+        SYNTAXE   CFTE
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Cr‚er  ou  compl‚ter ( ajouter, modifier ) une  FONTE.
+
+        DESCRIPTION  Chaque utilisateur peut cr‚er sa propre symbolique
+                  (fonte(s)) grace a la commande CFTE.
+                  C'est une commande de type "BASCULE" :
+                                1er appel  =  ON
+                                2Šme appel = OFF
+
+                  NB : dans la suite prendre le  terme " symbole " comme
+		  terme commun au CaractŠre alphanum‚rique et au symbole
+                  tels que bornes, lampadaires, grilles,...
+
+                  En position ON :
+			- S'il y a un dessin en cours il est sauv‚  dans
+			  un fichier temporaire "TEMP****".
+                        - La fonte qui a ‚t‚ mont‚e  dans  une partition
+                          d‚banalis‚e (sp‚cialis‚e) lors  du " boot " du
+                          programme  est  transf‚r‚e  dans  la partition
+                          dessin  banalis‚e, suivant  le  sch‚ma  de  la
+                          FIGURE 7.
+
+                        - On travaille alors comme pour un dessin normal
+                          avec des segments,des points,des cercles.
+
+                        - On peut d‚finir un symbole … partir d'un autre
+                          par les  op‚rations geom‚triques habituelles :
+                          sym‚trie, translation, rotation,inversion.
+
+                        - Par contre il n'y a pas  recursivit‚, c'est-…-
+                          dire qu'on ne peut utiliser un symbole dans le
+                          dessin d'un autre.
+
+                        - On  travaille  sur  un  symbole  …  la  fois :
+                          50 symboles = 50 dessins.
+                          (un  dessin  …  la  fois  en  zone de travail)
+
+                        - Lorsqu'on a termin‚ le dessin d'un  symbole le
+                          le sauvegarder par CSYM i ou CCAR  a  ( cf ces
+                          fonctions pour plus de d‚tails ).
+
+                        - Pour sortir de  CFTE, retaper  cette  commande
+                          (bascule OFF) : la  fonte  est  sauv‚e  sur le
+                          disque et en  partition  m‚moire  d‚banalis‚e.
+                          Le dessin  en cours avant le passage sous CFTE
+                          est  restaur‚. Ainsi  il  est possible d'aller
+                          modifier la  fonte  … tous  moments lors de la
+			  cr‚ation d'un dessin.
+			  S'il n'y avait pas de dessin en cours, la fonc
+			  -tion $ZER est ex‚cut‚e.
+                        Pytha-Graph R910701 Page 14.23
+
+
+
+                  A la sortie, les tables sont  compress‚es : les points
+		  inutilis‚s  sont  ignor‚s .  Les  points  utiles  sont
+                  num‚rot‚s … partir de 1.
+
+	FONCTIONS ASSOCIEES  Exemple   CCAR,CSYM,LCAR,LSYM,DCAR,DSYM, et fonctions
+                        de dessin.
+
+	REMARQUE  1  Relation entre l'‚chelle  de  saisie  en  fonte  et
+                  l'‚chelle 1 de dessin courant :
+                  Il n'y a  pas  de  limite  physique … la d‚finition de
+                  symbole  en  dehors  de  la  limite  systŠme  2**16-1.
+                  ( Les  xyz sont limit‚s … l'intervalle -32767/+32767 )
+
+	REMARQUE  2   Les symboles peuvent etre d‚finis en 3D.
+
+	REMARQUE  3   La grille de saisie des symboles a pour dimensions
+		  100 * 100 mm (= IUCARA). L'utilisateur  peut  modifier
+		  IUCARA avec la commande UCARSYM.
+
+                  La  repr‚sentation  d'un symbole en dessin normal doit
+                  ˆtre pr‚c‚d‚e  de  la  d‚finition des paramŠtres HX,HY
+                  pour d‚finir sa taille.
+                        HX (dessin) = (HX (dessin) / IUCARA) * 100
+
+	REMARQUE 4  On peut dessiner des symboles sous CFTE : positionner
+                  HX,HY … une valeur normale et dessiner  le  symbole ou
+                  composer un texte pour v‚rification de l'aspect.
+
+	REMARQUE  5  Il est indispensable d'avoir toujours un fichier de
+                  type FONTE sur sa disquette (ou disque) de travail. Ce
+                  fichier doit apparaŒtre avec une extention FTE dans la
+                  liste des fichiers PYTHA - GRAPH obtenue par FUTI.
+                        Ex : FONTE1  FTE  chiffres (cf FUTI).
+
+                  S'il n'y a pas de fichier FONTE, il n'y a pas  de  jeu
+                  de  caractŠres   alphanum‚riques , donc  impossibilit‚
+                  d'‚crire dans un dessin.
+
+	Exemple   FIGURE 7
+                        Pytha-Graph R910701 Page 14.24
+                        Pytha-Graph R910701 Page 14.25
+
+
+
+           /f167                                                    CHAR
+
+        MNEMONIQUE                           CHARger un fichier en ASCII
+
+        SYNTAXE   CHAR  nom fichier (n)
+
+        ACCES     clavier( )
+
+        FONCTION  Charger  et   ex‚cuter  n  fois  un  fichier  de  type
+                  "BATCH". ( n … 1 par d‚faut )
+
+        DESCRIPTION  Charge un fichier en ASCII, ce  fichier  doit  etre
+                  sauv‚   avec   SAUVEDES  ( Avec   le  nom  fourni  par
+                  l'utilisateur )
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple
+
+
+
+           /f177                                                    CHFT
+
+        MNEMONIQUE                                      CHanger de FonTe
+
+        SYNTAXE   CHFT  <RC>
+
+        ACCES     clavier( )
+
+        FONCTION  Changer  de  fonte ,  stoker  l'ordre  dans  la  pile.
+
+	DESCRIPTION  Permet  de  charger  une  fonte pendant un dessin .
+		     Cette  commande  doit  se trouver	dans  le fichier
+		     DEPART.P65
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.26
+
+
+           /f206                                                      CI
+
+        MNEMONIQUE                                  Cercles Intersection
+
+        SYNTAXE   CI   n1 n2 R1 R2 (n)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Calculer l'intersection de cercles.
+
+	DESCRIPTION  n1 : centre du premier  cercle.
+		     n2 : centre du deuxiŠme  cercle.
+		     R1 : rayon	du  premier   cercle.
+		     R2 : rayon	du  deuxiŠme  cercle.
+		     n	: num‚ro du point intersection.
+		  Les points calcul‚s ont un Z=0 .
+
+                  Le point ainsi determin‚ est  situ‚  …  gauche  de  la
+                  droite ( n1 n2 ) parcourue  dans  le  sens n1 vers n2.
+                  Pour obtenir le point n' situ‚  …  droite  de  (n1 n2)
+                  il  faut  ‚crire : CI  n2  n1  R2  R1  (n').
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   FIGURE 8
+                        Pytha-Graph R910701 Page 14.27
+
+
+           /f025                                                     CLS
+
+        MNEMONIQUE                                          CLear Screen
+
+        SYNTAXE   CLS
+
+        ACCES     clavier( ) digitaliseur( )
+
+	FONCTION  Effacer les ‚crans alphanum‚riques et graphique .
+
+	DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple   CLS1,CLS2
+
+	Exemple
+
+
+
+           /f171                                                    CLS1
+
+        MNEMONIQUE                                        CLear Screen 1
+
+        SYNTAXE   CLS1
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Effacer l'‚cran alphanum‚rique.
+
+	DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple   EXE,EXEC,CLS,CLS2
+
+	Exemple
+
+
+
+           /f172                                                    CLS2
+
+        MNEMONIQUE                                        CLear Screen 2
+
+        SYNTAXE   CLS2
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Effacer l'‚cran graphique.
+
+	DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple   EXE,EXEC,CLS,CLS1
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.28
+
+
+           /f043                                                    COEF
+
+        MNEMONIQUE                                           COEFficient
+
+        SYNTAXE   COEF val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir  la  valeur   d'un   coefficient   g‚n‚ral  de
+                  d‚formation   pour  les  caractŠres  et  les  symboles
+                  utilis‚s ult‚rieurement.
+
+        DESCRIPTION  A l'initialisation, la valeur du coefficient est 1.
+                  Si  la  valeur  du  coefficient  est sup‚rieur  …  1 ,
+                  les  caractŠres  et  les symboles sont compr‚ss‚s en x
+                  ; si  elle  est  inf‚rieur  … 1, les caractŠres et les
+                  symboles sont agrandis en x.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	SAISIE DIGIT	COEF = case / 10
+
+	Exemple    FIGURE 9
+
+                        Pytha-Graph R910701 Page 14.29
+
+
+           /f045                                                    CORZ
+
+        MNEMONIQUE                                          COoRdonn‚e Z
+
+        SYNTAXE   CORZ ( pas p )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Afficher les valeurs de la  coordonn‚e  Z  auprŠs  des
+                  points correspondants.
+
+	DESCRIPTION  p = pas de l'affichage (1 par d‚faut)
+                  Fonction  de  type  "BASCULE"  :  premier appel  =  ON
+                                                    deuxiŠme appel = OFF
+                  Si CLS apr‚s affichage, il  faut  envoyer deux fois la
+                  commande pour r‚afficher.
+
+	FONCTIONS ASSOCIEES  Exemple   ECRIZ, DEPZ, SUPZ
+
+	REMARQUE  Si ECRIZ est sur la position	OFF , la position  du  Z
+		  est mat‚rialis‚e par un rectangle ayant des dimensions
+		  au plus pr‚s	de  leur  valeur  papier . Les fonctions
+		  de zoom n'ont aucun effet sur la taille des ecritures.
+		  Si le dessin est … l'‚chelle de la repr‚sentation  qui
+		  sera	demand‚e  pour le traceur, l'image ‚cran aura la
+		  mˆme dimension que l'image papier.
+
+	NOTA	  La position du z est d‚finie dans le fichier	P65.MCG
+                  sous la consigne P64, CALECRITURES.
+
+	Exemple   CORZ	5 : affiche le	Z  d'un point tous les 5 points,
+                            tous  les  points  ‚tant affich‚s ( le pixel
+                            correspondant est allum‚ ).
+
+
+
+           /f152                                                    COTA
+
+        MNEMONIQUE                           d‚finition de la taille des
+					     ‚critures pour la	COTAtion
+
+	SYNTAXE   COTA <CR>  HX HY Dtrait
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  D‚finir la taille des chiffres de cotation  ainsi  que
+                  leur distance au p‚rimŠtre.
+
+        DESCRIPTION   D‚finition  de   la longueur (HX) et de  la
+                  hauteur (HY) des  chiffres  de  cotation . Elle permet
+                  aussi de d‚finir  la  distance  (Dtrait)  aux  traits.
+                  A  l'initialisation  , HX , HY et Dtrait  sont d‚finis
+                  dans le fichier DEPART.P65
+
+	FONCTIONS ASSOCIEES  Exemple   COTE
+
+
+                        Pytha-Graph R910701 Page 14.30
+
+
+           /f126                                                    COTE
+
+        MNEMONIQUE                                 COTation p‚rimŠtrique
+
+        SYNTAXE   COTE
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Cotation p‚rimŠtrique d'un dessin.
+
+	DESCRIPTION  Pour la cotation du dernier p‚rimŠtre saisi, appuyer
+                  sur la  touche  RC , si  non  entrer  les  points  qui
+                  d‚finissent le p‚rimŠtre … coter.
+
+	SAISIE DIGIT	Pointer les points concern‚s.
+
+	FONCTIONS ASSOCIEES  Exemple	NBDE,COTA
+
+	REMARQUE 1 Les cotes seront inscrites sur la gauche des segments,
+                  par rapport au sens de parcours de la liste.
+
+	REMARQUE 2  COTE a trois attributs : EPT1 , TRAI , PLU .
+		    Les cotes sont tansform‚es en commandes TEXC.
+		    Cote n'est donc pas dynamique.
+
+	Exemple   FIGURE 10
+                        Pytha-Graph R910701 Page 14.31
+
+
+           /f114                                                    CPLA
+
+        MNEMONIQUE                                           Copier PLAn
+
+        SYNTAXE   CPLA  i j
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Copier   un   plan   i   dans   un   autre   plan   j.
+
+        DESCRIPTION  le vecteur de translation entre les deux plans  est
+                  d‚fini   par  son  origine  ( premier point )  et  son
+                  extrŠmit‚ ( deuxiŠme point ).Il est trac‚ sur l'‚cran.
+
+	FONCTIONS ASSOCIEES  Exemple   PLA,SPLA,DPLA
+
+
+
+           /f108                                                    CSYM
+
+        MNEMONIQUE                                         Cr‚er SYMbole
+
+	SYNTAXE   CSYM i ( coef echx echy echz dx dy dz ra eettp )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Cr‚er  ( dessiner )  un  symbole  d'une  fonte.
+
+        DESCRIPTION  Symbole = tout  objet  revenant fr‚quement dans les
+                  dessins  courants  et  qu 'il  est  utile  d'avoir  en
+                  permanence  d‚fini   en  m‚moire  pour  une  meilleure
+                  rapidit‚  de  conception.
+
+                  CSYM  i  :  i  sera  le  num‚ro  attribu‚  au  symbole
+                  actuellement en m‚moire. Il sera sauvegard‚ et reconnu
+                  gr…ce  …  ce  num‚ro.
+                  Sauvegarde  d'un  symbole : cf  CCAR.
+
+		  Le  coefficient "COEF" est sans signification pour les
+		  symboles.
+
+                  On  peut d‚finir un symbole … partir d'autres symboles
+                  mont‚s  en  m‚moire  par  LSYM  et  en  utilisant  les
+                  fonctions  g‚ometriques  :  sym‚trie  ,  translation ,
+                  rotation  ,  inversion... Par contre , il n'y a pas de
+                  r‚cursivit‚.
+
+                  Par  d‚faut , le  point  origine  du symbole est situ‚
+                  … ( IUCARA/2 , IUCARA/2 )  de  l'origine de la grille:
+		  dx = dy = dz = IUCARA / 2
+		  eettp : idem CCAR
+		  voir la commande CCAR pour plus de d‚tails.
+
+
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,CCAR,LCAR,LSYM,DCAR,DSYM
+
+	RESTRICTION  fonction valid‚e sous CFTE seulement.
+
+                        Pytha-Graph R910701 Page 14.32
+
+
+           /f117                                                    DBLO
+
+        MNEMONIQUE                                         D‚placer BLOc
+
+        SYNTAXE   DBLO i
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚placer  un  bloc  i.
+
+	DESCRIPTION  Le vecteur de d‚placement est d‚fini par une origine
+                  (1er point) et une extrŠmit‚ (2Šme point). Le  vecteur
+                  est  trac‚  …  l'‚cran.
+
+                  Avant  de  d‚placer  un second bloc, il est n‚c‚ssaire
+                  de lancer une ex‚cution pour valider le  1er  d‚place-
+                  -ment ( EXE  ou  EXEC ).
+
+	FONCTIONS ASSOCIEES  Exemple   BLOC,CBLO,SBLO
+
+        REMARQUE  Pour visualiser la nouvelle  implantation, taper  EXEC
+                  ou  EXE.
+
+
+
+           /f137                                                    DCAR
+
+        MNEMONIQUE                                    D‚truire CARactŠre
+
+        SYNTAXE   DCAR a
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚truire  le  caractŠre  de  code  ASCII  "a".
+
+	DESCRIPTION  a = code ASCII du caractŠre que  l'on veut d‚truire.
+                  Un  message  demande  la  confirmation.
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,CCAR,CSYM,LCAR,LSYM,DSYM,MCAR,MSYM
+
+	RESTRICTION  fonction valid‚e sous CFTE  ( cr‚ation  de  fonte )
+                  seulement.
+
+	Exemple   DCAR 72   :  d‚truire le caractŠre de  code  ASCII 72,
+                               soit lettre  H.
+                        Pytha-Graph R910701 Page 14.33
+
+
+           /f031                                                    DEBG
+
+        MNEMONIQUE                                      DEBuG (corriger)
+
+        SYNTAXE   DEBG (i1(in))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Redessiner   en   pas   …   pas  avec  possibilit‚  de
+                  correction.
+
+	DESCRIPTION   Ex‚cute  …  l'‚cran  les  instructions  de  dessin
+		  stock‚es  en	m‚moire  en  pas … pas, avec possibilit‚
+		  d'effacer les s‚quences du dessin qui  ne  conviennent
+		  pas dŠs qu'elles  ont  ‚t‚  affich‚es.
+
+                  AprŠs  chaque pas de dessin, le message " OK ? <O> N "
+                  permet  de  le  conserver ( O ou RETURN ) , ou  de  le
+                  supprimer  ( N ). Toute  suppr‚ssion  est  d‚finitive.
+
+                  "i1" et "in" sont  les num‚ros des s‚quences de d‚part
+                  et de fin  de  l'ex‚cution  de  DEBG  ( cf  STAT  pour
+                  connaŒtre le nombre de commandes dans la pile dessin).
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	RAPPEL	  Un pas du dessin est la s‚quence d'instructions saisie
+                  entre deux validations.Il peut donc ˆtre plus ou moins
+                  d‚taill‚ et long.
+
+        REMARQUE  On  peut   ex‚cuter  plusieurs  fois  de  suite  cette
+                  commande.
+
+	Exemple   DEGB	10  25 : ex‚cute  en  pas  …  pas  les commandes
+                  10 … 25.
+
+
+
+           /f248                                                DEPECRAN
+
+        MNEMONIQUE                                         DEPlace ECRAN
+
+        SYNTAXE   DEPECRAN
+
+	ACCES	  digitalisateur( ) souris( )
+
+        FONCTION  D‚placer la  fenˆtre-‚cran.
+
+	DESCRIPTION  Cette commande permet de translater la fenˆtre-‚cran
+                  suivant un vecteur  saisi  en  mode  DIGIT  ou  SOURIS
+                  uniquement.
+
+	SAISIE DIGIT  Il faut pointer les deux points  qui  donneront  le
+		  sens et la direction du vecteur de translation.
+
+	FONCTIONS ASSOCIEES
+
+                        Pytha-Graph R910701 Page 14.34
+
+
+           /f103                                                    DEPP
+
+        MNEMONIQUE                                        DEPlacer Point
+
+        SYNTAXE   DEPP
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚placer  des  points.
+
+        DESCRIPTION  Il  faut  d‚signer le point concern‚ et sa nouvelle
+                  position. L'arrondi de saisie est ignor‚. La recherche
+                  se fait sur les  points  diff‚rents  de  -1 ( cf LC ).
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+
+           /f079                                                    DEPT
+
+        MNEMONIQUE                                        DEPlacer Texte
+
+        SYNTAXE   DEPT
+
+	ACCES	  digitaliseur( ) souris( )
+
+        FONCTION  D‚placer  un  texte.
+
+	DESCRIPTION  Le  1er  point  …	d‚signer  est l'origine du texte
+                  ( ou … proximit‚ ) Le 2Šme point , la position  de  la
+                  nouvelle origine. L'arrondie de saisie ARR est ignor‚.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE  1  La recherche se fait sur les points  de  calage des
+                  textes ( codes -1 : voir LC ).
+
+	REMARQUE  2  Il	est pr‚f‚rable de  se rapprocher de l'origine du
+                  texte  …  d‚placer  pour  pointer  le 1er point car le
+                  logiciel recherche le point de calage de texte le plus
+                  proche de la mire.
+
+	Exemple   TEXTE 		       +TEXTE
+                    + Pointer  la  mire  dans  la  zone  texte .
+
+                      Pour sortir :
+                              * touche  "-"  en  digit  CLAVIER.
+                              * touche " blanc " en digit HIPAD.
+                              ( touche NON )
+                              * touche    droite   avec   MOUSE.
+                              (MOUSE droite : NON, gauche : OUI)
+
+                  Les points de calage des textes sont  affich‚s  par le
+                  marqueur TX ( Voir annexes.DOC )
+                        Pytha-Graph R910701 Page 14.35
+
+
+           /f077                                                    DEPZ
+
+        MNEMONIQUE                                       DEPlacer cote Z
+
+        SYNTAXE   DEPZ
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚placer  les  ‚critures  des  cotes  Z   des  points.
+
+        DESCRIPTION  Il faut d‚signer le point concern‚ puis la position
+                  desir‚e pour la r‚‚criture de la cote Z  de  ce point.
+		  L'arrondi  de  saisie  est  ignor‚.
+		  Positionner  la mire a proximit‚ du point … d‚placer :
+		  … gauche, … droite, au dessus  ou  dessous, et activer
+		  le switch plusieurs fois si n‚cessaire  pour	d‚placer
+		  la cote … la position voulue .
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE 1 La recherche est faite sur les points diff‚rents de -1
+                  (cf LC).
+
+	REMARQUE 2    Il y a 21 positions possibles : 3 en x ( … gauche,
+                  centr‚e, … droite ), 7 en y ( 3 vers le haut, centr‚e,
+                  3 vers le bas ).
+                  La position origine est celle d‚finie  par  le  motcl‚
+                  CALECRITURES dans P65.MCG : ‚criture  du  N  et  du  Z
+                  ( valeur 5 … 8 ).
+                  Les d‚calages sont visualis‚s … l'‚cran en  mm  papier
+                  au plus pr‚s, compte tenu de la d‚finition  ‚cran  ( 1
+		  pixel = 0.4 mm ou ...); la taille du pixel et le coef-
+		  ficient appliqu‚s au N et au Z sont  d‚finis	dans  le
+		  fichier FECR.P65.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.36
+
+
+           /f047                                                    DESS
+
+        MNEMONIQUE                           DESSiner sur table tra‡ante
+
+        SYNTAXE   DESS  (i1 (in) )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Ex‚cuter le dessin en m‚moire  sur la  table  tra‡ante
+                  (commandes i1 a in).
+
+	RAPPEL	  Dans	 la   suite   MAD = machine  …	dessiner = table
+                  tra‡ante.
+
+	DESCRIPTION  Pr‚parer le dessin sur papier et g‚n‚rer le code de
+		  la machine … dessiner.
+                  La saisie  de  la  fenˆtre suit la rŠgle de l'arrondi.
+                  Le  dessin  peut  ˆtre  interrompu  comme  pour  EXEC.
+                  La taille des caractŠres et symboles  peut  suivre  ou
+                  non   l'‚chelle  du  dessin  ,  selon  la  volont‚  de
+                  l'utilisateur.
+                  Si l'affichage des num‚ros ou des  Z  est  demand‚, la
+                  hauteur   fournie   est   la  hauteur  en  mm  papier.
+                  Le num‚ro de cartouche demand‚  correspond  …  Cnn.P64
+                  dans P65.MCG. Le  fenˆtrage  d'une  partie  du  dessin
+                  ( extraction d'un lot par exemple ) peut ˆtre  fait  …
+                  l'aide des paramŠtres DESSINFENETRE ou DESSINPAPIER.La
+                  commande  DESS  permet de dessiner avec ou sans report
+                  classique. Si  aucune  cote  Z  n'a  ‚t‚  d‚plac‚e, la
+                  consigne non chevauchement des altitudes est appliqu‚e
+                  ,sinon  elle  est  ignor‚e ( Voir DEPZ ) : dans ce cas
+                  l'angle  des  ‚critures  par  rapport  …  x papier est
+		  nul. La  partie  report g‚n‚re les fichiers  R65nn.MPA
+                  et R65nn.XYZ. Sortir de P65 et corriger R65nn.MPA pour
+                  faire un report  seul mum et/ou alti avec modification
+                  des  paramŠtres : le module P64 livr‚ fonctionne comme
+                  auparavant.
+                  DESS  passe  la  main … mouse pour la d‚finition de la
+                  zone … dessiner, les  r‚ponses  O  ou  N  peuvent ˆtre
+                  tap‚es  au  clavier  ou   en   actionnant   le  switch
+		  correspondant  de la souris ( gauche=OUI droite=NON ).
+
+	INSTRUCTIONS DE LA COMMANDE DESS :
+
+                  G‚n‚rer le code traceur
+
+                  1]  Echelle  du   report ( et /ou dessin ) < 1000 >
+
+                  2]  Report de points <0> : 0 = non
+                                             1 = num‚ro
+                                             2 = Z
+                                             3 = num‚ros + Z
+
+                  3]  Croix et marqueur , "cartouche" num‚ro <1>
+
+                  4]  Cadre 1 <O>/N
+
+                  5]  Num‚ro  du  trait  cadre  1  ( 0 … 9 ) <0>
+                        Pytha-Graph R910701 Page 14.37
+                  6]  Cadre 2 <O>/N
+
+                  7]  Num‚ro  de  trait  cadre  2  ( 0 … 9 ) <0>
+
+                  8]  Endroit  <O>/N envers
+
+                  9]  Cadre … dessin‚ <N>/O
+
+                  10] Dessin suivant … superposer <N>/O
+
+                  11] texte symbole suivent ‚chelle (0) sinon mm  papier
+                         1 = texte
+                         2 = symbole
+                         3 = texte + symbole  <0>
+
+                  12] ESHA  suit  l'‚chelle  <O>/N
+
+                  13] Trait ‚paisseur suit l'‚chelle <O>/N
+
+                  14] Trait  motif  suit  l'‚chelle  <O>/N
+
+                  15] Affichage ‚cran <O>/N
+
+                  16] Fenˆtre auto : tout le dessin  <O>/N :
+                         <O> = Cf 17
+                          N  = Cf 18
+
+                  17] Cadre ext‚rieur  190mm  133mm  O/<N> :
+                          O  =   FIN
+                         <N> = Cf 19
+
+                  18] Fenˆtre dessin <O>/N :
+                         <O> = pointer coin bas gauche puis  haut  droit
+                          N  = FIN
+
+                  19] Saisie fenˆtre ext‚rieur <O>/N :
+                         <O> = pointer coin bas gauche puis  haut  droit
+                          N  = FIN
+
+                  20] Marges standard <O>/N :
+                         <O> = Cf 21
+                          N  =   FIN
+
+                  21] G‚n‚rer le code traceur <O>/N
+                         <O> = Cf 22
+                          N  =   FIN
+
+                  22] Dossier <rien>
+
+                  23] Titre   <rien>
+
+                  24] Mise en page dans R6503.XYZ > RC
+
+	FONCTIONS ASSOCIEES  SBLO, SPLA, DESSIN des Blocs/Plans Select‚s
+
+        REMARQUE  Si l'utilisateur dispose de plusieurs types  de tables
+                  tra‡antes, un message  lui  permettra  de  choisir  la
+                  table d‚sir‚e juste avant de donner le nom du  fichier
+                  de dessin , …  condition  d'avoir  bien  configur‚  le
+                  logiciel  en  fonction  des  tables  possibles. ( Voir
+                  annexes )
+                        Pytha-Graph R910701 Page 14.38
+
+
+           /f203                                                      DI
+
+        MNEMONIQUE                                     DIstance et angle
+
+        SYNTAXE   DI   n1 n2 n3 n4 ...
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Calculer les coordonn‚es polaires entre  deux  points.
+
+        DESCRIPTION  On  obtient  D ( n1 - n2 ) et A ( n1 - n2 )
+                               D ( n3 - n4 ) et A ( n3 - n4 )
+			       etc...
+                  Au maximun , 9 paires.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	RAPPEL	A est le GISEMENT
+
+
+	Exemple   pour	v‚rification de  calcul : fermeture sur un point
+                  par exemple.
+
+                  Voir FIGURE 11
+                        Pytha-Graph R910701 Page 14.39
+
+
+           /f013                                                     DIG
+
+        MNEMONIQUE                                          DIGitaliseur
+
+        SYNTAXE   DIG
+
+        ACCES     clavier( )
+
+        FONCTION  Mettre la  table  …  digitaliser en communication avec
+                  le programme.
+
+	DESCRIPTION  AprŠs la commande DIG , on a  acc‚s  …  toutes  les
+		  fonctions d‚finies dans le menu  du  digitaliseur  (cf
+		  MOCL) on peut utiliser la table pour saisir un dessin,
+                  d‚signer des  symboles...
+                  Pour  revenir  en  mode  clavier , taper  sur la barre
+                  d'espace ou toute autre touche du clavier (1Šre lettre
+                  d'une commande,...).
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	RAPPEL	  Pour	utiliser  le "digit clavier", ou mouse il suffit
+                  de  taper  une  des   touches  flŠches , sans   donner
+		  l'ordre DIG . L'incr‚ment  de  d‚placement  peut  ˆtre
+		  r‚gl‚ de 1 … 10 points, en tapant les chiffres 0 … 9 .
+		  Retour  au  mode   clavier  avec  la	barre  d'espace.
+
+
+	NOTA	  Mouse est pris en compte si  le pilote a ‚t‚ charg‚ en
+                  m‚moire avant  le  lancement de PYTHA-GRAPH ( commande
+                  MOUSE dans autoexec.bat sous MS DOS )
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.40
+
+
+           /f214                                                      DP
+
+        MNEMONIQUE                             Distance suivant la Pente
+
+        SYNTAXE   DP n1 n2
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Calculer  la  distance  dans  l'espace entre 2 points.
+
+        DESCRIPTION  n1 , n2  sont  les  num‚ros  des  points concern‚s.
+
+	FONCTIONS ASSOCIEES  Exemple   DI
+
+	Exemple   FIGURE 12  ( Diff‚rence entre DP et DI )
+                        Pytha-Graph R910701 Page 14.41
+
+
+           /f113                                                    DPLA
+
+        MNEMONIQUE                                         D‚placer PLAn
+
+        SYNTAXE   DPLA i
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚placer   un   plan  i .
+
+        DESCRIPTION  Le vecteur de translation est d‚fini par deux points
+                        - 1er point  :   origine
+                        - 2Šme point : extr‚mit‚
+		  Le vecteur est trac‚	… l'‚cran. Avant de  d‚placer  un
+		  second plan, il est n‚cessaire de visualiser le premier
+		  d‚placement en lan‡ant une ‚x‚cution ( EXE ou EXEC ).
+		  On d‚place le plan i des blocs s‚lectionn‚s par SBLO .
+
+	FONCTIONS ASSOCIEES  Exemple   PLAN,CPLA,SPLA,SBLO
+
+
+           /f138                                                    DSYM
+
+        MNEMONIQUE                                      D‚truire SYMbole
+
+        SYNTAXE   DSYM  i
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚truire  le  symbole  de  num‚ro i
+
+        DESCRIPTION  i=num‚ro  du symbole … d‚truire. Un message demande
+                  confirmation.
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,CCAR,CSYM,DCAR,LCAR,LSYM,MCAR,MSYM
+
+	RESTRICTION  Fonction valid‚e sous CFTE  ( cr‚ation  de  fonte )
+                  uniquement.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.42
+
+
+
+           /f134                                                     DXF
+								DXFDEBUT
+								  DXFFIN
+
+	MNEMONIQUE
+
+	SYNTAXE
+
+        ACCES     clavier( )
+
+        FONCTION  Commandes g‚n‚r‚es par " SAUVEDXF nom fichier ".
+
+        DESCRIPTION  DXF ‚chelle
+                  DXFDEBUT lissage        / x y / x y / ... /
+                  DXFDEBUT hachures       / x1 y1  x2 y2 / ... /
+                  DXFDEBUT num‚ros  tailn / n(16c … gauche) x y … partir
+                                                           de 17 / ... /
+                  DXFDEBUT altitude tailz / z(16c … gauche) x y … partir
+                                                           de 17 / ... /
+                  DXFDEBUT points nsym taille
+                  DXFDEBUT quadrillage
+                  DXFDEBUT marques taille
+                  DXFDEBUT symboles       / x y z ns hx hy ang
+                  DXFFIN   fin des listes
+
+                  Taille en mm papier * ‚chelle / 1000, par  exemple  si
+                  ech = 500, 1mm8 devient 0.9  dans  le  fichier DXF, et
+                  3mm6  si  le dessin est demand‚ au 2000. "nsym" est le
+                  num‚ro du symbole de la commande " POINT nsym taille "
+                  sous  P64 ( fichier P65.MCG ), augment‚  de  100 . Les
+                  num‚ros -1 … 9 deviennent 99 …109 sous P65.
+                  Quadrillage  et  marques  sont g‚n‚r‚s par la fonction
+                  MARD.
+
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.43
+
+
+           /f092                                                     DXY
+
+        MNEMONIQUE                                          D‚cumul‚e XY
+
+        SYNTAXE   DXY  num‚ro    RC             (RC = retour chariot)
+                  dxi dyi (ni)   RC
+                  dxj dyj (nj)   RC
+                        ...
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Saisir des points en X Y en indiquant les translations
+                  en X , en Y par rapport au point pr‚c‚dent:d‚cumul‚es.
+
+        DESCRIPTION     Pour  un point i les d‚placements par rapport au
+                  point i-1 sont not‚s dxi et dyi.
+                  Le   point   de   d‚part   est   celui  de  num‚ro  n.
+                        Xi = Xn + S(dxi)
+			Yi = Yn + S(dyi)
+		  Les dx,dy sont exprim‚es en systŠme local (// ‚cran).
+
+	FONCTIONS ASSOCIEES  Exemple   TF
+
+	Exemple   FIGURE 13
+                        Pytha-Graph R910701 Page 14.44
+
+
+
+           /f153                                                    DXYZ
+
+        MNEMONIQUE                                     D‚cumul‚es en XYZ
+
+        SYNTAXE   DXYZ    num‚ro   RC
+                  dxi dyi dzi (nj) RC
+                  dxj dyj dzj (nj) RC
+                        ...
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Saisir  des   points  en   X  Y  Z  en  indiquant  les
+                  translations en X , en Y et en Z par  rapport au point
+                  pr‚c‚dent : d‚cumul‚es.
+
+        DESCRIPTION     Pour un  point i les d‚placements par rapport au
+                  point i-1 sont not‚s dxi , dyi , dzi.
+                  Le   point   de   d‚part   est  celui   de  num‚ro  n.
+                        Xi = Xn + S(dxi)
+                        Yi = Yn + S(dyi)
+                        Zi = Zn + S(dzi)
+		  Les dx,dy sont exprim‚es en systŠme local (// ‚cran).
+	FONCTIONS ASSOCIEES  Exemple	TF
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.45
+
+
+           /f028                                                    ECAR
+
+        MNEMONIQUE                                            ECARtement
+
+        SYNTAXE   ECAR val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir   l ' ‚cartement    entre    deux   caractŠres
+                  alphanum‚riques.
+
+	DESCRIPTION  S'applique aux textes uniquement. Tous  les  textes
+                  ‚crits aprŠs un ordre ECAR le seront avec l'‚cartement
+                  donn‚, jusqu'… la modification suivante avec un nouvel
+                  ordre ECAR. A l'initialisation , la valeur  de  l'‚car
+                  est 1.05.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	SAISIE DIGIT	ECAR = num‚ro case /10
+
+	Exemple   FIGURE 14
+                        Pytha-Graph R910701 Page 14.46
+
+
+
+           /f141                                                  ECHXYZ
+
+        MNEMONIQUE                          changer l'ECHelle  en  X Y Z
+
+        SYNTAXE   ECHXYZ    Vx   Vy   Vz   <RC>
+
+        ACCES     clavier( )
+
+        FONCTION  Modifier les cordonn‚es de tout les  points  ult‚rieur
+                  la commande.
+
+	DESCRIPTION  Les coordonn‚es des points  sont  modifi‚es suivant
+		  la loi suivante :
+                        x modifi‚  =  x * ( 1 + Vx/100 )
+                        y modifi‚  =  y * ( 1 + Vy/100 )
+                        z modifi‚  =  z * ( 1 + Vz/100 )
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+
+           /f148                                                    ECRI
+
+        MNEMONIQUE                                              ECRIture
+
+        SYNTAXE   ECRI
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Ex‚cuter   ou    non   les    ‚critures   …   l'‚cran.
+
+        DESCRIPTION  Fonction   de   type   "BASCULE"    1er appel = OFF
+                                                         2Šme appel = ON
+
+                  Sur position OFF , les textes ne sont  pas ‚crits. Ils
+                  sont mat‚rialis‚s  par  un  rectangle  qui  repr‚sente
+                  l'encombrement  des  ‚critures. Sur position  ON , les
+                  textes  sont  …  nouveau  affich‚s.
+
+	FONCTIONS ASSOCIEES  Exemple   TEXC, TEXG, TEXD, TEXJ
+
+
+
+           /f078                                                   ECRIZ
+
+        MNEMONIQUE                                         ECRIture de Z
+
+        SYNTAXE   ECRIZ
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+	FONCTION  Afficher ou non les ‚critures	des  Z	…  l'‚cran.
+
+        DESCRIPTION  Fonction   de   type   "BASCULE"   1er  appel = OFF
+                                                        2Šme  appel = ON
+
+                  Sur position OFF, les textes sont mat‚rialis‚s par  un
+                  rectangle qui repr‚sente l'encombrement des ‚critures.
+		  Sur position ON , les textes sont affich‚s .
+		  La taille des ‚critures est en mm papier, quelque soit
+		  la valeur du zoom ‚cran.
+
+	FONCTIONS ASSOCIEES  Exemple   CORZ
+                        Pytha-Graph R910701 Page 14.47
+
+
+
+           /f096                                                    EFFA
+
+	MNEMONIQUE			   EFFAcer une liste de segments
+
+        SYNTAXE   EFFA
+
+	ACCES	  digitalisateur( ) souris( )
+
+        FONCTION  Effacer une liste de segment.
+
+	DESCRIPTION    Pointer  un  des  points  de la  liste … effacer.
+                  Le  dessin  clignote , valider  ou  non.
+
+	FONCTIONS ASSOCIEES  Exemple   EFFTEXTE,EFFCERCL,EFFHACHU,EFFLISSA
+
+        REMARQUE  Si  plusieurs  listes  passent  par  l'‚l‚ment  point‚
+                  elles  clignotent   les   unes  aprŠs  les  autres  en
+		  demandant la validation  ( ou non )  de  l'effacement.
+		  Les listes sont affich‚es dans l'ordre chronologique.
+
+
+
+           /f199                                                EFFCERCL
+
+        MNEMONIQUE                                        EFFacer CERCLe
+
+        SYNTAXE   EFFCERCL
+
+	ACCES	  digitalisateur( ) souris( )
+
+        FONCTION  Effacer un cercle ou un arc de cercle.
+
+        DESCRIPTION  Pointer un ‚l‚ment du cercle … effacer, l'‚l‚ment …
+                  effacer clignote , valider ou non .
+
+	FONCTIONS ASSOCIEES  Exemple   EFFA,EFFTEXTE,EFFLISSA,EFFHACHU
+
+
+
+
+           /f197                                                EFFHACHU
+
+        MNEMONIQUE                                       EFFacer HACHUre
+
+        SYNTAXE   EFFHACHU
+
+	ACCES	  digitalisateur( ) souris( )
+
+        FONCTION  Effacer une liste de hachures.
+
+        DESCRIPTION   Pointer  un ‚l‚ment  de la  liste  …  effacer , le
+		  dessin  clignote, valider ou non.
+
+	FONCTIONS ASSOCIEES  Exemple   EFFA,EFFCERCL,EFFLISSA,EFFTEXTE
+                        Pytha-Graph R910701 Page 14.48
+
+
+
+           /f198                                                EFFLISSA
+
+        MNEMONIQUE                                       EFFacer LISSAge
+
+        SYNTAXE   EFFLISSA
+
+	ACCES	  digitalisateur( ) souris( )
+
+        FONCTION  Effacer  un  lissage.
+
+	DESCRIPTION  Pointer un ‚l‚ment du lissage … effacer ,le lissage
+                  clignote , valider ou non.
+
+	FONCTIONS ASSOCIEES  Exemple   EFFA,EFFCERCL,EFFHACHU,EFFTEXTE
+
+
+
+
+           /f200                                                EFFTEXTE
+
+        MNEMONIQUE                                         EFFacer TEXTE
+
+        SYNTAXE   EFFTEXTE
+
+	ACCES	  digitalisateur( ) souris( )
+
+        FONCTION  Effacer un texte.
+
+	DESCRIPTION  Pointer l'‚l‚ment  d'accroche  du texte , le  texte
+                  clignote , valider ou non.
+
+	FONCTIONS ASSOCIEES  Exemple   EFFA,EFFCERCL,EFFHACHU,EFFLISSA
+
+
+
+           /f156                                                    EMAR
+
+        MNEMONIQUE                                Espacement des Marques
+
+        SYNTAXE   EMAR   RC
+                  au message, donner Val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+	FONCTION  D‚finir la valeur de l'espacement  entre  les  marques
+                  d'une fenˆtre appos‚e sur un dessin.
+
+	DESCRIPTION    Val  num  en  unit‚s  utilisateur.
+
+	FONCTIONS ASSOCIEES  Exemple   MARD
+                        Pytha-Graph R910701 Page 14.49
+
+
+           /f149                                                    EPT1
+
+        MNEMONIQUE                             EPaississement de Trait 1
+
+        SYNTAXE   EPT1  no ( largeur  phiplume  extrem )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir  des types de traits ‚pais et/ou les utiliser.
+
+	DESCRIPTION  1/ D‚finition d'un trait ‚pais:
+                   utiliser la   syntaxe   complŠte : EPT1   no  largeur
+                   phiplume extrem , avec no = num‚ro  de  trait  d‚fini
+                   ( no = 1 a 10 ) , largeur = largeur de trait  en  mm,
+                   phiplume = diamŠtre de la plume  en mm , extrem = 0 :
+                   extrŠmit‚s des segments rectangulaires , extrem = 1 :
+                   extrŠmit‚s des segments arrondis.
+
+                   AprŠs la d‚finition d'un trait, il  est  automatique-
+                   -tiquement mis en fonction.
+
+                  2/ Appel d'un trait d‚j… d‚fini:
+                   EPT1  no ,  avec  no  =  num‚ro  de  type  de  trait.
+
+                  3/ Mise hors fonction d'un trait pr‚c‚demment appel‚:
+		   EPT1 0 (zero)
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	RESTRICTION  L'extr‚mite rectangulaire est  la   seule   valid‚e
+                  ( extrem = 0 ).
+
+        REMARQUE  Les  traits  ‚pais  sont  utilisables  en cr‚ation  de
+                  fonte.
+
+	ATTENTION  Tenir compte	des  caractŠristiques  physiques  de  la
+                  table tra‡ante et des plumes utilis‚es. Des impossibi-
+                  -lit‚s peuvent  r‚sulter  de la r‚solution de la table
+                  et de la grosseur de la plume.
+                  D'autre part, veiller  …  la coh‚rence entre le num‚ro
+                  de plume  s‚lectionn‚  par la commande PLU et la plume
+                  donn‚e  dans  EPT 1  et  celle  mont‚e  sur  la  table
+                  tra‡ante.
+
+	Exemple   a / EPT1 6 2 0.2 0
+                  trait no 6 d'‚paisseur 2 mm avec  une  plume de 0.2mm.
+                  On obtiendra un trait de 2mm … condition de placer une
+                  plume de 0.2 mm sur la MAD, au num‚ro de plume corres-
+                  -pondant ( v/PLU ).
+
+                  b / EPT1 8 0.15 0.05 0
+                  A partir de ce type de trait, si on utilise une  plume
+                  de 0.9 mm on obtiendra  un  trait de 1 mm d'‚paisseur.
+                        Pytha-Graph R910701 Page 14.50
+
+
+
+           /f165                                                    ESHA
+
+        MNEMONIQUE                               ESpacement des HAchures
+
+        SYNTAXE   ESHA
+
+        ACCES     clavier( )
+
+        FONCTION  D‚finir  l'espacement  des  hachures.
+
+	DESCRIPTION  L'espacement des hachures se d‚finit en  mm  papier
+		  ou en unites utilisateur .
+
+	FONCTIONS ASSOCIEES  Exemple   HACH,ANHA,EFFHACHU
+
+        REMARQUE  ESHA a les attributs suivant : EPT1 , TRAI , SYMB, PLU
+
+	Exemple   FIGURE 15
+                        Pytha-Graph R910701 Page 14.51
+
+
+           /f111                                                     EXE
+
+        MNEMONIQUE                                             EXEcution
+
+        SYNTAXE   EXE  (i1 (in) )
+
+        ACCES     clavier( ) digitaliseur( )
+
+	FONCTION  Ex‚cuter les commandes de dessins stock‚es en m‚moire,
+                  sans  effa‡age  pr‚alable  de  l'‚cran.
+
+	DESCRIPTION  Affiche le dessin en m‚moire. Il est possible
+                  de faire ex‚cuter … partir de  la  commande i1 jusqu'…
+                  la commande in ( cf STAT pour connaŒtre le  num‚ro  de
+                  la derniŠre commande).
+
+                  Interruption de l'affichage par  frappe  d'une  touche
+                  quelconque  du  clavier . Confirmation  demand‚e .
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+           /f004                                                    EXEC
+
+        MNEMONIQUE                              EXEcution + Clear screen
+
+        SYNTAXE   EXEC (i1 (in) )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Ex‚cuter  les  commandes de dessin stock‚es en m‚moire
+                  aprŠs un effa‡age de l'‚cran ( CLS ).
+
+        DESCRIPTION Affiche le dessin stock‚ en m‚moire.Il est possible de
+                  faire ex‚cuter a partir de la commande i1  jusqu'…  la
+                  commande in ( cf STAT pour connaŒtre le  num‚ro  de la
+                  derniŠre commande ).
+
+                  Interruption  de  l'affichage  par frappe d'une touche
+                  quelconque  du  clavier . Confirmation  demand‚e .
+
+	FONCTIONS ASSOCIEES  Exemple
+                        Pytha-Graph R910701 Page 14.52
+
+
+           /f034                                                    FILE
+
+        MNEMONIQUE                                        FILE (fichier)
+
+        SYNTAXE   FILE
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Commande g‚n‚rale de gestion des  fichiers  propres au
+                  logiciel.
+
+
+	DESCRIPTION  Par des menus successifs, on acc‚de aux fonctions de
+                  chargement, rangement, suppression, liste des fichiers
+                  utilisateur.
+
+	FONCTIONS ASSOCIEES  Exemple   $DDE,$DFO,$DPR,$DXY,$LCA,$LDE,$LFO,$LPR,$LXY,
+                        $SDE,$SFO,$SPR,$SXY.
+
+
+
+           /f015                                                     FIN
+
+        MNEMONIQUE                                                   FIN
+
+        SYNTAXE   FIN
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  En mode CLAVIER, FIN est la  commande  qui  permet  de
+                  sortir du programme. En mode DIGIT, si FIN est dans le
+                  le menu , on revient au mode clavier. Mˆme chose  pour
+                  DIGIT-CLAVIER.
+
+	DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+                        Pytha-Graph R910701 Page 14.53
+
+
+           /f020                                                    FUTI
+
+        MNEMONIQUE                                  Fichiers UTIlisateur
+
+        SYNTAXE   FUTI
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Lister  la  table  des  fichiers  utilisateurs.
+
+	DESCRIPTION    Cette table comporte les indications  suivantes :
+                  nom    type    jj  mm  an    taille     n     m     fi
+
+                  Le "nom"  repr‚sente  le  nom  de  fichier  donn‚  par
+                  l'utilisateur, le "type" repr‚sente le type de fichier
+                  et on a :  FTE = FONTE        ( n = 0 , m = 10 )
+                             DES = DESSIN       ( n = 1 , m = 10 )
+                             PRC = PROCEDURE    ( n = 3 , m = 10 )
+                             XYZ = COORDONNEES  ( n = 5 , m =  0 ) .
+
+                  "jj mm an"  repr‚sente  la   date  de  l'ouverture  du
+                  fichier. "taille" repr‚sente la taille du  fichier  en
+                  octets. "n"  est  le  num‚ro  du  type , "m"  le  mode
+                  d'‚criture :
+                         0 = ascii  ( accessible par  l'utilisateur ).
+                        10 = binaire ( inaccessible … l'utilisateur ).
+
+                  "fi" est le  num‚ro  du  fichier pour le nom externe :
+                  F***.P65. En principe, la  premiŠre  fonte  est  cod‚e
+                  F001.P65. Le nom externe est le nom  qui apparaŒt avec
+                  la commande DIR du systŠme d'exploitation.
+                  Les fi sont numerot‚s  en  s‚quence. Un fichier effac‚
+                  libŠre une entr‚e dans la table. L'entr‚e utilis‚e est
+                  la premiŠre entr‚e libre de la liste.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  <ATTENTION> : cette  "directory"  est   g‚r‚e  par  le
+                  programme de graphisme , ind‚pendamment du systŠme. La
+                  table des fichiers  ne  sera  donc  pas mise a jour si
+                  l'utilisateur fait des manipulations au niveau systŠme
+                  ( par  exemple  des  destructions ).
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.54
+
+
+
+           /f215                                                      GD
+
+        MNEMONIQUE                                     Gisement Distance
+
+	SYNTAXE   GD RS RP NS1 NS2 ....NS27<RC>
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Calculer les gisement et les  distances  sur  tous les
+		  points … partir de NSi stations (27 maxi ou 80 carac).
+
+	DESCRIPTION  Pour chaque station  "NSi" , les gisements  et  les
+                  distances  sont  calcul‚s :
+                        - sur les autres stations situ‚es dans  un rayon
+                          de  "RS"  mŠtres  autour  de  NSi.
+                        - sur tout les points situ‚s dans  un  rayon  de
+                          "RP"   mŠtres   autour   de   NSi.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	RAPPEL	  Si  on  veut	une sortie sur	l'imprimante  d‚finie au
+		  lancement de	P65, valider "IMPR" avant de lancer  GD.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.55
+
+
+
+           /f175                                                   GOMME
+
+        MNEMONIQUE                                                GOMMer
+
+        SYNTAXE   GOMME
+
+        ACCES   : digitalisateur( ) souris( )
+
+        FONCTION  Effacer une portion de segment.
+
+	DESCRIPTION  Utiliser pour effacer  un	 segment   d'une  liste.
+		  En  mode  digit  et	en  mode  souris  , pointer  les
+                  extrŠmit‚s  du segment … effacer.
+
+	FONCTIONS ASSOCIEES  Exemple   EFFA
+
+        REMARQUE  GOMME n'efface pas un segment s'il y a un  point entre
+                  les deux extrŠmit‚s du segment. Dans  ce  cas, refaire
+                  la manipulation deux fois . ( Cf exemple ) .
+
+	Exemple   FIGURE 16
+
+                  Si aprŠs la commande GOMME , on  pointe le  point 1 et
+                  3 : la commande est annul‚e. Faire la manipulation  en
+                  deux fois : cliquer le point 1 et le point I  puis  le
+                  point I et 3.
+                        Pytha-Graph R910701 Page 14.56
+
+
+           /f017                                                    GRIL
+
+        MNEMONIQUE                                                GRILle
+
+        SYNTAXE   GRIL
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Afficher  une  trame ( grille ) en  superposition … un
+                  dessin ‚cran.
+
+	DESCRIPTION  Commande  de  type	"BASCULE"	1er  appel =  ON
+                                                        2Šme appel = OFF
+                  Pas   de   la   trame  :  20  mm  ECRAN  en  standard.
+
+	FONCTIONS ASSOCIEES  Exemple   MARQ, GRMA
+
+
+
+           /f050                                                    GRMA
+
+        MNEMONIQUE                                     GRille et MArques
+
+        SYNTAXE   GRMA
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Afficher  la   grille  et  les  marques ( valeurs  des
+                  abcisses et  des  ordonn‚es ) des  lignes , en systŠme
+                  ‚cran.
+
+	DESCRIPTION ‚quivalent	…  GRIL	suivi  de  MARQ.
+
+	FONCTIONS ASSOCIEES  Exemple   GRIL,MARQ
+
+        REMARQUE  Les  marques  sont  exprim‚es  en  mm  ‚cran. Elles ne
+                  sont  pas  associ‚es  au  systŠme  de  coordonn‚es  de
+                  l'utilisateur.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.57
+
+
+           /f125                                                    HACH
+
+        MNEMONIQUE                                              HACHurer
+
+        SYNTAXE   HACH
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Hachurer la liste  pr‚c‚dente  ou  une  liste  donn‚e.
+
+	DESCRIPTION Permet d'hachurer un p‚rimŠtre saisi par ses num‚ros
+                  de points ( ou  saisi  en  mode  digit ). La liste des
+                  hachures  apparaŒt  …  l‚cran : valider ou  non. Si on
+                  d‚sire hachurer le dernier p‚rimŠtre  saisi, taper sur
+                  la  touche  <RC>  sans donner  les num‚ros  de points,
+                  valider ou non.
+
+	FONCTIONS ASSOCIEES  Exemple   ANHA,ESHA,MASQUE
+
+        REMARQUE  HACH prend en compte les attributs TRAI,TRAI2,TRAI3 et
+                  EPT1 ( Cf la commande MASQUE ).
+
+
+
+
+           /f163                                                    HTXM
+
+        MNEMONIQUE           Hauteur des TeXtes de la Machine … dessiner
+
+        SYNTAXE   HTXM  <RC> ( val num )
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  D‚finir la hauteur  des  textes  permettant  le  choix
+                  entre la fonte logicielle  et  le jeu de caractŠres du
+                  traceur.
+
+	DESCRIPTION  les ‚critures qui sont inf‚rieures ou ‚gales … HTXM
+		  seront  dessin‚es  avec  la  fonte traceur. Au del… de
+		  HTXM mm le jeu de caractŠres de la fonte logiciel  est
+                  pris en compte.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE  Par d‚faut la valeur de HTXM est definie dans DEPART.P65
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.58
+
+
+
+           /f038                                                      HX
+
+        MNEMONIQUE                                          Hauteur en X
+
+        SYNTAXE   HX   valnum
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir la taille  en  abcisse  X  des  caractŠres  et
+                  sumboles utilis‚s ulterieurement,en Unit‚s utilisateur
+                  … l'‚chelle 1.
+
+	DESCRIPTION  Permet de modifier	… volont‚ l'aspect ( en X ) d'un
+                  ‚l‚ment  de  la  fonte . Pour  donner  les  dimensions
+                  coh‚rentes avec le type de repr‚sentation souhait‚e,cf
+                  commande DESS.La valeur de HX est stock‚e dans la pile
+                  de dessin. A tout moment, l'utilisateur peut controler
+                  les valeurs de  HX en demandant la commande LCOM et en
+                  examinant les lignes SIZT :
+                        SIZT         HX   HY   ANG   ALPH   COEF
+                  Il  peut   corriger  une  (des)  valeur(s)  de  HX  en
+                  utilisant  la  commande   MSIZ  ( cf cette commande ).
+
+	FONCTIONS ASSOCIEES  Exemple   HY,SIZT,ANG,ALPH,COEF,HZ
+
+	SAISIE DIGIT	HX =  num‚ro  case / 10
+
+	Exemple   HX 15  (========)  Longueur  des   ‚l‚ments  =  15  mm
+                                     (si 1 mm ‚cran = 1 mm  utilisateur)
+
+                  FIGURE 17
+
+
+                        Pytha-Graph R910701 Page 14.59
+
+
+           /f039                                                      HY
+
+        MNEMONIQUE                                          Hauteur en Y
+
+        SYNTAXE   HY   val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir la taille en ordonn‚e (en Y) des caractŠres et
+                  symboles utilis‚s ulterieurement,en Unit‚s utilisateur
+                  … l'‚chelle 1.
+
+	DESCRIPTION dito HX
+
+	FONCTIONS ASSOCIEES  Exemple   HX,SIZT,ANG,ALPH,COEFF
+
+	SAISIE DIGIT	HY = num‚ro case / 10
+
+	Exemple   HY = 20  (========)  Hauteur	des  ‚l‚ments  =  20 mm.
+                                      (si 1 mm ‚cran = 1 mm utilisateur)
+
+                  FIGURE 18
+
+
+                        Pytha-Graph R910701 Page 14.60
+
+
+           /f104                                                      HZ
+
+        MNEMONIQUE                                          Hauteur en Z
+
+        SYNTAXE   HZ   val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir la taille suivant l'axe Z  des  caractŠres  et
+                  symboles utilis‚s ulterieument, en unit‚s utilisateur,
+                  … l'‚chelle 1.
+
+	DESCRIPTION Dito HX.
+
+	FONCTIONS ASSOCIEES  Exemple   HX,HY,SIZT,ANG,ALPH,COEF
+
+	SAISIE DIGIT	HZ = num‚ro case / 10
+
+	Exemple   HZ 18  (=======)  profondeur	des  ‚l‚ments  =  18  mm
+                                    (si 1 mm  ‚cran = 1  mm utilisateur)
+                        Pytha-Graph R910701 Page 14.61
+
+
+           /f205                                                     IC1
+
+        MNEMONIQUE                          Intersection Cercle-droite 1
+
+        SYNTAXE   IC   n1 n2 n3 R (n)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Construire l'intersection d'un cercle et d'une droite.
+
+	DESCRIPTION  n1 , n2 : points de la droite.
+                  n3      : centre  du   cercle.
+                  R       : rayon   du   cercle.
+                  n       : num‚ro  du  point  d'intersection ( si omis,
+                            incr‚ment automatique).
+                  Cette commande  permet  de  construire  l'intersection
+                  d'une droite et d'un cercle d‚finis par 2  points pour
+                  la droite , par le centre et le rayon pour le  cercle.
+                  Cette intersection est telle que la distance n1 n soit
+		  minimum. Les points calcul‚s ont un Z=0 .
+
+	FONCTIONS ASSOCIEES  Exemple   CI,DI,IG,INTE,PA,PE,PI,IC2
+
+	Exemple   FIGURE 19
+                        Pytha-Graph R910701 Page 14.62
+
+
+
+           /f220                                                     IC2
+
+        MNEMONIQUE                          Intersection droite Cercle 2
+
+        SYNTAXE   Dito IC1
+
+        ACCES     clavier( ) digitalisateur( )
+
+        FONCTION  Dito IC1
+
+	DESCRIPTION Dito  IC1 , MAIS   l'intersection  est  telle que la
+                  distance n1 n soit maximum.
+
+	FONCTIONS ASSOCIEES  Exemple   Dito IC1
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.63
+
+
+           /f202                                                      IG
+
+        MNEMONIQUE                         Intersection droites Gisement
+
+        SYNTAXE   IG   n1 n2 G1 G2 (n)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Construire l'intersection de  deux  droites  …  partir
+                  d'un  point  et  du   gisement  de  chacune   d'elles.
+
+	DESCRIPTION n1 : point de  la  1ere  droite.
+                  G1 : gisement de la 1ere droite.
+                  n2 : point de  la  2Šme  droite.
+                  G2 : gisement de la 2Šme droite.
+                  n  : num‚ro du  point  resultant ( si omis , incr‚ment
+		       automatique ).
+		  Les points calcul‚s ont un Z=0 .
+
+
+	FONCTIONS ASSOCIEES  Exemple   Cf IC
+
+
+	Exemple   FIGURE 20
+                        Pytha-Graph R910701 Page 14.64
+
+
+
+           /f061                                                    IMPR
+
+        MNEMONIQUE                                              IMPRimer
+
+        SYNTAXE   IMPR
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+	FONCTION  Valider l'Imprimante d‚finie au d‚marrage de PYTHA-GRAPH
+
+	DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple   VISU
+
+
+
+           /f201                                                    INTE
+
+        MNEMONIQUE                          INTErsection de deux droites
+
+        SYNTAXE   INTE   n1 n2 n3 n4 (n)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Construire l'intersection de deux droites d‚finies par
+                  deux points.
+
+          DESCRIPTION n1 n2 : points de la 1ere droite.
+                  n3 n4 : points de le 2Šme droite.
+                  n     : point   d'intersection  ( si  omis , incr‚ment
+			  automatique ). Cote Z=0 .
+
+	FONCTIONS ASSOCIEES  Exemple   dito IC.
+
+	Exemple   FIGURE 21
+                        Pytha-Graph R910701 Page 14.65
+
+
+
+           /f226                                                INTPARAL
+
+        MNEMONIQUE                             INTersection de PARALelle
+
+        SYNTAXE   INTPARAL        <RC>
+                  n1 n2 n3 n4 (n) <RC>
+                    D1   D2
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Construire  l'intersection   de   paralŠlles   …  deux
+                  droites.
+
+	DESCRIPTION Cette  commande  permet de	construire   le  point
+                  d'intersection (n) de la paralŠlle … la droite (n1 n2)
+                  situ‚e … une distance D1 , et de  la  paralŠlle  …  la
+		  droite (n3 n4) situ‚e … une distance D2. Cote Z=0 .
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   FIGURE 22
+                        Pytha-Graph R910701 Page 14.66
+
+
+           /f123                                                    INUT
+
+        MNEMONIQUE                                     points INUTilis‚s
+
+        SYNTAXE   INUT
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Supprimer  les  points  inutil‚s  au  dessin.
+
+	DESCRIPTION Un	point est  g‚n‚r‚  … chaque point‚  de la mire :
+                  par exemple , les extremit‚s d'un segment. Si un point
+                  devient  inutilis‚  suite  … une correction , il n'est
+                  pas  automatiquement  retir‚  du  fichier  de  points,
+                  mais  seulement  rep‚re  comme  " inutile ".
+                  La commande INUT permet de supprimer physiquement  ces
+                  points , donc  de compresser le fichier correspondant.
+
+                  Il  est  conseill‚  d'appliquer  cette  fonction avant
+                  de  sauvegarder  un  dessin , mais  avec  pr‚caution :
+                  en  particulier  si  les points sont rep‚r‚s par leurs
+                  num‚ros  ( ex : arpentage ).
+                  Par contre , en sch‚ma , les  points  ‚tant saisis par
+                  digitalisation , en  principe , quand  le  dessin  est
+                  "propre" les  points inutilis‚s (dessin et effacement)
+		  peuvent  ˆtre  supprim‚s . Les points ayant une cote Z
+		  diff‚rentes de 0 ne peuvent ˆtre supprim‚s.
+
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  Les points supprim‚s  le  sont  de  fa‡on  d‚finitive.
+
+	RESTRICTION  NE PAS  UTILISER "INUT" sous CFTE .
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.67
+
+
+
+           /f223                                                    ISF1
+
+        MNEMONIQUE                            Implantation de SurFaces 1
+
+        SYNTAXE   ISF1  <RC>  surf <RC>  n1 <RC> n2 <RC> ... <RC> n <RC>
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Implanter des surfaces  triangulaires.
+
+	DESCRIPTION surf : valeur en m2 de la surface … implanter. Cette
+                  commande  calcule  le  point  n+1  tel  que la surface
+                  "n1 n2 n3 n+1 n1 " soit  ‚gale  …  surf. ( Cf figure )
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   FIGURE 23
+                        Pytha-Graph R910701 Page 14.68
+
+
+           /f009                                                      LC
+
+        MNEMONIQUE                                    Lister Coordonn‚es
+
+        SYNTAXE   LC   ( p1 ( pn ) )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Lister … l'‚cran les coordonn‚es des points du  dessin
+                  en m‚moire ( exprim‚es  en  unit‚s  utilisateur ).
+
+	DESCRIPTION Liste page … page . Si LC sans paramŠtres : liste de
+                  tous les points … partir du  premier. Si  LC  p1  pn :
+		  liste  …  partir   du   point p1  jusqu'au  point  pn.
+		  Si LC i i , le point i est affich‚ en ligne "25".
+                  (pour  connaŒtre le nombre total de points utiliser la
+		  commande STAT).
+		  Informations fournies :
+		  OQP  utilisation des points.
+		  DEPZ	  code d‚finissant la position de l'‚criture du Z
+		  IRS	  rayon de protection d‚fini par le(s) symbole(s)
+		  accroch‚(s) au point . S'il y a plusieurs symboles , le
+		  rayon le plus grand est stock‚.
+		  Les XY sont ceux du systŠme original.
+
+	FONCTIONS ASSOCIEES
+
+	RAPPEL	   REPERAGE DES POINTS
+
+                  Les  points  de  calage  de textes ont pour num‚ro :-1
+                  Les  points  saisis  en  mode  digitaliseur  ont  pour
+                  numeros : -3 ( sauf  si on a demand‚ la renum‚rotation
+                  par RENU). Les points  supprim‚s  ont pour num‚ros: 0.
+                  Les  points   de  calage  des  lignes  de  rappel  des
+                  cotations  ont  pour  num‚ros : -4.
+
+	NOTA	  Si IMPR on, la liste est envoy‚e sur imprimante ( soit
+		  I ou V ou D ou F d‚fini au demarrage de PYTHA-GRAPH ).
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.69
+
+
+           /f110                                                    LCAR
+
+        MNEMONIQUE                                        Load CARactŠre
+
+        SYNTAXE   LCAR code ASCII
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Charger en m‚moire les  ordres  de  dessin  relatifs …
+                  un  caractŠre  de  la  fonte.
+
+        DESCRIPTION Ces  ordres  s'ajoutent  …  la  pile  de  dessin  d‚j…
+                  pr‚sente en m‚moire, ce  qui  permet  de  composer  un
+                  caractŠre …  partir  d'un (ou de plusieurs)  autre(s).
+                  Faire  EXEC  pour  visualiser   le  dessin  r‚sultant.
+
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,CCAR,CSYM,LSYM,MCAR,MSYM,DCAR,DSYM
+
+	RESTRICTION  commande valide sous CFTE seulement .
+
+
+
+
+           /f174                                                    LCMD
+
+        MNEMONIQUE                      Lister les CoMande sur le Disque
+
+        SYNTAXE   LCMD  < nom du fichier >
+
+        ACCES     clavier( )
+
+        FONCTION  Sauver  un dessin  en ASCII  code MCG. avec un en-tˆte
+                  constitu‚ par le fichier DEPART.P65.
+
+        DESCRIPTION Le fichier DEPART.P65 contient les valeurs d'initiali-
+                  -sation  du P65  et quelques  informations. Ce fichier
+                  peut  ˆtre  converti  au format  DXF (AUTOCAD), et est
+                  sauv‚ dans le systŠme.
+
+	FONCTIONSASSOCIEES  Exemple
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.70
+
+
+           /f006                                                    LCOM
+
+        MNEMONIQUE                                      Lister COMmandes
+
+        SYNTAXE   LCOM (i1 (in) )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Lister … l'‚cran les commandes du dessin en m‚moire et
+                  les valeurs correspondantes.
+
+        DESCRIPTION Cette commande  affiche ligne par ligne les diff‚rents
+                  ordres qui  d‚finissent  le dessin pr‚sent en m‚moire.
+                  Les  valeurs  num‚riques   sont  ‚galement  affich‚es.
+                  Il  est possible  d'invalider un  ordre et ses donn‚es
+                  a la suite de son affichage  en r‚pondant N au message
+                  " OK ? (O) N ".
+                  ATTENTION  la  r‚ponse N est aussitot prise en compte
+                  et la suppression est d‚finitive.
+
+	FONCTIONS ASSOCIEES  Exemple   DEBG
+
+	RESTRICTION
+
+	REMARQUE  1  Avec  LCOM on  ne	peut  pas  corriger  les valeurs
+                  num‚riques  associ‚es  …  un  ordre.
+
+	REMARQUE  2  Les 4 premiŠres lignes affich‚es sont les commandes
+                  valeurs d'initialisation.
+
+	REMARQUE  3  Il est possible de  lister  a  partir   d'un num‚ro
+                  de commande (i1) : LCOM 28 = liste a partir de la Com-
+                  mande num‚ro 28 (dans la pile), jusqu'…  la fin  de la
+                  pile, ou jusqu'… un  num‚ro  de commande  donn‚ (in) :
+                  LCOM 28 44
+                  Pour  connaŒtre  le  num‚ro  de  la derniŠre commande,
+                  utiliser la commande STAT.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.71
+
+
+           /f083                                                    LFXY
+
+	MNEMONIQUE					Lire Fichier XYz
+
+        SYNTAXE   LFXY nom fichier (ech X (ech Y))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  R‚cup‚rer un fichier de points en  X Y Z au  niveau du
+                  systŠme d'exploitation.
+
+
+        DESCRIPTION permet  d'ajouter un  fichier de  points  …  un dessin
+                  en m‚moire , ce  fichier  se trouvant  sur un  support
+                  physique  diff‚rent de  celui sur lequel on travaille.
+                  Cf exemple.
+                  La   structure   du  fichier   est  en   format  libre
+                  ( s‚parateur = espace ou virgule ) : N  X  Y  (Z)
+                                                       .  .  .   .
+
+                                                       .  .  .   .
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	ATTENTION  S'il y a des num‚ros  doubles, ceux ci  sont signal‚s
+                  pendant la lecture des points.
+
+	Exemple   Sous	MS / DOS  :  LFXY  B : nom   fichier
+                  ( 8 caractŠres au total , y  compris  B: )
+
+
+
+           /f209                                                  LIMCER
+
+        MNEMONIQUE                          LIMite des centres de CERcle
+
+        SYNTAXE   LIMCER <RC>
+
+        ACCES     clavier( )
+
+        FONCTION  D‚finir  le  num‚ro  …  partir  duquel  un  point  est
+                  consid‚r‚ comme centre de cercle.
+
+        DESCRIPTION Tout les  points dont  le num‚ro  sera sup‚rieur  … la
+                  valeur de LIMCER seront  consid‚r‚s comme  des centres
+                  de cercles. ( Cf la commande SF ).
+
+	FONCTIONS ASSOCIEES  Exemple   SF
+
+        REMARQUE  A l'initialisation, la  valeur  de  LIMCER  est  2000.
+                  ( Cf fichier d'initialisation DEPART.P65 ).
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.72
+
+
+
+           /f168                                                    LIS1
+
+        MNEMONIQUE                                             LISsage 1
+
+        SYNTAXE   LIS1 <RC>
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Lisser une courbe sans dessiner le premier  arc liss‚.
+
+        DESCRIPTION Entrer au moins 4  points ( ou  en mode digit, pointer
+                  les points ) dans l'ordre o—  les points  doivent ˆtre
+                  liss‚s.
+
+	FONCTIONS ASSOCIEES  Exemple   LIS2,LIS3,LISS,EFFLISSA
+
+	Exemple   FIGURE 24 a
+                        Pytha-Graph R910701 Page 14.73
+
+
+
+           /f169                                                    LIS2
+
+        MNEMONIQUE                                             LISsage 2
+
+        SYNTAXE   LIS2 <RC>
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Lisser une courbe sans dessiner le dernier  arc liss‚.
+
+        DESCRIPTION Entrer au moins 4 points ( ou en mode  digit , pointer
+                  les points ) dans l'ordre o—  les points  doivent ˆtre
+                  liss‚s.
+
+	FONCTIONS ASSOCIEES  Exemple   LIS1,LIS3,LISS,EFFLISSA
+
+	Exemple   FIGURE 24 b
+                        Pytha-Graph R910701 Page 14.74
+
+
+
+           /f170                                                    LIS3
+
+        MNEMONIQUE                                             LISsage 3
+
+        SYNTAXE   LIS3 <RC>
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Lisser une courbe sans  dessiner ni  le premier  ni le
+                  dernier arc liss‚.
+
+        DESCRIPTION Entrer au moins 4 points ( ou en  mode digit , pointer
+                  les points ) dans l'ordre o—  les points  doivent ˆtre
+                  liss‚s.
+
+	FONCTIONS ASSOCIEES  Exemple   LIS1,LIS2,LISS,EFFLISSA
+
+	Exemple   FIGURE 24 c
+                        Pytha-Graph R910701 Page 14.75
+
+
+           /f081                                                    LISS
+
+        MNEMONIQUE                                               LISSage
+
+        SYNTAXE   LISS
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Lissage de courbes.
+
+        DESCRIPTION Entrer  les  points  ( ou en  mode  digit, pointer les
+                  points ) dans l'ordre o— il doivent ˆtre liss‚s
+
+	FONCTIONS ASSOCIEES  Exemple   LIS1,LIS2,LIS3,EFFLISSA
+
+
+
+
+           /f135                                                  LSTXYZ
+
+	MNEMONIQUE					  LiSTer les XYZ
+
+        SYNTAXE   LSTXYZ i j
+
+        ACCES     clavier( )
+
+        FONCTION  Lister les coordonn‚es des points num‚rot‚s  de i … j.
+
+	DESCRIPTION donne sur deux colones la liste  des points , rang‚s
+		  par  num‚ros	croissants.
+
+	FONCTIONS ASSOCIEES  Exemple   LC
+
+        REMARQUE  La liste  est  affich‚e  … la VISU sur imprimante, sur
+                  fichier ou sur disque suivant la consigne pr‚sis‚e  au
+                  lancement de PYTHA-GRAPH.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.76
+
+
+           /f109                                                    LSYM
+
+        MNEMONIQUE                                          Load SYMbole
+
+        SYNTAXE   LSYM num‚ro symbole
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Charger en m‚moire les ordres de dessin  relatifs … un
+                  un symbole.
+
+
+        DESCRIPTION Ces ordres s'ajoutent … la pile courante de dessin, ce
+                  qui  permet de  composer un symbole … partir d'autres.
+                  Faire  EXEC   pour  visualiser  le  dessin  r‚sultant.
+
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,CCAR,CSYM,LCAR,MCAR,MSYM,DCAR,DSYM
+
+	RESTRICTION Commande valide  sous CFTE seulement.
+
+
+
+           /f155                                                    MARD
+
+	MNEMONIQUE					  MARquer Dessin
+
+        SYNTAXE   MARD <RC>
+
+	ACCES	  digitaliseur( )
+
+        FONCTION  D‚finir  une   fenˆtre  englobant tout  ou une  partie
+                  d'un  dessin  ,  avec   inscriptions   de  coordonn‚es
+		  et dessin du quadrillage suivant un intervalle  donn‚.
+
+	DESCRIPTION Pointer en premier le point qui d‚finit le point bas
+		  gauche puis celui qui  d‚finit le point haut droit.
+
+                  Les coordonn‚es seront affich‚es suivant un intervalle
+                  de EMAR unit‚s  utilisateur (cf EMAR). Par d‚faut, cet
+                  intervalle est de 100 unit‚s utilisateur. D‚finir EMAR
+                  avant d'appeler MARD.
+
+	FONCTIONS ASSOCIEES  Exemple   EMAR
+                        Pytha-Graph R910701 Page 14.77
+
+
+           /f018                                                    MARQ
+
+        MNEMONIQUE                                                MARQue
+
+        SYNTAXE   MARQ
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Afficher en superposition  …  un dessin  les "marques"
+                  c'est-…-dire  les  valeurs  en abcisse et ordonn‚e des
+                  lignes  d'une  trame ( grille )  de  rep‚rage.
+
+	DESCRIPTION commande   de  type  "BASCULE"   :	1er  appel =  ON
+                                                        2Šme appel = OFF
+
+	FONCTIONS ASSOCIEES  Exemple   GRIL,GRMA
+
+        REMARQUE  Les  marques  sont  en  mm  ‚cran. Elles  ne  sont pas
+                  associ‚es au systŠme de coordonn‚es de  l'utilisateur.
+
+
+
+
+           /f249                                                  MASQUE
+
+        MNEMONIQUE                                                MASQUE
+
+        SYNTAXE   MASQUE n  ( ou -n )
+
+        ACCES     clavier( )
+
+	FONCTION	Limiter le dessin … l'int‚rieur de la liste.
+
+	DESCRIPTION Consigne … introduire dans le fichier p65.MCG :
+                  ....
+                  MASQUE
+                  nø des fonctions ( 40 maxi )
+                  FINMASQUE
+                  ....
+                  Les fonctions  masque limitent le dessin … l'int‚rieur
+		  de la  liste. Par Exemple   125 (hachures), 44 (talus)
+                  Pour  mettre  on/off une fonction en interactif, taper
+                  la commande MASQUE n (fonction on) MASQUE -n (fonction
+                  off). La  liste  dans  P65.MCG  n'est  pas alt‚r‚e. La
+                  fonction MASQUE 125 est ignor‚e si le type de hachures
+                  est un trait simple du type 1 ( TRAIT 1 ).
+
+	FONCTIONS ASSOCIEES  Exemple
+                        Pytha-Graph R910701 Page 14.78
+
+
+           /f055                                                    MCAR
+
+        MNEMONIQUE                                    Modifier CARactŠre
+
+        SYNTAXE   MCAR  code  ASCII
+		   coef  echX  echY  echZ  dx  dy  dz  ra eettp
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Modifier  les   paramŠtres  de   r‚presentation   d'un
+                  caractŠre  de  la  fonte.
+
+	DESCRIPTION coef = coefficient de d‚formation propre (original de
+                  la fonte) ; par d‚faut, coeff = 1.
+                  echX , echY , echZ = ‚chelle  en X , en Y , en Z ; par
+                  d‚faut, echX = echY = echZ = 1.
+                  dx, dy, dz = translations  en X, Y, Z du point origine
+                  du  caractŠre par  rapport …  l'origine des  axes. Par
+		  d‚faut : dx = dy = dz = 0
+		  ra et eettp : voir CCAR
+
+                  La   modification   est   temporaire. Pour  la  rendre
+		  d‚finitive il faut  sauvegarder la  fonte  avec  $SFO.
+                  (nom).
+
+	FONCTIONS ASSOCIEES  Exemple  CCAR
+
+        REMARQUE  Cette  fonction  est  valide  sous CFTE et sous dessin
+                  courant.
+
+
+
+
+								   MENUi
+
+        MNEMONIQUE                                        MENU1 … MENU10
+
+	SYNTAXE   MENUi
+
+        ACCES     clavier( )
+
+        FONCTION  Permet d'afficher un menu … l'‚cran.
+
+	DESCRIPTION Le	menu  ‚cran  affich‚ dans  la zone  droite , est
+		  paramŠtr‚ dans le fichier MENUVISU.P65.
+		  MENUVISU.P65 peut etre construit avec un ‚diteur ascii.
+		  Ce menu  est accessible  avec  digit-clavier ou MOUSE.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+                        Pytha-Graph R910701 Page 14.79
+
+
+           /f157                                                    MESU
+
+        MNEMONIQUE                                                MESUre
+
+        SYNTAXE   MESU
+
+	ACCES	  digitaliseur( )
+
+        FONCTION  Afficher  … l'‚cran  la distance parcourue par la mire
+                  par rapport au dernier point valid‚.
+
+	DESCRIPTION Fonction  de  type	"BASCULE" :  premier  appel = ON
+						    deuxiŠme appel = OFF
+
+                  Affichage  en  continu de  la distance  parcourue  par
+                  rapport  au  dernier  point  valid‚ (saisi):
+                        * distance en X : dx.
+                        * distance en Y : dy.
+                        * distance entre les 2 points.
+                        * gisement.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	RESTRICTION   Fonction valid‚e en utilisation	du  digitaliseur
+                  seulement : soit  table   …  digitaliser , soit  digit
+                  clavier.
+
+
+
+           /f010                                                    MIRE
+
+        MNEMONIQUE                                                  MIRE
+
+        SYNTAXE   MIRE (px (py (plume)))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Dimensionner la taille de la mire  pour utilisation du
+                  digitaliseur  table  ou  clavier.
+
+	DESCRIPTION px = taille  suivant X  en nombre de points - ‚cran.
+                  py = taille  suivant Y  en nombre  de  points - ‚cran.
+                  plume  =  couleur.
+                  Les  valeurs   d'initialisation  sont   accessibles  …
+                  l'utilisateur.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE  A l'initialisation px, py et plume (couleur) sont
+		  d‚finis dans DEPART.P65
+                        Pytha-Graph R910701 Page 14.80
+
+
+           /f041                                                    MOCL
+
+	MNEMONIQUE				    acc‚der aux MOts CL‚
+
+        SYNTAXE   MOCL
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Effectuer les op‚rations suivantes  sur les  mots-cl‚:
+                        a/ Lister   les   mots-cl‚  dans  UCLE65.LST
+                        b/ Suppression des commandes.( pass  word ).
+                        c/ Ajout    des    commandes.( pass  word ).
+                        d/ Changer   les   noms   des   mots-cl‚.
+                        e/ Affectation / suppression   cases   du   menu
+                           digitalisateur.
+                        f/ Affectation / suppression  des  cases du menu
+                           ‚cran.
+			g/ G‚n‚rer UCLE.P65  …	partir	de  UCLE65.LST.
+                        h/ Lister la table des fichiers  dans  UTIL.LST.
+                        q/ Fin.
+
+	DESCRIPTION REPONSE a : la liste est  m‚moris‚e dans le  fichier
+                              UCLE65.LST. On peut la voir …  l'‚cran  en
+                              utilisant la fonction TYPE.
+                              Pour  avoir  la   liste , sortir programme
+                              et utiliser  la fonction PRINT du systŠme.
+
+                  REPONSE d : Suivre  le  message  en  donnant  l'ancien
+                              mot-cl‚ et  le nouveau. Pour sortir, taper
+                              deux fois <RC> ( retour  chariot ).
+
+                  REPONSE e : Permet  de d‚finir  le menu  accessible au
+                              digitaliseur. Donner  le  mot-cl‚  puis le
+                              num‚ro de la  case du  digitalisateur  que
+                              l'on veut lui affecter. Si on ne  veut pas
+                              ( ou plus ) d'un mot-cl‚ dans le menu, lui
+                              affecter la  valeur -1. Terminer  par deux
+                              fois <RC>.
+
+                  REPONSE f : Permet de  d‚finir le menu accessible avec
+                              les flŠches du  clavier ( clavier-digit ),
+                              ou avec mouse.
+                              Mˆme  demarche  qu'…  la  reponse  e.
+                              e et f  sont  temporaires ; pour avoir des
+                              modifications d‚finitives :
+                              * corriger UCLE65.LST (Cf les consignes en
+				tˆte  de ce fichier) pour le menu Digit.
+				et lancer g du menu.
+                              * corriger  menuVISU.P65 ( Cf ce fichier )
+
+                  REPONSE q : Quitter.
+
+	FONCTIONS ASSOCIEES  Exemple
+                        Pytha-Graph R910701 Page 14.81
+
+
+           /f124                                                    MSIZ
+
+        MNEMONIQUE                                Modifier SIZe (taille)
+
+        SYNTAXE   MSIZ
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Modifier   les   caract‚ristiques   des   symboles  et
+                  caractŠres  d‚finis   auparavant  dans  les  ordres de
+                  dessin.
+
+	DESCRIPTION Ces  caract‚ristiques  sont : HX  HY  ANG ALPH COEF.
+                  Pour  plus  de  d‚tail , voir ces fonctions.
+
+                  Lorsqu'on donne l'ordre  MSIZ , une  ligne  de valeurs
+                  num‚riques s'affiche : elle correspond … la 1ere s‚rie
+                  de commandes HX a COEF (SIZT) rencontr‚e dans  la pile
+                  des ordres  de dessin  en m‚moire. Si on veut modifier
+                  des  valeurs dans cette ligne, repondre N … la demande
+                  de validation. Alors un  message rappelle  l'ordre des
+                  variables. Effectuer  les   corrections  puis   RETURN
+                  ( Taper obligatoirement les 5 valeurs ).
+                  La s‚rie suivante est alors affich‚e et ainsi de suite
+                  jusqu'… ‚puisement des SIZT dans la pile.
+
+	FONCTIONS ASSOCIEES  Exemple   SIZT
+
+        REMARQUE  Valeurs  courantes  des  paramŠtres   permettant   une
+                  ‚criture " agr‚able " :
+                        HX   =  1 … 20 mm
+                        HY   =  1 … 20 mm
+                        ANG  =  0  …  n ( grades d‚fini par UANG )
+                        ALPH =  0  …  1
+                        COEF =  1  …  2
+                        Pytha-Graph R910701 Page 14.82
+
+
+           /f053                                                    MSYM
+
+        MNEMONIQUE                                      Modifier SYMbole
+
+	SYNTAXE   MSYM num‚ro coef echX echY echZ dx dy dz ra eettp
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Modifier les paramŠtres de repr‚sentation d'un symbole
+                  d'une fonte.
+
+
+	DESCRIPTION   num‚ro = celui du	symbole dans la fonte.
+                  echX, echY, echZ  = ‚chelles  en  X , en  Y  et  en Z.
+                  dx , dy , dz      = translations en X, Y et Z du point
+                  origine  du symbole par rapport a l'origine  des  axes
+                  (par d‚faut IUCARA / 2 soit -50,-50,-50 si IUCARA=100)
+		  Voir la commande CCAR .
+                  La  modification   est   temporaire . Pour  la  rendre
+		  d‚finitive , il  faut  sauvegarder la fonte avec $SFO.
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,CCAR,CSYM,LCAR,LSYM,MCAR
+
+        REMARQUE  Cette  fonction  est  valide  sous CFTE et sous dessin
+                  courant.
+
+
+
+
+           /f159                                                    NBDE
+
+        MNEMONIQUE                                   NomBre de DEcimales
+
+        SYNTAXE   NBDE i
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir le nombre  de  d‚cimales  affich‚es  dans  les
+                  resultats de calculs num‚riques.
+
+        DESCRIPTION "i"  est   compris  entre  0  et  5.
+
+	FONCTIONS ASSOCIEES  Exemple   COTE
+
+	RESTRICTION   Valide seulement pour fonction COTE.
+
+        REMARQUE  Initialisation dans le fichier DEPART.P65
+
+	Exemple    Nombre de d‚cimales	     affichage
+                           1                    27.5
+                           2                    27.54
+                           3                    27.543
+                           4                    27.5426
+                           5                    27.54257
+
+                        Pytha-Graph R910701 Page 14.83
+
+
+
+           /f048                                                 NUMAUTO
+
+        MNEMONIQUE                              NUM‚rotation AUTOmatique
+
+        SYNTAXE   NUMAUTO
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Num‚roter  automatiquement  les  points  saisis.
+
+        DESCRIPTION   Fonction de type "BASCULE" : premier appel  =  ON
+                                                   deuxiŠme appel = OFF
+			  Si NUMAUTO est sur position  OFF , les points
+			  saisis prennent  le  num‚ro  -3.
+
+	FONCTIONS ASSOCIEES  Exemple   ORIG
+
+
+
+           /f005                                                    ORIG
+
+        MNEMONIQUE                                               ORIGine
+
+        SYNTAXE   ORIG <RC> n
+
+        ACCES     clavier( ) digitaliseur( ) souris( )
+
+        FONCTION  Fixer  le point  d'origine  du num‚rotage  automatique
+                  des points.
+
+        DESCRIPTION Si n est omis, l'origine prendra la valeur  du dernier
+                  point  saisi  au  clavier  ou  au  digitalisateur.
+
+	FONCTIONS ASSOCIEES  Exemple   NUMAUTO
+                        Pytha-Graph R910701 Page 14.84
+
+
+           /f106                                                    ORTH
+
+        MNEMONIQUE                                            ORTHogonal
+
+        SYNTAXE   ORTH
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Dessiner  en  systŠme  orthogonal , c'est-…-dire  avec
+                  des  segments  toujours paralleles aux axes du systŠme
+                  utilisateur ( ou  …  45  degr‚s : diagonales ).
+
+        DESCRIPTION Commande de type  "BASCULE"  :  premier  appel =  ON
+                                                    deuxiŠme appel = OFF
+                  La recherche du point se fait  suivant le sch‚ma donn‚
+                  en  exemple.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE 1 La rŠgle d'ARR (arrondi) est appliqu‚e avant la rŠgle
+                  ORTH.
+
+	REMARQUE 2 La rŠgle ORTH n'est pas  appliqu‚e lorsque l'on donne
+                  les num‚ros de points … joindre ( ordre SEGM en saisie
+                  clavier )
+
+	Exemple   FIGURE 25		  + = mire	 . = point saisi
+                        Pytha-Graph R910701 Page 14.85
+
+
+           /f207                                                      PA
+
+        MNEMONIQUE                                             PArallŠle
+
+        SYNTAXE   PA   :1/ PA   n1  n2  D1 ( n3 ) ( n4 )
+                        2/ PA   n1  n2  D1  n3 n4 D2 (n)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Construction  (1)  ou  intersection (2) de parallŠles.
+
+
+        DESCRIPTION Les  ni  sont  les  num‚ros  des  points consid‚r‚s.
+                  1/ n1,n2 : points de la droite origine.
+                     D1    : distance  de  la parallŠle par rapport … la
+                             droite origine.
+                     n3,n4 : points de la parallŠle (projection de n1 et
+                             n2).
+
+                  2/ n1,n2 : points   de   la   premiŠre  droite.
+                     D1    : distance de la parallŠle …  cette  premiŠre
+                             droite.
+                     n3,n4 : points   de   la   deuxiŠme  droite.
+                     D2    : distance de la  parallele …  cette deuxiŠme
+                             droite.
+                     n     : intersection  des  deux  paralleles.
+
+                  La distance Di est positive lorsqu'on  veut  tracer la
+                  parallŠle … droite du segment ni nj  parcouru  dans le
+                  sens vers nj.
+                  Si on veut une parallŠle  situ‚e  …  gauche  de ni nj,
+                  donner une distance n‚gative.
+
+	FONCTIONS ASSOCIEES  Exemple   dito IC
+
+	Exemple   FIGURE 26
+                        Pytha-Graph R910701 Page 14.86
+
+
+           /f158                                                    PADE
+
+        MNEMONIQUE                                 PArallŠles … DEssiner
+
+        SYNTAXE   PADE   <RC>  et  messages
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Dessiner  une ou  des parallŠle(s)  … un  ensemble  de
+                  segments  donn‚.
+
+        DESCRIPTION Differents  messages  guident  l'utilisateur :
+
+                  * liste des  d‚ports : donner  la  distance ( d‚port )
+                    pour la 1ere  parallŠle  par  rapport  …  la  figure
+                    d'origine , un espace , la 2eme  distance  /  figure
+                    d'origine,...
+                        Ex : d1  d2  d3 ... di
+                    cette liste d‚finit "i" parallŠles  en  mˆme  temps.
+
+                  CONVENTION DE SIGNE : signe "-" (moins) pour un d‚port
+                    sur la gaughe / au sens de parcours  de  la  figure.
+
+                  * liste des points : donner  les  num‚ros  au  clavier
+                    ou  montrer  les  points au digitaliseur, ces points
+                    d‚finissant   la  figure   d'origine  …   partir  de
+                    laquelle  les  parallŠles  sont  dessin‚es.
+
+                  Lorsque la liste de points est d‚finie, les parallŠles
+                  sont  trac‚es  toutes en mˆme  temps, sans  demande de
+                  validation.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  Les points construits avec PADE ont une  c“te Z nulle.
+
+	Exemple   FIGURE 27
+                        Pytha-Graph R910701 Page 14.87
+                        Pytha-Graph R910701 Page 14.88
+
+
+
+           /f225                                                PARALLEL
+
+        MNEMONIQUE                                             PARALLELe
+
+        SYNTAXE   PARALLEL <RC> n1 n2 <RC> D
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Construire la parallŠle … une droite d‚finie  par deux
+                  points , …  une  distance  D.
+
+        DESCRIPTION  n1 et n2 sont les points qui d‚finissent la droite.
+                  Si D est positif, la parallŠle se trouve …  droite  de
+                  la droite. Si D est n‚gatif, elle se trouve  … gauche.
+
+	FONCTIONS ASSOCIEES  Exemple   INTPARALLEL,PADE
+
+	Exemple   figure 26
+
+
+
+           /f180                                                   PAUSE
+
+        MNEMONIQUE                                                 PAUSE
+
+        SYNTAXE   PAUSE temps ( en centiŠmes de secondes )
+
+        ACCES     clavier( )
+
+        FONCTION  Introduire une pause entre deux  commandes  EXEC  pour
+                  maintenir l'affichage.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   Utilisation dans un fichier  mont‚  avec  CHARge  pour
+                  maintenir les images ( cas d'execution trop rapide).
+                        Pytha-Graph R910701 Page 14.89
+
+           /f208                                                      PE
+
+        MNEMONIQUE                                       PErpendiculaire
+
+        SYNTAXE   PE   n1 n2 n3 (n)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Construire  la perpendiculaire  …  une  droite passant
+                  par un point donn‚.
+
+        DESCRIPTION  n1	: point	de d‚part de la perpendiculaire.
+                  n2,n3 : points  de  la  droite.
+                  n     : pied  de  la  perpendiculaire.
+                  Cette commande donne aussi la distance n1 n  ainsi que
+                  le gisement de cette droite.
+
+	FONCTIONS ASSOCIEES  Exemple   dito IC
+
+	Exemple   FIGURE 28
+                        Pytha-Graph R910701 Page 14.90
+
+
+           /f073                                                    PERM
+
+        MNEMONIQUE                                           PERMutation
+
+        SYNTAXE   PERM a b         avec a et b    { X, Y, Z }
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Permuter les axes deux a deux.
+
+        DESCRIPTION  Permet de repr‚senter la projection d'un dessin sur
+		  un des 3 plans du systŠme XYZ.
+
+	FONCTIONS ASSOCIEES  Exemple   TF,SYSORI
+
+	Exemple   PERM XY =======> YXZ
+                  PERM XZ =======> ZYX
+                  PERM YZ =======> XZY
+                        Pytha-Graph R910701 Page 14.91
+
+
+           /f210                                                      PI
+
+        MNEMONIQUE                           Intersection  de ParallŠles
+
+        SYNTAXE   PI   n1 G1/n2 n3 n4 G2/n5 n6 (n)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Calculer  l'intersection  des  parallŠles … 2  droites
+                  donn‚es.
+
+        DESCRIPTION  n1 : point de la parallŠle …  la  premiŠre  droite.
+                  n2,n3 : points  de  la  premiŠre  droite.
+                  n4    : point de la parallŠle …  la  deuxiŠme  droite.
+                  n5,n6 : points  de  la  deuxiŠme  droite.
+                  n     : point  d'intersection  des parallŠles aux deux
+                          droites.
+                  G1 G2 : gisement  des  droites.
+
+                  Pour d‚finir les deux droites, donner soit deux points
+                  soit  un  point  et  le  gisement  de  chacunes de ces
+                  droites.
+
+	FONCTIONS ASSOCIEES  Exemple   dito IC
+
+	Exemple   FIGURE 29
+                        Pytha-Graph R910701 Page 14.92
+
+
+           /f080                                                    PLAN
+
+        MNEMONIQUE                                                  PLAN
+
+        SYNTAXE   PLAN  val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Preciser  le  num‚ro du plan auquel sont affect‚es les
+                  commandes de dessin ulterieures.
+
+        DESCRIPTION  On dispose de 98 plans au plus par bloc.
+                  ( 1 inf ou  eg val num sup ou  eg  98 ).
+
+                  Le num‚ro du  plan sur lequel on travaille est affich‚
+                  en permanence sur l'‚cran.
+
+	FONCTIONS ASSOCIEES  Exemple   AFPL,SPLA,DPLA,CPLA
+
+        REMARQUE  Seule cette commande  PLAN  permet  de  dessiner  dans
+                  le plan design‚ , par opposition a SPLA,AFPL,DPLA,CPLA
+                  qui ne sont jamais associ‚es  aux ordres de dessin qui
+                  leur succ‚dent.
+                        Pytha-Graph R910701 Page 14.93
+
+
+
+           /f003                                                     PLU
+
+        MNEMONIQUE                                                 PLUme
+
+        SYNTAXE   PLU  (val num)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir  la  couleur  de la  plume  utilis‚e.
+
+        DESCRIPTION  1/ palette ecran :
+                        num‚ro          couleur
+
+                           1            Noir
+                           2            Bleu marine
+                           3            Vert
+                           4            Bleu ciel
+                           5            Rouge
+                           6            Violet
+                           7            Marron
+                           8            Blanc
+                           9            Gris
+                          10            Bleu  brillant
+                          11            Vert  brillant
+                          12            Bleu  ciel  brillant
+                          13            Rouge  brillant
+                          14            Violet  brillant
+                          15            Jaune  brillant
+                          16            Blanc  brillant
+
+                  Les  plumes  2  …  16  sont  autoris‚es  …  l ' ‚cran.
+                  Les  couleurs 10 … 16 peuvent ˆtre diff‚rentes suivant
+                  les  systŠmes.
+
+                  2/ palette table tra‡ante : suivant les  caract‚risti-
+                  -ques propres  … chaque mat‚riel. En g‚n‚ral, la plume
+                  1 ne doit pas ˆtre utilis‚e.
+                  L'utilisateur   devra   configurer  les   palettes  en
+                  fonction de son mat‚riel.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	CONFIGURATION	Plumes PYTHA-GRAPH  1	2  3  4	5  6  7  8
+                  Correspondances:
+			      BENSON	    -  0  1  2	3  0  1  2
+			      DPM 29	    -  2  3  4	5  6  7  8
+                        Pytha-Graph R910701 Page 14.94
+
+
+           /f100                                                     PLZ
+
+        MNEMONIQUE                                             PLan en Z
+
+        SYNTAXE   PLZ  val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Donner  la  valeur  par d‚faut du Z (= valnum) pour la
+                  saisie de points au clavier ou au digit.
+
+        DESCRIPTION    Z  s'exprime  en  unit‚s  utilisateur . En saisie
+	          clavier , donner  PLZ puis  l'ordre  XYZ  ou XY et les
+		  les  valeurs  de X  et  Y  seulement . Si on donne une
+		  valeur  Z  elle  sera  prise en compte  pour  le point
+		  consider‚ , mais au prochain  Z  non exprim‚, c'est la
+		  valeur de PLZ qui sera appliqu‚e.
+
+                  En saisie digit, la  valeur  de  PLZ  est  associ‚e  …
+                  chaque  couple ( point ) X , Y.
+
+	FONCTIONS ASSOCIEES  Exemple   XYZ
+
+
+           /f011                                                    POIN
+
+        MNEMONIQUE                                   afficher les POINts
+
+        SYNTAXE   POIN (p)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Faire  apparaŒtre  les points et ‚ventuellement  leurs
+                  num‚ros.
+
+        DESCRIPTION  p  =  pas  de  la  num‚rotation ( 1  par  d‚faut ).
+                  Si  p  est omis, et que les points sont num‚rot‚s,tous
+                  leurs num‚ros sont affich‚s (p=1 par d‚faut).
+
+                  Il est affich‚ les num‚ros tous les "p" points, et non
+                  les num‚ros multiples de "p".
+                  EX : p=2  affichage des num‚ros tous les  2 points, et
+                  non des num‚ros pairs.
+
+                  Pour afficher seulement les points,sans leurs num‚ros,
+                  donner une grande valeur a p.
+
+                  Fonction  de  type  "BASCULE"  :  premier  appel =  ON
+                                                    deuxiŠme appel = OFF
+                  Si CLS apr‚s affichage, il  faut  envoyer deux fois la
+                  commande pour r‚afficher.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   POIN 500 : afficher les points et ‚crire 1 num‚ro tous
+                  les 500 points.
+                        Pytha-Graph R910701 Page 14.95
+
+
+
+           /f194                                                POINCORZ
+
+        MNEMONIQUE                                POINts de COoRdonn‚e Z
+
+        SYNTAXE   POINCORZ
+
+        ACCES     clavier( )
+
+        FONCTION  Faire   apparaŒtre   la   coordonn‚e   Z  des  points.
+
+	DESCRIPTION  La coordonn‚e Z est positionn‚e selon les consignes
+		  fournies par les paramŠtres de CALECRITURE (voir depz)
+
+                  Fonction  de  type  "BASCULE"  :  premier  appel =  ON
+                                                    deuxiŠme appel = OFF
+                  Si CLS apr‚s affichage, il faut  envoyer  deux fois la
+                  commande pour r‚afficher.
+
+	FONCTIONS ASSOCIEES  Exemple   ECRIZ
+
+
+
+           /f136                                                    PSYM
+
+        MNEMONIQUE                                        Print SYMboles
+
+        SYNTAXE   PSYM (nom liste)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Faire imprimer  la liste  des symboles  utilis‚s, avec
+                  leurs caract‚ristiques : num‚ro , coef , echx...
+
+          DESCRIPTION  nom liste =  nom  qu'on  lui  attribue.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE  1  La liste est cr‚‚e en fichier disque.
+
+	REMARQUE  2  Il	faut  passer  sous   le  systŠme  d'exploitation
+                  pour avoir  un  listing  sur  l'imprimante.
+
+	REMARQUE  3  Par d‚faut, le nom liste est PSYM.LST
+
+	Exemple   PSYM LISTSYMB
+                  passer sous systŠme ( taper  FIN  et  confirmer).
+                  en  systŠme  MS DOS  : PRINT  LISTSYMB
+                                      ou PRINT A:LISTSYMB
+                        ( en  pr‚sisant  le  lecteur  de  disque ).
+                        Pytha-Graph R910701 Page 14.96
+
+
+           /f024                                                    PURG
+
+        MNEMONIQUE                                                PURGer
+
+        SYNTAXE   PURG
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Compresser la  pile  des  commandes  de  dessin.
+
+        DESCRIPTION    Cette  commande  optimise  l'occupation   m‚moire
+                  en effectuant un  "tassement"  des  ordres  de  dessin
+                  aprŠs suppressions de s‚quences par LCOM par  exemple.
+                  Ainsi, il est conseill‚  de faire PURG avant de sauver
+                  un dessin.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE PURG est execut‚ automatiquement aprŠs la commande DEBG
+
+
+           /f139                                                    RAPX
+
+        MNEMONIQUE                                 lignes de RAPpel en X
+
+        SYNTAXE   RAPX (plume)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Tracer  des  traits  de  rappel …  partir d'un dessin,
+                  suivant l'axe des X.
+
+        DESCRIPTION  plume = couleur de la plume … utiliser
+                  Par d‚faut, plume = 3
+                  Cas  des  cercles : seuls  les  centres sont rappel‚s.
+
+	FONCTIONS ASSOCIEES  Exemple   RAPY
+
+
+
+           /f140                                                    RAPY
+
+        MNEMONIQUE                                 lignes de RAPpel en Y
+
+        SYNTAXE   RAPY (plume)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Tracer  les  traits  de rappel  …  partir d'un dessin,
+                  suivant l'axe des Y.
+
+        DESCRIPTION  plume : couleur de la plume … utiliser .
+                  Par d‚faut, plume = 3
+                  Cas  des  cercles : seuls  les  centres sont rappel‚s.
+
+	FONCTIONS ASSOCIEES  Exemple   RAPX
+                        Pytha-Graph R910701 Page 14.97
+
+
+           /f002                                                    RAYO
+
+        MNEMONIQUE                                                 RAYOn
+
+        SYNTAXE   RAYO val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir le rayon de  la  zone  de  recherche  pour  la
+                  saisie au digitaliseur (modes digit et clavier-digit).
+
+	DESCRITION  Le	rayon  s'exprime  en   unit‚s  ‚cran. Sa  valeur
+		  s'affiche  en  permanence  sur  l'‚cran. La valeur par
+		  d‚faut est d‚finie dans DEPART.P65 .
+
+                  On recherche s'il existe d‚j…  un point  dans la  zone
+                  d‚finie par R, autour de la  position  de la  mire. Si
+                  oui la mire s'accroche … ce point, sinon le point cr‚e
+                  … la position de la mire.( en phase de saisie ).
+
+                  RAYO est ajust‚ en  fonction  de  l'‚chelle de fa‡on …
+                  rester constant en unit‚s ‚cran. Par exemple, RAYO = 5
+                  correspond  … 5 mŠtres au 1/1000, 2m50 au 1/500  et 10
+                  au 1/2000 : d‚finition du pixel dans FECR.P65.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	SAISIE DIGIT	R = num‚ro case / 10
+
+        REMARQUE  En r‚alite, R est associ‚ … un  carr‚ de  recherche et
+                  non … un  cercle, pour  un  calcul  plus  rapide. Voir
+                  figure ci-dessous.
+
+	Exemple   FIGURE 30	     __________
+                                     !    +1  !
+                                 2 R !   . P  !
+                                     !        !    +2
+                                     !________!
+                                         2 R
+                  mire 1 : on pointe P
+                  mire 2 : on  cr‚e  un  autre  point  si  SAIS  est  en
+                           fonction (sur position ON).
+
+
+           /f112                                                     RAZ
+
+        MNEMONIQUE                                         Remise A Z‚ro
+
+        SYNTAXE   RAZ
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Remettre  …  z‚ro  la  pile  des commandes  de dessin.
+
+        DESCRIPTION  Permet de nettoyer la m‚moire  sans  red‚marrer  le
+                  programme. Un  message  demande  la  confirmation.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	RESTRICTION  Cette  commande  est  d‚conseiller lorsqu'on est en
+                  dessin courant ( Utiliser  $ZER  qui  r‚initialise les
+                  attributs graphiques ). Utile sous CFTE .
+                        Pytha-Graph R910701 Page 14.98
+
+
+
+           /f221                                                    RCDR
+
+        MNEMONIQUE                                 Raccord Cercle DRoite
+
+        SYNTAXE   RCDR   <RC>   n1 n2  n3 n4   <RC>   r  ( n5 n6 n7 )
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Raccorder deux droites par un arc  de cercle  de rayon
+                  donn‚.
+
+	DESCRIPTION n1 n2 : points de la premiŠre droite.
+		    n3 n4 : points de la deuxiŠme droite.
+                    r   : rayon du cercle de raccordement.
+
+                  Cette commande construit les trois points ( n5 n6 n7 )
+                  qui permettent de  raccorder les  deux droites  par un
+                  arc de cercle. N5 est le  centre  du  cercle, n6 et n7
+                  sont les points de raccordement ( Cf exemple ).
+
+	FONCTIONS ASSOCIEES  Exemple   RCER
+
+	Exemple   FIGURE 31
+                        Pytha-Graph R910701 Page 14.99
+
+
+           /f147                                                    RCER
+
+        MNEMONIQUE                          Raccord par un arc de CERcle
+
+        SYNTAXE    RCER   r
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Raccorder  des  segments   par  des  arcs  de  cercles
+                  ( conges ).
+
+	DESCRIPTION r =  rayon	de  l'arc  de  cercle  (positif ou nul).
+                  Les segments seront reli‚s  2 …  2 par  un arrondi  de
+                  rayon r.
+                  Pour ne plus tracer ces arrondis,taper RCER 0 (r = 0).
+                  Lorsqu'on demandera des symboles, ils  seront dessin‚s
+                  … l'intersection  des 2  segments.
+
+
+	FONCTIONS ASSOCIEES  Exemple   Fonctions de dessin:SEGM,SYMB...
+
+
+
+           /f154                                                    RECT
+
+        MNEMONIQUE                                             RECTangle
+
+        SYNTAXE   RECT
+
+	ACCES	  digitaliseur( ) souris( )
+
+        FONCTION  Dessiner un  rectangle  en  d‚finissant  son coin  bas
+                  gauche  et  son  coin  haut  droit.
+
+        DESCRIPTION Pointer en premier le coin  bas  gauche  puis  le coin
+                  haut droit.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+
+
+           /f030                                                    REMA
+
+	MNEMONIQUE						REMArque
+
+	SYNTAXE   REMA
+
+	ACCES
+
+	FONCTION  Mettre des commentaires dans un fichier de commandes.
+
+	DESCRIPTION REMA doit se trouver en tˆte de ligne.
+
+	FONCTIONS ASSOCIEES  Exemple   cette commande  peut ˆtre remplac‚e par le
+	caractŠre di‚se .Les caractŠres … partir de di‚se sont ignor‚s.
+                        Pytha-Graph R910701 Page 14.100
+
+
+           /f097                                                    RENU
+
+        MNEMONIQUE                                           RENUm‚roter
+
+        SYNTAXE   RENU valnum
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Renum‚roter  les points  …  partir  de "val num", avec
+                  un pas de 1.
+
+        DESCRIPTION Le plus grand  num‚ro  possible  pour  un  point est
+                  999999 . Attention … la coh‚rence de la renum‚rotation
+                  Si "val num" est  n‚gatif, les points ayant  un num‚ro
+                  positif sont tous renum‚rot‚s  avec la  valeur " -3 ".
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  les  points  de calage de texte et de cotation ne sont
+                  pas renum‚rot‚s  ( ils restent … -1 et -4 : cf LC).
+
+
+
+
+           /f036                                                  REPORT
+
+	MNEMONIQUE
+
+	SYNTAXE
+
+	ACCES
+
+	FONCTION  reporter des points
+
+	DESCRIPTION  Les fichiers de mise en page et des points doivent
+		     exister. La commande appelle l'ancien module P64 .
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+
+
+           /f151                                                   RESTZ
+
+        MNEMONIQUE                                           RESTaurer Z
+
+        SYNTAXE   RESTZ
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Restaurer l'‚criture de la coordonn‚e Z sur le dessin.
+
+        DESCRIPTION Donner le num‚ro ou cliquer la point dont le Z est …
+		  restaurer … sa derniŠre position.
+
+	FONCTIONS ASSOCIEES  Exemple   SUPZ
+                        Pytha-Graph R910701 Page 14.101
+
+
+
+           /f219                                                    RZSF
+
+        MNEMONIQUE             Remise … Z‚ro des totaliseurs de SurFaces
+
+        SYNTAXE   RZSF <RC>
+
+        ACCES     clavier( )
+
+        FONCTION  Remettre  …  z‚ro  les  totaliseurs  de  surfaces.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple   SP,SL
+
+
+
+           /f102                                                    SAIS
+
+        MNEMONIQUE                                                SAISie
+
+        SYNTAXE   SAIS
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Autoriser  la  saisie des points en mode digitaliseur.
+
+        DESCRIPTION Commande de type  "BASCULE"  :  premier  appel =  ON
+                                                    deuxiŠme appel = OFF
+                  En saisie (ON), le mot SAIS  est  affich‚  …  l'‚cran.
+                  Lors de la recherche  d'un  point, s'il  n'existe  pas
+                  dans  la zone determin‚e par le rayon (RAYO), le point
+                  est g‚n‚r‚.
+
+	FONCTIONS ASSOCIEES  Exemple   tous les ordres de dessin.
+
+
+
+
+           /f131                                                SAUVEDES
+
+        MNEMONIQUE                                      SAUVEr un DESsin
+
+        SYNTAXE   SAUVEDES ( nom ) <RC>
+
+        ACCES     clavier( )
+
+        FONCTION  Sauver un dessin en ASCII code  MCG, dans le  systŠme.
+
+	DESCRIPTION  Le dessin est affich‚  et sauv‚ au fur  et … mesure
+		  de l'ex‚cution  des  commandes . Il en r‚sulte que les
+		  commandes SBLO et SPLAN sont prises en compte.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  Le  fichier  peut  ˆtre  recharg‚  …   l'aide   de  la
+		  commande CHAR.
+                        Pytha-Graph R910701 Page 14.102
+
+
+
+           /f128                                                SAUVEDXF
+
+        MNEMONIQUE                        SAUVEr le dessin au format DXF
+
+        SYNTAXE   SAUVEDXF  nom fichier (‚chelle)
+
+        ACCES     clavier( )
+
+        FONCTION  Sauver un dessin pour le module P22 : transfo  en  DXF
+                  ( Autocad ).
+
+        DESCRIPTION  Par d‚faut , l'‚chelle  est … 1000. Elle  permet de
+	             positionner  les  ‚critures des num‚ros / altitudes
+		     par rapport au point en mm papier. Voir SAUVEDES .
+
+	FONCTIONS ASSOCIEES  Exemple   DXF
+
+
+
+           /f132                                                SAUVEXYZ
+
+        MNEMONIQUE                                            SAUVEr XYZ
+
+        SYNTAXE   SAUVEXYZ ( nom )  <RC>
+
+        ACCES     clavier( )
+
+	FONCTION  Sauver les points du	dessin en ASCII dans le systŠme.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  Le fichier peut ˆtre recharg‚  … l'aide de la commande
+                  LFXY.
+
+
+           /f116                                                    SBLO
+
+        MNEMONIQUE                                     S‚lectionner BLOc
+
+        SYNTAXE   SBLO (i (j (......)))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Selectionner un ou plusieurs blocs.
+
+        DESCRIPTION AprŠs l'ordre SBLO , suivre les instructions  ‚cran.
+	          Cette  commande permet l'affichage s‚lectif de bloc(s)
+		  mais  non d'y  dessiner, sauf dans  le cas  ou il  y a
+		  concordance exacte entre le num‚ro du bloc s‚lectionn‚
+		  et celui du bloc affect‚ aux  commandes de  dessin par
+		  la commande BLOC.
+
+	FONCTIONS ASSOCIEES  Exemple   BLOC,AFBLO,DBLO,CBLO
+
+        REMARQUE  ZOOM , CENT , TF  g‚n‚rent  un  EXEC , ainsi  que  les
+                  de fenˆtre-‚cran.
+                        Pytha-Graph R910701 Page 14.103
+
+
+
+           /f213                                                      SD
+
+        MNEMONIQUE                                      Station  D‚cal‚e
+
+        SYNTAXE   SD <RC>  n1 n2 n3 (n)  <RC>   D  A  <RC>
+
+        ACCES     clavier( ) digitalisateur( )
+
+	FONCTION  Construire un point (n) lanc‚ … partir du point n1.
+
+	DESCRIPTION N est lanc‚ …  partir  de  n1  suivant une direction
+                  faisant un angle A par rapport … la droite (n2 n3), et
+		  … une distance D de n1.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   FIGURE 32
+		  D = 40 m
+                  A = 30 grades
+                        Pytha-Graph R910701 Page 14.104
+
+
+           /f001                                                    SEGM
+
+        MNEMONIQUE                                               SEGMent
+
+        SYNTAXE   SEGM
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Tracer  un  (des)  segment(s).
+
+        DESCRIPTION  Suivant le mode de saisie, les messages indiqueront
+	          comment d‚finir  le  segment :  1)saisie  clavier : on
+		  donnera les num‚ros  des  points origine  et extr‚mit‚
+		  ni.   2)saisie digit   : on pointera  avec la mire les
+		  points concern‚s.
+
+                  On  peut  saisir un maximun de 100 points dans le mˆme
+                  ordre SEGM.
+                  Le rappel de cet ordre  est  possible  en  tapant  sur
+                  la touche RETURN (1), aprŠs une validation ou un ordre
+                  comme HX par exemple .
+                  (1)  ou  bouton  rouge  en  mode  Digitaliseur.
+
+                  SAISIE D'UNE LISTE DE POINTS pour SEGM, dans les trois
+                  modes :
+                  SAISIE : * clavier       : num‚ros  des  points  et RC
+			   * digit/mouse   : bouton  rouge ou gauche
+                           * clavier-digit : flŠches et RC
+
+                  FIN DE LA LISTE :
+                           * clavier       : RC
+			   * digit/mouse   : bouton blanc ou droit
+                           * clavier-digit : signe  " - "
+
+                  VALIDATION DE LA LISTE :
+		     * clavier : RC ( N	pour  NON )
+		     * digit/mouse : rouge/gauche=Oui ( blanc/droit=Non)
+		     * clavier-digit : RC ( - pour NON )
+
+	FONCTIONS ASSOCIEES  Exemple   TRAI,SYMB,PLU,ORTH
+
+        REMARQUE  En mode digitaliseur, s'il  n'y  a encore aucun point,
+                  une "initialisation"  automatique  s'effectue  par  la
+                  cr‚ation  de  2  points  de coordonn‚es (10, 10, 0) et
+                  ( FORX -10 , FORY -10,0 )
+                  avec  FORX  et  FORY = format  de  l'‚cran  en X et Y.
+
+	Exemple   TRAI 0
+                  SYMB 0
+                  SEGM
+                                ===) on  fait  de la  saisie  de points.
+                  TRAI 1
+                  SYMB 0
+                  SEGM
+                                ===) on  trace  des  traits.
+                        Pytha-Graph R910701 Page 14.105
+
+
+           /f211                                                      SF
+
+        MNEMONIQUE                                               SurFace
+
+	SYNTAXE   SF  (limcer)	   RC
+                  ni nj .......    RC
+                  nk ......        RC
+                  RC                            ( RC = retour  chariot )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Calculer  des  surfaces.
+
+	DESCRIPTION Donner la liste  de points qui composent la surface.
+		  Le  r‚sultat	est  affich‚. Si la liste  est vide , la
+		  derniŠre liste saisie est utilis‚e.
+
+                  La commande LIMCER fixe … partir de quelle valeur  les
+		  num‚ros des points seront consid‚r‚s comme des cercles.
+		  limcer s'il est fourni a priorit‚ su LIMCER.
+		  Pour	d‚duire  une portion  de cercle d'une surface,il
+		  faut affecter le nø du centre du signe -
+
+
+	FONCTIONS ASSOCIEES  Exemple   LIMCER
+
+	Exemple   FIGURE 33
+                        Pytha-Graph R910701 Page 14.106
+
+
+
+           /f027                                                    SIZT
+
+        MNEMONIQUE                                           SIZe Textes
+
+        SYNTAXE   SIZT ( HX ( HY ( ANG ( ALPH ( COEF ) ) ) ) )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Indiquer les  caract‚ristiques  de  tailles  et  forme
+                  des  symboles  et  caractŠres  utilis‚s.
+
+        DESCRIPTION   SIZT   est une commande qui permet de donner leurs
+	          valeurs  aux  5  paramŠtres  suivants:
+		  HX   :  taille en X
+		  HY   :  taille en Y
+		  ANG  : angle / OX
+		  ALPH : inclinaison / OY ( pour italique )
+		  COEF : coefficient g‚n‚ral de d‚formation.
+
+
+	FONCTIONS ASSOCIEES  Exemple   LCOM,MSIZ,HX...
+
+
+
+           /f218                                                      SL
+
+        MNEMONIQUE               Surface avec r‚sultat sur Liste r‚duite
+
+        SYNTAXE   SL (Cf limcer)
+                  d‚signation du lot ( texte ou num‚ro )
+                  points du p‚rim‚tre ni
+                  ......................
+                  ......................
+		  <RC>		   fin du lot
+                  d‚signation du second lot
+                  points
+                  ......................
+                  <RC>
+                  <RC>             fin de la commande SL
+
+        ACCES     clavier( )
+
+        FONCTION  Calculer des surfaces avec r‚sultats sur liste r‚duite
+                  ( Cf exemple ).
+
+	DESCRIPTION Cette commande donne le num‚ro du lot, la surface du
+		  lot , la surface cumul‚e et le nombre de points.
+
+	RAPPEL	  Si l'on d‚sire une  sortie sur l' imprimante d‚finie au
+		  lancement de P65 taper IMPR avant de lancer SL.
+
+	FONCTIONS ASSOCIEES  Exemple   SP . voir SF .
+
+	Exemple   LOT 1 	    1.5 m2, cumul‚e    1.5 m2,	6 points
+                  LOT 2              .4 m2, cumul‚e    1.9 m2, 12 points
+
+                      2 LOTS   12 POINTS
+                        Pytha-Graph R910701 Page 14.107
+
+
+
+           /f037                                                  SOURIS
+
+        MNEMONIQUE                                                SOURIS
+
+        SYNTAXE   SOURIS <RC>
+
+        ACCES     clavier( )
+
+	FONCTION  Mettre la souris on/off vis a vis du logiciel.
+
+	DESCRIPTION Fonction  de  type	"BASCULE"   :  premier appel OFF
+						     deuxiŠme appel   ON
+		    Si la souris (MOUSE) est on (logiciel) et valid‚e au
+		    niveau du systŠme (driver charg‚), elle est mise  en
+		    fonction en actionnant l'une des touches fleches  de
+		    d‚placement du clavier.
+		    r‚ponses avec MOUSE : gauche Oui, droite Non
+		    Pour reprendre la main au clavier taper la commande.
+		    L'appel … MOUSE peut ˆtre fait sous la commande DIG.
+		    Dans certains cas il peut ˆtre n‚cessaire de mainte-
+		    nir le bouton correspondant pour valider la r‚ponse:
+		    d‚pend des performances du CPU.
+		    MOUSE n'a pas acc‚s … l'‚cran externe, il faut dans
+		    ce cas une tablette … digitaliser.
+		    L'acc‚s … mouse est autoris‚ sous DIGitaliseur.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+
+           /f217                                                      SP
+
+        MNEMONIQUE                                             Surface P
+
+        SYNTAXE   SP   mˆme syntaxe que pour la commande SL ( seules les
+                  listes sont diff‚rentes ).
+
+        ACCES     clavier( )
+
+        FONCTION  Calcul de surface avec r‚sultats  sur liste d‚taill‚e.
+
+        DESCRIPTION   Cette commande calcule la surface de  chaque  lot,
+	          en donnant les coordonn‚es  de tout  les  points ainsi
+		  que la  distance entre chaque sommet et leur gisement.
+
+	RAPPEL	  voir la commande SL .
+
+	FONCTIONS ASSOCIEES  Exemple   SL
+
+        REMARQUE  "SP" donne le rayon de l'arc de cercle si le num‚ro du
+                  sommet est sup‚rieur …  la  valeur  de  LIMCER ( Cf la
+		  commande SF et SL ).
+                        Pytha-Graph R910701 Page 14.108
+
+
+
+           /f035                                                    SPLA
+
+        MNEMONIQUE                                    S‚lectionner PLAns
+
+        SYNTAXE   SPLA  ( i ( j ...))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  S‚lectionner un ou plusieurs plans.
+
+        DESCRIPTION Cette commande permet l'affichage s‚lectif de plan(s)
+                  mais pas  d'y  dessiner, sauf  s'il  y  a  concordance
+                  exacte entre le num‚ro de bloc et de plan s‚lectionn‚s
+                  et  ceux  du bloc et du plan affect‚s aux commandes de
+                  dessin  par  BLOC  et PLAN.
+
+                  Les  commandes  " efficaces "  sur  le  ou les plan(s)
+                  s‚lectionne(s)   sont  uniquement  celles  de  gestion
+                  d'‚cran   ZOOM , CENT , EXEC , EXE , DEPECRAN
+
+
+	FONCTIONS ASSOCIEES  Exemple   PLAN,AFPL,CPLA,DPLA
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.109
+
+
+           /f204                                                      ST
+
+        MNEMONIQUE                                               STation
+
+        SYNTAXE   ST   n1 n2 D A (n)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Effectuer des calculs de points lanc‚s.
+
+	DESCRIPTION	Xn = X1 + D*cos(Gn)
+                        Yn = Y1 + D*cos(Gn)
+                  avec  Gn = G(n1n2) +  A , et D = distance  de  n1 … n.
+                  Si A est nul ( 0 ou rien ), n est align‚  sur  n1  n2.
+                  Si D est nul, n = n1.
+                  S'il  y  a  plusieurs  points  … calculer, on ‚crira :
+                         ST n1 n2    <RC>
+                           D A (n)   <RC>
+                           D A (n)   <RC>
+                            ....
+			    <RC>       fin de la commande
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	RAPPEL	   G = GISEMENT : voir fonction DI
+
+	Exemple   FIGURE 34
+                        Pytha-Graph R910701 Page 14.110
+
+
+           /f105                                                    STAT
+
+        MNEMONIQUE                                                STATus
+
+        SYNTAXE   STAT
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Donner l'‚tat de l'occupation m‚moire.
+
+        DESCRIPTION  STAT indique la place occup‚e  par la  fonte  et le
+                  dessin en cours.
+                  Ces  indications  apparaissent  … l'‚cran en 2 lignes.
+                  Lire  les  donn‚es  num‚riques  par  couple :
+                        1Šre = nombre  r‚el  pour  le dessin en m‚moire.
+			2eme = nombre	maxi   autoris‚
+                  La   ligne   1   concerne   les   symboles :
+                        * nombre     de     points.
+                        * taille de la pile dessin.
+                  La ligne 2 concerne le dessin    :
+                        * nombre    de      points.
+                        * nombre   de    commandes.
+                        * taille de la pile dessin.
+
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  Pour   v‚rifier   un   dessin  …  partir  d'une  phase
+                  d‚termin‚e, demander  STAT pour connaŒtre le nombre de
+                  commandes (nc), puis DEBG i (i inf ou = nc). Le dessin
+                  sera alors affich‚  en  pas  …  pas  …  partir  de  la
+                  commande num‚ro i.
+
+
+           /f244                                                    SUPP
+
+        MNEMONIQUE                                       SUPprimer Point
+
+        SYNTAXE   SUPP val num
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Supprimer le point design‚.
+
+        DESCRIPTION   Val num = num‚ro du point  … supprimer. La suppre-
+	          ssion est effective si le point est inutilis‚. En fait
+		  le point est conserv‚  en  m‚moire avec un num‚ro nul;
+		  il est  ‚limin‚ dans le fichier g‚n‚r‚ par $SDE ...
+
+	FONCTIONS ASSOCIEES  Exemple
+                        Pytha-Graph R910701 Page 14.111
+
+
+
+           /f095                                                    SUPZ
+
+        MNEMONIQUE                                           SUPprimer Z
+
+        SYNTAXE   SUPZ <RC>
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Supprimer  l'‚criture  de  Z  sur  le  dessin.
+
+	DESCRIPTION Donner le num‚ro ou cliquer le point dont le Z est …
+                  supprimer.
+
+	FONCTIONS ASSOCIEES  Exemple   RESTZ
+
+	REMARQUE  La coordonn‚e Z du point n'est  pas perdue .
+
+
+           /f046                                                    SYMB
+
+        MNEMONIQUE                                               SYMBole
+
+        SYNTAXE   SYMB (i (j (k (i (...)))))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  S‚lectionner  les  symboles  …  repr‚senter … un (des)
+                  point(s) de SEGM (ou de LISS).
+
+        DESCRIPTION   A chaque point d‚fini  par les fonctions  g‚n‚rant
+		  des listes, les symboles s‚lectionn‚s par SYMB  seront
+		  represent‚s. On  peut s‚lectionner au  maximum 20 sym-
+		  boles en une fois.  Pour ne plus dessiner de symboles,
+		  s‚lectionner le symbole 0 .
+
+	FONCTIONS ASSOCIEES  Exemple   SEGM,TRAI,PLU,EPT1
+
+        REMARQUE  SYMB  a  trois  attributs : EPT1 , TRAI , PLU.
+
+
+
+           /f250                                                  SYSORI
+
+        MNEMONIQUE                            retour au SYStŠme ORIginal
+
+        SYNTAXE   SYSORI <RC>
+
+        ACCES     clavier( )
+
+        FONCTION  Permet de retourner au systŠme original XYZ  aprŠs les
+                  commandes TF.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple   TF
+                        Pytha-Graph R910701 Page 14.112
+
+
+
+           /f044                                                   TALUS
+
+        MNEMONIQUE                                      dessin des TALUS
+
+        SYNTAXE   TALUS
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Dessiner des talus.
+
+	DESCRIPTION Cette  commande demande deux listes : haut et bas du
+		  talus. Les  deux listes doivent ˆtre d‚crites  dans le
+		  mˆme sens ( droite ou gauche ). Par exemple , le talus
+		  est  d‚crit par les points 1 … 5, 1 … 4 = haut , 4/5/1
+		  = bas. A la demande haut talus , pointer les points 1,
+		  2, 3, 4 fermer la liste . A  la  commande  bas  talus,
+		  pointer  les points 5 et 1, fermer la liste . Le motif
+		  est  appliqu‚  …  la	liste 1, 2, 3, 4 . Le masque est
+                  constitu‚ par la liste 1, 2, 3, 4, 5, 1.
+		  Si la liste bas talus est nulle, masque n'est pas vali-
+		  d‚ :les barbes sont toujours dessin‚es, ind‚pendamment
+		  du masque.
+
+	FONCTIONS ASSOCIEES  Exemple   TRAI3, MASQUE
+
+	Exemple   talus 1 … 4, haut = 1 … 4, bas = 4, 1
+                  haut, liste 1,2,3,4
+                  bas , liste 1
+
+
+
+           /f245                                                   TEMPS
+
+	MNEMONIQUE
+
+	SYNTAXE
+
+	ACCES
+
+	FONCTION  donner le temps d'ex‚cution de la commande de dessin.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+                        Pytha-Graph R910701 Page 14.113
+
+
+           /f107                                                    TEXC
+
+        MNEMONIQUE                                          TEXTe Centre
+
+        SYNTAXE   TEXC
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Inscrire  un  texte dans un dessin, avec justification
+                  par rapport … son centre.
+
+
+        DESCRIPTION  L'origine  du  texte  est  son  centre , qu'il faut
+	          d‚signer par ses  coordonn‚es  au clavier  ou  avec la
+		  mire du digit : au digit, la rŠgle d'ARR est appliqu‚e
+		  La  r‚daction  du  texte  se  fait  au  clavier. Apr‚s
+		  l'affichage …  l'‚cran, on peut  rappeler la  fonction
+		  TEXC par RETURN. Si on ne donne pas  un nouveau  texte
+		  … ‚crire, le dernier entr‚ est rappel‚ lorsqu'on  tape
+		  … nouveau RETURN.
+
+        FONCTIONS ASSOCIEES  : 	TEXD,TEXG,TEXJ,DEPT,HX,HY,ANG,ALPHA,COEF
+	                        ,MSIZ.
+
+	Exemple   FIGURE 35 a			A B+C D
+                                        + (====) point de calage
+                        Pytha-Graph R910701 Page 14.114
+
+           /f121                                                    TEXD
+
+        MNEMONIQUE                                   TEXTe cal‚ … Droite
+
+        SYNTAXE   TEXD
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Inscrire un texte dans un  dessin, avec  justification
+                  … droite.
+
+        DESCRIPTION Voir TEXC .
+                  La seule diff‚rence est  la  position  de l'origine du
+                  texte.
+
+	FONCTIONS ASSOCIEES  Exemple   dito TEXC.
+
+	Exemple   FIGURE 35 b			A B C D _!
+                                        _! (====) point de calage
+                        Pytha-Graph R910701 Page 14.115
+
+
+           /f029                                                    TEXG
+
+        MNEMONIQUE                                   TEXTe cal‚ … Gauche
+
+        SYNTAXE   TEXG
+
+        ACCES     clavier( ) digitaliseur( )
+
+
+        FONCTION  Inscrire un texte dans un  dessin , avec justification
+                  … gauche.
+
+        DESCRIPTION Voir TEXC.
+                  La seule diff‚rence  est  la  position de l'origine du
+                  texte.
+
+	FONCTIONS ASSOCIEES  Exemple	dito TEXC.
+
+	Exemple   FIGURE 35 c		     !_ A B C D
+                                !_  (====) point de calage
+                        Pytha-Graph R910701 Page 14.116
+
+
+           /f122                                                    TEXJ
+
+        MNEMONIQUE                         TEXTe Justifi‚ entre 2 points
+
+        SYNTAXE   TEXJ
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Justifier un texte entre 2 points.
+
+        DESCRIPTION Saisir au clavier ou au digitalisateur les 2 points.
+                  Si le texte  est  trop long  pour  tenir  entre  les 2
+                  points, les lettres se chevaucheront.
+
+	FONCTIONS ASSOCIEES  Exemple   dito TEXC
+
+	Exemple   FIGURE 35 d		      !_A  B  C  D_!
+                                !_ et _! (====) points de calage
+                        Pytha-Graph R910701 Page 14.117
+
+
+           /f060                                                      TF
+
+        MNEMONIQUE                                 TransFormation d'axes
+
+        SYNTAXE   TF   n1 n2 (x1 y1 x2 y2)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Effectuer  une  transformation   du   systŠme   d'axes
+                  au niveau de l'image ‚cran; les anciennes  coordonn‚es
+                  sont conserv‚es.
+
+	DESCRIPTION C'est  un  changement   de   base   (  homoth‚tie  =
+                  translation + rotation + changement d'‚chelle ).Donner
+                  2   points  (  leurs   num‚ros   et  leurs   nouvelles
+                  coordonn‚es  ‚ventuellement ).
+
+		  La  transformation   effectu‚e   est	compos‚e  de  la
+                  translation n1 n'1 et de la rotation ( OX,n1n2 ). Tout
+                  les points du dessin sont  transform‚s. La rotation ou
+                  la  translation  peuvent  ˆtre  nulles. Le  centre  de
+                  l'image est conserv‚.
+
+                  Les coefficients  de  transformation  successifs  sont
+                  m‚moris‚s  par le programme . Les  unit‚s  utilisateur
+		  sont conserv‚es , mˆme si le coefficient d'‚chelle est
+		  diff‚rent de 1. Apr‚s TF les XY sont celles du systŠme
+		  utilisateur pour les commandes XY, XYZ, LFXY et $LXY.
+		  Les valeurs  fournies  pour  les commandes DXY et DXYZ
+		  sont  exprim‚es dans  le nouveau  systŠme ( parall‚les
+		  aux axes ‚cran) .
+
+	FONCTIONS ASSOCIEES  Exemple   ANG , TFIX
+
+	Exemple   TF n1 n2    (====)	TF n1  n2  0  0  D  ( n1 n2 )  0
+                  La droite n1 n2 est le nouvel  axe  OX. L'image  reste
+                  centr‚e.
+                        Pytha-Graph R910701 Page 14.118
+
+
+
+           /f178                                                    TFIX
+
+        MNEMONIQUE                                   Transformation FIXe
+
+        SYNTAXE   TFIX
+
+        ACCES     clavier( )
+
+        FONCTION  Idem  TF , sauf  que   toutes  les  coordonn‚es   sont
+                  transform‚es
+
+        DESCRIPTION   C'est  un  changement  de  base   (  homoth‚tie  =
+	          translation + rotation + changement d'‚chelle ).Donner
+		  2   points  (  leurs   num‚ros   et  leurs   nouvelles
+		  coordonn‚es  ‚ventuellement ).
+
+                  La   transformation   effectu‚e  est  compos‚e  de  la
+                  translation n1 n'1 et de la rotation ( OX,n1n2 ). Tout
+                  les points du dessin sont  transform‚s. La rotation ou
+                  la  translation  peuvent  ˆtre  nulles. Le  centre  de
+                  l'image est conserv‚.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+
+           /f247                                                  TFXYGE
+
+        MNEMONIQUE                      TransFormation de XY en GEod‚sie
+
+        SYNTAXE   TFXYGE  <RC>  n1  x1 y1  <RC>  n2  x2 y2  <RC> ...
+
+        ACCES     clavier( )
+
+        FONCTION  Transformation   fixe   sur  au  moins  trois  points.
+
+        DESCRIPTION ni    : num‚ro du point connu.
+                  xi yi : nouvelles coordonn‚es.
+                  Cette commande permet  de  recaler  un  plan  sur  des
+                  points connus ( les points de calage doivent  ˆtre  en
+		  m‚moire ). Tous  les	points	sont transform‚s dans le
+                  nouveau systŠme.
+
+	FONCTIONS ASSOCIEES  Exemple   CALDIGIT, TF
+                        Pytha-Graph R910701 Page 14.119
+
+
+
+           /f222                                                     TGC
+
+        MNEMONIQUE                                  TanGente … un Cercle
+
+        SYNTAXE   TGC  <RC>  n1  <RC>  n2  <RC>  R  <RC>
+
+        ACCES     clavier( ) digitalesateur( ) souris( )
+
+        FONCTION  Contruire le point  de  tangence  … une  droite  et un
+                  cercle.
+
+        DESCRIPTION  n1 est l'origine de la tangente , n2  le  centre du
+	          cercle et R le  rayon. Si  R  est  positif , le  point
+		  construit est le point de tangence de droite; si R est
+		  n‚gatif, c'est celui de gauche.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   FIGURE 36
+                        Pytha-Graph R910701 Page 14.120
+
+
+
+           /f216                                                   TITRE
+
+        MNEMONIQUE                                       donner un TITRE
+
+        SYNTAXE   TITRE ( nom du dessin )
+
+        ACCES     clavier( )
+
+        FONCTION  Donner un titre … un dessin.
+
+	DESCRIPTION Le titre du dessin sera affich‚ en tˆte des r‚sultats
+		  des calculs de type surface, gisement-distance ...
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.121
+
+
+           /f014                                                    TRAI
+
+        MNEMONIQUE                                         type de TRAIt
+
+        SYNTAXE   TRAI no ( p1 e1 (p2 e2 (... (p5 e5)))))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚finir et/ou utiliser  un  type  de  trait  plein  ou
+                  pointill‚.
+
+        DESCRIPTION 1/ DEFINIR UN TYPE DE TRAIT (ET L'UTILISER)
+                        utiliser la syntaxe complŠte:
+                        TRAI no p1 e1  (...(p5 e5))))
+                        avec no = num‚ro  du  trait d‚fini (no = 1 a 10)
+                        pi      = longueur  du  tiret  i , en  mm papier
+                        ei      = longueur de l'espace i, en  mm  papier
+                                  Au plus, 5 couples ( pi ei ) sont pris
+                                  en compte.
+                                  Si p1 = 0  le trait sera plein.
+
+		  Les types de	traits	ainsi  d‚finis	sont  m‚moris‚s.
+
+		  2/ UTILISER UN TRAIT DEJA DEFINI: TRAI n
+
+		  3/ NE PLUS TRACER DE TRAIT: TRAI 0
+
+		  4/ digitaliseur/mouse , pointer la case n .
+
+	FONCTIONS ASSOCIEES  Exemple   Fonctions de dessin
+
+	RESTRICTION Pour les symboles , seul le trait type 1 est valide.
+                  Il est conseill‚ de d‚finir le  trait no 1 comme trait
+                  plein ( TRAI 1 0 0 ).
+
+        REMARQUE  Sur  des  ‚crans  standards  de  qualit‚  courante, la
+                  d‚finition  ( nombre  de  points  lumineux en X et Y :
+                  pixels )  est   souvent  m‚diocre . La  repr‚sentation
+                  des tiret‚s sur ces ‚crans  est  souvent  irr‚guliŠre,
+                  donne  des  effets  d'escaliers  ou de traits continus
+                  ( surtout en Y ), etc...
+                  Ce  problŠme  est  du  …  l'‚cran , non  au  logiciel.
+                  Les sorties sur machine …  dessiner  seront  normales.
+
+	Exemple   TRAI	 0	pas de trait
+		  TRAI	RC	trait inchang‚
+
+                  TRAI 1 0 0            trait plein
+
+                  TRAI 2 5 3            d‚finir le trait 2 et l'utiliser
+
+                  TRAI 1                utiliser le trait 1
+
+                  TRAI 4 4 2 0.5 2      d‚finir  le  trait  4 ( axe ) et
+                                        l'utiliser.
+                  TRAI 2                utiliser le trait 2
+                        Pytha-Graph R910701 Page 14.122
+
+
+
+           /f193                                                   TRAI2
+
+        MNEMONIQUE                                               TRAIt 2
+
+        SYNTAXE   TRAI2 <RC>   numsym1   d1   hx1   hy1   angle1
+                               numsym2   d2   hx2   hy2   angle2
+
+        ACCES     clavier( )
+
+	FONCTION  d‚finir des traits complexes comportant des symboles.
+
+	DESCRIPTION Si numsym est positif, l'angle est l'inclinaison  du
+		  x symbole par  rapport  …  chaque  segment de la ligne
+                  bris‚e.
+                  Si  numsym  est n‚gatif , l'axe  x   du  symbole   est
+                  parallŠle … l'x ‚cran ( et x papier )
+                  Un  ou  deux  symboles  par  trait. di = position  par
+                  rapport au point pr‚c‚dent : d‚cumul‚e.
+                  Unit‚s : 0.01 mm.
+                  numtrai2 est compris entre 1 et 999.
+
+	FONCTIONS ASSOCIEES  Exemple   EPT1, TRAI, TRAI3, SYMB, PLU
+
+	REMARQUE  1  Les attributs ept1, trai, symb, trai2, peuvent ˆtre
+		  utilis‚s sur un mˆme trait . Exemple
+		  dessiner une ligne ‚paisseur 0.6 mm , en  tiret‚  bleu
+		  avec un symbole … chaque point de la ligne (ept1,trai,
+		  plume sp‚cifique) . La ligne	comportera  deux  motifs
+		  symboliques r‚p‚titifs, chaque symbole a des attributs
+		  ept1,trai,plu diff‚rents.
+
+	REMARQUE 2 En mode interactif ou CHAR l'affichage des traits type
+                  TRAI2 , semble  ‚rron‚ . Apr‚s  EXEC  ou  ZOOM  ou ...
+                  l'affichage est correct.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.123
+
+
+
+           /f192                                                   TRAI3
+
+        MNEMONIQUE                                               TRAIt 3
+
+	SYNTAXE   TRAI3 numtrai3 trai1 ou trai2  d‚port  5  paires  maxi
+
+        ACCES     clavier( )
+
+	FONCTION  D‚finir un trait complexe compos‚  de  TRAI  et  TRAI2.
+
+	DESCRIPTION numtrai3 est compris entre 1 et 999, trai de 1001  …
+		  1999, et trai2 2001 … 2999.
+
+                  D‚port : d‚calage  par rapport … la ligne mŠre ( liste
+		  des points ).
+
+	FONCTIONS ASSOCIEES  Exemple   TRAI, TRAI2
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.124
+
+
+
+           /f098                                                  TRLXYZ
+
+        MNEMONIQUE                                        TRansLater XYZ
+
+        SYNTAXE   TRLXYZ  <RC>  CX  CY  CZ
+
+        ACCES     clavier( )
+
+        FONCTION  Translater   tous   les  points  d'une  valeur  finie.
+
+        DESCRIPTION  Cette commande permet de translater les points  de
+	          la valeur CX suivant les  x , CY  suivant les  y , CZ
+		  suivant les z. Seuls les points qui ont un Z non  nul
+		  seront translat‚s de CZ suivant les z.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+           /f019                                                    TYPE
+
+	MNEMONIQUE					 TYPE (afficher)
+
+        SYNTAXE   TYPE  nom de fichier
+
+        ACCES     clavier( ) digitaliseur( )
+
+	FONCTION  Lister … la visu le contenu d'un fichier page … page.
+
+	DESCRIPTION Si le nom  est  dans  la  table  FUTI , il est list‚
+                  ( fichiers  XYZ  seulement ). Sinon, on  cherche  dans
+                  le systŠme ( fichiers ASCII ). Pour cela, taper sur la
+                  touche RETURN aprŠs le message " fichier inexistant.."
+
+                  Sur la visu :
+                        num‚ro  point    X       Y       Z
+
+
+	FONCTIONS ASSOCIEES  Exemple
+                        Pytha-Graph R910701 Page 14.125
+
+
+           /f026                                                    UANG
+
+        MNEMONIQUE                                         Unit‚ d'ANGle
+
+        SYNTAXE   UANG (valnum)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  d‚finir l'unit‚ de mesure des angles d‚sir‚e.
+
+        DESCRIPTION 1 = radians
+                  2 = degr‚s
+                  3 = grades
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	REMARQUE  1  A l'initialisation, la valeur de UANG  est 3.
+
+	REMARQUE  2  La modification  de UANG modifie  les valeurs angu-
+	          laires d‚finies au pr‚alable, en changeant les unit‚s.
+
+	Exemple   UANG = 2
+                  ANG = 90   ANHA = 45
+                  UANG = 3
+                  Ces instructuions impliquent  :  ANG = 100   ANHA = 50
+
+
+
+	   /f026						 UCARSYM
+
+	MNEMONIQUE	grille Unit‚ pour les CARacteres et les SYMboles
+
+	SYNTAXE   UCARSYM (valnum)
+
+        ACCES     clavier( ) digitaliseur( )
+
+	FONCTION  d‚finir  la taille de la  grille de base utilis‚e pour
+		  les fontes. Par d‚faut 100 mm .
+
+	DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+                        Pytha-Graph R910701 Page 14.126
+
+
+
+           /f094                                                 VERSION
+
+        MNEMONIQUE                                               VERSION
+
+        SYNTAXE   VERSION  <RC>
+
+        ACCES     clavier( )
+
+	FONCTION  Afficher le num‚ro de version du programme.
+
+        DESCRIPTION Cette commande affiche : le  num‚ro du programme, le
+                  num‚ro de version et la date de  cr‚ation, le  jour et
+                  l'heure de lancement du programme.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+
+
+           /f173                                                    VISU
+
+        MNEMONIQUE                                            VISUaliser
+
+        SYNTAXE   VISU  <RC>
+
+        ACCES     clavier( )
+
+	FONCTION  Basculer les ‚ditions … l'‚cran .
+
+	DESCRIPTION AprŠs avoir tap‚ la  commande  VISU , l'affichage  se
+                  fera … l'‚cran.
+
+	FONCTIONS ASSOCIEES  Exemple   IMPR
+                        Pytha-Graph R910701 Page 14.127
+
+
+           /f007                                                      XY
+
+        MNEMONIQUE                                         saisir des XY
+
+        SYNTAXE   XY ( num‚ro )
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Saisir  des  points  en  coordonn‚es  X  Y au clavier.
+
+	DESCRIPTION Suivant le message, donner les valeurs et  ‚ventuel-
+		  -lement le num‚ro du point.
+                  Si  on  ne  donne  pas  de  num‚rotation, elle se fera
+                  automatiquement … partir du num‚ro  du  dernier  point
+                  saisi
+
+                  Pour arrˆter la saisie, taper RETURN aprŠs le message.
+
+	FONCTIONS ASSOCIEES  Exemple   XYZ
+
+        REMARQUE  En  cr‚ation  de  fonte, la  num‚rotation  des  points
+		  saisis  est  automatique . Les XY sont ceux du systŠme
+		  utilisateur.
+
+
+           /f082                                                     XYZ
+
+        MNEMONIQUE                                        saisir des XYZ
+
+        SYNTAXE   XYZ
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Saisir  des  points  en  coordonn‚es X Y Z au clavier.
+
+        DESCRIPTION cf XY.
+                  Si le Z n'est pas  fourni, Z = valeur  du  dernier PLZ
+                  (cf PLZ).
+
+	FONCTIONS ASSOCIEES  Exemple   PLZ, XY
+
+        REMARQUE  Si le num‚ro  correspond  d‚j…  …  l'autre  point, les
+		  coordonn‚es saisies sont ignor‚es. Les XY sont ceux du
+		  systŠme utilisateur.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.128
+
+
+
+           /f196                                                Z100CENT
+
+        MNEMONIQUE                                       Zoom 100 CENTr‚
+
+        SYNTAXE   Z100CENT ( num‚ro )
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+	FONCTION  Centrer l'image sur un point et faire un zoom .
+
+        DESCRIPTION  Donner le num‚ro  du nouveau centre  ou  cliquer le
+		  point . En  mode  digit la  nouvelle  ‚chelle  a  pour
+		  valeur le num‚ro de la case point‚e multipli‚ par 100.
+
+	FONCTIONS ASSOCIEES  Exemple   ZOOM, Z10CENT, CENT, ZMF, ZOOM10
+
+        REMARQUE  Utilis‚e au clavier, cette commande est semblable … la
+                  commande CENT.
+
+
+
+           /f195                                                 Z10CENT
+
+        MNEMONIQUE                                        Zoom 10 CENTr‚
+
+        SYNTAXE   Z10CENT ( num‚ro )
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+	FONCTION  Voir Z100CENT
+
+        DESCRIPTION Dito Z100CENT. Cette fois-ci, la nouvelle  ‚chelle a
+                  pour valeur le num‚ro de la case point‚e multipli‚ par
+                  dix.
+
+	FONCTIONS ASSOCIEES  Exemple   DITO Z100CENT
+
+        REMARQUE   Utilis‚e au clavier, Z10CENT = CENT.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.129
+
+
+
+           /f164                                                     ZMF
+
+        MNEMONIQUE                                          ZooM Fenˆtre
+
+        SYNTAXE   ZMF  <RC>
+
+	ACCES	  digitalisateur( ) souris( )
+
+        FONCTION  Faire un zoom fenˆtre.
+
+	DESCRIPTION Pointer le point bas gauche puis le coin haut droit.
+                  En mode digit , on peut faire un zoom fenˆtre  sur une
+                  partie du dessin qui n'est pas … l'‚cran.
+
+	FONCTIONS ASSOCIEES  Exemple   ZOOM
+
+
+           /f016                                                    ZOOM
+
+        MNEMONIQUE                                                  ZOOM
+
+        SYNTAXE   ZOOM (echX (echY))
+
+        ACCES     clavier( ) digitalisateur( )
+
+        FONCTION  Modifier  l'‚chelle  de  repr‚sentation d'un dessin  …
+		  l'‚cran , mode arpentage : 1000, 500, 200 ....
+
+
+        DESCRIPTION Changements d'‚chelles diff‚rents en X et Y possible.
+                  Le centre de l'image ne  se  d‚place  pas. CLS et EXEC
+                  implicites.
+
+                  Si l'‚chelle est inf‚rieur … l'‚chelle pr‚c‚dente , il
+                  y  a   un  agrandissement  de  l'image ; si  elle  est
+                  sup‚rieur , une reduction.( Sauf si la rŠgle d'‚chelle
+		  a ‚t‚ invers‚e )
+
+                  Les valeurs ech X et  ech  Y du ZOOM sont affich‚es en
+                  ligne 1 de l'‚cran.
+
+	FONCTIONS ASSOCIEES  Exemple   CENT, ZMF
+
+	REMARQUE 1   Si le facteur d'‚chelle  en  Y  est  omis, alors
+                  ech Y = ech X.
+
+	REMARQUE  2   Valeurs par d‚faut : 1000 , 1000
+
+	REMARQUE  3   Possibilit‚  d'interrompre le dessin en  cours  en
+                  tapant sur une touche quelconque.
+
+	Exemple   Pour ech = 1 / 1000  entrer 1000.
+                        Pytha-Graph R910701 Page 14.130
+
+
+
+           /f142                                                  ZOOM10
+
+        MNEMONIQUE                                               ZOOM 10
+
+        SYNTAXE   ZOOM10
+
+        ACCES     clavier( ) digitalisateur( ) souris( )
+
+        FONCTION  Changer l'‚chelle en X et en Y.
+
+	DESCRIPTION Prend comme nouvelle valeur  en X et en Y, la valeur
+		  de la case cliqu‚e multipli‚e par 10.
+
+	FONCTIONS ASSOCIEES  Exemple   ZOOM, Z10CENT, Z100CENT
+
+        REMARQUE  Au clavier, ZOOM10  se  ramŠne  …  la  commande  ZOOM.
+                        Pytha-Graph R910701 Page 14.131
+
+
+	   /f074						    $DDE
+
+	MNEMONIQUE				      D‚truire un DEssin
+
+        SYNTAXE   $DDE nom fichier de dessin.
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚truire un fichier de type dessin.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   $DDE VILLA
+
+
+	   /f076						    $DFO
+
+	MNEMONIQUE				      D‚truire une FOnte
+
+        SYNTAXE   $DFO nom fichier fonte
+
+	ACCES	  clavier( ) digitaliseur( )
+
+        FONCTION  D‚truire un fichier de type fonte.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,$LFO,$SFO
+
+	REMARQUE  Attention : conserver	toujours  au  moins  un fichier
+                  de type FONTE ( extension FTE dans  liste  FUTI )  sur
+                  la disquette ( ou disque ) de travail.
+                  Dans  le  cas  contraire, il  n'y  aura  pas de jeu de
+		  caractŠres alphanum‚riques  m‚moris‚	au  lancement de
+		  PYTHA-GRAPH  , donc  impossibilit‚  d'‚crire  dans les
+		  dessins.
+
+	Exemple   $DFO FONT3
+                        Pytha-Graph R910701 Page 14.132
+
+
+	   /f057						    $DPR
+
+	MNEMONIQUE				  D‚truire une PRoc‚dure
+
+        SYNTAXE   $DPR nom fichier proc‚dure
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚truire un fichier de type proc‚dure.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   $DPR PROCED4
+
+
+           /f075                                                    $DXY
+
+	MNEMONIQUE				 D‚truire un fichier XYz
+
+        SYNTAXE   $DXY nom fichier de coordonn‚es XYZ
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  D‚truire  un  fichier  de  type  coordonn‚es  X Y (Z).
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   $DXY COORD2
+                        Pytha-Graph R910701 Page 14.133
+
+
+
+           /f130                                                    $LCA
+
+	MNEMONIQUE				Lire une proc‚dure CAdre
+
+        SYNTAXE   $LCA  nom  fichier  proc‚dure "cadre" (ech X (ech Y))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Charger  en  m‚moire  un  fichier  de  type  proc‚dure
+                  "cadre".
+
+        DESCRIPTION   Une proc‚dure " cadre " est un dessin  qui ne sera
+                  pas affect‚  par  la  fenˆtre  donn‚e  pour  le dessin
+                  sur papier (cf DESS).
+                  Ce type de proc‚dure est destin‚ … cr‚er un  cadre  ou
+                  cartouche autour d'un dessin.
+                  N'importe quelle proc‚dure peut ˆtre charg‚e avec $LCA
+                  La proc‚dure est translat‚e et mise … l'‚chelle sur le
+                  dessin en cours (ech X et ech Y sont  ignor‚s  dans ce
+                  cas).
+		  Exemple   $LDE DESB 0.5
+                            $LCA   C500A4
+
+                  C500A4 est  mis  …  l'‚chelle 0.5 et translate dans la
+                  zone DESB.
+                  Si C500A4 est dans un bloc  diff‚rent de DESB, on peut
+                  d‚placer C500A4.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   $LDE	DES1
+                  ...
+                  $LPR PROC1
+                  Compl‚ment de dessin
+                  $LCA PROC2
+                  DESS
+                        ============) PROC1 et  DES1  sont tronqu‚es par
+                                      la  fenˆtre  donn‚e dans DESS,mais
+                                      pas PROC2.
+                        Pytha-Graph R910701 Page 14.134
+
+
+           /f023                                                    $LDE
+
+	MNEMONIQUE					  Lire un DEssin
+
+        SYNTAXE   $LDE nom fichier dessin (ech X (ech Y))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Charger en m‚moire un fichier de type dessin.
+
+        DESCRIPTION  par d‚faut, ech X = ech Y = 1
+                  Le nom du dessin et  les  valeurs  des  ‚chelles  sont
+                  affich‚s sur l'‚cran.
+                  A  la  suite d'un dessin, on peut charger des fichiers
+                  de  type  coordonn‚es  XY(Z) et proc‚dure ($LXY, $LPR,
+                  $LCA).
+                  Par contre, l'appel  d'un  second  dessin  en  m‚moire
+                  ‚crase le dessin pr‚alablement charg‚.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  S'il y a eu des op‚rations TF (cf TF), seule la trans-
+                  -formation  du  1er  dessin  est conserv‚e : cas ou un
+                  dessin et des proc‚dures sont mont‚s en m‚moire.
+
+	Exemple   $LDE VILLA
+
+
+           /f063                                                    $LFO
+
+	MNEMONIQUE					  Lire une FOnte
+
+        SYNTAXE   $LFO nom fichier fonte
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Charger en m‚moire un fichier de type fonte.
+
+        DESCRIPTION  Dans le cas ou  l'utilisateur dispose  de plusieurs
+                  bibliothŠques  de  symboles  (fonte) , cette  commande
+                  permet   de  monter  en  m‚moire  celle  qui  lui  est
+                  n‚c‚ssaire  dans  une  phase  de  dessin  donn‚e.
+
+	FONCTIONS ASSOCIEES  Exemple   CFTE,CCAR,CSYM,LCAR,DCAR,DSYM...
+
+        REMARQUE  La fonte mont‚e par d‚faut au  d‚marrage du  programme
+		  est celle d‚finie dans la commande CHFT .
+
+	Exemple   $LFO FONT3
+                        Pytha-Graph R910701 Page 14.135
+
+
+           /f058                                                    $LPR
+
+	MNEMONIQUE				      Lire une PRoc‚dure
+
+        SYNTAXE   $LPR nom fichier proc‚dure (ech X (ech Y))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Charger en m‚moire un fichier de type proc‚dure.
+
+        DESCRIPTION  Une proc‚dure peut s'ins‚rer dans un dessin ou dans
+                  une autre proc‚dure d‚j… en m‚moire.
+                  L'‚chelle  prise  en  compte  est  celle  du dessin ou
+                  de la 1Šre proc‚dure mont‚e en m‚moire.
+                  La proc‚dure est mise … l'‚chelle  du dessin  en cours
+                  (pas de translation).
+                  S'il n'y  a rien  en cours $LPR est ‚quivalent a $LDE.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   $LPR PROCED6
+
+
+           /f033                                                    $LXY
+
+	MNEMONIQUE				     Lire un fichier XYz
+
+        SYNTAXE   $LXY nom  fichier  de  coordonn‚es (ech X (ech Y))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Charger en m‚moire  un  fichier  de  type  coordonn‚es
+                  XY(Z).
+
+        DESCRIPTION  Il est possible  de  charger plusieurs  fichiers de
+                  coordonn‚es … la suite.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   $LXY COORD6
+                        Pytha-Graph R910701 Page 14.136
+
+
+           /f022                                                    $SDE
+
+	MNEMONIQUE				   Sauvegarder un DEssin
+
+        SYNTAXE   $SDE  nom  fichier  dessin ( ech X ( ech Y ))
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Sauvegarder le  dessin  pr‚sent  en  m‚moire  dans  un
+                  fichier de type dessin.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  Le  nom  du  fichier  ne  peut  ˆtre  sous-entendu.
+
+	Exemple   $SDE VILLA
+
+
+           /f054                                                    $SFO
+
+	MNEMONIQUE				   Sauvegarder une FOnte
+
+        SYNTAXE   $SFO  nom  fichier  fonte
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Sauvegarder la fonte  en cours dans un fichier de type
+                  fonte.
+
+        DESCRIPTION  Si le nom est omis ,le nom de la fonte en cours(par
+                  d‚faut = fonte  charg‚e  au  d‚marrage ) est appliqu‚.
+                  Permet de m‚moriser  une  modification  apport‚e  … un
+                  symbole  avec les  commandes  MCAR ou MSYM  sans  ˆtre
+                  passe en cr‚ation de fonte (CFTE).
+
+	FONCTIONS ASSOCIEES  Exemple   $LFO,$DFO,MCAR,MSYM
+
+	RESTRICTION   Interdit sous CFTE.
+
+	Exemple   $SFO FONT3
+                        Pytha-Graph R910701 Page 14.137
+
+
+           /f056                                                    $SPR
+
+	MNEMONIQUE			       Sauvegarder une PRoc‚dure
+
+        SYNTAXE   $SPR nom fichier proc‚dure (ech X (ech Y))
+
+        FONCTION  Sauvegarder le dessin en m‚moire sous forme de fichier
+                  proc‚dure.
+
+        DESCRIPTION
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   $SPR PROCED6
+
+
+           /f021                                                    $SXY
+
+        MNEMONIQUE                                       Sauvegarder XYz
+
+        SYNTAXE   $SXY  nom  fichier  coordonn‚es XY(Z)
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Sauvegarder les coordonn‚es du dessin  en m‚moire dans
+                  un fichier de type coordonn‚es XY(Z).
+
+        DESCRIPTION  Les enregistrements sont en  ASCII, en format libre
+                  (s‚parateur = espace  ou  virgule).
+                  Le nom du fichier  dans  le  systŠme  est  :  F???.P65
+                  (voir FUTI).
+
+	FONCTIONS ASSOCIEES  Exemple
+
+	Exemple   $SXY COORD6
+                        Pytha-Graph R910701 Page 14.138
+
+
+           /f032                                                    $ZER
+
+        MNEMONIQUE                                         remise a ZERo
+
+        SYNTAXE   $ZER
+
+        ACCES     clavier( ) digitaliseur( )
+
+        FONCTION  Red‚marrer " a chaud " le logiciel de graphisme.
+
+        DESCRIPTION  Par s‚curite,un message demande la confirmation.
+
+	FONCTIONS ASSOCIEES  Exemple
+
+        REMARQUE  le dessin en m‚moire  n'est pas sauv‚ automatiquement,
+                  l'utilisateur doit le  faire  avant  de  red‚marrer le
+                  logiciel.
+
+	Exemple
+                        Pytha-Graph R910701 Page 14.139

@@ -1,0 +1,57 @@
+<html><head></head><body>
+
+
+<h1>Casio CZ Series</h1> 
+<h2>Single Patch Editor</h2>
+
+<p>This editor will work with the <b>Casio CZ-1, CZ-101, CZ-1000, CZ-3000, CZ-5000, and CZ-230S</b>.
+
+<br><br><h3>Communicating with Edisyn</h3>
+Set the MIDI channel to the same as being used in Edisyn, and enable Program Change.  If you're planning on writing to the synthesizer, turn off write protect (even if you're just sending to current memory, the CZ will refuse to accept it if write protect is on).  On the CZ-1, you must also enable System Exclusive Tone Data and make sure that MIDI is turned on.
+
+<br><br><h3>CZ-1 Versus the Others</h3>
+<P>Because it has more features, the CZ-1 has different sysex than the other synths, though it can receive patches in their format.  To send or write to a CZ-1, click the "CZ-1" button.  To send or write to a CZ-101/1000/3000/5000/230S, turn off that button.
+
+<br><br><h3>CZ-230S Versus the others</h3>
+<p>The CZ-230S has 100 patch slots, but you can only write to the top 4 (slots 96, 97, 98, and 99).  To access a given patch slot, first determine its equivalent "bank", and then convert the patch slot as appropriate.  For example, to request slot 49, go to "Request Patch", then notice that Bank G stores CZ-230s slots 48 through 55. This means that slot 49 is the second patch in this bank.  Thus the Bank is "G" and the Patch Number is "2".
+
+<p>There is no way to send to the current memory of a CZ-230S.  Due to a strange quirk of Casio's sysex protocol, sending to current memory will in fact write to patch 96.  Edisyn sends to current memory in many situations: whenever it has just loaded a patch, or if you use any number of features, including undo, randomize, nudge, merge, blend, hill-climb, morph, etc., etc.  This means that you should treat patch 96 as a "scratch" or "temporary" patch, because in the process of editing patches, Edisyn may overwrite 96 multiple times.  If you're finished editing and have saved everything to patches or files, you can still *write* to patch 96 and it'll get saved there; but Edisyn may later overwrite that.
+
+<br><br><h3>Features</h3>
+
+<p>Even if you're an experienced CZ patch programmer, you may be confused by this patch editor.  That's because Casio only provides a subset of options for their waveforms via their front end and manual: much more is available over sysex.  You should first read (<a href="http://www.kasploosh.com/projects/CZ/11800-spelunking/">http://www.kasploosh.com/projects/CZ/11800-spelunking/</a>) about how the CZ waveforms actually work: Edisyn's editor lets you modify them the way they really are.
+
+<p>In reality, the CZ series provides you with two <b>waveforms</b> and one <b>window</b> for each oscillator.  The second waveform can optionally be turned off.  The waveforms are different than what you were taught in the manual: they are saw, square, pulse, "null" (nothing), sine-pulse, saw-pulse, multi-sine, and 2x pulse.  Each of these waveforms can be windowed with different windows to force them to zero at the end of each period.  The windows are: saw, triangle, trapezoid, pulse, and 2x saw.  If you have no idea what all this means, then read the aforementioned URL: you'll discover a whole new synthesizer! 
+
+<p>Additionally, the CZ has more modulation options and an additional hidden flag ("Mute Line 1") than you were be led to believe.  Edisyn provides access to all of these.  For more information, see <a href="http://www.kasploosh.com/projects/CZ/11800-spelunking/8-modulation.html">http://www.kasploosh.com/projects/CZ/11800-spelunking/8-modulation.html</a>
+
+<p>Also certain envelopes can in fact go higher than 99, though this is not available from the front panel. Namely, the DCO Level can go to 123, and the DCA Envelope Rate can go to 106.  See <a href="https://www.kasploosh.com/cz/13466-envelopes/3-the_myth/">https://www.kasploosh.com/cz/13466-envelopes/3-the_myth/</a> for more information.
+
+<br><br><h3>Gotchas</h3>
+
+<ul>
+<li>The Casio CZ series cannot receive individual parameters: you have to send them in bulk.  You could try checking "Repeatedly Send Current Patch" if you liked.  Be sure to read up on exactly what that menu option does.
+
+<p><li>When you change the patch on the CZ, it will automatically send a patch dump over sysex, which will in turn change Edisyn.  If this happens to you, just do an "undo" and your edits will be back as they were.  You could temporarily block this behavior by doing "Change Midi..." and change "Receive From" to something other than the CZ.
+</ul>
+
+<br><br><h3>Hints</h3>
+
+<ul>
+<li>If you request or save to bank SC (the writable patches of the CZ230S), Edisyn will remember this next time and offer bank SC by default when you're choosing a patch bank and number.  This is for the convenience of SC230S owners who can only write to four patches (SC1...4).
+</ul>
+
+
+<p>Thanks to Guillaume Collavizza (collavizzagui@hotmail.fr) for his help in testing on the CZ-230S.
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>June 2019 
+</table>
+
+
+

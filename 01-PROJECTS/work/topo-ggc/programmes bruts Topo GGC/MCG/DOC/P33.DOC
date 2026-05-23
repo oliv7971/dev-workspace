@@ -1,0 +1,1053 @@
+                         Pytha-Topo R920301 Page 33.1
+
+
+
+		      TRAITEMENT DES CARNETS ELECTRONIQUES
+		      ------------------------------------
+
+		            A - PROBLEMES GENERAUX
+			    ----------------------
+
+	A 1 - INTRODUCTION
+	------------------
+
+        Le  transfert des donnees est suppose fait : utilitaire systeme,
+        programme de communication fourni par le constructeur, 	etc...
+	Il y a un chantier par fichier.
+        Le programme convertit les informations en 2 fichiers :
+        - D34 (par ex) utilisable par P34
+        - D36 (par ex) a completer a l'editeur apres calcul des stations
+	  avant de lancer  P36. Les donnees generees sont du type
+	                        STATION,15 (avec le parametre D.H.).
+          D36 peut servir d'entree a P34 , sauf si distances superieures
+          a 999.999 metres. (Voir A-7 pour D36 .)
+        Les sorties sont en format libre :  un espace au moins entre les
+        donnees pour D34 .
+
+	Un carnet de terrain comporte les donnees suivantes :
+
+	-informations generales
+		date
+		dossier
+		hauteur des tourillons
+		changement de station
+		.......
+
+	-observations d'un point
+		numero du point
+		angle horizontal
+		angle vertical
+		distance suivant la pente
+
+	-corrections aux observations d'un point
+		code point
+		excentricite en ligne
+		pas de Z
+			.......
+
+	Les informations generales et les corrections peuvent etre grou-
+	pees dans un ensemble de fonctions a appliquer a  un  seul point
+	ou a un goupe de points.
+
+	En  regle generale  les  informations elementaires sont stockees
+	dans les carnets sous la forme de deux valeurs, la premiere  in-
+	diquant la nature de la deuxieme. Ainsi si 123.4567 est un angle
+	horizontal, il sera represente sous l'une des formes suivantes
+
+	   	1/	123.4567       	pas de code nature
+	   	2/	a+1234567g	        a
+	   	3/	7=123.4567              7
+	   	4/	010123.4567             010
+           	5/      21.002+12345670         21
+                         Pytha-Topo R920301 Page 33.2
+
+
+
+	A 1 - INTRODUCTION (suite)
+
+	Seul le 1er carnet correspond a la forme naturelle , utilisee en
+	mode manuel ( crayon et carnet papier avec en-tete ) . Les codes
+	nature, s'ils sont en general figes en ce qui concerne les obser-
+	vations , peuvent  varier  d'un  utilisateur  a l'autre pour les
+	fonctions , les constructeurs laissant a chacun le soin de creer
+	sa propre codification. Si l'on ajoute les carnets programmables
+	( petits micros portables ), on obtient autant  de  carnets  que
+	d'utilisateurs pour  des informations  elementaires  strictement
+	identiques pour chacun .
+
+
+	A 2 - INTERFACE CARNET / P33
+	----------------------------
+
+	Afin de garder une grande souplesse dans la definition des codes
+	utilises sur le terrain et leur  interpretation  par Pytha , les
+	differents carnets (fichiers images) sont convertis dans un code
+	intermediaire  unique , quelle  que  soit  la forme de la saisie
+	originale (wild, geodat, etc..).
+
+	Exemple de code intermediaire :
+
+		IG1 VA1 IG2 VA161090
+		ST10 HT1m563
+		HMm0 NP81 AHg000 AV99g570 DP100m984
+		IG17 VA2150
+		HMm0 NP11 AH226g766 AV99g816 DP85m122
+		IG17 VA1500
+		ST10 HT1m534
+		HMm0 NP81 AHg000 AV99g553 DP100m976
+		IG17 VA2150
+		CW 78 0 0 0 0
+		HM1m8 NP100 AH376g020 AV99g948 DP40m218
+		CW 94 44 0 0 0
+		HM1m8 NP101 AH374g914 AV99g936 DP39m383
+
+	IGi = Information Generale, suivi de VAj = valeur j
+	CW  = Code point ( geocodification ), suivi de 5 valeurs numeri-
+	      ques de 0 a 99999999, s'il n'y a q'une valeur, CW est rem-
+	      place par CO
+	      CW et les  autres codes  sont les  mnemoniques classiques.
+	Les IG sont les fonctions definies plus haut  :  IG1 est le  nu-
+	mero de dossier ( 1 ), 	IG2 est la date ( 16/10/90 ).
+	Sur le terrain, l'operateur a saisi 10 puis 161090 pour indiquer
+	la date, et 20 puis 1 pour le dossier.
+
+	La liaison entre les codes utilisateur et les fonctions a execu-
+	ter est faite a l'aide de deux tables :
+
+	  -table des fonctions de base ( independante des carnets )
+	   elle comporte les numeros des fonctions elementaires disponi-
+	   bles
+	  -table des codes utilisateur en regard des fonctions  de  base
+	   a la position i on trouve le code utilise sur le terrain pour
+	   la fonction j situee dans la case i de la table de base
+                         Pytha-Topo R920301 Page 33.3
+
+
+
+	A 2 - INTERFACE CARNET / P33 (suite)
+
+	Si par exemple on ne veut pas avoir la cote Z du point qui vient
+	d'etre leve en introduisant dans le carnet de terrain le code 42
+	les deux tables seront chargees comme suit
+
+		table utilisateur	table de base
+
+	ligne  i             ....		  ...
+
+	ligne 16               42                  16    ligne j
+
+	ligne  n             ....		  ...
+
+	Sachant que la fonction 16 signifie " pas de Z au precedent " .
+
+	L'apparition  dans  les  donnees  d'un code Information Generale
+	declenche le processus suivant :
+
+	recherche du code (42) dans la table utilisateur, il se trouve a
+	la ligne j (16), puis appliquer la fonction situee dans la  case
+	j (16) de la table de base (16) .
+                         Pytha-Topo R920416 Page 33.4
+
+
+
+	A 3 - FONCTIONS DE BASE
+	-----------------------
+
+	les indices P et S signifient : appliquer la correction au point
+    	Precedent ou au point Suivant
+	T = valide pour tous les points qui suivent , sauf a fournir une
+	autre valeur (ex classique : hmire).
+
+  	 Numero   description
+
+	     1	  date		! date et dossier peuvent etre fournis
+	     2	  dossier	! avec une seule fonction ( ex / Wild )
+	T    3	  temp‚rature	! correction atmospherique
+	T    4	  pression      ! correction atmospherique
+	T    5	  collimation horizontale
+	T    6	  collimation verticale
+	T    7	  humidit‚      ! correction atmospherique
+	     8	  r‚serv‚
+	P    9	  excentricit‚ en ligne
+	P   10	  excentricit‚ transversale (+ a droite, - a gauche)
+	P   11	  excentricit‚ en z 	    (+/monter,-/descendre)
+	T   12	  constante appareil
+	T   13	  constante r‚flecteur
+	P   14	  distance horizontale chain‚e
+	P   15	  distance horiz.chain‚e, pas de Z
+	P   16	  pas de Z
+	P   17	  changement provisoire de hmire
+	T   18	  excentricit‚ axe optique/axe distancemetre
+	    19	  r‚serv‚
+	    20	  r‚p‚ter l'enregistrement pr‚c‚dent, sauf
+	      	  valeurs fournies ,ex code du point et nø point
+	    21    r‚serv‚
+	    22    r‚serv‚
+	    23    r‚serv‚
+	    24    r‚serv‚
+	S   25	  excentricit‚ en ligne     (+ a droite, - a gauche)
+	S   26	       	"      transversale (+/monter,-/descendre)
+	S   27	       	"      en Z
+	T   28	  r‚serv‚/changement de station/wild (ns et hi)
+        TS  29	  r‚serv‚/codif du point ( voir A7 )/wild
+	T   30	  r‚serv‚/changement de hmire/wild
+	    31    reserve
+	     a    .......
+	    98    reserve
+	    99	  fin des donn‚es
+	   100	  origine de la codification en zones 41 … 45 (wild),
+	   	  sinon 0 ( code = donnee du bloc 41 - f100 )
+
+	Les numeros de fonction sont charges dans la table de base FONC33
+	( 100 valeurs ), du fichier P033P034.MCG. Le motcle FONC33  doit
+	toujours ˆtre fourni suivi de la table des numeros  affect‚s aux
+	fonctions . La valeur affect‚e  a une  fonction peut donc ne pas
+	correspondre au num‚ro  de la fonction utilis‚e. La table FONC33
+	sert de r‚f‚rence pour la compr‚hension des codes par le module.
+	Elle sert d'interface entre les codes utilis‚s sur le terrain et
+	le programme. Les codes n'‚tant pas fig‚s et les fonctions suffi-
+	samment complŠtes , il doit ˆtre possible de ne pas  changer les
+	modes op‚ratoires sur le terrain .  Les fonctions non autorisees
+	seront codees -1 dans la table FONC33 .
+                         Pytha-Topo R920301 Page 33.5
+
+
+
+	A 4 - UNITES
+	------------
+
+	La  table  unites donne la valeur en mm d'une unite de saisie en
+	nombre entier, ainsi que la valeur symbolique de  la  hauteur de
+	mire signifiant pas de Z pour le point ( independant de la fonc-
+	tion 16 ). Elle est donnee dans le fichier P033P034.MCG
+
+	UNITES33  #  valeur en mm d'une unite de saisie en nombre entier
+	utourillons   1.  # 1.532 ou 1532 =1m532 1=0m001   (Fonction 28)
+	umire         1.  # idem / mire (canne)       (F30,F17)
+	uexcligne     1.  # excentricite en ligne     (F9,F25)
+	uexctrans     1.  # excentricite transversale (F10,F26)
+	uexctz        1.  #    ''        en Z         (F11,F27)
+	ucteappa      1.  # constante appareil (sur distances) (F12)
+	uctearefl     1.  #    ''     reflecteur    ''         (F13)
+	uexcaodi      1.  # excentricite axe optique/distancemetre (F18)
+	hnul       9999   # valeur  symbolique pour hmire signifiant pas
+	#                   de  Z pour le(s) point(s) , ici    9999 mm .
+	#	            La valeur utilisee pour le calcul sera -0.001
+	#		    metres. La  lecture  mire  peut  etre 9999 ou
+	#		    9.999 ou -0.001 ou -1 .
+	FIN		    hnul est un nombre entier en mm .
+
+
+
+	A 5 - REMARQUES
+	---------------
+
+	A 5-1 Codification  des fonctions sur les carnets WILD GRE, Gif,
+	      etc.., consulter la documentation wild pour en savoir plus
+	      sur les 2 types de blocs : bloc mesure et bloc code .
+
+	 fonction 28, changement de station
+	 41...cs  42....NS  43....ht
+	 cs=code utilis‚ pour le changement de station
+
+	 fonction 29, codification du point
+	 41...cp  42...code
+	 cp=code indiquant le changement de type de point
+
+	 fonction 30, hauteur de la mire
+	 41...cm 42...hmire
+	 cm=code de changement de mire
+
+	 si le bloc REM 71 est utilis‚e, il comprend alors 2 parties
+	  1 = hmire : caracteres 3 a 6
+	  2 = codification du point sur 8 chiffres : caracteres 8 a 15
+
+	A 5-2 Codification du point sur le GEODAT
+
+	 le code point doit etre not‚ comme suit   4=ccc.iiiii
+	 le code r‚sultant (fichier ?.cpt) sorti par P33, aura la forme
+  	       Nø point   ccciiiii
+	 si le point d‚cimal est omis on aura   Nø point  ccc00000
+
+	A 5-3 Les stations multiples sont signal‚es par le module P33 .
+                         Pytha-Topo R920301 Page 33.6
+
+
+
+	A 6 - FICHIERS GERES PAR P33
+	----------------------------
+
+	P33 peut g‚n‚rer trois carnets des observations :
+
+	- un fichier carnet classique avec toutes les observations ayant
+	  pour nom " NOM.CAR " par exemple ( reponse utilisateur )
+
+	- un fichier ayant le meme nom que le carnet, avec une extension
+	  "  .CAN  " ( CAN pour canevas ), soit  NOM.CAN .
+
+	- et eventuellement un fichier compatible avec le module P36 .
+	     ( type STATION,15 avec le parametre D.H. )
+
+	Le  fichier  nom.can  est produit  si  la  r‚ponse … la question
+	"  points connus O/N  " est Oui .  Le fichier demand‚  peut etre
+	vide , ou contenir les points connus N X Y (Z) . Dans ce cas P33
+	produit le fichier nom.can concernant le canevas uniquement :
+	observations du systeme local et des points connus  ( s'il y  en
+	a dans le fichier points connus ).
+
+	Cette  option  permet  d'avoir  un  carnet du canevas all‚g‚ des
+	points de d‚tails pour les calculs du r‚seau.
+	Application :
+	levers type remembrement ou topo, ou urbain, comportant un grand
+	nombre de points de canevas . Les manipulations  de donn‚es sont
+	r‚duites au minimum . Ne pas oublier de reporter les corrections
+	dans le fichier comportant  les point canevas et d‚tails.
+
+
+	Un fichier general comportant les points d'appui du reseau, peut
+	etre introduit de facon systematique , en mettant en fonction le
+	parametre XYZBASE . Dans ce cas,  P33 posera la question
+	" Geodesie dans <nomfich>/N ", si la reponse est O(ui) et il ira
+	chercher  les  points necessaires au calcul du reseau dans cette
+	base.
+	Si ce fichier n'existe pas, la question	" Points connus O/<N> "
+	sera posee.
+
+
+	Si les observations comportent des codes points ( g‚ocodes ), la
+	liste point code(s) se trouve dans le fichier  NOM.CPT.
+	      ( Ce fichier sera utilis‚ par P34 pour g‚n‚rer  le fichier
+	           n x y z code(s) dont l'extension est CDI )
+	!!! Le fichier nom.cpt est en ascii, en format fixe : 60  carac-
+	t‚res  par enregistrement .  Les corrections ‚ventuelles doivent
+	ˆtre  faites  avec  un ‚diteur conservant les espaces ; certains
+	‚diteurs remplacent les blancs par des caract‚res de tabulation,
+	dans ce cas P34 ne fonctionnera pas correctement.
+	Il vaut mieux corriger nom.cdi qui est en format libre.
+
+	Le code intermediaire (  2 ) se trouve dans le fichier  NOM.NET
+	qui peut etre donne en entree de P33. Ce code est reconnu par le
+	programme, quel que soit le type de carnet. Il peut etre corrige
+	avec un editeur : ne pas modifier la premiere ligne.
+	Sa taille peut etre ramenee a 30 % du fichier original.
+                         Pytha-Topo R920301 Page 33.7
+
+
+
+	A 7 - CONFIGURATION
+	-------------------
+
+	Le fichier de configuration generale du module   P33  ( et P34 )
+	est le fichier P033P034.MCG .
+
+
+	fichier  p033p034.mcg
+	....
+	......
+	P33     #parametres pour p33.................................
+	g122  P36nul  G122 TOPFC2 G120 REC200 MIC1 Wild  ?
+	`!$')+,abcd*   CODES FC2
+	001002003004005006007008009010011012013014015016017018019020 MIC1
+	 $$ $$ 2= 3= 5= $$ 5= 9= 8= 7= 6= 4= $$ $$ $$ $$ $$ $$ $$ $$ =G122
+	#codifpoint
+	tempression 2 3 4 5 6 1
+	tempmini -50
+	tempmaxi 50
+	prmini 800
+	prmaxi 1500
+	editatmosphere
+	editcodpytha
+	FIN
+	......
+	......
+	#XYZBASE
+	nom fichier g‚od‚sie … utiliser par P33 pour la recherche des
+							points connus
+	......
+	....
+
+	Les lignes situees derriere le mot " P33 " ont  la signification
+	suivante :
+
+	1Šre ligne
+	Si le dernier mot est  ? , p33 proposera un menu avec les diffe-
+	rents carnets disponibles, sinon le carnet est defini par le 1er
+	mot (ici g122).
+	Le  2eme mot est " P36NUL " ou " P36 " . Si ce mot est P36 , P33
+	posera la question " sortie pour p36, nom fichier ",sinon il n'y
+	a pas de sortie pour p36 (cas courant).
+	A partir du 3eme mot et suivants , nom  des carnets pouvant etre
+	decodes  par  P33 . A chaque carnet est associe un numero nappar
+
+		     nappar
+
+		 	1 G122		geodat 122
+			2 TOPFC2        topcon fc2
+			3 G120          geodat 120
+			4 REC200        zeiss rec module 200
+			5 MIC1          micronic
+			6 WILD          wild
+
+	2Šme ligne
+	Codes nature des donnees (12 caracteres), voir TOPCON FC2.
+
+	3Šme et 4Šme lignes
+	Codes Micronic1, suivi de leur correspondance avec le geodat,
+	en ligne 4 .
+                         Pytha-Topo R920416 Page 33.8
+
+
+
+	A 7 - CONFIGURATION (suite)
+
+	A  partir  de la 5Šme ligne , les parametres peuvent etre donnes
+	dans le desordre jusqu'au mot-cle FIN .
+
+
+	CODIFPOINT
+	Si la consigne CODIFPOINT est fournie  , le geocode est  associe
+	au point qui suit , sinon il  s'applique aux points  qui suivent
+	sauf a fournir un nouveau geocode valide  ( 0 = arret de la geo-
+	codification ). Ici la consigne est off ( # en colonne 1 ).
+
+		correction atmosph‚rique
+
+	TEMPRESSION numero formule pour nappar = 1 , numero formule pour
+		    nappar = 2, etc...
+
+	table des formules de correction des distances en fonction de la
+	temperature, de la pression et de l'humidit‚ . Chaque numero est
+	associe a  une formule  de correction .  Le  numero  nappar sert
+	d'entree dans la table .  Ainsi dans la table de la page  prece-
+	dente pour nappar = 6 on a tempression(6) = 1, la formule 1 sera
+	utilisee pour corriger les distances de l'appareil 6 ( wild ) .
+	!!!! Verifier avec la documentation constructeur si la formule
+	             utilisee  correspond a votre station .
+
+	formules disponibles :
+
+		cor	en mm par Km
+		P	pression barometrique en mb
+		T	temperature en degres Celsius
+		H	humidit‚ en %
+		X = 0.7857 + (7.5 x T)/(237.3 + T)
+
+	1 (wild)       cor = 282.2 - (0.2908 x P)/(1+0.00366 x T)
+
+	2 (wild)       cor = 281.8 - (0.29065 x P)/(1+0.00366086 x T)
+			 + (0.0004126 x H x 10**X)/(1+0.00366086 x T)
+	3
+
+	4
+
+	5
+
+	6
+
+	Limites mini et maxi des valeurs a ne pas depasser en saisie
+				 ( sinon, message d'erreur ) :
+	TEMPNINI tmin  (-50øC)
+	TEMPMAXI tmax  ( 50øC)
+	PRMINI   pmin  (800 millibar)
+	PRMAXI	 pmax  (1500 millibar)
+	HUMIMINI humin (  0 %)
+	HUMIMAXI humax (100 %)
+
+	EDITATMOSPHERE pour editer les corrections par station
+	EDITCODPYTHA   pour editer le code intermediaire
+
+	Pour mettre hors fonction la correction atmospherique, introduire
+	une valeur nulle pour la pression.
+                         Pytha-Topo R920301 Page 33.9
+
+
+
+	A 7 - CONFIGURATION (suite)
+	---------------------------
+	fichier P033P034.MCG
+	table des fonctions de base (FONC33),  table utilisateur (WGRE3)
+
+	......
+	....
+	FONC33  #fonctions standard de 1 a 100 (informations generales)
+	 01 02 03 04 05 06 07 08 09 10    11 12 13 14 15 16 17 18 -1 20
+	 -1 -1 -1 -1 25 26 27 -2 -2 -2    -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+	 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1    -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+	 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1    -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+	 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1    -1 -1 -1 -1 -1 -1 -1 -1 99 -1
+	...
+	.....
+	WGRE3   WILD GRE3 OU GIF10 OU wild compatible -utilisateur x-
+	 19 00 00 00 00 00 00 00 40 41    44 61 62 00 46 42 43 00 00 00
+	 00 00 00 00 50 60 77 10 -1 -1    00 00 00 00 00 00 00 00 00 00
+	 00 00 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00 00 00
+	 00 00 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00 00 00
+	 00 00 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00 00 00
+	......
+	...
+
+	nota :
+	La consigne XYZBASE peut etre ignoree en supprimant la ligne, ou
+	en inserant un diese en colonne 1 . Ici la consigne est off.
+
+	Le premier mot-cle rencontre, fonc33, wgre3,.. est pris en compte
+	par le module de chargement des parametres. Il est ainsi possible
+	d'avoir plusieurs configurations dans le meme fichier  en tapant
+	un diese ( # ) en position 1 de la ligne comportant la table  ou
+	les consignes a ignorer.
+                         Pytha-Topo R920301 Page 33.10
+
+
+
+				 B - TOPCON FC2
+				 --------------
+
+	Les donnees du FC2 sont converties en donnees geodat , consulter
+	la section G122 pour avoir la correspondance geodat/fc2.
+
+
+        B 1 - FORMAT DES ENREGISTREMENTS
+        --------------------------------
+
+        IL y a une donnee par enregistrement termine par CR , LF (retour
+	chariot, saut ligne) , le 1er caractere (non blanc)   indique la
+	nature de la donnee.
+
+        Syntaxe : code nature  donnee
+
+        Numero  Codes nature  signification de la donnee
+
+          1          `        Annuler  ce qui precede (seul cas ou code
+	        	      nature n'est pas en tete)
+	  2          !        Nom du chantier (texte)
+	  3          $        Date (texte)
+	  4          '        Numero station ( numerique, pas de
+	  		      caracteres alphabetiques)
+	  5          )        Hauteur
+	  		      instrument en metres
+	  6          +        Excentrement (cm) et
+	  		      numero du  point ( numerique, pas de
+			      caracteres alphabetiques )
+	  7          ,        Hauteurs canne en metres
+	  8          a        angle horizontal
+	  9          b        Angle vertical
+	 10          c        Distance suivant la pente
+	 11          d        Distance Horizontale
+	 12          *        Code point
+
+
+
+	Les codes 1 a 12 sont parametrables , et  peuvent  etre modifies
+	dans le fichier P033P034.MCG : ligne P33 + 1  .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Nota : les codes c et d peuvent cohabiter.
+                         Pytha-Topo R920301 Page 33.11
+
+
+
+        B 1 - FORMAT DES ENREGISTREMENTS (suite)
+
+                         Forme des codes + a  b  c  d
+                         ---------------
+
+                         code + numero du point    excentrement
+                         ------
+                              + ieee -nnnn
+                                 eee excentrement en cm
+                                 i   de 0 a 6
+
+              .1                          0 pas d'excentrement
+                -              5          1 a gauche
+                     +         +          2 ajouter
+                 0     .2      Z          3 a droite        (distance
+            -  .               -          4 retrancher      horizontale)
+                                          5 ajouter au Z
+            4    +             6          6 retrancher au Z
+                                nnnn numero du point
+                .3
+
+        ou                code + numero du point (pas d'excentrement)
+        ==                -------
+
+              codes   a   b   c   d     1ere forme (automatique)
+
+                     ea + .... ....g                   AH
+                                        unites dcmgr
+                     eb + .... ....g                   AV
+
+                     ec + .... ....m                   DP
+                                        unites mm
+                     ed + .... ....m                   DH
+
+                    (e = espace)
+
+
+              codes   a   b   c   d     2eme forme (saisie manuelle)
+
+                      a ----.----       unites grades  AH
+                      b ----.----         "     "      AV
+                      c ----.----       unites metres  DP
+                      d ----.----         "      "     DH
+
+        Les deux formes automatique et manuelle peuvent  cohabiter  dans
+	les donnees.
+                         Pytha-Topo R920301 Page 33.12
+
+
+
+        B 2 - EXEMPLE (fc2ex1.d33)                    carnet
+	-------------                              electronique
+
+        !LABAULE
+        $MAY-27-86
+        '1700 # station             -----------------------
+        )1.65 # h tourillons        utilitaire de transfert
+	 *01                        -----------------------
+	,1.5 #hauteur mire
+	+0150-0008
+	 a+3299620g
+	 b+0858700g
+	 d+00004444m
+	+4100-0009                                    ------------------
+	 a+1959000g                                   fichier fc2ex1.d33
+         b+0982780g                    .9             ------------------
+         d+00010889m           -1m00
+        *00                            .
+        ,1.000`2. # canne               1m57
+        +1157-0010                     .10
+         a+1959000g             100.00
+         b+0982800g                             ---
+         d+00100000m                            P33
+        +0150-0011`2100-0011                    ---
+         a+1959000g
+         b+0982780g
+         d+00010888m
+        +5050-0012
+         a+1959000g                    ---------------
+         b+0982780g                    fichier ex3.d34
+         d+00020000m    ----------------------------------------------
+        +0150-1800    LABAULE MAY-27-86
+         a+3486500g   iter 500
+         b+0974800g   tolz 0.20  # 200 mm/Dz
+         d+00200000m  told 0.20  # 200 mm/distances, 400 mm/geodesie
+        '1800         Zmoyen 0000 metres
+        )1.55         projection 000 mm/km
+        *01           cordistance 0.000  metres par portee
+        ,3.000        epspoint 0.0003
+        +0150-1700    epsbloc 0.00000010
+         a+3486500g   .....
+         b+1019480g   .....
+         d+00200010m  geodesie
+        +3157-1701    999999
+         a+3904640g   P33V36
+         b+0974560g     ns   np     dh      ah       av      lm      ht
+         d+00100000m  1700    8   4.4440 329.9620  85.8700  1.500  1.650
+        +0150-1702       0    9   9.8890 195.9000  98.2780  1.500  1.650
+         a+0758080g      0   10 100.0123 194.9006  98.2800  2.000  1.650
+         b+0974780g      0   11  11.8880 195.9000  98.2780  2.000  1.650
+        +6050-0040       0   12  20.0000 195.9000  98.2780  1.500  1.650
+         a+2784960g      0 1800 200.0000 348.6500  97.4800  2.000  1.650
+         b+0858600g   1800 1700 200.0100 348.6500 101.9480  3.000  1.550
+        +0150-0041       0 1701 100.0123 391.4634  97.4560  3.000  1.550
+         a+2784960g      0 1702    .0000  75.8080  97.4780  3.000  1.550
+         b+0858640g      0   40    .0000 278.4960  85.8600  3.500  1.550
+         d+00004446m`    0   41    .0000 278.4960  85.8640  3.000  1.550
+                         Pytha-Topo R920301 Page 33.13
+
+
+
+                         	 C - GEODAT 122
+                         	 --------------
+
+        C 1 - FORMAT DES ENREGISTREMENTS
+        --------------------------------
+
+        Longueurs maximun 80 caracteres
+
+        n  v1  v2  v3  v4  ........
+
+        - Les valeurs vi vont par paire ; n est facultatif
+        - separateur : espace, virgule ou signe egal
+        - le fichier peut etre corrige avec l'editeur (code ASCII)
+
+        Syntaxe des paires
+
+           ID = ival
+
+        ID varie de 0 a 9
+
+        Les donnees sont en unites metres, grades, sauf indications con-
+	traires fournies sous UNITES33 (voir A).
+	Chaque  enregistrement  est termine par les codes CR LF  (retour
+	chariot, saut de ligne).
+
+        ID est un code donnant le type de l'information. Si ID se suffit
+	alors ival est la donnee, sinon la paire  suivante  doit etre la
+	suite logique de  la  paire precedente , etc... jusqu'a la paire
+	fournissant la donnee. Dans le cas qui nous interesse seules les
+	informations generales necessitent 2 paires.
+
+
+        SIGNIFICATION DES PAIRES
+        ------------------------
+
+        0 = ival
+	   Il s'agit d'information generales.
+           ival correspond au numero de la fonction de base definie en A
+
+        1 = donnee ( suit 0 = ival , donnee utilisee par la fonction)
+
+        2 = numero de station
+	3 = hauteur des tourillons
+
+        4 = code point
+	   le code point doit etre not‚ comme suit   4=ccc.iiiii
+	   le code r‚sultant (fichier ?.cpt) sorti par P33 aura la forme
+	   					  Nø point  ccciiiii
+	   si le point d‚cimal est omis on aura   Nø point  ccc00000
+
+        5 = numero du point
+        6 = hauteur mire (ou canne ou reflecteur)
+
+        7 = angle horizontal
+
+        8 = angle vertical
+
+        9 = distance suivant la pente ( 0 si pas de distance )
+                         Pytha-Topo R920301 Page 33.14
+
+
+
+        C 2 - EXEMPLE    fichier G122.D33
+        -------------
+
+
+        0=1 1=060784	    	#date
+        1,0=2 1=2584		#dossier
+        0=5 1=-1			  #collimation horizontale -1 gr
+        0=6 1= 1			  #collimation verticale    1 gr
+        0=12 1=2. 0=13 1=-.5   #constantes appareil=+2m, reflecteur=-0m5
+        2,2=5001 3=1.          #st 5001 , ht 1.000
+        3,5=1 6=9999 7=100.7600 8=104.1870 9=8.942  #pas de Z au point 1
+        4,5=2 6=1542 7=116.4300 8=103.2880 9=10.982
+        4=1				     #code point=1 a partir de 3
+        5,5=3 7=128.6550 8=102.9420
+        5=4 7=134.971 8=102.882 9=12.598
+        0=16 1=0			# pas de Z au point 4
+        5,5=13 7=2.2980 8=102.9500
+        6,5=14 7=326.0830 8=104.1470
+        0=15 1=20	  		# dh chainee pas de z point 14
+        8,5=16 6=-1. 7=365.4450 8=99.5590 9=14.020
+        0=14 1=14 # distance chainee horizontale point 16
+        1,5=19 7=368.5000 8=99.1140 9=32.791
+        2,5=20 6=1.40 7=369.0040 8=99.0190 9=41.900
+        0=11 1=-.45	4=0			#excentricit‚ en Z
+        0=12 1=0 0=13 1=0			# raz cstes app./refl.
+        6,5=24 6=9999  7=369.7020 8=99.0660 9=69.937
+        6,5=5002 7=370.2900 8=99.1070 9=208.971
+        7,5=5003 7=107.1610 8=102.6570 9=11.826
+        8,2=5003 3=1.
+        9,5=5001 7=0.0010 8=97.8720 9=11.820
+        9,5=43 7=176.1040 8=98.2600 9=1.849
+        0=9 1=-1. 			      # -1m / 43
+        0=6 1=-1			      #collimation verticale -1g
+        0=5 1= 1			      #collim. horizontale    1g
+        0=11 1=1000			      #+1m en Z au point 43
+        9,5=44 7=176.1040 8=98.2600 9=100
+        0=10 1=-1.5708
+        9,5=45 7=176.1040 8=98.2600 9=100
+        0=9 1=-1. 0=10 1=1.5708
+        9,5=46 7=176.1040 8=98.2600 9=100 0=17 1=1.25
+        9,  4=2  5=47 7=176.1040 8=98.2600 9=100
+        9,5=5004 7=366.0310 8=99.2880 9=19.416
+        0,2=5004 3=1.
+        1,5=5003 7=0.0000 8=100.6220 9=19.411
+        3,5=64 7=0.2970 8=100.5320 9=8.679
+        4,2=5002 3=1.
+        5,5=5001 7=0.0000 8=100.9080 9=208.969
+        2,5=5005 7=191.1120 8=100.3780 9=178.593
+        ,5=13 7=350
+        4,2=5005 3=1.
+        0=5 1=0 0=6 1=0			# raz collimations
+        5,5=5002 7=0.0000 8=99.6480 9=178.600
+        9,5=105 6=1.20  7=396.6640 8=99.5780 9=21.948
+        8,5=5006 6= 1. 7=262.1230 8=100.6030 9=13.831
+        9,  4=50  2=5006 3=1.
+        0,4=3 5=5005 7=399.9990 8=99.7680
+                         Pytha-Topo R920301 Page 33.15
+
+
+
+        C 2 - EXEMPLE    fichier G122.D33 ( suite )
+
+
+
+        4=4 0=14 1=13.836	     #code point=4, dh=13.836/point 5005
+        2,5=5007 7=27.6780 8=100.8670
+        0=14 1=19.965		     	#dh=19m965/point 5007
+        0,5=132 7=355.5360 8=116.8710 9=10.436
+        1,5=5008 7=330.1600 8=122.4380
+        0=15 1=22.2		     	#pas de Z, dh=22m20/point 5008
+        2,2=5007 3=1.
+        3,4=0 6= 1. 5=5006 7=0.0000 8=99.3560 9=19.957
+        2,5=141 7=372.7020 8=96.1390 9=6.312
+        3,2=5008 3=1.
+        4,5=5006 7=0.0010 8=77.5120 9=23.654
+        2,5=149 7=199.6010 8=101.7970 9=13.100
+        2=13 3=1.5 6=1.3 4=60 5=5001 7=0 5=150 7=0 8=101 9=20
+        0=50 1= 1.			# distance +1 metre au point 501
+        4=501 6=1300 7=150.1 8=100.0501 9=100 5=501
+        0=50 1=-1.			# distance -1 metre au point 502
+        4=50200000 7=150.2 8=100.0502 9=100 5=502
+        0=60 1= 1.5708 			# angle ho +1 grade au point 503
+        4=503.4 7=100.0 8=100.0503 9=99.988 5=503
+        0=60 1=-1.5708 			# angle ho -1 grade au point 504
+        4=504.6789 7=100.0 8=100.0504 9=99.988 5=504
+        0=27 1= .5 			# +0m50 en z au point 505
+        4=505 7=150.5 8=100.0505 9=505 5=505
+        0=27 1=-.5 			# -0m50 en z au point 506
+        4=506 7=100.506 8=100.0506 9=100.506 5=506
+        0=20     4=507.12345 5=507  	#repeter la mesure precedente
+        4=508 6=1. 7=150.8 8=100.0508 9=508 5=508
+        4=509 7=150.9 8=100.0509 9=509 5=509
+        4=510 7=151 8=100.0510 9=510 5=510
+        0=99                            #fin des donnees
+
+
+        C 3 - CONFIGURATION
+        -------------------
+
+	La table des fonctions de base est la table FONC33 , du  fichier
+	P033P034.MCG  .
+
+
+
+                                 D - GEODAT 120
+                                 --------------
+
+	Les informations du G120 sont  converties  au  format  G122 , et
+	stockees dans un fichier D33.TMP qui sert d'entree a P33 .
+	Le traitement est identique au G122 , sauf quelques fonctions de
+	base (informations generales) pouvant perturber l'interpretation
+	faite par P33.  Faire une verification.
+                         Pytha-Topo R920301 Page 33.16
+
+
+
+                           E - WILD GREi, GIFj, etc...
+                           ---------------------------
+
+        E 1 - FORMAT DES ENREGISTREMENTS
+        --------------------------------
+
+	Les donnees des carnets sont composees de deux types de bloc
+		- les blocs "code"
+		- et les blocs "mesure"
+	Chaque bloc est de longueur fixe  ( 16 caracteres )  et comporte
+	deux zones : nature de la donnee, et donnee.
+	Un enregistrement peut comporter de 1 a 10 blocs. P33 limite les
+	entrees a 80 caracteres, donc 5 blocs.
+
+	La  zone  nature  est codee sur  les caracteres 1 et 2 , en 7 on
+	trouve le signe, avec valeur de 8 a 15.
+
+	Les blocs mesure traites par P33 sont les suivants :
+
+	nature	donnee
+
+	11	numero du point
+	21	angle horizontal
+	22	angle vertical
+	31	distance suivant la pente , la position 6 du  bloc donne
+		l'unite de saisie : 0 = 1 mm, 6 = 0.1 mm, 8 = 0.01 mm
+	71	bloc remarque
+
+	Si le bloc 71 (1) est utilis‚, il comprend alors 2 parties
+	  1 = hmire : caracteres 3 a 6
+	  2 = codification du point sur 8 chiffres : caracteres 8 a 15
+	dans ce cas, il faudra annuler la fonction 30 : code -1 par
+	exemple dans les cases 30 de la table FONC33 et WGRE3 .
+
+	Les blocs d'informations generales ont la forme
+
+	nature	donnee
+
+	41	numero de la fonction generale,
+		sauf a utiliser la fonction 100 qui permet de combiner
+		le code nature et le code point :
+		si f100 dif de 0, alors si valeur en 41 est superieur a
+		f100, le code point est ( valeur - f100 ).
+		Dans ce cas, les zones information 42 a 45 peuvent etre
+		utilisees pour completer la codification du point, soit
+		5 zones x 8 caracteres = 40 digits decimaux.
+
+	42	donnee 1
+	43	donnee 2
+	44	donnee 3
+	45	donnee 4
+
+
+
+
+
+	(1) necessite un GRE programmable.
+                         Pytha-Topo R920301 Page 33.17
+
+
+
+        E 2 - EXEMPLE  : voir la configuration en E3
+        -------------
+
+        410001+00000011 42....+00000001 43....+00161090 	# 1/
+        410002+00000020 42....+00000081 43....+00001542 	# 2/
+        110003+00000066 21.002+00000000 22.002+09995000 31..00+00494739
+        410004+00000043 42....+00002150 			# 3/
+        110005+00000010 21.002+29867500 22.002+09967700 31..00+00100979
+        410006+00000043 42....+00002150 			# 3/
+        410007+00000020 42....+00000010 43....+00001563
+        110008+00000081 21.002+00000000 22.002+09957000 31..00+00100984
+        410009+00000043 42....+00002150                         # 3/
+        110010+00000011 21.002+22676600 22.002+09981600 31..00+00085122
+        410011+00000043 42....+00001500                         # 3/
+        410012+00000020 42....+00000010 43....+00001534
+        110013+00000081 21.002+00000000 22.002+09955300 31..00+00100976
+        410014+00000043 42....+00002150                         # 3/
+        410015+00000050 42....+00001800 			# 4/
+        410016+00000778
+        110017+00000100 21.002+37602000 22.002+09994800 31..00+00040218
+        410018+00000794 42....+00000044 			# 5/
+        110019+00000101 21.002+37491400 22.002+09993600 31..00+00039383
+        410020+00000701 				        # 6/
+        110021+00000102 21.002+36819200 22.002+10003300 31..00+00037728
+        110022+00000103 21.002+36222700 22.002+10008400 31..00+00039983
+        110023+00000104 21.002+35766600 22.002+10007200 31..00+00044132
+        410024+00000794 42....+00000044 43....+10007100 44....+00048508
+        110025+00000105 21.002+35460500 22.002+10007100 31..00+00048508
+        410026+00000778
+        110027+00000106 21.002+35416900 22.002+10008800 31..00+00049331
+        410028+00000730
+        110029+00000107 21.002+35072800 22.002+10002500 31..00+00048085
+        110030+00000108 21.002+36212500 22.002+09993000 31..00+00053637
+        410031+00000703
+        110032+00000109 21.002+36301400 22.002+10016800 31..00+00039438
+        410033+00000701
+        110034+00000110 21.002+36245100 22.002+10007500 31..00+00039810
+        410035+00000760
+        110036+00000111 21.002+36555800 22.002+10003000 31..00+00038276
+        410037+00000701
+        110038+00000112 21.002+36753100 22.002+09996000 31..00+00039474
+        110039+00000113 21.002+37180700 22.002+09999000 31..00+00038113
+        110040+00000114 21.002+36992100 22.002+09981900 31..00+00039712
+
+
+	renvois
+
+	1/ dossier, date
+	2/ station, hauteur tourillons
+	3/ mire provisoire pour 66 et 10  (point precedent)
+	4/ hauteur mire courante
+	5/ codes point 94 (794-700) et 44 et 3 fois 0
+	6/ code point 1 ( 701-700 ) et 4 fois 0
+
+	5/  6/ il est possible d'avoir 5 codes par point, soit 40 carac-
+	teres au total pour codifier un point.
+                         Pytha-Topo R920301 Page 33.18
+
+
+
+        E 3 - CONFIGURATION
+        -------------------
+
+	fichier P033P034.MCG
+	table des fonctions de base (FONC33),  table utilisateur (WGRE3)
+	correspondant a l'exemple E2 .
+	......
+	...
+        WGRE3        #WILD GRE3 OU GIF10 OU ....
+         11 00 00 00 00 00 00 00 40 41	  00 00 00 00 00 44 43 00 00 37
+         00 00 00 00 00 00 00 20 -1 50    00 00 00 00 00 00 00 00 00 00
+         00 00 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00 00 00
+         00 00 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00 00 00
+         00 00 00 00 00 00 00 00 00 00   00 00 00 00 00 00 00 00 00 700
+	......
+        fonc33       #fonctions standard de 1 a 100 (infos gene)
+         02 01 03 04 05 06 07 08 09 10    11 12 13 14 15 16 17 18 -1 20
+         -1 -1 -1 -1 25 26 27 28 -2 30    -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+         -1 -1 -1 -1 -1 -1 -1 -1 -1 -1    -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+         -1 -1 -1 -1 -1 -1 -1 -1 -1 -1    -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+         -1 -1 -1 -1 -1 -1 -1 -1 -1 -1    -1 -1 -1 -1 -1 -1 -1 -1 99 -1
+	......
+
+	codification terrain
+	des blocs  "code" 41
+	table WGRE3
+		       correspondance avec FONC33, fonctions de base
+
+	  11             1   date
+	  40    P        9   excentricit‚ en ligne
+	  41    P       10   excentricit‚ transversale
+	  44    P       16   pas de Z
+	  43    P       17   changement provisoire de hmire
+	  37            20   r‚p‚ter l'enregistrement pr‚c‚dent, sauf
+	                     valeurs fournies ,ex code point et nø point
+	  20            28   changement de station (ns et hi)
+	  50            30   changement de hmire
+	"700"          100   origine de la codification en zones 41 … 45
+			     1er code = donnee du bloc 41 - f100
+
+	La fonction 1 implique la fonction 2 (dossier) .  On  trouve  en
+	positions 1 et 2 de FONC33 les valeurs 2 et 1 (inversion),  ceci
+	dans le but d'avoir sur le listing (en-tete) , dossier  suivi de
+	la date.
+
+	La fonction 29, codification du point n'est pas utilisee.
+	La fonction 100 donne l'origine de la codification  ( 700 ) , on
+	pourra donc codifier sur 5 zones (41 a 45) .
+	Les fonctions inutilisees sont notees -1 ou -2 dans les tables.
+	Une fonction est disponible si elle est validee dans les deux
+	tables. Les codes terrain doivent etre superieurs a 0 .
+                         Pytha-Topo R920301 Page 33.19
+
+
+
+                                F - ZEISS REC200
+                                ----------------
+
+        F 1 - FORMAT DES ENREGISTREMENTS
+        --------------------------------
+
+        F 2 - EXEMPLE
+        -------------
+
+        F 3 - CONFIGURATION
+        -------------------
+
+                         Pytha-Topo R920301 Page 33.20
+
+
+
+                                 G - MICRONIC 1
+                                 --------------
+
+        G 1 - FORMAT DES ENREGISTREMENTS
+        --------------------------------
+
+        G 2 - EXEMPLE
+        -------------
+
+        G 3 - CONFIGURATION
+        -------------------
+

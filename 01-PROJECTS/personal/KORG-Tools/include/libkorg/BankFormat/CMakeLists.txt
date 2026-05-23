@@ -1,0 +1,27 @@
+set(SOURCE_FILES
+	${SOURCE_FILES}
+
+	${CMAKE_CURRENT_SOURCE_DIR}/BankCollection.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/BankFormat.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/BankNumber.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/BankObject.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/BankSlot.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/EncryptedSample.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/MultiSamplesObject.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/ObjectBank.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/PerformanceObject.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/PadBankNumber.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/PerformanceBankNumber.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Reader.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SampleBankNumber.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SampleObject.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SingleTouchSettings.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SongBookEntry.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SongBook.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SoundObject.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/SoundBankNumber.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Style.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/StyleBankNumber.hpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Writer.hpp
+
+	PARENT_SCOPE)

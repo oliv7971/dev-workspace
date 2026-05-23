@@ -1,0 +1,53 @@
+
+
+	pour passer des dessins de v3.5 a v4
+
+
+	old version : sauvedes a.dao (avec version 3...  )
+		      donne le fichier suivant
+
+	#sauvedes V3.54
+	RAZ
+
+	XYZ
+	1 797937.513 206838.197 44.297 0 0 60 0
+	2 798030.974 206756.827 43.982 0 0 60 0
+	3 798096.578 206638.530 43.634 0 0 51 0
+	.......
+
+
+		corriger comme suit :  DEBUT DU FICHIER
+
+	#sauvedes V3.54
+	#RAZ		# ignorer cette ligne
+	chft fonte	# ou votre fonte
+	XYZ
+	9000001 797937.513 206838.197 44.297 0 0 60 0 # point 1 *
+	9000002 798030.974 206756.827 43.982 0 0 60 0 # point 2 (dif de 1) *
+	1 797937.513 206838.197 44.297 0 0 60 0
+	2 798030.974 206756.827 43.982 0 0 60 0
+	3 798096.578 206638.530 43.634 0 0 51 0
+	.......
+
+	* 2 points quelconques de la zone avec les numeros
+	9000001 et 9000002
+	(pour eviter les pertes de precision)
+
+
+	copy c:\mcg\depart.p65+a.dao  b.dao
+
+	puis
+
+	copier le dossier dans le nouveau repertoire ( c:\topo\.... )
+	supprimer ucle.p65
+	et, s'ils existent
+		  depart.p65
+		  fecr.p65
+		  menuvisu.p65
+
+
+
+	p65
+	...
+	le fichiers fonte et dessin sont convertis en v4
+	char b.dao

@@ -1,0 +1,10 @@
+import sqlite3, os
+DB = os.path.abspath('inventaires/inventaire_46-BPNL.db')
+conn = sqlite3.connect(DB)
+rows = conn.execute("SELECT path FROM files WHERE path LIKE '%SESSION%' LIMIT 3").fetchall()
+print("SESSION:")
+for r in rows: print(repr(r[0]))
+rows2 = conn.execute("SELECT path FROM files WHERE path LIKE '%PROJETS%' LIMIT 3").fetchall()
+print("PROJETS:")
+for r in rows2: print(repr(r[0]))
+conn.close()

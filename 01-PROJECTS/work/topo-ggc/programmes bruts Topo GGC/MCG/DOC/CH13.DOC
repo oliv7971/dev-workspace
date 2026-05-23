@@ -1,0 +1,1490 @@
+                         Pytha-Graph R910701 Page 13.1
+
+
+
+
+
+
+
+
+
+
+                    M A N U E L    D E    R E F E R E N C E
+
+
+
+                                CHAPITRE   13
+
+
+                    REPERTOIRE  DES  FONCTIONS CLASSEES PAR
+
+                              ORDRE ALPHABETIQUE
+
+
+
+
+
+
+
+
+
+
+        La version et le num‚ro de la fonction, sont not‚es  en tˆte de
+        chaque commande, sous la forme vfff .
+                         Pytha-Graph R910701 Page 13.2
+
+
+
+        1074 $DDE     D‚truire un fichier de type dessin.
+                SYNTAXE : $DDE (Nom Fichier Dessin)    <RC>
+                Taper le nom du fichier sans extension.
+                le  nom  de  fichier  ne doit pas avoir d'extension et
+                ˆtre  du  type  binaire ( ex‚cuter la commande FUTI ).
+                … utiliser avec pr‚caution.
+                Voir FILE
+
+        2076 $DFO     D‚truire un fichier de type fonte.
+                SYNTAXE : $DFO (Nom Fichier Fonte) <RC>
+                Taper le nom du fichier sans extention.
+                <ATTENTION> : conserver  toujours  un  fichier  de type
+                FONTE (extension *.FTE),  ex‚cuter  la   commande  FUTI
+                pour ‚viter toutes fausses manoeuvres.
+                Voir FILE
+
+        2057 $DPR     D‚truire un fichier de type proc‚dure.
+                SYNTAXE : $DPR (Nom Fichier Proc‚dure) <RC>
+                Taper le nom du fichier sans extension.
+                Utiliser  la  commande  FUTI pour un listing ‚cran des
+                fichiers utilisateurs.
+                Voir FILE
+
+        1075 $DXY     D‚truire un fichier de type coordonn‚es XY (Z).
+                SYNTAXE : $DXY (Nom Fichier XY<Z>)  <RC>
+                Taper le nom du fichier sans extension.
+                Utiliser  la  commande  FUTI pour un listing  ‚cran des
+                fichiers utilisateurs.
+                Voir FILE
+
+	2130 $LCA     Charger en m‚moire un fichier de	type  proc‚dure
+                "cadre" .
+                SYNTAXE : $LCA (Nom Fichier  Proc‚dure <‚ch(X) ‚ch(Y)>)
+                Taper le nom du fichier sans extension.
+                <OPTION> : ‚chelle (X) -- ‚chelle (Y)
+                Utiliser  la  commande  FUTI  pour un listing ‚cran des
+                fichiers utilisateurs.
+
+        1023 $LDE     Charger en m‚moire un fichier de type dessin.
+                SYNTAXE : $LDE (Nom Fichier Dessin <‚ch(X) ‚ch(Y)>)<RC>
+                Taper le nom du fichier sans extension.
+                <OPTION>:‚chelle (X) -- ‚chelle (Y)  par d‚faut X=1 Y=1
+                Utiliser la commande FUTI pour  un  listing  ‚cran  des
+                fichiers  utilisateurs ( Fichiers avec extension*.DES )
+		Voir FILE
+
+        1063 $LFO     Charger en m‚moire un fichier de type fonte.
+                SYNTAXE : $LFO (Nom Fichier Fonte) <RC>
+                Taper le nom du fichier sans extension.
+                Utiliser la commande FUTI  pour un  listing  ‚cran  des
+                fichiers utilisateurs ( Fichiers avec extension*.FTE ).
+                Voir FILE
+                         Pytha-Graph R910701 Page 13.3
+
+
+
+	2058 $LPR     Charger en m‚moire un fichier de type  proc‚dure.
+                SYNTAXE : $LPR (Nom Fichier Procedure <‚ch(X) ‚ch(Y)>)
+                <RC>
+                Taper le nom du fichier sans extension.
+                <OPTION>:‚chelle (X) -- ‚chelle (Y)  par d‚faut X=1 Y=1
+                Utiliser  la  commande  FUTI  pour un listing ‚cran des
+                fichiers utilisateurs ( Fichiers avec extension*.PRO ).
+
+        1033 $LXY     Charger en m‚moire un fichier de type coordonn‚es
+                XY(Z).
+                SYNTAXE : $LXY ( Nom Fichier Coordonn‚es )
+                <‚ch(X)‚ch(Y)>  <RC>
+                Taper le nom du fichier sans extension.
+                <OPTION>:‚chelle (X) -- ‚chelle (Y)  par d‚faut X=1 Y=1
+                Utiliser la commande FUTI  pour  un listing  ‚cran  des
+                fichiers utilisateurs ( Fichiers avec extension*.XYZ ).
+
+        1022 $SDE     Sauvegarder le dessin pr‚sent en m‚moire dans un
+                fichier de type dessin. CODE BINAIRE.
+                SYNTAXE : $SDE (Nom Fichier Dessin <‚ch(X) ‚ch(Y)>)<RC>
+                Taper le nom du fichier sans extension.
+                <OPTION>:‚chelle (X) -- ‚chelle (Y)  par d‚faut X=1 Y=1
+                Utiliser  la  commande  FUTI  pour un listing ‚cran des
+                fichiers utilisateurs ( Fichiers avec extension*.DES ).
+
+	2054 $SFO     Sauvegarder la fonte en cours dans un  fichier de
+		type fonte. CODE BINAIRE.
+                SYNTAXE : $SFO (Nom Fichier Fonte)  <RC>
+                Taper le nom du fichier sans extension.
+                Utiliser la commande FUTI pour  un  listing  ‚cran  des
+                fichiers utilisateurs ( Fichiers avec extension*.FTE ).
+
+	2056 $SPR     Sauvegarder sur disquette ou sur disque le dessin
+		en m‚moire sous forme de fichier proc‚dure .
+                CODE BINAIRE .
+                SYNTAXE : $SPR (Nom Fichier Procedure  <‚ch(X) ‚ch(Y)>)
+                <RC>
+                Taper le nom du fichier sans extension.
+                <OPTION>:‚chelle (X) -- ‚chelle (Y)  par d‚faut X=1 Y=1
+                Utiliser  la  commande  FUTI  pour un listing ‚cran des
+                fichiers  utilisateurs ( Fichiers avec extension*.PRC )
+
+	1021 $SXY     Sauvegarder les coordonn‚es du dessin en	m‚moire
+		dans un	fichier de type coordonn‚es XY(Z) . CODE ASCII.
+                SYNTAXE : $SPR ( Nom Fichier Coordonn‚es ) <RC>
+                Taper le nom du fichier sans extension.
+                Utiliser la commande FUTI pour  un  listing  ‚cran  des
+                fichiers  utilisateurs ( Fichiers avec extension*.XYZ )
+
+        1032 $ZER     Redemarrer "… chaud" le logiciel de graphisme.
+                SYNTAXE : $ZER  <RC>
+                <ATTENTION>:Le dessin en m‚moire  n'est pas  sauvegard‚
+                automatiquement, l'utilisateur doit le faire  avant  de
+                red‚marrer le logiciel.
+                         Pytha-Graph R910701 Page 13.4
+
+
+
+	3119 AFBL     Affecter un num‚ro de bloc au dessin actuellement
+		en m‚moire.
+                SYNTAXE : AFBL (Num‚ro Bloc) <RC>
+
+        1090 AFFINUME Afficher les points en cr‚ation.
+                SYNTAXE : AFFINUME
+                Commande type bascule:
+                     -1er appel = OFF pas d'affichage des points cr‚‚s.
+                     -2Šme appel= ON   affichage   des   points  cr‚‚s.
+
+	3120 AFPL     Affecter un num‚ro de plan au dessin actuellement
+		en m‚moire.
+                SYNTAXE : AFPL ( Num‚ro Plan )  <RC>
+
+        1093 AIDE     Aider l'utilisateur.
+                SYNTAXE : AIDE
+                Commande de type bascule:
+                     -1er appel = OFF  pas  d'affichage   des  messages
+                     -2Šme appel =  ON    affichage     des    messages
+
+        1012 ALIGNE   Aligner des points.
+                SYNTAXE : ALIGNE
+                NøPoint(1) <RC> NøPoint(2) <RC> NøPoint(n) <RC>
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+                les  points  sont  align‚s  entre  le  point(1)  et  le
+                point(n).
+
+	1042 ALPH     D‚finir la valeur de la tangente pour repr‚senter
+		les caractŠres et les symboles en "ITALIQUE":
+                inclinaison sur l'axe OY du symbole.
+                SYNTAXE : ALPH <RC> (ValNum)
+                en mode DIGIT et en mode SOURIS :ALPH = num‚ro de case.
+                Le "  num‚ro   de   case   "   repr‚sente  la   valeur.
+
+	1040 ANG      D‚finir l'angle par rapport … l'axe OX de l'‚cri-
+		ture des textes.
+                SYNTAXE : ANG (Val Num) <RC>
+                en mode DIGIT et en mode SOURIS:ANG = pointer 2 points.
+                la  valeur  de l'angle est d‚finie par les deux points.
+
+        1166 ANHA     D‚finir l'angle des hachures.
+                SYNTAXE : ANHA (ValNum) <RC>
+                en mode DIGIT et en mode SOURIS:ANHA =pointer 2 points.
+                la  valeur  de l'angle est d‚finie par les deux points.
+
+        1179 ANNULE   Annuler la derniŠre commande.
+                SYNTAXE : ANNULE <RC>
+                L'‚l‚ment   …   effacer   clignote  :  valider  ou  non
+
+	1099 ARR      D‚finir l'arrondi de saisie  des  coordonn‚es  en
+		mode digitaliseur.
+                SYNTAXE : ARR (Val Num) <RC>
+                en mode DIGIT et en mode SOURIS : ARR = num‚ro de case.
+                "  num‚ro  de  case  "   repr‚sentant    la    valeur .
+                         Pytha-Graph R910701 Page 13.5
+
+
+
+	2101 AXON    Calculer les perspectives axonom‚triques du dessin
+		en m‚moire.
+                SYNTAXE : AXON (Coefficient)  <RC>
+		En  tapant  AXON  sans coefficient la perspective est …
+                50 grades par d‚faut ( Coefficient = 0.707 par d‚faut )
+
+	3115 BLOC     Pr‚ciser le num‚ro de bloc auquel sont  affect‚es
+		les commandes de dessin ult‚rieurement.
+                SYNTAXE : BLOC ( Numero Bloc )   <RC>
+                On  dispose de 98 blocs par dessin qui peuvent contenir
+                98 plans.
+
+        2084 CALDIGIT Calage du digitaliseur.
+                SYNTAXE : CALDIGIT  <RC>  nø pt de calage <RC>  pointer
+                                  <RC>  .............................
+                                  <RC>             fin de la commande
+                Apr‚s  l'entr‚e  de  la  commande  CALDIGIT, Donner  le
+                num‚ro du point de calage, puis  pointer  au  digit  le
+                point correspondant.
+
+        3118 CBLO     Copier un bloc(i) dans un autre bloc(j).
+                SYNTAXE : CBLOC  ( Num‚ro Bloc1 Num‚ro Bloc2 )   <RC>
+                Num‚ro Bloc1 = nø  du   bloc  source .
+                Num‚ro Bloc2 = nø du bloc destination.
+
+        2052 CCAR     Cr‚er (dessiner) un caractŠre d'une fonte.
+		SYNTAXE : CCAR Ascii (Coef echX echY echZ dx dy dz)<RC>
+                Ascii = nø du  code  ASCII  de  caractŠre.
+                Coef  = coefficient propre de d‚formation.
+                echX  = ‚chelle en X.
+                echY  = ‚chelle en Y.
+                echZ  = ‚chelle en Z.
+                dx = D‚placement en X du point d'origine du  carractŠre
+                     par  rapport  au   point   du   systŠme   d'axes .
+                dy = D‚placement en Y du point d'origine du  carractŠre
+                     par  rapport  au   point   du   systŠme   d'axes .
+                dz = D‚placement en Z du point d'origine du  carractŠre
+                     par  rapport  au   point   du   systŠme   d'axes .
+                Valeurs par d‚faut: coeff = echX = echY = echZ = 1
+                                  dx = dy = dz = 0
+
+        1008 CENT     Op‚rer un centrage de la fenˆtre-‚cran sur le
+                dessin.
+                SYNTAXE : CENT (  num‚ro Point  ) <RC>
+                    ou  CENT ( ValeurX ValeurY)
+                   ou  CENT < sans paramŠtre >
+                Possibilit‚  d'interrompre  le  dessin en tapant sur la
+                barre d'espace.
+
+	1145 CER1     Dessiner un cercle d‚fini par son centre	et  son
+                rayon.
+                SYNTAXE : CER1 ( NøPoint Centre   Rayon ) <RC>
+
+        1146 CER3     Dessiner un cercle passant par trois points.
+                SYNTAXE : CER3 ( NøPoint1 NøPoint2 NøPoint3 ) <RC>
+                         Pytha-Graph R910701 Page 13.6
+
+
+
+	1062 CERD    Dessiner un cercle ou un arc de cercle en tournant
+		vers la droite.
+                SYNTAXE : CERD
+                ( NøPoint centre NøPoint Depart NøPoint Arriv‚e )  <RC>
+                Si  le  paramŠtre point d'arriv‚e est omis le dessin du
+                cercle sera complet.
+
+	1144 CERG    Dessiner un cercle ou un arc de cercle en tournant
+		vers la gauche.
+                SYNTAXE : CERG
+                ( NøPoint centre NøPoint D‚part NøPoint Arriv‚e )  <RC>
+                Si  le paramŠtre point d'arriv‚e est omis le dessin  du
+                cercle sera complet.
+
+        2051 CFTE     Cr‚er ou compl‚ter (ajouter, modifier) une FONTE.
+                SYNTAXE : CFTE   <RC>
+                Commande de type bascule :
+                     - 1er appel : ON  cr‚ation de la symbolique.
+                     - 2Šme appel: OFF Quitter.
+                Le  dessin  en  m‚moire  est sauvegard‚ dans un fichier
+                temporaire "TEMPS".
+
+        1167 CHAR     Ex‚cuter un fichier de commandes de type "batch":
+                Charge et ex‚cute un fichier de dessin (ASCII).
+                SYNTAXE : CHAR ( Nom Fichier Code Ascii )  <RC>
+                Le  fichier  doit  ˆtre  en  clair  (ASCII), ce fichier
+                doit avoir  ‚t‚  charg‚  avec  la  commande  SAUVEDESS.
+
+        1177 CHFT     Changer de fonte, stocker l'ordre dans la pile.
+                SYNTAXE : CHFT   <RC>
+
+        1206 CI       Calculer l'intersection de cercles.
+                SYNTAXE : CI
+                        NøPoint1 NøPoint2 Rayon1 Rayon2 (NøPointn) <RC>
+                "NøPointn" est le num‚ro du point … cr‚er.
+
+	1025 CLS      Effacer les ‚crans graphique  et	alphanum‚rique.
+                SYNTAXE : CLS <RC>
+                Efface et affiche le menu … l'‚cran
+
+        1171 CLS1     Effacer l'‚cran alphanum‚rique.
+                SYNTAXE : CLS1 <RC>
+
+        1172 CLS2     Effacer l'‚cran graphique.
+                SYNTAXE: CLS2 <RC>
+
+        1043 COEF     D‚finir la valeur d'un coefficient g‚n‚ral de
+                d‚formation  pour  les   caractŠres  et  les   symboles
+                utilis‚s ulterieurement.
+                SYNTAXE : COEF ( Val Num )  <RC>
+                Coefficient > 1 : r‚tr‚cissement.
+                Coefficient < 1 : agrandissement.
+
+	1045 CORZ     Afficher les valeurs de la coordonn‚e (Z)  auprŠs
+		des points correspondants.
+                SYNTAXE : CORZ ( Valeur Pas )  <RC>
+                Pas de l'affichage = 1 par d‚faut.
+                         Pytha-Graph R910701 Page 13.7
+
+
+
+	1152 COTA     D‚finir la taille des ‚critures pour la  commande
+                COTE.
+		SYNTAXE : COTA	hxcota hycota d‚calage <RC>
+                Valeurs en "mm" papier.
+
+        1126 COTE     Coter un dessin.
+                SYNTAXE : COTE  <RC>
+                CLAVIER : NøPoint(1) <CR> NøPoint(2) <CR> ... NøPoint(n)
+                en mode DIGIT et en mode  SOURIS : pointer  les  points.
+
+        3114 CPLA     Copier un plan(i) dans un autre plan(j).
+                SYNTAXE : CPLA ( Num‚ro Plan1 Num‚ro Plan2 ) <RC>
+                 Num‚ro Bloc 1  =  nø  du  bloc  source.
+		Num‚ro Bloc 2 = nø du bloc destination.
+
+        2108 CSYM     Cr‚er (dessiner) un symbole d'une fonte.
+		SYNTAXE : CSYM nø( Coef echX echY echZ dx dy dz ) <RC>
+                nø    = num‚ro d'attribution du symbole, ce num‚ro sera
+                        appel‚ par la fonction SYMB.
+                Coef  = coefficient propre de d‚formation.
+                echX  = echelle en X.
+                echY  = echelle en Y.
+                echZ  = echelle en Z.
+                dx = D‚placement en X du point d'origine  du carractŠre
+                     par  rapport  au   point   du    systŠme   d'axes.
+                dy = D‚placement en Y du point d'origine  du carractŠre
+                     par  rapport   au   point   du   systŠme   d'axes.
+                dz = D‚placement en Z du point d'origine  du carractŠre
+                     par  rapport   au   point   du   systŠme   d'axes.
+                Valeurs par d‚faut: coeff = echX = echY = echZ = 1
+                                  dx = dy = dz = 0
+
+        3117 DBLO     D‚placer un bloc.
+                SYNTAXE : DBLO (num‚ro) <RC>
+
+        2137 DCAR     D‚truire un caractŠre de la FONTE.
+                SYNTAXE : DCAR (Num‚ro Code Ascii)  <RC>
+
+        1031 DEBG     Redessiner en pas … pas avec possibilit‚ de
+                correction.
+                SYNTAXE : DEBG ( NøDepart  NøFin )  <RC>
+                NøDepart : num‚ro de la premiŠre s‚quence.
+                NøFin    num‚ro de la derniŠre s‚quence.
+                Si  ces  paramŠtres  sont  omis toutes les s‚quences du
+                dessin seront prises en compte.
+                <ATTENTION> : toute   suppression    est    d‚finitive.
+
+        2248 DEPECRAN D‚placer la fenˆtre ‚cran suivant un vecteur.
+                SYNTAXE : DEPECRAN <RC>
+                en mode DIGIT et en mode  SOURIS  uniquement : il  faut
+                pointer … l'ecran les deux points qui donneront le sens
+                et la direction du vecteur.
+
+        2103 DEPP     D‚placer des points.
+                SYNTAXE : DEPP <RC>
+                Il faut d‚signer le  point  concern‚  et  la   position
+                d‚sir‚e  pour  l'inscription  de  ce point.
+                L'arrondi  de  saisie   ARR   est   ignor‚.
+                         Pytha-Graph R910701 Page 13.8
+
+
+
+        2079 DEPT     D‚placer un texte.
+                SYNTAXE : DEPT  <RC>
+                Le 1er point  … d‚signer est l'origine  du texte ( ou …
+                proximit‚).Le 2Šme, la position de la nouvelle origine.
+                L'arrondi    de     saisie     ARR      est     ignor‚.
+                Les points  de  calage des textes sont mat‚rialis‚s par
+                une marque.
+
+        2077 DEPZ     D‚placer les ‚critures des cotes (Z) des points.
+                SYNTAXE : DEPZ <RC>
+                Il faut d‚signer le point  concern‚  puis  la  position
+                d‚sir‚e pour la re‚criture de la cote (Z)
+		L'arrondi  de   saisie  ARR  est  ignor‚.
+
+	1047 DESS     Ex‚cuter le dessin en m‚moire en g‚n‚rant le code
+		traceur qui peut ˆtre lanc‚ en diff‚r‚.
+                SYNTAXE : DESS  <RC>
+                3 modes peuvent ˆtre utilis‚s :
+                   - le   mode    clavier
+                   - le mode digitaliseur
+                   - le    mode    souris
+                <RAPPELS>:
+		- fleche pour mettre la souris en fonction.
+                - DIG pour mettre  le  digit  en  fonction.
+
+	1203 DI       Calculer la distance horizontale	et  le gisement
+		entre des couples de points .
+		SYNTAXE : DI ( Point(1)  Point(2)....Point(n)) <RC>
+
+	1013 DIG      Mettre la table  …  digitaliser  en communication
+		avec le programme.
+                SYNTAXE : DIG <RC>
+                Pour revenir en mode clavier, taper sur la barre  d'es-
+                pacement ,  ou   toute   autre   touche   du   clavier.
+                L'incr‚ment de d‚placement peut ˆtre r‚gl‚ de 1 … 10 en
+                en utilisant les touches 0 … 9 du pave num‚rique .
+
+        1214 DP       Calculer la distance dans l'espace entre 2 points.
+                SYNTAXE : DP ( NøPoint(1) NøPoint(2) )  <RC>
+
+        3113 DPLA     D‚placer un plan(i).
+                SYNTAXE : DPLA (num‚ro) <RC>
+
+        2138 DSYM     D‚truire un symbole de la fonte.
+                SYNTAXE : DSYM = (NøSymbole)  <RC>
+
+        2134 DXF      Commandes g‚n‚r‚es par SAUVEDXF.
+                SYNTAXE : DXF ... DXFDEBUT ... DXFFIN
+                D‚finir  l'‚chelle , lissages , hachures  ...  dans  le
+                fichier DXF.
+
+	1092 DXY      Saisir des points en (XY) en indiquant les trans-
+		lation en X et en Y par  rapport  au  point  pr‚c‚dent:
+                d‚cumul‚es en (XY).
+                SYNTAXE : DXY (Nøpoint) <RC>
+                          dx1 dy1 nø1   <RC>
+                          dx2 dy2 nø2   <RC>
+                              ...
+                          <RC>
+                         Pytha-Graph R910701 Page 13.9
+
+
+
+                dx1 = D‚placement  Delta (X)  par  rapport  …  NøPoint.
+                dy1 = D‚placement  Delta (Y)  par  rapport  …  NøPoint.
+                dx2 = D‚placement  Delta   (Y)   par   rapport   …  X1.
+		dy2 = D‚placement  Delta   (Y)	 par   rapport	 …  Y1.
+
+	1153 DXYZ     Saisir des points en (XYZ) en indiquant les trans-
+		-lations  en  X,  en Y, et  en	Z  par rapport au point
+                pr‚c‚dent : d‚cumul‚es en (XYZ).
+                SYNTAXE : DXY ( Nøpoint )   <RC>
+                          dx1 dy1 dz1 nø1   <RC>
+                          dx2 dy2 dz2 nø2   <RC>
+                                ...
+                          <RC>
+                dx1 = D‚placement Delta (X) par rapport … (X)  NøPoint.
+                dy1 = D‚placement Delta (Y) par rapport … (Y)  NøPoint.
+                dz1 = D‚placement Delta (Z) par rapport … (Z)  NøPoint.
+                dx2 = D‚placement   Delta   (Y)   par   rapport  …  X1.
+                dy  = D‚placement   Delta   (Y)   par   rapport  …  Y1.
+                dz2 = D‚placement   Delta   (Z)   par   rapport  …  Z1.
+
+	1028 ECAR     D‚finir l'‚cartement entre deux caractŠres alpha-
+		num‚riques.
+                SYNTAXE : ECAR ( ValNum ) <RC>
+                en mode DIGIT et en mode SOURIS:valeur =num‚ro de case.
+                Valeur standard … la mise en route = 1.05
+
+        1141 ECHXYZ   Modifier les coordonn‚es (XYZ) de V%.
+                SYNTAXE :ECHXYZ (V%x V%y V%z) <RC>
+                V%x modifie : X = X * (1 + V/100)
+                V%x modifie : Y = Y * (1 + V/100)
+                V%x modifie : Z = Z * (1 + V/100)
+
+        1148 ECRI     Ex‚cuter ou non les ‚critures … l'‚cran.
+                SYNTAXE : ECRI <RC>
+                Commande de type bascule :
+                     - 1er appel = OFF les ‚critures ne s'affichent pas
+                                 … l'‚cran .
+                     - 2Šme appel=  ON    les   ‚critures   s'affichent
+                                 … l'‚cran .
+
+        2078 ECRIZ    Ex‚cuter ou non les ‚critures de Z … l'‚cran.
+                SYNTAXE : ECRIZ <RC>
+                Commande de type bascule :
+                     - 1er appel = OFF l'‚criture de Z ne s'affiche pas
+                                 … l'‚cran .
+                     - 2‚me appel = ON  l'‚criture   de   Z   s'affiche
+                                 … l'‚cran .
+
+        1096 EFFA     Effacer une liste de segment.
+                SYNTAXE : EFFA <RC>
+                aprŠs confirmation la suppression est d‚finitive.
+
+        1199 EFFCERCL Effacer une liste de cercles.
+                SYNTAXE : EFFCERCL <RC>
+                aprŠs confirmation la suppression est d‚finitive.
+
+        1197 EFFHACHU Effacer une liste de hachures.
+                SYNTAXE : EFFHACHU <RC>
+                aprŠs confirmation la suppression est d‚finitive.
+                        Pytha-Graph R910701 Page 13.10
+
+
+
+        2198 EFFLISSA Effacer un lissage.
+                SYNTAXE :EFFLISSA <RC>
+                aprŠs confirmation la suppression est d‚finitive.
+
+        1200 EFFTEXTE Effacer un texte.
+                SYNTAXE :EFFTEXTE <RC>
+                aprŠs confirmation la suppression est d‚finitive.
+
+        2156 EMAR   D‚finir la valeur de l'espacement entre les marques
+                d'une fenˆtre appos‚e sur le dessin.
+                SYNTAXE : EMAR <RC>
+                au message, donner une Val Num.
+                Val Num s'exprime en unit‚s utilisateur.
+                Par d‚faut Val Num = 100.
+
+        2149 EPT1     D‚finir des types de traits ‚pais et / ou les
+                utiliser.
+                SYNTAXE : EPT1 (num‚ro Largeur DiamŠtre Plume Extr‚mit‚)
+                         <RC>
+                num‚ro        num‚ro  de   plume   ( 1 … 10 ).
+                Largeur       largeur du trait en millimŠtres.
+                DiamŠtre Plume : diamŠtre de la plume en millimŠtres.
+                Extr‚mit‚s     0 = rectangulaires  , 1 = arrondies.
+                Les types de traits ainsi d‚finis sont m‚moris‚s.Il y a
+                possibilit‚   de   m‚moriser   10   types   de  trait .
+
+        1165 ESHA     D‚finir l'espacement des hachures.
+                SYNTAXE : ESHA <RC>
+                au  message  introduire  Val Num en millimŠtres papier.
+
+        1111 EXE   Ex‚cuter les commandes de dessin stock‚es en m‚moire
+                sans effa‡age pr‚alable de l'‚cran.
+                SYNTAXE : EXE <RC>
+
+        1004 EXEC  Executer les commandes de dessin stock‚es en m‚moire
+                avec un effa‡age de l'‚cran (CLS) avant ‚xecution.
+                SYNTAXE : EXEC <RC>
+
+        1034 FILE   Commande g‚n‚rale de gestion de fichiers propres au
+                logiciel.
+                SYNTAXE : FILE
+                Par  des  menus successifs , on  accŠde  aux  fonctions
+                de  chargement , rangement , suppression ,  liste   des
+                fichiers utilisateurs.
+
+        1015 FIN      Quitter le logiciel.
+                SYNTAXE : FIN <RC>
+                en mode CLAVIER  : sortir  du  programme.
+                en mode DIGIT et en mode SOURIS : si  FIN  est  dans le
+                menu , on revient au mode clavier.
+                AprŠs confirmation en mode clavier on quitte le logiciel.
+
+        1020 FUTI     Lister la table des fichiers utilisateurs.
+                SYNTAXE : FUTI <RC>
+
+        1215 GD       Implantation en gisements et en distances.
+                SYNTAXE : GD  <RC>
+                Au message:(Rayon Station Rayon Point NøSt(1)..NøSt(n))
+                <ATTENTION> : NøSt(n) < 28 .
+                        Pytha-Graph R910701 Page 13.11
+
+
+
+        2175 GOMME    Gommer un segment d'une liste.
+                SYNTAXE: GOMME  <RC>
+                en mode SOURIS et en mode SOURIS  uniquement : pointer
+                les points.
+
+	1017 GRIL     Afficher une trame ( Grille ) en superposition  …
+		un dessin ‚cran.
+                SYNTAXE : GRILLE  <RC>
+                Commande de type bascule :
+                     - 1er appel = ON affichage de la grille.
+                     - 2Šme appel= OFF effa‡age de la grille.
+
+	1050 GRMA     Afficher la grille  et  les  marques  (Valeurs des
+		abscisses et des ordonn‚es) des lignes, en systŠme ‚cran.
+                SYNTAXE : GRMA <RC>
+                Commande de type bascule :
+                     - 1er appel = ON affichage de la grille.
+                     - 2Šme appel= OFF effa‡age de la grille.
+
+        1125 HACH     Hachurer la liste donn‚e ou la liste pr‚c‚dente.
+                SYNTAXE : HACH <RC>
+
+        1163 HTXM Hauteur des textes permettant le choix entre la fonte
+                logicielle et le jeu de caractŠres du traceur.
+                SYNTAXE : HTXM <RC>
+                au message introduire une nouvelle valeur.
+
+        1038 HX      D‚finir la taille en abcisse (X) des caractŠres et
+                symboles   utilis‚s   ult‚rieurement   ,   en    unit‚s
+                utilisateur , … l'‚chelle 1.
+                SYNTAXE : HX (Val num) <RC>
+                en mode DIGIT et en mode SOURIS  : Val Num = Nø de case
+                point‚e.
+
+        1039 HY     D‚finir la taille en ordonn‚e (Y) des caractŠres et
+                symboles    utilis‚s    ult‚rieurement  ,  en    unit‚s
+                utilisateur , … l'‚chelle 1.
+                SYNTAXE : HY (Val Num) <RC>
+                en mode DIGIT et en mode SOURIS : Val Num = Nø de  case
+                point‚e.
+
+        1104 HZ   D‚finir la taille en suivant l'axe (Z) des caractŠres
+                et des symboles utilis‚s ult‚rieurement.
+                SYNTAXE : HZ (Val Num) <RC>
+                en mode DIGIT et en mode SOURIS : Val Num = Nø de  case
+                point‚e.
+
+        1205 IC1    Construction de l'intersection d'une droite et d'un
+                cercle.
+                SYNTAXE : IC1 <RC>
+                NøPoint1 NøPoint2 NøPoint3 Rayon (NøPointn)
+                NøPoint1 NøPoint2 : points de la droite.
+                NøPoint3 : centre du cercle.
+                Rayon    rayon du  cercle.
+                NøPoint(n): num‚ro du point  d'intersection ( si omis ,
+                incr‚ment automatique).
+                ( Point1-Pointn ) mini.
+                        Pytha-Graph R910701 Page 13.12
+
+
+
+        1220 IC2      Construction de l'intersection d'une droite et un
+                cercle.
+                SYNTAXE: IC2 <RC>
+                NøPoint1 NøPoint2 NøPoint3 Rayon (NøPointn)
+                NøPoint1 NøPoint2 : points de la droite.
+                NøPoint3 : centre du cercle.
+                Rayon    rayon du  cercle.
+                NøPoint(n): num‚ro du point  d'intersection ( si omis ,
+                incr‚ment automatique).
+                ( Point1-Pointn ) maxi.
+
+        1202 IG    Construction de l'intersection de 2 droites … partir
+                d'un point et du gisement de chacunes d'elles.
+                SYNTAXE :IG <RC>
+                NøPoint1 NøPoint2 Gis1 Gis2 (NøPointn)
+                NøPoint1 : num‚ro de point de la 1Šre droite.
+                Gis1     Gisement   de   la   1Šre  droite.
+                NøPoint2 : num‚ro de point de la 2Šme droite.
+                Gis2     Gisement   de   la   2Šme  droite.
+
+        1061 IMPR     Mettre l'imprimante en fonction.
+                SYNTAXE : IMPR <RC>
+                cette commande met l'imprimante en fonction si celle-ci
+                a ‚t‚ initialis‚e au d‚part.
+                Pour  revenir  en  mode ‚cran taper la commande "VISU".
+
+        1201 INTE  Construction de l'intersection de 2 droites d‚finies
+                par deux points.
+                SYNTAXE : INTE <RC>  n1 n2 n3 n4
+                en mode DIGIT et en mode SOURIS  :  pointer les points.
+                n1 n2 : points de la 1Šre droite.
+                n3 n4 : points de la 2Šme droite.
+
+        1226 INTPARAL  Construction de l'intersection de parallŠles … 2
+		droites.  SYNTAXE : INTPARAL <RC> n1 n2 n3 n4 d1 d2 (n)
+		En mode DIGIT et en mode SOURIS : pointer  les  points.
+		n1 n2 : points de la 1Šre  droite
+		n3 n4 : points de la 2Šme droite
+		d1 d2 : distance droite-parallŠles
+
+        1123 INUT     Supprimer les points inutiles au dessin.
+                SYNTAXE : INUT <RC>
+                Un point  est g‚n‚r‚ … chaque  pointe  de  mire : cette
+                commande  permet  d'annuler  tous  ces  points  ,  mais
+                <ATTENTION>: lors  d'un  chargement d'un fichier points
+                dans le  systŠme  (XYZ) , aprŠs cette commande tous les
+                points  inutiles  au  dessin  seront effac‚s.
+
+        1223 ISF1     Implantation de surfaces (triangle).
+                SYNTAXE : ISF1  ( Surf Point1 Point2...Point(n) )  <RC>
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+                Surf  :   surface    …  implanter.
+                Point1 Point2...Point(n) liste des segments.
+                        Pytha-Graph R910701 Page 13.13
+
+
+
+        1009 LC   Lister … l'‚cran les coordonn‚es des points du dessin
+                en m‚moire (exprim‚es en unit‚s utilisateur).
+                SYNTAXE : LC ( NøPoint D‚part    NøPoint Arriv‚e ) <RC>
+                LC: sans paramŠtres liste sur ‚cran ou  sur  imprimante
+                toutes les coordonn‚es.
+                LC NøPoint : liste sur  ‚cran  ou  sur  imprimante  les
+                coordonn‚es de NøPoint jusqu'… la fin.
+                LC NøPoint1 NøPoint2 :liste sur ‚cran ou sur imprimante
+                les coordonn‚es de num‚ro  point 1  …  num‚ro  point 2.
+
+        2110 LCAR Charger en m‚moire les ordres de dessin relatifs … un
+                caractŠre de la fonte.
+                SYNTAXE : LCAR ( nø Code Ascii )  <RC>
+                Charge les ordres de dessin du caractŠre appel‚ par son
+                num‚ro de code ASCII.
+
+        1174 LCMD Sauver le dessin en ASCII , code MCG, avec un en-tˆte
+                constitu‚ par le fichier DEPART.P65 . Ce  fichier  peut
+                ˆtre converti au format DXF (AUTOCAD).
+		SYNTAXE : LCMD ( Nom Fichier ) <RC>
+
+        1006 LCOM   Lister … l'‚cran les commandes du dessin en m‚moire
+                et les valeurs correspondantes.
+                SYNTAXE : LCOM ( Commande(1) Commande(n) ) <RC>
+                Commande(1) : Nø d'ordre de la premiŠre commande.
+                Commande(n) : Nø d'ordre de la derniŠre commande.
+                LCOM  sans paramŠtre : toutes les commandes  du  dessin
+                sont prises en compte : de la premiŠre jusqu'…  la  fin
+                LCOM 4   : d‚part commande  4   jusqu'…  la  fin.
+                LCOM 4 20: d‚part commande 4 jusqu'… commande 20.
+                A la suite de l'affichage "OK ? <O>N" , si  la  r‚ponse
+                est N la suppression de la commande de  dessin  corres-
+                -pondante est d‚finitive.
+
+        1083 LFXY    R‚cup‚rer un fichier de points en (XY) ou (XYZ) au
+                niveau du systŠme d'exploitation.
+                SYNTAXE : LFXY ( Nom Fichier  XY<Z>   echX  echY ) <RC>
+                Nom Fichier XY<Z> : Fichier en code ASCII.
+                echX : ‚chelle en X.
+                echY : ‚chelle en Y.
+                echX = echY = 1 par d‚faut.
+                Ce fichier  peut  ˆtre  ajout‚  au dessin  en  m‚moire.
+
+        1209 LIMCER   D‚finir la limite des centres de cercles.
+                SYNTAXE : LIMCER <RC>
+                au  message : taper  la  nouvelle  valeur  ou <CR> pour
+                garder l'ancienne.
+                Cette  valeur  repr‚sente  le  rayon  maximum .
+
+        2168 LIS1     Lissage : 1er arc non dessin‚ (4 points minimum).
+                SYNTAXE : LIS1 <RC>
+                CLAVIER : Nøpoint1 NøPoint2 ... NøPoint(n).
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+
+        2169 LIS2   Lissage:dernier arc non dessin‚ (4 points minimum).
+                SYNTAXE : LIS2 <RC>
+                CLAVIER : Nøpoint1 NøPoint2 ... NøPoint(n).
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+                        Pytha-Graph R910701 Page 13.14
+
+
+
+        2170 LIS3  Lissage : 1er et dernier arcs non dessin‚s (4 points
+                minimum).
+                SYNTAXE : LIS3 <RC>
+                CLAVIER : Nøpoint1 NøPoint2 ... NøPoint(n).
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+
+        2081 LISS     Lissage : tous les arcs sont dessin‚s  ( 3 points
+                minimum ).
+                SYNTAXE : LIS3 <RC>
+                CLAVIER : Nøpoint1 NøPoint2 ... NøPoint(n).
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+
+        1135 LSTXYZ   Donner la liste des points num‚rot‚s de i … j.
+                SYNTAXE : LSTXYZ i j <RC>
+
+        2109 LSYM    Charger en m‚moire les ordres de dessin relatifs …
+                un symbole.
+                SYNTAXE : LSYM ( num‚ro ) <RC>
+                Charge les ordres de dessin du symbole  appel‚  par son
+		num‚ro.
+
+        2155 MARD   D‚finir une fenˆtre englobant toute une partie d'un
+                dessin , avec inscriptions  de  coordonn‚es suivant  un
+                intervalle donn‚.
+                SYNTAXE : MARD <RC>
+                au message donner NøPoint1 NøPoint2.
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+                NøPoint1 : coin bas gauche  de la fenˆtre.
+                NøPoint2 : coin haut droite de la fenˆtre.
+                Les coordonn‚es seront affich‚es suivant  un intervalle
+                d‚fini par la commande "EMAR". cet intervalle  est  100
+                unit‚s  utilisateur  par  d‚faut.
+
+        1018 MARQ  Afficher en superposition … un dessin les "marques",
+                c'est-…-dire  les  valeurs  en  abcisse et ordonn‚e des
+                lignes d'une trame (grille) de rep‚rage.
+                SYNTAXE : MARQ <RC>
+                Commande type bascule:
+                     - 1er appel  =  ON   affichage  des  marques.
+                     - 2Šme appal = OFF non affichage des marques.
+
+        2249 MASQUE   Limiter le dessin … l'int‚rieur de la liste.
+                SYNTAXE : MASQUE n ( ou -n )
+                n : num‚ro de la fonction. Si  MASQUE n : commande  sur
+                position on, si MASQUE -n : fonction off.
+
+        2055 MCAR     Modifier les paramŠtres de repr‚sentation d'un
+                caractŠre de la fonte.
+                SYNTAXE: MCAR n Coef echX echY echZ dx dy dz ra eettp
+
+                Valeurs par d‚faut :  coeff =  echX =  echY =  echZ = 1
+                                    dx = dy = dz = ra = eettp = 0
+                La modification est temporaire. Pour la  rendre d‚fini-
+		tive, sauvegarder la fonte avec $SFO  (NomFichierFonte)
+                        Pytha-Graph R910701 Page 13.15
+
+
+
+        1157 MESU  Afficher … l'‚cran la distance parcourue par la mire
+                par  rapport  au  dernier  point  valid‚  ,  ainsi  que
+                DX et DY.
+                SYNTAXE : MESU <RC>
+                Fonction type bascule :
+                     - 1er appel : ON affichage … l'‚cran.
+                     - 2Šme  appel  : OFF  non  affichage.
+                Fonction  valid‚e  en  utilisation  du digitaliseur  ou
+                souris uniquement.
+
+                digitaliseur, souris et clavier.
+                SYNTAXE : MIRE  ( px py <plume> ) <RC>
+                px = taille suivant  X  en  nombre  de  points - ‚cran.
+                py = taille suivant  Y  en  nombre  de  points - ‚cran.
+                plume = couleur.
+                Les  valeurs  d ' initialisation  sont   accessibles  …
+                l'utilisateur. ( fichier DEPART.P65 ) .
+
+        1041 MOCL  Efectuer les op‚rations suivantes sur les mots-cl‚ :
+	        a) - Lister les mots-cl‚ dans UCLE65.LST.
+                b) - Supression des commandes (pass word)
+                c) - Ajout des commandes (pass word)
+                d) - Changer les noms des mots-cl‚.
+                e) - Affectation/Suppression des cases du menu DIGIT.
+                f) - Affectation/Suppression des cases du menu ECRAN.
+	        g) - G‚n‚rer UCLE.P65 … partir UCLE65.lst
+                h) - Lister le texte des fichiers dans UTIL.LST
+                q) - quitter.
+                SYNTAXE : MOCL <RC>
+
+        1124 MSIZ     Modifier les caractŠristiques des symboles et
+                caratŠres  d‚finies  auparavant  dans  les   ordres  de
+                dessin.
+                SYNTAXE : MSIZ <RC>
+                Ces caract‚ristiques sont :
+                     HX  HY  ANG  ALPH  COEF  ( Voir  ces  fonctions ).
+
+        2053 MSYM     Modifier les  paramŠtres  de  repr‚sentation d'un
+	        symbole d'une fonte.
+                SYNTAXE: MSYM n Coef echX echY echZ dx dy dz ra eettp
+                Valeurs  par  d‚faut : coeff =  echX =  echY = echZ = 1
+                                     dx = dy = dz = ra = eettp = 0
+                La modification est temporaire . Pour la rendre d‚fini-
+                tive, sauvegarder la fonte avec  $SFO (NomFichierFonte)
+
+        1159 NBDE     D‚finir le nombre de d‚cimales affich‚es dans les
+                r‚sultats de calculs num‚riques.
+                SYNTAXE : NBDE ( Nombres Decimales ) <RC>
+                Cette fonction est valide uniquement pour  la  fonction
+                "COTE".
+
+        1048 NUMAUTO  Bascule permettant de num‚roter les points digita
+	        lis‚s … partir de ORIG , ou de  leur affecter  le nø -3
+		SYNTAXE : NUMAUTO  <RC> Commande de type bascule:  -1er
+		appel : ON. Le 1er point num‚rot‚ … partir de la valeur
+		introduite  par   commande " ORIG ".  -2Šme appel: OFF
+	        points  num‚rot‚s avec valeur -3.
+                        Pytha-Graph R910701 Page 13.16
+
+
+        1005 ORIG    Fixer le point d'origine du num‚rotage automatique
+                des points.
+                SYNTAXE : ORIG ( nøPoint ) <RC>
+                Si n est  omis , l'origine prendra la valeur du dernier
+                point saisi.
+
+        2106 ORTH Dessiner en systŠme orthogonal, c'est-…-dire avec des
+                segments  toujours  parallŠles  aux   axes  du  systŠme
+                utilisateur (ou … 45 degr‚s: diagonales).
+                SYNTAXE : ORTH <RC>
+                Commande type bascule :
+                     - 1er appel  =  ON.
+                     - 2Šme appel = OFF.
+
+        1207 PA       Construction ou intersection de parallŠles.
+                SYNTAXE :1) PA n1 n2 D1   <n3>  <n4>  <RC>
+                         2) PA n1 n2 D1 n3 n4 D2 <n>  <RC>
+                Les "ni' sont les points consid‚r‚s.
+                1)  n1, n2 : points    de    la    droite   d'origine .
+                      D1   : distance de la  parallŠle  par  rapport  …
+                             la droite d'origine.
+                    n3, n4 : points de la parallŠlle (projection n1,n2)
+                             points cr‚‚s.
+                2)  n1, n2 : points    de    la    premiŠre    droite .
+                      D1   : distance  de  la parallŠle … cette droite.
+                    n3, n4 : points    de    la    deuxiŠme    droite .
+                      D2   : distance de la parallŠle … deuxiŠme droite
+                       n   : num‚ros    des    points    cr‚‚s .
+
+        1158 PADE     Dessiner une ou des parallŠles … un ensemble de
+                segments donn‚s.
+                SYNTAXE : PADE <RC>
+                CLAVIER : Nøpoint1  NøPoint2  ...  NøPoint(n)      <RC>
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+
+        1225 PARALLEL Construction d'une parallŠle … une droite.
+                SYNTAXE : PARALLEL <RC>
+                CLAVIER : NøPoint1 NøPoint2 <RC> D
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+                NøPoint1 NøPoint2:points de la droite.
+                D  :   distance    droite - parallŠle.
+
+        1180 PAUSE  Introduire une pause entre deux commandes EXEC pour
+                maintenir l'affichage.
+                SYNTAXE : PAUSE temps ( en centiŠmes de secondes ) <RC>
+
+        1208 PE     Construire la perpendiculaire … une droite … partir
+                d'un point.
+                SYNTAXE : PE NøPoint1 NøPoint2 NøPoint3 (NøPointn) <RC>
+                NøPoint1:  point   de  d‚part  de  la  perpendiculaire.
+                NøPoint2    NøPoint2  :  points    de    la     droite.
+                NøPointn : num‚ro du point cr‚‚ (pied de la perpendicu-
+                -laire).
+                        Pytha-Graph R910701 Page 13.17
+
+
+        1073 PERM     Permuter les axes deux … deux.
+                SYNTAXE : PERM  ( i j )  <RC>   avec i  j  (1, 2, 3)
+                Exemple : PERM 2 3          XZY.
+			  PERM 1 3	    ZYX.
+
+        1210 PI   Calculer l'intersection des parallŠles … deux droites
+                donn‚es.
+                SYNTAXE : PI  ( n1  n2  n3  n4  n5  n6  <n> )  <RC>
+                n1    point de la parallŠle … la 1Šre droite.
+                n2, n3: points de la 1Šre droite.
+                n4    point de la parallŠle … la 2Šme droite.
+                n5, n6: points de la 2Šme droite.
+                n     point  cr‚‚  par l'intersection des  parallŠles
+                        aux 2 droites.
+
+        3080 PLAN  Pr‚ciser le num‚ro du plan auquel sont affect‚es les
+                commandes de dessin ult‚rieures.
+                SYNTAXE : PLAN ( Val Num ) <RC>
+                ValNum : num‚ro  du  plan  auquel  sont  affect‚es  les
+                         commandes de dessin ult‚rieures.
+
+        1003 PLU      D‚finir la couleur de la plume utilis‚e.
+                SYNTAXE : PLU ( Val Num ) <RC>
+                Palette ‚cran :
+                     1 ---> Noir
+                     2 ---> Bleu marine
+                     3 ---> Vert
+                     4 ---> Bleu ciel
+                     5 ---> Rouge
+                     6 ---> Violet
+                     7 ---> Marron
+                     8 ---> Blanc
+                     9 ---> Gris
+                    10 ---> Bleu   brillant
+                    11 ---> Vert   brillant
+                    12 ---> Bleu ciel brillant
+                    13 ---> Rouge  brillant
+                    14 ---> Violet brillant
+                    15 ---> Jaune  brillant
+                    16 ---> Blanc  brillant
+
+        1100 PLZ   Donner la valeur par d‚faut du (Z) pour la saisie au
+                clavier ou au digit de points.
+                SYNTAXE : PLZ ( Val Num ) <RC>
+                EXEMPLE : PLZ 350.00
+                En saisie DIGIT ou SOURIS la valeur de PLZ est associ‚e
+                … chaque couple (point) XY.
+                Utilisable pour digitalisation de courbes de niveau sur
+                plan.
+
+
+
+        1011 POIN   Faire apparaŒtre les points et ‚ventuellement leurs
+                num‚ros.
+                SYNTAXE : POIN ( Val Num ) <RC>
+                POIN <sans paramŠtre> = pas de la  num‚rotation  1  par
+                                      d‚faut.
+                POIN       10         = pas de  la   num‚rotation    10
+                                      affichage des num‚ros  de point
+                                      …  l ' ‚cran   tous  les   dix.
+                        Pytha-Graph R910701 Page 13.18
+
+
+        1194 POINCORZ Faire apparaŒtre la coordonn‚e de Z.
+                SYNTAXE : POINCORZ <RC>
+		Pas de num‚rotation 1 par d‚faut.
+
+        1136 PSYM Faire imprimer la liste des caractŠres et symboles de
+                la fonte.
+                SYNTAXE : PSYM ( Nom Fichier Disque ) <RC>
+                La liste est cr‚‚e sur un fichier disque que  l'on peut
+                imprimer  sur  l'imprimante avec la  commande " PRINT "
+                du DOS.
+
+        1024 PURG     Compresser la pile des commandes de dessin.
+                SYNTAXE : PURG  <RC>
+                Cette commande permet d'optimiser l'occupation  m‚moire
+                en effectuant un "tassement" des ordres de dessin aprŠs
+                suppressions   de   s‚quences  par  LCOM  par  exemple.
+                Ainsi, il est conseill‚ de faire PURG avant  de  sauver
+                un dessin.
+
+        2139 RAPX     Tracer les lignes de rappel suivant les (X).
+                SYNTAXE : RAPX ( Plume ) <RC>
+                Plume = couleur de la plume utilis‚e  pour  ces  traits
+                par    d‚faut    la    valeur    de    Plume   est   3.
+                Cas des cercles  :  seuls  les  centres  sont rappel‚s.
+
+        2140 RAPY     Tracer les lignes de rappel suivant les (Y).
+                SYNTAXE : RAPY ( Plume ) <RC>
+                Plume = couleur de la plume utilis‚e  pour  ces  traits
+                par    d‚faut    la    valeur    de    Plume   est   3.
+                Cas des  cercles : seuls  les  centres  sont  rappel‚s.
+
+        1002 RAYO     D‚finir le rayon de la zone  de recherche pour la
+		saisie au digitaliseur, souris ou au clavier .  SYNTAXE
+		: RAYO ( Val Num ) <RC>   Le rayon s'exprime en  unit‚s
+		utilisateur . Sa  valeur s'affiche  en  permanence  sur
+		l'‚cran .Par d‚faut, rayon = 10.0 (… la configuration).
+
+        1112 RAZ      Remettre … z‚ro la pile des commandes de dessin.
+                SYNTAXE : RAZ <RC>
+                Permet  de  nettoyer  la  m‚moire  sans  red‚marrer  le
+                programme . Un   message   demande   la   confirmation.
+
+        1221 RCDR     Calculer un raccordement droite/cercle.
+                SYNTAXE : RCDR <RC>
+                NøPoint1  NøPoint2  NøPoint3  NøPoint4 <RC>
+                Rayon ( NøPoint5  NøPoint6  NøPoint7 )
+                NøPoint1 NøPoint2 : points  de  la  1ere  droite.
+                NøPoint3 NøPoint4 : points  de  la  2Šme  droite.
+                Rayon:rayon de raccocdement.
+                NøPoint5 NøPoint6 NøPoint7:points de raccordement.
+
+        1147 RCER     Raccorder des segments par un arrondi (conge).
+                 SYNTAXE : RCER ( Rayon1 ) <RC>
+                Rayon1 = Rayon  de  l'arc  de  cercle (positif ou nul).
+                         les  segments  sont  reli‚s  2  …  2   par  un
+                         arrondi  de  rayon  Rayon 1 .
+                Les  arrondis  seront  trac‚s  par la saisie de points:
+                commande ( SEGM ).
+                Pour  annuler   cette   commande  ,  taper   RCER   0 .
+                        Pytha-Graph R910701 Page 13.19
+
+
+        1161 RECH D‚finir la rŠgle d'‚chelle : exemple pour la commande
+                ZOOM   ‚chelle  0.5 = 1/500Šme -> rŠgle  RECH  divis‚e.
+                ZOOM   ‚chelle  2.0 = 1/500Šme -> rŠgle RECH multipli‚.
+                SYNTAXE : RECH <RC>
+                message : 0/multiplie - 1/divise
+
+        1154 RECT      Dessiner un rectangle en d‚finisant son coin bas
+		gauche et son coin haut droit.  SYNTAXE : RECT <RC> au
+		message donner n1 n2. En mode DIGIT pointer les points.
+		en mode SOURIS  pointer les points. n1 coin bas  gauche
+		de la fenˆtre. n2 coin haut droite de la fenˆtre.
+
+        1030 REMA     Fonction nulle (peut ˆtre remplac‚e par #).
+                SYNTAXE : REMA <RC>
+                A    utiliser    pour    documenter    un    dessin.
+                Peut ˆtre remplacer par (#) dans les fichiers ASCII.
+
+        1097 RENU     Renum‚roter les points.
+                SYNTAXE : RENU ( Val Num )  <RC>
+                Renum‚rote les points … partir de ValNum (Nø de point.)
+                si Val Num est n‚gatif , les  points  ayant  un  num‚ro
+                positif sont tous renum‚rot‚s avec la  valeur "-3", les
+                points de calage de texte et de cotation  ne  sont  pas
+                renum‚rot‚s  ( ils  restent  …  - 1  et  - 4 ).
+
+        1036 REPORT   Mise en page automatique.
+                SYNTAXE : REPORT  <RC>
+
+        2151 RESTZ    Restaurer l'‚criture de la coordonn‚e Z.
+                SYNTAXE : RESTZ <RC>
+                en mode CLAVIER : NøPoint <RC>
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+                NøPoint : num‚ro du point dont la coordonn‚e  Z  est  …
+                restaurer.
+
+        1219 RZSF     Remise … z‚ro des totaliseurs de surfaces.
+                SYNTAXE : RZSF <RC>
+                Remet … z‚ro les  totaliseurs  de  surfaces  aprŠs  les
+                commandes  "SL"  ou  "SP".
+
+        1102 SAIS  Autoriser la saisie des points en mode digitaliseur.
+                SYNTAXE : SAIS  <RC>
+                Commande de type bascule :
+                     - 1er appel : ON.
+                     - 2Šme appel: OFF.
+                En saisie (ON), le mot SAIS est affich‚ … l'‚cran .Lors
+                de la recherche d'un point, s'il n'existe  pas dans  la
+                la zone d‚termin‚e par le rayon (RAYO) , le  point  est
+                g‚n‚r‚.
+
+        1131 SAUVEDES Sauver le dessin en ASCII , code MCG , dans le
+                systŠme.
+                SYNTAXE : SAUVEDES ( Nom Fichier ) <RC>
+                Le fichier en m‚moire est sauvegarder en code ASCII, et
+                peut  ˆtre recharg‚ …  l'aide de la  commande   "CHAR".
+                        Pytha-Graph R910701 Page 13.20
+
+
+        2128 SAUVEDXF Sauver le dessin pour le module P22 : transfo en
+		DXF ( Autocad ).  SYNTAXE : SAUVEDXF  nom fichier
+		(‚chelle) <RC> Par  d‚faut, l'‚chelle  a  pour  valeur
+		1000.
+
+        1132 SAUVEXYZ Sauver les num‚ros (XYZ) en ASCII, dans le systŠme
+                SYNTAXE : SAUVEXYZ ( Nom Fichier ) <RC>
+                Le fichier en m‚moire est sauvegard‚ en code ASCII sous
+                la forme "Nø X Y (Z C), et peut ˆtre recharg‚ …  l'aide
+                de  la  commande " LFXY ".
+
+        3116 SBLO     Selectionner un ou plusieurs blocs.
+                SYNTAXE : SBLO (i (j (......))) <RC>
+                AprŠs l'ordre  SBLO ,  suivre   les   instructions   du
+                message Cette commande  permet l'affichage s‚lectif  de
+                bloc(s) mais non d'y dessiner, sauf  dans le cas ou  il
+                y  a  concordance  exacte  entre  le  num‚ro   du  bloc
+                s‚lectionn‚ et  celui du bloc affect‚ aux  commandes de
+                dessin  par  la  commande " BLOC ".
+                Les  commandes  " efficaces " sur  le  bloc s‚lectionn‚
+                sont  les  commandes  de  dessin  ( EXEC , EXE )   pour
+                l'‚cran  et  DESS  pour  le  traceur.
+
+        1213 SD    Construire un point,lanc‚ … partir d'un autre point.
+                SYNTAXE : SD <RC>
+                         NøPoint1 NøPoint2 NøPoint3 ( NøPointn )   <RC>
+                         D  A  <RC>
+                NøPoint1 : num‚ro du point  de  lancement.
+                NøPointn : num‚ro du point  …  construire.
+                D : distance entre le point1 et le pointn.
+                A : angle entre la droite d‚finie  par  le point 2 et 3
+                et celle d‚finie par  le  point  1  et  n.
+
+        1001 SEGM     Dessiner un ou des segments.
+                SYNTAXE : SEGM <RC>
+                en  mode   CLAVIER  :  NøPoint1  NøPoint2 ... NøPointn.
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+                NøPoint1 NøPoint2 ... NøPointn : num‚ros des points qu'
+                il faut relier par des segments.
+
+        1211 SF       Calculer des surfaces.
+                SYNTAXE : SF <RC>
+                en  mode  CLAVIER : NøPoint1  NøPoint2 ... NøPointn<RC>
+                en  mode  DIGIT  et  en  mode  SOURIS  :
+                S‚lection de SF  sur  menu   et   pointer  les  points.
+                NøPoint1 NøPoint2 ... NøPointn :num‚ros des points  qui
+                d‚limitent la surface.(Nombre de points maximum = 100.)
+
+        1027 SIZT Indiquer les caractŠristiques de tailles et de formes
+                des symboles et caractŠres utilis‚s.
+                SYNTAXE : SIZT ( HX (HY ( ANG (ALPH (COEF)) )) )   <RC>
+                SIZT est  une  commande  qui  permet  de  donner  leurs
+                valeurs  aux  5  paramŠtres  suivant  :
+                     HX   : taille en X.
+                     HY   : taille en Y.
+                     ANG  : angle  / OX.
+                     ALPH : inclinaison  /OY ( pour italique ).
+                     COEF : coefficient g‚n‚ral de d‚formation.
+                        Pytha-Graph R910701 Page 13.21
+
+
+        1218 SL       Calcul de surfaces , avec r‚sultats sur liste
+                r‚duite.
+                SYNTAXE : SL
+                         Lot nø <RC>
+                         n1 <RC> n2 <RC> ... n <RC>
+                         (200 points Maxi)
+
+        1037 SOURIS   Mettre la souris sur ON ou sur OFF pour P65.
+                SYNTAXE : SOURIS <RC>
+                Commande de type bascule :
+                     -1er appel : ON   met  la souris en fonction.
+                     -2Šme appel: OFF met la souris hors fonction.
+
+        1217 SP      Calcul de surfaces , avec r‚sultats sur liste avec
+                commentaires.
+                SYNTAXE : SP <RC>
+                         Lot nø <RC>
+                         n1 <RC> n2 <RC> ... n <RC>
+                         (200 points maxi)
+
+        3035 SPLA     S‚lectionner un ou plusieurs plans.
+                SYNTAXE : SPLA (i (j (......)))
+                AprŠs  l'ordre   SPLA ,  suivre  les   instructions  du
+                message. Cette commande permet l'affichage s‚lectif  de
+                plan(s)  mais non d'y dessiner, sauf dans le cas o—  il
+                y a  concordance  exacte  entre  le num‚ro  du  bloc et
+                du  plan  s‚lectionn‚   et  ceux  du  bloc  et  du plan
+                affect‚s aux commandes de dessin  par   BLOC  et  PLAN.
+                Les commandes "efficaces" sur le ou  les  plans  s‚lec-
+                -tionn‚s  sont  uniquement celles de gestion d'‚cran, …
+                savoir  ZOOM, CENT, EXEC, EXE,  les  8  translations de
+                fenˆtre ‚cran ... et CPLA, DPLA.
+
+        1204 ST       Effectuer des calculs en coordonn‚es polaires.
+                SYNTAXE : ST (NøPoint1 NøPoint2  D  A (NøPointn))  <RC>
+                NøPoint1 : point  stationn‚.
+                NøPOINT2 : r‚f‚rence.
+                NøPointn : point … calculer.
+                D  : distance  NøPoint1  -  NøPointn .
+                A  : angle NøPoint2 NøPoint1 NøPointn.
+                S'il y a  plusieurs  point  …  calculer ,  on  ‚crira :
+                     ST NøPoint1 NøPoint2 <RC>
+                     D   A  ( NøPointn )  <RC>
+                     .........................
+                               <RC>
+
+        1105 STAT     Donner l'‚tat de l'occupation m‚moire.
+                SYNTAXE : STAT <RC>
+                STAT indique  la  place occup‚e  par  la  fonte  et  le
+                dessin  en  cours.
+                Ces indications apparaissent …  l'‚cran  en  2  lignes.
+                Lire  les  donn‚es  num‚riques  par  couple:
+                      1Šre = nombre r‚el pour le dessin en m‚moire.
+                      2Šme = nombre maxi autoris‚.
+                La ligne 1 concerne les symboles :
+                      -nombre     de     points
+                      -taille de la pile dessin
+                La ligne 2 concerne  le  dessin  :
+                      -nombre      de      points
+                      -nombre de points commandes
+                      -taille de la  pile  dessin
+                        Pytha-Graph R910701 Page 13.22
+
+
+        1244 SUPP     Supprimer le point d‚sign‚.
+                SYNTAXE : SUPP  <RC>
+                en mode CLAVIER : NøPoint1 ... NøPointn
+                en  mode  DIGIT  et  en  mode  SOURIS  :
+                S‚lection de  la commande par le  menu ‚cran et pointer
+                les points.
+                NøPoint1 ... NøPointn : points … supprimer.
+                la  suppression  est   effective   si   le   point  est
+                inutilis‚.
+                En fait, le point est  conserv‚  en  m‚moire  mais  son
+                num‚ro est mis … z‚ro.
+
+        2095 SUPZ     Supprimer l'ecriture de z sur le dessin.
+                SYNTAXE :SUPZ <RC>
+                        NøPoint1 NøPoint2...NøPointn
+                NøPoint1 NøPoint2...NøPointn:points dont  le  z  est  …
+                supprimer.
+
+        1046 SYMB  S‚lectionner les symboles … repr‚senter … un ( des )
+                point(s) de SEGM ou de LISS.
+                SYNTAXE : SYMB (i (j (k (i (...)))))   <RC>
+                A  chaque point d‚fini par la fonction SEGM ( ou LISS )
+                les  symboles s‚lectionn‚s par SYMB seront  repr‚sent‚s
+                On peut s‚lectionner au  maximum  20  symboles  en  une
+                fois. pour ne plus  dessiner  de  symbole  ,  taper  au
+                clavier:
+                     SYMB 0 (z‚ro).
+
+        1250 SYSORI   Permettre de retourner au systŠme XY original.
+                SYNTAXE : SYSORI <RC>
+
+        2044 TALUS    Dessiner des talus.
+                SYNTAXE : TALUS    <RC>   point haut   <RC>   point bas
+                En mode DIGIT ou en mode SOURIS, pointer les points.
+                Avant le lancement de cette commande,il y a possibilit‚
+                de charger  et  d'ex‚cuter  un   fichier  " talus "  en
+                lan‡ant la commande CHAR  TALUSnø ( par  exemple : CHAR
+                TALUS3 ).
+
+        1245 TEMPS Temps d'execution de la derniŠre commande exe, exec,
+                cent...
+                SYNTAXE : TEMPS <RC>
+
+        1107 TEXC     Inscrire un texte centr‚ dans un dessin .
+		SYNTAXE : TEXC
+		L'origine   du  texte   est   son   centre , qu'il  faut
+		d‚signer par ses coordonn‚es au clavier  ou avec la mire
+		La saisie se fait au clavier.  AprŠs l'affichage …
+		l'‚cran ,  on peut rappeler la fonction TEXC par <RC> ou
+		par la s‚lection par  menu ( mode  DIGIT ou SOURIS )
+		Si on ne donne pas un nouveau texte … ‚crire ,le dernier
+		entr‚ est rappel‚ lorsqu'on tape … nouveau <RC>.
+                        Pytha-Graph R910701 Page 13.23
+
+
+        2121 TEXD Inscrire un texte dans un dessin , avec justification
+		… droite.  SYNTAXE : TEXD  <RC> L'origine du texte est
+		… droite , qu'il  faut  d‚signer par ses coordonn‚es au
+		clavier ou avec  la  mire ( mode DIGIT  ou  SOURIS ).
+		La   r‚daction   de   texte   se   fait   au   clavier.
+                AprŠs  l'affichage  …  l'‚cran ,  on peut  rappeler  la
+                fonction TEXC par  <RC>  ou  par la  s‚lection par menu
+                ( mode  DIGIT  ou  SOURIS ) .  Si   on   ne  donne  pas
+                un nouveau  texte  …  ‚crire  ,  le  dernier  entr‚ est
+                rappel‚  lorsqu'on  tape  …  nouveau <RC> ou  s‚lection
+                par menu.
+
+        2029 TEXGInscrire un texte dans un dessin, avec justification
+		… gauche.
+                SYNTAXE : TEXG  <RC>
+                L'origine du texte est … gauche , qu'il  faut  d‚signer
+                par ses coordonn‚es au clavier ou avec  la  mire ( mode
+                DIGIT  ou  SOURIS ).
+                La   r‚daction   de   texte   se   fait   au   clavier.
+                AprŠs  l'affichage  …  l'‚cran , on  peut  rappeler  la
+                fonction TEXC par <RC> ou  par la  s‚lection  par  menu
+                ( mode  DIGIT ou  SOURIS ).  Si  on  ne  donne  pas  un
+                nouveau  texte  …   ‚crire  ,  le  dernier  entr‚   est
+                rappel‚ lorsqu'on  tape  …  nouveau <RC>  ou  selection
+                par menu.
+
+        2122 TEXJ  Inscrire un texte dans un dessin, avec justification
+                entre deux points.
+                SYNTAXE : TEXJ  <RC>
+                Saisir  au  clavier,  au  digit   ou  …  l'aide  de  la
+                souris les 2 points. Si le texte  est  trop  long  pour
+                tenir   entre    les    points  ,  les    lettres    se
+                chevaucheront.
+
+        1060 TF      Effectuer une transformation du systŠme d'axe pour
+                affichage ‚cran , les coordonn‚es ne sont pas alt‚r‚es.
+                SYNTAXE : TF
+                en mode CLAVIER : ( NøPoint1 NøPoint2 )  <RC>
+                                ( x1  y1     x2  y2 )  <RC>
+                en mode DIGIT et en mode SOURIS : Pointer  les  points.
+                NøPoint1 NøPoint2 : num‚ros   des   points.
+                x1 y1   ,   x2 y2 : coordonn‚es des points.
+
+        1178 TFIX    Effectuer une transformation du systŠme d'axe pour
+                affichage  ‚cran ( ou autre ) ,  les  coordonn‚es  sont
+                alt‚r‚es.
+                SYNTAXE : TFIX
+                en mode CLAVIER : ( NøPoint1 NøPoint2 )  <RC>
+                                ( x1  y1     x2  y2 )  <RC>
+                en mode DIGIT et en mode SOURIS : Pointer  les  points.
+                NøPoint1 NøPoint2 : num‚ros   des   points.
+                x1 y1  ,   x2 y2  : coordonn‚es des points.
+
+        2247 TFXYGE   Permet de recaler un plan sur des points connus.
+                SYNTAXE : TFXYGE <RC>
+                         NøPoint1 X1 Y1 <RC> NøPoint2 X2 Y2...
+                NøPoint1 NøPoint2:num‚ros des points connus.
+                X1  Y1     X2  Y2: nouvelles    coordonn‚es.
+                        Pytha-Graph R910701 Page 13.24
+
+
+        1222 TGC      Construit le point de tangence d'une droite  … un
+                cercle.
+                SYNTAXE : TGC (R NøPoint1 NøPoint2 ( NøPoint3 )) <RC>
+                R   : rayon (-R:point … gauche +R:point … droite)
+                NøPoint1  :  point  d'origine   de   la   droite.
+                NøPoint2  :  num‚ro du point  (centre du cercle).
+                NøPoint3  :  num‚ro    du    point    …    cr‚er.
+
+        1216 TITRE    Introduction d'un titre.
+                SYNTAXE : TITRE  <RC>
+                au message : taper le titre au clavier.
+
+        2014 TRAI    D‚finir et / ou utiliser un type de trait plein ou
+                tiret‚.
+                SYNTAXE : TRAIT (nø p1 e1 (p2 e2 (... (p5 e5))))  <RC>
+                nø   : num‚ros du trait d‚fini (nø= 1 … 10).
+                pi   : longueur du  tiret i ,  en  millimŠtres  papier.
+                ei   : longueur de l'espace i,  en millimŠtres  papier.
+                       Au plus, 5 couples (pi ei)  sont pris en compte.
+                       Si p1 = 0 le trait sera plein.
+                Les   trait   ainsi   d‚finis  sont  m‚moris‚s  jusqu'…
+                concurence  de  10 .
+                DŠs  sa  d‚finition ,  le  trait  est  mis en fonction.
+
+        2193 TRAI2    D‚finir des traits complexes.
+                SYNTAXE : TRAI2   <RC>    numsym1  d1  hx1  hy1  angle1
+                                        numsym2  d2  hx2  hy2  angle2
+                numsym : num‚ro du symbole.
+                d      : position par rapport au point pr‚c‚dent.
+                hx  hy : hauteur en x et en y.
+                angle  : angle du symbole par  rapport … chaque segment
+                         de la ligne bris‚e.
+
+        2192 TRAI3  D‚finir un trait complexe compos‚ de TRAI et TRAI2.
+                SYNTAXE : TRAI3 <RC> numtrai3   trai1 ou trai2   deport
+
+        1098 TRLXYZ   Translater les points d'une valeur finie.
+                SYNTAXE : TRLXYZ <RC>
+                         CX  CY  CZ
+                CX : Valeur de la translation suivant les X.
+                CY : Valeur de la translation suivant les Y.
+                CZ : Valeur de la translation suivant les Z.
+
+        1019 TYPE     Lister sur l'‚cran le contenu d'un fichier.
+                SYNTAXE : TYPE ( Nom Fichier ) <RC>
+                Le Fichier doit  ˆtre du  type  BINAIRE c'est … dire un
+                des fichiers utilitaires  ( Voir  commande  " FUTI " ).
+                Le  nom  du  fichier   doit ˆtre  tap‚  sans extension.
+
+        1026 UANG     D‚finir l'unit‚ de mesure des angles d‚sir‚s.
+                SYNTAXE : UANG ( Val Num ) <RC>
+                Val Num = (1 ou 2 ou 3)
+                     1 = radians
+                     2 = degr‚s
+                     3 = grades
+                        Pytha-Graph R910701 Page 13.25
+
+
+        2246 UCARSYM    D‚finir la taille de la grille pour les fontes.
+                SYNTAXE : UCARSYM <RC>
+                         Val num
+                Par d‚faut Valnum = 100 mm
+                Les valeurs num‚riques permises sont   comprises  entre
+                10 et 1000.
+                Exemple :
+                     " UCARSYM = 50  " double  la  taille de la  grille
+                     " UCARSYM = 200 " divise   la  taille de la grille
+
+        1094 VERSION  Afficher le num‚ro de version du programme.
+                SYNTAXE : VERSION <RC>
+
+        1173 VISU     Mettre l'affichage ‚cran en fonction.
+                SYNTAXE : VISU <RC>
+                AprŠs avoir taper la commande VISU l'affichage se  fera
+                … l'‚cran ( Voir commande IMPR ).
+
+        1007 XY       Saisir des points en coordonn‚es (XY) au clavier.
+                SYNTAXE : XY <RC>
+                Suivant le message , donner les  valeurs  et  ‚ventuel-
+                -lement le num‚ro du point.
+                Si on ne  donne pas de  num‚rotation ,  elle   se  fera
+                automatiquement  … partir du 1er point (n =1)  avec  un
+                incr‚ment  de  1 ,  ou  …  partir   du  dernier  point.
+
+        1082 XYZ     Saisir des points en coordonn‚es (XYZ) au clavier.
+                SYNTAXE : XYZ <RC>
+                Suivant le message , donner les  valeurs  et  ‚ventuel-
+                -lement le num‚ro du point.
+                Si on ne donne  pas  de  num‚rotation , elle   se  fera
+                automatiquement  …  partir du 1er point (n =1) avec  un
+                incr‚ment  de 1 ,  ou  …   partir   du  dernier  point.
+                Si  le  (Z) n'est  pas  fourni , Z = valeur du  dernier
+                PLZ.
+
+        1196 Z100CENT Centrer l'image sur un nouveau point en modifiant
+                l'‚chelle.
+                SYNTAXE : Z100CENT <RC>
+                en mode DIGIT et en mode SOURIS :  pointer  le  nouveau
+                centre . La nouvelle ‚chelle est d‚finie  par le num‚ro
+                de la case point‚e , multipli‚ par cent.
+
+        1195 Z10CENT  Centrer l'image sur un nouveau point en modifiant
+                l'‚chelle.
+                SYNTAXE : Z10CENT  <RC>
+                en mode DIGIT et en mode SOURIS :  pointer  le  nouveau
+                centre . La nouvelle ‚chelle est d‚finie par le  num‚ro
+                de la case point‚e , multipli‚ par dix.
+
+        1164 ZMF  Faire un zoom ‚cran en pointant le coin bas gauche et
+                le coin haut droit.
+                SYNTAXE : ZMF <RC>
+                au message donner NøPoint1 NøPoint2.
+                en mode DIGIT et en mode SOURIS : pointer  les  points.
+                NøPoint1 : coin bas gauche  de la fenˆtre.
+                NøPoint2 : coin haut droite de la fenˆtre.
+                        Pytha-Graph R910701 Page 13.26
+
+
+        1016 ZOOM    Modifier l'‚chelle de repr‚sentation d'un dessin …
+                l'‚cran   ( l'affichage  ‚cran  est  automatique  aprŠs
+                l'appel de cette commande ).
+                SYNTAXE : ZOOM <RC>
+                au message : introduire l'‚chelle <RC>
+                Possibilit‚  d'interrompre  le dessin  en tapant sur la
+                barre d'espaces.
+
+        1142 ZOOM10   Changer l'‚chelle en X et Y.
+                SYNTAXE : ZOOM10 <RC>
+                en mode DIGIT et en mode SOURIS : pointer la case d‚si-
+                -r‚e . La nouvelle ‚chelle aura la valeur  de  la  case
+                cliqu‚e multipli‚e 10.
+                        Pytha-Graph R910701 Page 13.27

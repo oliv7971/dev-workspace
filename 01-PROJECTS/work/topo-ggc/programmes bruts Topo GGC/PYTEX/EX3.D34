@@ -1,0 +1,42 @@
+LABAULE MAY-27-86
+iter 500
+tolz 0.20  # 200 mm / Dz
+told 0.20  # 200 mm / distances, 400 mm sur geodesie
+#$p57 trilater #passer la main a P57 (passer a 0 sur pts d'appui)
+#		  calcul en mode trilateration
+gauss
+schema
+Zmoyen 0000 metres
+projection 000 mm/km
+cordistance 0.000  metres par portee
+epspoint 0.0003
+epsbloc 0.00000010
+#tolerances pour le balancement des stations reprises debut
+tolrah 0.0050  #  5 mgr / ang hor
+tolrav 0.0200  # 20 mgr / ang vert
+tolrdh 0.050   # 50 mm / delta Distance
+tolrdz 0.050   # 50 mm / Delta Z
+#tolerances pour le balancement des stations reprises fin
+tolechel 0.002 #tolerance/echelles locales (0.002 = 20cm a 100m)
+parallaxe 0 #excentrement des axes optique et distancemetre en mm
+ supiter1 # pas d'edition de la premiere iteration
+ supitern # pas d'edition de la derniere iteration
+codification  1  # type du fichier N X Y Z code(s) , 1 ou 2
+# 1 >  N X Y Z c1 c2 c3 c4 c5	(c1=code points, autres = infos)
+# 2 >  N X Y Z 123 4 5 678	(code point … 8 caracteres d‚coup‚ en 4 zones)
+#distpente
+geodesie
+999999
+P33V36
+  ns   np       dh      ah       av      lm      ht
+1700    8     4.4440 329.9620  85.8700  1.500  1.650
+   0    9     9.8890 195.9000  98.2780  1.500  1.650
+   0   10   100.0123 194.9006  98.2800  2.000  1.650
+   0   11    11.8880 195.9000  98.2780  2.000  1.650
+   0   12    20.0000 195.9000  98.2780  1.500  1.650
+   0 1800   200.0000 348.6500  97.4800  2.000  1.650
+1800 1700   200.0100 348.6500 101.9480  3.000  1.550
+   0 1701   100.0123 391.4634  97.4560  3.000  1.550
+   0 1702      .0000  75.8080  97.4780  3.000  1.550
+   0   40      .0000 278.4960  85.8600  3.500  1.550
+   0   41      .0000 278.4960  85.8640  3.000  1.550

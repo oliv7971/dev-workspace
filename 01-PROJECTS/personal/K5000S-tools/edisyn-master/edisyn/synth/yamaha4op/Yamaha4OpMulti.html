@@ -1,0 +1,49 @@
+<html><head></head>
+<body>
+
+<h1>Yamaha 4-Operator FM Synthesizer Family</h1> 
+<h2>Multimode Patch Editor (TX81Z and DX11 only)</h2>
+
+<p>This editor is designed for multimode patches from the Yamaha TX81Z and DX11.   The V50 should be easy to get up and running as well, but I have nothing to test with.  If you have a V50, contact me (sean@cs.gmu.edu).
+ 
+
+<p>There are some later 4-Op synthesizers (YS100, YS200, B200, etc.) which support a simple kind of multimode, but as a global system setting, not as a patch.  At present I have elected not to support these synthesizers.
+
+<br><br><h3>Communicating with Edisyn</h3>
+Set your synth's receive and transmit channel to the same thing (perhaps Channel 1), and set Edisyn's Send and Receive channels to that as well.  Set the program change to be <b>Com</b> (Common).  Make sure that Sysex is turned <b>on</b>.
+
+<br><br><h3>Bank Sysex</h3>
+This patch editor knows about bank sysex messages (which group together multiple patches) as well as single-patch sysex messages.  If Edisyn loads or receives a bank sysex message, you will be given the option to edit a patch from it, to save the whole bank sysex, or to upload the whole bank sysex.
+
+
+<br><br><h3>Gotchas</h3>
+<ul>
+<li>The TX81Z is notorious for getting in corrupted states when receiving MIDI transmissions, either because of buffer overflows ("MIDI Buffer Full!") or just messing up.  Performance Mode seems to be the worst at this.  I'm working on minimizing these, but you'll still see them.  If this happens, or if Edisyn doesn't seem to be receiving data correctly or is displaying data wrong, press the Play/Performance button to go out into Single patch mode, move to another patch temporarily (press Right and then Left, say) to clear the performance data, and try again.  Let me know.
+
+<p><li>
+4-op synthesizers like the DX11 and TX81Z have no way to write patches from sysex: you will have to send the current patch from Edisyn, then manually save it to your desired patch location on the synthesizer itself.
+
+<p><li>Similarly, changing patches is challenging: it requires a bit of manipulation of the front panel using special sysex options.  It should work in general, but if strange things happen, let me know.
+</ul>
+
+<br><br><h3>Librarian Support</h3>
+
+The Yamaha 4-Op machines cannot write individual patches: if you attempt to do so from the librarian you'll be told that you cannot.  Instead, you should write the entire bank.
+
+<p>Edisyn can quick-request a bank from this synthesizer via <b>Request Bank from Synth</b>.  This is a lot faster than the patch-by-patch request method in <b>Download Bank from Synth</b>.  So try it out.
+
+
+<br><br><h3>Thanks</h3>
+Thanks to Matt Gregory (mgregory22@gmail.com) for his considerable help in debugging this patch editor.  Thanks also to Jesse Guessford and the GMU School of Music.  And thanks to Thor Zollinger (thor276@cableone.net) for his help in getting the DX11 editor working properly.  Thanks to Dan Daily (dailydan@taosnet.com) for identifying a preferences error in the editor.
+
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>September 2017
+<br>4-Op Version: December 2019
+</table>
+

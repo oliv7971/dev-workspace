@@ -1,0 +1,864 @@
+	!!!!!!!!!!!!!!!	V38.doc
+	pour Version 4 completer autoexec.bat comme suit
+	path ...........;C:\MCG;c:\lf90\bin
+	Complete l'edition de 1992 du manuel de base
+
+	!!!!!!!!!!!!!!!
+
+	Avant de vous equiper en stations automatiques, renseignez-vous
+	sur les formats de sortie des carnets, sous peine de problemes.
+	Ne laissez partir votre marchand qu'apres avoir verifie que
+	le format des fichiers pour P33 est correct.
+
+	A compter de 1996, les developpements concernant les CARNETS
+	qui ne sont PAS ALIGNES feront l'objet d'une FACTURATION.
+
+	Il y a suffisamment de formats sur le marche pour en inventer
+	de nouveaux et coder les 9 informations de base.
+
+	-TOPO
+	-DIVERS
+	-PROJET
+
+	pytha	V3.8 et plus
+	--------------------
+
+	bug corrig‚
+
+	p11
+	....
+        11 fichier n x y z en format rec ou ...(WILD/leica)
+	....
+	le caractere espace a ‚t‚ ajout‚ en fin de ligne
+	( idem pour le fichier ?.naw sorti par p40
+
+	PYTHA-TOPO
+	==========
+       >>>>>Rappels
+
+        *  L'utilisateur  peut  envoyer  les  r‚sultats  dans un fichier
+        nomm‚  NUL,  ce  qui  a  pour  effet  de ne pas cr‚er de fichier
+        r‚sultat.
+
+
+        *  Dans  les  fichiers  de  donn‚es  ou  de  paramŠtres pour les
+        programmes  Pytha,  le  caractŠre  #  (diŠse)  indique  que  les
+        renseignements se  trouvant derriŠre  sont des  commentaires.Ils
+        ne sont pas pris en compte par les programmes.
+
+	*  Si  vous  travaillez  en  systeme  Lambert,  introduisez   la
+	correction de projection et le  z moyen du chantier. La  plupart
+	des fichiers  ( donnant  des resultats  faux ou  pas tres bons )
+	que nous recevons ne comportent pas ces corrections. Dans 9  cas
+	sur  10,   l'introduction  des   parametres  donne   des  ecarts
+	coherents.  Les  erreurs  systematiques  doivent etre corrigees,
+	meme si elles sont minimes : leur cumul peut etre significatif.
+
+
+       >>>>P11 utilitaires divers
+
+	 conversion n x y z c , pytha <--> topojis, corrigee
+	 les n superieurs a 10000 (pytha) sont convertis en numeros
+	 ayant la forme d.nnnn (topojis), et inversement dnnnn pour
+	 pytha
+
+
+        1  conversion  pytha/topojis (n x y z code)
+        2  conversion  topojis/pytha (n x y z code)
+        3  moyenner ses xy(z)
+        4  conversion pytha/geotop
+        5  conversion geotop/pytha
+        6  fichier n  x y z codif  simple (symbolique) --> fichier  pour
+           pytha-graph (dessin des symboles a partir de la  codification
+           sur le terrain). La correspondance entre les codes terrain et
+           les numeros  des symboles  doit etre  fournie dans  une table
+           TABCOD.USR, comportant sur une  ligne, en position 1  le code
+           terrain  et   en  position   2  le   code  p65   a  utiliser.
+           La consigne CODIFPOINT  (fichier P033P034.MCG sous  P33) doit
+           etre activee.
+
+           exemple de fichier tabcod.usr
+
+                 19   1
+                 1011 2
+                 1014 3
+                 1019 4
+                 58   58
+                 1269 5
+                 1490 6
+                 3011 7
+                 3019 8
+                 3021 9
+                 3029 10
+                 3031 11
+                 3039 12
+                 3091 13
+
+        7  conversion HPGL en BGL
+        8  suppression des lignes vides d'un fichier
+        9  pagination d'un fichier
+        10 conversion AZERTY en QWERTY ( accents )
+        11 fichier n x y z en format rec ou ...(WILD/leica)
+        12 conversion des donnees p57 au format p34
+        13 carnet terrain topojis -> aga(geodat)/d4r4
+     	14 tn pytha en tn piste
+     	15 tn piste en tn pytha
+     	16 aligner nxyz a 2 decimales
+     	17 tn pytha en tn erica
+     	18 tn erica en tn pytha
+     	19 formater un fichier nxyz(c)
+
+
+
+       >>>>P17, z du menu, transformation XYZ en xZ (page 17.4) du
+        manuel
+
+        Pour cela il vous faut 2 fichiers :
+
+        - un fichier contenant les points :
+
+                Nø X Y Z
+                Nø X Y Z
+                ...
+         - un autre contenant les points a prendre pour chaque profil :
+
+                Nø du profil  Nøpoint Nøpoint Nøpoint ...
+                Nø du profil  Nøpoint Nøpoint Nøpoint ...
+                ...
+
+         Rappels (voir documentation du P17) :
+
+        - Si une ligne ne suffit pas pour indiquer tous les points (30 points
+          maxi par ligne) on passe … la ligne suivante en repetant le Nø du
+          profil.
+        - Les points d'un profil peuvent ˆtre donnes dans le d‚sordre
+          (le programme remet les points dans le sens des x croissant
+          le long du profil)
+        - Si un numero de point est negatif le point sera considere
+          comme origine (axe) du profil
+        - Par defaut le programme prend le point le plus a gauche
+          (dans le systeme de coordonnees) comme origine de
+          l'orientation des profils.
+          Les gisements sont, par defaut, toujours compris entre 300
+          et 100.
+          L'utilisateur doit regarder la liste diagnostique (fichier R17--.LST
+          creee par choix de l'option D(disque) au lancement du
+          programme P17).
+          Dans ce fichier figure les gisements observes pour chaque
+          profil.
+          Si l'orientation obtenue est differente de l'orientation
+          souhaitee, il suffit de mettre un signe - devant le numero
+          du profil pour en inverser le sens.
+
+        Nouveau
+        Si tous  les profils  ont un  point et  un seul d‚finissant x=0.
+        -les abscisses curvilignes sont calcul‚es et restitu‚es dans  le
+        fichier r‚sultat
+        -la liste comporte la valeur de la normale en grades calcul‚e  …
+        partir des points d'axe  ( mettre le num‚ro  de profil … -  pour
+        inverser le gisement).
+        sinon,
+        les abscisses sont nulles et la normale n'est pas calcul‚e.
+
+        Passer les exemples EX1.D17, EX2.D17, EX3.D17 (fichier p n n
+        ...) avec XYZ.D17 (points N X Y Z).
+	31.12.94 19:46<< sortir la liste sur fichier pour analyser la
+	liste et corriger comme ci-dessus
+
+
+	>>>>p35
+
+	mode auto
+
+	Si P33 trouve un datauto.obs (1 ligne nom du dossier), il n'y a
+	pas de questions clavier.
+	Dans ce cas, P33 genere 2 fichiers datauto.p34 et datauto.p35 .
+	idem pour p34 et p35.
+
+
+        Generation du fichier  nom.CDI a partir  du carnet pour  P34, et
+        des resultats  n x y z  sortis par p34  ou autres logiciels.  Le
+        fichier n x y z  peut etre au format pytha ou jsi.
+
+
+       >>>>P40  nivellement direct
+
+
+	S'il y a plus de 50 visees par station, les resultats sont
+	erronnes.
+	Le probleme peut se produire avec les niveaux type NAnnnn
+	(WILD) utilise comme comme une station de leve de points de
+	details.
+	Remede : eclater la station avec un point commun entre les
+	stations fictives (ne pas oublier la visee ur un point connu).
+
+	Corrige dans la version 3.81 (10/01/95) :
+	 295 visees par sation + message.
+
+
+        Les  carnets  electroniques  des   niveaux  NA2000,  ....   sont
+        acceptes  par  p40.  Ils  doivent  etre  mis  en  forme  par  un
+        traitement prealable par p33. --voir ci-dessus---.
+
+        Le fichier resultats a la forme suivante
+
+        .......
+        N 0 0 Z
+        N 0 0 Z
+        .......
+
+        Ce fichier peut ensuite servir pour le calcul des points de
+        details .
+
+
+        Exemple d'enchainement des calculs avec l'exemple G.
+
+                donnees         resultats
+
+        1/P33   g.ter           g.car   g.can (genere par p33)
+                g.app(appui)
+
+        2/P40   g.can           g.r40 (resultats points de canevas)
+                                g.naw
+
+        3/P33   g.ter           g.car   g.can
+                g.r40(appui)
+
+
+        4/p40   g.car           g.r40 (resultats canevas et details)
+                                g.naw (resultats format wild=entree
+                                       pour le rec module)
+
+        1/ g.ter : carnet terrain (format wild)
+           g.app : n 0 0 z (ou n x y z) comporte les points connus
+           g.car : carnet d'entree au format p40 : canevas et details
+           g.can : idem, observations du canevas
+
+        2/ g.can est le fichier sorti par p33, les resultats du canevas
+           sont dans g.40 (points anciens et nouveaux)
+
+        3/ idem pas 1, sauf a donner g.r40 en fichier points d'appui
+           g.car contient tous les points observes canevas et details,
+           la zone geodesie contient les points de canevas (g.r40 de la
+           phase 2)
+
+        4/ idem pas 2, sauf g.car en entree, pour le calcul des points
+           de details
+           g.naw comporte les resultats canevas et details au format
+           wild et peut etre transmis au carnet rec.
+
+        110001+00000001 81..06+00000000 82..06+00000000 83..06+01000000
+        110002+00000002 81..06+00000000 82..06+00000000 83..06+00999046
+        110003+00000003 81..06+00000000 82..06+00000000 83..06+00997699
+        110004+00000004 81..06+00000000 82..06+00000000 83..06+01000783
+        110005+00000005 81..06+00000000 82..06+00000000 83..06+01002699
+        110006+00000006 81..06+00000000 82..06+00000000 83..06+00999826
+        110007+00000008 81..06+00000000 82..06+00000000 83..06+00999425
+        110008+03000100 81..06+00000000 82..06+00000000 83..06+00999358
+        110009+03000101 81..06+00000000 82..06+00000000 83..06+00999910
+        110010+04000001 81..06+00000000 82..06+00000000 83..06+00999999
+        110011+04000004 81..06+00000000 82..06+00000000 83..06+01000784
+        110012+09000004 81..06+00000000 82..06+00000000 83..06+00999784
+
+        ou zone 81=x=0, zone 82=y=0, zone 83=z (ici unite= 0.01 mm)
+
+        Les  4  phases  de  calcul  sont  necessaires  si  les points de
+        details sont vises plusieurs fois avec la meme codification  sur
+        le  terrain.   Si  les  points  de  details ne sont vises qu'une
+        fois, seules les phase 1 et  2 sont utiles. Dans ce cas,  donner
+        g.car en entree de p40.  Incidence : l'emq est plus  petite, les
+        points de details ayant un ecart nul.
+
+
+
+        !!! Rappel !!!
+
+        Si   un   point   est   vise   plusieurs   fois,   a  partir  de
+        stations  differentes,  il  est  automatiquement  inclus dans le
+        canevas par  pytha. Si  la precision  des mesures  est identique
+        pour  toutes  les  observations  canevas  et  certains points de
+        details  comportant  des  observations  redondantes,  il  n'y  a
+        aucune raison  de les  eliminer du  calcul du  canevas. Si  vous
+        introduisez de tels points  dans vos observations (crapauds  par
+        exemple),  codez-les  comme  des  visees  avant (332), meme s'il
+        s'agit  en   fait  d'une   visee  arriere   (cheminement  double
+        selon la methode de cholewski par ex).
+        Le calcul en  bloc utilise toutes  les observations, les  ecarts
+        importants,   sont   generalement   dus    a   des  observations
+        imprecises. Une  methode permettant  de tester  la coherence des
+        mesures  est  de  faire  un  premier  calcul  avec un seul point
+        connu. L'emq  refletera la  precision des  mesures. Verifier les
+        cotes  des  points  connus  pour  voir  si  ceux-ci  ne sont pas
+        errones.
+
+        Parametres p40/p41
+
+        NEDITE  ne pas editer les donnees (VD)
+        EDITE   editer le donnees
+        GAUSS   editer la courbe de GAUSS (theorique et observee) (VD)
+        NOGAUSS ne pas editer GAUSS
+        EPSB    pour arreter le calcul du bloc
+                VD = 0.000 000 000  010 / p40
+                VD = 0.000 000 010  000 / p41
+        BLOC    n iterations maxi a ne pas depasser (VD=2000)
+        TOL     tolerance pour l'elimination des observations
+                VD=0.010 / p40
+                VD=0.200 / p41
+        TOLD    tolerance sur les distances directes/inverses
+                VD=0.100 / p41
+        QD2     VD=0            / p40
+                VD=6.57895 e-7  / p41
+
+
+
+
+
+
+       >>>>P41 nivellement indirect (geodesique) voir sous p40
+
+	POIDS
+	pour passer plus pres des visees courtes.
+	les visees ont un poids=1/distance
+	corriger p033p034.mcg, sous pa34.p41 : ajouter la ligne avec la
+	consigne.
+
+
+
+	>>>>p44 	v3.72 du 13/7/93
+
+	la formule de tolerance est modifiee de la facon suivante
+
+
+	TOLPOLYGO nf A B C D E F G etc...
+	      nf numero de la formule de calcul des tolerances suivi des
+	      coefficients
+
+	      > nf = 1
+	      orientation dmgr = rac( A + B x (N+1) )
+	   *  planimetrie cm = rac(C + DxN + ExSom(LixLi) + FxL) + GxL
+
+	      Avec N  = nombre de cotes
+	      	Li = distance rectiligne en kms de chaque sommet a la fin
+		     du cheminement
+		L = longueur du cheminement en kms
+	les coefficients F et G ont ete ajoutes : F sous la racine, et G
+	en dehors. F et/ou G doivent etre mis a 0 si necessaire,
+	exemple :
+
+	TOLPOLYGO 1 33000 10000 400 160 260 0 30
+		(polygo ordinaire, a voir si 30 est sous/hors la racine)
+
+
+	Si tolpolygo n'est pas fourni, les valeurs par defaut sont
+	tolpolygo 1  1296  3600  16  16  16 0  0
+			(polygo de precision)
+
+
+
+
+
+
+                               *************
+
+	DIVERS
+
+
+       >>>>CONFIG.MCG/PAGESGR2 pour p65 et autres eventuellement
+
+                    a decrire !!!!!! pas d'urgence
+		    consignes en commentaires
+
+       >>>>!!! Le fichier MESSAV35.MCG (messages) a ete modifie !!!
+
+        consignes :
+	del messav35.bin
+        lancer un module version 3.7 pour generer les fichiers *.bin
+        correspondants corrects.
+        si vous lancez un ancien module ( version anterieure ), les
+        messages risquent de creer des problemes d'affichage ecran !!!
+
+
+
+       >>>>Relance des programmes
+
+        Il est possible  en fin d'execution  de relancer un  module sans
+        en  sortir.  Cette  consigne  est  parametrable  dans le fichier
+        MESSAV35.MCG .Voir les messages 5000+nnn en fin du fichier.
+
+
+        >>>>nom des fichiers sauv‚s dans le systŠme
+
+        d:\rrrrrrrr.rrr\ffffffff.fff\etc..\etc..  (64 caractŠres maxi)
+        caractŠre  0-9 a-z A-Z
+
+
+
+       >>>>modification de la r‚ponse standard au message
+                edition .....<V>
+
+        passer dans le r‚pertoire c:\mcg
+        editer le fichier MESSAV35.MCG
+        lire les explications
+        introduire la modification pour avoir le message 531 specifique
+        au programme.
+        ex, pour p44 editer le message <F> (fichier) au lieu de <V>,
+        introduire la ligne suivante
+        5044  0  4  0  0
+        (ces messages se trouvent en fin de fichier)
+        La prise en compte des modifications est effective si le
+        fichier messav35.bin est supprime : del messav35.bin
+
+
+
+
+       >>>>Nom des fichiers donnees/resultats
+
+        Le  nom  du  fichier  de  donnees  peut  etre  tape avec ou sans
+        extension.  Les  extensions  peuvent  etre  parametrees  par  la
+        consigne
+
+        EXTENSION
+        ......
+        FIN
+
+	situee dans le fichier CONFIG.MCG .
+
+        exemple  :  avec  p33,  vous  donnez  DEA9  en entree ( donnees)
+        les  fichiers  dea9,  dea9.d33,  dea9.obs  sont  dans la zone de
+        travail. Pytha propose les noms suivants
+
+        <DEA9> ? <O>/N  , si la reponse est non,
+        <DEA9.OBS> .....(avant dea9.d33, l'extension d33 etant apres
+                         obs dans la consigne)
+        puis <DEA9.D33> .....
+
+        l'envoi du caractere Esc(escape) permet de sortir des boucles
+        de saisie.
+
+
+        exemple de consignes
+        .....
+        extensions fichiers donnees resultats
+
+        p033d gdt gre obs d33 # extensions possibles pour les donnees
+        p033r car d34  # extension resultats, can et cpt generes
+
+        p034d car can d34 tou
+        p034r res xyz # cdi genere
+
+        p035d1 res xyz  # donnees n x y z
+        p035d2 car d34  # donnees carnet pour p34
+        #p035r  cdi # genere par p35 : entree geocode ou ...
+
+        p040d d40
+        p040r r40
+
+        p041d d41
+        p041r r41
+
+        p044d d44
+        p044r r44
+
+        p057d d57
+        p057r r57
+
+        fin
+        ........
+
+        S'il n'y a pas de consignes, ou si les reponses sont negatives,
+        l'utilisateur a la main sur les noms donnees/resultats.
+
+
+	PROJET
+	======
+
+
+        !!!!!!! le fichier CONFIG.MCG est eclate : un fichier g‚n‚ral de
+        configuration du projet est mis en place.
+        C'est le fichier PROJET.MCG .
+
+
+       >>>>P58 dessin des profils en long TN/PROJET
+
+        DECA,0    valide
+
+        nouvelles commandes
+
+        NBDX,d
+        NBDZ,d
+        NBDN,d
+        NBDS,d
+        SECRI   #supprimer les ecritures ECHX, ECHZ,P ...
+                #utilisation pour dessins superpos‚s.
+        ECRI    #remettre les ecritures ON
+        CALX,x0 # valid‚ pour TRAVERS (prioritaire sur CTEX)
+        CTEX,dx # pour PL et TRAVERS (si CALX=0)
+
+        d = nombre de decimales pour les ecritures ( 0 = entier )
+        x0 mm papier : calage du 0 pour les profils en travers
+        dx mm papier : calage du 1er point du profil en long
+
+        Exemples avec commandes RUBN, RUBA, ... :
+                sema.d02 et sema.d58
+        RUBN,crrddd
+        s valeur
+        s valeur
+        999999
+                c est le nombre de decimales a ecrire pour valeur
+                ( 2 par defaut )
+
+        ex RUBN,3020    2 decimales, rubrique 3, decalage 2 mm
+           RUBN,305045  3 decimales, rubrique 5, decalage 4.5 mm
+
+	>>>>p58		17.01.95 19:02
+
+	modifications TITN TIPR
+	nouvelle forme TITN,nt
+		       TIPR,nt
+	ou nt est le numero du trait, de 1(continu) a 999. La
+	description des traits est prise dans le fichier TRAITS.MCG :
+	traits simples (1000/1999) (n+1000).
+
+	DEPR,ttee
+	DETN,ttee
+	tt=numero du trait, ee epaisseur
+	tt=01 plein, 02 tirete, voir fichier traits.mcg
+	ee est le numero du trait epais, voir traits.mcg
+
+
+
+       >>>>P7 - dessin des profils en travers tn/projet
+
+
+        GROUPEPROFILS,n
+
+        Parametre permettant  de considerer  un profil  comme un  dessin
+        ind‚pendant  :  les  messages  de  debut  et  de  fin  de  trace
+        encadrent  le  code  traceur  de  chaque profil. Les fichiers de
+        dessin comportent n profils.
+
+        Application  :  dessins  de  profils  sur  un  traceur ayant une
+        alimentation feuille a feuille type HP7550 par exemple.  S'il  y
+        a  plus  d'un  profil  dans  le  format traceur, la commande est
+        ignor‚e.   Supprimer  la  commande  AFFI,1  pour  ne pas avoir a
+        repondre CR apres chaque profil : pas d'affichage ecran  pendant
+        la generation du code traceur.
+
+        Pour HP7550,  choisir le  traceur J,  ou mettre  le traceur j du
+         fichier TRACEURS.MCG dans  FMAD.MCG, et remplacer  le ? par  un
+         espace,  sinon  la  confirmation  du  traceur est demandee pour
+        chaque profil.
+
+        titre
+        ....
+        ....
+        GROUPEPROFILS,10
+        bsnx,360        # format traceur 360*280
+        bsny,280
+        forx,358        # format profil 358*278 => 1 profil dans le format
+        forz,278        # traceur
+        ....
+        ....
+        ****
+        STOP
+
+        Commande LY5,d
+        unite de d : cm (metres auparavant).
+        si d=1, la ligne extraite ne comporte pas de zone Terrain Naturel.
+
+        Commande ASCII
+        pour g‚n‚rer un fichier ascii des points du profil
+
+        titre
+        ASCII
+        charge,,nom lalanne de p16
+        ****
+        STOP
+
+        parametres ECRITURES ..........modification des consignes......
+        Le numero de profil, l'abscisse et le Z projet sont positionnes
+        a ON dans le programme.
+         Si pas de  parametres dans projet.mcg  et d7, pas  d'ecritures,
+         P7 a des  valeurs par defaut  pour calage/P dx/P  etc, mais les
+         commandes  sont  positionnees  a  OFF.  Les  donnees de P7 sont
+         validees par  la presence  des consignes  dans PROJET.MCG et/ou
+         D7 .
+
+
+
+         PLPR,no plume projet
+         PLEC,no plume textes
+         PLUM,no plume courante
+         (valider les limites des plumes dans FMAD.MCG et TRACEURS.MCG)
+
+         Modifs : ECDEVERS ecrit les pentes > 11%, sous la forme 2/1,...
+
+         Zone a inserer dans PROJET.MCG : PARAM.P7 a FIN .
+
+         Les  lignes  ecritures  a  fin  peuvent  etres inserees dans le
+         fichier de  donnees pour  P7, en  tout ou  partie (dans ce cas,
+         motcles  ECRITURES  et  FIN  obligatoires).   Le  systeme   lit
+         d'abord  les  parametres  par  defaut  fournis  dans le fichier
+         CONFIG.MCG, s'ils existent.  La commande ECRITURES  des donnees
+         pour P7 est prioritaire.  Si pas de parametres dans  config.mcg
+         et  d7,  pas  d'ecritures,  P7  a  des  valeurs par defaut pour
+         calage/P dx/P etc, mais les commandes sont positionnees a  OFF.
+         Les donnees de P7 sont  validees par la presence des  consignes
+         dans CONFIG.MCG et/ou D7 .
+
+         Ecriture des XY :
+
+         Recherche  de  la  tabulation  ayant  le  nom  indique  dans la
+         commande CHARGE,,nom . Si le nom existe, chargement de  N,S,X,Y
+         a partir du fichier TRA.BIN (genere par P8).  P7 cherche le  no
+         du profil; s'il existe, les XY sont ecrits, sinon 0.000 . Si  S
+         issu  de  P8  ne  correspond  pas  a  S  issu  de  P16, message
+         attention, le traitement  est poursuivi.   En pratique, le  nom
+         de la tabulation doit  etre le meme dans  P2, et P8, ainsi  que
+         celui utilise avec la commande LALA,,nom de P16.
+
+
+         nota : !!! ceci annule la consigne pour STITRE .
+            valide pour dessin simplifie ou renseigne (SEMED)
+            !!! stexte : no/profil suivi par 1 espace, suivi par texte
+                        ( 12 caracteres maxi)
+                abscisse ne doit plus etre fourni
+
+        Format libre.
+         calage par rapport au point P : un des coins du format
+         Bas Gauche, Haut Gauche, Haut Droit, Bas Droit
+         dx et dy, xy relatifs du point bas gauche de calage du texte
+         hx et hy, taille des caracteres
+         slant pente en % pour ecriture penchee, sens gisement, dans le
+         systeme (hx,hy)
+         ang angle du texte par rapport a ox papier ( 100 donne un texte
+         vertical).
+
+
+
+        PARAM.P7
+        ecritures
+        #commande
+        #     P    dx/P dy/P    hx      hy  slant  ang ecriture/ox
+        stit    HG      30      -16     3.6     4       0       0
+        tex1    hg      30      -24     3.6     4       0       0
+        tex3    HG      30      -32     3.6     4       0       0
+        ktgv    HG      95      -32     3.6     4       0       0
+        stex    HG      72      -48     3.6     4       0       0
+        tex2    hg      30      -48     3.6     4       0       0
+        p       hd      -50     -20     3.6     4       0       0
+        s       hd      -50     -28     3.6     4       0       0
+        zpro    hd      -50     -36     3.6     4       0       0
+        ztn     hd      -50     -44     2.7     3       0       0
+        tex4    hg      30      -56     3.6     4       0       0
+        x       HD      -50     -50     2.7     3       0       0
+        y       hd      -50     -56     2.7     3       0       0
+        fin
+
+                Fichier de data pour p7
+
+        Les ecritures validees sont : STITRE, P, S, Zpro, Ztn .
+        Tex1, tex2, tex3, ktgv, stex ignorees.
+
+        exemple pour P7................
+        PROFIL
+        ecritures       # changer les parametres par defaut
+        #commande pcalage P, dx/P, dy/P, hx, hy, slant, ang ecriture/ox
+        stit        HG       30   -16    3.6  4    0      0
+        p
+        s
+        zpro
+        ztn
+        fin
+        STITRE,,T.G.V./R/H/O/N/E/-/A/L/P/E/S #/-->espace
+        tex1,,-No-PLANCHE-1/1000-:-752-233 # 1er caractere donnera espace
+        tex2,,-STRUCTURE-:            # meme consigne que P58, ici -
+        tex3,,-Km-PLANCHE-1/1000-:
+        ktgv            #abscisse du pk 0 de la planche, consigne SNCF
+        419218.423      #sur cette ligne
+        FORX,420
+        FORZ,297
+        BSNY,700
+        ECHX,200
+        ECHZ,200
+        bsnx,430
+        bsny,300
+        EMPRISES
+            210.00   423260.000   -49.038
+            220.00   423280.000   -46.688
+            230.00   423300.000   -44.294
+            240.00   423320.000   -41.863
+            250.00   423340.000   -43.535
+            260.00   423360.000   -45.262
+            270.00   423380.000   -46.975
+        999999
+
+
+        EMPRISES
+            210.00   423260.000    32.416
+            220.00   423280.000    30.863
+            230.00   423300.000    30.196
+            240.00   423320.000    33.956
+            250.00   423340.000    37.745
+        999999
+         cmcg
+        affiche,1
+        liste
+        210#220 230 240
+        999999
+        stext
+        210 20/45R
+        220 20/45R
+        500 azer
+        999999
+         CHARGE,,LGV22
+         ****
+        STOP    ...............................
+
+
+
+
+       >>>>P8 - trace en plan
+
+        v1
+        geodesie
+        100 865246.5481 326617.9507
+        101 865286.4981 326577.9507
+        102 865285.9980 326553.9729
+        103 865279.1180 326484.2929
+        104 864828.6060 326402.0275
+        105 865345.5046 326379.0973
+        999999
+        elements
+        para 100 101 1.44 200 201  # // 100 101 a 1m44 droite -> 200 201
+        para 103 102 -1.44 203 202 # // 103 102 a 1m44 gauche -> 203 202
+        stat 104 105 1.44 100 204  # coord polaires de 205 = 1m44, 100g
+        #                          #(oy=104-105)
+        station 105 104 1.44 300 205 #
+        parallele 100 101 -1.44 300 301
+        inte 100 101 300 200 400 # intersec drt 100-101 et 300-200 ->400
+        perp 301 100 101 500 # perp de 301 sur 100-101 -> 500
+        perp 201 100 101 600
+        perp 204 104 105 700
+        1 orin 200 1 # origine du trace = point 200 (s=1m)
+         drte 200.201
+         cccd 26.3179 48.56 26.3179
+         drte 202.203
+        4 cccg 10 51.44 .003
+         drte 204.205
+        999999
+        tabuler,,v1d
+        1 290 3
+        999999
+        ****
+
+        Les  elements  CCCG  et  CCCD  ayant  une  longueur de clothoide
+        inferieure  a  0.003  m  sont  calcules  et  restitues  avec une
+        longueur nulle et un parametre symbolique A = 0.001 m .
+
+
+
+        exemple :
+
+        v1
+        geodesie
+        100 867062.665 323156.8068
+        101 867069.6063 323077.2601
+        102 867070.4 323080
+        103 867074.3 322980
+        104 867072.2897 322968.9893
+        105 867071.6138 322950.9669
+        999999
+        elements
+        1 orig 867062.6650 323156.8068
+        1 drte 100.101
+        2 cccd 8 253.30 0.003   # clo l=8 cerd r 253.3 clo l=0
+        5 drte 102.103
+        6 cccd 8 253.30 8
+        9 drte 104.105
+        999999
+
+        si l1=l2=0
+
+        3 cccd 0.003 253.30 0.003 = 3 cerc 253.3
+
+
+       >>>>P12	09/10/93 16:39
+
+
+        Nouvelles commandes :
+
+        DXF             idem CMCG, sauf les ordres de lissage qui sont
+                        sortis en segments au lieu de LISS et LIS1
+        ECHDISTANCES +- mm par KM
+                        correction a apporter aux distances dans les
+                        commandes GISE et AVAR (implantations)
+                        en principe = -(Projection + Zmoyen)
+
+        Les consignes sous PARA.P12 (fichier projet.mcg) sont prises en
+        compte , il s'agit de
+        AFFI,1          affichage ecran du dessin
+        CMCG            sortir le code Pytha-Graph
+	DXF
+
+	Si elles sont fournies dans les donnees pour P12, elles doivent
+	etre positionnees avant le commande DESSINE,...,....
+
+        Divers
+
+        >>problŠme :
+        P12 utilise le 1er point comme point (0,0) du systŠme de  calcul
+        , de fa‡on  … avoir un  espace de travail   reduit … 7  chiffres
+        significatifs ( de - 99999.99 m a  + 99999.99 m en xy ) Au  dela
+        de cette  limite le  7 eme  chiffre (cm)  est errone de quelques
+        unites.
+
+
+        exemple  :  axes  en  (800000,300000)  et  points  a calculer en
+         GISDIS en (1000,1000) .   dans ce cas la commande  GISE fournit
+        des resultats  errones (  a qq  cm ,  cgr pres  ) ,  si les axes
+        calcules  avec  P8  sont  dans  un  systeme  de coordonnees tres
+        different  du   systeme  des   points  rentres   avec  GEODESIE.
+        >>correction :   commande CHARGE  a supprimer  dans les  cas  ou
+        les points  connus sont  fournis avec  la commande GEODESIE,,nom
+        (P12 tourne  en solo).   precautions a  prendre :  ne pas passer
+        des  calculs  d'axe  situes  dans  des zones independantes (ex :
+        axes de  DUNKERQUE a  TAMANRASSET dans  le meme  systeme LAMBERT
+        ...)
+
+        >>ameliorations:  La commande CHARGE n'est plus necessaire si
+        les points sont rentres avec la commande GEODESIE
+        (implantations en GISE ou ... par ex.).
+        Dessin des lignes planim‚triques
+        >>probleme : restitution de courbes bizarres ,si les points
+        de tabulation sont trop serres et disposes de facon irreguliere.
+        >>correction : si un point est a moins de 0.3 mmm papier du point
+        precedent , il est elimine .
+
+
+	26.11.95 23:57
+
+	la commande	inte,,v1
+			normales,,v2
+
+	genere un fichier TABUL.R12
+
+
+       >>>>>P16 mise en place des profils en travers
+
+        Les  valeurs  numeriques  acceptent  16  chiffres significatifs.
+        Cela permet  d'avoir par  exemple des  verticales plus  precises
+        qu'auparavant. Problemes pour  les ouvrages enterres  comportant
+        des segments verticaux de plusieurs metres  : murs .  Le pas  de
+        calcul des  cubatures est  < ou  = a  0m20 :  cubes un  peu plus
+        precis brouette contre camion auparavant....
+
+	Commande PROJET
+	si PROJET1 : les interpolations sont lineaires pour les valeurs
+	zp, dvg, dvd ( au lieu de parabolique pour PROJET ).
+	On peut donc donner des valeurs en passant, si la regle
+	d'interpolation est lineaire.
+
+
+       >>>>>P58 voir plus haut
+

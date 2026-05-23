@@ -1,0 +1,412 @@
+1
+	P65MAJ.DOC !!!!!!!!! >>>>VERSION 4.20-P65L-1/2/97-----
+
+	La version 640 k (3.7) n'est plus maintenue.
+
+	P65L comprend un systeme d'exploitation 32 bits qui opere a
+	partir de la memoire haute.
+
+
+	Les fichiers suivants peuvent se trouver dans le repertoire
+	C:\MCG :
+
+	    CONSIGNE.P65  F003.P65  F007.P65      MENUVISU.P65
+	    DEPART.P65    F004.P65  F008.P65      UCLE.P65
+	    F001.P65      F005.P65  FECR.P65
+	    F002.P65      F006.P65  MENUFILE.P65
+
+	la recherche est faite dans le repertoire courant, puis dans le
+	repertoire c:\mcg .
+
+	Il en est de meme pour les fichiers *.mcg.
+	Le repertoire de travail doit comporter PARAM.MCG avec les 2
+	lignes suivantes
+	c:\mcg\
+	c:\mcg\macros\
+
+	Quelques Conseils !!!!
+
+	Utiliser la commande PURG pour eliminer les commandes inutiles
+	ou effacees. ( commande generale DIVERS1) .
+
+	Corriger menuvisu.p65 pour avoir acces aux commandes telles que
+	CALQUES, DIVERS1, FILE, DVUE, ... et personnaliser vos
+	applications.
+1
+	nouvelles commandes / modifications
+
+	     $LCA           NBDZ
+	     $LDEAUTO       OPCALQUES
+	     $LPD
+	     $SAUVAUTO
+	     ACAD           PDOUBLES
+	     ACN            PERP
+	     ALIGP          PERPZ1
+	     ASYMB          PERPZ2
+	     BASCULES
+	     BPLUMES        PERS
+	     CALTOPO
+	     CALQUES        PLTN
+	     CHDIRZ         POMPES
+	     CMCG
+	     CNIV           PROJET
+	     CORTEXTE       RESTBLPL
+	     CUBE           ROTTEXTE
+	     DEPLATEX       SAISIZ
+	     DESSFORM       SAUVBLPL
+	     DIVERS1
+	     DVUE           SELERECT
+	     EFFARECT       SORTN
+	     EFFTEXTE       SUPCNIV
+	     FORMATS
+	     FOTO           SUPF
+			    TALUS
+	     GEOCODE        TRACE
+	     INUTZ
+	     LSTXYZ         TRTN
+	     MASQUE
+	     MENUOFF        TUYAUX
+	     MENUON         TXSF
+			    VISUSYMB
+	     MESURE         VUE
+	     MOD30          ZOOMAR
+	     MOUSE
+	     SUPCOMMAnde
+
+
+	Nouveaux fichiers
+
+	tuyaux.mcg	visusymb.p65
+	mpde.oto
+	nommenus.p65
+	menuprjt.p65
+	menutopo.p65
+
+	!!! INCIDENTS voir en fin de fichier : questions/reponses
+2
+	nouveaux fichiers
+
+	>menutopo.p65
+
+	Utilise par caltopo : nom des programmes a executer dans la
+	partition basse (640 k)
+	le module de calcul p34 es integre a p65l
+	les modules p2,p5,p7,p8,p11,p12,p16,p17,p33,p34,p40,p41,p44
+	p57,p58 peuvent etre appeles depuis p65l en tapant pn au
+	clavier ou en passant par caltopo
+	Vous pouvez ajouter a menutopo.p65 les modules de votre choix
+	( acquisition carnet(s) electronique(s) par ex ) : 20 lignes
+	maximum.
+
+	Page de menu affichee par caltopo:
+
+	# menutopo.p65  appele par caltopo
+	# 3 5 <- respecter le cadrage
+	# nom de la commande avant !
+	  1 p2  !
+	  2 p5  !
+	  3 p7  !
+	  4 p8  !
+	  5 p11 ! utilitaires
+	  6 p12 !
+	  7 p16 !
+	  8 p17 !
+	  9 p33 ! traitement carnet terrain -> carnet pour p34
+	 10 p34 ! calcul canevas/details (entree carnet pour p34)
+	 11 p40 !
+	 12 p41 !
+	 13 p44 !
+	 14 p57 !
+	 15 p58 !
+	 16 p23 ! conversion dxf -> pytha, sortir et lancer p23
+	 17     ! programme ou commande batch transfert carnet terrain
+	 18     !  .........
+	 19
+	 20
+3
+	Page de menu affichee par projet:
+
+	>menuprjt.p65
+	  1 calcul du trace en plan
+	  2 corriger le fichier trace
+	  3 TRTN extraction des profils en travers terrain naturel
+	  4 P58 dessin du profil en long du tn
+	  5 mise en place des profils projet + cubatures
+	  6 dessin des profils en travers projet + tn
+	  7 dessin des profils en travers tn
+	  8 dessiner le projet sur le plan
+	  9 restaurer le modele terrain naturel
+	 10 PLTN extraction du profil en long terrain naturel
+	 11
+	 12 ALIGner Points sur n1 n2 n3 ....profil en long (donnees/p58)
+	 13
+	 14 interpolation de cotes rondes en Z
+	 15
+	 16
+	 17
+	 18
+	 19
+	 20
+
+
+
+	>nommenus.p65
+	---pour MODIFIER le NOM des pages MENU
+
+	Les noms generiques des menus ( fonctions 181 a 190 ) sont
+	codes menu1 a menu10 : ils doivent etre utilises dans le 
+	fichier MENUVISU.P65 .
+	Pour modifier ces noms sans passer par 
+	mocl, modification des noms, monter un fichier ayant pour nom 
+	NOMMENUS.P65 comme suit, en respectant les colonnes 1 a 4 
+	fonction, a partir de 6 le nom associe ( 8 caracteresaffiches).
+
+	 181 toto1
+	 182 toto2
+	   4 6		respecter les colonnes
+
+	NOMMENUS.p65 doit se trouver dans le repertoire courant ou dans
+	c:\mcg.
+
+	Lors des mises a jour vous n'aurez plus a modifier les noms des
+	menus si ucle.p65 est modifie.
+
+
+	!!!!!!!!!!!!!!!!!!!!!!!!
+	Les commandes concernant le TN calculent les cotes a partir des
+	lignes caracteristiques en XYZ :  courbes de niveau, lignes de
+	crete, thalwegs, ...
+4
+	machines
+	Temps d'execution
+	polices de caracteres
+	sauvegarde des ecrans
+
+	>>machines
+        machines 32 bits, 8 mega octets ram
+        gain  sur   temps  d'ex‚cution   40%  ou   plus,  travaille   en
+        memoire haute, capacites  : 90 000  points, 90 000  commandes de
+        dessin , 350 000  commandes elementaires ( 5000/5000/20000
+	pour la version 3.7 )
+
+        Report de points : 10 000 points par planche (5000 pour 3.7)
+        La generation/restitution des images est un peu plus lente que
+        la version 3.7 .
+
+        !!! fonctionne  avec les cartes VGA et SVGA, a l'exclusion des
+        extensions du type station graphique separee
+
+	Consulter annexes.doc ecran graphique!!!
+
+5
+	>>Temps d'execution
+
+	les temps de dessin ( commande exec ) ont ete ameliores dans le
+	cas de fenetre (commande zmf).
+
+	Exemples sur un 486/33 avec une carte graphique de bas niveau
+	ex1
+	fichier 1,7 mega ($sde), 50000 points, 35000 commandes
+	quantites (environ )
+	400 hectares, 3500 parcelles, 3000 bati, comportant les
+	reseaux (EU, EP, grilles, regards, cotes tampons, ...)
+			version 4.0	version 4.2
+	dvue		30 sec		30 sec		pas de changement
+	zmf  300	22 sec		 7 sec		gain 3
+	zmf 1000	25 sec		 8 sec	        gain 3
+	zmf 2000	30 sec		10 sec          gain 3
+	nota : avec acad, sur une machine a 133Mhz et 16 Mega de ram
+	       fichier dwg 7 mega, zoom fenetre (zmf) quelques secondes
+	       demarrage ou regen 5 minutes.
+
+	ex2
+	fichier 2,2 mega, 7800 parcelles (70000 points, 37000 commandes)
+	dvue 40 sec, zmf 12 sec
+
+        L'affichage des ecritures ayant  une taille inferieure a  5 (hy)
+        pixels est materialisee par un rectangle ou un trait (si - de  3
+        pixels)  :  mode  ecri  off  automatique, en dessous des tailles
+        ci-dessus,  les  textes  sont  illisibles.  Les  temps de dessin
+        ecran sont ainsi reduits.
+
+        Si l'epaisseur du trait (ept1), ou l'espacement des hachures
+        (esha) est inferieur a 3 pixels, ept1 et esha sont ajustes de
+        facon a reduire les temps d'affichage ecran : cas des zoom
+        donnant une image surchargee (echelle 5000, 10000, ...) . Les
+        symboles donnant une image ecran illisible sont reduits a un
+        pixel.
+5
+        >>Polices de caracteres
+        il y a 6 polices de caracteres dans les fichiers du repertoire
+        c:\mcg
+        Les symboles se trouvent dans chacune des polices, en plus des
+        fontes FONTE et ECRAN.
+        pour changer de fonte utiliser la commande CHFT nom, la
+        commande $LFO ne doit plus etre utilisee. L'ordre CHFT est
+        stocke avec les ordres de dessin, contrairement a $LFO.
+	Les fontes sont stockees en memoire, des la premiere demande
+	( 5 fontes maxi ).
+	Le temps de dessin ecran (dvue, zmf, ...) peut etre
+	considerablement diminue si les changements de police sont
+	frequents, cas de la commande FORMAT par exemple.
+
+        >>sauvegarde des ecrans
+
+        L' ecran graphique est  sauve avant les commandes  suivantes, si
+        la commande exec a ete executee au moins une fois
+
+        LC, FUTI, FILE, TYPE, LSTXYZ, MOCL
+
+        il est restaure apres l'execution de la commande
+
+        Le  mode  alpha  n'est   plus  utilise,  Pytha-graph  reste   en
+        permanence en mode  graphique, la gestion  des pages alpha,  est
+        assuree  par  la  couche  graphique  du  systeme,  qui  gere les
+        fenetres  alphabetiques.  Il  n'est  donc  plus  necessaire   de
+        restaurer  le  dessin  avec  EXEC,  l'image est restituee en une
+        fraction de seconde  des la  sortie du mode alpha, d'ou  gain de
+        temps.
+
+        La  commande  $SDE  sauve  le  dessin  en  code binaire (fichier
+        Fnnn.P65),    et    l'image    ecran    en    code     compresse
+        (fichier    Snnn.P65).Le    caractere    *    suit    l'attribut
+        DES  dans  la  commande  FUTI  si  le  dessin a une image sauvee
+        sur  le  disque.   Si  vous  effectuez  la commande $LDE pour ce
+        dessin  ,  l'image  affichee   est  celle  correspondant  a   la
+        derniere  commande  $SDE.   Les  fichiers  Snnn.P65 peuvent etre
+        detruits  avec  la  commande  dos  DEL  s012.p65  par  ex !!! ne
+        pas   detruire   le   fichier   f012.p65   !!!  L'affichage  est
+        automatique  et  le  temps  correspond  a  la  montee en memoire
+        d'un   fichier   de   100k   maximum   (moins   d'une  seconde),
+        quelle que soit la complexite du dessin.
+
+        S'il ny a pas d'image ecran, la commande exec est lancee apres
+        $lde (pour stopper, taper un caractere au clavier).
+
+        La commande DESS avec ou sans report des points opere de la meme
+        maniere.
+
+        Conclusion : plus de perte  de temps avec Exec pour  les dessins
+        a restaurer pour pouvoir continuer a dessiner : gain de temps de
+        l'ordre de 50% .
+
+        voir fichier CONFIG.MCG/PAGESGR2
+                futi utilise la page 20
+                mocl                 41, etc...
+
+	>>>>>>>>>>>>>>Nouvelles commandes ou modifications
+
+        $LCA  cartouche
+                Les  numeros   de  point   positifs  sont   mis  a    -3
+                Le  dessin  sauve  par  $spr,  et  charge  avec $lca est
+                centre sur le dessin en cours. Si cartouche comporte des
+                blocs 91 a 99, le centrage sera calcule a partir de  ces
+                blocs.
+
+
+        $lde $lca $lpr  affichage automatique du dessin : image
+                si elle existe pour $lde, dessin ecran pour $lca et
+                $lpr
+
+	$LCA cartouche echelle
+
+	Si echelle est donnee, le cartouche (traits, ecritures) est
+	defini en mm papier.
+
+	Il est donc possible de definir des cartouches independants de
+	l'echelle de restitution.
+
+	Le repertoire ex65 comporte un fichier  CART4X1.CTC (4  fois 210
+	par 1 fois 297, soit 840*297). Montez-le avec charge, puis  $spr
+	ca4p1  .  Il  pourra  etre  utilise  derriere  un dessin avec la
+	commande $lca ca4p1  200  ou   $lca ca4p1 500,  si le format  du
+	dessin   ne   depasse   pas   840*297   au   1/200   ou   1/500.
+	Le centrage est fait a partir du bloc 91.
+	La fenetre de dessin est definie par le rectangle de la commande
+	mard ( - 5mm ).
+	La fenetre maxi est definie par le bloc 90.
+
+	Si la fonction mard est  utilisee, les marques etant limitees  a
+	la zone definie par  mard, il n'y aura  plus de marques hors  de
+	la zone dessin. Dans ce cas, la commande DESS affiche  l'echelle
+	passee avec $lca,  le cartouche 0  est utilise d'office  (pas de
+	marges, pas de quadrillage,.), pas  de cadre 1, pas de  cadre 2,
+	pas   de   fenetre    dessin   (   c'est    le   cartouche    ).
+
+	Apres  $lca, le  bloc  90  est  active  :  prise  en compte des
+	des ecritures de mise a jour. Les valeurs hx(hy) sont en mm
+	papier.
+	L'attribut ESHA utilise dans un cartouche est en mm papier,
+	voir cart5x2.
+
+	exemple d'exploitation avec la commandes $LCA nom echelle
+	=========================================================
+
+	Placez-vous dans le repertoire ex65 ( sous \mcg ou \topo )
+	-p65l
+	-char cart5x2.ctc
+	-zoom 5555
+	-$spr cart5x2
+	-$lde des2
+	-$lca cart5x2 200
+	-cortexte !
+	 suivre les consignes ( permet la mise a jour des ecritures du
+	 cartouche
+	-completer le cartouche : nom du dossier, date, etc..
+	 le completage fait partie du cartouche, les cotes doivent donc
+	 etre fournies en mm papier
+
+	 faire zmf de la zone bas gauche (traits marrons : ne seront
+	 pas dessines, bloc 92), hx 8, souris (fleche clavier pour
+	 mettre en fonction), texc, positionner le texte sur le point
+	 central (extemite du trait marron), etc..
+
+	-dess : propose 200, les questions cartouche, cadres, etc, sont
+	 reduites, les reponses implicites contenues dans la commande
+	 $lca cart5x2 200 sont supprimees.
+
+	Si la commande est $lca cart5x2 100, des2 est plus grand que le
+	cartouche: on veut une zone du dessin au 1/100. Deplacer
+	l'ensemble avec la commande DBLO, en specifiant le bloc 90,
+	pour positionner le cartouche sur la zone a dessiner (redessiner
+	l'ecran avec exec).
+
+
+	Si plusieurs commandes $lca sont envoyees, seule la derniere
+	est conservee (l'ecran est mis a jour).
+	!!! pas de PURG apres $lca !!! <<<<<<<<<<<<<<<<<
+
+	Lister le fichier cart5x2.ctc : c'est un dessin qui a ete sauve
+	avec la commande $SPR.
+
+
+        $LDEAUTO   consigne  a  mettre  dans  le fichier depart.p65 pour
+                monter  le  dernier  dessin  sauve lors  de la  derniere
+                utilisation de pytha-graph .
+                S'il n'y a eu  aucune commande de sauvegarde  ($sde), la
+                commande FIN sauve  le dessin en  cours dans TEMP%%%%  ;
+                ce fichier est ignore par la consigne $ldeauto. Il  faut
+                le charger en memoire avec la commande $lde temp%%%% .
+                --voir $sauvauto--
+
+
+
+        $SDEAUTO nc     ( VD=20 minutes )
+                consigne a mettre dans depart.p65 pour avoir une
+                sauvegarde automatique toutes les nc minutes.
+		Equivalent a $sde SAUVAUTO .
+
+        $LPD  NOM    monter   un  fichier   DES  ou   PRC  en    memoire
+                  on recherche  PRC,  puis  DES. le   dessin est   mont‚
+                  en  m‚moire  a  la  suite  du  pr‚c‚dent  les  num‚ros
+                  positifs sont mis a -3 .
+                  affichage automatique du dessin
+
+        $lde $lca $lpr  affichage automatique du dessin : image
+                si elle existe pour $lde, dessin ecran pour $lca et
+                $lpr
+
+        $SAUVAUTO consigne a mettre dans depart.p65 pour avoir la
+                sauvegade automatique apres la sortie de P65 (commande
+                fin) dans temp%%%%, s'il n'y a pas eu de commande $sde.
+

@@ -1,0 +1,4 @@
+# saisir n x y z des points connus, fichier utilise par p33 
+# n x y z	point connu en x y z
+# n x y		point connu en x y
+# n 0 0 z       point connu en     z

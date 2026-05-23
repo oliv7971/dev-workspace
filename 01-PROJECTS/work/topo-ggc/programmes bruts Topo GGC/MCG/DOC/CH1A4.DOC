@@ -1,0 +1,1875 @@
+		             Pytha-Graph 910701 TM
+
+
+
+		     T A B L E    D E S    M A T I E R E S
+
+
+
+	Manuel Utilisateur
+
+
+		1  Introduction
+		2  Guide d' installation
+		3  Liste alphab‚tique des fonctions
+		4  R‚pertoire des fonctions par activit‚
+		5
+
+		Annexes
+
+		A  Lexique
+		B  Transfert des fichiers dessin
+
+
+
+
+	Manuel de Reference
+
+
+		11  Introduction
+			- g‚n‚ralit‚s
+			- ‚quipement
+			- concepts g‚n‚raux
+		12  Ecrans et digitaliseurs
+		13  R‚pertoire alphab‚tique des fonctions
+		14  Description des fonctions
+
+		Annexes
+
+		A  Code ASCII
+
+
+
+
+
+
+
+		La documentation est r‚f‚renc‚e comme suit :
+
+			iaammjj Page ch.p
+
+		i = U  pour le manuel utilisateur
+		i = R  pour le manuel de r‚f‚rence
+		aa = ann‚e
+		mm = mois
+		jj = jour
+		ch = chapitre
+		p  = num‚ro de page
+                         Pytha-Graph U910701 Page 1.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		      M A N U E L    U T I L I S A T E U R
+
+
+
+		                  CHAPITRE   1
+
+
+		                  INTRODUCTION
+                         Pytha-Graph U910701 Page 1.2
+
+
+
+
+		  PYTHA-GRAPH  est un  logiciel  de dessin  assist‚  par
+        ordinateur, travaillant aussi bien en deux ou trois dimensions .
+        Son utilisation  est d'une grande  efficacit‚  et pourtant d'une
+        trŠs grande simplicit‚  . Il  vous permet  d'optimiser les temps
+        de r‚alisation  de dessin  en mettant  a  votre  disposition une
+        bibliothŠque de symboles qui reviennent de facon r‚p‚titive dans
+        les dessins, des copies  de dessin ( dans leur  totalit‚  ou  en
+        partie ) ainsi que  toutes  les  fonctions g‚om‚triques les plus
+        courantes .
+
+		  PYTHA-GRAPH  s'adresse  aux professions qui font appel
+        au dessin  topographique  et a  donc sa  place dans  les bureaux
+	faisant  des lev‚s  de plans  et/ou les utilisant : g‚omŠtres et
+	Bureaux d'Etudes . Chaque  utilisateur  peut  personnaliser  son
+	logiciel en donnant le nom qu'il d‚sire  aux commandes  et selon
+	son activit‚ m‚moriser ses propres symboles .
+
+		  PYTHA-GRAPH  vous permet de dessiner n'importe  quelle
+        forme trŠs rapidement … partir de droites, de cercles, d'arcs de
+        cercles et de courbes . Les dessins sont m‚moris‚s sur disquette
+        et  peuvent  ˆtre  dessin‚s  sur  table  tracante  ou imprimante
+        graphique … tout moment .
+
+                  Un  dessin peut ˆtre superpos‚ … un autre  dessin, son
+        ‚chelle  et  son orientation peuvent ˆtre modifi‚es  . De  plus,
+	PYTHA-GRAPH  vous  offre  un zoom pouvant  r‚duire  ou	agrandir
+        ind‚finiment le dessin. L'‚cran est en quelque sorte une fenˆtre
+        que l'on peut d‚placer sur le dessin. Il est ainsi  possible  de
+        travailler sur n'importe quelle partie du dessin, et … n'importe
+        quel niveau de d‚tail .
+
+
+                  QUELQUES PARTICULARITES
+                  -----------------------
+
+		  La philosophie de PYTHA-GRAPH est de cr‚er et/ou d'uti
+	-liser des  points connus ( lev‚s par ex ) puis  de  d‚crire les
+	objets … partir de ces points .
+
+        Saisie de points :
+        ------------------
+
+	     *  Le mode clavier :  les points sont d‚finis de facon num‚
+	     rique en entrant leurs coordonn‚es au clavier. A ces points
+	     sont attribu‚s des num‚ros,les fonctions de    dessin  sont
+	     ensuite ex‚cut‚es … partir des num‚ros de points .
+
+             * Le mode clavier ‚cran : une mire est obtenue … l'aide des
+	     flŠches de  direction  se trouvant  vers le pav‚  num‚rique
+	     du clavier.Les fonctions apparaissant au menu sont point‚es
+	     avec  la  mire  puis  ex‚cut‚es  directement  …  partir des
+	     diff‚rentes positions de la mire … l'‚cran .
+                         Pytha-Graph U910701 Page 1.3
+
+
+
+
+	     *  Le mode digitaliseur,une souris que l'on d‚place sur une
+	     table … digitaliser permet de saisir des points tout  comme
+	     en mode clavier ‚cran mais avec  une plus grande  souplesse
+	     (PYTHA-GRAPH  rappelle  la derniŠre  fonction  ex‚cut‚e  en
+	     tapant la touche ENTER. On peut ainsi dessiner …  l'aide du
+	     digitaliseur sans avoir … utiliser le clavier.
+
+        Calcul de points :
+        ------------------
+                  - Intersection de cercles
+                  - Translations en X et en Y de points
+                  - Intersection d'un cercle et d'une droite
+                  - Intersection  de deux droites … partir d'un point et
+                    du gisement de chacune d'elles .
+                  - Intersection de deux droites d‚finies par 2 points
+                  - Construction et intersection de paralelles
+                  - Construction  d'une  perpendiculaire … une  droite …
+                    partir d'un point ...
+		  - .....
+
+        Ordres de dessin :
+        ------------------
+                  - Tracer un ou plusieurs segments
+                  - Tracer des cercles ( de 4 facons diff‚rentes )
+                  - Tracer des arcs de cercles
+                  - Tracer une courbe … partir de diff‚rents points
+                  - Possibilit‚ de d‚finir le type de trait
+                  - Possibilit‚ de d‚finir l'‚paisseur du trait
+		  - raccordements droites cercles
+		  - ......
+
+        Ordres d'‚critures :
+        --------------------
+                  - Ecrire un texte avec justification … gauche
+                  - Ecrire un texte avec justification … droite
+                  - Ecrire un texte centr‚ sur un point
+		  - Ecrire un texte justifi‚ entre  deux points
+		  - D‚finir la taille des caractŠres en X et en Y
+		  - D‚finir l'‚cartement entre les caractŠres
+		  - Repr‚senter les caractŠres en italique
+		  - Espacement proportionnel
+
+        BibliothŠque de symboles et de caractŠres :
+        -------------------------------------------
+
+		  PYTHA-GRAPH  permet de m‚moriser des dessins	en  tant
+        que   symboles  .  Un  symbole   peut    ˆtre   ensuite  place …
+        n'importe  quel  moment  sur  un dessin avec  la  possibilit‚ de
+        modifier sa taille en X et en Y,  son orientation ... De la mˆme
+        facon, l'utilisateur peut cr‚er son propre  jeu  de  caractŠres.  
+	Les types de traits peuvent ˆtre d‚finis …  partir des 3 niveaux 
+	de base suivants :  type 1  fil de fer ( trait plein,tiret‚,...) 
+	type 2  type  2  avec  symboles ( marais,cimeti‚res,... ) type 3 
+	type 1 et 2 avec d‚calage transversal ( mur bahut,..)
+                         Pytha-Graph U910701 Page 1.4
+
+
+
+
+		  L'utilisateur   n'est   pas   limit‚   …   une   seule
+        bibliothŠque  .  Les  bureaux d'‚tudes ayant plusieurs activit‚s
+        peuvent ainsi cr‚er une bibliothŠque adapt‚e … chacune d'elle .
+        Les symboles  peuvent  ˆtre dessin‚s  aussi bien  en deux  ou en
+	trois dimensions.
+
+
+        Les blocs et les plans :
+        ------------------------
+
+		  Pour chaque dessin ,	PYTHA-GRAPH propose 98 blocs  de
+        98  plans  .  Les blocs et les plans sont  en quelque  sorte des
+        feuilles  calques que  l'on peut  superposer  afin d'obtenir  un
+        r‚sultat final. De cette facon est introduite une hi‚rarchie  en
+	niveaux : utilisation des plans en fonction des types de d‚tail.
+                  Les  manipulations des blocs et des plans se font trŠs
+        simplement … l'aide des fonctions suivantes :
+
+                  - Regroupement de tous les blocs dans un seul bloc
+                  - Regroupement de tous les plans dans un seul plan
+                  - Dessiner dans un bloc donn‚
+                  - Dessiner dans un plan donn‚
+                  - Copier un bloc dans un autre bloc
+                  - Copier un plan dans un autre plan
+                  - D‚placer  un bloc ( les coordonn‚es des  points sont
+                    automatiquement modifi‚es )
+                  - D‚placer  un  plan ( les coordonn‚es des points sont
+                    automatiquement modifi‚es )
+                  - S‚lectionner la visualisation d'un bloc donn‚
+                  - S‚lectionner la visualisation d'un plan donn‚
+
+                  Il  est … noter qu'il est possible de dessiner dans un
+        bloc ou un plan donn‚ tout en visualisant un autre  bloc ou plan
+	… l'‚cran .
+
+	Pr‚cision des calculs :
+        -----------------------
+
+                  Les  calculs  sont  d'une  trŠs grande pr‚cision aussi
+        bien sur des distances de plusieurs kilomŠtres que de l'ordre du
+        micron . Les  donn‚es  peuvent  ˆtre entr‚es  avec  14  chiffres
+        significatifs .
+
+	Des fonctions proches de la C.A.O. :
+        ------------------------------------
+
+		  PYTHA-GRAPH  en plus des fonctions de calcul de points
+        vous propose :
+
+		  - Le calcul des coordonn‚es polaires entre deux points
+                  - Le calcul des surfaces
+                  - Les cotations automatiques ...
+                         Pytha-Graph U910701 Page 1.5
+
+
+
+		  PYTHA-GRAPH propose une gestion de l'image ‚cran digne
+        des logiciels de C.A.O.  .Comme il est dit pr‚c‚demment, l'‚cran
+        est une fenˆtre que l'on peut d‚placer sur le dessin . Plusieurs
+        commandes permettent de d‚placer cette fenˆtre :
+
+                  - Translater la fenˆtre ‚cran dans n'importe    quelle
+		    direction .
+		  - Centrer l'image par rapport a un point  du  dessin
+		  - Centrer l'image par rapport … des X , Y de l'‚cran
+		  - Centrer l'image par d‚faut .
+		  - outil de digitalisation int‚gr‚
+
+                  Conjugu‚  avec  le  zoom d'une trŠs grande  puissance,
+        n'importe  quelle  partie  d'un dessin  peut  ˆtre  visualis‚e … 
+	n'importe quelle ‚chelle .
+
+
+	Le trois dimensions :
+        ---------------------
+
+		  PYTHA-GRAPH  propose	une fonction  axonom‚trique  sur
+        laquelle  on  peut  appliquer un coefficient afin  d'obtenir une
+        perspective selon n'importe quel angle .
+                  De  plus,  il est possible de permuter les axes deux …
+        deux  et  de  transformer le systŠme d'axe ( rotation  )  ce qui
+        permet  d'obtenir toutes les vues possibles d'un dessin en trois
+        dimensions .
+
+
+        Facilit‚ d'emploi :
+        -------------------
+
+                  Pendant l'ex‚cution de toutes les commandes, le dessin
+        reste visualis‚ … l'‚cran . Il est ainsi beaucoup plus facile de
+        comprendre l'effet de ces commandes sur le dessin .
+
+                  Les  op‚rations  de chargement,  sauvegarde  ...  sont
+        integr‚es au logiciel . Il n'est donc pas n‚cessaire d'apprendre
+        les commandes  du systeme  d'exploitation sous lequel fonctionne
+	PYTHA-GRAPH pour l'utiliser .
+
+		  PYTHA-GRAPH est accompagn‚ d'une documentation  claire
+        compos‚e de :
+
+		  - Un  manuel  de  l'utilisateur  :  des  exemples sont
+                    trait‚s  pas  …  pas  afin  de  se  familiariser aux
+                    commandes du logiciel .
+                  - Une liste des commandes par ordre alphab‚tique
+                  - Une liste des commandes par fonction
+                  - Une description des commandes par ordre alphab‚tique
+                  - Un  lexique  qui vous explique  les  quelques termes
+                    informatiques employ‚s dans le manuel .
+                         Pytha-Graph U910701 Page 1.6
+
+
+
+		  AVEC QUELS MATERIELS UTILISER PYTHA-GRAPH
+                  ------------------------------------------
+
+	          PYTHA-GRAPH  fonctionne  sur les  machines compatibles
+        IBM PC ‚quip‚es d'un coprocesseur math‚matique ,d'une m‚moire de
+	640 Kilo-octets , d'une unit‚ de disquettes , d'un disque dur et
+	d'une souris (MOUSE Microsoft par ex.). Le logiciel  est  charg‚
+	en m‚moire  dans  sa  totalit‚ , les acc‚s … la m‚moire de masse
+	sont r‚duites au minimum.
+
+                  La  table  …  digitaliser n'est  pas  obligatoire pour
+	utiliser PYTHA-GRAPH ,	 mais elle est recommand‚e pour certains
+        types d'activites .
+
+                  En ce qui concerne les sorties dessins, le choix de la
+        table  tracante  se fait en fonction du budget parmi les marques
+        les plus connues dans ce domaine :  BENSON, HOUSTON Instruments,
+        HEWLETT PACKARD, GOULD ...
+                         Pytha-Graph U910701 Page 1.7
+                         Pytha-Graph U910701 Page 2.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		      M A N U E L    U T I L I S A T E U R
+
+
+
+		                  CHAPITRE   2
+
+
+		             GUIDE D ' INSTALLATION
+                         Pytha-Graph U910701 Page 2.2
+
+
+
+	INSTALLATION DE VOTRE LOGICIEL DE DESSIN : PYTHA-GRAPH
+        ------------------------------------------------------
+
+	nota : si Pytha-Graph fait partie de la chaŒne  PYTHA , reportez
+	-vous aux consignes d'installation du systŠme complet.
+
+
+
+                 Vous venez d'acquerir le logiciel de dessin assiste par
+	micro-ordinateur  PYTHA-GRAPH  .  Celui-ci  se	trouve	sur  une
+        disquette,  mais  pour  l'utiliser  au mieux,  il ne  suffit pas
+        d'inserer  cette disquette dans le lecteur,  il  faut auparavant
+        effectuer quelques operations .
+
+
+                  Normalement,  votre  machine vous a ete livree prete a
+        l'emploi  de sorte que lorsque vous la mettez sous tension, elle
+        charge automatiquement le systeme d'exploitation en memoire . Le
+        systeme  d'exploitation  est un ensemble de  programmes qui vous
+        permet   d'utiliser  votre  micro-ordinateur .  Sans  un systeme
+        d'exploitation, un ordinateur ne sait rien faire.
+
+
+		  Si  ce  n'est pas le cas,  appelez votre  revendeur ou
+        consultez le manuel d'utilisation de votre micro-ordinateur pour
+        configurer votre disque dur .
+
+
+		  Nous vous proposons de travailler sur ce  meme  disque
+	dur  en ecrivant dessus le logiciel PYTHA-GRAPH et les	fichiers
+        dessins que vous creerez par la suite.  A cet effet,  inserez la
+	disquette PYTHA-GRAPH dans le lecteur de disquette .
+
+
+		  Votre  micro-ordinateur est en attente d'une commande,
+        le  curseur clignote devant le prompt MS-DOS, a savoir le nom de
+        l'unite de disque sur lequel nous travaillons actuellement suivi
+        du signe : ou > . Supposons que ce soit :
+
+                  C:>
+
+
+		  Frappez  alors  COPY A:*.*/V  puis  la  touche  ENTER.
+
+
+		  Votre micro-ordinateur  est alors en train  de  copier
+        tous les fichiers qui se trouvent sur la disquette sur le disque
+        dur . La copie terminee, le prompt reapparait .
+
+
+		  Tapez alors P65 suivi de ENTER pour lancer le logiciel
+        PYTHA-GRAPH . Le programme est alors charg‚ en memoire pour ˆtre
+	execute.  L'ecran s'efface , PYTHA-GRAPH  affiche  des	messages
+	jusqu'au prompt "::" votre logiciel est pret a etre utilise.
+                         Pytha-Graph U910701 Page 2.3
+
+
+
+                  Si  au  lieu de s'effacer,  il s'inscrit a l'ecran une
+        suite de caracteres dont des fleches ... , frappez simultanement
+        les touches Ctrl Break ou Ctrl C selon les machines pour obtenir
+        le  prompt C:> . Il nous reste  … faire  travailler votre  micro
+	-ordinateur  sous  norme ANSI pour pouvoir utiliser correctement
+	PYTHA-GRAPH .
+
+                  Tapez :
+
+                  EDLIN CONFIG.SYS suivi de ENTER
+
+                  Tapez : I suivi de ENTER
+
+                  Tapez : DEVICE = ANSI.SYS suivi de ENTER
+
+                  Frappez simultanement les touches Ctrl Break ou Ctrl C
+        selon  les machines puis Q suivi de ENTER .  Vous pouvez alors a
+        nouveau taper P65 suivi de ENTER et vous  reporter  au  chapitre
+	suivant.  Bien entendu, PYTHA-GRAPH est installe et vous n'aurez
+	plus a faire toutes ces operations  la  prochaine fois  que vous
+	l'utiliserez .
+
+        Reportez vous au GUIDE D'INITIATION .
+                         Pytha-Graph U910701 Page 2.4
+                         Pytha-Graph U910701 Page 3.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      M A N U E L    U T I L I S A T E U R
+
+
+
+                                 CHAPITRE   3
+
+
+                        LISTE ALPHABETIQUE DES FONCTIONS
+                         Pytha-Graph U910701 Page 3.2
+
+
+
+        AFBL      : Affecter un num‚ro de bloc au dessin actuellement en
+                    m‚moire.
+
+        AFFINUME  : Afficher les points en cr‚ation.
+
+        AFPL      : Affecter un num‚ro de plan au dessin actuellement en
+                    m‚moire.
+
+        AIDE      : Aider l'utilisateur.
+
+        ALIGNE    : Aligner des points.
+
+        ALPH      : D‚finir  la  valeur  de la tangente pour repr‚senter
+                    les  caractŠres  et  les  symboles  en  "ITALIQUE" :
+                    inclinaison sur l'axe OY du symbole.
+
+        ANG       : D‚finir   un   angle   par   rapport   …  l'axe  OX.
+
+        ANHA      : D‚finir l'angle des hachures.
+
+        ANNULE    : Annuler la derniŠre commande.
+
+        ARR       : D‚finir l'arrondi  de saisie des coordonn‚es en mode
+                    digitaliseur.
+
+        AXON      : Calculer les perspectives  axonom‚triques  du dessin
+                    en memoire.
+
+        BLOC      : Pr‚ciser le num‚ro de bloc auquel sont affect‚es les
+                    commandes de dessin ult‚rieures.
+
+        CALDIGIT  : Calage  du  digitalisateur.
+
+        CBLO      : Copier un bloc i dans un autre bloc j.
+
+        CCAR      : Cr‚er (dessiner) un caractŠre d'une fonte.
+
+        CENT      : Op‚rer un centrage de la fenˆtre-‚cran sur le dessin
+                    en cours.
+
+        CER1      : Dessiner un cercle d‚fini  par  son  centre  et  son
+                    rayon.
+
+        CER3      : Dessiner un cercle passant par 3 points.
+
+        CERD      : Dessiner un cercle ou un arc de cercle  en  tournant
+                    vers la droite.
+
+        CERG      : Dessiner un cercle ou  un  arc de cercle en tournant
+                    vers la gauche (sens trigonom‚trique).
+
+        CFTE      : Cr‚er  ou  completer  (ajouter, modifier) une FONTE.
+                         Pytha-Graph U910701 Page 3.3
+
+
+
+        CHAR      : Ex‚cuter  un  fichier de  commandes de type "batch":
+                    Charge et ex‚cute un fichier de dessin  (ASCII).
+
+        CHFT      : Changer de  fonte, stocker  l'ordre  dans  la  pile.
+
+        CI        : Calculer l'intersection de cercles.
+
+        CLS       : Effacer  les  ‚crans  alphanum‚rique  et  graphique.
+
+        CLS1      : Effacer l'‚cran alphanum‚rique.
+
+        CLS2      : Effacer    l'‚cran   graphique.
+
+        COEF      : D‚finir  la  valeur  d'un   co‚fficient  g‚n‚ral  de
+                    d‚formation des caractŠres  et des symboles utilis‚s
+                    ult‚rieurement.
+
+        CORZ      : Afficher  les  valeurs de la coordonn‚e Z auprŠs des
+                    points correspondants.
+
+        COTA      : D‚finir  la taille des ‚critures  pour  la  commande
+                    COTE.
+
+        COTE      : Cotations d'un dessin.
+
+        CPLA      : Copier  un  plan i dans un autre plan j.
+
+        CSYM      : Cr‚er (dessiner) un symbole d'une fonte.
+
+        DBLO      : D‚placer un bloc i.
+
+        DCAR      : D‚truire un caractŠre de la fonte.
+
+        DEBG      : Dessiner en pas … pas avec possibilit‚ d'annulation.
+
+        DEPECRAN  : D‚placer la fenˆtre ecran
+
+        DEPP      : D‚placer  les  ‚critures  des  num‚ros  des  points.
+
+        DEPT      : D‚placer un texte.
+
+        DEPZ      : D‚placer les  ‚critures  des  cotes  Z  des  points.
+
+        DESS      : Ex‚cuter  le  dessin en  m‚moire  en  code  traceur.
+
+        DI        : Calculer les coordonn‚es polaires entre deux points.
+
+        DIG       : Mettre la table … digitaliser en  communication avec
+                    le programme.
+
+        DP        : Calculer  la  distance dans l'espace entre 2 points.
+                         Pytha-Graph U910701 Page 3.4
+
+
+
+        DPLA      : D‚placer un plan i .
+
+        DSYM      : D‚truire un symbole de la fonte.
+
+        DXF       : D‚finir  l'‚chelle , lissages, hachures ... dans  le
+                    fichier DXF.
+
+        DXY       : Saisir  des  points  en  XY  en  indiquant  transla-
+                    -tions en X et en Y par rapport au point pr‚c‚dent :
+                    d‚cumul‚es.
+
+        DXYZ      : Saisir  des  points en XYZ en indiquant les transla-
+                    - tions  en  X , en  Y  et en Z par rapport au point
+                    pr‚c‚dent : d‚cumul‚es en XYZ.
+
+        ECAR      : D‚finir l'‚cartement entre 2 caractŠres.
+
+        ECHXYZ    : Modifier les coordonn‚es  (XYZ)  de  V%.
+
+        ECRI      : Ex‚cuter ou non les ‚critures … l'‚cran.
+
+        ECRIZ     : Ex‚cuter ou  non  les  ‚critures  de  Z  …  l'‚cran.
+
+        EFFA      : Effacer  une  liste  de   segment.
+
+        EFFCERCL  : Effacer  une  liste  de   cercles.
+
+        EFFHACHU  : Effacer  une  liste  de  hachures.
+
+        EFFLISSA  : Effacer  un lissage.
+
+        EFFTEXTE  : Effacer  un   texte.
+
+        EMAR      : D‚finir la valeur de l'espacement entre les  marques
+                    d'une fenˆtre appos‚e sur un dessin.
+
+        EPT1      : D‚finir des types de traits ‚pais et/ou les utiliser
+
+        ESHA      : D‚finir l'espacement  des  hachures.
+
+        EXE       : Ex‚cuter  les  commandes  de  dessins   stock‚es  en
+                    m‚moire, sans effacage pr‚alable de l'‚cran.
+
+        EXEC      : Ex‚cuter les commandes de dessin stock‚es en m‚moire
+                    aprŠs un effacage de l'‚cran ( CLS ).
+
+        FILE      : Commande g‚n‚rale de gestion  de fichiers propres au
+                    logiciel.
+
+        FIN       : Quitter le logiciel.
+
+        FUTI      : Lister  la  table  des  fichiers  utilisateurs.
+
+        GD        : Implantation   en  gisement  et  en  distances.
+                         Pytha-Graph U910701 Page 3.5
+
+
+
+        GOMME     : Gommer  un  segment   d'une   liste.
+
+
+        GRIL      : Afficher une trame ( grille ) ‚cran.
+
+        GRMA      : Afficher  la  grille  et  les  marques ( valeurs des
+                    abcisses  et des  ordonn‚es ) des lignes, en systŠme
+                    ‚cran.
+
+        HACH      : Hachurer une liste donn‚e ou  la  liste  pr‚c‚dente.
+
+        HTXM      : Hauteur  des  textes  permettant  le  choix entre la
+                    fonte logicielle et le jeu de caractŠres du traceur.
+
+        HX        : D‚finir la taille en X des caractŠres  et  symboles.
+
+        HY        : D‚finir la taille en Y des caractŠres  et  symboles.
+
+        HZ        : D‚finir la taille suivant l'axe Z  des caractŠres et
+                    symboles utilis‚s ult‚rieument.
+
+        IC1       : Construire  l'intersection   d'une  droite  et  d'un
+                    cercle.
+
+        IC2       : Construire  l'intersection   d'une  droite  et  d'un
+                    cercle.
+
+        IG        : Calculer l'intersection de 2 droites  … partir  d'un
+                    point et du gisement de chacune d'elles.
+
+        IMPR      : Mettre   l'imprimante    en    fonction.
+
+        INTE      : Calculer l'intersection de deux droites.
+
+        INTPARAL  : Construction de l'intersection de  parallŠles … deux
+                    droites.
+
+        INUT      : Supprimer les points inutiles au dessin.
+
+        ISF1      : Implantation   de  surfaces  (triangle).
+
+        LC        : Lister  …  l'‚cran  les  coordonn‚es  des  points du
+                    dessin en memoire (en systŠme utilisateur).
+
+        LCAR      : Charger  en  m‚moire les ordres de dessin relatifs …
+                    un caractŠre de la fonte.
+
+        LCMD      : Sauver  un  dessin  en  code  ASCII, code  MCG, avec
+                    un en-tˆte constitu‚ par le fichier DEPART.P65.
+
+        LCOM      : Lister … l'‚cran les commandes du dessin en  m‚moire
+                    et les valeurs correspondantes.
+                         Pytha-Graph U910701 Page 3.6
+
+
+
+        LFXY      : R‚cuperer un fichier de points en X Y Z au niveau du
+                    systŠme d'exploitation.
+
+        LIMCER    : D‚finir  la  limite  des  centres  de  cercles.
+
+        LIS1      : Lissage : 1er arc non  dessin‚ ( 4 points minimum ).
+
+        LIS2      : Lissage : dernier arc non dessin‚(4 points minimum).
+
+        LIS3      : Lissage : 1er et dernier arcs non dessin‚s (4 points
+                    minimum).
+
+        LISS      : Lissage : tous  les  arcs  sont  dessin‚s ( 3 points
+                    minimum ).
+
+        LSTXYZ    : Donner la liste des  points  num‚rot‚s  de  i  …  j.
+
+        LSYM      : Charger en m‚moire les  ordres  de  dessin  relatifs
+                    … un symbole.
+
+        MARD      : D‚finir  une  fenˆtre  englobant tout ou partie d'un
+                    dessin, avec inscriptions de coordonn‚es  suivant un
+                    intervalle donn‚.
+
+        MARQ      : Afficher  en superposition … un dessin les "marques"
+                    c'est-…-dire  les valeurs en abcisse et ordonn‚e des
+                    lignes d'une trame (grille) de rep‚rage.
+
+        MASQUE    : Limiter   le  dessin  …  l'int‚rieur  de  la  liste.
+
+        MCAR      : Modifier  les  paramŠtres   de  repr‚sentation  d'un
+                    caractŠre de la fonte.
+
+        MESU      : Afficher … l'‚cran la distance parcourue par la mire
+                    par rapport  au  dernier  point valid‚, ainsi que DX
+                    et DY.
+
+        MIRE      : Dimensionner la taille de la mire  pour  utilisation
+                    du  digitaliseur  table  ou  clavier.
+
+        MOCL      : Effectuer  des  op‚rations  sur  les  mots-cl‚.
+
+        MSIZ      : Modifier  les  caract‚ristiques   des  symboles   et
+                    caractŠres d‚finies auparavant  dans  les  ordres de
+                    dessin.
+
+        MSYM      : Modifier  les  paramŠtres  de  repr‚sentation   d'un
+                    symbole  d'une  fonte.
+
+        NBDE      : D‚finir  le nombre  de d‚cimales  affich‚es dans  le
+                    r‚sultats  de  calculs  num‚riques.
+
+        NUMAUTO   : Bascule   permettant   de   num‚roter   les   points
+                    digitalis‚s … partir de ORIG, ou de leur affecter le
+                    num‚ro -3.
+                         Pytha-Graph U910701 Page 3.7
+
+
+
+        ORIG      : Fixer  le  point d'origine du num‚rotage automatique
+                    des  points.
+
+        ORTH      : Dessiner  en  systŠme  orthogonal ,c'est-…-dire avec
+                    des segments toujours parallŠles aux axes du systŠme
+                    utilisateur ( ou  …  45  degr‚s : diagonales ).
+
+        PA        : Construction   ou   intersection    de   parallŠles.
+
+        PADE      : Dessiner  une  ou  des parallŠle(s) … un ensemble de
+                    segments donn‚.
+
+        PARALLEL  : Construire   une   parallŠle   …   une   droite.
+
+        PAUSE     : Introduire  une pause entre deux commandes EXEC pour
+                    maintenir l'affichage.
+
+        PE        : Construire la perpendiculaire … une droite …  partir
+                    d'un point.
+
+        PERM      : Permuter  les  axes  deux  …  deux.
+
+        PI        : Calculer  l'intersection  des parallŠles … 2 droites
+
+        PLAN      : Pr‚ciser le num‚ro du plan auquel sont affect‚es les
+                    commandes de dessin ult‚rieures.
+
+        PLU       : D‚finir  la  couleur  de  la  plume  utilis‚e.
+
+        PLZ       : Donner  la  valeur par d‚faut du Z pour la saisie au
+                    clavier ou au digit de points.
+
+        POIN      : Faire apparaŒtre  les points et ‚ventuellement leurs
+                    num‚ros.
+
+        POINCORZ  : Faire apparaŒtre la coordonn‚e de Z.
+
+        PSYM      : Faire imprimer la liste  des  caractŠres et symboles
+                    de  la  fonte.
+
+        PURG      : Compresser  la  pile  des  commandes  de  dessin.
+
+        RAPX      : Tracer  les  lignes  de  rappel  suivant  les  X.
+
+        RAPY      : Tracer  les  lignes  de  rappel  suivant  les  Y.
+
+        RAYO      : D‚finir le rayon de la zone  de  recherche  pour  la
+                    saisie au digitaliseur.
+
+        RAZ       : Remettre  …  z‚ro  la  pile des commandes de dessin.
+
+        RCDR      : Calculer  un  raccordement  droites/cercle.
+
+        RCER      : Raccorder  des  segments  par  un arrondi ( conge ).
+                         Pytha-Graph U910701 Page 3.8
+
+
+
+        RECH      : D‚finir  la  rŠgle  d'‚chelle.
+
+        RECT      : Dessiner un rectangle en  d‚finissant  son coin  bas
+                    gauche et son coin haut droit.
+
+        REMA      : Fonction  nulle.
+
+        RENU      : Renum‚roter  les  points .
+
+        REPORT    : Mise en page automatique .
+
+        RESTZ     : Restaurer  l'‚criture  de  la  coordonn‚e  Z.
+
+        RZSF      : Remise … z‚ro des  totaliseurs  de  surfaces.
+
+        SAIS      : Autoriser la saisie des points en mode digitaliseur.
+
+        SAUVEDES  : Sauver le dessin en ASCII,code MCG, dans le systŠme.
+
+        SAUVEDXF  : Sauver le dessin pour le module P22 : transfo en DXF
+                    ( AUTOCAD ).
+
+        SAUVEXYZ  : Sauver les num‚ros (XYZ) en ASCII, dans le  systŠme.
+
+        SBLO      : S‚lectionner  un  ou  plusieurs  blocs.
+
+        SD        : Construire  un  point, lanc‚  …  partir  d'un  autre
+                    point.
+
+        SEGM      : Tracer  un  (des)  segment(s).
+
+        SF        : Calculer des surfaces.
+
+        SIZT      : Indiquer  les  caract‚ristiques  de tailles et forme
+                    des symboles et caractŠres utilis‚s.
+
+        SL        : Calcul de surfaces avec r‚sultats sur liste r‚duite.
+
+        SOURIS    : Mettre la  souris  sur  ON  ou  sur  OFF  pour  P65.
+
+        SP        : Calcul  de surfaces avec  r‚sultats sur  liste  avec
+                    compl‚mentaire
+
+        SPLA      : S‚lectionner un ou plusieurs plans.
+
+        ST        : Effectuer   des  calculs  en  coordonn‚es  polaires.
+
+        STAT      : Donner  l'‚tat  de  l'occupation  m‚moire.
+
+        SUPP      : Supprimer  le  point  d‚signe.
+
+        SUPZ      : Suprimer l'‚criture de Z  sur  le  dessin.
+                         Pytha-Graph U910701 Page 3.9
+
+
+
+
+        SYMB      : S‚lectionner les symboles  …  repr‚senter … un (des)
+                    point(s) de SEGM ( ou de LISS ).
+
+        SYSORI    : Permettre  de  retourner  au  systŠme  XY  original.
+
+        TALUS     : Dessiner  des  talus.
+
+        TEMPS     : Temps d'ex‚cution de la derniŠre commande EXE, EXEC,
+                    CENT ...
+
+        TEXC      : Inscrire un texte dans un dessin, avec justification
+                    par rapport … son centre.
+
+        TEXD      : Inscrire un texte dans un dessin, avec justification
+                    … droite.
+
+        TEXG      : Inscrire un texte dans un dessin ,avec justification
+                    … gauche.
+
+        TEXJ      : Justifier  un  texte  entre deux points.
+
+        TF        : Effectuer  une  transformation  du  systŠme  d'axes.
+
+        TFIX      : Effectuer  une  transformation du systŠme d'axe pour
+                    affichage ‚cran (ou autre).
+
+        TFXYGE    : Permet de recaler un plan  sur  des  points  connus.
+
+        TGC       : Construire le point de tangence d'une  droite  …  un
+                    cercle.
+
+        TITRE     : Introduction d'un titre.
+
+        TRAI      : D‚finir  et/ou  utiliser  un  type de trait plein ou
+                    pointill‚.
+
+        TRAI2     : D‚finir des traits complexes.
+
+        TRAI3     : D‚finir un trait complexe compos‚  de TRAI et TRAI2.
+
+        TRLXYZ    : Translater  les  points  d'une  valeur   finie.
+
+        TYPE      : Lister  …  la  visu  le contenu  d'un  fichier.
+
+        UANG      : D‚finir l'unit‚ de mesure des  angles  desir‚e.
+
+        UCARSYM   : D‚finir la taille de la grille pour les fontes.
+
+        VERSION   : Afficher le num‚ro de version du programme.
+
+        VISU      : Mettre  l'affichage  ‚cran   en   fonction.
+                         Pytha-Graph U910701 Page 3.10
+
+
+
+
+        XY        : Saisir des points  en coordonn‚es  X Y  au  clavier.
+
+        XYZ       : Saisir des points en coordonn‚es  X Y Z au  clavier.
+
+        Z100CENT  : Centrer l'image sur  un nouveau  point en  modifiant
+                    l'‚chelle.
+
+        Z10CENT   : Centrer l'image sur  un nouveau  point en  modifiant
+                    l'‚chelle.
+
+        ZMF       : Faire un zoom ‚cran en pointant le coin  bas  gauche
+                    et le coin haut droit.
+
+        ZOOM      : Modifier  l'‚chelle  de repr‚sentation d'un dessin …
+                    l'‚chelle.
+
+        ZOOM10    : Changer l'echelle en X et en Y.
+
+        $DDE      : D‚truire un fichier de type dessin.
+
+        $DFO      : D‚truire un fichier de type  fonte.
+
+        $DPR      : D‚truire un fichier de type proc‚dure.
+
+        $DXY      : D‚truire un fichier de type  coordonn‚es  X  Y  (Z).
+
+        $LCA      : Charger  en  m‚moire  un  fichier  de type proc‚dure
+                    " cadre ".
+
+        $LDE      : Charger  en  m‚moire  un  fichier  de  type  dessin.
+
+        $LFO      : Charger  en  m‚moire  un  fichier  de  type   fonte.
+
+        $LPR      : Charger en m‚moire un  fichier  de  type  proc‚dure.
+
+        $LXY      : Charger en m‚moire  un fichier  de type  coordonn‚es
+                    XY(Z).
+
+        $SDE      : Sauvegarder  le  dessin pr‚sent en  m‚moire  dans un
+                    fichier  de  type  dessin.
+
+        $SFO      : Sauvegarder  la fonte  en cours  dans un  fichier de
+                    type  fonte.
+
+        $SPR      : Sauvegarder sur disquette ou sur disque le dessin en
+                    m‚moire sous forme de fichier proc‚dure.
+
+        $SXY      : Sauvegarder  les  coordonn‚es  du dessin  en m‚moire
+                    dans un fichier de type coordonn‚es XY(Z).
+
+        $ZER      : Red‚marrer  " …  chaud "  le  logiciel de graphisme.
+                         Pytha-Graph U910701 Page 3.11
+                         Pytha-Graph U910701 Page 4.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       M A N U E L     U T I L I S A T E U R
+
+
+
+
+
+                                   CHAPITRE   4
+
+
+                      REPERTOIRE DES FONCTIONS PAR ACTIVITE
+                         Pytha-Graph U910701 Page 4.2
+
+
+
+                1/ SAISIR DES POINTS
+
+
+        XY        : Saisir des points  en coordonn‚es  X Y  au  clavier.
+        XYZ       : Saisir des points en coordonn‚es  X Y Z au  clavier.
+        DXY       : Saisir  des  points  en  XY  en  indiquant  transla-
+                    -tions en X et en Y par rapport au point pr‚c‚dent :
+                    d‚cumul‚es.
+        DXYZ      : Saisir  des  points en XYZ en indiquant les transla-
+                    - tions  en  X , en  Y  et en Z par rapport au point
+                    pr‚c‚dent : d‚cumul‚es en XYZ.
+        PLZ       : Donner  la  valeur par d‚faut du Z pour la saisie au
+                    clavier ou au digit de points.
+        POIN      : Faire apparaŒtre  les points et ‚ventuellement leurs
+                    num‚ros.
+
+
+
+
+                2/ DESSINER
+
+
+        CER1      : Dessiner un cercle d‚fini  par  son  centre  et  son
+                    rayon.
+        CER3      : Dessiner un cercle passant par 3 points.
+        CERD      : Dessiner un cercle ou un arc de cercle  en  tournant
+                    vers la droite.
+        CERG      : Dessiner un cercle ou  un  arc de cercle en tournant
+                    vers la gauche (sens trigonom‚trique).
+        HACH      : Hachurer une liste donn‚e ou  la  liste  pr‚c‚dente.
+        IC1       : Construire  l'intersection   d'une  droite  et  d'un
+                    cercle.
+        IC2       : Construire  l'intersection   d'une  droite  et  d'un
+                    cercle.
+        INTPARAL  : Construction de l'intersection de  parallŠles … deux
+                    droites.
+        ISF1      : Implantation   de  surfaces  (triangle).
+        LIS1      : Lissage : 1er arc non  dessin‚ ( 4 points minimum ).
+        LIS2      : Lissage : dernier arc non dessin‚(4 points minimum).
+        LIS3      : Lissage : 1er et dernier arcs non dessin‚s (4 points
+                    minimum).
+        LISS      : Lissage : tous  les  arcs  sont  dessin‚s ( 3 points
+                    minimum ).
+        ORTH      : Dessiner  en  systŠme  orthogonal ,c'est-…-dire avec
+                    des segments toujours parallŠles aux axes du systŠme
+                    utilisateur ( ou  …  45  degr‚s : diagonales ).
+        PA        : Construction   ou   intersection    de   parallŠles.
+        PADE      : Dessiner  une  ou  des parallŠle(s) … un ensemble de
+                    segments donn‚.
+        PARALLEL  : Construire   une   parallŠle   …   une   droite.
+        PE        : Construire la perpendiculaire … une droite …  partir
+                    d'un point.
+        PLU       : D‚finir  la  couleur  de  la  plume  utilis‚e.
+                         Pytha-Graph U910701 Page 4.3
+
+
+
+
+        POIN      : Faire apparaŒtre  les points et ‚ventuellement leurs
+                    num‚ros.
+        RAPX      : Tracer  les  lignes  de  rappel  suivant  les  X.
+        RAPY      : Tracer  les  lignes  de  rappel  suivant  les  Y.
+        RCER      : Raccorder  des  segments  par  un arrondi ( conge ).
+        RECT      : Dessiner un rectangle en  d‚finissant  son coin  bas
+                    gauche et son coin haut droit.
+        SD        : Construire  un  point, lanc‚  …  partir  d'un  autre
+                    point.
+        SEGM      : Tracer  un  (des)  segment(s).
+        TALUS     : Dessiner  des  talus.
+        TGC       : Construire le point de tangence d'une  droite  …  un
+                    cercle.
+        TRAI      : D‚finir  et/ou  utiliser  un  type de trait plein ou
+                    pointill‚.
+        TRAI2     : D‚finir des traits complexes.
+        TRAI3     : D‚finir un trait complexe compos‚  de TRAI et TRAI2.
+
+
+
+
+
+                3/ UTILISER LA SYMBOLIQUE
+
+
+        ALPH      : D‚finir  la  valeur  de la tangente pour repr‚senter
+                    les  caractŠres  et  les  symboles  en  "ITALIQUE" :
+                    inclinaison sur l'axe OY du symbole.
+        ANG       : D‚finir   un   angle   par   rapport   …  l'axe  OX.
+        EPT1      : D‚finir des types de traits ‚pais et/ou les utiliser
+        HX        : D‚finir la taille en X des caractŠres  et  symboles.
+        HY        : D‚finir la taille en Y des caractŠres  et  symboles.
+        HZ        : D‚finir la taille suivant l'axe Z  des caractŠres et
+                    symboles utilis‚s ult‚rieument.
+        LSYM      : Charger en m‚moire les  ordres  de  dessin  relatifs
+                    … un symbole.
+        MSYM      : Modifier  les  paramŠtres  de  repr‚sentation   d'un
+                    symbole  d'une  fonte.
+        PSYM      : Faire imprimer la liste  des  caractŠres et symboles
+        MSIZ      : Modifier  les  caract‚ristiques   des  symboles   et
+                    caractŠres d‚finies auparavant  dans  les  ordres de
+                    dessin.
+        PLU       : D‚finir  la  couleur  de  la  plume  utilis‚e.
+        PSYM      : Faire imprimer la liste  des  caractŠres et symboles
+        SIZT      : Indiquer  les  caract‚ristiques  de tailles et forme
+                    des symboles et caractŠres utilis‚s.
+        SYMB      : S‚lectionner les symboles  …  repr‚senter … un (des)
+                    point(s) de SEGM ( ou de LISS ).
+        TRAI      : D‚finir  et/ou  utiliser  un  type de trait plein ou
+                    pointill‚.
+        TRAI2     : D‚finir des traits complexes.
+        TRAI3     : D‚finir un trait complexe compos‚  de TRAI et TRAI2.
+                         Pytha-Graph U910701 Page 4.4
+
+
+
+
+                4/ ECRIRE
+
+
+        ALPH      : D‚finir  la  valeur  de la tangente pour repr‚senter
+                    les  caractŠres  et  les  symboles  en  "ITALIQUE" :
+                    inclinaison sur l'axe OY du symbole.
+        ANG       : D‚finir   un   angle   par   rapport   …  l'axe  OX.
+        COEF      : D‚finir  la  valeur  d'un   co‚fficient  g‚n‚ral  de
+                    d‚formation des caractŠres  et des symboles utilis‚s
+                    ult‚rieurement.
+        DEPT      : D‚placer un texte.
+        ECAR      : D‚finir l'‚cartement entre 2 caractŠres.
+        ECRI      : Ex‚cuter ou non les ‚critures … l'‚cran.
+        ECRIZ     : Ex‚cuter ou  non  les  ‚critures  de  Z  …  l'‚cran.
+        EPT1      : D‚finir des types de traits ‚pais et/ou les utiliser
+        HX        : D‚finir la taille en X des caractŠres  et  symboles.
+        HY        : D‚finir la taille en Y des caractŠres  et  symboles.
+        HZ        : D‚finir la taille suivant l'axe Z  des caractŠres et
+                    symboles utilis‚s ult‚rieument.
+        MCAR      : Modifier  les  paramŠtres   de  repr‚sentation  d'un
+                    caractŠre de la fonte.
+        MSIZ      : Modifier  les  caract‚ristiques   des  symboles   et
+                    caractŠres d‚finies auparavant  dans  les  ordres de
+                    dessin.
+        PLU       : D‚finir  la  couleur  de  la  plume  utilis‚e.
+        RESTZ     : Restaurer  l'‚criture  de  la  coordonn‚e  Z.
+        SIZT      : Indiquer  les  caract‚ristiques  de tailles et forme
+        SUPZ      : Suprimer l'‚criture de Z  sur  le  dessin.
+        TEXC      : Inscrire un texte dans un dessin, avec justification
+                    par rapport … son centre.
+        TEXD      : Inscrire un texte dans un dessin, avec justification
+                    … droite.
+        TEXG      : Inscrire un texte dans un dessin ,avec justification
+                    … gauche.
+        TEXJ      : Justifier  un  texte  entre deux points.
+        TRAI      : D‚finir  et/ou  utiliser  un  type de trait plein ou
+                    pointill‚.
+        TRAI2     : D‚finir des traits complexes.
+        TRAI3     : D‚finir un trait complexe compos‚  de TRAI et TRAI2.
+
+
+
+
+
+
+                5/ DEFINIR LES ATTRIBUTS GRAPHIQUES
+
+
+        ALPH      : D‚finir  la  valeur  de la tangente pour repr‚senter
+                    les  caractŠres  et  les  symboles  en  "ITALIQUE" :
+                    inclinaison sur l'axe OY du symbole.
+        ANG       : D‚finir   un   angle   par   rapport   …  l'axe  OX.
+        ANHA      : D‚finir l'angle des hachures.
+                         Pytha-Graph U910701 Page 4.5
+
+
+
+        COEF      : D‚finir  la  valeur  d'un   co‚fficient  g‚n‚ral  de
+                    d‚formation des caractŠres  et des symboles utilis‚s
+                    ult‚rieurement.
+        COTA      : D‚finir  la taille des ‚critures  pour  la  commande
+                    COTE.
+        DXF       : D‚finir  l'‚chelle , lissages, hachures ... dans  le
+                    fichier DXF.
+        ECAR      : D‚finir l'‚cartement entre 2 caractŠres.
+        ECHXYZ    : Modifier les coordonn‚es  (XYZ)  de  V%.
+        EPT1      : D‚finir des types de traits ‚pais et/ou les utiliser
+        ESHA      : D‚finir l'espacement  des  hachures.
+        HX        : D‚finir la taille en X des caractŠres  et  symboles.
+        HY        : D‚finir la taille en Y des caractŠres  et  symboles.
+        HZ        : D‚finir la taille suivant l'axe Z  des caractŠres et
+                    symboles utilis‚s ult‚rieument.
+        MARD      : D‚finir  une  fenˆtre  englobant tout ou partie d'un
+                    dessin, avec inscriptions de coordonn‚es  suivant un
+                    intervalle donn‚.
+        PLU       : D‚finir  la  couleur  de  la  plume  utilis‚e.
+        RECH      : D‚finir  la  rŠgle  d'‚chelle.
+        RCER      : Raccorder  des  segments  par  un arrondi ( conge ).
+        TRAI      : D‚finir  et/ou  utiliser  un  type de trait plein ou
+                    pointill‚.
+        TRAI2     : D‚finir des traits complexes.
+        TRAI3     : D‚finir un trait complexe compos‚  de TRAI et TRAI2.
+        UANG      : D‚finir l'unit‚ de mesure des  angles  desir‚e.
+
+
+
+
+
+
+
+                6/ DIGITALISEUR
+
+
+        ARR       : D‚finir l'arrondi  de saisie des coordonn‚es en mode
+                    digitaliseur.
+        CALDIGIT  : Calage  du  digitalisateur.
+        DIG       : Mettre la table … digitaliser en  communication avec
+                    le programme.
+        MESU      : Afficher … l'‚cran la distance parcourue par la mire
+                    par rapport  au  dernier  point valid‚, ainsi que DX
+                    et DY.
+        MIRE      : Dimensionner la taille de la mire  pour  utilisation
+                    du  digitaliseur  table  ou  clavier.
+        MOCL      : Effectuer  des  op‚rations  sur  les  mots-cl‚.
+        NUMAUTO   : Bascule   permettant   de   num‚roter   les   points
+                    digitalis‚s … partir de ORIG, ou de leur affecter le
+                    num‚ro -3.
+        RAYO      : D‚finir le rayon de la zone  de  recherche  pour  la
+                    saisie au digitaliseur.
+        TFXYGE    : Permet de recaler un plan  sur  des  points  connus.
+                         Pytha-Graph U910701 Page 4.6
+
+
+
+
+                7/ EFFACER
+
+
+        DEBG      : Dessiner en pas … pas avec possibilit‚ d'annulation.
+        EFFA      : Effacer  une  liste  de   segment.
+        EFFCERCL  : Effacer  une  liste  de   cercles.
+        EFFHACHU  : Effacer  une  liste  de  hachures.
+        EFFLISSA  : Effacer  un lissage.
+        EFFTEXTE  : Effacer  un   texte.
+        GOMME     : Gommer  un  segment  d'une  liste.
+
+
+
+                8/ MANIPULER L'IMAGE ECRAN
+
+
+        AFFINUME  : Afficher les points en cr‚ation.
+        CENT      : Op‚rer un centrage de la fenˆtre-‚cran sur le dessin
+                    en cours.
+        CLS       : Effacer  les  ‚crans  alphanum‚rique  et  graphique.
+        CLS1      : Effacer l'‚cran alphanum‚rique.
+        CLS2      : Effacer    l'‚cran   graphique.
+        DEPECRAN  : D‚placer la fenˆtre ecran
+        EXE       : Ex‚cuter  les  commandes  de  dessins   stock‚es  en
+                    m‚moire, sans effacage pr‚alable de l'‚cran.
+        EXEC      : Ex‚cuter les commandes de dessin stock‚es en m‚moire
+                    aprŠs un effacage de l'‚cran ( CLS ).
+        GRIL      : Afficher une trame ( grille ) ‚cran.
+        GRMA      : Afficher  la  grille  et  les  marques ( valeurs des
+                    abcisses  et des  ordonn‚es ) des lignes, en systŠme
+                    ‚cran.
+        MARQ      : Afficher  en superposition … un dessin les "marques"
+                    c'est-…-dire  les valeurs en abcisse et ordonn‚e des
+                    lignes d'une trame (grille) de rep‚rage.
+        MIRE      : Dimensionner la taille de la mire  pour  utilisation
+                    du  digitaliseur  table  ou  clavier.
+        NUMAUTO   : Bascule   permettant   de   num‚roter   les   points
+                    digitalis‚s … partir de ORIG, ou de leur affecter le
+                    num‚ro -3.
+        PAUSE     : Introduire  une pause entre deux commandes EXEC pour
+                    maintenir l'affichage.
+        TEMPS     : Temps d'ex‚cution de la derniŠre commande EXE, EXEC,
+                    CENT ...
+        VISU      : Mettre  l'affichage  ‚cran   en   fonction.
+        Z100CENT  : Centrer l'image sur  un nouveau  point en  modifiant
+                    l'‚chelle.
+        Z10CENT   : Centrer l'image sur  un nouveau  point en  modifiant
+                    l'‚chelle.
+        ZMF       : Faire un zoom ‚cran en pointant le coin  bas  gauche
+                    et le coin haut droit.
+        ZOOM      : Modifier  l'‚chelle  de repr‚sentation d'un dessin …
+                    l'‚chelle.
+        ZOOM10    : Changer l'echelle en X et en Y.
+                         Pytha-Graph U910701 Page 4.7
+
+
+
+                9/ MANIPULER LES POINTS
+
+
+        ALIGNE    : Aligner des points.
+        CORZ      : Afficher  les  valeurs de la coordonn‚e Z auprŠs des
+                    points correspondants.
+        DEPP      : D‚placer  les  ‚critures  des  num‚ros  des  points.
+        DEPZ      : D‚placer les  ‚critures  des  cotes  Z  des  points.
+        ECRIZ     : Ex‚cuter ou  non  les  ‚critures  de  Z  …  l'‚cran.
+        INUT      : Supprimer les points inutiles au dessin.
+        LC        : Lister  …  l'‚cran  les  coordonn‚es  des  points du
+                    dessin en memoire (en systŠme utilisateur).
+        LSTXYZ    : Donner la liste des  points  num‚rot‚s  de  i  …  j.
+        NUMAUTO   : Bascule   permettant   de   num‚roter   les   points
+                    digitalis‚s … partir de ORIG, ou de leur affecter le
+                    num‚ro -3.
+        ORIG      : Fixer  le  point d'origine du num‚rotage automatique
+                    des  points.
+        PLZ       : Donner  la  valeur par d‚faut du Z pour la saisie au
+                    clavier ou au digit de points.
+        POIN      : Faire apparaŒtre  les points et ‚ventuellement leurs
+                    num‚ros.
+        POINCORZ  : Faire apparaŒtre la coordonn‚e de Z.
+        RENU      : Renum‚roter  les  points .
+        RESTZ     : Restaurer  l'‚criture  de  la  coordonn‚e  Z.
+        SUPP      : Supprimer  le  point  d‚signe.
+        SUPZ      : Suprimer l'‚criture de Z  sur  le  dessin.
+        TRLXYZ    : Translater  les  points  d'une  valeur   finie.
+
+
+
+
+                10/ MANIPULER LES FICHIERS UTILISATEUR
+
+
+        CHAR      : Ex‚cuter  un  fichier de  commandes de type "batch":
+                    Charge et ex‚cute un fichier de dessin  (ASCII).
+        DXF       : D‚finir  l'‚chelle , lissages, hachures ... dans  le
+                    fichier DXF.
+        FILE      : Commande g‚n‚rale de gestion  de fichiers propres au
+                    logiciel.
+        FUTI      : Lister  la  table  des  fichiers  utilisateurs.
+        IMPR      : Mettre   l'imprimante    en    fonction.
+        LCMD      : Sauver  un  dessin  en  code  ASCII, code  MCG, avec
+                    un en-tˆte constitu‚ par le fichier DEPART.P65.
+        LFXY      : R‚cuperer un fichier de points en X Y Z au niveau du
+                    systŠme d'exploitation.
+        REMA      : Fonction  nulle.
+        SAUVEDES  : Sauver le dessin en ASCII,code MCG, dans le systŠme.
+        SAUVEDXF  : Sauver le dessin pour le module P22 : transfo en DXF
+                    ( AUTOCAD ).
+        SAUVEXYZ  : Sauver les num‚ros (XYZ) en ASCII, dans le  systŠme.
+        TYPE      : Lister  …  la  visu  le contenu  d'un  fichier.
+                         Pytha-Graph U910701 Page 4.8
+
+
+
+        $DDE      : D‚truire un fichier de type dessin.
+        $DFO      : D‚truire un fichier de type  fonte.
+        $DPR      : D‚truire un fichier de type proc‚dure.
+        $DXY      : D‚truire un fichier de type  coordonn‚es  X  Y  (Z).
+        $LCA      : Charger  en  m‚moire  un  fichier  de type proc‚dure
+                    " cadre ".
+        $LDE      : Charger  en  m‚moire  un  fichier  de  type  dessin.
+        $LFO      : Charger  en  m‚moire  un  fichier  de  type   fonte.
+        $LPR      : Charger en m‚moire un  fichier  de  type  proc‚dure.
+        $LXY      : Charger en m‚moire  un fichier  de type  coordonn‚es
+                    XY(Z).
+        $SDE      : Sauvegarder  le  dessin pr‚sent en  m‚moire  dans un
+                    fichier  de  type  dessin.
+        $SFO      : Sauvegarder  la fonte  en cours  dans un  fichier de
+                    type  fonte.
+        $SPR      : Sauvegarder sur disquette ou sur disque le dessin en
+                    m‚moire sous forme de fichier proc‚dure.
+        $SXY      : Sauvegarder  les  coordonn‚es  du dessin  en m‚moire
+                    dans un fichier de type coordonn‚es XY(Z).
+
+
+
+
+                11/ MANIPULER BLOCS ET PLANS
+
+
+        AFBL      : Affecter un num‚ro de bloc au dessin actuellement en
+                    m‚moire.
+        AFPL      : Affecter un num‚ro de plan au dessin actuellement en
+                    m‚moire.
+        BLOC      : Pr‚ciser le num‚ro de bloc auquel sont affect‚es les
+                    commandes de dessin ult‚rieures.
+        CBLO      : Copier un bloc i dans un autre bloc j.
+        CPLA      : Copier  un  plan i dans un autre plan j.
+        DBLO      : D‚placer un bloc i.
+        DPLA      : D‚placer un plan i .
+        PLAN      : Pr‚ciser le num‚ro du plan auquel sont affect‚es les
+                    commandes de dessin ult‚rieures.
+        SBLO      : S‚lectionner  un  ou  plusieurs  blocs.
+        SPLA      : S‚lectionner un ou plusieurs plans.
+
+
+
+
+                12/ COMMANDES
+
+
+        AIDE      : Aider l'utilisateur.
+        ANNULE    : Annuler la derniŠre commande.
+        DEBG      : Dessiner en pas … pas avec possibilit‚ d'annulation.
+        ECRI      : Ex‚cuter ou non les ‚critures … l'‚cran.
+        FIN       : Quitter le logiciel.
+        LCOM      : Lister … l'‚cran les commandes du dessin en  m‚moire
+                    et les valeurs correspondantes.
+                         Pytha-Graph U910701 Page 4.9
+
+
+
+        MASQUE    : Limiter   le  dessin  …  l'int‚rieur  de  la  liste.
+        NBDE      : D‚finir  le nombre  de d‚cimales  affich‚es dans  le
+                    r‚sultats  de  calculs  num‚riques.
+        PURG      : Compresser  la  pile  des  commandes  de  dessin.
+        RAZ       : Remettre  …  z‚ro  la  pile des commandes de dessin.
+        REPORT    : Mise en page automatique .
+        SAIS      : Autoriser la saisie des points en mode digitaliseur.
+        SOURIS    : Mettre la  souris  sur  ON  ou  sur  OFF  pour  P65.
+        STAT      : Donner  l'‚tat  de  l'occupation  m‚moire.
+        TITRE     : Introduction d'un titre.
+        UANG      : D‚finir l'unit‚ de mesure des  angles  desir‚e.
+        VERSION   : Afficher le num‚ro de version du programme.
+        $ZER      : Red‚marrer  " …  chaud "  le  logiciel de graphisme.
+
+
+
+
+                13/ FONCTIONS DE CALCUL
+
+
+        AXON      : Calculer les perspectives  axonom‚triques  du dessin
+                    en memoire.
+        CI        : Calculer l'intersection de cercles.
+        COTE      : Cotations d'un dessin.
+        DI        : Calculer les coordonn‚es polaires entre deux points.
+        DP        : Calculer  la  distance dans l'espace entre 2 points.
+        GD        : Implantation   en  gisement  et  en  distances.
+        IG        : Calculer l'intersection de 2 droites  … partir  d'un
+                    point et du gisement de chacune d'elles.
+        INTE      : Calculer l'intersection de deux droites.
+        LIMCER    : D‚finir  la  limite  des  centres  de  cercles.
+        MESU      : Afficher … l'‚cran la distance parcourue par la mire
+                    par rapport  au  dernier  point valid‚, ainsi que DX
+                    et DY.
+        NBDE      : D‚finir  le nombre  de d‚cimales  affich‚es dans  le
+                    r‚sultats  de  calculs  num‚riques.
+        PI        : Calculer  l'intersection  des parallŠles … 2 droites
+        RCDR      : Calculer  un  raccordement  droites/cercle.
+        RZSF      : Remise … z‚ro des  totaliseurs  de  surfaces.
+        SF        : Calculer des surfaces.
+        SL        : Calcul de surfaces avec r‚sultats sur liste r‚duite.
+        SP        : Calcul  de surfaces avec  r‚sultats sur  liste  avec
+                    compl‚mentaire
+        ST        : Effectuer   des  calculs  en  coordonn‚es  polaires.
+
+
+
+
+                14/ TRANSFORMER UN DESSIN
+
+
+        AXON      : Calculer les perspectives  axonom‚triques  du dessin
+                    en memoire.
+                         Pytha-Graph U910701 Page 4.10
+
+
+
+
+        ECHXYZ    : Modifier les coordonn‚es  (XYZ)  de  V%.
+        PERM      : Permuter  les  axes  deux  …  deux.
+        SYSORI    : Permettre  de  retourner  au  systŠme  XY  original.
+        TF        : Effectuer  une  transformation  du  systŠme  d'axes.
+        TFIX      : Effectuer  une  transformation du systŠme d'axe pour
+                    affichage ‚cran (ou autre).
+        TRLXYZ    : Translater  les  points  d'une  valeur   finie.
+
+
+
+
+                15/ CREER OU MODIFIER UNE FONTE (SYMBOLIQUE)
+
+
+        CCAR      : Cr‚er (dessiner) un caractŠre d'une fonte.
+        CFTE      : Cr‚er  ou  completer  (ajouter, modifier) une FONTE.
+        CHFT      : Changer de  fonte, stocker  l'ordre  dans  la  pile.
+        CSYM      : Cr‚er (dessiner) un symbole d'une fonte.
+        DCAR      : D‚truire un caractŠre de la fonte.
+        DSYM      : D‚truire un symbole de la fonte.
+        LCAR      : Charger  en  m‚moire les ordres de dessin relatifs …
+                    un caractŠre de la fonte.
+        LSYM      : Charger en m‚moire les  ordres  de  dessin  relatifs
+        MCAR      : Modifier  les  paramŠtres   de  repr‚sentation  d'un
+                    caractŠre de la fonte.
+        MSYM      : Modifier  les  paramŠtres  de  repr‚sentation   d'un
+                    symbole  d'une  fonte.
+        PSYM      : Faire imprimer la liste  des  caractŠres et symboles
+                    de  la  fonte.
+        RAZ       : Remettre  …  z‚ro  la  pile des commandes de dessin.
+        UCARSYM   : D‚finir la taille de la grille pour les fontes.
+
+
+
+
+                16/ EXECUTION SUR TABLE TRACANTE
+
+
+        EMAR      : D‚finir la valeur de l'espacement entre les  marques
+                    d'une fenˆtre appos‚e sur un dessin.
+        DESS      : Ex‚cuter  le  dessin en  m‚moire  en  code  traceur.
+        HTXM      : Hauteur  des  textes  permettant  le  choix entre la
+                    fonte logicielle et le jeu de caractŠres du traceur.
+        MARD      : D‚finir  une  fenˆtre  englobant tout ou partie d'un
+                    dessin, avec inscriptions de coordonn‚es  suivant un
+                    intervalle donn‚.
+                         Pytha-Graph U910701 Page 4.11
+                         Pytha-Graph U910701 Pages A.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		      M A N U E L    U T I L I S A T E U R
+
+
+
+		               A N N E X E      A
+
+
+		                    LEXIQUE
+                         Pytha-Graph U910701 Pages A.2
+
+
+
+
+				    LEXIQUE
+
+
+
+
+
+
+
+
+        ANSI    : Am‚rican National Standards  Institute . Cette organi-
+	          sation ‚tablit  des standards  pour  l'industrie, dont
+		  l'informatique . La plupart de ceux-ci sont   utilis‚s
+		  pour les  langages FORTRAN  dans lequel est   ‚crit le
+		  logiciel PYTHA-GRAPH dans sa majorit‚ et le COBOL.
+
+
+        ASCII   : Am‚rican  Standard  Code for Information  Interchange.
+		  Facon de coder les caractŠres la plus  r‚pandue,en vue
+                  de  transmettre des informations aux imprimantes, ou a
+                  d'autres ordinateurs .
+
+        BATCH   : on d‚signe par fichier "batch" une suite  de commandes
+	          r‚unies dans un fichier. Elles s'ex‚cuteront 	 lorsque
+		  le fichier sera appel‚ par un ordre sp‚cialis‚. Un fi-
+		  chier "batch" est cr‚e … l'‚diteur de texte.  Il  peut
+		  contenir  des commandes  du systŠme d'exploitation  ou
+		  d'un logiciel specialis‚ comme PYTHA-GRAPH.
+
+        BLOC    : un bloc, au sens PYTHA-GRAPH, peut se comparer  …  une
+		  chemise … l'interieur de laquelle  des  feuillets  (en
+		  nombre  plus ou moins grand) sont stock‚s : les plans.
+		  Le dossier final est un ensemble de blocs.
+
+        C.A.O.  : Conception Assist‚e par Ordinateur . C'est  la branche
+                  de l'informatique constitu‚e par toutes les aides … la
+                  conception  d'objets, …  la  conception spatiale, … l'
+                  ex‚cution de documents graphiques .
+
+	CHARGER	: Lire  sur  une disquette ou un disque des informations
+		  (donn‚es , programme...) et  les  transf‚rer  dans  la
+		  m‚moire  de  travail de l'ordinateur. En anglais: LOAD
+
+        DESSIN	: Au sens  PYTHA-GRAPH, un fichier de type dessin est un
+		  dossier  en  cours  d'‚laboration  ou  termin‚ , qui ,
+		  lorsqu'on le charge en memoire,efface les informations
+		  s'y trouvant auparavant (voir proc‚dure).
+
+        DIGITALISEUR : Organe d'entr‚e  de  donn‚es  constitu‚  par  une 
+		  table magn‚tique permettant, … l'aide d'un  curseur ou 
+		  avec une souris de communiquer  …  un  ordinateur  les 
+		  positions relatives de points , de suites  de  points, 
+		  et  par le fait les ‚l‚ments d'un plan .
+                         Pytha-Graph U910701 Pages A.3
+
+
+
+	DISQUE
+        DISQUETTE : M‚moires  magn‚tiques  utilis‚es  comme  support  de
+                  programmes  informatiques   ou  d'autres  informations
+                  ( fichiers ) . Il existe des disques durs ( Winchester
+                  Disk ) et  des  disques souples ( disquettes ou Floppy
+                  disk ) .
+
+        FICHIER	: Un fichier est un terme  g‚n‚ral  qui  d‚signe soit un
+		  ensemble  de  donn‚es, soit   un  programme , soit  un
+		  ensemble de commandes (par exemple suite des commandes
+		  PYTHA-GRAPH n‚c‚ssaires a l'ex‚cution d'un dessin),..,
+		  toutes  ces  informations ‚tant stock‚es sur disquette
+		  ou disque.
+
+        FILE    : mot anglais signifiant "fichier".
+
+        FONTE	: Terme d'imprimerie d‚signant l'ensemble des caractŠres
+		  alphab‚tiques et divers (autrefois en plomb) servant … 
+		  composer un  texte  en  vue  de  son  impression.  Par 
+		  extension  , d‚signera   l'ensemble   des   caractŠres 
+		  alphanum‚riques   acc‚ssibles  par  PYTHA-GRAPH, ainsi 
+		  que  la   bibliothŠque   de  symboles  ( ‚lectronique, 
+		  architecture, m‚canique,...) associ‚e.
+
+        FORTRAN : FORmula TRANscription, langage evolu‚ de programmation
+                  … l'usage scientifique .
+
+        HARD COPY : Reproduction de l'image affich‚e  …  l'‚cran sur une
+		  imprimante , soit  grace  …  une  touche  sp‚ciale  du 
+		  clavier, soit par fonction propre … un logiciel.
+
+        MODEM   : MOdulateur - DEModulateur . Code et d‚cod‚.
+		  l'information pour permettre les  liaisons  par  ligne
+		  t‚l‚phonique entre un terminal  ou un ordinateur et un
+		  autre ordinateur ‚loign‚ .
+
+        PLAN    : Au  sens  PYTHA-GRAPH, un plan est un feuillet faisant
+		  partie  integrante  d'une "chemise" (bloc) constituant
+		  elle mˆme une partie  d'un  dossier complet.
+		  Un bloc est compos‚ d'un ou plusieurs plans.
+
+        PROCEDURE : Au sens PYTHA-GRAPH, un  fichier de type "proc‚dure"
+		  est  un  dessin  qui, lorsqu'on le  charge en m‚moire,
+		  s'ajoute   aux   informations   d‚j…   pr‚sentes , par 
+		  opposition aux fichiers de type "dessin".
+
+	TABLE TRACANTE : Materiel de sortie permettant de visualiser les
+                  r‚sultats d'un travail de C.A.O.
+                         Pytha-Graph U910701 Pages A.4
+
+
+
+	SAUVEGARDER : M‚moriser  ( sauver )  sur  disquette ou disque le
+		  contenu   d'un   fichier   actuellement   en   m‚moire
+		  (donn‚es , instructions  de programme, instructions de
+		  dessin ,... )  pour   une  utilisation  ult‚rieure. En
+		  anglais : SAVE
+
+        STATUS	: Mot  anglais  designant d'une  maniŠre g‚n‚rale l'‚tat
+		  de l'occupation m‚moire de l'ordinateur.
+		  Par extension, d‚signera dans PYTHA-GRAPH l'occupation
+		  m‚moire par rapport aux maxima autoris‚s.
+
+        SYMBOLE	: Dessin m‚morise  dans une fonte  que l'on peut inclure
+	          sans restriction  de  nombre ou de dimensions  dans un
+		  dessin  courant : c'est  un  objet graphique , souvent
+		  employe dans  un type de repr‚sentation, qu'il est par
+		  consequent utile d'avoir defini et m‚morise … l'avance
+		  (ex: symboles en electronique, en architecture...).
+
+        VISU    : = console de visualisation = ecran.
+                         Pytha-Graph U910701 Pages B.1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		      M A N U E L    U T I L I S A T E U R
+
+
+
+		                A N N E X E    B
+
+
+		         TRANSFERT DES FICHIERS DESSIN
+                         Pytha-Graph U910701 Pages B.2
+
+
+
+                 TRANSFERTS   DES  FICHIERS  DESSIN  UTILISATEUR
+                           DE  DISQUETTE  A DISQUETTE
+
+
+
+
+
+
+
+	I/ GESTION DES FICHIERS DANS PYTHA-GRAPH:
+
+
+
+                  Cette gestion est faite … l'aide des commandes FILE et
+                  $SDE, $SPR, $LDE ...
+
+                  Pour sauvegarder un dessin, l'utilisateur lui attribu‚ 
+		  un    nom    alphanum‚rique  qui   est   m‚morise  par 
+		  PYTHA-GRAPH. On  obtient la liste de tous les fichiers  
+		  utilisateur avec  FUTI. Dans cette liste, remarquez la  
+		  derniŠre colonne:elle contient des nombres class‚s  en  
+		  ordre croissant.  Ces nombres correspondent au  num‚ro 
+		  d'enregistrement des fichiers.
+
+                       Exemple : sur disquette 1:
+
+                                      nom     type         numero
+
+                                      FONTE   FTE   ....... 1
+                                      DES1    DES   ... ... 2
+                                      DES2    DES   ... ... 4
+                                      PROCED  PRC   ... ... 5
+                                      COORD   XYZ   ... ... 8
+                                      FONT2   FTE   ... ... 9
+                                      GRAPHIX DES   ... ... 14
+
+
+        2/ GESTION DES FICHIERS PAR LE SYSTEME D'EXPLOITATION:
+
+
+
+		  Lorsqu'on sort de PYTHA-GRAPH,  on retourne au systeme
+                  de l'ordinateur.
+                  Si on fait  un inventaire  du contenu  de notre disque
+                  par  la  commande DIR , on ne  retrouve  pas les  noms
+                  alphanumeriques   donnes  aux  fichiers   dessin  sous
+		  PYTHA-GRAPH.
+                  En  fait,  ces  fichiers portent des noms de  la forme
+                  F0nn.P65   ou   "nn"   est  le  num‚ro   attribu‚  par
+		  PYTHA-GRAPH (num‚ro apparu dans la liste FUTI).
+
+
+                            Ex : F009.P65 correspond a FONT2
+                         Pytha-Graph U910701 Pages B.3
+
+
+
+
+	3/ TRANSFERER UN FICHIER DESSIN D'UNE DISQUETTE A UNE AUTRE.
+
+
+
+                  Imaginons   que   l'utilisateur  ait travaill‚  sur  2
+                  disquettes.  Chacune  contient des fichiers  de dessin
+                  differents.
+                                     Exemple:
+
+               Disquette 1                       Disquette 2
+
+               nom     type       numero         nom     type     numero
+
+               FONTE   FTE   ... ... 1           FONTE   FTE  ... ... 1
+               DES1    DES   ... ... 2           SCHEMA  DES  ... ... 3
+               DES2    DES   ... ... 4           PLAN1   DES  ... ... 5
+               PROCED  PRC   ... ... 5           AXONO   DES  ... ... 6
+               COORD   XYZ   ... ... 8           MAISON  PRC  ... ... 7
+               FONT2   FTE   ... ... 9
+               GRAPHIX DES   ... ... 14
+
+
+                  1/On souhaite copier le fichier PROCED de la disquette
+                  1 sur la disquette 2.Ce fichier porte le num‚ero 5 sur 
+		  sa  disquette : NOTER ce num‚ro  ( aprŠs  avoir  lanc‚ 
+		  PYTHA-GRAPH avec la disquette 1 et demander FUTI).
+
+		  2/ Sortir de PYTHA-GRAPH (FIN) et le  relancer avec la
+                  disquette 2.Demander FUTI: nous observons qu'il existe
+                  d‚j… un fichier No 5: PLAN1.Le fichier que nous allons
+                  cr‚er  sur cette disquette aura forc‚ment un autre nu-
+                  m‚ro.
+
+                  3/  Cr‚er  un  fichier fictif  destin‚  …  recevoir le
+                  fichier PROCED :
+                                      $SPR PROCED
+                  Cet ordre cr‚e un fichier de type proc‚dure. Avec $SDE
+                  on cr‚erait un fichier de type dessin.
+
+                  Ce  fichier PROCED contient en ce moment le dessin qui
+                  ‚tait en m‚moire (ou rien s'il n'y avait pas de dessin
+                  en cours). Par FUTI,nous voyons que PROCED est affect‚ 
+		  du  num‚ro 2:  PYTHA-GRAPH affect‚ la 1Šre place libre 
+		  dans  la  liste  des  fichiers  utilisateur au fichier 
+		  nouvellement cr‚e.  NOTER LE NUMERO correspondant … ce 
+		  nouveau fichier.  Sortir de PYTHA-GRAPH (FIN).
+
+                  4/ Ainsi , le  fichier  PROCED … le  num‚ro  5  sur la 
+		  disquette No 1 et le num‚ro 2  sur la disquette  No 2.  
+		  Sur  la disquette No 1, PROCED est rep‚r‚ par F005.P65 
+	          Sur  "     "         2, PROCED est rep‚r‚ par F002.P65 
+		  (fichier fictif).
+                         Pytha-Graph U910701 Pages B.4
+
+
+
+
+		  Placez la disquette No 1 dans la lecteur A: et la No 2
+                  dans le lecteur B:
+
+                  Nous   allons  copier  le  bon  fichier  PROCED sur le 
+		  fichier fictif de la disquette No 2 . Pour cela taper:
+
+                  COPY A:F005.P65 B:F002.P65/V  return
+
+                  Le bon fichier remplace le fictif sur la  disquette 2.
+		  Il reste …  relancer PYTHA-GRAPH  avec la disquette No 
+		  2 pour utiliser PROCED .
+
+
+
+
+
+        NOTA  :  L'exemple  est donn‚ pour un fichier de type Proc‚dure,
+        mais la m‚thode  reste la mˆme pour les autres types de fichiers
+        ( FTE, DES, XYZ ).
+
+        REMARQUE IMPORTANTE: Toujours conserver un fichier de type FONTE
+        ( au moins un ) sur sa disquette de travail,pour avoir un jeu de
+        caractŠres alphanum‚riques pour les  ‚critures dans les dessins.
+
+
+
+        CONCLUSION :
+                        Ce  transfert  n‚c‚ssite   une  s‚rie  d'actions 
+		  relativement  longue  mais  cette  m‚thode  assure  la 
+		  coh‚rence entre la  liste  des   fichiers  utilisateur 
+	          FUTI et le contenu  r‚el  de  la  disquette  et  ‚vite 
+	          l'‚crasement  intempestif  de fichiers diff‚rents mais 
+		  portant le mˆme num‚ro sur 2 disquettes diff‚rentes.
+                         Pytha-Graph U910701 Pages B.5

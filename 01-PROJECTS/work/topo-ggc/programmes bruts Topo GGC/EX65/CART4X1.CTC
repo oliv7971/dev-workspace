@@ -1,0 +1,206 @@
+#sauvedes V4.01
+##### initialisations
+#logo
+RAZ     	#remise a z‚ro des pointeurs : xyz , pile dessin , ...
+
+CHFT pol1	#charger la police 1
+affinume
+ecri
+#ecriz
+UANG		#unit‚ d'angle GRADES
+3
+SIZT 10 10 0 0 1	#hx=hy=10,ang=0,alph=0
+SYMB
+0
+ECAR
+1.05
+PLU
+4
+HZ
+10
+RCER
+0
+ESHA
+5
+ANHA
+50
+ORIG
+0
+NBDE
+2
+COTA
+2.0 2.0 0.
+TYCO
+1
+PLZ
+0
+#
+RAYO 2		# ecran modif
+rseg 1		# ecran new
+raligne 1.	# ecran new
+#
+rayodigit .40	# digit new
+rsegdigit .40   # digit new
+ralidigit .01	# digit new
+tolresol  0.01	#.10	# digit new
+#
+tolsurfaces 5.7 #
+tolsdigit   1.0	#
+tolcourbes 0.06 #
+#
+nbdz
+2
+ARR
+0.001
+MIRE
+64 64 3
+RECH
+1
+RTRG
+2
+HTXM
+2
+LIMCER
+200000
+ BLOC
+ 1
+PLAN inconnu
+ 1
+ TRAI
+ 1
+ trai2
+ 0
+ trai3
+ 0
+ EPT1
+ 0
+ EMAR
+ 50
+ SPLA
+
+ SBLO
+
+menu9 #afficher la page 1 du menu ecran
+mouse		# mouse en fonction apres l'execution des commandes
+#		# de depart.p65
+$ldeauto	# charger le dernier dessin sauve
+$sdeauto   120	# sauve auto frequence commandes et apres fin  vd=20 minutes
+#$sauvauto	# sauve dans temp%%%% apres fin si pas de $sde avant sortie
+masque -125 -44
+charvue		# dessiner la vue apres charge
+#bplumes	# dessin traceur dans l'ordre des plumes
+endinit	##### fin en tˆte
+XYZ
+ 9000001 0.0000 0.0000 0.0000 0 0 0 0
+ 9000002 840.0000 297.0000 0.0000 0 0 0 0
+
+BLOC
+91
+PLAN centrage
+91
+PLU
+6
+SEGM
+ 9 215.0000 5.0000 0.0000 0 0 84 0
+ 11 835.0000 292.0000 0.0000 0 0 84 0
+
+BLOC
+92
+PLAN calage ecri
+1
+PLU
+7
+SEGM
+ 20 5.0000 70.0000 0.0000 0 0 84 0
+ 16 105.0000 70.0000 0.0000 0 0 84 0
+
+SEGM
+ 21 5.0000 50.0000 0.0000 0 0 84 0
+ 17 105.0000 50.0000 0.0000 0 0 84 0
+
+SEGM
+ 22 5.0000 30.0000 0.0000 0 0 84 0
+ 18 105.0000 30.0000 0.0000 0 0 84 0
+
+BLOC
+90
+PLAN  cart1
+90
+SEGM
+ 2 210.0000 0.0000 0.0000 0 0 84 0
+ 3 840.0000 0.0000 0.0000 0 0 84 0
+ 4 840.0000 297.0000 0.0000 0 0 84 0
+ 6 0.0000 297.0000 0.0000 0 0 84 0
+ 1 0.0000 0.0000 0.0000 0 0 84 0
+ 2 210.0000 0.0000 0.0000 0 0 84 0
+ 5 210.0000 297.0000 0.0000 0 0 84 0
+
+SEGM
+ 9 215.0000 5.0000 0.0000 0 0 84 0
+ 10 835.0000 5.0000 0.0000 0 0 84 0
+ 11 835.0000 292.0000 0.0000 0 0 84 0
+ 12 215.0000 292.0000 0.0000 0 0 84 0
+ 9 215.0000 5.0000 0.0000 0 0 84 0
+
+SEGM
+ 7 5.0000 5.0000 0.0000 0 0 84 0
+ 8 205.0000 5.0000 0.0000 0 0 84 0
+ 13 205.0000 292.0000 0.0000 0 0 84 0
+ 14 5.0000 292.0000 0.0000 0 0 84 0
+ 7 5.0000 5.0000 0.0000 0 0 84 0
+
+MARD 100.0 10.0 1.8 1.8
+ 9 215.0000 5.0000 0.0000 0 0 84 0
+ 10 835.0000 5.0000 0.0000 0 0 84 0
+ 11 835.0000 292.0000 0.0000 0 0 84 0
+ 12 215.0000 292.0000 0.0000 0 0 84 0
+ 9 215.0000 5.0000 0.0000 0 0 84 0
+
+TEXC
+EXEMPLE DE CARTOUCHE
+ 105.000 270.000 0
+SIZT 5.0000 5.0000 0.0000 0.0000 1.0000
+TEXC
+defini en mm papier
+ 105.000 250.000 0
+CHFT pol2
+SIZT 9.0000 9.0000 0.0000 0.0000 1.0000
+TEXC
+A UTILISER AVEC LA
+ 105.000 230.000 0
+CHFT pol3
+TEXC
+Commande
+ 105.000 210.000 0
+TEXC
+$LCA CART4x1 echelle
+ 105.000 190.000 0
+CHFT pol4
+SIZT 7.0000 7.0000 0.0000 0.0000 1.0000
+TEXC
+exemple :
+ 105.000 170.000 0
+TEXC
+ou $lca ca4p1 500
+ 105.000 130.000 0
+SIZT 5.0000 5.0000 0.0000 0.0000 1.0000
+CHFT pol5
+TEXC
+$lca ca4p1 200
+ 105.000 150.000 0
+TEXC
+les cotes et les hauteurs des textes
+ 105.000 110.000 0
+TEXC
+sont definis en mm papier
+ 105.000 90.000 0
+TEXC
+!numero du dossier ?!
+ 105.000 70.000 0
+TEXC
+! nom du client ? !!!!!!!!!!!!!
+ 105.000 60.000 0
+TEXG
+Micros G   ostricourt (59) france
+ 7.487 7.331 0
+PURG

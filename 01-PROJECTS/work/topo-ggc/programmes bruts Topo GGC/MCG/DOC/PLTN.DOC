@@ -1,0 +1,106 @@
+
+
+	consignes pl tuyaux : p65l+p58 /16.04.96	1
+
+
+	-monter les fichiers dans un repertoire independant (tuyau)
+
+	-lister les fichiers
+	modele pl pour axe, ep, boites : ax.mod, ep.mod, bt.mod
+	donnees pour la commande aligp : ax.d65, ep.d65, bt.d65
+
+	consulter p65maj.doc, commandes ALIGP et PERP?
+
+	-principe : monter des pltn independants, recuperer les fichiers
+	dao generes par p58 ( dessin pl,pt du tn ), en meme temps que
+	le code traceur.
+
+	lancer p65l
+
+	reso est affiche : leve original, vert/axe, bleu/ep,rouge/boites
+	a noter le trait continu rouge entre des points de l'axe
+	chaussee, en vue de la projection des boites sur un trait de
+	longeur sensiblement egal a la longeur de l'axe (abscisses
+	curvilignes coherentes), les cotes des boites sont les cotes
+	radier.
+
+	Utiliser la souris !!!
+	valider le calque axe voie ON (calques dans menu), autres OFF
+
+	char ax.d65	extraction du pl voie
+	repondre O a la demande dessin ...
+	la main est passee a p58
+	noter le numero du fichier dao soit r5801.dao = pl axe
+	p58 rend la main a p65l
+	 ( qui sert de systeme d'exploitation 32 bits )
+
+	souris, file, lire un dessin, reso1
+	zmf de la partie gauche
+	poin
+	les boitiers ont ete rabattus sur axe chaussee
+	mesurer les distances 2-3 (13m58) et 2-63 (21m64) en vue du
+	recalage des pl ep et boites dans le systeme axevoie ( devra
+	etre donne en mm papier = ctex dans les fichiers *.mod, la
+	question est posee si dessin des profils est demande ).
+	char ep.d65
+	dessin , ctex=14mm, code dao dans r5802.dao
+	a noter que le fichier ep.d65 comporte un s origine=13m58
+	on est passe par les points 61 et 62 rabattus sur axevoie
+	(commande PERPZ2), afin d'avoir une developpee au plus pres de
+	axevoie. La tolerance est a 1 mm (pas de points rabattus sur le
+	pl, on ne prend que les tetes, alors que pour axe voie on a
+	rabattu une zone d'1 metre.
+
+	char bt.d65 , ctex=22, code dao dans r5803.dao
+
+
+
+	consignes pl tuyaux : p65l+p58 /16.04.96	2
+
+
+	char r5801.dao
+	dvue
+	$sde plax
+	char r5802.dao
+	dvue
+	$sde plep
+	char r5803.dao
+	dvue
+	$sde plbt ( effacer le pl si l'on veut, reste marques )
+
+	$pld plep
+	$lpd plbt
+	$sde pl
+
+	dessiner,...
+
+	dess au 1000
+	verifier les decalages en s en extremite des profils.
+
+	le code dao est en mm papier, p65l ne sait pas qu'il s'agit
+	d'un pl
+
+
+	si l'on veut des couleurs, avant de monter le code dao
+	(r58??.dao), corriger avec Editeur les fichiers
+
+	bloc
+	2
+	plan axe voie
+	1
+	plu
+	4
+
+	nota
+	e peur etre appele a partir de p65l , commande e file
+	ou un autre editeur avec la commande call (acces au dos).
+
+
+	Les fichiers *.d65 ont ete montes avec l'editeur : noter les
+	points a prendre en compte, et preparer le travail au calme.
+
+	Il est possible de travailler en interactif ( ligne 12 du
+	sous-menu projet). Attention aux erreurs de pointe des points a
+	prendre en compte : si le plan es dense, il faut deplacer
+	l'image pour continuer la saisie...
+	La methode batch traditionnelle est beaucoup plus efficace

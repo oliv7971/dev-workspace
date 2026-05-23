@@ -1,0 +1,1285 @@
+                       Pytha - Projet R930101 Page 58.1
+
+
+                           1 - INTRODUCTION
+
+
+
+
+
+
+
+
+
+        Le programme permet de dessiner les profils en long et en
+        travers.
+
+
+        1. Les profils en long :
+
+
+        - P58 dessine les profils en long TN.
+
+        - Pour avoir le TN et le projet, il faut prealablement avoir
+          calcule le profil en long projet, par le module P2.
+
+
+
+        2. Les profils en travers :
+
+
+        - P58 dessine les profils en travers TN.
+
+        - Pour les profils en travers TN et projet, utiliser le module
+          P7.
+
+
+
+
+
+
+        La mise en page des profils peut etre faite de maniere
+        automatique ou forcee.
+
+        Il existe 10 cartouches predefinis, qui peuvent etre utilises
+        lors des reports, mais on a aussi la possibilite de creer
+        d'autres cartouches, valables seulement pour le dessin en
+        cours.
+        Pour creer de nouveaux cartouches, il est possible de se servir
+        d'elements existants dans les cartouches predefinis.
+
+
+
+
+        RQ : La commande CMCG permet de sortir un fichier ASCII du
+             dessin des profils qui peut etre remonte dans Pytha-Graph
+             et/ou passe dans P22, programme qui effectue une
+             transformation en DXF.
+
+                       Pytha - Projet R930301 Page 58.2
+
+
+                            2 - LES DONNEES
+
+
+
+
+
+
+        1. GENERALITES :
+
+           1.1  Le profil en long projet doit provenir d'un
+                fichier passe dans P2 (calcul du PL), commande
+                TABULER,,NOM (voir P2).
+                Il comporte les points tabules (numero, S, Z, Devers
+                gauche et droit) et les coefficients des elements.
+
+                On y fait appel dans P58 par la commande CHARGE,,NOM.
+
+
+           1.2  Les elements altimetriques
+
+                Ils sont dans le fichier profil en long defini en 1.1
+                (pentes, rayons, etc ).
+
+
+           1.3  Les devers
+
+                Ils sont dans le fichier profil en long defini en 1.1.
+
+
+           1.4  Le terrain naturel
+
+                Il est donne dans le fichier pour P58.
+
+
+           1.5  Les elements planimetriques
+
+                Il sont fournis dans le fichier pour P58.
+
+
+           1.6  Les autres donnees concernent les parametres generaux
+                de cadrage, echelles, etc
+
+                Toutes ces donnees doivent etre fournies avant la
+                commande qi va demarrer le dessin :
+
+                                DPLON,n pour les PL
+                                TN,-,-  pour les PT
+
+                       Pytha - Projet R930301 Page 58.3
+
+
+        2. LES FICHIERS DE DONNEES :
+
+
+           2.1 - Profil en long :
+
+                TITRE
+
+                PROC,,-  ----
+                fonction     | Definition eventuelle d'un cartouche
+                fonction     |
+                FIN      ----
+
+                COMMANDES
+                ...
+                CHARGE,,NOM     Appel aux calculs fait par P2
+                                (pour dessin du projet).
+                TN,,-    ----
+                ...          |
+                ...          |  Definition du TN
+                999999   ----
+
+                PLANI -------   Si on veut les informations
+                ...          |  planimetriques dans le cartouche
+                ...          |  (alignements et courbes).
+                FIN   -------
+
+                ORDRES DE DESSIN
+                ...
+                DPLON,Nø du cartouche  Lance le dessin du PL
+
+                ****
+                STOP
+
+
+           2.2 - Profil en travers :
+
+                TITRE
+
+                COMMANDES
+
+                TRAVERS,Nø du cartouche
+
+                ORDRES DE DESSIN
+                ...
+                ...
+
+                TN,,-   Lance le dessin des PT
+                ...
+                ...
+                999999
+
+                ****
+                STOP
+                       Pytha - Projet R930301 Page 58.4
+
+
+                     3 - DESCRIPTION DES COMMANDES
+
+
+
+
+        3.1 - Listes des MOTS CLE :
+
+
+              * MOTS CLES GENERAUX
+
+                      PT PL
+
+              ADPAge  |*|*|  Numeroter les pages
+              ARPC    |*|*|  Arrondi pour le calcul du PC
+              AFFIche |*|*|  Afficher le dessin a l'ecran
+              ANGL    |*|*|  Angle des ecritures libres
+              BSNX    |*|*|  Champ maxi du papier en X
+              BSNY    |*|*|          "     "         Y
+              CADR    |*|*|  Dessiner le cadre
+              CALX    |*| |  Caler l'axe du profil en travers
+              CHARge  | |*|  Appel a des calculs precedents
+              CMCG    |*|*|  Sortir un fichier pour P65 et/ou P22
+              COMM    |*|*|  Pour mettre des commentaires
+              CTEX    |*|*|  Caler le dessin du profil en X
+              CTEZ    |*|*|  Idem en Z
+              DECA    |*|*|  Marge entre les planches
+              DEPR    | |*|  Tracer une ligne decalee/projet
+              DETN    | |*|          "        "      /TN
+              DPLOn   | |*|  Dessiner PL, lancer le dessin
+              ECHX    |*|*|  Echelle en X
+              ECHZ    |*|*|     "       Z
+              ECRI    |*|*|  Remettre les ecritures ON
+              EDITe   |*|*|  Annule NEDite
+              FIN     |*|*|
+              FORX    |*|*|  Format maxi d'une planche en X
+              FORY    |*|*|       "              "        Y
+              HCAR    |*|*|  Caler le cartouche
+              HMAX    |*|*|
+              HORI    |*|*|  Angle pour ecriture quelconque
+              HY      |*|*|  hauteur des caracteres pour ecriture
+              LCAR    |*|*|
+              LDIS    | | |
+              LFAC    | | |
+              LIBA    |*|*|  Ecriture libre alphabetique
+              LIBN    |*|*|  Ecriture libre numerique
+              LIGEdit | | |
+              LIMD    | |*|  Eliminer les paraboles si rayon <r
+              LIMD    | |*|  Eliminer les droites si longueur <d
+              LISPro  |*|*|  Lister les renseignements d'1 procedure
+              MISO    |*|*|  Forcer le dessin
+              NBDN    |*|*|  Nombre de chiffres apres la virgule
+              NBDS    |*|*|     "
+              NBDX    |*|*|     "
+              NBDZ    |*|*|     "
+              NEDIte  |*|*|  Ne pas editer les commandes
+              ORIX    |*|*|  Caler l'origine du profil en X
+              ORIY    |*|*|  Idem en Y
+              PAGE    |*|*|  Numeroter les pages
+              PLANi   | |*|  Indiquer les elements planimetriques
+              PLCO    |*|*|  Plan de comparaison
+                       Pytha - Projet R930301 Page 58.5
+
+
+              * MOTS CLES GENERAUX (suite)
+
+                      PT PL
+
+              PLIX    |*|*|  Ecart pour marques de pliage en X
+              PLIY    |*|*|  Idem en Y
+              PLPR    | |*|  Plume pour projet
+              PLTN    |*|*|  Plume pour TN
+              PLUM    |*|*|  Nø de la plume
+              PROC    |*|*|  Ordre de procedure pour cartouche
+              RAPP    | |*|  Traits de rappel projet
+              RPTN    |*|*|  Traits de rappel TN
+              RUBA    |*|*|  Voir PROC
+              RUBN    |*|*|      "
+              RUBR    |*|*|      "
+              SECRi   |*|*|  Supprimer les ecritures ECHX,...
+              STITre  |*|*|  Sous titre
+              SUPC    |*|*|  Supprimer le cadre
+              SUPE    |*|*|  Superposer le dessin suivant
+              SUPR    |*|*|  Supprimer les traits de rappel
+              SUPT    |*|*|  Supprimer les traits dans le cartouche
+              STOP    |*|*|
+              TIPR    | |*|  Dessiner le projet en tirete
+              TITN    |*|*|  Dessiner le TN en tirete
+              TN      |*|*|  Donner le TN.Lancer le dessin des PT
+              TPPR    | |*|  Dessiner le projet en trait plein
+              TPTN    |*|*|  Dessiner le TN en trait plein
+              TRAVers |*| |  Dessiner des profils en travers
+              TRHO    |*|*|  Dessiner les traits du cartouche
+              VERT    |*|*|  Angle pour ecriture quelconque
+              ZONE    | |*|  Selecter une zone de profil en long
+              ****    |*|*|
+
+
+
+
+        3.2 - Commandes generales
+
+
+
+        --- ADPAge,VAL
+
+                La prochaine page sera numerotee
+                Numero de la page en cours + VAl.
+
+
+        --- ARPC,VAL (m)
+
+                Arrondi pour le calcul du plan de comparaison (VS = 1m).
+
+
+        --- AFFIche,1
+
+                Afficher le dessin a l'ecran
+
+
+        --- ANGL,iGX (cgr)
+
+                (voir LIBA, LIBN)
+
+                       Pytha - Projet R930301 Page 58.6
+
+
+        --- BSNX,VAL
+
+                Champ maximum du papier en X (en mm) - (voir fig 1)
+
+
+        --- BSNY,VAL
+
+                Champ maximum du papier en Y (en mm) - (voir fig 1)
+
+
+        --- CADR
+
+                Dessiner le cadre
+
+
+        --- CALX,VAL
+
+                Caler l'axe du profil en travers - (voir fig 1)
+
+
+        --- CHARGE,,NOM
+
+                Recuperer le calcul du profil en long fait par P2.
+
+
+        --- CMCG
+
+                Sortir un fichier pour Pytha Graph (P65).
+                ou pour P22 (transfert DXF).
+
+
+        --- COMM
+
+                Inserer des commentaires dans le fichier de donnees qui
+                apparaitront dans le fichier resultats.
+
+
+        --- CTEX,VAL
+
+                Fixer l'origine des profils en X - (voir fig 1)
+
+
+        --- CTEZ,VAL
+
+                Fixer la distance entre le haut du cartouche et le
+                point le plus bas du profil.
+                Pour les profils en travers n'est valable que si
+                CALX = 0.
+                (voir fig 1)
+
+
+        --- DECA,VAl
+
+                Fixer la marge entre chaque planche - (voir fig 1)
+
+                       Pytha - Projet R930301 Page 58.7
+
+
+        --- DEPR,VAL S dz S dz ...  999999
+
+                Tracer une ligne decalee de dz par rapport au projet
+                   VAL= 0 trait simple
+                ou VAL= decalage de la plume pour tracer un trait epais
+
+                Ex :  Voir Figure 1
+
+
+
+        --- DETN,VAL
+
+                Idem pour le TN
+
+
+        --- DPLON,n
+
+                Dessiner le profil en long a l'aide des donnees
+                precedemment fournies, avec le cartouche ou la
+                procedure n.  Si le cartouche et les donnees sont
+                incompatibles faire preceder la commande DPLON, d'une
+                commande MISO,8 pour forcer le dessin.
+
+
+        --- ECHX,VAL
+
+                Echelle en X.Pour du 1/200, VAL=200
+
+
+        --- ECHZ,VAL
+
+                Idem en Z
+
+
+        --- ECRI
+
+                Remettre les ecritures ON (Cf SECRI)
+
+
+        --- EDITE
+
+                Pour avoir l'edition des commandes
+
+
+        --- FORX,VAL (mm)
+
+                Format maxi d'une planche en X - (voir fig 1)
+
+
+        --- FORY,VAl (mm)
+
+                Idem en Y
+
+
+        --- HCAR,VAL (mm)
+
+                Hauteur maxi du catouche - (voir fig 1)
+
+                       Pytha - Projet R930301 Page 58.8
+
+        --- HMAX,VAL
+
+                Hauteur maxi entre le bas de la feuille et le point le
+                plus haut du profil - (voir fig 1)
+
+
+        --- HORI (voir LIBA, LIBN)
+
+
+        --- HY (voir LIBA, LIBN)
+
+
+        --- LCAR,VAl (mm)
+
+                Largeur maxi du cartouche - (voir fig 1)
+
+
+        --- LDIS
+
+
+
+        --- LFAC
+
+
+
+        --- LIBA
+            S Z valeur numerique
+            S Z valeur numerique
+            ...
+            999999
+
+                Positionner une ecriture quelconque dans la planche
+                dans les limites de l'epure FORX * FORZ
+                Les parametres de ces ecritures sont :
+
+                        HY,hy (0.1 mm) hauteur des ecritures
+                        HORI     ecriture horizontale
+                        VERT     ecriture verticale
+                        ANGL,ang angle/horizontale en cgr
+                        PLUM,p   numero de la plume
+
+
+        --- LIBN
+
+                Idem pour des valeur numeriques.
+
+
+        --- LIGEDIT
+
+
+
+        --- LISPro
+
+                Lister les elements d'une procedure.
+
+
+        --- MISO,8
+
+                Forcer le dessin dans le cas ou les donnees et le
+                cartouche sont incompatibles.
+
+                       Pytha - Projet R930301 Page 58.9
+
+        --- NBDN,VAL
+
+                Nombre de chiffre apres la virgule pour le numero des
+                profils.
+
+
+        --- NBDS,VAL
+
+                Idem pour les abscisses curvilignes.
+
+
+        --- NBDX,VAL
+
+                Idem pour les X
+
+
+        --- NBDZ,VAL
+
+                Idem pour les Z
+
+
+        --- NEDIte
+
+                Ne pas editer les commandes
+
+
+        --- ORIX
+
+                Fixer l'origine X de la zone dessin - (voir fig 1)
+
+
+        --- ORIY
+
+                Idem Y
+
+
+        --- PAGE,VAL
+
+                Dans le fichier resultat la prochaine page sera notee
+                VAL.
+
+
+
+        --- PLANi
+            DRTE  Sdebut
+            CERD  Sdebut  Rayon
+            CERG  Sdebut  Rayon
+            CLOD  Sdebut  A
+            CLOG  Sdebut  A
+            ....
+            FIN
+
+                Les donnees concernent les alignements et courbes du
+                trace en plan.
+                Le trace doit etre calcule, P58 ne fait qu'ecrire les
+                informations dans le cartouche, si on le lui demande.
+                       Pytha - Projet R930301 Page 58.10
+
+        --- PLCO,VAl (m)
+
+                Fixer l'altitude du plan de comparaison, sinon le
+                programme prend :
+
+                           ((Z mini - CTEZ * ECHZ)/ARPC)*ARPC
+
+                           (Zmini du projet et/ou du TN).
+
+
+        --- PLIX
+
+                Ecart en X pour des marques de pliage - (voir fig 1)
+
+
+        --- PLIY
+
+                Idem en Y
+
+
+        --- PLPR,j
+
+                Le projet est dessine avec la plume j
+                     j=1 ou 2  (VS j = 0)
+
+
+        --- PLTN,j
+
+                Idem pour le TN.
+
+
+        --- PLUM (voir LIBA, LIBN)
+
+
+        --- PROC,n
+            fonction,HH CC VV,texte
+            ...
+            RUBR,nr
+            ...
+            FIN
+
+                Definition des rubriques d'un cartouche.
+
+                Il existe 14 cartouches predefinis, numerotes de 1 a 14,
+                que l'on peut appeler par DPLON ou TRAVERS (voir
+                annexes 58).
+
+
+                PROC,n permet de creer un cartouche n numerote de 16 a
+                20 qui pourra etre appele par la commande DPLON,n ou
+                TRAVERS,n.
+                Une procedure n'est valable que pour le fichier ou elle
+                se trouve.
+
+                A l'interieur d'une procedure on peut :
+
+                        . Reprendre des rubriques (lignes de cartouche)
+                          existantes (il en existe 62-Voir annexes 58):
+
+                                RUBR,nr
+                       Pytha - Projet R930301 Page 58.11
+
+                Il est possible d'ecrire dans une rubrique :
+
+                                RUBN,cnrddd
+                                   S valeur    pour du numerique
+                                   S valeur
+                                999999
+					       c nombre de decimales
+						 pour valeur (VS=2)
+
+                                RUBA,nrhhh
+                                   S texte     pour de l'alpha
+                                   S
+                                999999         hhh unite 0.1 mm
+
+
+		 		Voir Figure 2
+
+
+                         . creer de nouvelles rubriques (lignes) a
+                           l'aide de fonctions :
+
+                          FONCTION,HHCCVV,/texte
+
+                              avec HH hauteur de la case (mm)
+                                   CC hauteur du texte (0.1 mm)
+                                   VV hauteur des valeurs (0.1 mm)
+                                   texte (blanc=/)
+
+                              Rq : Si HHCCVV est negatif les traits
+                                   horizontaux ne sont pas dessines.
+
+
+                          Les fonctions existantes sont :
+
+                                .PLCO : plan de comparaison
+                                .NUPR : Nø des profils projet
+                                .NUTN : Idem TN
+                                .DPTN : Dist. part. entre profils TN
+                                .DPPR : Idem projet
+                                .DCTN : Abscisses TN
+                                .DCPR : Idem projet
+                                .ALTN : Altitude TN
+                                .ALPR : Idem projet
+                                .DALT : Elements altimetriques
+                                .DPLA : Elements planimetriques
+                                .DEVE : Ecrire les devers
+                                .LIBR : Zone libre
+
+                              Rq : 1 La fonction PLCO si elle existe
+                                     doit toujours etre la premiere
+                                     d'une procedure.
+
+                                   2 Les rubriques se retrouvent dans
+                                     le cartouche dans l'ordre ou elles
+                                     sont dans le fichier.
+
+                       Pytha - Projet R930301 Page 58.12
+
+        --- RAPP
+
+                Pour dessiner les traits de rappel
+
+
+        --- RPTN
+
+                Pour dessiner les traits de rappel sur le TN
+                (normalement ils sont dessines a partir du projet).
+
+
+        --- RUBA (voir PROC)
+
+
+        --- RUBN (voir PROC)
+
+
+        --- RUBR (voir PROC)
+
+
+        --- SECRi
+
+                Supprimer les ecritures ECHX, ECHZ, ... (pour dessins
+                superposes par exemple)
+
+
+        --- STITre
+
+                Donner un sous titre
+
+
+        --- SUPC
+
+                Supprimer le dessin du cadre
+
+
+        --- SUPE
+
+                Dessin suivant a superposer
+
+
+        --- SUPR
+
+                Supprimer les traits de rappel
+
+
+        --- SUPT
+
+                Supprimer les traits dans le cartouche
+
+
+        --- TIPR
+
+                Dessiner le projet en traits tiretes
+
+
+        --- TITN
+
+                Dessiner le TN en traits tiretes
+
+                       Pytha - Projet R930301 Page 58.13
+
+        --- TN,,EXEC
+            Nøprofil abScisse X z  X z  X z | avec S X z en m
+            Nøprofil abScisse X z  X z  X z | Les x sont des cumulees
+            ....
+            999999
+
+            ou
+
+            TN,,COPS
+            Nøprofil abScisse X z  X z  X z | Les x sont des partielles
+            ....
+            999999
+
+
+                Fournir le TN des PL ou PT.
+                Pour les PT, la commande TN,-,- lance le dessin des PT
+                avec le cartouche n defini dans la commande TRAVERS,n
+
+                Les S doivent etre croissants.  Il faut au moins 2
+                points de part et d'autre du X = 0 pour le dessin du
+                PL.  Le programme interpole une cote Z pour X = 0, ce
+                qui interdit l'utilisation du format COPS pour le PL
+                (sauf si le 1er point a un X negatif).  Pas de Z nul :
+                mettre 0.001.
+
+
+        --- TPPR
+
+                Dessiner le projet en trait plein
+
+
+        --- TPTN
+
+                Dessiner le TN en trait plein
+
+
+        --- TRAVERS,n
+
+                Dessiner des profils en travers avec le cartouche n (n
+                de 1 a 14) ou la procedure n (n de 161 a 20).
+
+
+        --- TRHO
+
+                Dessiner les traits du cartouche (implicite)
+
+
+        --- VERT (voir LIBA, LIBN)
+
+                       Pytha - Projet R930301 Page 58.14
+
+        --- ZONE,S1
+            ZONE,S2
+
+                Pour selecter une zone de profil en long, avant la
+                commande DPLON,n.
+                VAL1 et VAL2 en cm.
+                La zone dessinee comprendra les profils, devers, points
+                de TN, elements alti, elements plani compris entre les
+                abscisses S1 et S2.
+
+                Cette commande est utilisee pour le decoupages en
+                planches ne correspondant pas au format standard.
+
+                Lors de l'execution de la commande DPLON,n le programme
+                procede comme suit :
+
+                        * Si FORS a ete fourni il est concerve, la zone
+                          demandee sera dessinee en une ou plusieurs
+                          planches.
+
+                        * Si FORS n'a pas ete fourni, il est calcule
+                          pour que la zone demandee soit restituee sur
+                          un seul format (multiple de PLIX).
+                          La valeur FORS attachee a la procedure est
+                          ignore dans ce cas.
+
+
+                Apres l'execution de la commande DPLON,n la zone a
+                dessiner est initialisee pour la longueur maximale des
+                donnees projet et/ou TN.
+
+
+
+
+
+        3. 3 LES COMMANDES DE MISE EN PAGE DES PLANCHES :
+
+
+                BSNX, BSNY, CALX, CTEX, CTEZ, DECA, FORX, FORY, HCAR,
+                HMAX, LCAR, ORIX, ORIY, PLIX, PLIY
+
+
+
+			      Voir Figure 3
+
+
+                       Pytha - Projet R930301 Page 58.15
+
+
+                              4. EXEMPLES
+
+
+        4.1 - PROFIL EN TRAVERS (ex1.d58)
+
+                a) Fichier de donnees (ex1.d58)
+
+
+        L'exemple ex1.d58 est un exemple de dessin de profils en
+        travers TN.Il comporte 14 profils, definis derriere le mot
+        cle TN.
+
+        PROFILS EN TRAVERS AVEC CARTOUCHE 4
+        AFFI,1
+        # Le diese permet d'inserer des commentaires dans le fichier
+        TRAVERS,4      # on a choisi le cartouche 4 (voir annexes P58)
+        FORS,420       # format maxi d'une planche en X 420 mm
+        FORZ,210       #     "         "         "    Y 210 mm
+        ECHX,200       # echelle en X 1/200
+        ECHZ,200       #   "      " Z 1/200
+        BSNX,1200      # format du papier en X 1200 mm
+        CMCG           # on veut un fichier pour Pytha Graph
+        BSNY,900       # format du papier en Y 900 mm
+        TN,,EXEC
+        1  1000    -20.26   576.04  -14.71   573.29   -8.95   570.05
+        1  1000     -5.53   566.48   -4.25   566.15
+        1  1000     -4.16   564.83   -3.15   565.14
+        1  1000      0.00   564.93    0.18   564.90    0.96   564.93
+        1  1000      1.4    564.93
+        1  1000      1.55   563.99    5.82   563.52    6.12   563.52
+        1  1000      6.78   558.25    8.72   557.94
+        2  1023.2  -20.18   576.70  -12.84   572.57   -6.68   568.96
+        2  1023.2   -3.83   566.19   -3.44   566.35    0.00   566.33
+        2  1023.2    0.16   566.33    0.60   566.08    7.12   560.59
+        2  1023.2   10.65   560.43
+        3  1045.8  -21.21   578.70  -13.68   575.04   -9.52   573.18
+        3  1045.8   -7.35   571.89   -3.70   567.79   -3.02   567.88
+        7  1128.6    9.81   570.10   17.94   565.62
+
+	...
+
+        13 1258.3   -4.27   584.36   -3.23   584.60
+        13 1258.3    0.00   584.51    1.66   584.30    6.05   580.47
+        13 1258.3   11.74   576.38   21.22   570.74
+        14 1282    -28.02   601.96  -17.95   596.84
+        14 1282     -4.96   587.4    -4.46   587.4    -4.36   586.31
+        14 1282     -3.50   586.52    0.00   586.44
+        14 1282      0.85   586.22    6.11   581.92   12.27   577.74
+        14 1282     17.08   575.16   28.54   570.33
+        999999.
+        ****
+        STOP
+
+                       Pytha - Projet R930301 Page 58.16
+
+
+                b) Le fichier diagnostique (R58--.LST)
+
+
+        PROFILS EN TRAVERS AVEC CARTOUCHE 4
+        AFFI,1
+        TRAVERS,4
+        FORS,420
+        FORZ,210
+        ECHX,200
+        ECHZ,200
+        BSNX,1200
+        CMCG
+        BSNY,900
+        TN,,EXEC
+
+        Parametres pour chaque profil
+        Format S   420 mm Echs   200
+        Format Z   210 mm Echz   200
+        Orix    36 mm  Lcar    31 mm*Lcar    26 mm Margx     5 mm
+        Oriy    48 mm  Hcar    47 mm*Hcar    42 mm Margy     1 mm
+        Zone Utile en X   379 mm en Y   161 mm
+
+        Planche   1,Echz=   200,PC=  549.
+        Planche   2,Echz=   200,PC=  552.
+        Planche   3,Echz=   500,PC=  532.
+        Planche   4,Echz=   500,PC=  532.
+        Planche   5,Echz=   500,PC=  533.
+        Planche   6,Echz=   200,PC=  555.
+        Planche   7,Echz=   200,PC=  557.
+        Planche   8,Echz=   200,PC=  561.
+
+        Totaux=        8 Profils      102 Points
+        Planche   1,Echz=   200,PC=  558.
+        Planche   2,Echz=   500,PC=  540.
+        Planche   3,Echz=   500,PC=  545.
+        Planche   4,Echz=   500,PC=  544.
+        Planche   5,Echz=   500,PC=  550.
+        Planche   6,Echz=   500,PC=  550.
+
+        Totaux=       14 Profils      175 Points
+        ****
+
+
+
+
+			    Voir Figure 4
+                       Pytha - Projet R930301 Page 58.17
+
+
+        4.2 - PROFIL EN LONG TN (ex5.d58)
+
+
+
+                a) Le fichier de donnees
+
+
+        TUYAU FAVERGE BIBOLLET
+        PROC,16                              # on cree une procedure 16
+        RUBR,46                              # elle utilise la rubr 46
+        DPTN,106018,/DISTANCE/PARTIELLE/TN     #
+        DCTN,106018,/DISTANCE/CUMULEE/TN       #
+        ALTN,106018,/COTE/TERRAIN/NATUREL      # Nouvelles rubriques
+        NUPR,106018,/NUMERO/DES/REGARDS        # creees a partir de
+        DPPR,106018,/DISTANCE/ENTRE/REGARD     # fonctions
+        ALPR,106018,/COTE/PROJET/DU/COLLECTEUR #
+        DALT,106018,/PENTE/ET/PHI
+        FIN
+        AFFICHE,1,                           # affichage a l'ecran
+        CMCG                                 # sortie pour Pytha Graph
+        TN,,APS
+        1  0   0 497.64
+        2  50  0 496.54
+        3  100 0 495.42
+        4  120 0 494.95
+        5  170 0 494.06
+        6  221 0 493.11
+        7  246 0 492.29
+        8  296 0 491.62
+        9  346 0 491.05
+        10 392 0 491.02
+        11 504 0 489.96
+        12 554 0 489.77
+        13 604 0 489.62
+        14 654 0 489.17
+        15 704 0 489.17
+        16 754 0 488.83
+        17 801 0 488.32
+        18 814 0 488.35
+        19 909 0 488
+        999999
+        ECHX,3000
+        ECHZ,100
+        FORZ,297
+        FORS,630
+        STITRE,,FAVERGE                      # sous titre
+        MISO,8          # on force le dessin meme s'il manque des
+        DPLON,16        # donnees pour le cartouche
+        ****            # on dessine des PL avec cartouche 16
+        STOP            # que l'on vient de creer au dessus
+
+
+                       Pytha - Projet R930301 Page 58.18
+
+
+                b) Le fichier diagnostique R58--.LST
+
+
+
+
+        TUYAU FAVERGE BIBOLLET
+        PROC,16
+        RUBR,46
+        DPTN,106018,/DISTANCE/PARTIELLE/TN
+        DCTN,106018,/DISTANCE/CUMULEE/TN
+        ALTN,106018,/COTE/TERRAIN/NATUREL
+        NUPR,106018,/NUMERO/DES/REGARDS
+        DPPR,106018,/DISTANCE/ENTRE/REGARD
+        ALPR,106018,/COTE/PROJET/DU/COLLECTEUR
+        DALT,106018,/PENTE/ET/PHI
+        FIN
+        AFFICHE,1,
+        CMCG
+        TN,,APS
+        ECHX,3000
+        ECHZ,100
+        FORZ,297
+        FORS,630
+        STITRE,,FAVERGE
+        MISO,8
+        DPLON,16
+
+        DPFLON.ER.139*DEMANDES PROC ET DONNEES INCOMPATIBLES
+
+        MISO=   8 DONNEES PRIORITAIRES
+
+        Decoupage des Planches
+
+           1       .00 A    909.00
+
+        Parametres pour chaque profil
+        Format S   630 mm Echs  3000
+        Format Z   297 mm Echz   100
+        Orix   150 mm  Lcar   145 mm*Lcar   140 mm Margx     5 mm
+        Oriy    80 mm  Hcar    75 mm*Hcar    70 mm Margy     5 mm
+        Zone Utile en X   475 mm en Y   212 mm
+
+        Planche   1,Echz=   100,PC=  484.
+
+        Totaux=        1 Profils       19 Points
+        ****
+
+
+
+                       Pytha - Projet R930301 Page 58.19
+
+
+        4.3 - PROFIL EN LONG AVEC PROJET ET TN (ex3.d58)
+
+
+        Cet exemple fait appel a un PL tabuler sous le nom EXEMPLE.
+        Ce PL est calcule par le fichier ex1.d02 pour P2.
+
+        Il faut donc d'abord calculer le PL en lancant P2 avec en
+        entree le fichier ex1.d02 et ensuite lancer p58 avec le fichier
+        ex3d58.
+        La commande qui fait appel aux calculs de P2 est la commande
+        CHARGE,,EXEMPLE
+
+
+                a) Le fichier de donnees (ex3.d58)
+
+
+        PL B46 JUIN 84
+        AFFICHE,1,
+        CMCG
+        nbdn,0
+        CHARGE,,EXEMPLE
+        tn,,exec
+        600370 506380 -60.90 225.10 -36.31 212.64 -25.39 211.56
+        600370 506380 -14.78 211.68 -0.06 213.15 17.90 220.68
+        600370 506380 34.01 228.85 46.74 235.22 55.84 239.80
+        600371 506400 0 210.82 -66.47 231.28 -61.78 228.83
+        600371 506400 -58.36 227.10 -56.55 224.49 -48.03 224.32
+
+                       ...
+
+        600392 506820 -82.81 232.54 -100.90 237.84 -110.90 240.45
+        600392 506820 40.24 198.76 56.15 189.24 -11.54 200.93
+        600392 506820 -1.24 201.10 16.22 200.78 32.49 199.12
+        600392 506820 40.99 198.52
+        999999
+        PLANI                     #
+        DRTE 504845.03            #
+        CERD 504896.37 240        #
+        DRTE 505264.19            #  Elements du trace en plan pour
+        CLOD 505350.39 400.946    #  renseignement sur le plan des
+        CERD 505597.71 650        #  alignements et courbes.
+        CLOD 505679.56 397.132    #
+        CLOG 505922.20 448.874    #
+        CERG 506369.95 450        #
+        CLOG 506701.55 225.146    #
+        DRTE 506814.2             #
+        FIN
+        ZONE,50637900             #  On dessine de l'abscisse 50637900
+        ZONE,50672100             #  a l'abscisse 50672100
+        BSNY,900
+        STITRE,,EXEMPLE/P58
+        DPLON,7                   #  On dessine avec le cartouche 7
+        ****
+        STOP
+
+                       Pytha - Projet R930301 Page 58.20
+
+
+                b) Le fichier diagnostique R58--.LST
+
+
+
+        PL B46 JUIN 84
+        AFFICHE,1,
+        CMCG
+        nbdn,0
+        CHARGE,,EXEMPLE
+
+        CHARGE.AT.141*POINTS A LIRE   119 POINTS LUS   117
+        tn,,exec
+        PLANI
+                DRTE  504845.030        .000
+                CERD  504896.370     240.000
+                DRTE  505264.190        .000
+                CLOD  505350.390     400.946
+                CERD  505597.710     650.000
+                CLOD  505679.560     397.132
+                CLOG  505922.200     448.874
+                CERG  506369.950     450.000
+                CLOG  506701.550     225.146
+                DRTE  506814.200        .000
+        FIN         .000        .000
+        ZONE,50637900
+        ZONE,50672100
+        BSNY,900
+        STITRE,,EXEMPLE/P58
+        DPLON,7
+
+        Decoupage des Planches
+
+        1 506380.00 A 506720.00
+
+        Parametres pour chaque profil
+        Format S   630 mm Echs  1000
+        Format Z   594 mm Echz   200
+        Orix    96 mm  Lcar    91 mm*Lcar    86 mm Margx     5 mm
+        Oriy   118 mm  Hcar   113 mm*Hcar   108 mm Margy     5 mm
+        Zone Utile en X   529 mm en Y   471 mm
+
+        Planche   1,Echz=   200,PC=  198.
+
+        Totaux=        1 Profils       36 Points
+        ****
+
+
+		       Voir Figure 5
+                       Pytha - Projet R930301 Page 58.21
+
+
+                            5. LES ANNEXES
+
+
+
+
+
+	Fig 1
+	-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Fig 2
+	-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       Pytha - Projet R930301 Page 58.22
+
+
+
+	Fig 3
+	-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       Pytha - Projet R930301 Page 58.23
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	     					         Fig 4
+						         -----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							Fig 5
+							-----
+
+
+
+
+
+                        Pytha - Projet R930301 Page 58.23

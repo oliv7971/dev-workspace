@@ -1,0 +1,67 @@
+<html><head></head><body>
+
+<h1>M-Audio Venom</h1> 
+<h2>Global Parameters Patch Editor</h2>
+
+Normally Edisyn does not have global parameters patch editors because most global parameters are set-and-forget affairs.  There are very few exceptions, and this is one: the M-Audio Venom has a number of very important parameters which cannot be set in any other way except by sysex via a patch editor.  So there you go.
+
+<p><b>Communicating with Edisyn</b><br>
+Set Edisyn's MIDI channel to the same as your Venom.  
+
+<ul>
+<li>To communicate with your Venom over USB, use "Venom Synth In" as the Receive From device, and "Venom Synth Out" as the Send To device.  Set the Venom up to receive MIDI events over USB by holding the Edit button, then pressing the "MIDI Out" key (the A-flat below Middle C) until the screen changes to "MIDI OUT USB".
+
+<p><li>To communicate with your Venom over standard MIDI ports, just use the appropriate MIDI device for your computer.   Set the Venom up to receive MIDI events over 5-pin DIN MIDI cabling by holding the Edit button, then pressing the "MIDI Out" key (the A-flat below Middle C) until the screen changes to "MIDI OUT kEY".
+</ul>
+
+<p>The Venom's sysex documentation indicates that you can set the Venom's Synth ID.  But to my knowledge this does not actually exist.  If it does, please let me know.  By default Edisyn is hard-coded to use 127.
+
+<p><b>Warning</b><br>
+
+The Venom's USB MIDI device can and does occasionally hang permanently until you power cycle the machine.  You may still see the
+ device in Edisyn but nothing will happen when Edisyn tries to send stuff to it.  
+
+<p><b>Important Note</b><br>
+
+One of the Venom's global parameters specifies the MIDI Out mode (USB vs Key). Changing this mode could disconnect the Venom from Edisyn, and so Edisyn does not display this parameter, nor does it upload the parameter when you send parameters to the Venom.
+
+<p><b>Hints</b><br>
+
+<ul>
+<li>The Venom's Sustain, Expression, and Mod Wheel CC dials don't just map to Continuous Controllers (CC).  Above CC 127 they also map to:
+
+<ul>
+<li><b>PB Sens</b>&nbsp;&nbsp;&nbsp;Pitch Bend Sensitivity (RPN 0)
+<li><b>F Tune</b>&nbsp;&nbsp;&nbsp;Master Fine Tuning (RPN 1)
+<li><b>C Tune</b>&nbsp;&nbsp;&nbsp;Master Coarse Tuning (RPN 2)
+<li><b>AT</b>&nbsp;&nbsp;&nbsp;Channel Aftertouch (Pressure)
+</ul>
+
+</ul>
+
+<p><b>Gotchas</b><br>
+
+<ul>
+<li>This editor deals with a global parameter region rather than a bank of patches.  But while sending to the current patch doesn't make much sense, it's important as a basic patch editor feature.  Thus when you send to the current patch, you're actually just writing (permanently) to the global region.  Likewise requesting the current patch reads from the global region.
+
+</ul>
+
+<p><b>Note to Vyzex Users</b><br>
+Edisyn is a general-purpose patch editor tool and so its approach is designed to accommodate a wide range of synthesizers.  Vyzex is designed for a single synthesizer, and so it is highly customized for that purpose in ways Edisyn cannot be.  You may have noticed that Edisyn's Venom editor launches immediately, while Vyzex spends a long time loading every single patch from your Venom.  This is because Vyzex stays in sync with your Venom, while Edisyn does not.  As a result, Vyzex can do several things Edisyn cannot.  For example, Vyzex tells you exactly which multi-patches depend on the single patch you're overwriting, and can display all the patches at once.  Also, because it knows about all your patches together, Vyzex can dive down into single patches or arpeggio headers to allow you to change portions them from a multi-patch.  This is a confusing and very bad idea, so it's good Edisyn can't do that.  Edisyn can load the single patches or arpeggios associated with a multi-patch so you can edit them separately.
+
+<p>So why use Edisyn instead of Vyzex?  Partly because Vyzex will very soon be obsoleted and impossible to run.  And besides fixing some bad Vyzex errors, Edisyn <i>can</i> do one major thing Vyzex (and M-Audio's installed software) cannot: directly edit arpeggios.
+
+
+<br><br><h3>Thanks</h3>
+
+Thanks to Jan Bote (jan.bote@gmx.de) for his assistance and knowledge.
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>November 25, 2020
+</table>
+

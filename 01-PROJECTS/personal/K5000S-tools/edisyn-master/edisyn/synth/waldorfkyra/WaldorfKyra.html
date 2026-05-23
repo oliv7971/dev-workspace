@@ -1,0 +1,60 @@
+<html><head></head><body>
+<h1>Waldorf Kyra</h1> 
+<h2>Single Patch Editor</h2>
+
+<p>This editor is designed to work with at least Firmware 1.78, though it should be approximately compatible with earlier versions.
+
+<p><b>Communicating with Edisyn</b><br> 
+Set Edisyn's MIDI channel to the same as the part number channel you're editing (typically 1).  Set Edisyn's Synth ID to your Kyra's "MIDI SysEx device ID": typically 17.  
+
+<ul>
+<li>
+To communicate with your Kyra over USB, make sure that "Receive MIDI Program" is "USB" or "MIDI+USB".  You might also wish to set "Send manual dumps to" "USB".
+
+<p><li>To communicate with your Kyra over 5-pin DIN MIDI, make sure that "Receive MIDI Program" is "MIDI" or "MIDI+USB".  You might also wish to set "Send manual dumps to" "MIDI".
+</ul>
+
+<p>If you want Edisyn to update in real time to changes you make on your Kyra (like turning a knob), set "Transmit Automation" to "USB" or "MIDI" as appropriate. 
+
+<br><br><h3>About the Menu: Uploading Pseudo-MPE</h3>
+
+The Kyra doesn't support MPE.  But we can fake it by setting up one of its multimode patches in a special way, and this can be taken advantage of by instruments such as the Linnstrument.
+
+<P>You can prepare a multimode patch slot with <b>Write Patch as Psuedo-MPE</b>.  This writes a multimode patch which points to your current single patch, including the current name, bank, and (single patch) number.  Each slot in the multimode patch will refer to this patch but have a unique MIDI channel. You get to choose what multimode patch number to write to.  Note that your single-patch must already be written to the synth.
+
+<br><br><h3>About the Menu: Current Parts</h3>
+
+The Kyra has a curious notion of a <b>current part</b> among the various parts in the Multi.  When Edisyn sends to current patch, it will send to a part number, and then instruct the Kyra to make that part the "current part".  You tell Edisyn which part number this should be via the menu: the default is always Part 1.  Additionally when you change parameters, they are changed in your chosen part number, even if it is not the "current part".  You can always jump to your chosen part number by re-selecting it in the menu.
+
+
+
+
+<p><b>Gotchas</b><br>
+
+<ul>
+
+<li>Though the Kyra has a "Wave Group" and "Wave Number" for each oscillator, Edisyn only has "Wave" (the combination of the two).  This is because there are different numbers of waves for each group, which is problematic to write an editor for.  So you'll have to wade through a lot of waves, sorry.
+
+<p><li>If you update the "Wave Number" in real time on the Kyra, Edisyn may not properly update its "Wave", because the Kyra doesn't send Edisyn the necessary information.  Not to worry. To get it back in sync, update the "Wave Group", and then the "Wave Number" again.
+
+<p><li>When Edisyn writes a patch to the Kyra, the Krya may not update the screen to reflect this change.
+
+<p><li>When Edisyn writes a parameter to the Kyra, you won't see that parameter updated unless you're looking at its page in the Kyra's screen.
+
+<p><li>The Kyra has "Osc 1 Detune" available as a destination: but it's not a tunable parameter available on the Kyra.  I am informed that the destination does in fact have an effect.
+
+</ul>
+
+<br><br><h3>Thanks</h3>
+Thanks to Manuel Caballero and Waldorf Music GmbH for their help in developing this patch editor, and to V. Hoyle for loaning me her unit.  Thanks also to Fabio Montarsolo (fabio.montarsolo@gmail.com) for bug testing.
+
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>December 25, 2020
+</table>
+

@@ -1,0 +1,94 @@
+/*
+   Copyright (c) 2020 Christof Ruch. All rights reserved.
+
+   Dual licensed: Distributed under Affero GPL license by default, an MIT license is available for purchase
+*/
+
+#pragma once
+
+#include "JuceHeader.h"
+
+#include "PatchHolderButton.h"
+#include "PatchButtonGrid.h"
+
+#include "MidiController.h"
+#include "Synth.h"
+
+class PatchButtonPanel : public Component,
+	private Button::Listener, private ChangeListener
+{
+public:
+	typedef std::function<void(int, int, std::function<void(std::vector<midikraft::PatchHolder>)>)> TPageLoader;
+
+	PatchButtonPanel(std::function<void(midikraft::PatchHolder &)> handler, std::string const& settingPrefix = "");
+	virtual ~PatchButtonPanel() override;
+
+	void setPatchLoader(TPageLoader pageGetter);
+	void setTotalCount(int totalCount, bool resetToPageOne = true);
+	void changeGridSize(int newWidth, int newHeight);
+	void setPatches(std::vector<midikraft::PatchHolder> const& patches, int autoSelectTarget = -1);
+	bool updateVisiblePatch(midikraft::PatchHolder const& patch);
+	
+	void refresh(bool async, int autoSelectTarget = -1);
+
+	void resized() override;
+
+	void buttonClicked(Button* button) override;
+	void buttonClicked(int buttonIndex, bool triggerHandler);
+
+	// Setup patch send modes
+	void setButtonSendModes(std::vector<std::string> const& modes);
+
+	// Remote control
+	void selectPrevious();
+	void selectNext();
+	void selectFirst();
+	void pageUp(bool selectNext);
+	void pageDown(bool selectLast);
+
+	void jumpToPage(int pagenumber);
+
+private:
+	enum class SliderAxis {
+		X_AXIS, Y_AXIS
+	};
+
+	void changeListenerCallback(ChangeBroadcaster* source) override;
+	std::string settingName(SliderAxis axis);
+	void refreshGridSize();
+
+	String createNameOfThubnailCacheFile(midikraft::PatchHolder const &patch);
+	File findPrehearFile(midikraft::PatchHolder const &patch);
+	void refreshThumbnail(int i);
+	int indexOfActive() const;
+	void setupPageButtons();
+
+	std::string settingPrefix_;
+	std::vector<midikraft::PatchHolder> patches_;
+	std::unique_ptr<PatchButtonGrid<PatchHolderButton>> patchButtons_;
+	std::function<void(midikraft::PatchHolder &)> handler_;
+	TPageLoader pageLoader_;
+
+	std::string activePatchMd5_;
+
+	TextButton pageUp_, pageDown_;
+	OwnedArray<TextButton> pageNumbers_;
+	OwnedArray<Label> ellipsis_;
+	Label buttonSendModeLabel_;
+	ComboBox buttonSendMode_;
+	Label sliderXLabel_;
+	Slider gridSizeSliderX_;
+	Label sliderYLabel_;
+	Slider gridSizeSliderY_;
+	int pageBase_;
+	int pageNumber_;
+	int gridWidth_, gridHeight_;
+	int pageSize_;
+	int totalSize_;
+	int numPages_;
+	int maxPageButtons_;
+	std::map<int, int> pageButtonMap_;
+
+	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(PatchButtonPanel)
+};
+

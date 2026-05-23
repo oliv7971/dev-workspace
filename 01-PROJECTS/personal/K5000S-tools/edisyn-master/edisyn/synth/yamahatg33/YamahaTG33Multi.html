@@ -1,0 +1,34 @@
+<html><head></head>
+<body>
+
+<h1>Yamaha TG33</h1> 
+<h2>Multimode Patch Editor</h2>
+
+<p>This patch editor will work with the Yamaha TG33, but not the SY22 nor SY35.
+
+<br><br><h3>Communicating with Edisyn</h3>
+Set your synthesizer to receive and transmit on the same MIDI channel (perhaps Channel 1).  Turn on Program Change and System Exclusive data.  The TG-33 also has a "device number": ideally this should be set to the same as the MIDI channel.  You set both the device number and MIDI channel in Edisyn when connecting to the synthesizer via the <b>Change MIDI</b> menu.
+
+<br><br><h3>About the "Show" Button</h3>
+If you press the Show button, Edisyn will request the appropriate single-mode patch.  However, the patch will not properly load unless you are first (manually) in Voice mode.  You must select Voice mode before you press the Show button.
+
+<br><br><h3>Gotchas</h3>
+
+<ul>
+<li>Edisyn cannot write patches to patch memory locations: you can only send them to the current working memory.  From there, you will have to manually save them to an appropriate memory location if you like.
+
+<br><p><li>The TG33 is very slow in responding to real-time parameter changes.
+
+<br><p><li>The TG33 may occasionally get caught in a strange "Cannot Edit" warning message on-screen when receiving real-time parameter changes.  You can get it out of this by selecting the multi and edit buttons again, or some similar combination.
+
+</ul>
+
+<p><table border=0 cellpadding=0 cellspacing=5>
+<tr>
+<td align=right>By&nbsp;&nbsp;&nbsp;
+<td><b>Sean Luke</b>
+<tr>
+<td align=right>Date&nbsp;&nbsp;&nbsp;
+<td>January 2020
+</table>
+

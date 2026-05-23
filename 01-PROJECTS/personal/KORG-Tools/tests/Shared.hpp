@@ -1,0 +1,55 @@
+/*
+ * Copyright (c) 2021-2026 Amir Czwink (amir130@hotmail.de)
+ *
+ * This file is part of KORG-Tools.
+ *
+ * KORG-Tools is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * KORG-Tools is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with KORG-Tools.  If not, see <http://www.gnu.org/licenses/>.
+ */
+#include <libkorg.hpp>
+using namespace libKORG;
+
+inline const PerformanceObject& ExtractFirstPerformance(const Set& set)
+{
+	return set.performanceBanks.Entries().begin().operator*().bank.Objects().begin().operator*().Object();
+}
+
+inline const SampleObject& ExtractFirstSample(const Set& set)
+{
+	return dynamic_cast<const SampleObject &>(set.sampleBanks.Entries().begin().operator*().bank.Objects().begin().operator*().Object());
+}
+
+inline const SoundObject& ExtractFirstSound(const Set& set)
+{
+	return set.soundBanks.Entries().begin().operator*().bank.Objects().begin().operator*().Object();
+}
+
+inline const FullStyle& ExtractFirstStyle(const Set& set)
+{
+	return set.styleBanks.Entries().begin().operator*().bank.Objects().begin().operator*().Object();
+}
+
+inline const ITrackView& FindSingleTrackForAccompaniment(const IChordVariationView& chordVariationView, AccompanimentTrackNumber accompanimentTrackNumber)
+{
+	int16 best = -1;
+	for(uint8 i = 0; i < chordVariationView.GetTrackCount(); i++)
+	{
+		if(chordVariationView.GetTrack(i).GetTrackType() == accompanimentTrackNumber)
+		{
+			ASSERT_EQUALS(-1, best);
+			best = i;
+		}
+	}
+
+	return chordVariationView.GetTrack(best);
+}
